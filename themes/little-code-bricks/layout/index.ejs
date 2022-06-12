@@ -42,7 +42,10 @@
           <% } %>
         </article>
       <% }) %>
-      <footer><%- paginator() %></footer>
+      <footer class="pagination"><%- paginator({
+        mid_size: 10,
+        end_size: 5,
+      }) %></footer>
     </main>
     <%- partial('_partial/common-footer') %>
   </div>

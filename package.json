@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "4.2.0"
+    "version": "5.1.1"
   },
   "scripts": {
-    "pb": "primitive_bulk -i ~/Downloads/$DIRNAME.jpg -d ./source/assets/images/$DIRNAME --output $DIRNAME --format jpg,svg -m $MODE",
+    "pb": "primitive_bulk -i ~/Downloads/$DIRNAME.jpg -d ./source/assets/images/$DIRNAME --output $DIRNAME --format jpg,svg -m $MODE && find ./source/assets/images/$DIRNAME -name '*.svg' -o -name '*.jpg' | xargs open -a 'ImageOptim'",
     "update-package": "./node_modules/.bin/npm-check-updates -u"
   },
   "dependencies": {

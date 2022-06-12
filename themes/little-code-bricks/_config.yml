@@ -1,4 +1,2 @@
 css:
   global: /css/global_async.css
-js:
-  lazysizes: /js/lazysizes/lazysizes.min.js

@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>JavaScriptでハッシュテーブルを作る | メモログ</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  /* padding-left: 24px; */
+}
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <meta name="description" content="JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オーで書いたようにJavaScriptのオブジェクトは基本ハッシュテーブルであるし、Mapオブジェクトも中の実装はChromeではハッシュテーブルであると書かれてある(Optimizing hash tables: hiding the hash code)。だからJavaScriptで自前のハッシュテーブルを作るというのは必要の">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScriptでハッシュテーブルを作る">
+<meta property="og:url" content="https://memolog.org/2018/create-hash-table-in-javascript.html">
+<meta property="og:site_name" content="メモログ">
+<meta property="og:description" content="JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オーで書いたようにJavaScriptのオブジェクトは基本ハッシュテーブルであるし、Mapオブジェクトも中の実装はChromeではハッシュテーブルであると書かれてある(Optimizing hash tables: hiding the hash code)。だからJavaScriptで自前のハッシュテーブルを作るというのは必要の">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://memolog.org/assets/images/jan-laugesen-186574-unsplash/jan-laugesen-186574-unsplash.jpg">
+<meta property="article:published_time" content="2018-07-25T21:31:02.000Z">
+<meta property="article:modified_time" content="2019-01-04T02:09:12.875Z">
+<meta property="article:author" content="Yutaka Yamaguchi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://memolog.org/assets/images/jan-laugesen-186574-unsplash/jan-laugesen-186574-unsplash.jpg">
+<meta name="twitter:creator" content="@memolog">
+<meta name="twitter:site" content="https://twitter.com/memolog">
+<meta property="fb:app_id" content="168245123786587">
+  <link rel="canonical" href="https://memolog.org/2018/create-hash-table-in-javascript.html">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://memolog.org/2018/create-hash-table-in-javascript.html"
+      },
+      "headline": "JavaScriptでハッシュテーブルを作る",
+      
+        "image": [
+          "https://memolog.org/assets/images/jan-laugesen-186574-unsplash/jan-laugesen-186574-unsplash.jpg"
+        ],
+      
+      "datePublished": "1532554262000",
+      "dateModified": "1546567752875",
+      "author": {
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "メモログ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memolog.org/assets/icons/icon-1024.png"
+        }
+      },
+      "description": "JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オーで書いたようにJavaScriptのオブジェクトは基本ハッシュテーブルであるし、Mapオブジェクトも中の実装はChromeではハッシュテーブルであると書かれてある(Optimizing hash tables: hiding the hash code)。だからJavaScriptで自前のハッシュテーブルを作るというのは必要のないことなのだけど試しに作ってみたかった。"
+    }
+  </script>
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body class="post">
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">💡 Personal notes about anything I&#39;m interested in</p>
+    <aside aria-hidden="true"><blockquote class="header__epigraph">Well, he fuffed, and he puffed, and he huffed and he puffed, and he puffed and huffed; but he could not get the house down.</blockquote></aside>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 Latest Articles</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <article>
+        <header class="header">
+          <div>
+            <time datetime="2018-07-25T21:31:02.000Z">
+              <span class="calendar-icon">📅</span><span>2018年7月26日</span>
+            </time>
+          </div>
+          <h2 class="header__title"><span>JavaScriptでハッシュテーブルを作る</span></h2>
+          
+            <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #54594c"><img src="/assets/images/jan-laugesen-186574-unsplash/jan-laugesen-186574-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/4UbSaPKGRqc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jan Laugesen</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+  
+</div>
+
+          
+        </header>
+        <div id="article-content" class="content "><p><a href="https://memolog.org/2018/javascript-property-access-big-o.html">JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オー</a>で書いたようにJavaScriptのオブジェクトは基本ハッシュテーブルであるし、<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Map" target="_blank" rel="noopener">Map</a>オブジェクトも中の実装はChromeではハッシュテーブルであると書かれてある(<a href="https://v8project.blogspot.com/2018/01/hash-code.html" target="_blank" rel="noopener">Optimizing hash tables: hiding the hash code</a>)。だからJavaScriptで自前のハッシュテーブルを作るというのは必要のないことなのだけど試しに作ってみたかった。<a id="more"></a></p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> stringHash <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"string-hash"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">MyHashTable</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>numberOfBucket<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>numberOfBucket <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>numberOfBucket<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hashTable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>numberOfBucket<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    key <span class="token operator">=</span> <span class="token string">''</span> <span class="token operator">+</span> key<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> hashTableIndex <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHashTableIndex</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> bucket <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hashTable<span class="token punctuation">[</span>hashTableIndex<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> bucketLength <span class="token operator">=</span> bucket<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>bucketLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> data <span class="token operator">=</span> bucket<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    key <span class="token operator">=</span> <span class="token string">''</span> <span class="token operator">+</span> key<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> hashTableIndex <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHashTableIndex</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>hashTable<span class="token punctuation">[</span>hashTableIndex<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>hashTable<span class="token punctuation">[</span>hashTableIndex<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hashTable<span class="token punctuation">[</span>hashTableIndex<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">getHashTableIndex</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> hash <span class="token operator">=</span> <span class="token function">stringHash</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> hash <span class="token operator">%</span> <span class="token keyword">this</span><span class="token punctuation">.</span>numberOfBucket<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>実装は<a href="https://medium.freecodecamp.org/how-to-implement-a-simple-hash-table-in-javascript-cb3b9c1f2997" target="_blank" rel="noopener">How to implement a simple hash table in JavaScript – freeCodeCamp</a>や<a href="http://www.mattzeunert.com/2017/02/01/implementing-a-hash-table-in-javascript.html" target="_blank" rel="noopener">Implementing a hash table in JavaScript</a>を参考にしている。</p>
+<p><a href="https://github.com/darkskyapp/string-hash" target="_blank" rel="noopener">string-hash</a>は、与えられた文字列を0から4294967295の数値にして返してくれる。</p>
+<p>ハッシュテーブルのサイズは、ハッシュ関数の処理やコンフリクトしたときの対応方法によるらしいのだけど、とりあえずインスタンス作成時に設定するようにして、ハッシュテーブルに入れるデータ数に1.3をかけた値より大きな素数を使うようにした。素数については<a href="https://primes.utm.edu/nthprime/index.php#nth" target="_blank" rel="noopener">The Prime Database: The Nth Prime Page</a>を使って出した。</p>
+<blockquote>
+<p>But a good general “rule of thumb” is:<br>The hash table should be an array with length about 1.3 times the maximum number of keys that will actually be in the table, and<br>Size of hash table array should be a prime number<br><a href="http://cseweb.ucsd.edu/~kube/cls/100/Lectures/lec16/lec16-8.html#pgfId-975583" target="_blank" rel="noopener">http://cseweb.ucsd.edu/~kube/cls/100/Lectures/lec16/lec16-8.html#pgfId-975583</a></p>
+</blockquote>
+<p>下記のような感じで簡単に測定してみた。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> dataLength <span class="token operator">=</span>  <span class="token number">10000</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> numberOfBucket <span class="token operator">=</span> <span class="token number">13003</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> MyHashTable <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./my-hash-table'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> myHashTable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyHashTable</span><span class="token punctuation">(</span>numberOfBucket<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'set'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> key<span class="token punctuation">,</span> value<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>dataLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  key <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span>dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  value <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span>dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  myHashTable<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'set'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myHashTable<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>結果が10000件の追加に<code>19.117ms</code>で取得に<code>0.067ms</code>。</p>
+<p>データを以下のように変更して再度実行</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> dataLength <span class="token operator">=</span>  <span class="token number">100000</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> numberOfBucket <span class="token operator">=</span> <span class="token number">130003</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>結果が100000件の追加に<code>112.608ms</code>で取得が<code>0.061ms</code>。</p>
+<p>データを1000000件にすると追加に<code>1592.088ms</code>で取得に<code>0.068ms</code>。データの件数が増えても、データの取得に時間がかかるようにはなっていない。いい感じに見える。</p>
+<p>なおデータを1000000件でハッシュテーブルのサイズを1（検索に<code>O(n)</code>かかるはず）にしたら、追加には<code>870.672ms</code>となり取得には<code>12.525ms</code>かかった（繰り返し測定してみると、早い時は2msくらいで終わる）。</p>
+<p>上記の計測をオブジェクトに置き換えて</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> dataLength <span class="token operator">=</span>  <span class="token number">1000000</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> myHashTable <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'set'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> key<span class="token punctuation">,</span> value<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>dataLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  key <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span>dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  value <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span>dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  myHashTable<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'set'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myHashTable<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>としてみたろころ、データの追加には<code>1632.026ms</code>で、取得には<code>0.008ms</code>になった。繰り返し計測してみないと誤差の範囲かどうかは明確には言えないけど、ほぼ同じパフォーマンスのように思う。</p>
+<p>さらにMapに置き換えてみた。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> dataLength <span class="token operator">=</span>  <span class="token number">1000000</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> myHashTable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'set'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> key<span class="token punctuation">,</span> value<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>dataLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  key <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span>dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  value <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span>dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  myHashTable<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'set'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myHashTable<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>データの追加には<code>1178.558ms</code>で、取得には<code>0.006ms</code>になった。</p>
+<p>そのほか参考</p>
+<ul>
+<li><a href="https://www.quora.com/What-is-a-good-hash-table-array-size" target="_blank" rel="noopener">https://www.quora.com/What-is-a-good-hash-table-array-size</a></li>
+<li><a href="http://srinvis.blogspot.com/2006/07/hash-table-lengths-and-prime-numbers.html" target="_blank" rel="noopener">http://srinvis.blogspot.com/2006/07/hash-table-lengths-and-prime-numbers.html</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hash_table" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Hash_table</a></li>
+</ul>
+<p>以上。</p>
+</div>
+        <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">About the Author</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>a (front-end) engineer living in Tokyo, using TypeScript, Node.js, JavaScript, swift and perl for work, interested in WASM and Rust, studying English.</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+      </article>
+    </main>
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            link.classList.add('no-link-icon');
+            continue;
+          }
+
+          link.classList.add('link-icon');
+          link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

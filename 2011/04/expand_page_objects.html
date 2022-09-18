@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>Site-Page-Data Object Pattern (Page Objects 拡張) | メモログ</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  /* padding-left: 24px; */
+}
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <meta name="description" content="以前にPage Objects : テストスイート構築のためのデザインパターン - メモログというのを紹介しました。今回はそのパターンをちょっと拡張してみようという話。なお、特に参考にした訳ではないのですが、Selenium Page Objects + Site Objects, Data Objects &amp; High Level Navigation « Fiji Ecuador Se">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Site-Page-Data Object Pattern (Page Objects 拡張)">
+<meta property="og:url" content="https://memolog.org/2011/04/expand_page_objects.html">
+<meta property="og:site_name" content="メモログ">
+<meta property="og:description" content="以前にPage Objects : テストスイート構築のためのデザインパターン - メモログというのを紹介しました。今回はそのパターンをちょっと拡張してみようという話。なお、特に参考にした訳ではないのですが、Selenium Page Objects + Site Objects, Data Objects &amp; High Level Navigation « Fiji Ecuador Se">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2011-04-20T05:43:00.000Z">
+<meta property="article:modified_time" content="2019-01-04T02:09:12.858Z">
+<meta property="article:author" content="Yutaka Yamaguchi">
+<meta property="article:tag" content="page-objects">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@memolog">
+<meta name="twitter:site" content="https://twitter.com/memolog">
+<meta property="fb:app_id" content="168245123786587">
+  <link rel="canonical" href="https://memolog.org/2011/04/expand_page_objects.html">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://memolog.org/2011/04/expand_page_objects.html"
+      },
+      "headline": "Site-Page-Data Object Pattern (Page Objects 拡張)",
+      
+      "datePublished": "1303278180000",
+      "dateModified": "1546567752858",
+      "author": {
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "メモログ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memolog.org/assets/icons/icon-1024.png"
+        }
+      },
+      "description": "以前にPage Objects : テストスイート構築のためのデザインパターン - メモログというのを紹介しました。今回はそのパターンをちょっと拡張してみようという話。なお、特に参考にした訳ではないのですが、Selenium Page Objects + Site Objects, Data Objects & High Level Navigation « Fiji Ecuador Seattle Greece Montanaに同じような話を提示している人はいます（2年前に）。"
+    }
+  </script>
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body class="post">
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">💡 Personal notes about anything I&#39;m interested in</p>
+    <aside aria-hidden="true"><blockquote class="header__epigraph">Well, he fuffed, and he puffed, and he huffed and he puffed, and he puffed and huffed; but he could not get the house down.</blockquote></aside>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 Latest Articles</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <article>
+        <header class="header">
+          <div>
+            <time datetime="2011-04-20T05:43:00.000Z">
+              <span class="calendar-icon">📅</span><span>2011年4月20日</span>
+            </time>
+          </div>
+          <h2 class="header__title"><span>Site-Page-Data Object Pattern (Page Objects 拡張)</span></h2>
+          
+        </header>
+        <div id="article-content" class="content "><p>以前に<a href="/blog//2010/11/page_objects/">Page Objects : テストスイート構築のためのデザインパターン - メモログ</a>というのを紹介しました。今回はそのパターンをちょっと拡張してみようという話。なお、特に参考にした訳ではないのですが、<a href="http://fijiaaron.wordpress.com/2009/09/02/selenium-page-objects-site-objects-data-objects-high-level-navigation/" target="_blank" rel="noopener">Selenium Page Objects + Site Objects, Data Objects &amp; High Level Navigation « Fiji Ecuador Seattle Greece Montana</a>に同じような話を提示している人はいます（2年前に）。</p>
+<a id="more"></a>
+
+<p>Page Objectsは、自動化テストのスクリプトをまとめるための一つのパターン。ページを一つのオブジェクトとして捉えて、そのページのアクション（サービス）を一つの「区切り」にしてスクリプトをまとめます。他のページに移動する場合は、移動するページのオブジェクトを返り値として渡す（そうすることで複数ページのアクションを続けていくことができる）。</p>
+<p>ただ、テスト手順として、連続性のない複数のページのアクションを実行する場合、Page Objectsのパターンでは悩ましいところがあります。たとえば、ブログの設定ページで設定をしたあとに、記事作成ページで記事を作成して、その記事がブログに期待通りに生成されているかを確認する、とか。それぞれのページは独立していて、アクション間の連携はない場合、Page Objectを渡すわけにはいかない。リンクをクリックしてページを遷移していくことで連携させることもできるけれど、効率性から考えるとやはり直接該当のページにアクセスしたい（リンクをたどった方がより人間的と言えるかもしれないけど）。とか。</p>
+<p>Page Objectsの上位のオブジェクトして「Site Object」を設けて、そこから操作するとそうした悩みがなくなります。たとえば<a href="http://zenback.jp" target="_blank" rel="noopener">zenback</a>なら、「Dashboard」とか「Customize」とかのPage Objectsの他に「zenback」というSite Objectを設ける。zenbackというSite Objectから、DashboardやCustomizeなどのPage Objectsを操作したり、ページ間の移動を行うことでDashboardとCustomizeのページがアクション（サービス）で連携がない場合でも連続的に操作を行うことができる。</p>
+<p>イメージとしてはこんな感じ。</p>
+<pre><code>(lib/zenback)
+require &#39;watir-webdriver&#39;
+
+module Zenback
+class Zenback
+  def initialize
+    @b = Webdriver::Browser.new
+  end
+  def dashboard
+    Dashboard.new @b
+  end
+  def customize
+    Customize.new @b
+  end
+end
+
+class Dashboard
+  def initialize(b)
+    @b = b
+  end
+  def add(blog)
+     @b.link(:href,/add_blog/).click
+     # scripts for adding blog action (service)
+  end
+end
+....
+end
+</code></pre><pre><code>require &#39;lib/zenback&#39;
+z = Zenback::Zenback.new
+z.goto &#39;http://zenback.jp/dashboard&#39;
+z.dashboard.add &#39;http://memolog.org&#39;
+z.goto &#39;http://zenback.jp/dashboard/blog/123456789/&#39;
+z.customize.set_modules
+</code></pre><p>実際のスクリプトはページごとにスクリプトファイル変えたりとか、単純にgotoメソッドで画面遷移しないとかいろいろあったりしますが、基本的なイメージとしてはこんな感じです。「zenback」というSite Objectを呼び出して、Site ObjectからPage Objectsを操作していく。Page Objectsのパターンではアクション実行後にPage Objectを返すのが基本ですが、Site ObjectがあるとPage Objectsの選択はSite Object上で自分で選択できるのでPage Objectの返りはあってもなくてもいい。あとzenbackのSite Objectで起動したwatir-webdriverのオブジェクトをPage Objectsの引数として渡すことでPage Objects個々の独立性を保ちつつ、サイト全体でwatir-webdriverのオブジェクトを使えるようにしています。</p>
+<p>そして、Page Objectの下位のオブジェクトとして「Data Objects」も（必要に応じて）設けます。たとえば記事の一覧のページなど、ページには表示するデータがあって、それをひとつのオブジェクトとして捉えて、データの各要素（idとかtitleとか）を取り出しやすい形にしておく。イメージとしてはこんな感じ（こちらもかなり省略しています）。</p>
+<pre><code>module Zenback
+class Dashboard
+  class Blog
+    attr_accessor :id, :name
+    def initialize(tr)
+       @id = tr.th.link.href.slice(/[0-9]+/)
+       @name = tr.tr.link.text
+    end
+  end
+  def blog(tr)
+    Blog.new tr
+  end
+end
+end
+</code></pre><p>zenbackで言うと、ダッシュボードに表示されるブログ一覧の一つのブログを「Data Object」として捉えて、idや名前を取り出しやすい形にしておく。これでblog.id とかでブログのidを取り出すことできます。Blogのclassに「tr」を渡していますが、これはこの一覧がtableで組まれていて、trごとにブログのデータが記載されるためです。</p>
+<p>このへん、私自身としてはまだ試行錯誤中といったところではありますが、今のところテストスクリプトを構築する上でのモデルになっています。</p>
+</div>
+        <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">About the Author</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>a (front-end) engineer living in Tokyo, using TypeScript, Node.js, JavaScript, swift and perl for work, interested in WASM and Rust, studying English.</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+      </article>
+    </main>
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            link.classList.add('no-link-icon');
+            continue;
+          }
+
+          link.classList.add('link-icon');
+          link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

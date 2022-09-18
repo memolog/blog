@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>メモログ</title>
+  <meta name="description" content="💡 Personal notes about anything I&#39;m interested in" id="meta-description">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  /* padding-left: 24px; */
+}
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"ItemList",
+      "itemListElement":[
+        
+        {
+          "@type":"ListItem",
+          "position":1,
+          "url": "https://memolog.org/2012/07/phonegap_and_xcode_version.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":2,
+          "url": "https://memolog.org/2012/07/dropped_pubdate_in_time_element.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":3,
+          "url": "https://memolog.org/2012/07/rich_snippets_testing_tool.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":4,
+          "url": "https://memolog.org/2012/07/around_dnt.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":5,
+          "url": "https://memolog.org/2012/06/around_social_buttons.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":6,
+          "url": "https://memolog.org/2012/06/viewport_declaration_in_css.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":7,
+          "url": "https://memolog.org/2012/06/stream_webcam_with_javascript.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":8,
+          "url": "https://memolog.org/2012/06/jquery_masonry.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":9,
+          "url": "https://memolog.org/2012/06/how_css_handles_errors.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":10,
+          "url": "https://memolog.org/2012/06/set_input_width_to_100_percent.html"
+        }
+        
+      ]
+    }
+  </script>
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body>
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">💡 Personal notes about anything I&#39;m interested in</p>
+    <aside aria-hidden="true"><blockquote class="header__epigraph">Well, he fuffed, and he puffed, and he huffed and he puffed, and he puffed and huffed; but he could not get the house down.</blockquote></aside>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 Latest Articles</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-07-16T04:45:00.000Z"><span class="calendar-icon">📅</span><span>2012年7月16日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/07/phonegap_and_xcode_version.html">PhoneGapとXcode</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>機会があって<a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">Xcode</a>のバージョンとインストールできる<a href="http://phonegap.com/" target="_blank" rel="noopener">PhoneGap</a>の現在の組み合わせを調べてみました（2012/7/16現在）。4.2については現状ではissueがあって1.9.0をインストールしてもビルドでエラーになる。</p></div>
+            <div><a href="/2012/07/phonegap_and_xcode_version.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-07-02T13:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年7月2日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/07/dropped_pubdate_in_time_element.html">time要素からpubdate属性が抜けていた</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>何の気なしに<a href="http://html5.validator.nu/" target="_blank" rel="noopener">Validator.nu (X)HTML5 Validator</a>でサイトの検証をしてみたら、time要素のpubdateがnot allowedだと言われて、気がついたら<a href="http://www.w3.org/TR/html5/the-time-element.html#the-time-element" target="_blank" rel="noopener">W3Cの仕様</a>のContent Attributesからも抹消されているので、なんでだろうなあと調べていたら<a href="http://www.w3.org/TR/2012/WD-html5-diff-20120329/#changes-2011-05-25" target="_blank" rel="noopener">20120329の更新</a>で、pubdateが削除されていた（The time element was redesigned to make it match how people wanted to use it. Its pubdate attribute was dropped. ）。参考<a href="http://myakura.hatenablog.com/entry/2012/03/30/095033" target="_blank" rel="noopener">HTML5 (と関連WD) 更新 - fragmentary</a>。</p></div>
+            <div><a href="/2012/07/dropped_pubdate_in_time_element.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-07-01T13:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年7月1日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/07/rich_snippets_testing_tool.html">Microdata/Microformatsの検証ができるRich Snippets Testing Tool</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>GoogleのWebmaster toolsのひとつに<a href="http://www.google.com/webmasters/tools/richsnippets" target="_blank" rel="noopener">Rich Snippets Testing Tool</a>というのがあって、このツールではサイトに記述したMicrodataやMicroformatsなどの構造化データマークアップ(structured data markup)をGoogleがきちんとパースしてくれるかどうかをチェックすることができます。</p></div>
+            <div><a href="/2012/07/rich_snippets_testing_tool.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-06-30T20:20:00.000Z"><span class="calendar-icon">📅</span><span>2012年7月1日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/07/around_dnt.html">DNTについて</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><img src="http://farm8.staticflickr.com/7276/7476633588_616b9eeb33_z.jpg" alt=""></p>
+<blockquote>
+<p>It’s important that the signal represents a choice made by the person behind the keyboard and not the software maker, because ultimately it’s not the browser being tracked, it’s the user.  </p>
+</blockquote></div>
+            <div><a href="/2012/07/around_dnt.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-06-27T11:35:00.000Z"><span class="calendar-icon">📅</span><span>2012年6月27日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/06/around_social_buttons.html">ソーシャルボタンはあるべきかないべきか</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a href="http://informationarchitects.net/blog/sweep-the-sleaze/" target="_blank" rel="noopener">Sweep the Sleaze | Information Architects</a>や、<a href="http://www.netmagazine.com/news/drop-social-media-buttons-call-121990" target="_blank" rel="noopener">‘Drop social media buttons’ call</a>とかでソーシャルボタンの有効性について話されている。詳しくは上記のリンクを参照という感じですが、おおまかに言うと、ソーシャルネットワーク経由で来ている人にはソーシャルネットワークについて伝える必要はないし、ソーシャルネット使わない人には不要だよねとか、優れたコンテンツならボタンがなくても参照されるし読まれるとか、そういう感じ。</p></div>
+            <div><a href="/2012/06/around_social_buttons.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-06-24T13:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年6月24日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/06/viewport_declaration_in_css.html">viewportをCSSで指定する</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>Internet Explorer 10 Guide for Developersの<a href="http://msdn.microsoft.com/en-us/library/ie/hh708740&#x25;28v=vs.85&#x25;29.aspx" target="_blank" rel="noopener">Device adaptation</a>にて、@viewportについての説明がされています。現時点ではmsのprefixが必要なので、実際に使用する場合は @-ms-viewportということになる（そして@-o-viewportの形で<a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/" target="_blank" rel="noopener">Operaでも対応している</a>と<a href="http://www.brucelawson.co.uk/about/" target="_blank" rel="noopener">Bruce Lawson</a>からコメントがついている）。</p></div>
+            <div><a href="/2012/06/viewport_declaration_in_css.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-06-24T03:56:00.000Z"><span class="calendar-icon">📅</span><span>2012年6月24日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/06/stream_webcam_with_javascript.html">JavascriptでWebカメラを動かす</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a href="http://www.sitepoint.com/stream-your-webcam-to-a-browser-in-javascript/" target="_blank" rel="noopener">Stream Your Webcam to a Browser in JavaScript</a>というSitepointの記事で、Operaがバージョン12でgetUserMediaに対応したという話が掲載されていて、サンプルのJavascriptが載っていたので試してみました。シンプルなJavascriptでWebカメラが動くというところが面白い。</p></div>
+            <div><a href="/2012/06/stream_webcam_with_javascript.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-06-18T03:36:00.000Z"><span class="calendar-icon">📅</span><span>2012年6月18日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/06/jquery_masonry.html">縦方向のfloatを実現するjQuery Masonry</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>いわゆる<a href="http://pinterest.com/" target="_blank" rel="noopener">Pinterest</a>風な縦方向にfloatさせるjQueryのpluginが<a href="http://www.netmagazine.com/shop/magazines/july-2012-229" target="_blank" rel="noopener">.net Magazine</a>で紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。<a href="http://memolog.org/photo/">写真の記事一覧画面</a>とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。</p></div>
+            <div><a href="/2012/06/jquery_masonry.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-06-09T03:45:00.000Z"><span class="calendar-icon">📅</span><span>2012年6月9日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/06/how_css_handles_errors.html">CSSのエラーの扱い方</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a href="http://www.xanthir.com/blog/b4JF0" target="_blank" rel="noopener">How CSS Handles Errors - Tab Completion</a>にて、CSSのパースで問題が発生した場合に、ブラウザがどのようにハンドリングするかの紹介がされています、という内容の紹介。仕様の<a href="http://www.w3.org/TR/CSS21/syndata.html#parsing-errors" target="_blank" rel="noopener">4.2 Rules for handling parsing errors</a>や、<a href="http://www.w3.org/TR/CSS2/syndata.html#rule-sets" target="_blank" rel="noopener">4.1.7 Rule sets, declaration blocks, and selectors</a>で説明されているものと内容的には同じですけど。</p></div>
+            <div><a href="/2012/06/how_css_handles_errors.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-06-08T05:21:00.000Z"><span class="calendar-icon">📅</span><span>2012年6月8日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/06/set_input_width_to_100_percent.html">inputでwidth&#x3a;100&#x25;を使うと若干はみ出る</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #855d41"><img src="/assets/images/henrique-ferreira-306706-unsplash/henrique-ferreira-306706-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/ySgSnJdPhZg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Henrique Ferreira</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>input要素にwidth:100&#x25;;を指定すると、微妙に包含ブロックからはみ出す。</p>
+<p>なんでだろうなあと思っていたんですけど、input要素にはブラウザのデフォルトでpaddingやborderが入っているので、width:100&#x25;とするとpaddingやborderのサイズ分はみ出してしまうということでした。</div>
+            <div><a href="/2012/06/set_input_width_to_100_percent.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+      <footer class="pagination"><a class="extend prev" rel="prev" href="/page/15/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" href="/page/17/">Next</a></footer>
+    </main>
+    <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">About the Author</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>a (front-end) engineer living in Tokyo, using TypeScript, Node.js, JavaScript, swift and perl for work, interested in WASM and Rust, studying English.</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            link.classList.add('no-link-icon');
+            continue;
+          }
+
+          link.classList.add('link-icon');
+          link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

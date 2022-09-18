@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>Flex Containers | メモログ</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  /* padding-left: 24px; */
+}
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <meta name="description" content="Flex Layout Box Model and Terminologyから引き続き、3. Flex Containers: the flex and inline-flex display valuesについて確認していく。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flex Containers">
+<meta property="og:url" content="https://memolog.org/2020/flex-containers.html">
+<meta property="og:site_name" content="メモログ">
+<meta property="og:description" content="Flex Layout Box Model and Terminologyから引き続き、3. Flex Containers: the flex and inline-flex display valuesについて確認していく。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://memolog.org/assets/images/wengang-zhai-rNO0c2rlVUo-unsplash/wengang-zhai-rNO0c2rlVUo-unsplash.jpg">
+<meta property="article:published_time" content="2020-03-20T08:45:51.000Z">
+<meta property="article:modified_time" content="2020-03-20T08:45:58.410Z">
+<meta property="article:author" content="Yutaka Yamaguchi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://memolog.org/assets/images/wengang-zhai-rNO0c2rlVUo-unsplash/wengang-zhai-rNO0c2rlVUo-unsplash.jpg">
+<meta name="twitter:creator" content="@memolog">
+<meta name="twitter:site" content="https://twitter.com/memolog">
+<meta property="fb:app_id" content="168245123786587">
+  <link rel="canonical" href="https://memolog.org/2020/flex-containers.html">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://memolog.org/2020/flex-containers.html"
+      },
+      "headline": "Flex Containers",
+      
+        "image": [
+          "https://memolog.org/assets/images/wengang-zhai-rNO0c2rlVUo-unsplash/wengang-zhai-rNO0c2rlVUo-unsplash.jpg"
+        ],
+      
+      "datePublished": "1584693951000",
+      "dateModified": "1584693958410",
+      "author": {
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "メモログ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memolog.org/assets/icons/icon-1024.png"
+        }
+      },
+      "description": "Flex Layout Box Model and Terminologyから引き続き、3. Flex Containers: the flex and inline-flex display valuesについて確認していく。"
+    }
+  </script>
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body class="post">
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">💡 Personal notes about anything I&#39;m interested in</p>
+    <aside aria-hidden="true"><blockquote class="header__epigraph">Well, he fuffed, and he puffed, and he huffed and he puffed, and he puffed and huffed; but he could not get the house down.</blockquote></aside>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 Latest Articles</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <article>
+        <header class="header">
+          <div>
+            <time datetime="2020-03-20T08:45:51.000Z">
+              <span class="calendar-icon">📅</span><span>2020年3月20日</span>
+            </time>
+          </div>
+          <h2 class="header__title"><span>Flex Containers</span></h2>
+          
+            <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #476b71"><img src="/assets/images/wengang-zhai-rNO0c2rlVUo-unsplash/wengang-zhai-rNO0c2rlVUo-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/@wgzhai?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Wengang Zhai</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+  
+</div>
+
+          
+        </header>
+        <div id="article-content" class="content "><p><a href="https://memolog.org/2020/flex-layout-box-model-and-terminology.html">Flex Layout Box Model and Terminology</a>から引き続き、<a href="https://www.w3.org/TR/css-flexbox-1/#flex-containers" target="_blank" rel="noopener">3. Flex Containers: the flex and inline-flex display values</a>について確認していく。<a id="more"></a></p>
+<blockquote>
+<p><strong>Name</strong>:    display<br><strong>New values</strong>:    flex | inline-flex</p>
+</blockquote>
+<blockquote>
+<p><strong>flex</strong><br>This value causes an element to generate a flex container box that is block-level when placed in flow layout.<br><strong>inline-flex</strong><br>This value causes an element to generate a flex container box that is inline-level when placed in flow layout.</p>
+</blockquote>
+<blockquote>
+<p>A flex container establishes a new flex formatting context for its contents. This is the same as establishing a block formatting context, except that flex layout is used instead of block layout. For example, floats do not intrude into the flex container, and the flex container’s margins do not collapse with the margins of its contents. Flex containers form a containing block for their contents <a href="https://www.w3.org/TR/CSS2/visudet.html#containing-block-details" target="_blank" rel="noopener">exactly like block containers do</a>. [CSS21] The overflow property applies to flex containers.</p>
+</blockquote>
+<p>flex containerは新しいflex formatting contextを設置する。これはブロックレイアウトの代わりにflexレイアウトが使われることを除いて、block formatting contextと同じように設置される。たとえば、floatはflex containerの中に侵入してこないし、flex containerのマージンは、そのコンテンツのマージンと相殺（collapse）されない。flex containerは、block containerがするのと全く同じように、コンテンツのためのcontaining block（縦横幅やポジションなどの基本的な値な形成する長方形）を形作る。overflowプロパティはflex containerに適用される。</p>
+<blockquote>
+<p>Flex containers are not block containers, and so some properties that were designed with the assumption of block layout don’t apply in the context of flex layout. In particular:</p>
+</blockquote>
+<p>flex containerはblock containerではなく、ブロックレイアウトを想定してデザインされているいくつかのプロパティはflexレイアウトのコンテキストでは適用されない。特に以下。</p>
+<blockquote>
+<ul>
+<li>float and clear do not create floating or clearance of flex item, and do not take it out-of-flow.</li>
+<li>vertical-align has no effect on a flex item.</li>
+<li>the ::first-line and ::first-letter pseudo-elements do not apply to flex containers, and flex containers do not contribute a first formatted line or first letter to their ancestors.</li>
+</ul>
+</blockquote>
+<ul>
+<li>floatとclearは、flexアイテムのfloatやそのclearをしない。つまりflex itemをout-of-flow（flow layoutによって配置されていない）状態にしない</li>
+<li>vertical-alignはflexアイテムには効果がない</li>
+<li>::first-lineと::first-letterの擬似要素はflex containerでは適用されない。またflex containerはその子孫要素にfirst formatted lineまたはfirst letterを提供しない。</li>
+</ul>
+<blockquote>
+<p>If an element’s specified display is inline-flex, then its display property computes to flex in certain circumstances: the table in <a href="https://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo" target="_blank" rel="noopener">CSS 2.1 Section 9.7</a> is amended to contain an additional row, with inline-flex in the “Specified Value” column and flex in the “Computed Value” column.</p>
+</blockquote>
+<p>もしある要素の指定したdisplayが<code>inline-flex</code>である場合、そのdisplayプロパティが特定の環境の中では<code>flex</code>として計算される。<a href="https://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo" target="_blank" rel="noopener">CSS 2.1 Section 9.7</a>の表には、Specified valueが<code>inline-flex</code>、Computed Valueが<code>flex</code>という行を追加される。</p>
+<hr>
+<p><a href="https://www.w3.org/TR/CSS2/visuren.html#dis-pos-flo" target="_blank" rel="noopener">CSS 2.1 Section 9.7</a>には、以下のように書かれている。</p>
+<blockquote>
+<p><strong>9.7 Relationships between ‘display’, ‘position’, and ‘float’</strong><br>The three properties that affect box generation and layout — ‘display’, ‘position’, and ‘float’ — interact as follows:</p>
+</blockquote>
+<p><code>display</code>,<code>position</code>,<code>float</code>の3つのプロパティはboxの生成と配置に影響を与える。以下のように作用する</p>
+<blockquote>
+<ol>
+<li>If ‘display’ has the value ‘none’, then ‘position’ and ‘float’ do not apply. In this case, the element generates no box.</li>
+<li>Otherwise, if ‘position’ has the value ‘absolute’ or ‘fixed’, the box is absolutely positioned, the computed value of ‘float’ is ‘none’, and display is set according to the table below. The position of the box will be determined by the ‘top’, ‘right’, ‘bottom’ and ‘left’ properties and the box’s containing block.</li>
+<li>Otherwise, if ‘float’ has a value other than ‘none’, the box is floated and ‘display’ is set according to the table below.</li>
+<li>Otherwise, if the element is the root element, ‘display’ is set according to the table below, except that it is undefined in CSS 2.1 whether a specified value of ‘list-item’ becomes a computed value of ‘block’ or ‘list-item’.</li>
+<li>Otherwise, the remaining ‘display’ property values apply as specified.</li>
+</ol>
+</blockquote>
+<ol>
+<li><code>display</code>が<code>none</code>の場合は、<code>position</code>もしくは<code>float</code>は適用されない。この場合、要素はboxを生成しない</li>
+<li>そうでない場合、もし<code>position</code>が<code>absolute</code>または<code>fixed</code>である場合、boxは絶対的に配置され、floatの算出値（computed value）は<code>none</code>になり、displayは下の表にしたがって設定される。boxの位置は、<code>top</code>,<code>right</code>,<code>bottom</code>,<code>left</code>のプロパティとboxのcontaining blockによって決定される。</li>
+<li>そうでない場合、もし<code>float</code>が<code>none</code>以外の値の場合、boxはfloatedして、<code>display</code>は下の表にしたがって設定される</li>
+<li>そうでない場合、もし要素がルート要素の場合、<code>display</code>は下の表にしたがって設定される。ただしspecified valueが<code>list-item</code>の場合、そのcomputed valueが<code>block</code>となるか<code>list-item</code>となるかは特に決まってない。</li>
+<li>そうでない場合、<code>display</code>プロパティは指定通りの値となる。</li>
+</ol>
+<p>以下が「下の表」、<code>inline-flex</code>を追加してある。</p>
+<table>
+<thead>
+<tr>
+<th>Specified value（指定値）</th>
+<th>Computed value（算出値）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>inline-table</td>
+<td>table</td>
+</tr>
+<tr>
+<td>inline, table-row-group, table-column,<br>table-column-group, table-header-group,<br>table-footer-group, table-row, table-cell,<br>table-caption, inline-block</td>
+<td>block</td>
+</tr>
+<tr>
+<td>inline-flex</td>
+<td>flex</td>
+</tr>
+<tr>
+<td>others</td>
+<td>指定値を同じ</td>
+</tr>
+</tbody></table>
+<p>ざっくり言うと、boxがout-of-flowになった場合、そのboxはインラインレベルではなく、ブロックレベルとして扱われるという感じ。</p>
+</div>
+        <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">About the Author</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>a (front-end) engineer living in Tokyo, using TypeScript, Node.js, JavaScript, swift and perl for work, interested in WASM and Rust, studying English.</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+      </article>
+    </main>
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            link.classList.add('no-link-icon');
+            continue;
+          }
+
+          link.classList.add('link-icon');
+          link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>PWAのチェックリストを満たす | メモログ</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  /* padding-left: 24px; */
+}
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <meta name="description" content="たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、Lighthouse の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応し">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PWAのチェックリストを満たす">
+<meta property="og:url" content="https://memolog.org/2018/complete-all-the-pwa-checklist.html">
+<meta property="og:site_name" content="メモログ">
+<meta property="og:description" content="たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、Lighthouse の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応し">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://memolog.org/assets/images/cloudvisual-146380-unsplash/cloudvisual-146380-unsplash.jpg">
+<meta property="article:published_time" content="2018-07-14T02:32:41.000Z">
+<meta property="article:modified_time" content="2019-01-04T02:09:12.875Z">
+<meta property="article:author" content="Yutaka Yamaguchi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://memolog.org/assets/images/cloudvisual-146380-unsplash/cloudvisual-146380-unsplash.jpg">
+<meta name="twitter:creator" content="@memolog">
+<meta name="twitter:site" content="https://twitter.com/memolog">
+<meta property="fb:app_id" content="168245123786587">
+  <link rel="canonical" href="https://memolog.org/2018/complete-all-the-pwa-checklist.html">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://memolog.org/2018/complete-all-the-pwa-checklist.html"
+      },
+      "headline": "PWAのチェックリストを満たす",
+      
+        "image": [
+          "https://memolog.org/assets/images/cloudvisual-146380-unsplash/cloudvisual-146380-unsplash.jpg"
+        ],
+      
+      "datePublished": "1531535561000",
+      "dateModified": "1546567752875",
+      "author": {
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "メモログ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memolog.org/assets/icons/icon-1024.png"
+        }
+      },
+      "description": "たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、Lighthouse の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応しました。"
+    }
+  </script>
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body class="post">
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">💡 Personal notes about anything I&#39;m interested in</p>
+    <aside aria-hidden="true"><blockquote class="header__epigraph">Well, he fuffed, and he puffed, and he huffed and he puffed, and he puffed and huffed; but he could not get the house down.</blockquote></aside>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 Latest Articles</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <article>
+        <header class="header">
+          <div>
+            <time datetime="2018-07-14T02:32:41.000Z">
+              <span class="calendar-icon">📅</span><span>2018年7月14日</span>
+            </time>
+          </div>
+          <h2 class="header__title"><span>PWAのチェックリストを満たす</span></h2>
+          
+            <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #6d6861"><img src="/assets/images/cloudvisual-146380-unsplash/cloudvisual-146380-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="522" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/sm8OE9daK2A?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">CloudVisual</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+  
+</div>
+
+          
+        </header>
+        <div id="article-content" class="content "><p>たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、<a href="https://developers.google.com/web/tools/lighthouse/?hl=ja" target="_blank" rel="noopener">Lighthouse</a> の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応しました。<a id="more"></a></p>
+<p>Service Worker をサイトに追加するのはとても簡単で、Service Worker 用のスクリプトファイルを用意して、<code>navigator.servceWoeker.register</code> で読み込むだけ。HTTPSでないといけないとか、スクリプトファイルの置き場所がscopeと異なる場合は <code>Service-Worker-Allowed</code> のヘッダーが必要とか、いろいろ考慮すべきところはあるけれど、Github pagesはHTTPSだし、ファイルもどこにでも置けるので特に気にしなくても大丈夫。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script <span class="token keyword">async</span><span class="token operator">></span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'serviceWorker'</span> <span class="token keyword">in</span> navigator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    navigator<span class="token punctuation">.</span>serviceWorker<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'/service-worker.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>service-worker.js では、今のところ最新10件分のHTMLとfeatured imageに使っているsvgファイルをプリキャッシュするようにした。</p>
+<p>最新10件のポストデータを得るのに、まず script ディレクトリに service-worker.js を入れて、generatorを登録。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>generator<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'service-worker'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>locals<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> posts <span class="token operator">=</span> locals<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">'-date'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>post <span class="token operator">=</span><span class="token operator">></span> post<span class="token punctuation">.</span>draft <span class="token operator">!==</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> lastUpdated <span class="token operator">=</span> posts<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> a<span class="token punctuation">.</span>updated <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>updated <span class="token operator">?</span> <span class="token number">1</span> <span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>updated<span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> precacheList <span class="token operator">=</span> posts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>post <span class="token operator">=</span><span class="token operator">></span> post<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  precacheList<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  posts<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>post <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> featuredImage <span class="token operator">=</span> post<span class="token punctuation">.</span>featured <span class="token operator">&amp;&amp;</span> post<span class="token punctuation">.</span>featured<span class="token punctuation">.</span>image<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>featuredImage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      precacheList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`/assets/images/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>featuredImage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>featuredImage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.svg`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'service-worker.js'</span><span class="token punctuation">,</span>
+    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      precacheList<span class="token punctuation">:</span> precacheList<span class="token punctuation">,</span>
+      lastUpdated<span class="token punctuation">:</span> lastUpdated
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    layout<span class="token punctuation">:</span> <span class="token string">'service-worker'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>そのあと theme の layout に service-worker.ejs を追加して、Service Worker のスクリプトファイルを生成。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">const</span> precacheList <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token operator">&lt;</span><span class="token operator">%</span> page<span class="token punctuation">.</span>precacheList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+  <span class="token string">'&lt;%- url_for(item) %>'</span><span class="token punctuation">,</span><span class="token operator">&lt;</span><span class="token operator">%</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>詳細は <a href="https://github.com/memolog/blog/blob/master/scripts/service-worker.js" target="_blank" rel="noopener">service-worker.js</a> と <a href="https://github.com/memolog/blog/blob/master/themes/little-code-bricks/layout/service-worker.ejs" target="_blank" rel="noopener">service-worker.ejs</a> を参照。</p>
+<p>App Manifest については静的なファイルを用意して、manifestへのリンクを追加しただけ。 theme-color はLight House がそう言ってくるので追加している。</p>
+<pre class="line-numbers language-html"><code class="language-html">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>manifest<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/manifest.json<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>theme-color<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>white<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>詳細は <a href="https://github.com/memolog/blog/blob/master/themes/little-code-bricks/source/manifest.json" target="_blank" rel="noopener">manifest.json</a>。ただ値を入れるだけではあるけど、<a href="https://developers.google.com/web/tools/lighthouse/audits/custom-splash-screen" target="_blank" rel="noopener">スプラッシュスクリーンを有効にする</a>ためにいくつか要件があり、それを満たすようにアイコン画像を用意している。</p>
+<p>そして Lighthouse の結果。100点になりました👍</p>
+<p><img src="../../assets/images/lighthouse-100s.png" alt=""></p>
+</div>
+        <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">About the Author</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>a (front-end) engineer living in Tokyo, using TypeScript, Node.js, JavaScript, swift and perl for work, interested in WASM and Rust, studying English.</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+      </article>
+    </main>
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            link.classList.add('no-link-icon');
+            continue;
+          }
+
+          link.classList.add('link-icon');
+          link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

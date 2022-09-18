@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>「石油の終焉」を読みました。 | メモログ</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  /* padding-left: 24px; */
+}
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <meta name="description" content="ポール・ロバーツ著 久保恵美子訳「石油の終焉」を読みました。現在のエネルギー事情について多角的な視点で考察しており、いろんな人に読んでもらいたい本です。500ページ超の分量なので読むの大変かと思いますが、読み応えはあります。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「石油の終焉」を読みました。">
+<meta property="og:url" content="https://memolog.org/2005/08/post_98.html">
+<meta property="og:site_name" content="メモログ">
+<meta property="og:description" content="ポール・ロバーツ著 久保恵美子訳「石油の終焉」を読みました。現在のエネルギー事情について多角的な視点で考察しており、いろんな人に読んでもらいたい本です。500ページ超の分量なので読むの大変かと思いますが、読み応えはあります。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="http://images-jp.amazon.com/images/P/4334961819.09.TZZZZZZZ.jpg">
+<meta property="og:image" content="http://images-jp.amazon.com/images/P/4334961819.09.TZZZZZZZ.jpg">
+<meta property="article:published_time" content="2005-08-14T08:18:05.000Z">
+<meta property="article:modified_time" content="2019-01-04T02:09:12.833Z">
+<meta property="article:author" content="Yutaka Yamaguchi">
+<meta property="article:tag" content="book">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://images-jp.amazon.com/images/P/4334961819.09.TZZZZZZZ.jpg">
+<meta name="twitter:creator" content="@memolog">
+<meta name="twitter:site" content="https://twitter.com/memolog">
+<meta property="fb:app_id" content="168245123786587">
+  <link rel="canonical" href="https://memolog.org/2005/08/post_98.html">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://memolog.org/2005/08/post_98.html"
+      },
+      "headline": "「石油の終焉」を読みました。",
+      
+      "datePublished": "1124007485000",
+      "dateModified": "1546567752833",
+      "author": {
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "メモログ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memolog.org/assets/icons/icon-1024.png"
+        }
+      },
+      "description": "ポール・ロバーツ著 久保恵美子訳「石油の終焉」を読みました。現在のエネルギー事情について多角的な視点で考察しており、いろんな人に読んでもらいたい本です。500ページ超の分量なので読むの大変かと思いますが、読み応えはあります。"
+    }
+  </script>
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body class="post">
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">💡 Personal notes about anything I&#39;m interested in</p>
+    <aside aria-hidden="true"><blockquote class="header__epigraph">Well, he fuffed, and he puffed, and he huffed and he puffed, and he puffed and huffed; but he could not get the house down.</blockquote></aside>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 Latest Articles</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <article>
+        <header class="header">
+          <div>
+            <time datetime="2005-08-14T08:18:05.000Z">
+              <span class="calendar-icon">📅</span><span>2005年8月14日</span>
+            </time>
+          </div>
+          <h2 class="header__title"><span>「石油の終焉」を読みました。</span></h2>
+          
+        </header>
+        <div id="article-content" class="content "><p><img src="http://images-jp.amazon.com/images/P/4334961819.09.TZZZZZZZ.jpg" alt="">ポール・ロバーツ著 久保恵美子訳「石油の終焉」を読みました。現在のエネルギー事情について多角的な視点で考察しており、いろんな人に読んでもらいたい本です。500ページ超の分量なので読むの大変かと思いますが、読み応えはあります。</p>
+<a id="more"></a>
+
+<p>第二次世界大戦では石油の輸出国であったアメリカは、敵国（日本やドイツ）の石油ラインを断つとともに同盟国（イギリス）に潤沢な石油（エネルギー）を提供して勝利を収めたそうです。石油が届かなければ、ほとんどの軍事兵器が動かない鉄くずのようになってしまうわけで、兵糧よりもずっと重要な資源です（人は食わずともしばらく生きていける）。「エネルギーを制するものが世界を制する」ということがよく分かります。そのうえで、現在は世界を制する国（アメリカ）がエネルギーを制している時代なのかなあという感想を持ちました。</p>
+<p>現在の私たちの生活というのは、かなりの部分のエネルギーを石油に依存しています。エネルギー資源の大半を輸入にたよる日本は、石油の供給が途絶えると簡単に破綻してしまいます（まず物流が破綻する）。そういった視点をふまえて考えると、なぜイラク戦争に対して日本がアメリカを全面的に支持するのか分かるような気がします（アメリカ同様、自国の経済を守るため、石油供給国の政情を安定させてエネルギーの安全保障を保つ必要がある）。</p>
+<p>同様に、なぜ日本が原子力発電を推進するのか、分かるような気がします。まず資源となるウランは輸入しなければ行けませんが、使用済み燃料を高速増殖炉サイクルに乗せることで長期的に利用することができる。それは自前のエネルギーを持つことであって、不安定な石油資源からの脱却することができるわけです。二酸化炭素の排出量削減の観点からも原子力発電の必要性は述べられますが、石油資源からの脱却の方がより原子力発電が必要とされる理由ではないかと思います。</p>
+<p>以上のことを考えながら、あえて極論を述べれば、石油を消費することが戦争を肯定することにもなるのではないか・・というような考えがよぎります。もちろん、これは言い過ぎなわけですが、石油と戦争が関係していることはもっと意識していく必要があるだろうと思います。戦争を反対するだけでなく、戦争の原因をなくす努力をしなければいけない。</p>
+<p>それはエネルギーの消費を止めよう！とか、とにかく車に乗るの止めようぜ！とかそういうことではなくて（車が経済成長の原動力であることもまた事実）、石油の危うさを知り、石油から脱却するためのアクションを支援していくことなのかと思います。石油ほど利便性のある代替エネルギーがないという問題はとりあえずおいておいて・・</p>
+<p>はい。自省します。はい。</p>
+<ul>
+<li><p>第一部：エネルギーの歴史</p>
+<ul>
+<li>第一章：燃料の王座 - 石油が石炭を駆逐した日</li>
+<li>第二章：推定埋蔵量の秘密 - 楽観派と悲観派の暗闇</li>
+<li>第三章：輝ける未来 - 燃料電池と水素経済</li>
+<li>第四章：エネルギーと政治 - 石油地政学の世界</li>
+<li>第五章：地球温暖化の危機 - 二酸化炭素と気候変動</li>
+</ul>
+</li>
+<li><p>第二部：エネルギー秩序</p>
+</li>
+<li><p>第六章：果てしなき欲望 - 急成長する中国</p>
+</li>
+<li><p>第七章：副業から本業へ - ガス経済の成長性</p>
+</li>
+<li><p>第八章：新たなエネルギーを求めて - 苦戦する代替エネルギー</p>
+</li>
+<li><p>第九章：意外な解決法 - 省エネのもたらす効果</p>
+</li>
+<li><p>第三部：エネルギーの未来</p>
+</li>
+<li><p>第十章：エネルギー安全保障 - 第三世界とエネルギー争奪戦</p>
+</li>
+<li><p>第十一章：神の見えざる手 - 次世代エネルギー経済と市場</p>
+</li>
+<li><p>第十二章：動かざるアメリカ - 化石燃料への固執</p>
+</li>
+<li><p>第十三章：未来の構築 - 世界の進むべき道</p>
+</li>
+<li><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4334961819/ref=nosim/yutakayamaguc-22" target="_blank" rel="noopener"><img src="http://images-jp.amazon.com/images/P/4334961819.09.TZZZZZZZ.jpg" alt="">石油の終焉</a></p>
+</li>
+</ul>
+</div>
+        <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">About the Author</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>a (front-end) engineer living in Tokyo, using TypeScript, Node.js, JavaScript, swift and perl for work, interested in WASM and Rust, studying English.</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+      </article>
+    </main>
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            link.classList.add('no-link-icon');
+            continue;
+          }
+
+          link.classList.add('link-icon');
+          link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

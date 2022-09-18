@@ -272,6 +272,11 @@
   content: '';
 }
 
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
 .content p a.link-icon {
   background-position-x: 4px;
   background-position-y: center;
@@ -385,61 +390,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2010/11/watir_click_no_wait_2.html"
+          "url": "https://memolog.org/2010/12/watir-webdriver-alternative-attach-method.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2010/11/watir_167.html"
+          "url": "https://memolog.org/2010/11/page_objects.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2010/10/double_byte_char_garbled_on_watir_165_higher.html"
+          "url": "https://memolog.org/2010/11/watir_click_no_wait_2.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2010/10/watir_166.html"
+          "url": "https://memolog.org/2010/11/watir_167.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2010/09/normal-specialty.html"
+          "url": "https://memolog.org/2010/10/double_byte_char_garbled_on_watir_165_higher.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2010/07/facebook_has_no_dedicated_qa.html"
+          "url": "https://memolog.org/2010/10/watir_166.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2010/07/watir_click_no_wait_doesnt_work.html"
+          "url": "https://memolog.org/2010/09/normal-specialty.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2010/06/young_people_and_social_change.html"
+          "url": "https://memolog.org/2010/07/facebook_has_no_dedicated_qa.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2010/06/diversity_of_the_world.html"
+          "url": "https://memolog.org/2010/07/watir_click_no_wait_doesnt_work.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2010/04/facebook.html"
+          "url": "https://memolog.org/2010/06/young_people_and_social_change.html"
         }
         
       ]
@@ -460,6 +465,32 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2010-12-03T18:54:00.000Z"><span class="calendar-icon">📅</span><span>2010年12月4日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2010/12/watir-webdriver-alternative-attach-method.html">watir-webdriver のattachメソッドの代替メソッド</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>去年の今頃、<a href="/blog//2010/02/watir-webdriver/">watir 2.0</a> として始まったwatir-webdriverですが、現在 0.1.7。着々と進んでいます。その当時はseleniumとwatirの関係性がよくわかってませんでしたが、watirはselenium-webdriverのラッパー的な感じみたいです。watir-webdriverの内部では、Selenium::Webdriver.for でseleniumのdriverを呼び出しています。</p></div>
+            <div><a href="/2010/12/watir-webdriver-alternative-attach-method.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2010-11-20T01:12:10.000Z"><span class="calendar-icon">📅</span><span>2010年11月20日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2010/11/page_objects.html">Page Objects &#x3a; テストスイート構築のためのデザインパターン</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a href="https://github.com/jarib/watir-webdriver/wiki/Page-Objects" target="_blank" rel="noopener">Page objects - watir-webdriver - GitHub</a></p></div>
+            <div><a href="/2010/11/page_objects.html">📖 続きを読む</a></div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -569,32 +600,6 @@
           
         </article>
       
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2010-06-06T14:15:00.000Z"><span class="calendar-icon">📅</span><span>2010年6月6日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2010/06/diversity_of_the_world.html">本：世界の多様性 家族構造と近代性</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a href="http://www.amazon.co.jp/gp/product/4894346486?ie=UTF8&tag=yutakayamaguc-22&linkCode=xm2&camp=247&creativeASIN=4894346486" target="_blank" rel="noopener"><img src="https://images-na.ssl-images-amazon.com/images/I/51aCmmPm6lL._SL180_.jpg" alt=""></a>エマニュエル・ドットが1983年に著した「第三世界」と1984年に著した「世界の幼少期」を二つ合わせたのがこの本。「第三世界」では「世界にある多様なイデオロギーの基底にあるのは家族構造」と論じ、家族構造とイデオロギーは対になっていると主張しています。「世界の幼少期」では教育における女性の権威の重要性を述べ、女性の権威を受け入れる家族構造は文化的成長が速いと論じています（ただし文化的成長は地理的な伝播の影響を受けるので、それも考慮する必要がある）。</p></div>
-            <div><a href="/2010/06/diversity_of_the_world.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2010-04-11T13:00:00.000Z"><span class="calendar-icon">📅</span><span>2010年4月11日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2010/04/facebook.html">本：facebook</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a href="http://www.amazon.co.jp/gp/product/4903853853?ie=UTF8&tag=yutakayamaguc-22&linkCode=xm2&camp=247&creativeASIN=4903853853" target="_blank" rel="noopener"><img src="http://ec3.images-amazon.com/images/I/411YI49u7NL._SL180_.jpg" alt=""></a>facebookの創成期から現在に至るまでの物語。一人の若者が作成したサイトが爆発的な人気を得て、とりまく状況が劇的に変わっていく。facebookへの期待感や焦燥感、様々な人の思惑が話を複雑にしていきます。そして現在のfacebookにつながっていく。それが本書の最大の魅力です。物語に登場するマーク、ショーンパーカー、エドゥアルドは、いまどういう生活をしているのか、二人の関係はどうなったのか、物語中に触れられた問題は解決したのか・・読了後にも続きが気になる内容になっています。なお、物語がエドゥアルドの心理描写が中心に進むというのもあって、若干エドゥアルドびいきなところはあるような気がします。</p></div>
-            <div><a href="/2010/04/facebook.html">📖 続きを読む</a></div>
-          
-        </article>
-      
       <footer class="pagination"><a class="extend prev" rel="prev" href="/page/20/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" href="/page/22/">Next</a></footer>
     </main>
     <footer class="profile">
@@ -621,7 +626,7 @@
     if (/googlebot/i.test(navigator.userAgent)) {
       return;
     }
-    window.addEventListener("load", () => {
+    window.addEventListener("DOMContentLoaded", () => {
       const links = document.querySelectorAll('.content p a');
       const linkLength = links && links.length || 0;
       for (var i=0; i<linkLength; i++){
@@ -637,6 +642,7 @@
               link.style.marginRight = '1em';
               link.style.paddingLeft = '0';
             }
+            link.classList.add('no-link-icon');
             continue;
           }
 

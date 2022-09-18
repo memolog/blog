@@ -272,6 +272,11 @@
   content: '';
 }
 
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
 .content p a.link-icon {
   background-position-x: 4px;
   background-position-y: center;
@@ -385,61 +390,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2012/09/fallback_warning_in_sass.html"
+          "url": "https://memolog.org/2012/09/css_transforms_sample.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2012/09/css_transforms_backface-visibility.html"
+          "url": "https://memolog.org/2012/09/phonegap21-xcode45.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2012/09/css_transforms_3d_and_transform-style.html"
+          "url": "https://memolog.org/2012/09/fallback_warning_in_sass.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2012/09/css_transforms_3d_and_perspective.html"
+          "url": "https://memolog.org/2012/09/css_transforms_backface-visibility.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2012/09/css_transforms_2d_2.html"
+          "url": "https://memolog.org/2012/09/css_transforms_3d_and_transform-style.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2012/09/css_transforms_2d.html"
+          "url": "https://memolog.org/2012/09/css_transforms_3d_and_perspective.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2012/09/sass_compass.html"
+          "url": "https://memolog.org/2012/09/css_transforms_2d_2.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2012/09/rvm_jewelrybox_homebrew.html"
+          "url": "https://memolog.org/2012/09/css_transforms_2d.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2012/07/phonegap_and_xcode_version.html"
+          "url": "https://memolog.org/2012/09/sass_compass.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2012/07/dropped_pubdate_in_time_element.html"
+          "url": "https://memolog.org/2012/09/rvm_jewelrybox_homebrew.html"
         }
         
       ]
@@ -460,6 +465,38 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-09-26T13:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年9月26日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/09/css_transforms_sample.html">CSS Transforms&#x3a; くるくる回るサイコロのサンプル</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>CSS Transforms関連記事のまとめ的意味を込めて、くるくる回るサイコロを作成してみました。下のサイコロ（の開き）をクリック（またはhover）すると、クリックした間だけアニメーションします。CSSのみ（と思ったらiPhoneだと期待したようにactive状態にならないので、touchstartしたときにdice-actionというclassを追加するようにJavascriptを入れた）。</p></div>
+            <div><a href="/2012/09/css_transforms_sample.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2012-09-25T18:28:07.000Z"><span class="calendar-icon">📅</span><span>2012年9月26日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2012/09/phonegap21-xcode45.html">PhoneGap2.1とXcode4.5でエラー</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a href="http://www.phonegap.com/" target="_blank" rel="noopener">PhoneGap</a>の2.1を使用して作成したプロジェクトを、Xcodeの4.5でRunしたら下記のようなエラーが発生。</p>
+<pre><code>clang: error: no such file or directory: 
+
+&lt;!-- more --&gt;
+&#39;/Users/username/Library/Developer/Xcode/DerivedData/projectname/Build/Products/Debug-iphoneos/libCordova.a&#39;
+</code></pre><p>Googleで検索したところによると、<a href="https://issues.apache.org/jira/browse/CB-1360" target="_blank" rel="noopener">[#CB-1360] iOS 6 - bump deployment target support to 4.3, add/remove architectures - ASF JIRA</a>で報告されているissueによるものらしくて、<a href="https://git-wip-us.apache.org/repos/asf?p=incubator-cordova-ios.git;a=commitdiff;h=07b54f14;hp=cf2412b5a0db4c67b144561abd201810e3f5f2a5" target="_blank" rel="noopener">ASF Git Repos - incubator-cordova-ios.git/commitdiff</a>の差分を、ダウンロードしてきたPhoneGapのライブラリ（lib/ios/CordovaLib/CordovaLib.xcodeproj/project.pbxproj）に適用すると解消される。</p>
+<p>この修正は2.2では含まれるようなので、2.2では問題は発生しない（と思われる）。</p>
+</div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -570,32 +607,6 @@
           
         </article>
       
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-07-16T04:45:00.000Z"><span class="calendar-icon">📅</span><span>2012年7月16日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/07/phonegap_and_xcode_version.html">PhoneGapとXcode</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>機会があって<a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener">Xcode</a>のバージョンとインストールできる<a href="http://phonegap.com/" target="_blank" rel="noopener">PhoneGap</a>の現在の組み合わせを調べてみました（2012/7/16現在）。4.2については現状ではissueがあって1.9.0をインストールしてもビルドでエラーになる。</p></div>
-            <div><a href="/2012/07/phonegap_and_xcode_version.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-07-02T13:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年7月2日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/07/dropped_pubdate_in_time_element.html">time要素からpubdate属性が抜けていた</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>何の気なしに<a href="http://html5.validator.nu/" target="_blank" rel="noopener">Validator.nu (X)HTML5 Validator</a>でサイトの検証をしてみたら、time要素のpubdateがnot allowedだと言われて、気がついたら<a href="http://www.w3.org/TR/html5/the-time-element.html#the-time-element" target="_blank" rel="noopener">W3Cの仕様</a>のContent Attributesからも抹消されているので、なんでだろうなあと調べていたら<a href="http://www.w3.org/TR/2012/WD-html5-diff-20120329/#changes-2011-05-25" target="_blank" rel="noopener">20120329の更新</a>で、pubdateが削除されていた（The time element was redesigned to make it match how people wanted to use it. Its pubdate attribute was dropped. ）。参考<a href="http://myakura.hatenablog.com/entry/2012/03/30/095033" target="_blank" rel="noopener">HTML5 (と関連WD) 更新 - fragmentary</a>。</p></div>
-            <div><a href="/2012/07/dropped_pubdate_in_time_element.html">📖 続きを読む</a></div>
-          
-        </article>
-      
       <footer class="pagination"><a class="extend prev" rel="prev" href="/page/14/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" href="/page/16/">Next</a></footer>
     </main>
     <footer class="profile">
@@ -622,7 +633,7 @@
     if (/googlebot/i.test(navigator.userAgent)) {
       return;
     }
-    window.addEventListener("load", () => {
+    window.addEventListener("DOMContentLoaded", () => {
       const links = document.querySelectorAll('.content p a');
       const linkLength = links && links.length || 0;
       for (var i=0; i<linkLength; i++){
@@ -638,6 +649,7 @@
               link.style.marginRight = '1em';
               link.style.paddingLeft = '0';
             }
+            link.classList.add('no-link-icon');
             continue;
           }
 

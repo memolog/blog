@@ -1,7 +1,9 @@
-const CACHE_MAIN = 'main1600238349957';
+const CACHE_MAIN = 'main1663466818900';
 const precacheList = [
   
   '/',
+  '/2022/webpack-5-compiles-code-with-es2015.html',
+  '/2020/book-programming-typescript.html',
   '/2020/got-100-lighthouse-score-in-all-categories-on-mobile.html',
   '/2020/logical-assignment-operators.html',
   '/2020/fragmenting-flex-layout.html',
@@ -10,8 +12,8 @@ const precacheList = [
   '/2020/components-of-flexibility.html',
   '/2020/flex-shorthand.html',
   '/2020/flex-lines.html',
-  '/2020/flex-order-property.html',
-  '/2020/flex-flow-shorthand.html',
+  '/assets/images/martin-bennie-xVgHduP61HY-unsplash/martin-bennie-xVgHduP61HY-unsplash.svg',
+  '/assets/images/bulkan-evcimen-LZg_PuyFPGo-unsplash/bulkan-evcimen-LZg_PuyFPGo-unsplash.svg',
   '/assets/images/ben-koorengevel-tpIWpoW3_Wc-unsplash/ben-koorengevel-tpIWpoW3_Wc-unsplash.svg',
   '/assets/images/cath-smith-PF5_cqOQFT4-unsplash/cath-smith-PF5_cqOQFT4-unsplash.svg',
   '/assets/images/tomas-malik-zlSzh2FP7LY-unsplash/tomas-malik-zlSzh2FP7LY-unsplash.svg',
@@ -20,8 +22,6 @@ const precacheList = [
   '/assets/images/700244ansdl/700244ansdl.svg',
   '/assets/images/steve-douglas-80Pr_AfC71Y-unsplash/steve-douglas-80Pr_AfC71Y-unsplash.svg',
   '/assets/images/alex-chernenko-To28QYvt5q4-unsplash/alex-chernenko-To28QYvt5q4-unsplash.svg',
-  '/assets/images/estudio-bloom-ezqnxsqUZ80-unsplash/estudio-bloom-ezqnxsqUZ80-unsplash.svg',
-  '/assets/images/ben-mcleod-2UfVYE2S7B4-unsplash/ben-mcleod-2UfVYE2S7B4-unsplash.svg',
   '/css/prism.css',
   '/css/global_async.css',
 ];

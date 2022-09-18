@@ -272,6 +272,11 @@
   content: '';
 }
 
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
 .content p a.link-icon {
   background-position-x: 4px;
   background-position-y: center;
@@ -385,61 +390,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2013/01/jquery_peformance_about_creating_element.html"
+          "url": "https://memolog.org/2013/01/style_scoped.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2012/12/prevent_variables_collides_in_closure_compiled_scripts.html"
+          "url": "https://memolog.org/2013/01/a_style_sheet_that_is_blocking_scripts_and_dom_content_loaded.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2012/12/css_supports_at-rule.html"
+          "url": "https://memolog.org/2013/01/jquery_peformance_about_creating_element.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2012/12/adobe_css_filterlab.html"
+          "url": "https://memolog.org/2012/12/prevent_variables_collides_in_closure_compiled_scripts.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2012/12/android_camera_kills_phonegap_app.html"
+          "url": "https://memolog.org/2012/12/css_supports_at-rule.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2012/12/hayaku_sublime_plugin_for_writing_css_faster.html"
+          "url": "https://memolog.org/2012/12/adobe_css_filterlab.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2012/11/inspect_uiwebview_with_safari.html"
+          "url": "https://memolog.org/2012/12/android_camera_kills_phonegap_app.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2012/11/notes_around_marathon.html"
+          "url": "https://memolog.org/2012/12/hayaku_sublime_plugin_for_writing_css_faster.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2012/09/css_transforms_sample.html"
+          "url": "https://memolog.org/2012/11/inspect_uiwebview_with_safari.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2012/09/phonegap21-xcode45.html"
+          "url": "https://memolog.org/2012/11/notes_around_marathon.html"
         }
         
       ]
@@ -460,6 +465,32 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-01-27T13:05:00.000Z"><span class="calendar-icon">📅</span><span>2013年1月27日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/01/style_scoped.html">style要素のscoped属性</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a href="https://hacks.mozilla.org/2013/01/firefox-development-highlights-h-264-mp3-support-on-windows-scoped-stylesheets-more/" target="_blank" rel="noopener">Firefox Development Highlights - H.264 &amp; MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog</a>（<a href="https://dev.mozilla.jp/2013/01/firefox-development-highlights-h-264-mp3-support-on-windows-scoped-stylesheets-more/" target="_blank" rel="noopener">日本語</a>）にて、<a href="http://nightly.mozilla.org/" target="_blank" rel="noopener">Firefoxのnightly</a>でstyle要素のscoped属性に対応したという話が出ていたので、試してみました。<a href="http://codepen.io/memolog/pen/uedGg" target="_blank" rel="noopener">style scoped動作確認用のcodepen</a>。</p></div>
+            <div><a href="/2013/01/style_scoped.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-01-23T06:07:00.000Z"><span class="calendar-icon">📅</span><span>2013年1月23日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/01/a_style_sheet_that_is_blocking_scripts_and_dom_content_loaded.html">a style sheet that is blocking scripts と DOMContentLoaded</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a href="http://molily.de/weblog/domcontentloaded" target="_blank" rel="noopener">DOMContentLoaded and stylesheets · molily</a>（via <a href="https://developer.mozilla.org/en-US/docs/Mozilla_event_reference/DOMContentLoaded_&#x25;28event&#x25;29" target="_blank" rel="noopener">DOMContentLoaded - Mozilla event reference | MDN</a>）にて、head内のスタイルシートとJavascriptの配置の違いで、DOMContentLoadedイベントが発生するタイミングが変わるという内容が掲載されています。スタイルシートのあとにJavascriptが入っていると、DOMContentLoadedはスタイルシートをロードしたあとに発生して、スタイルシートのあとにJavascriptがないと、スタイルシートのロードを待たずにDOMContentLoadedが発生する。</p></div>
+            <div><a href="/2013/01/a_style_sheet_that_is_blocking_scripts_and_dom_content_loaded.html">📖 続きを読む</a></div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -566,38 +597,6 @@
           
         </article>
       
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-09-26T13:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年9月26日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/09/css_transforms_sample.html">CSS Transforms&#x3a; くるくる回るサイコロのサンプル</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>CSS Transforms関連記事のまとめ的意味を込めて、くるくる回るサイコロを作成してみました。下のサイコロ（の開き）をクリック（またはhover）すると、クリックした間だけアニメーションします。CSSのみ（と思ったらiPhoneだと期待したようにactive状態にならないので、touchstartしたときにdice-actionというclassを追加するようにJavascriptを入れた）。</p></div>
-            <div><a href="/2012/09/css_transforms_sample.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-09-25T18:28:07.000Z"><span class="calendar-icon">📅</span><span>2012年9月26日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/09/phonegap21-xcode45.html">PhoneGap2.1とXcode4.5でエラー</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a href="http://www.phonegap.com/" target="_blank" rel="noopener">PhoneGap</a>の2.1を使用して作成したプロジェクトを、Xcodeの4.5でRunしたら下記のようなエラーが発生。</p>
-<pre><code>clang: error: no such file or directory: 
-
-&lt;!-- more --&gt;
-&#39;/Users/username/Library/Developer/Xcode/DerivedData/projectname/Build/Products/Debug-iphoneos/libCordova.a&#39;
-</code></pre><p>Googleで検索したところによると、<a href="https://issues.apache.org/jira/browse/CB-1360" target="_blank" rel="noopener">[#CB-1360] iOS 6 - bump deployment target support to 4.3, add/remove architectures - ASF JIRA</a>で報告されているissueによるものらしくて、<a href="https://git-wip-us.apache.org/repos/asf?p=incubator-cordova-ios.git;a=commitdiff;h=07b54f14;hp=cf2412b5a0db4c67b144561abd201810e3f5f2a5" target="_blank" rel="noopener">ASF Git Repos - incubator-cordova-ios.git/commitdiff</a>の差分を、ダウンロードしてきたPhoneGapのライブラリ（lib/ios/CordovaLib/CordovaLib.xcodeproj/project.pbxproj）に適用すると解消される。</p>
-<p>この修正は2.2では含まれるようなので、2.2では問題は発生しない（と思われる）。</p>
-</div>
-          
-        </article>
-      
       <footer class="pagination"><a class="extend prev" rel="prev" href="/page/13/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" href="/page/15/">Next</a></footer>
     </main>
     <footer class="profile">
@@ -624,7 +623,7 @@
     if (/googlebot/i.test(navigator.userAgent)) {
       return;
     }
-    window.addEventListener("load", () => {
+    window.addEventListener("DOMContentLoaded", () => {
       const links = document.querySelectorAll('.content p a');
       const linkLength = links && links.length || 0;
       for (var i=0; i<linkLength; i++){
@@ -640,6 +639,7 @@
               link.style.marginRight = '1em';
               link.style.paddingLeft = '0';
             }
+            link.classList.add('no-link-icon');
             continue;
           }
 

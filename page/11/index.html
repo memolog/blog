@@ -272,6 +272,11 @@
   content: '';
 }
 
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
 .content p a.link-icon {
   background-position-x: 4px;
   background-position-y: center;
@@ -385,61 +390,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2013/09/try_typesquare.html"
+          "url": "https://memolog.org/2013/09/ios7safariremote_debugging.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2013/09/test_content_security_policy_with_grunt-contrib-connect.html"
+          "url": "https://memolog.org/2013/09/css_vertical_alignment.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2013/09/basketjs_with_content_security_policy.html"
+          "url": "https://memolog.org/2013/09/try_typesquare.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2013/09/github_content_security_policy.html"
+          "url": "https://memolog.org/2013/09/test_content_security_policy_with_grunt-contrib-connect.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2013/09/background_shorthand.html"
+          "url": "https://memolog.org/2013/09/basketjs_with_content_security_policy.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2013/08/specificity_of_pseudo_class.html"
+          "url": "https://memolog.org/2013/09/github_content_security_policy.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2013/08/generate_sass_sourcemap_with_compass.html"
+          "url": "https://memolog.org/2013/09/background_shorthand.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2013/08/javascript_source_analytics_with_grunt-plato.html"
+          "url": "https://memolog.org/2013/08/specificity_of_pseudo_class.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2013/08/json_parse_null_without_type_converting.html"
+          "url": "https://memolog.org/2013/08/generate_sass_sourcemap_with_compass.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2013/08/ie10_input_enter_key_button_element_click.html"
+          "url": "https://memolog.org/2013/08/javascript_source_analytics_with_grunt-plato.html"
         }
         
       ]
@@ -460,6 +465,37 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-09-25T06:30:00.000Z"><span class="calendar-icon">📅</span><span>2013年9月25日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/09/ios7safariremote_debugging.html">iOS7のSafariでremote debuggingできない</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>iOS7のSafariでremote debuggingをしようとすると、inspect内容が途中で戻ってこなかったり、styleの情報が取得できなかったりする。</p>
+<p><a href="http://www.mobilexweb.com/blog/safari-ios7-html5-problems-apis-review" target="_blank" rel="noopener">Safari on iOS 7 and HTML5: problems, changes and new APIs | Breaking the Mobile Web</a>によると、Safariが6.1じゃないとダメらしい。でも、6.1は<a href="https://developer.apple.com/downloads/index.action?name=Safari&#x25;206.1" target="_blank" rel="noopener">プレビュー版</a>でしか使えない（現在の最新は6.0.5）。</p></div>
+            <div><a href="/2013/09/ios7safariremote_debugging.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-09-14T17:55:00.000Z"><span class="calendar-icon">📅</span><span>2013年9月15日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/09/css_vertical_alignment.html">CSSで横並びで真ん中にそろえたい</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>横並びにした要素を真ん中揃えにしたいという話。アプローチはいろいろあります。floatは真ん中揃えはむずかしそうなので、除外…（できるのかな）</p>
+<ul>
+<li>line-heightでそろえる</li>
+<li>display:inline-boxでそろえる</li>
+</ul></div>
+            <div><a href="/2013/09/css_vertical_alignment.html">📖 続きを読む</a></div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -567,49 +603,6 @@
           
         </article>
       
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2013-08-16T03:00:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月16日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2013/08/json_parse_null_without_type_converting.html">HTC EVO (Android 2.3) と JSON.parse(null)</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>HTC EVO(2.3.4)のAndroid端末で、localStorageに入れた値をJSON.parseした場合に、localStorageからnullが渡るとillegal accessのエラーになる。エラーを出力しないようだけど。。。weinreのコンソールでJSON.parse(null)と打つとそのようなエラーが確認できる。</p></div>
-            <div><a href="/2013/08/json_parse_null_without_type_converting.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2013-08-09T05:55:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月9日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2013/08/ie10_input_enter_key_button_element_click.html">IE10 で input フォームでエンターすると button要素 に click イベントが発生する</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #3c515f"><img src="/assets/images/dave-blahlentino-149508-unsplash/dave-blahlentino-149508-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/iRm292XKwA4?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Dave Blahlentino</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p><a href="http://stackoverflow.com/questions/13497606/ie10-find-first-button-on-page-and-trigger-click-event-on-input-submit" target="_blank" rel="noopener">javascript - IE10 find first button on page and trigger click event on input submit - Stack Overflow</a>参考。Internet Explorer 10 にて input fieldで Enter keyを押すと、<button>要素にclick eventが発生する。</p></div>
-            <div><a href="/2013/08/ie10_input_enter_key_button_element_click.html">📖 続きを読む</a></div>
-          
-        </article>
-      
       <footer class="pagination"><a class="extend prev" rel="prev" href="/page/10/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" href="/page/12/">Next</a></footer>
     </main>
     <footer class="profile">
@@ -636,7 +629,7 @@
     if (/googlebot/i.test(navigator.userAgent)) {
       return;
     }
-    window.addEventListener("load", () => {
+    window.addEventListener("DOMContentLoaded", () => {
       const links = document.querySelectorAll('.content p a');
       const linkLength = links && links.length || 0;
       for (var i=0; i<linkLength; i++){
@@ -652,6 +645,7 @@
               link.style.marginRight = '1em';
               link.style.paddingLeft = '0';
             }
+            link.classList.add('no-link-icon');
             continue;
           }
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2022-09-18T02:06:58.900Z</updated>
+  <updated>2022-09-29T23:22:19.697Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -17,21 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Unexpected reserved word &#39;interface&#39; on jest</title>
+    <link href="https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html"/>
+    <id>https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html</id>
+    <published>2022-09-29T21:23:42.000Z</published>
+    <updated>2022-09-29T23:22:19.697Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;jestを28以降に更新したら、jestの実行時に&lt;code&gt;Unexpected reserved word &amp;#39;interface&amp;#39;&lt;/code&gt;みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Webpack 5 compiles code with ES2015</title>
     <link href="https://memolog.org/2022/webpack-5-compiles-code-with-es2015.html"/>
     <id>https://memolog.org/2022/webpack-5-compiles-code-with-es2015.html</id>
     <published>2022-09-18T01:20:39.000Z</published>
-    <updated>2022-09-18T02:06:58.900Z</updated>
+    <updated>2022-09-29T23:21:41.935Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;Webpackのバージョン5ではコンパイルしたコードにES2015（アロー関数など）が含まれるようになる。これはWebpackが生成する部分に関する仕様なので、babelの設定でES5だけに制限していてもES2015が使われる。IE11ではアロー関数が処理できずに丸ごとエラ
-        
-      
+      &lt;p&gt;Webpackのバージョン5ではコンパイルしたコードにES2015（アロー関数など）が含まれるようになる。これはWebpackが生成する部分に関する仕様なので、babelの設定でES5だけに制限していてもES2015が使われる。IE11ではアロー関数が処理できずに丸ごとエラーとなるので、IE11にまだ対応する必要があれば設定を確認する必要がある（今さらだけど）。
     
     </summary>
     
@@ -339,23 +350,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;a href=&quot;https://memolog.org/2020/flex-containers.html&quot;&gt;Flex Containers&lt;/a&gt;から引き続き、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-items&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4. Flex Items&lt;/a&gt;について確認していく。
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Flex Containers</title>
-    <link href="https://memolog.org/2020/flex-containers.html"/>
-    <id>https://memolog.org/2020/flex-containers.html</id>
-    <published>2020-03-20T08:45:51.000Z</published>
-    <updated>2020-03-20T08:45:58.410Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://memolog.org/2020/flex-layout-box-model-and-terminology.html&quot;&gt;Flex Layout Box Model and Terminology&lt;/a&gt;から引き続き、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-containers&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;3. Flex Containers: the flex and inline-flex display values&lt;/a&gt;について確認していく。
     
     </summary>
     

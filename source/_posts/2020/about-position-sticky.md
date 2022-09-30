@@ -47,11 +47,11 @@ HTMLとCSS的には、以下のような感じで
 ```
 
 ```css
-.header__title {
+{% raw %}.header__title {
   position: sticky;
   top: 0;
   ...
-}
+}{% endraw %}
 ```
 
 `.header__title`に`position:sticky`をつけると、`header`に対してstickyに動作するようになる。

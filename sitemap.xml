@@ -4,7 +4,14 @@
   <url>
     <loc>https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html</loc>
     
-    <lastmod>2022-09-29T23:22:19.697Z</lastmod>
+    <lastmod>2022-09-30T00:57:35.933Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://memolog.org/2020/about-position-sticky.html</loc>
+    
+    <lastmod>2022-09-30T00:47:52.679Z</lastmod>
     
   </url>
   
@@ -261,13 +268,6 @@
   </url>
   
   <url>
-    <loc>https://memolog.org/2020/about-position-sticky.html</loc>
-    
-    <lastmod>2020-02-15T21:16:53.166Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://memolog.org/2020/web-workers-lifetime.html</loc>
     
     <lastmod>2020-02-13T11:17:20.797Z</lastmod>
@@ -359,14 +359,7 @@
   </url>
   
   <url>
-    <loc>https://memolog.org/2018/selection-sort-in-javascript.html</loc>
-    
-    <lastmod>2019-01-04T02:09:12.877Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://memolog.org/2018/show-vertical-writing-with-css.html</loc>
+    <loc>https://memolog.org/2018/pass-arguments-to-npm-run-script.html</loc>
     
     <lastmod>2019-01-04T02:09:12.877Z</lastmod>
     
@@ -380,6 +373,13 @@
   </url>
   
   <url>
+    <loc>https://memolog.org/2018/selection-sort-in-javascript.html</loc>
+    
+    <lastmod>2019-01-04T02:09:12.877Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://memolog.org/2018/retrieve-json-from-require-method.html</loc>
     
     <lastmod>2019-01-04T02:09:12.877Z</lastmod>
@@ -387,16 +387,9 @@
   </url>
   
   <url>
-    <loc>https://memolog.org/2018/pass-arguments-to-npm-run-script.html</loc>
+    <loc>https://memolog.org/2018/show-vertical-writing-with-css.html</loc>
     
     <lastmod>2019-01-04T02:09:12.877Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://memolog.org/2018/insertion-sort-in-javascript.html</loc>
-    
-    <lastmod>2019-01-04T02:09:12.876Z</lastmod>
     
   </url>
   
@@ -408,7 +401,7 @@
   </url>
   
   <url>
-    <loc>https://memolog.org/2018/inline-svg-as-an-image-placeholder.html</loc>
+    <loc>https://memolog.org/2018/insertion-sort-in-javascript.html</loc>
     
     <lastmod>2019-01-04T02:09:12.876Z</lastmod>
     
@@ -422,6 +415,13 @@
   </url>
   
   <url>
+    <loc>https://memolog.org/2018/inline-svg-as-an-image-placeholder.html</loc>
+    
+    <lastmod>2019-01-04T02:09:12.876Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://memolog.org/2018/javascript-property-access-big-o.html</loc>
     
     <lastmod>2019-01-04T02:09:12.876Z</lastmod>
@@ -429,7 +429,14 @@
   </url>
   
   <url>
-    <loc>https://memolog.org/2018/create-a-new-icon.html</loc>
+    <loc>https://memolog.org/2018/create-hash-table-in-javascript.html</loc>
+    
+    <lastmod>2019-01-04T02:09:12.875Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://memolog.org/2018/custom-domain-in-github-pages.html</loc>
     
     <lastmod>2019-01-04T02:09:12.875Z</lastmod>
     
@@ -450,7 +457,7 @@
   </url>
   
   <url>
-    <loc>https://memolog.org/2018/custom-domain-in-github-pages.html</loc>
+    <loc>https://memolog.org/2018/create-a-new-icon.html</loc>
     
     <lastmod>2019-01-04T02:09:12.875Z</lastmod>
     
@@ -465,13 +472,6 @@
   
   <url>
     <loc>https://memolog.org/2018/convert-multiple-primitive-images-at-once.html</loc>
-    
-    <lastmod>2019-01-04T02:09:12.875Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://memolog.org/2018/create-hash-table-in-javascript.html</loc>
     
     <lastmod>2019-01-04T02:09:12.875Z</lastmod>
     

@@ -389,7 +389,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://memolog.org/assets/images/david-travis-WC6MJ0kRzGw-unsplash/david-travis-WC6MJ0kRzGw-unsplash.jpg">
 <meta property="article:published_time" content="2020-02-15T01:17:04.000Z">
-<meta property="article:modified_time" content="2020-02-15T21:16:53.166Z">
+<meta property="article:modified_time" content="2022-09-30T00:47:52.679Z">
 <meta property="article:author" content="Yutaka Yamaguchi">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://memolog.org/assets/images/david-travis-WC6MJ0kRzGw-unsplash/david-travis-WC6MJ0kRzGw-unsplash.jpg">
@@ -412,7 +412,7 @@
         ],
       
       "datePublished": "1581729424000",
-      "dateModified": "1581801413166",
+      "dateModified": "1664498872679",
       "author": {
         "@type": "Person",
         "name": "Yutaka Yamaguchi"
@@ -470,26 +470,26 @@
 
           
         </header>
-        <div id="article-content" class="content "><p><code>position:sticky</code>を使った事がなかったので見出し部分につけてみた。<a href="https://caniuse.com/#feat=css-sticky" target="_blank" rel="noopener">Can I use…</a>によると、IE以外ならだいたい動作する。<a id="more"></a></p>
+        <div id="article-content" class="content "><p><code>position:sticky</code>を使った事がなかったので見出し部分につけてみた。<a target="_blank" rel="noopener" href="https://caniuse.com/#feat=css-sticky">Can I use…</a>によると、IE以外ならだいたい動作する。<a id="more"></a></p>
 <p>ページのCSSは急に変えてしまうので、position:stickyが動いている様子を動画の残しておいた。</p>
 <div class="youtube-wrapper">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/57YsR4LjSMU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen title="The sticky heading element inside header element"></iframe>
   </div>
 
 <hr>
-<p>positionプロパティの仕様は<a href="https://drafts.csswg.org/css-position-3/#position-property" target="_blank" rel="noopener">6.5. Choosing a positioning scheme: position property</a>にある。stickyについては以下のように書かれている。</p>
+<p>positionプロパティの仕様は<a target="_blank" rel="noopener" href="https://drafts.csswg.org/css-position-3/#position-property">6.5. Choosing a positioning scheme: position property</a>にある。stickyについては以下のように書かれている。</p>
 <blockquote>
 <p>The box’s position is calculated according to the normal flow (this is called the position in normal flow). Then the box is offset relative to its flow root and containing block and in all cases, including table elements, does not affect the position of any following boxes. When a box B is stickily positioned, the position of the following box is calculated as though B were not offset. The effect of position: sticky on table elements is the same as for position: relative</p>
 </blockquote>
-<p>normal flowは<a href="https://drafts.csswg.org/css-position-3/#pos-sch" target="_blank" rel="noopener">6. Positioning schemes</a>あたりの説明が比較的理解しやすい（と思う）。floatとかposition:absoluteみたいな普通のやつ。</p>
-<p>flow rootは<a href="https://drafts.csswg.org/css-display/#valdef-display-flow-root" target="_blank" rel="noopener">Inner Display Layout Models: the flow, flow-root, table, flex, grid, and ruby keywords</a>に書かれている内容とまあたぶん同じ意味かなあと思う。</p>
+<p>normal flowは<a target="_blank" rel="noopener" href="https://drafts.csswg.org/css-position-3/#pos-sch">6. Positioning schemes</a>あたりの説明が比較的理解しやすい（と思う）。floatとかposition:absoluteみたいな普通のやつ。</p>
+<p>flow rootは<a target="_blank" rel="noopener" href="https://drafts.csswg.org/css-display/#valdef-display-flow-root">Inner Display Layout Models: the flow, flow-root, table, flex, grid, and ruby keywords</a>に書かれている内容とまあたぶん同じ意味かなあと思う。</p>
 <blockquote>
 <p>The element generates a block container box, and lays out its contents using flow layout. It always establishes a new block formatting context for its contents.</p>
 </blockquote>
 <p>つまり、その要素の block formatting context を作っている要素かなと思う。</p>
-<p>containing blockは<a href="https://drafts.csswg.org/css-position-3/#containing-block" target="_blank" rel="noopener">3.1. Definition of containing block</a>によると、stickyのcontaining blockはrelativeの場合と同じなので、<a href="https://www.w3.org/TR/css-display-3/#containing-block" target="_blank" rel="noopener">containing block</a>の意味になる。</p>
+<p>containing blockは<a target="_blank" rel="noopener" href="https://drafts.csswg.org/css-position-3/#containing-block">3.1. Definition of containing block</a>によると、stickyのcontaining blockはrelativeの場合と同じなので、<a target="_blank" rel="noopener" href="https://www.w3.org/TR/css-display-3/#containing-block">containing block</a>の意味になる。</p>
 <blockquote>
-<p>A rectangle that forms the basis of sizing and positioning for the boxes associated with it (usually the children of the box that generated it). Notably, a containing block is not a box (it is a rectangle), however it is often derived from the dimensions of a box. If properties of a containing block are referenced, they reference the values on the box that generated the containing block. (For the <a href="https://www.w3.org/TR/css-display-3/#initial-containing-block" target="_blank" rel="noopener">initial containing block</a>, values are taken from the root element unless otherwise specified.) See CSS2 <a href="https://www.w3.org/TR/CSS2/visuren.html#containing-block" target="_blank" rel="noopener">Section 9.1.2</a> and <a href="https://www.w3.org/TR/CSS2/visudet.html#containing-block-details" target="_blank" rel="noopener">Section 10.1</a> for details.</p>
+<p>A rectangle that forms the basis of sizing and positioning for the boxes associated with it (usually the children of the box that generated it). Notably, a containing block is not a box (it is a rectangle), however it is often derived from the dimensions of a box. If properties of a containing block are referenced, they reference the values on the box that generated the containing block. (For the <a target="_blank" rel="noopener" href="https://www.w3.org/TR/css-display-3/#initial-containing-block">initial containing block</a>, values are taken from the root element unless otherwise specified.) See CSS2 <a target="_blank" rel="noopener" href="https://www.w3.org/TR/CSS2/visuren.html#containing-block">Section 9.1.2</a> and <a target="_blank" rel="noopener" href="https://www.w3.org/TR/CSS2/visudet.html#containing-block-details">Section 10.1</a> for details.</p>
 </blockquote>
 <p>つまり、対象のboxの大きさとかpositionとかの基準になる要素がそれになる。containing blockについては大変そうだからこれ以上深追いしない。まあ、たぶん、たいていの場合、親要素ということになると思う。</p>
 <p>多少の語弊はあるかもしれないけど、ある要素にposition:stickyに設定すると、通常のフロー上に配置され、かつ、flow rootとcontaining blockに対して、相対的なオフセットがつくようになる。つまり、上のスクリーンキャプチャのような動作になる。</p>
@@ -502,11 +502,11 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>featured__credit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.header__title</span> </span><span class="token punctuation">{</span>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token number">.</span>header__title &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
   <span class="token property">position</span><span class="token punctuation">:</span> sticky<span class="token punctuation">;</span>
   <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
   <span class="token number">...</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>.header__title</code>に<code>position:sticky</code>をつけると、<code>header</code>に対してstickyに動作するようになる。</p>
 <p>Safariの場合、もしかしたら <code>position: -webkit-sticky;</code> の指定が必要かもしれないけど、最新のSafari（macとiOS）でみた限りでは、-webkit-stickyは必要ないみたい。</p>
 <p>だが、Safariの場合、たとえば .header__title が <code>display:inline-block</code> とかになっていると、うまく動作しないみたい。<code>display:inline</code>でも動作しないので、いわゆるインラインな表示に指定されていると動かないと思われるけど、それ以上は調べていない。</p>

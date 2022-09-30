@@ -15,11 +15,11 @@ BabelでTypeScriptを利用する場合はpreset ( https://babeljs.io/docs/en/ba
 jest.config.jsのbabel-jestにbabelrcの設定を追加することで解決した。
 
 ```json
-{% raw %}"transform": {
+"transform": {
   "\\.[jt]sx?$": [ "babel-jest", {
     "babelrcRoots": "<rootDir>/../"
   }]
-}{% endraw %}
+}
 ```
 
 jest.config.jsonはだいたいプロジェクトの直下に置かれているはずで、babelrcもプロジェクト直下にあると思うので、だいたいのプロジェクトでは問題にはならないと思う。今回はちょっと違う構成になっていて、エラー内容もわりと分かりにくかったので、原因を掴むのに時間がかかった。

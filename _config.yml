@@ -85,12 +85,6 @@ deploy:
   type: git
   repo: git@github.com:memolog/blog.git
 
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'default'
-  line_number: false,    # default false
-  no_assets: true
-
 feed:
   type: atom
   path: atom.xml
@@ -99,3 +93,6 @@ feed:
   content:
   content_limit: 140
   content_limit_delim: ' '
+
+prismjs:
+    enable: true

@@ -389,7 +389,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://memolog.org/assets/images/david-travis-WC6MJ0kRzGw-unsplash/david-travis-WC6MJ0kRzGw-unsplash.jpg">
 <meta property="article:published_time" content="2020-02-15T01:17:04.000Z">
-<meta property="article:modified_time" content="2022-09-30T00:47:52.679Z">
+<meta property="article:modified_time" content="2022-09-30T01:00:13.581Z">
 <meta property="article:author" content="Yutaka Yamaguchi">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://memolog.org/assets/images/david-travis-WC6MJ0kRzGw-unsplash/david-travis-WC6MJ0kRzGw-unsplash.jpg">
@@ -412,7 +412,7 @@
         ],
       
       "datePublished": "1581729424000",
-      "dateModified": "1664498872679",
+      "dateModified": "1664499613581",
       "author": {
         "@type": "Person",
         "name": "Yutaka Yamaguchi"
@@ -502,11 +502,11 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>featured__credit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-css"><code class="language-css"><span class="token number">.</span>header__title &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.header__title</span> </span><span class="token punctuation">{</span>
   <span class="token property">position</span><span class="token punctuation">:</span> sticky<span class="token punctuation">;</span>
   <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
   <span class="token number">...</span>
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>.header__title</code>に<code>position:sticky</code>をつけると、<code>header</code>に対してstickyに動作するようになる。</p>
 <p>Safariの場合、もしかしたら <code>position: -webkit-sticky;</code> の指定が必要かもしれないけど、最新のSafari（macとiOS）でみた限りでは、-webkit-stickyは必要ないみたい。</p>
 <p>だが、Safariの場合、たとえば .header__title が <code>display:inline-block</code> とかになっていると、うまく動作しないみたい。<code>display:inline</code>でも動作しないので、いわゆるインラインな表示に指定されていると動かないと思われるけど、それ以上は調べていない。</p>

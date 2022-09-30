@@ -3,10 +3,10 @@
   <title>メモログ</title>
   
   <subtitle>💡 Personal notes about anything I&#39;m interested in</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2022-09-30T00:57:35.933Z</updated>
+  <updated>2022-09-30T01:51:40.919Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -21,13 +21,11 @@
     <link href="https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html"/>
     <id>https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html</id>
     <published>2022-09-29T21:23:42.000Z</published>
-    <updated>2022-09-30T00:57:35.933Z</updated>
+    <updated>2022-09-30T01:51:40.919Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;jestを28以降に更新したら、jestの実行時に&lt;code&gt;Unexpected reserved word &amp;#39;interface&amp;#39;&lt;/code&gt;みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。
+    <summary type="html">&lt;p&gt;jestを28以降に更新したら、jestの実行時に&lt;code&gt;Unexpected reserved word &#39;interface&#39;&lt;/code&gt;みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。</summary>
     
-    </summary>
     
     
     
@@ -40,11 +38,9 @@
     <published>2022-09-18T01:20:39.000Z</published>
     <updated>2022-09-29T23:21:41.935Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;Webpackのバージョン5ではコンパイルしたコードにES2015（アロー関数など）が含まれるようになる。これはWebpackが生成する部分に関する仕様なので、babelの設定でES5だけに制限していてもES2015が使われる。IE11ではアロー関数が処理できずに丸ごとエラーとなるので、IE11にまだ対応する必要があれば設定を確認する必要がある（今さらだけど）。
+    <summary type="html">&lt;p&gt;Webpackのバージョン5ではコンパイルしたコードにES2015（アロー関数など）が含まれるようになる。これはWebpackが生成する部分に関する仕様なので、babelの設定でES5だけに制限していてもES2015が使われる。IE11ではアロー関数が処理できずに丸ごとエラーとなるので、IE11にまだ対応する必要があれば設定を確認する必要がある（今さらだけど）。</summary>
     
-    </summary>
     
     
     
@@ -57,11 +53,9 @@
     <published>2020-11-14T01:44:35.000Z</published>
     <updated>2020-11-15T13:30:54.893Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.jp/gp/product/4873119049/ref=as_li_ss_il?ie=UTF8&amp;linkCode=li2&amp;tag=yutakayamaguc-22&amp;linkId=3d63565fd35c0d79ec9996440384313f&amp;language=ja_JP&quot; target=&quot;_blank&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4873119049&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=yutakayamaguc-22&amp;language=ja_JP&quot; &gt;&lt;/a&gt;&lt;img src=&quot;https://ir-jp.amazon-adsystem.com/e/ir?t=yutakayamaguc-22&amp;language=ja_JP&amp;l=li2&amp;o=9&amp;a=4873119049&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;今回は&lt;a href=&quot;https://www.amazon.co.jp/gp/product/4873119049/ref=as_li_ss_il?ie=UTF8&amp;linkCode=li2&amp;tag=yutakayamaguc-22&amp;linkId=3d63565fd35c0d79ec9996440384313f&amp;language=ja_JP&quot;&gt;プログラミングTypeScript&lt;/a&gt;を一通り読んだのでざっくり紹介。TypeScriptはたぶん3年くらい使っていて、特に不自由なく使えるのだけど、けっこう知らないこともあった。
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.jp/gp/product/4873119049/ref=as_li_ss_il?ie=UTF8&amp;linkCode=li2&amp;tag=yutakayamaguc-22&amp;linkId=3d63565fd35c0d79ec9996440384313f&amp;language=ja_JP&quot; target=&quot;_blank&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=4873119049&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=yutakayamaguc-22&amp;language=ja_JP&quot; &gt;&lt;/a&gt;&lt;img src=&quot;https://ir-jp.amazon-adsystem.com/e/ir?t=yutakayamaguc-22&amp;language=ja_JP&amp;l=li2&amp;o=9&amp;a=4873119049&quot; width=&quot;1&quot; height=&quot;1&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;border:none !important; margin:0px !important;&quot; /&gt;今回は&lt;a href=&quot;https://www.amazon.co.jp/gp/product/4873119049/ref=as_li_ss_il?ie=UTF8&amp;linkCode=li2&amp;tag=yutakayamaguc-22&amp;linkId=3d63565fd35c0d79ec9996440384313f&amp;language=ja_JP&quot;&gt;プログラミングTypeScript&lt;/a&gt;を一通り読んだのでざっくり紹介。TypeScriptはたぶん3年くらい使っていて、特に不自由なく使えるのだけど、けっこう知らないこともあった。</summary>
     
-    </summary>
     
     
     
@@ -74,11 +68,9 @@
     <published>2020-09-16T03:45:52.000Z</published>
     <updated>2020-09-16T06:39:09.957Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。
+    <summary type="html">&lt;p&gt;ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。</summary>
     
-    </summary>
     
     
     
@@ -91,11 +83,9 @@
     <published>2020-09-09T04:03:29.000Z</published>
     <updated>2020-09-16T00:32:27.020Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;http://esnextnews.com/&quot;&gt;ES.next News&lt;/a&gt;の9/1の回のメールにあった&lt;a href=&quot;https://dev.to/hemanth/logical-assignment-operators-in-javascript-inh&quot;&gt;Logical assignment operators in JavaScript&lt;/a&gt;について。&lt;a href=&quot;https://devblogs.microsoft.com/typescript/announcing-typescript-4-0-rc/#short-circuiting-assignment-operators&quot;&gt;TypeScript 4.0 から利用可能&lt;/a&gt;。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;http://esnextnews.com/&quot;&gt;ES.next News&lt;/a&gt;の9/1の回のメールにあった&lt;a href=&quot;https://dev.to/hemanth/logical-assignment-operators-in-javascript-inh&quot;&gt;Logical assignment operators in JavaScript&lt;/a&gt;について。&lt;a href=&quot;https://devblogs.microsoft.com/typescript/announcing-typescript-4-0-rc/#short-circuiting-assignment-operators&quot;&gt;TypeScript 4.0 から利用可能&lt;/a&gt;。&lt;/p&gt;</summary>
     
-    </summary>
     
     
     
@@ -108,12 +98,10 @@
     <published>2020-09-09T01:06:00.000Z</published>
     <updated>2020-09-09T01:07:47.279Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#pagination&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;10. Fragmenting Flex Layout
-&lt;/a&gt;について。
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#pagination&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;10. Fragmenting Flex Layout
+&lt;/a&gt;について。</summary>
     
-    </summary>
     
     
     
@@ -126,11 +114,9 @@
     <published>2020-07-26T02:56:00.000Z</published>
     <updated>2020-07-26T02:56:22.348Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#layout-algorithm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;9. Flex Layout Algorithm&lt;/a&gt;について。この章は見なくて良いんじゃないかと思いつつ、写経のような感じでやっていこうと思う。
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#layout-algorithm&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;9. Flex Layout Algorithm&lt;/a&gt;について。この章は見なくて良いんじゃないかと思いつつ、写経のような感じでやっていこうと思う。</summary>
     
-    </summary>
     
     
     
@@ -143,11 +129,9 @@
     <published>2020-07-18T02:52:00.000Z</published>
     <updated>2020-07-18T02:52:56.340Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#alignment&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;8. Alignment&lt;/a&gt;について。長いけど一気に。
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#alignment&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;8. Alignment&lt;/a&gt;について。長いけど一気に。</summary>
     
-    </summary>
     
     
     
@@ -160,11 +144,9 @@
     <published>2020-07-01T08:46:00.000Z</published>
     <updated>2020-07-01T08:54:42.377Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-components&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;7.2. Components of Flexibility&lt;/a&gt;について。各ロングハンドの説明は&lt;a href=&quot;https://memolog.org/2020/flex-shorthand.html&quot;&gt;flex ショートハンド&lt;/a&gt;の方に書かれていて、ここには載ってない。今回は読み飛ばして良い感じの内容になってる。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-components&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;7.2. Components of Flexibility&lt;/a&gt;について。各ロングハンドの説明は&lt;a href=&quot;https://memolog.org/2020/flex-shorthand.html&quot;&gt;flex ショートハンド&lt;/a&gt;の方に書かれていて、ここには載ってない。今回は読み飛ばして良い感じの内容になってる。&lt;/p&gt;</summary>
     
-    </summary>
     
     
     
@@ -177,11 +159,9 @@
     <published>2020-06-30T05:09:49.000Z</published>
     <updated>2020-06-30T01:08:53.021Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flexibility&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;7. Flexibility&lt;/a&gt;について。
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flexibility&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;7. Flexibility&lt;/a&gt;について。</summary>
     
-    </summary>
     
     
     
@@ -194,11 +174,9 @@
     <published>2020-05-30T14:45:00.000Z</published>
     <updated>2020-05-30T14:45:07.703Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-lines&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;6. Flex Lines&lt;/a&gt;について。
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-lines&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;6. Flex Lines&lt;/a&gt;について。</summary>
     
-    </summary>
     
     
     
@@ -211,11 +189,9 @@
     <published>2020-05-24T15:00:00.000Z</published>
     <updated>2020-05-24T13:12:51.856Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#order-property&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5.4. Display Order: the order property&lt;/a&gt;について。
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#order-property&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5.4. Display Order: the order property&lt;/a&gt;について。</summary>
     
-    </summary>
     
     
     
@@ -228,11 +204,9 @@
     <published>2020-05-23T15:00:00.000Z</published>
     <updated>2020-05-24T03:13:44.329Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-flow-property&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5.3. Flex Direction and Wrap: the flex-flow shorthand&lt;/a&gt;について。flex-flowは&lt;code&gt;flex-direction&lt;/code&gt;と&lt;code&gt;flex-wrap&lt;/code&gt;をまとめて設定できる。
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-flow-property&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5.3. Flex Direction and Wrap: the flex-flow shorthand&lt;/a&gt;について。flex-flowは&lt;code&gt;flex-direction&lt;/code&gt;と&lt;code&gt;flex-wrap&lt;/code&gt;をまとめて設定できる。</summary>
     
-    </summary>
     
     
     
@@ -245,11 +219,9 @@
     <published>2020-05-23T00:00:00.000Z</published>
     <updated>2020-05-23T00:00:23.496Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;前回の&lt;a href=&quot;https://memolog.org/2020/flex-flow-direction.html&quot;&gt;Flex Flow Direction: the flex-direction property&lt;/a&gt;から引き続き。&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-wrap-property&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5.2. Flex Line Wrapping: the flex-wrap property&lt;/a&gt;について
+    <summary type="html">&lt;p&gt;前回の&lt;a href=&quot;https://memolog.org/2020/flex-flow-direction.html&quot;&gt;Flex Flow Direction: the flex-direction property&lt;/a&gt;から引き続き。&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-wrap-property&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5.2. Flex Line Wrapping: the flex-wrap property&lt;/a&gt;について</summary>
     
-    </summary>
     
     
     
@@ -262,11 +234,9 @@
     <published>2020-05-20T15:00:00.000Z</published>
     <updated>2020-05-20T15:02:03.885Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flow-order&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5. Ordering and Orientation&lt;/a&gt;の冒頭部分と、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-direction-property&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5.1. Flex Flow Direction: the flex-direction property&lt;/a&gt;について。
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flow-order&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5. Ordering and Orientation&lt;/a&gt;の冒頭部分と、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-direction-property&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;5.1. Flex Flow Direction: the flex-direction property&lt;/a&gt;について。</summary>
     
-    </summary>
     
     
     
@@ -279,11 +249,9 @@
     <published>2020-05-18T09:49:00.000Z</published>
     <updated>2020-05-18T09:52:15.294Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#min-size-auto&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.5. Automatic Minimum Size of Flex Items&lt;/a&gt;、autoキーワードで自動的に決定される最小値について。
+    <summary type="html">&lt;p&gt;時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#min-size-auto&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.5. Automatic Minimum Size of Flex Items&lt;/a&gt;、autoキーワードで自動的に決定される最小値について。</summary>
     
-    </summary>
     
     
     
@@ -296,11 +264,9 @@
     <published>2020-04-12T10:41:53.000Z</published>
     <updated>2020-04-12T10:45:22.692Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#visibility-collapse&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.4. Collapsed Items&lt;/a&gt;について
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#visibility-collapse&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.4. Collapsed Items&lt;/a&gt;について</summary>
     
-    </summary>
     
     
     
@@ -313,11 +279,9 @@
     <published>2020-04-04T10:27:59.000Z</published>
     <updated>2020-04-05T09:14:23.535Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#item-margins&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.2. Flex Item Margins and Paddings&lt;/a&gt;と&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#painting&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.3. Flex Item Z-Ordering&lt;/a&gt;について
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#item-margins&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.2. Flex Item Margins and Paddings&lt;/a&gt;と&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#painting&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.3. Flex Item Z-Ordering&lt;/a&gt;について</summary>
     
-    </summary>
     
     
     
@@ -330,11 +294,9 @@
     <published>2020-04-04T06:57:26.000Z</published>
     <updated>2020-04-04T06:57:15.525Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;前回の&lt;a href=&quot;https://memolog.org/2020/flex-items.html&quot;&gt;Flex Items&lt;/a&gt;に引き続き、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#abspos-items&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.1. Absolutely-Positioned Flex Children&lt;/a&gt;についてを読む。
+    <summary type="html">&lt;p&gt;前回の&lt;a href=&quot;https://memolog.org/2020/flex-items.html&quot;&gt;Flex Items&lt;/a&gt;に引き続き、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#abspos-items&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.1. Absolutely-Positioned Flex Children&lt;/a&gt;についてを読む。</summary>
     
-    </summary>
     
     
     
@@ -347,11 +309,9 @@
     <published>2020-03-21T09:17:12.000Z</published>
     <updated>2020-03-22T04:00:23.751Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://memolog.org/2020/flex-containers.html&quot;&gt;Flex Containers&lt;/a&gt;から引き続き、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-items&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4. Flex Items&lt;/a&gt;について確認していく。
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://memolog.org/2020/flex-containers.html&quot;&gt;Flex Containers&lt;/a&gt;から引き続き、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-items&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4. Flex Items&lt;/a&gt;について確認していく。</summary>
     
-    </summary>
     
     
     

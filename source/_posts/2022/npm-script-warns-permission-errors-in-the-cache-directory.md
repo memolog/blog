@@ -15,6 +15,7 @@ date: 2022-11-07 17:30:00
 再現手順は[docker-node-npm-scripti-permission-issue-demo](https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo)のcodespacesのVS codeの中でターミナルを開いて、以下のような感じでDocker containerを起動して、`npm ci`と`npm run build`を実行するとエラーを再現することができる。動作環境はNode.js 16.18.0でnpmは8.19.2。たぶんNode.js 18.xでも発生する（npmのバージョンは変わらないので）。
 
 ```bash
+docker build -f Dockerfile -t demo .
 docker run -it --rm -v `pwd`:/current -w /current demo bash
 ```
 

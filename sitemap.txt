@@ -1,3 +1,4 @@
+https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html
 https://memolog.org/2020/about-position-sticky.html
 https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html
 https://memolog.org/2022/webpack-5-compiles-code-with-es2015.html

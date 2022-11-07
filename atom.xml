@@ -6,7 +6,7 @@
   <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2022-11-07T08:34:48.946Z</updated>
+  <updated>2022-11-07T08:43:11.202Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html"/>
     <id>https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html</id>
     <published>2022-11-07T08:30:00.000Z</published>
-    <updated>2022-11-07T08:34:48.946Z</updated>
+    <updated>2022-11-07T08:43:11.202Z</updated>
     
     
     <summary type="html">&lt;p&gt;（そんなことするかどうかは置いておいて）たとえば&lt;a href=&quot;https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo&quot;&gt;docker-node-npm-scripti-permission-issue-demo&lt;/a&gt;を&lt;a href=&quot;https://github.co.jp/features/codespaces&quot;&gt;Github codespaces&lt;/a&gt;上で起動して、&lt;code&gt;npm ci&lt;/code&gt;して、&lt;code&gt;npm run build&lt;/code&gt;を実行すると、&lt;code&gt;permission denied, scandir &#39;/root/.npm/_logs&#39;&lt;/code&gt; というエラーのWARNが発生する。</summary>

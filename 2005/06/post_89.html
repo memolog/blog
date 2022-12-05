@@ -261,6 +261,7 @@
   }
 }
 
+/*
 .content p a[href]::before {
   content: '🌐';
   width: 24px;
@@ -280,8 +281,8 @@
   background-position-x: 4px;
   background-position-y: center;
   background-repeat: no-repeat;
-  /* padding-left: 24px; */
 }
+*/
 
 .post .writing-vertical {
   writing-mode: vertical-rl;
@@ -299,10 +300,12 @@
   margin: 0;
 }
 
+/*
 .post .writing-vertical p a {
   padding-left: 0px;
   padding-top: 24px;
 }
+*/
 
 .post .writing-vertical p:first-letter {
   margin-top: 1em;
@@ -510,12 +513,12 @@ The Assassination of Richard Nixon
               link.style.marginRight = '1em';
               link.style.paddingLeft = '0';
             }
-            link.classList.add('no-link-icon');
+            // link.classList.add('no-link-icon');
             continue;
           }
 
-          link.classList.add('link-icon');
-          link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+          // link.classList.add('link-icon');
+          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
         }
       }
     });
@@ -523,7 +526,7 @@ The Assassination of Richard Nixon
 </script>
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js');
+    // navigator.serviceWorker.register('/service-worker.js');
   }
 </script>
 

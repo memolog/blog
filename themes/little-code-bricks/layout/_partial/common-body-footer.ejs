@@ -21,12 +21,12 @@
               link.style.marginRight = '1em';
               link.style.paddingLeft = '0';
             }
-            link.classList.add('no-link-icon');
+            // link.classList.add('no-link-icon');
             continue;
           }
 
-          link.classList.add('link-icon');
-          link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+          // link.classList.add('link-icon');
+          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
         }
       }
     });
@@ -34,6 +34,6 @@
 </script>
 <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js');
+    // navigator.serviceWorker.register('/service-worker.js');
   }
 </script>

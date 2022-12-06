@@ -1,7 +1,8 @@
-const CACHE_MAIN = 'main1670202093924';
+const CACHE_MAIN = 'main1670288557028';
 const precacheList = [
   
   '/',
+  '/2022/the-meaning-of-autocomplete-in-the-accessibility.html',
   '/2020/book-programming-typescript.html',
   '/2022/the-two-ways-to-use-autocomplete-attribute.html',
   '/2022/npm-script-warns-permission-errors-in-the-cache-directory.html',
@@ -11,7 +12,7 @@ const precacheList = [
   '/2020/logical-assignment-operators.html',
   '/2020/fragmenting-flex-layout.html',
   '/2020/flex-layout-algorithm.html',
-  '/2020/flex-alignment.html',
+  '/assets/images/srikanta-h-u-Ju0DX6yhcBE-unsplash/srikanta-h-u-Ju0DX6yhcBE-unsplash.svg',
   '/assets/images/bulkan-evcimen-LZg_PuyFPGo-unsplash/bulkan-evcimen-LZg_PuyFPGo-unsplash.svg',
   '/assets/images/craig-manners-vtG_gpJn9OM-unsplash/craig-manners-vtG_gpJn9OM-unsplash.svg',
   '/assets/images/pavan-prasad-nw1slFnKRYE-unsplash/pavan-prasad-nw1slFnKRYE-unsplash.svg',
@@ -21,7 +22,6 @@ const precacheList = [
   '/assets/images/cath-smith-PF5_cqOQFT4-unsplash/cath-smith-PF5_cqOQFT4-unsplash.svg',
   '/assets/images/tomas-malik-zlSzh2FP7LY-unsplash/tomas-malik-zlSzh2FP7LY-unsplash.svg',
   '/assets/images/sarah-madaio-fpZHGVBzlYk-unsplash/sarah-madaio-fpZHGVBzlYk-unsplash.svg',
-  '/assets/images/600484slsdl/600484slsdl.svg',
   '/css/prism.css',
   '/css/global_async.css',
 ];

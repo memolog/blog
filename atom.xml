@@ -6,7 +6,7 @@
   <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2022-12-06T01:02:37.028Z</updated>
+  <updated>2022-12-11T00:54:25.316Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>autocomplete属性の値がinvalidになるケース</title>
+    <link href="https://memolog.org/2022/autocomplete-fields-have-an-appropriate-control-group.html"/>
+    <id>https://memolog.org/2022/autocomplete-fields-have-an-appropriate-control-group.html</id>
+    <published>2022-12-11T01:00:00.000Z</published>
+    <updated>2022-12-11T00:54:25.316Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;autocomplete属性の値にはcontrol groupという仕様があり、control groupに属していないフィールドで値を利用すると、HTML validatorでinvalidとして扱われる。</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>autocomplete属性のアクセシビリティ的側面</title>
@@ -296,21 +311,6 @@
     
     
     <summary type="html">&lt;p&gt;時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#min-size-auto&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.5. Automatic Minimum Size of Flex Items&lt;/a&gt;、autoキーワードで自動的に決定される最小値について。</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Collapsed Items</title>
-    <link href="https://memolog.org/2020/flex-collpased-items.html"/>
-    <id>https://memolog.org/2020/flex-collpased-items.html</id>
-    <published>2020-04-12T10:41:53.000Z</published>
-    <updated>2020-04-12T10:45:22.692Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#visibility-collapse&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;4.4. Collapsed Items&lt;/a&gt;について</summary>
     
     
     

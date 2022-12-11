@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <title>メモログ</title>
-  <meta name="description" content="⛰ 塵が積もって山とならないメモのログ 👄" id="meta-description">
+  <title>autocomplete属性の値がinvalidになるケース | メモログ</title>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://www.google-analytics.com">
@@ -384,48 +383,57 @@
   }
   </script>
 
+  <meta name="description" content="autocomplete属性の値にはcontrol groupという仕様があり、control groupに属していないフィールドで値を利用すると、HTML validatorでinvalidとして扱われる。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="autocomplete属性の値がinvalidになるケース">
+<meta property="og:url" content="https://memolog.org/2022/autocomplete-fields-have-an-appropriate-control-group.html">
+<meta property="og:site_name" content="メモログ">
+<meta property="og:description" content="autocomplete属性の値にはcontrol groupという仕様があり、control groupに属していないフィールドで値を利用すると、HTML validatorでinvalidとして扱われる。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://memolog.org/assets/images/bingqi-huang-wpi1d9-o4vo-unsplash/bingqi-huang-wpi1d9-o4vo-unsplash.jpg">
+<meta property="article:published_time" content="2022-12-11T01:00:00.000Z">
+<meta property="article:modified_time" content="2022-12-11T00:54:25.316Z">
+<meta property="article:author" content="Yutaka Yamaguchi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://memolog.org/assets/images/bingqi-huang-wpi1d9-o4vo-unsplash/bingqi-huang-wpi1d9-o4vo-unsplash.jpg">
+<meta name="twitter:creator" content="@memolog">
+<meta name="twitter:site" content="https://twitter.com/memolog">
+<meta property="fb:app_id" content="168245123786587">
+  <link rel="canonical" href="https://memolog.org/2022/autocomplete-fields-have-an-appropriate-control-group.html">
   <script type="application/ld+json">
     {
-      "@context":"http://schema.org",
-      "@type":"ItemList",
-      "itemListElement":[
-        
-        {
-          "@type":"ListItem",
-          "position":1,
-          "url": "https://memolog.org/2004/11/post_7.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":2,
-          "url": "https://memolog.org/2004/11/post_6.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":3,
-          "url": "https://memolog.org/2004/11/2046.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":4,
-          "url": "https://memolog.org/2004/11/post_4.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":5,
-          "url": "https://memolog.org/2004/03/post.html"
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://memolog.org/2022/autocomplete-fields-have-an-appropriate-control-group.html"
+      },
+      "headline": "autocomplete属性の値がinvalidになるケース",
+      
+        "image": [
+          "https://memolog.org/assets/images/bingqi-huang-wpi1d9-o4vo-unsplash/bingqi-huang-wpi1d9-o4vo-unsplash.jpg"
+        ],
+      
+      "datePublished": "1670720400000",
+      "dateModified": "1670720065316",
+      "author": {
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "メモログ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memolog.org/assets/icons/icon-1024.png"
         }
-        
-      ]
+      },
+      "description": "autocomplete属性の値にはcontrol groupという仕様があり、control groupに属していないフィールドで値を利用すると、HTML validatorでinvalidとして扱われる。"
     }
   </script>
 <meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
 </head>
-<body>
+<body class="post">
     <header class="header header_component_global">
     <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
     <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
@@ -437,87 +445,38 @@
 
   <div class="container">
     <main class="main">
+      <article>
+        <header class="header">
+          <div>
+            <time datetime="2022-12-11T01:00:00.000Z">
+              <span class="calendar-icon">📅</span><span>2022年12月11日</span>
+            </time>
+          </div>
+          <h2 class="header__title"><span>autocomplete属性の値がinvalidになるケース</span></h2>
+          
+            <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
       
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-14T10:54:39.000Z"><span class="calendar-icon">📅</span><span>2004年11月14日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/post_7.html">コラテラルをみました</a></h2>
-            
-          </header>
-          
-            <div class="content"><ul>
-<li><a href="http://www.collateral.jp/" target="_blank" rel="noopener">コラテラル</a></li>
-</ul>
-<p>評価：★★★★☆<br>殺人を依頼された殺し屋ヴィンセント（トム・クルーズ）が、拾ったタクシーの運転手マックス（ジェイミー・フォックス）を巻き添えにして次々と「仕事」をこなしていくというストーリー。特に前提知識のようなものも必要なく、素直に映画を楽しめます。胸に2発、頭に1発、正確に撃ち込むところがプロの殺し屋の手際の良さ、キレのようなものを感じさせます。トム・クルーズは役作りにあたって、元SAS隊員に指導を受けたのだそうです。</p></div>
-            <div><a href="/2004/11/post_7.html">📖 続きを読む</a></div>
-          
-        </article>
+        <div style="background-color: #6b868d"><img src="/assets/images/bingqi-huang-wpi1d9-o4vo-unsplash/bingqi-huang-wpi1d9-o4vo-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="525" /></div>
       
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-11T10:52:44.000Z"><span class="calendar-icon">📅</span><span>2004年11月11日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/post_6.html">みんな誰かの愛しい人を見ました。</a></h2>
-            
-          </header>
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/@k4media?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Bingqi Huang</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+  
+</div>
+
           
-            <div class="content"><ul>
-<li><a href="http://www.gaga.ne.jp/dare-ai/" target="_blank" rel="noopener">みんな誰かの愛しい人</a>  </li>
-</ul>
-<p>評価：★★★★★<br>主人公のロリータはぽっちゃりした体型がコンプレックスの大作家を父親（エチエンヌ）を持つ女の子。淡い期待が裏切られるたび「必要なのは自分じゃなくて父親とのコネクション」という孤独感が募る。</p></div>
-            <div><a href="/2004/11/post_6.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-09T15:08:33.000Z"><span class="calendar-icon">📅</span><span>2004年11月10日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/2046.html">2046をみてきました。</a></h2>
-            
-          </header>
-          
-            <div class="content"><ul>
-<li><a href="http://www.2046.jp/" target="_blank" rel="noopener">2046</a></li>
-</ul>
-<p>評価：★☆☆☆☆<br>「2046」とは主人公のチャウが映画の中で創り上げる小説のタイトルであり、小説の世界でミステリートレインが目指す先でもあります。チャウはミステリートレインが2046に向かう途中で起きる出来事として、彼の身の回りに起きた出来事を比喩的に表現していきます。小説の中の登場人物は彼の身の周りにいる人たちだけれども、小説の中の登場人物は彼というフィルターを通して描かれているから、つまるところそれは彼自身。現実世界で起きた出来事が、「2046」という小説の世界にも反映され、書き加えられていきます。そしてチャウの中に出てきた一つの結論が、小説の結末となって表現されていきます。</p></div>
-            <div><a href="/2004/11/2046.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-07T18:38:03.000Z"><span class="calendar-icon">📅</span><span>2004年11月8日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/post_4.html">らくだの涙を見てきました</a></h2>
-            
-          </header>
-          
-            <div class="content"><ul>
-<li><a href="http://www.klockworx.com/rakuda/index.html" target="_blank" rel="noopener">らくだの涙 公式サイト</a></li>
-</ul>
-<p>評価：★★★★☆<br>モンゴル南部に居住する遊牧民とらくだの暮らし・文化を追ったドキュメンタリーです。初産の苦しみ故か子らくだを遠ざける母らくだに対して、子らくだを受け入れ乳を与えるようにモンゴルの家族たちが手段を尽くしていくというのが話の中心。母らくだに近づけず子らくだが遠くの方で独り寂しそうな声で泣くというシーンがあるのですが、それが本当に寂しそうで泣けてきました。</p></div>
-            <div><a href="/2004/11/post_4.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-03-17T13:09:49.000Z"><span class="calendar-icon">📅</span><span>2004年3月17日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/03/post.html">誕生日事典（誕生日辞典）で性格診断</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4047913510/ref=nosim/yutakayamaguc-22" target="_blank" rel="noopener"><img src="http://ec2.images-amazon.com/images/I/51NV0TY105L._SL180_.jpg" alt="誕生日事典"></a> この本は誕生日からその日に生まれた人の性格を診断するという本です。ページの内容は、その日を特徴づける一言と、解説（目算で600字程度）、ナンバーと惑星（支配される数字と惑星）、タロット（タロットカードの顕示）、健康、アドバイス、瞑想の言葉などです。1日ごとに2ページの構成なので、本はかなりの大容量で分厚いです。</p></div>
-            <div><a href="/2004/03/post.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-      <footer class="pagination"><a class="extend prev" rel="prev" href="/page/39/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><a class="page-number" href="/page/33/">33</a><a class="page-number" href="/page/34/">34</a><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><span class="page-number current">40</span></footer>
-    </main>
-    <footer class="profile">
+        </header>
+        <div id="article-content" class="content "><p>autocomplete属性の値にはcontrol groupという仕様があり、control groupに属していないフィールドで値を利用すると、HTML validatorでinvalidとして扱われる。<span id="more"></span></p>
+<p>詳細は<a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute">4.10.18.7.1 Autofilling form controls: the autocomplete attribute</a>の下の方に表になっている。type=&quot;text&quot;はほとんどのcontrol groupに所属していて、ほぼすべての値を扱える。例外はMultiline（複数行）のcontrol groupで、（複数行の住所を扱う）<code>street-address</code>はtype=&quot;hidden&quot;なinput要素かtextarea、select要素でしか利用できない。type=&quot;text&quot;で利用する場合はサブセットである<code>address-line1</code>の方を使う。</p>
+<p>type=&quot;text&quot;以外のinput要素は利用できない値が多い。たとえばtype=&quot;tel&quot;はTelのcontrol groupにのみ所属していて、autocomplete属性では<code>tel</code>の値しか利用できない。国番号を除いた国内の電話番号を自動入力させたい場合は<code>tel-national</code>の方が適切な値ではあるのだけど、<code>tel-national</code>のcontrol groupはTextなのでtype=&quot;tel&quot;ではinvalidになる。</p>
+</div>
+        <footer class="profile">
   <div class="profile-inner">
     <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
     <h2 class="profile__heading">私について</h2>
@@ -533,6 +492,8 @@
   </div>
 </footer>
 
+      </article>
+    </main>
   </div>
   <script>
   // http://css-tricks.com/favicons-next-to-external-links/

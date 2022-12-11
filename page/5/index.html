@@ -393,61 +393,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2020/convert-video-files-with-ffmpegjs-worker.html"
+          "url": "https://memolog.org/2020/web-workers-lifetime.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2020/n2-sort-algorithms-again.html"
+          "url": "https://memolog.org/2020/convert-video-files-with-ffmpegjs-worker.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2020/convert-screen-capture-with-ffmpeg.html"
+          "url": "https://memolog.org/2020/n2-sort-algorithms-again.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2020/top-level-await-will-be-soon.html"
+          "url": "https://memolog.org/2020/convert-screen-capture-with-ffmpeg.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2020/web-workers-work-on-ie10.html"
+          "url": "https://memolog.org/2020/top-level-await-will-be-soon.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2020/optional-chaining-and-nullish-coalescing.html"
+          "url": "https://memolog.org/2020/web-workers-work-on-ie10.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2020/event-target-and-currenttarget.html"
+          "url": "https://memolog.org/2020/optional-chaining-and-nullish-coalescing.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2020/load-jquery-in-developer-console.html"
+          "url": "https://memolog.org/2020/event-target-and-currenttarget.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2019/book-the-4th-revolution.html"
+          "url": "https://memolog.org/2020/load-jquery-in-developer-console.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2019/generate-anki-cards-tool.html"
+          "url": "https://memolog.org/2019/book-the-4th-revolution.html"
         }
         
       ]
@@ -467,6 +467,36 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2020-02-13T11:17:00.000Z"><span class="calendar-icon">📅</span><span>2020年2月13日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2020/web-workers-lifetime.html">The Web Worker's lifetime</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #8c918b"><img src="/assets/images/harley-davidson-4ixHdlcROPI-unsplash/harley-davidson-4ixHdlcROPI-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/@harleydavidson?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Harley-Davidson</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>Web Worker（以下worker）はいつ止まるのか。端的に言うと、画面遷移した時など、関連するDocumentがなくなった時に止まる。workerの実行は<code>closing</code>フラグで管理されていて、このフラグがtrueになるとworkerはそれ以降の処理をしなくなる。workerのインスタンスが削除されるかどうかは仕様上では考慮されていない雰囲気だけど（ガベージコレクトされたときに削除されるのではなかろうか）、とにかく、実質的に、closingフラグがtrueになったタイミングでworkerは止まると言える。</div>
+            <div><a href="/2020/web-workers-lifetime.html">📖 続きを読む</a></div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -740,36 +770,6 @@
 <blockquote>
 <p>ナノテクノロジー、IOT、ウェブ2.0 …（中略。いろんなテクノロジー）… これらすべての現象を、一つの、マクロなトレンンドの多様な側面として説明できるような、統合的視点を見つけ出すことができるだろうか？　それに答えるのが難しいのは、まず我々がいまだにICT（情報通信技術）を、外界と、そして我々相互が関わりあうためのツール見なしているという点にある。ICTは、実際にはすでに環境なのであり、人類学的な、そして社会的な、世界を解釈する力となっているのである。それは、我々の知的、物理的な現実を生み出し、形成し、我々の自己理解を変え、我々が相互に関わるやり方を変え、世界を理解する方法をより高度化している。そしてこれらすべてが、広く、深く、強力に進んでいるのである。（「はじめに」より）</div>
             <div><a href="/2019/book-the-4th-revolution.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2019-01-04T02:47:48.000Z"><span class="calendar-icon">📅</span><span>2019年1月4日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2019/generate-anki-cards-tool.html">Genarate Anki Cards Tool</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #b1b5b0"><img src="/assets/images/kate-krivanec-212730-unsplash/kate-krivanec-212730-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/moW-dSe5CiU?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kate Krivanec</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p>最近<a href="https://apps.ankiweb.net/" target="_blank" rel="noopener">Anki</a>を使って単語の記憶をしようという試みをしている。もともとは<a href="https://fluent-forever.com/book/" target="_blank" rel="noopener">Fluent Forever</a>という本に載っていたところからこのアプリを知った（最近になって邦訳「<a href="https://amzn.to/2F35KpT" target="_blank" rel="noopener">脳が認める外国語勉強法</a>」があると知った）。</div>
-            <div><a href="/2019/generate-anki-cards-tool.html">📖 続きを読む</a></div>
           
         </article>
       

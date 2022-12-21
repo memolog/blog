@@ -6,7 +6,7 @@
   <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2022-12-21T03:37:21.462Z</updated>
+  <updated>2022-12-21T03:40:36.371Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://memolog.org/2022/how-to-align-the-legen-in-the-fieldset.html"/>
     <id>https://memolog.org/2022/how-to-align-the-legen-in-the-fieldset.html</id>
     <published>2022-12-21T03:10:00.000Z</published>
-    <updated>2022-12-21T03:37:21.462Z</updated>
+    <updated>2022-12-21T03:40:36.371Z</updated>
     
     
     <summary type="html">&lt;p&gt;fieldset要素内のlegendは通常「rendered legend」として扱われ、特別な仕様になる。そのため他の要素と一列に並べたい場合はそこに配慮する必要がある。</summary>

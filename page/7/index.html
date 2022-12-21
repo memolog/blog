@@ -393,61 +393,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2018/bit-vector-in-javascript.html"
+          "url": "https://memolog.org/2018/about-array-prototype-sort.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2018/pass-arguments-to-npm-run-script.html"
+          "url": "https://memolog.org/2018/bit-vector-in-javascript.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2018/create-hash-table-in-javascript.html"
+          "url": "https://memolog.org/2018/pass-arguments-to-npm-run-script.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2018/javascript-property-access-big-o.html"
+          "url": "https://memolog.org/2018/create-hash-table-in-javascript.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2018/complete-all-the-pwa-checklist.html"
+          "url": "https://memolog.org/2018/javascript-property-access-big-o.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html"
+          "url": "https://memolog.org/2018/complete-all-the-pwa-checklist.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2018/custom-domain-in-github-pages.html"
+          "url": "https://memolog.org/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2018/book-mind-control.html"
+          "url": "https://memolog.org/2018/custom-domain-in-github-pages.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2018/retrieve-json-from-require-method.html"
+          "url": "https://memolog.org/2018/book-mind-control.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2018/show-vertical-writing-with-css.html"
+          "url": "https://memolog.org/2018/retrieve-json-from-require-method.html"
         }
         
       ]
@@ -467,6 +467,36 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-07-29T20:49:48.000Z"><span class="calendar-icon">📅</span><span>2018年7月30日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/about-array-prototype-sort.html">Array.prototype.sort について</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #474a48"><img src="/assets/images/max-panama-387781-unsplash/max-panama-387781-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="530" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/Gt1A0jNzzbM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Max Panamá</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>JavaScriptの配列には<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" target="_blank" rel="noopener">sort</a>メソッドがあり配列のソートを実行することができるけど、この配列のソートの中の実装はどうなっているのかという話。<a href="http://kakts-tec.hatenablog.com/entry/2016/12/18/153845" target="_blank" rel="noopener">v8における配列ソートについて</a>の記事が大変参考になりました。</div>
+            <div><a href="/2018/about-array-prototype-sort.html">📖 続きを読む</a></div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -736,36 +766,6 @@
             <div class="content"><p>Node.jsの中であれば単に<code>const config = require(&#39;config.json&#39;)</code>すれば良いのだけれど、フロントエンド側のJavaScriptではそうはいかない。XMLHttpRequestとか<a href="https://developer.mozilla.org/ja/docs/Web/API/Fetch_API" target="_blank" rel="noopener">Fetch API</a>を使うか、requireで書いたものをwebpackでbundleするとかしないといけない。他にもいろいろ方法はあると思うけど、まあとにかく一手間が必要。</p>
 <p>その読み出すJSONデータを環境ごとに変更したい場合はなおさら面倒で、Node.jsであればprocess.env.NODE_ENVなんかを使えばいいけど、フロントエンド側ではwebpackでバンドルするときの設定を変更するとか、uglifyで<code>DEBUG</code>みたいなglobal変数を入れておいて書き出すとかしつつ、異なるJSONデータをfetchするように実装しないといけない。いろいろ方法はあるから難しい問題ではないけど、面倒ではある。</div>
             <div><a href="/2018/retrieve-json-from-require-method.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2018-02-03T03:05:36.000Z"><span class="calendar-icon">📅</span><span>2018年2月3日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2018/show-vertical-writing-with-css.html">縦書きで表示する</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #959177"><img src="/assets/images/dmitri-popov-441562/dmitri-popov-441562.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/IDF_awES6Zg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Dmitri Popov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><div class="writing-vertical"><p>最近になって<a href="https://developer.mozilla.org/ja/docs/Web/CSS/writing-mode" target="_blank" rel="noopener">writing-mode</a>を使うと文章の表示を簡単に縦書きにできるということを最近知った。ので、この記事では縦書きの表示を試している。以下の文章は文章量が長くなった時にどう表示されるのかを知りたくて入れているだけなので、内容的にほぼ意味はない（ないというほどでもないけど限りなく無に近いものではある）。なおインデックスページでは横書きである。</div>
-            <div><a href="/2018/show-vertical-writing-with-css.html">📖 続きを読む</a></div>
           
         </article>
       

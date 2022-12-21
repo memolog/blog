@@ -392,7 +392,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://memolog.org/assets/images/neha-maheen-mahfin-3szSK-40AWM-unsplash/neha-maheen-mahfin-3szSK-40AWM-unsplash.jpg">
 <meta property="article:published_time" content="2022-12-21T03:10:00.000Z">
-<meta property="article:modified_time" content="2022-12-21T03:33:49.268Z">
+<meta property="article:modified_time" content="2022-12-21T03:37:21.462Z">
 <meta property="article:author" content="Yutaka Yamaguchi">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://memolog.org/assets/images/neha-maheen-mahfin-3szSK-40AWM-unsplash/neha-maheen-mahfin-3szSK-40AWM-unsplash.jpg">
@@ -415,7 +415,7 @@
         ],
       
       "datePublished": "1671592200000",
-      "dateModified": "1671593629268",
+      "dateModified": "1671593841462",
       "author": {
         "@type": "Person",
         "name": "Yutaka Yamaguchi"
@@ -498,7 +498,7 @@
 <h3 id="float-left">float: left</h3>
 <p><code>float: left</code> を設定すると、rendered legendではなくなり他に要素と同じように扱える。</p>
 <style>
-.example1 legend { float: left; width: 200px; }
+.example1 legend { float: left; width: 150px; }
 .example1 label { overflow: hidden; }
 </style>
 <div class="example1">
@@ -507,11 +507,11 @@
     <label><input type="checkbox" />チェックボックス</label>
   </fieldset>
 </div>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
 <span class="token selector">label</span> <span class="token punctuation">&#123;</span> <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>gridやflexレイアウトで制御することもできるけど、今確認したらSafariでは期待通りに動いてくれないよう。</p>
 <style>
-.example4 fieldset { display: grid; grid-template-columns: 200px 200px; }
+.example4 fieldset { display: grid; grid-template-columns: 150px 150px; }
 .example4 legend { float: left; }
 </style>
 <div class="example4">
@@ -520,12 +520,12 @@
     <label><input type="checkbox" />チェックボックス</label>
   </fieldset>
 </div>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">fieldset</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span> <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 200px 200px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">fieldset</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span> <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 150px 150px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
 <span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <style>
 .example8 fieldset { display: flex; }
-.example8 legend { float: left; flex-basis: 200px; }
-.example8 label { flex-basis: 200px; }
+.example8 legend { float: left; flex-basis: 150px; }
+.example8 label { flex-basis: 150px; }
 </style>
 <div class="example8">
   <fieldset>
@@ -534,14 +534,14 @@
   </fieldset>
 </div>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">fieldset</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-<span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">flex-basis</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-<span class="token selector">label</span> <span class="token punctuation">&#123;</span> <span class="token property">flex-basis</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span> <span class="token property">flex-basis</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token selector">label</span> <span class="token punctuation">&#123;</span> <span class="token property">flex-basis</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h3 id="position-absolute">position: absolute</h3>
 <p><code>position:absolute</code>を使ってもrendered legendでなくすことができる。</p>
 <style>
 .example2 fieldset { position: relative; }
-.example2 legend { position: absolute; width: 200px; box-sizing: border-box; }
-.example2 label { margin-left: 200px; }
+.example2 legend { position: absolute; width: 150px; box-sizing: border-box; }
+.example2 label { margin-left: 150px; }
 </style>
 <div class="example2">
   <fieldset>
@@ -550,12 +550,12 @@
   </fieldset>
 </div>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">fieldset</span> <span class="token punctuation">&#123;</span> <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-<span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-<span class="token selector">label</span> <span class="token punctuation">&#123;</span> <span class="token property">margin-left</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span> <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token selector">label</span> <span class="token punctuation">&#123;</span> <span class="token property">margin-left</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h3 id="display-contents">display: contents</h3>
 <p><a target="_blank" rel="noopener" href="https://caniuse.com/css-display-contents">display: contentsのサポート状況</a>を見るに、button要素に適用すると問題があるようだけど、legendに対しては問題なく利用できそう。IE非対応だけど。</p>
 <style>
-.example5 fieldset { display: grid; grid-template-columns: 200px 200px; }
+.example5 fieldset { display: grid; grid-template-columns: 150px 150px; }
 .example5 legend { display: contents; }
 </style>
 <div class="example5">
@@ -564,7 +564,7 @@
     <label><input type="checkbox" />チェックボックス</label>
   </fieldset>
 </div>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">fieldset</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span> <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 200px 200px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">fieldset</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span> <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 150px 150px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
 <span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> contents<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>また「<a target="_blank" rel="noopener" href="https://drafts.csswg.org/css-display/#unbox-html">特別な要素に対するdisplay:contentsの効果</a>」によると、fieldsetに<code>display: contents</code>を設定すると、fieldsetのprincipal boxがなくなり、fieldsetが普通のコンテンツと同じように描画されるようになる。</p>
 <p>この場合、legendは変わらずrendered legendとして扱われるけど、fieldsetのボーダー上にrendered legendを配置するという処理はなくなる（boxが存在しないから）。</p>
@@ -572,8 +572,8 @@
 <style>
 .example6 { display: flex }
 .example6 fieldset { display: contents; }
-.example6 legend { flex-basis: 200px; }
-.example6 label { flex-basis: 200px; }
+.example6 legend { flex-basis: 150px; }
+.example6 label { flex-basis: 150px; }
 </style>
 <div class="example6">
   <fieldset>
@@ -583,11 +583,11 @@
 </div>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> flex <span class="token punctuation">&#125;</span>
 <span class="token selector">fieldset</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> contents<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-<span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">flex-basis</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
-<span class="token selector">label</span> <span class="token punctuation">&#123;</span> <span class="token property">flex-basis</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token selector">legend</span> <span class="token punctuation">&#123;</span> <span class="token property">flex-basis</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token selector">label</span> <span class="token punctuation">&#123;</span> <span class="token property">flex-basis</span><span class="token punctuation">:</span> 150px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>同じように親の要素に対して<code>display: grid</code> を設定することで、一列に並べることもできる。</p>
 <style>
-.example7 { display: grid; grid-template-columns: 200px 200px; }
+.example7 { display: grid; grid-template-columns: 150px 150px; }
 .example7 fieldset { display: contents; }
 </style>
 <div class="example7">
@@ -596,7 +596,7 @@
     <label><input type="checkbox" />チェックボックス</label>
   </fieldset>
 </div>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span> <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 200px 200px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">div</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span> <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 150px 150px<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
 <span class="token selector">fieldset</span> <span class="token punctuation">&#123;</span> <span class="token property">display</span><span class="token punctuation">:</span> contents<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <hr>
 <p>というメモ。</p>

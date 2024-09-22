@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>メモログ</title>
+  <meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+/*
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+*/
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+/*
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+*/
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"ItemList",
+      "itemListElement":[
+        
+        {
+          "@type":"ListItem",
+          "position":1,
+          "url": "https://memolog.org/2013/09/background_shorthand.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":2,
+          "url": "https://memolog.org/2013/08/specificity_of_pseudo_class.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":3,
+          "url": "https://memolog.org/2013/08/generate_sass_sourcemap_with_compass.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":4,
+          "url": "https://memolog.org/2013/08/javascript_source_analytics_with_grunt-plato.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":5,
+          "url": "https://memolog.org/2013/08/json_parse_null_without_type_converting.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":6,
+          "url": "https://memolog.org/2013/08/ie10_input_enter_key_button_element_click.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":7,
+          "url": "https://memolog.org/2013/08/supported_in_ie8.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":8,
+          "url": "https://memolog.org/2013/08/-webkit-font-smoothing_and_usability.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":9,
+          "url": "https://memolog.org/2013/08/chrome_workspace.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":10,
+          "url": "https://memolog.org/2013/08/git_stash_options.html"
+        }
+        
+      ]
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body>
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">塵が積もって山とならないメモのログ</p>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 最新のメモ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-31T11:00:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月31日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/09/background_shorthand.html">background ショートハンドで省略したプロパティ</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>backgroundのスタイルをショートハンドで指定した場合、指定していないプロパティはinitialと同じ値が指定される。<a target="_blank" rel="noopener" href="http://www.w3.org/TR/css3-background/#the-background">CSS Backgrounds and Borders Module Level 3</a>を参照。</p></div>
+            <div><a href="/2013/09/background_shorthand.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-30T12:00:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月30日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/08/specificity_of_pseudo_class.html">a&#x3a;link, a&#x3a;visitedの詳細度はclass selectorのみより大きい</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。<a target="_blank" rel="noopener" href="http://www.w3.org/TR/css3-selectors/#specificity">Calculating a selector’s specificity</a>を参照すると、詳細度は(0,1,1)となる（<a target="_blank" rel="noopener" href="http://www.w3.org/TR/CSS2/cascade.html#specificity">CSS2.1</a>ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。</p></div>
+            <div><a href="/2013/08/specificity_of_pseudo_class.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-21T05:00:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月21日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/08/generate_sass_sourcemap_with_compass.html">compass で sass の sourcemap を作る</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>sassのsourcemapを用意すると、Chromeのdeveloper toolsを使ったときにscssファイルでスタイルのinspectができるようになるので、非常に便利。詳細は<a target="_blank" rel="noopener" href="http://www.skyward-design.net/blog/archives/000163.html">Sassファイルでの記述位置を知るより美しい方法｜Blog｜Skyward Design</a>などを参照。</p></div>
+            <div><a href="/2013/08/generate_sass_sourcemap_with_compass.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-18T11:00:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月18日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/08/javascript_source_analytics_with_grunt-plato.html">Javascript source analytics with grunt-plato</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>Gruntのpluginで<a target="_blank" rel="noopener" href="https://github.com/jsoverson/grunt-plato">grunt-plato</a>というのがあって、<a target="_blank" rel="noopener" href="https://github.com/jsoverson/plato">Plato</a>を使ってJavascriptの静的解析結果をvisualizeしてレポートしてくれます。</p></div>
+            <div><a href="/2013/08/javascript_source_analytics_with_grunt-plato.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-16T03:00:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月16日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/08/json_parse_null_without_type_converting.html">HTC EVO (Android 2.3) と JSON.parse(null)</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>HTC EVO(2.3.4)のAndroid端末で、localStorageに入れた値をJSON.parseした場合に、localStorageからnullが渡るとillegal accessのエラーになる。エラーを出力しないようだけど。。。weinreのコンソールでJSON.parse(null)と打つとそのようなエラーが確認できる。</p></div>
+            <div><a href="/2013/08/json_parse_null_without_type_converting.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-09T05:55:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月9日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/08/ie10_input_enter_key_button_element_click.html">IE10 で input フォームでエンターすると button要素 に click イベントが発生する</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #3c515f"><img src="/assets/images/dave-blahlentino-149508-unsplash/dave-blahlentino-149508-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/iRm292XKwA4?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Dave Blahlentino</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p><a target="_blank" rel="noopener" href="http://stackoverflow.com/questions/13497606/ie10-find-first-button-on-page-and-trigger-click-event-on-input-submit">javascript - IE10 find first button on page and trigger click event on input submit - Stack Overflow</a>参考。Internet Explorer 10 にて input fieldで Enter keyを押すと、<button>要素にclick eventが発生する。</p></div>
+            <div><a href="/2013/08/ie10_input_enter_key_button_element_click.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-08T05:00:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月8日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/08/supported_in_ie8.html">あらためて IE8 について</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>少し前までIE6で動かないから… というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。</p>
+<p>しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。</p></div>
+            <div><a href="/2013/08/supported_in_ie8.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-07T04:51:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月7日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/08/-webkit-font-smoothing_and_usability.html">-webkit-font-smoothing と Usability</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>最近になって-webkit-font-smoothingというプロパティの存在を知りました。<a target="_blank" rel="noopener" href="http://maxvoltar.com/archive/-Webkit-font-smoothing">maxvoltar - -webkit-font-smoothing</a>によると2010年には存在していたようですけど。</p></div>
+            <div><a href="/2013/08/-webkit-font-smoothing_and_usability.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-06T05:30:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月6日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/08/chrome_workspace.html">Chrome の workspace を使う</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a target="_blank" rel="noopener" href="http://www.html5rocks.com/en/tutorials/developertools/revolutions2013/#toc-workspaces">Chrome DevTools Revolutions 2013 - HTML5 Rocks</a>で紹介されていた話で、最近になってChromeにも追加されました。Workspaceを追加して、変更するファイルにマップを設定すると、ChromeのDeveloper tool上で行った変更がマップしたファイルにも反映されるようになります。</p></div>
+            <div><a href="/2013/08/chrome_workspace.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-08-05T04:00:00.000Z"><span class="calendar-icon">📅</span><span>2013年8月5日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/08/git_stash_options.html">git stash の便利なオプション</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>git stash は、コミットしていない変更されたファイルを一時的にstashとして保存して、変更がない状態に戻すことができます。仕掛かり中の作業の間に別の緊急の作業が入ってしまったりとか、変更前の状態から違う方法で修正をやり直してみたい場合とか、とりあえず現状を保存しておいて戻すことができるので、大変便利。</p></div>
+            <div><a href="/2013/08/git_stash_options.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+      <footer class="pagination"><a class="extend prev" rel="prev" href="/page/11/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="page-number" href="/page/40/">40</a><a class="extend next" rel="next" href="/page/13/">Next</a></footer>
+    </main>
+    <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">私について</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>東京在住。TypeScript, Node.js, Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。万年英語勉強中</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            // link.classList.add('no-link-icon');
+            continue;
+          }
+
+          // link.classList.add('link-icon');
+          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    // navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

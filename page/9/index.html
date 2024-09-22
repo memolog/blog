@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>メモログ</title>
+  <meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+/*
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+*/
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+/*
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+*/
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"ItemList",
+      "itemListElement":[
+        
+        {
+          "@type":"ListItem",
+          "position":1,
+          "url": "https://memolog.org/2017/hello-hexo.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":2,
+          "url": "https://memolog.org/2017/hello-gatsby.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":3,
+          "url": "https://memolog.org/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":4,
+          "url": "https://memolog.org/2016/01/angular2_and_import_statement.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":5,
+          "url": "https://memolog.org/2016/01/angular2_with_decorators.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":6,
+          "url": "https://memolog.org/2016/01/view_controller_lifecycle.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":7,
+          "url": "https://memolog.org/2015/08/encrypt-with-nodejs-and-then-decrypt-it-with-cryptoswift.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":8,
+          "url": "https://memolog.org/2015/08/firefox_40_csp.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":9,
+          "url": "https://memolog.org/2015/08/try-cryptojs.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":10,
+          "url": "https://memolog.org/2015/08/encrypt-with-cryptswift-and-then-decrypt-it-with-nodejs.html"
+        }
+        
+      ]
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body>
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">塵が積もって山とならないメモのログ</p>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 最新のメモ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2017-12-29T15:00:00.000Z"><span class="calendar-icon">📅</span><span>2017年12月30日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2017/hello-hexo.html">Hello Hexo</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/">Gatsby</a> はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>にすることにした。</p>
+<p><a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/">Gatsby</a> は高機能ゆえにたとえばデザインを少し変えたいというときに、<a target="_blank" rel="noopener" href="http://kyleamathews.github.io/typography.js/">Typography</a> の実装上でどう変更するかを調べる必要があったり、<a target="_blank" rel="noopener" href="https://github.com/KyleAMathews/react-responsive-grid">react-responsive-grid</a> とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。</div>
+            <div><a href="/2017/hello-hexo.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2017-12-28T15:00:00.000Z"><span class="calendar-icon">📅</span><span>2017年12月29日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2017/hello-gatsby.html">Gatsbyでスタティックサイトを作成する</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>更新しなくなったブログをリニューアルしようと思って、<a target="_blank" rel="noopener" href="https://www.gatsbyjs.org">Gatsby</a> で構築しようと思い立って、今作成してみている。</p>
+<p>Gatsbyは「Blazing-fast static site generator for React」ということで、Reactベースのスタティックサイトジェネレータらしいのだけど、実のところまだよくわかっていない。<a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/docs/">Getting Started</a> のドキュメントをみて、<a target="_blank" rel="noopener" href="https://github.com/gatsbyjs/gatsby-starter-blog">gatsby-starter-blog</a> のstarterをGithub pages で公開しているだけなのだ。</div>
+            <div><a href="/2017/hello-gatsby.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2016-02-03T12:37:00.000Z"><span class="calendar-icon">📅</span><span>2016年2月3日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">Bitcodeを使ったアプリがCrashlyticsでmissing dSYMsになる</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>Xcodeでpublishした内部テスター向けのビルドで、<a target="_blank" rel="noopener" href="https://fabric.io/kits/ios/crashlytics">Crashlytics</a>へクラッシュレポートが届かない。「missing dSYM」というエラーが出てるので、dSYMの問題だろうというところまでわかるけど、<a target="_blank" rel="noopener" href="https://docs.fabric.io/ios/crashlytics/index.html">CrashlyticsのDocument</a>などを読んでもわからない。Crashlyticsのmissing dSYMの画面に出てるUUIDを検索しても見つからない…</p></div>
+            <div><a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2016-01-16T07:00:00.000Z"><span class="calendar-icon">📅</span><span>2016年1月16日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2016/01/angular2_and_import_statement.html">Angular2とimport statement</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a href="/blog//2016/01/angular2_with_decorators/">Angular2とDecorators - メモログ</a>に出した<a target="_blank" rel="noopener" href="https://angular.io/docs/ts/latest/quickstart.html">5 Min Quickstart</a>のサンプルを再掲すると、冒頭にimportのstatementがあります。</p></div>
+            <div><a href="/2016/01/angular2_and_import_statement.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2016-01-13T07:15:00.000Z"><span class="calendar-icon">📅</span><span>2016年1月13日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2016/01/angular2_with_decorators.html">Angular2とDecorators</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>Decorators は <a target="_blank" rel="noopener" href="https://github.com/tc39/ecma262">ECMAScript</a> で Propose となっている実装で、Angular 2 と TypeScript を使った実装ではよく出てくる。 <a target="_blank" rel="noopener" href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841">Exploring ES2016 Decorators – Google Developers – Medium</a>を参考にすると、定義したfunction名の頭に「@」をつけて、使いたいclassやpropertyの前に記述するらしい。</p></div>
+            <div><a href="/2016/01/angular2_with_decorators.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2016-01-11T13:15:00.000Z"><span class="calendar-icon">📅</span><span>2016年1月11日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2016/01/view_controller_lifecycle.html">View Controller Lifecycle</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>viewDidLoadとviewDidAppearの使い方についてのメモ（ほぼ公式ドキュメントのコピペ）。引用中の太字装飾は私。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson4.html">Work with View Controllers</a>にある「Understand the View Controller Lifecycle」に書いてある説明は以下のような感じ。</p></div>
+            <div><a href="/2016/01/view_controller_lifecycle.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2015-08-27T05:15:00.000Z"><span class="calendar-icon">📅</span><span>2015年8月27日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2015/08/encrypt-with-nodejs-and-then-decrypt-it-with-cryptoswift.html">Node.js で AES-256-CBC で暗号化したデータを CryptoSwift で復号化する</a></h2>
+            
+          </header>
+          
+            <div class="content"><p><a href="/blog//2015/08/encrypt-with-cryptswift-and-then-decrypt-it-with-nodejs/">CryptoSwiftを使ってAES-256-CBCで暗号化してNodeで復号化する</a>の記事で、CryptoSwift (iOS) で暗号化したデータをサーバー側（Node.js）で復号化する話をしましたが、今回はその逆向きで、Node.jsでABS-256-CBCで暗号化したデータをCryptoSwiftで復号化するという話。</p></div>
+            <div><a href="/2015/08/encrypt-with-nodejs-and-then-decrypt-it-with-cryptoswift.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2015-08-24T05:51:00.000Z"><span class="calendar-icon">📅</span><span>2015年8月24日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2015/08/firefox_40_csp.html">Firefox 40 の CSP で「*」だけでは blob&#x3a; を許容しなくなった。</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>File APIから取得した画像のサムネイルを<a target="_blank" rel="noopener" href="https://github.com/blueimp/JavaScript-Load-Image">blueimp/JavaScript-Load-Image</a>を使って表示していたところが、Firefox 40になってから表示されなくなったので、なんでだろうなあと思っていたら、<a target="_blank" rel="noopener" href="https://developer.mozilla.org/ja/Firefox/Releases/40/Site_Compatibility">Firefox 40</a>からのCSPのポリシーに修正が入っていて、*（ワイルドカード）でblob:、data:、filesystem:のリソースを許容しなくなったのが原因でした。</p></div>
+            <div><a href="/2015/08/firefox_40_csp.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2015-08-16T18:30:00.000Z"><span class="calendar-icon">📅</span><span>2015年8月17日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2015/08/try-cryptojs.html">CryptoJSを使ったクライアントとサーバー間の暗号化と復号化</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #dde1e7"><img src="/assets/images/reuben-mcfeeters-684383-unsplash/reuben-mcfeeters-684383-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/3clB7Pdjee0?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Reuben Mcfeeters</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>CryptoJSを使ったクライアントサイド（Javascript）とサーバーサイド（Node.js）での暗号化と復号化について。CryptoJSは<a target="_blank" rel="noopener" href="https://github.com/brix/crypto-js">brix/crypto-js</a>のやつを使用します。</div>
+            <div><a href="/2015/08/try-cryptojs.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2015-08-13T05:00:00.000Z"><span class="calendar-icon">📅</span><span>2015年8月13日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2015/08/encrypt-with-cryptswift-and-then-decrypt-it-with-nodejs.html">CryptoSwiftを使ってAES-256-CBCで暗号化してNodeで復号化する</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>iOS側で<a target="_blank" rel="noopener" href="https://github.com/krzyzanowskim/CryptoSwift">CryptoSwift</a>を使ってAES-256-CBCで暗号化したデータを、Node.jsで受け取って復号化するという話。</p></div>
+            <div><a href="/2015/08/encrypt-with-cryptswift-and-then-decrypt-it-with-nodejs.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+      <footer class="pagination"><a class="extend prev" rel="prev" href="/page/8/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="page-number" href="/page/40/">40</a><a class="extend next" rel="next" href="/page/10/">Next</a></footer>
+    </main>
+    <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">私について</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>東京在住。TypeScript, Node.js, Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。万年英語勉強中</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            // link.classList.add('no-link-icon');
+            continue;
+          }
+
+          // link.classList.add('link-icon');
+          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    // navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>Featured Image を設置する | メモログ</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+/*
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+*/
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+/*
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+*/
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <meta name="description" content="記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。 でも大きな画像をそのまま使うのはファイルサイズ的に大きすぎるので、リサイズしたい。できれば各端末に">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Featured Image を設置する">
+<meta property="og:url" content="https://memolog.org/2018/display-featured-image.html">
+<meta property="og:site_name" content="メモログ">
+<meta property="og:description" content="記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。 でも大きな画像をそのまま使うのはファイルサイズ的に大きすぎるので、リサイズしたい。できれば各端末に">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://memolog.org/assets/images/igor-ovsyannykov-258206/igor-ovsyannykov-258206.jpg">
+<meta property="article:published_time" content="2018-01-08T02:07:38.000Z">
+<meta property="article:modified_time" content="2024-02-20T21:19:33.334Z">
+<meta property="article:author" content="Yutaka Yamaguchi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://memolog.org/assets/images/igor-ovsyannykov-258206/igor-ovsyannykov-258206.jpg">
+<meta name="twitter:creator" content="@memolog">
+<meta name="twitter:site" content="https://twitter.com/memolog">
+<meta property="fb:app_id" content="168245123786587">
+  <link rel="canonical" href="https://memolog.org/2018/display-featured-image.html">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://memolog.org/2018/display-featured-image.html"
+      },
+      "headline": "Featured Image を設置する",
+      
+        "image": [
+          "https://memolog.org/assets/images/igor-ovsyannykov-258206/igor-ovsyannykov-258206.jpg"
+        ],
+      
+      "datePublished": "1515377258000",
+      "dateModified": "1708463973334",
+      "author": {
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "メモログ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memolog.org/assets/icons/icon-1024.png"
+        }
+      },
+      "description": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。
+でも大きな画像をそのまま使うのはファイルサイズ的に大きすぎるので、リサイズしたい。できれば各端末に適したサイズにしておきたい… と、なんかいろいろ思ってしまい、最終的にUnsplashのサイトからダウンロードしたデータを個人的に使いたい大きさにリサイズするサービスを用意してみた。convert-a-image-to-responsive-imagesに公開している（ES2015をターゲットにしているので、IE11では動かない）。ただの思いつきに思ったより時間をかけてしまった。最初はAWS Lambdaで画像をリサイズするつもりだったが、リサイズに使っているSharpの扱いが少し難しく、メモリ容量のところでエラーになってしまった（これを解決する方法はありそうなのだが、やってる時間がなくなったので、しばし保留）。いずれにせよ最終的にはWEBサービスとして公開したいなと思っている。週末に時間があれば。"
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body class="post">
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">塵が積もって山とならないメモのログ</p>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 最新のメモ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <article>
+        <header class="header">
+          <div>
+            <time datetime="2018-01-08T02:07:38.000Z">
+              <span class="calendar-icon">📅</span><span>2018年1月8日</span>
+            </time>
+          </div>
+          <h2 class="header__title"><span>Featured Image を設置する</span></h2>
+          
+            <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #85c3fc"><img src="/assets/images/igor-ovsyannykov-258206/igor-ovsyannykov-258206.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/7oTkp6P8PhM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Igor Ovsyannykov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+          
+        </header>
+        <div id="article-content" class="content "><p>記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、<a target="_blank" rel="noopener" href="https://unsplash.com">Unsplash</a>から良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。</p>
+<p>でも大きな画像をそのまま使うのはファイルサイズ的に大きすぎるので、リサイズしたい。できれば各端末に適したサイズにしておきたい… と、なんかいろいろ思ってしまい、最終的にUnsplashのサイトからダウンロードしたデータを個人的に使いたい大きさにリサイズするサービスを用意してみた。<a target="_blank" rel="noopener" href="https://github.com/memolog/convert-a-image-to-responsive-images">convert-a-image-to-responsive-images</a>に公開している（ES2015をターゲットにしているので、IE11では動かない）。ただの思いつきに思ったより時間をかけてしまった。最初はAWS Lambdaで画像をリサイズするつもりだったが、リサイズに使っている<a target="_blank" rel="noopener" href="https://github.com/lovell/sharp">Sharp</a>の扱いが少し難しく、メモリ容量のところでエラーになってしまった（これを解決する方法はありそうなのだが、やってる時間がなくなったので、しばし保留）。いずれにせよ最終的にはWEBサービスとして公開したいなと思っている。週末に時間があれば。<span id="more"></span></p>
+<p>サーバーの実装は簡単で、<a target="_blank" rel="noopener" href="https://github.com/mscdex/busboy">busboy</a>でファイルを受け取ったあとに、指定したサイズでsharpを実行するだけである。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">resizeImage</span>(<span class="params">buffer, size, name, ext, scale</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">fulfill, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    scale = scale || <span class="number">1</span>;</span><br><span class="line">    ext = ext.<span class="title function_">replace</span>(<span class="regexp">/^\./</span>, <span class="string">&#x27;&#x27;</span>);</span><br><span class="line">    <span class="keyword">const</span> scaleStr = scale === <span class="number">1</span> ? <span class="string">&#x27;&#x27;</span> : <span class="string">`@<span class="subst">$&#123;scale&#125;</span>x`</span>;</span><br><span class="line">    <span class="keyword">const</span> relativePath = <span class="string">`images/<span class="subst">$&#123;name&#125;</span>/<span class="subst">$&#123;name&#125;</span>_<span class="subst">$&#123;size&#125;</span><span class="subst">$&#123;scaleStr&#125;</span>.<span class="subst">$&#123;ext&#125;</span>`</span></span><br><span class="line">    <span class="keyword">const</span> filePath = path.<span class="title function_">resolve</span>(__dirname, <span class="string">`../static/public/<span class="subst">$&#123;relativePath&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line">    <span class="title function_">sharp</span>(buffer)</span><br><span class="line">      .<span class="title function_">resize</span>(size * scale)</span><br><span class="line">      .<span class="title function_">toFile</span>(filePath, <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) &#123;</span><br><span class="line">          <span class="title function_">reject</span>(err);</span><br><span class="line">          <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title function_">fulfill</span>(relativePath);</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>フロント側も簡単で、基本的にはFetch APIを使ってリクエストを送っているだけである。レンダリングには<a target="_blank" rel="noopener" href="https://preactjs.com/">preact</a>を使ってみた。preact/TypeScript/SCSSなどをWebpackでバンドルするのが一番面倒くさいは面倒くさい（最初だけだけど）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">submitHandler</span>(<span class="params">event</span>)&#123;</span><br><span class="line">		event.<span class="title function_">preventDefault</span>();</span><br><span class="line">		event.<span class="title function_">stopPropagation</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> fileElement = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;upload-image&#x27;</span>);</span><br><span class="line">    <span class="keyword">if</span> (!(fileElement <span class="keyword">instanceof</span> <span class="title class_">HTMLInputElement</span>)) &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> uploadFile = fileElement.<span class="property">files</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">const</span> formData = <span class="keyword">new</span> <span class="title class_">FormData</span>();</span><br><span class="line">    formData.<span class="title function_">append</span>(<span class="string">&#x27;image&#x27;</span>, uploadFile);</span><br><span class="line"></span><br><span class="line">    <span class="title function_">fetch</span>(<span class="string">&#x27;http://localhost:3000/convert&#x27;</span>, &#123;</span><br><span class="line">      <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">      <span class="attr">body</span>: formData</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function">(<span class="params">resp</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> resp.<span class="title function_">json</span>();</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function">(<span class="params">data</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="title function_">setState</span>(&#123;</span><br><span class="line">        <span class="attr">images</span>: data &amp;&amp; data.<span class="property">filePaths</span> || []</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(err));</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>Hexoのテンプレートの方は、<a target="_blank" rel="noopener" href="https://hexo.io/docs/front-matter.html">Front-matter | Hexo</a>の部分にイメージ画像に関する情報を入れて、それをテンプレートに追加する。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Featured</span> <span class="string">Image</span> <span class="string">を設置する</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018-01-08 11:07:38</span></span><br><span class="line"><span class="attr">featured:</span></span><br><span class="line">  <span class="attr">image:</span> <span class="string">benjamin-voros-365387</span></span><br><span class="line">  <span class="attr">author:</span> <span class="string">Benjamin</span> <span class="string">Voros</span></span><br><span class="line">  <span class="attr">authorLink:</span> <span class="string">https://unsplash.com/photos/StFUwkNsvcY?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;header__feature&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;featured__image&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">picture</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span> <span class="attr">data-srcset</span>=<span class="string">&quot;/blog/assets/images/&lt;%= featured.image %&gt;/&lt;%= featured.image %&gt;_450.jpg, /blog/assets/images/&lt;%= featured.image %&gt;/&lt;%= featured.image %&gt;_450@2x.jpg 2x, /blog/assets/images/&lt;%= featured.image %&gt;/&lt;%= featured.image %&gt;_450@3x.jpg 3x&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/jpeg&quot;</span> <span class="attr">media</span>=<span class="string">&quot;(max-width: 450px)&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span> <span class="attr">data-srcset</span>=<span class="string">&quot;/blog/assets/images/&lt;%= featured.image %&gt;/&lt;%= featured.image %&gt;_750.webp, /blog/assets/images/&lt;%= featured.image %&gt;/&lt;%= featured.image %&gt;_750@2x.webp 2x&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/webp&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">source</span> <span class="attr">data-srcset</span>=<span class="string">&quot;/blog/assets/images/&lt;%= featured.image %&gt;/&lt;%= featured.image %&gt;_750.jpeg, /blog/assets/images/&lt;%= featured.image %&gt;/&lt;%= featured.image %&gt;_750@2x.jpeg 2x&quot;</span> <span class="attr">type</span>=<span class="string">&quot;image/jpeg&quot;</span> /&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;data:image/png;base64,iVBORw0KGgoAAAANS...VORK5CYII=&quot;</span> <span class="attr">data-src</span>=<span class="string">&quot;/blog/assets/images/&lt;%= featured.image %&gt;/&lt;%= featured.image %&gt;_750.jpg&quot;</span> <span class="attr">class</span>=<span class="string">&quot;lazyload blur-up&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">picture</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;featured__credit&quot;</span>&gt;</span>Photo by <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&lt;%= featured.authorLink %&gt;&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>&lt;%= featured.author %&gt;<span class="tag">&lt;/<span class="name">a</span>&gt;</span> on <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;noopener&quot;</span>&gt;</span>Unsplash<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.lazyload</span>,</span><br><span class="line"><span class="selector-class">.lazyloading</span> &#123;</span><br><span class="line">	<span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.lazyloaded</span> &#123;</span><br><span class="line">	<span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">transition</span>: opacity <span class="number">2s</span> .<span class="number">3s</span> <span class="built_in">cubic-bezier</span>(<span class="number">0</span>, .<span class="number">5</span>, <span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最初のロードで画像は表示したくないので<a target="_blank" rel="noopener" href="https://github.com/aFarkas/lazysizes">lazysizes</a>で画像を遅延読み込みしている。</p>
+<p>あとCloudFormationで作成した画像を配信するためのスタックを用意しているけど、、書いてる時間がなくなったのでまた別の機会に書く。</p>
+<p>まだいろいろ課題はあって…</p>
+<ul>
+<li>アプリケーションとして公開したい（LambdaかAmazon ECS使いたい）</li>
+<li>S3 / CloudFront からのファイルをgzipで配信したい</li>
+<li>リサイズするサイズより小さい画像の扱いができない</li>
+<li>若干、手作業が多い（最終的にはUnsplashのAPIを使いたい）</li>
+<li>imageOptimみたいな最適化処理をしたい</li>
+</ul>
+<p>など、いろいろ。時間があって、まだ興味が持続していれば、、対応していきたい。</p>
+<hr>
+<p>それでこのブログの画像もS3とCloudfrontを使ってみていたが、お金も少しだけどかかるし<a target="_blank" rel="noopener" href="https://help.github.com/articles/what-is-github-pages/">What is GitHub Pages? - User Documentation</a>には1GBまでは利用可能なので、ブログの画像は普通にGithubに画像をおくことにした。</p>
+</div>
+        <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">私について</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>東京在住。TypeScript, Node.js, Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。万年英語勉強中</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+      </article>
+    </main>
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            // link.classList.add('no-link-icon');
+            continue;
+          }
+
+          // link.classList.add('link-icon');
+          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    // navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

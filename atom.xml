@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>メモログ</title>
+  
+  <subtitle>塵が積もって山とならないメモのログ</subtitle>
+  <link href="https://memolog.org/atom.xml" rel="self"/>
+  
+  <link href="https://memolog.org/"/>
+  <updated>2024-09-22T05:25:35.617Z</updated>
+  <id>https://memolog.org/</id>
+  
+  <author>
+    <name>Yutaka Yamaguchi</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本：因果推論の科学</title>
+    <link href="https://memolog.org/2024/the-book-of-why.html"/>
+    <id>https://memolog.org/2024/the-book-of-why.html</id>
+    <published>2024-09-22T02:32:11.000Z</published>
+    <updated>2024-09-22T05:25:35.617Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hiddenのフィールドにautocomplete属性を入れる意味</title>
+    <link href="https://memolog.org/2022/the-two-ways-to-use-autocomplete-attribute.html"/>
+    <id>https://memolog.org/2022/the-two-ways-to-use-autocomplete-attribute.html</id>
+    <published>2022-12-05T00:00:00.000Z</published>
+    <updated>2024-02-20T21:19:33.340Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute&quot;&gt;4.10.18.7.1 Autofilling form controls: the autocomplete attribute&lt;/a&gt;には、autocomplete属性には2つの利用方法があると書かれている。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>npm script warns permission errors in the cache directory</title>
+    <link href="https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html"/>
+    <id>https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html</id>
+    <published>2022-11-07T08:30:00.000Z</published>
+    <updated>2024-02-20T21:19:33.340Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;（そんなことするかどうかは置いておいて）たとえば&lt;a href=&quot;https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo&quot;&gt;docker-node-npm-scripti-permission-issue-demo&lt;/a&gt;を&lt;a href=&quot;https://github.co.jp/features/codespaces&quot;&gt;Github codespaces&lt;/a&gt;上で起動して、&lt;code&gt;npm ci&lt;/code&gt;して、&lt;code&gt;npm run build&lt;/code&gt;を実行すると、&lt;code&gt;permission denied, scandir &#39;/root/.npm/_logs&#39;&lt;/code&gt; というエラーのWARNが発生する。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Unexpected reserved word &#39;interface&#39; on jest</title>
+    <link href="https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html"/>
+    <id>https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html</id>
+    <published>2022-09-29T21:23:42.000Z</published>
+    <updated>2024-02-20T21:19:33.340Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;jestを28以降に更新したら、jestの実行時に&lt;code&gt;Unexpected reserved word &#39;interface&#39;&lt;/code&gt;みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Webpack 5 compiles code with ES2015</title>
+    <link href="https://memolog.org/2022/webpack-5-compiles-code-with-es2015.html"/>
+    <id>https://memolog.org/2022/webpack-5-compiles-code-with-es2015.html</id>
+    <published>2022-09-18T01:20:39.000Z</published>
+    <updated>2024-02-20T21:19:33.340Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Webpackのバージョン5ではコンパイルしたコードにES2015（アロー関数など）が含まれるようになる。これはWebpackが生成する部分に関する仕様なので、babelの設定でES5だけに制限していてもES2015が使われる。IE11ではアロー関数が処理できずに丸ごとエラーとなるので、IE11にまだ対応する必要があれば設定を確認する必要がある（今さらだけど）。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Book: Programming TypeScript</title>
+    <link href="https://memolog.org/2020/book-programming-typescript.html"/>
+    <id>https://memolog.org/2020/book-programming-typescript.html</id>
+    <published>2020-11-14T01:44:35.000Z</published>
+    <updated>2024-09-22T03:12:18.795Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.amazon.co.jp/gp/product/4873119049/ref=as_li_ss_il?ie=UTF8&amp;amp;linkCode=li2&amp;amp;tag=yutakayamaguc-22&amp;amp;linkId=3d63565fd35c0d79ec9996440384313f&amp;amp;language=ja_JP&quot;&gt;プログラミングTypeScript&lt;/a&gt;を一通り読んだのでざっくり紹介。TypeScriptはたぶん3年くらい使っていて、特に不自由なく使えるのだけど、けっこう知らないこともあった。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Got 100 lighthouse score in all categories on mobile</title>
+    <link href="https://memolog.org/2020/got-100-lighthouse-score-in-all-categories-on-mobile.html"/>
+    <id>https://memolog.org/2020/got-100-lighthouse-score-in-all-categories-on-mobile.html</id>
+    <published>2020-09-16T03:45:52.000Z</published>
+    <updated>2024-02-20T21:19:33.339Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Logical AND/OR/Nullish assignment operators</title>
+    <link href="https://memolog.org/2020/logical-assignment-operators.html"/>
+    <id>https://memolog.org/2020/logical-assignment-operators.html</id>
+    <published>2020-09-09T04:03:29.000Z</published>
+    <updated>2024-02-20T21:19:33.339Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;http://esnextnews.com/&quot;&gt;ES.next News&lt;/a&gt;の9/1の回のメールにあった&lt;a href=&quot;https://dev.to/hemanth/logical-assignment-operators-in-javascript-inh&quot;&gt;Logical assignment operators in JavaScript&lt;/a&gt;について。&lt;a href=&quot;https://devblogs.microsoft.com/typescript/announcing-typescript-4-0-rc/#short-circuiting-assignment-operators&quot;&gt;TypeScript 4.0 から利用可能&lt;/a&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Fragmenting Flex Layout</title>
+    <link href="https://memolog.org/2020/fragmenting-flex-layout.html"/>
+    <id>https://memolog.org/2020/fragmenting-flex-layout.html</id>
+    <published>2020-09-09T01:06:00.000Z</published>
+    <updated>2024-02-20T21:19:33.339Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#pagination&quot;&gt;10. Fragmenting Flex Layout&lt;br&gt;
+&lt;/a&gt;について。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flex Layout Algorithm</title>
+    <link href="https://memolog.org/2020/flex-layout-algorithm.html"/>
+    <id>https://memolog.org/2020/flex-layout-algorithm.html</id>
+    <published>2020-07-26T02:56:00.000Z</published>
+    <updated>2024-02-20T21:19:33.338Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#layout-algorithm&quot;&gt;9. Flex Layout Algorithm&lt;/a&gt;について。この章は見なくて良いんじゃないかと思いつつ、写経のような感じでやっていこうと思う。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flex Alignment</title>
+    <link href="https://memolog.org/2020/flex-alignment.html"/>
+    <id>https://memolog.org/2020/flex-alignment.html</id>
+    <published>2020-07-18T02:52:00.000Z</published>
+    <updated>2024-02-20T21:19:33.337Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#alignment&quot;&gt;8. Alignment&lt;/a&gt;について。長いけど一気に。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Components of Flexibility</title>
+    <link href="https://memolog.org/2020/components-of-flexibility.html"/>
+    <id>https://memolog.org/2020/components-of-flexibility.html</id>
+    <published>2020-07-01T08:46:00.000Z</published>
+    <updated>2024-02-20T21:19:33.336Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-components&quot;&gt;7.2. Components of Flexibility&lt;/a&gt;について。各ロングハンドの説明は&lt;a href=&quot;https://memolog.org/2020/flex-shorthand.html&quot;&gt;flex ショートハンド&lt;/a&gt;の方に書かれていて、ここには載ってない。今回は読み飛ばして良い感じの内容になってる。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>The flex Shorthand</title>
+    <link href="https://memolog.org/2020/flex-shorthand.html"/>
+    <id>https://memolog.org/2020/flex-shorthand.html</id>
+    <published>2020-06-30T05:09:49.000Z</published>
+    <updated>2024-02-20T21:19:33.339Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flexibility&quot;&gt;7. Flexibility&lt;/a&gt;について。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flex Lines</title>
+    <link href="https://memolog.org/2020/flex-lines.html"/>
+    <id>https://memolog.org/2020/flex-lines.html</id>
+    <published>2020-05-30T14:45:00.000Z</published>
+    <updated>2024-02-20T21:19:33.338Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-lines&quot;&gt;6. Flex Lines&lt;/a&gt;について。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Display Order: the order property</title>
+    <link href="https://memolog.org/2020/flex-order-property.html"/>
+    <id>https://memolog.org/2020/flex-order-property.html</id>
+    <published>2020-05-24T15:00:00.000Z</published>
+    <updated>2024-02-20T21:19:33.338Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#order-property&quot;&gt;5.4. Display Order: the order property&lt;/a&gt;について。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flex Direction and Wrap: the flex-flow shorthand</title>
+    <link href="https://memolog.org/2020/flex-flow-shorthand.html"/>
+    <id>https://memolog.org/2020/flex-flow-shorthand.html</id>
+    <published>2020-05-23T15:00:00.000Z</published>
+    <updated>2024-02-20T21:19:33.338Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-flow-property&quot;&gt;5.3. Flex Direction and Wrap: the flex-flow shorthand&lt;/a&gt;について。flex-flowは&lt;code&gt;flex-direction&lt;/code&gt;と&lt;code&gt;flex-wrap&lt;/code&gt;をまとめて設定できる。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flex Line Wrapping: the flex-wrap property</title>
+    <link href="https://memolog.org/2020/flex-wrap-property.html"/>
+    <id>https://memolog.org/2020/flex-wrap-property.html</id>
+    <published>2020-05-23T00:00:00.000Z</published>
+    <updated>2024-02-20T21:19:33.339Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;前回の&lt;a href=&quot;https://memolog.org/2020/flex-flow-direction.html&quot;&gt;Flex Flow Direction: the flex-direction property&lt;/a&gt;から引き続き。&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-wrap-property&quot;&gt;5.2. Flex Line Wrapping: the flex-wrap property&lt;/a&gt;について</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Flex Flow Direction: the flex-direction property</title>
+    <link href="https://memolog.org/2020/flex-flow-direction.html"/>
+    <id>https://memolog.org/2020/flex-flow-direction.html</id>
+    <published>2020-05-20T15:00:00.000Z</published>
+    <updated>2024-02-20T21:19:33.338Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flow-order&quot;&gt;5. Ordering and Orientation&lt;/a&gt;の冒頭部分と、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-direction-property&quot;&gt;5.1. Flex Flow Direction: the flex-direction property&lt;/a&gt;について。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Automatic Minimum Size of Flex Items</title>
+    <link href="https://memolog.org/2020/automatic-minimum-size-of-flex-items.html"/>
+    <id>https://memolog.org/2020/automatic-minimum-size-of-flex-items.html</id>
+    <published>2020-05-18T09:49:00.000Z</published>
+    <updated>2024-02-20T21:19:33.336Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#min-size-auto&quot;&gt;4.5. Automatic Minimum Size of Flex Items&lt;/a&gt;、autoキーワードで自動的に決定される最小値について。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Collapsed Items</title>
+    <link href="https://memolog.org/2020/flex-collpased-items.html"/>
+    <id>https://memolog.org/2020/flex-collpased-items.html</id>
+    <published>2020-04-12T10:41:53.000Z</published>
+    <updated>2024-02-20T21:19:33.338Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#visibility-collapse&quot;&gt;4.4. Collapsed Items&lt;/a&gt;について&lt;!-- more </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

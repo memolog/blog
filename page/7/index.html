@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>メモログ</title>
+  <meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 700px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+/*
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+*/
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 700px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+/*
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+*/
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"ItemList",
+      "itemListElement":[
+        
+        {
+          "@type":"ListItem",
+          "position":1,
+          "url": "https://memolog.org/2018/pass-arguments-to-npm-run-script.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":2,
+          "url": "https://memolog.org/2018/create-hash-table-in-javascript.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":3,
+          "url": "https://memolog.org/2018/javascript-property-access-big-o.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":4,
+          "url": "https://memolog.org/2018/complete-all-the-pwa-checklist.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":5,
+          "url": "https://memolog.org/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":6,
+          "url": "https://memolog.org/2018/custom-domain-in-github-pages.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":7,
+          "url": "https://memolog.org/2018/book-mind-control.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":8,
+          "url": "https://memolog.org/2018/retrieve-json-from-require-method.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":9,
+          "url": "https://memolog.org/2018/show-vertical-writing-with-css.html"
+        },
+        
+        {
+          "@type":"ListItem",
+          "position":10,
+          "url": "https://memolog.org/2018/how-to-learn.html"
+        }
+        
+      ]
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body>
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">塵が積もって山とならないメモのログ</p>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 最新のメモ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-07-26T20:31:39.000Z"><span class="calendar-icon">📅</span><span>2018年7月27日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/pass-arguments-to-npm-run-script.html">npm run script に引数を渡す</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #bec0c1"><img src="/assets/images/chelsea-aaron-312666-unsplash/chelsea-aaron-312666-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/IeTmKYls1vM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Chelsea Aaron</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>この記事の上にあるFeatured Imageを生成するときに毎回<code>primitive_bulk</code>のコマンドを入力していたのだけど、<br>
+しかしさすがに面倒になってきたので、<code>npm run script</code> にショートカットを用意してショートカットに引数を渡すようにしてみた。</div>
+            <div><a href="/2018/pass-arguments-to-npm-run-script.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-07-25T21:31:02.000Z"><span class="calendar-icon">📅</span><span>2018年7月26日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/create-hash-table-in-javascript.html">JavaScriptでハッシュテーブルを作る</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #54594c"><img src="/assets/images/jan-laugesen-186574-unsplash/jan-laugesen-186574-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/4UbSaPKGRqc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jan Laugesen</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p><a href="https://memolog.org/2018/javascript-property-access-big-o.html">JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オー</a>で書いたようにJavaScriptのオブジェクトは基本ハッシュテーブルであるし、<a target="_blank" rel="noopener" href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a>オブジェクトも中の実装はChromeではハッシュテーブルであると書かれてある(<a target="_blank" rel="noopener" href="https://v8project.blogspot.com/2018/01/hash-code.html">Optimizing hash tables: hiding the hash code</a>)。だからJavaScriptで自前のハッシュテーブルを作るというのは必要のないことなのだけど試しに作ってみたかった。</div>
+            <div><a href="/2018/create-hash-table-in-javascript.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-07-23T11:51:00.000Z"><span class="calendar-icon">📅</span><span>2018年7月23日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/javascript-property-access-big-o.html">JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オー</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #442a4c"><img src="/assets/images/emre-karatas-194353-unsplash/emre-karatas-194353-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/Ib2e4-Qy9mQ?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Emre Karataş</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>配列に格納しているオブジェクトをそのIDで検索するとしたら処理量は（線形探索だろうから）ビッグ・オー記法としては <code>O(n)</code> になるだろう。</div>
+            <div><a href="/2018/javascript-property-access-big-o.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-07-14T02:32:41.000Z"><span class="calendar-icon">📅</span><span>2018年7月14日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/complete-all-the-pwa-checklist.html">PWAのチェックリストを満たす</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #6d6861"><img src="/assets/images/cloudvisual-146380-unsplash/cloudvisual-146380-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="522" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/sm8OE9daK2A?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">CloudVisual</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、<a target="_blank" rel="noopener" href="https://developers.google.com/web/tools/lighthouse/?hl=ja">Lighthouse</a> の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応しました。</div>
+            <div><a href="/2018/complete-all-the-pwa-checklist.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-07-07T22:40:57.000Z"><span class="calendar-icon">📅</span><span>2018年7月8日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html">TypeScriptとWebpackを使ってDynamic Importを行う</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #464f47"><img src="/assets/images/erwan-hesry-166245-unsplash/erwan-hesry-166245-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/Q34YB7yjAxA?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Erwan Hesry</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>Webpackではバンドルするファイルを3つのアプローチで分けることができる。エントリーポイントを複数設けたり、webpack.config.jsにsplitChunksの設定を入れたりなどの他に、Dyanmic importを使うことでもファイルを分けることができる。詳しくは<a target="_blank" rel="noopener" href="https://webpack.js.org/guides/code-splitting/">Code Splitting</a>を参照。</div>
+            <div><a href="/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-07-07T20:58:41.000Z"><span class="calendar-icon">📅</span><span>2018年7月8日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/custom-domain-in-github-pages.html">カスタムドメインを設定する</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #7aaaac"><img src="/assets/images/pierre-chatel-innocenti-477580-unsplash/pierre-chatel-innocenti-477580-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/cgagYoakDS8?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Pierre Châtel-Innocenti</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>このサイトは<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>を使ってGithub Pagesに公開しているのだけど、最近<a target="_blank" rel="noopener" href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/">Github PagesカスタムドメインでもHTTPSをサポートしてくれるようになった</a>ので、<a href="../../2018/redirect-to-my-old-blog/">適当にリダイレクトかけていた</a>元の <a href="http://memolog.org">memolog.org</a> のドメインを設定することにした。</div>
+            <div><a href="/2018/custom-domain-in-github-pages.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-03-07T23:09:09.000Z"><span class="calendar-icon">📅</span><span>2018年3月8日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/book-mind-control.html">「マインド・コントロール」と「影響力の正体」を読んだ</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #dcdddf"><img src="/assets/images/federica-galli-449563-unsplash/federica-galli-449563-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="440" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/aiqKc07b5PA?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Federica Galli</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p><a target="_blank" rel="noopener" href="http://books.bunshun.jp/ud/book/num/9784166610747">マインド・コントロール</a>と<a target="_blank" rel="noopener" href="http://www.sbcr.jp/products/4797374025.html">影響力の正体</a>という本を読んだ。マインドコントロールとは、<a target="_blank" rel="noopener" href="https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%A4%E3%83%B3%E3%83%89%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB">Wikipedia</a>には「他人の思想や情報をコントロールし、個人が意思決定する際に、特定の結論へと誘導する技術を指す概念」と書いてある。「マインド・コントロール」の方は題名そのまんまマインドコントロールに扱った本であるけど、「影響力の正体」の方も「相手をYESという結論に導く技術」という意味でマインドコントロールを扱った本と言える。どちらの本も内容も人間の根本的な性質を利用したものでかなりやっかいな技術だなと思った。</div>
+            <div><a href="/2018/book-mind-control.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-02-04T07:35:42.000Z"><span class="calendar-icon">📅</span><span>2018年2月4日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/retrieve-json-from-require-method.html">JSONデータを読み込んで差し替える</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #4795ab"><img src="/assets/images/aaron-burden-286686/aaron-burden-286686.svg" alt="" role="presentation" loading="lazy" width="700" height="525" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/h7wpIMY3O3E?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Aaron Burden</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>Node.jsの中であれば単に<code>const config = require('config.json')</code>すれば良いのだけれど、フロントエンド側のJavaScriptではそうはいかない。XMLHttpRequestとか<a target="_blank" rel="noopener" href="https://developer.mozilla.org/ja/docs/Web/API/Fetch_API">Fetch API</a>を使うか、requireで書いたものをwebpackでbundleするとかしないといけない。他にもいろいろ方法はあると思うけど、まあとにかく一手間が必要。</p>
+<p>その読み出すJSONデータを環境ごとに変更したい場合はなおさら面倒で、Node.jsであればprocess.env.NODE_ENVなんかを使えばいいけど、フロントエンド側ではwebpackでバンドルするときの設定を変更するとか、uglifyで<code>DEBUG</code>みたいなglobal変数を入れておいて書き出すとかしつつ、異なるJSONデータをfetchするように実装しないといけない。いろいろ方法はあるから難しい問題ではないけど、面倒ではある。</div>
+            <div><a href="/2018/retrieve-json-from-require-method.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-02-03T03:05:36.000Z"><span class="calendar-icon">📅</span><span>2018年2月3日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/show-vertical-writing-with-css.html">縦書きで表示する</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #959177"><img src="/assets/images/dmitri-popov-441562/dmitri-popov-441562.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/IDF_awES6Zg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Dmitri Popov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><div class="writing-vertical"><p>最近になって<a target="_blank" rel="noopener" href="https://developer.mozilla.org/ja/docs/Web/CSS/writing-mode">writing-mode</a>を使うと文章の表示を簡単に縦書きにできるということを最近知った。ので、この記事では縦書きの表示を試している。以下の文章は文章量が長くなった時にどう表示されるのかを知りたくて入れているだけなので、内容的にほぼ意味はない（ないというほどでもないけど限りなく無に近いものではある）。なおインデックスページでは横書きである。</div>
+            <div><a href="/2018/show-vertical-writing-with-css.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2018-02-01T20:51:02.000Z"><span class="calendar-icon">📅</span><span>2018年2月2日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2018/how-to-learn.html">学習について考える</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #1b81a8"><img src="/assets/images/paul-gilmore-145802/paul-gilmore-145802.svg" alt="" role="presentation" loading="lazy" width="700" height="432" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/mqO0Rf-PUMs?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Paul Gilmore</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>最近学習系・自己啓発系の本をいくつか読んだのでそれを読んでいま思っていることをそのまま書いてみようと思う。「本に書いてあること」をまとめようとすると正確さが気になって時間もかかるし本に書いてあること以上のことは書きにくいし、本に書いてあることが適切に網羅されているかも気になってくる。だから、本に書いてあることの趣旨と変わってるかもしれないけど、そういったところを気にせず、本を読んで思ったことを記す。</p>
+<p>最初は「<a target="_blank" rel="noopener" href="https://www.sunmark.co.jp/detail.php?csid=3552-0">ブレインプログラミング</a>という本を読んだ。「なりたい自分」とか「やりたいこと」を具体的にイメージして「いつまでにこうなる」みたいに目標を決める。具体的な方法は「注目」していると自然と見つかるから、具体的な方法を考えて足を止めるよりも「こうなる」と決めて足を進めよう、みたいな本である。科学的なバックグラウンドとして<a target="_blank" rel="noopener" href="https://bsd.neuroinf.jp/wiki/%E8%84%B3%E5%B9%B9%E7%B6%B2%E6%A7%98%E4%BD%93%E8%B3%A6%E6%B4%BB%E7%B3%BB">RAS</a>を挙げているが、ここはよくわからない。アファメーションとか自己暗示とかそういったものの力を使う。やりたいことを書き出してみて、自分がどうありたいのかを見つめ直すというのは良いなと思った。</div>
+            <div><a href="/2018/how-to-learn.html">📖 続きを読む</a></div>
+          
+        </article>
+      
+      <footer class="pagination"><a class="extend prev" rel="prev" href="/page/6/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="page-number" href="/page/40/">40</a><a class="extend next" rel="next" href="/page/8/">Next</a></footer>
+    </main>
+    <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">私について</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>東京在住。TypeScript, Node.js, Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。万年英語勉強中</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            // link.classList.add('no-link-icon');
+            continue;
+          }
+
+          // link.classList.add('link-icon');
+          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    // navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

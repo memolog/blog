@@ -6,7 +6,7 @@
   <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2024-09-22T05:25:35.617Z</updated>
+  <updated>2024-09-22T06:12:42.681Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://memolog.org/2024/the-book-of-why.html"/>
     <id>https://memolog.org/2024/the-book-of-why.html</id>
     <published>2024-09-22T02:32:11.000Z</published>
-    <updated>2024-09-22T05:25:35.617Z</updated>
+    <updated>2024-09-22T06:12:42.681Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a</summary>
-        
-      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://amzn.to/3XQ5Zvv&quot;&gt;因果推論の科学&lt;/a&gt;を読んだので簡単に紹介。因果推論とは、原因と結果の関係を理解し、それを推論するための方法論。従来の統計学では「XとYの相関関係」を説明できても、実際に知りたいのは「XがYにどう影響を与えているか？」という因果関係だったりする。因果推論は、その点で画期的なアプローチを示している。</summary>
     
     
     
@@ -57,7 +51,7 @@
     <link href="https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html"/>
     <id>https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html</id>
     <published>2022-11-07T08:30:00.000Z</published>
-    <updated>2024-02-20T21:19:33.340Z</updated>
+    <updated>2024-09-22T06:20:50.708Z</updated>
     
     
     <summary type="html">&lt;p&gt;（そんなことするかどうかは置いておいて）たとえば&lt;a href=&quot;https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo&quot;&gt;docker-node-npm-scripti-permission-issue-demo&lt;/a&gt;を&lt;a href=&quot;https://github.co.jp/features/codespaces&quot;&gt;Github codespaces&lt;/a&gt;上で起動して、&lt;code&gt;npm ci&lt;/code&gt;して、&lt;code&gt;npm run build&lt;/code&gt;を実行すると、&lt;code&gt;permission denied, scandir &#39;/root/.npm/_logs&#39;&lt;/code&gt; というエラーのWARNが発生する。</summary>

@@ -23,7 +23,7 @@
 .header_component_global {
   text-align: center;
   margin: 1em auto;
-  max-width: 700px;
+  max-width: 800px;
 }
 
 .header__title {
@@ -78,7 +78,7 @@
 }
 
 .container {
-  width: 700px;
+  width: 800px;
   margin: 0 auto 4em;
   padding: 0 15px;
   border-radius: 3px;
@@ -244,7 +244,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .featured__image,
   .content__image,
   .content pre[class*="language-"],
@@ -253,7 +253,7 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .featured__image,
   .content__image,
   .content pre[class*="language-"] {
@@ -290,7 +290,7 @@
   font-size: 1em;
   margin: 1.5em 0;
   column-count: 2;
-  max-width: 700px;
+  max-width: 800px;
   width: 102%;
   overflow: auto;
   height: 800px;
@@ -392,7 +392,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://memolog.org/assets/images/pavan-prasad-nw1slFnKRYE-unsplash/pavan-prasad-nw1slFnKRYE-unsplash.jpg">
 <meta property="article:published_time" content="2022-11-07T08:30:00.000Z">
-<meta property="article:modified_time" content="2024-02-20T21:19:33.340Z">
+<meta property="article:modified_time" content="2024-09-22T06:20:50.708Z">
 <meta property="article:author" content="Yutaka Yamaguchi">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://memolog.org/assets/images/pavan-prasad-nw1slFnKRYE-unsplash/pavan-prasad-nw1slFnKRYE-unsplash.jpg">
@@ -415,7 +415,7 @@
         ],
       
       "datePublished": "1667809800000",
-      "dateModified": "1708463973340",
+      "dateModified": "1726986050708",
       "author": {
         "@type": "Person",
         "name": "Yutaka Yamaguchi"
@@ -458,7 +458,7 @@
   <div class="featured__image">
     
       
-        <div style="background-color: #ae994d"><img src="/assets/images/pavan-prasad-nw1slFnKRYE-unsplash/pavan-prasad-nw1slFnKRYE-unsplash.svg" alt="" role="presentation" loading="lazy" width="700" height="464" /></div>
+        <div style="background-color: #ae994d"><img src="/assets/images/pavan-prasad-nw1slFnKRYE-unsplash/pavan-prasad-nw1slFnKRYE-unsplash.svg" alt="" role="presentation" loading="lazy" width="800" height="531" /></div>
       
     
   </div>
@@ -477,9 +477,42 @@
 <p>原因は<code>npm run build</code>の中身が <code>npm run tsc</code> になっているため。rootユーザーで別のユーザーが所有権を持つディレクトリで実行すると問題になる。</p>
 <p>解決方法はDocker containerを実行するユーザーを<code>node</code>に変更するとか、<a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v6/using-npm/config#cache">npm config</a>で、<code>npm config set cache /tmp</code>と設定するとか（<code>export npm_config_cache=/tmp</code>でもいける雰囲気）、所有権を調整すると解決する。解決方法は他にもいろいろあると思う。</p>
 <p>再現手順は<a target="_blank" rel="noopener" href="https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo">docker-node-npm-scripti-permission-issue-demo</a>のcodespacesのVS codeの中でターミナルを開いて、以下のような感じでDocker containerを起動して、<code>npm ci</code>と<code>npm run build</code>を実行するとエラーを再現することができる。動作環境はNode.js 16.18.0でnpmは8.19.2。たぶんNode.js 18.xでも発生する（npmのバージョンは変わらないので）。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker build -f Dockerfile -t demo .</span><br><span class="line">docker run -it --<span class="built_in">rm</span> -v `<span class="built_in">pwd</span>`:/current -w /current demo bash</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@71524f7f2bea:/current<span class="comment"># npm ci</span></span><br><span class="line">... (snip) ...</span><br><span class="line">added 1 package, and audited 2 packages <span class="keyword">in</span> 2s</span><br><span class="line">found 0 vulnerabilities</span><br><span class="line">... (snip) ...</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">root@71524f7f2bea:/current<span class="comment"># npm run build</span></span><br><span class="line"></span><br><span class="line">&gt; docker-node-npm-scripti-permission-issue-demo@1.0.0 build</span><br><span class="line">&gt; npm run tsc</span><br><span class="line"></span><br><span class="line">npm WARN logfile Error: EACCES: permission denied, scandir <span class="string">&#x27;/root/.npm/_logs&#x27;</span></span><br><span class="line">npm WARN logfile  error cleaning <span class="built_in">log</span> files [Error: EACCES: permission denied, scandir <span class="string">&#x27;/root/.npm/_logs&#x27;</span>] &#123;</span><br><span class="line">npm WARN logfile   errno: -13,</span><br><span class="line">npm WARN logfile   code: <span class="string">&#x27;EACCES&#x27;</span>,</span><br><span class="line">npm WARN logfile   syscall: <span class="string">&#x27;scandir&#x27;</span>,</span><br><span class="line">npm WARN logfile   path: <span class="string">&#x27;/root/.npm/_logs&#x27;</span></span><br><span class="line">npm WARN logfile &#125;</span><br><span class="line"></span><br><span class="line">&gt; docker-node-npm-scripti-permission-issue-demo@1.0.0 tsc</span><br><span class="line">&gt; tsc</span><br><span class="line"></span><br><span class="line">npm ERR! code EACCES</span><br><span class="line">npm ERR! syscall <span class="built_in">mkdir</span></span><br><span class="line">npm ERR! path /root/.npm/_cacache/tmp</span><br><span class="line">npm ERR! errno -13</span><br><span class="line">npm ERR!</span><br><span class="line">npm ERR! Your cache folder contains root-owned files, due to a bug <span class="keyword">in</span></span><br><span class="line">npm ERR! previous versions of npm <span class="built_in">which</span> has since been addressed.</span><br><span class="line">npm ERR!</span><br><span class="line">npm ERR! To permanently fix this problem, please run:</span><br><span class="line">npm ERR!   sudo <span class="built_in">chown</span> -R 1000:0 <span class="string">&quot;/root/.npm&quot;</span></span><br><span class="line"></span><br><span class="line">npm ERR! Log files were not written due to an error writing to the directory: /root/.npm/_logs</span><br><span class="line">npm ERR! You can rerun the <span class="built_in">command</span> with `--loglevel=verbose` to see the logs <span class="keyword">in</span> your terminal</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> build <span class="token parameter variable">-f</span> Dockerfile <span class="token parameter variable">-t</span> demo <span class="token builtin class-name">.</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">--rm</span> <span class="token parameter variable">-v</span> <span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span>:/current <span class="token parameter variable">-w</span> /current demo <span class="token function">bash</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">root@71524f7f2bea:/current<span class="token comment"># npm ci</span>
+<span class="token punctuation">..</span>. <span class="token punctuation">(</span>snip<span class="token punctuation">)</span> <span class="token punctuation">..</span>.
+added <span class="token number">1</span> package, and audited <span class="token number">2</span> packages <span class="token keyword">in</span> 2s
+found <span class="token number">0</span> vulnerabilities
+<span class="token punctuation">..</span>. <span class="token punctuation">(</span>snip<span class="token punctuation">)</span> <span class="token punctuation">..</span>.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">root@71524f7f2bea:/current<span class="token comment"># npm run build</span>
+
+<span class="token operator">></span> docker-node-npm-scripti-permission-issue-demo@1.0.0 build
+<span class="token operator">></span> <span class="token function">npm</span> run tsc
+
+<span class="token function">npm</span> WARN logfile Error: EACCES: permission denied, scandir <span class="token string">'/root/.npm/_logs'</span>
+<span class="token function">npm</span> WARN logfile  error cleaning log files <span class="token punctuation">[</span>Error: EACCES: permission denied, scandir <span class="token string">'/root/.npm/_logs'</span><span class="token punctuation">]</span> <span class="token punctuation">&#123;</span>
+<span class="token function">npm</span> WARN logfile   errno: -13,
+<span class="token function">npm</span> WARN logfile   code: <span class="token string">'EACCES'</span>,
+<span class="token function">npm</span> WARN logfile   syscall: <span class="token string">'scandir'</span>,
+<span class="token function">npm</span> WARN logfile   path: <span class="token string">'/root/.npm/_logs'</span>
+<span class="token function">npm</span> WARN logfile <span class="token punctuation">&#125;</span>
+
+<span class="token operator">></span> docker-node-npm-scripti-permission-issue-demo@1.0.0 tsc
+<span class="token operator">></span> tsc
+
+<span class="token function">npm</span> ERR<span class="token operator">!</span> code EACCES
+<span class="token function">npm</span> ERR<span class="token operator">!</span> syscall <span class="token function">mkdir</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> path /root/.npm/_cacache/tmp
+<span class="token function">npm</span> ERR<span class="token operator">!</span> errno <span class="token parameter variable">-13</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> Your cache folder contains root-owned files, due to a bug <span class="token keyword">in</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> previous versions of <span class="token function">npm</span> <span class="token function">which</span> has since been addressed.
+<span class="token function">npm</span> ERR<span class="token operator">!</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> To permanently fix this problem, please run:
+<span class="token function">npm</span> ERR<span class="token operator">!</span>   <span class="token function">sudo</span> <span class="token function">chown</span> <span class="token parameter variable">-R</span> <span class="token number">1000</span>:0 <span class="token string">"/root/.npm"</span>
+
+<span class="token function">npm</span> ERR<span class="token operator">!</span> Log files were not written due to an error writing to the directory: /root/.npm/_logs
+<span class="token function">npm</span> ERR<span class="token operator">!</span> You can rerun the <span class="token builtin class-name">command</span> with <span class="token variable"><span class="token variable">`</span><span class="token parameter variable">--loglevel</span><span class="token operator">=</span>verbose<span class="token variable">`</span></span> to see the logs <span class="token keyword">in</span> your terminal<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>以下は詳細。</p>
 <p>npmのscriptは<a target="_blank" rel="noopener" href="https://github.com/npm/run-script">@npmcli/run-script</a>が実行スクリプトで<code>/usr/local/lib/node_modules/npm/node_modules/@npmcli</code>にある。これのバージョンは4.2.1なので、<a target="_blank" rel="noopener" href="https://github.com/npm/run-script/blob/v4.2.1/lib/run-script.js">run-script.js</a>が実際の処理になる。これを<a target="_blank" rel="noopener" href="https://github.com/npm/run-script/blob/v4.2.1/lib/run-script-pkg.js">run-script-pkg.js</a>、<a target="_blank" rel="noopener" href="https://github.com/npm/promise-spawn">@npmcli/promise-spawn</a>と辿っていくと、<a target="_blank" rel="noopener" href="https://github.com/npm/promise-spawn/blob/v3.0.0/lib/index.js">promise-spawn/lib/index.js</a>に到達する。</p>
 <p>ここで実行している<a target="_blank" rel="noopener" href="https://github.com/npm/infer-owner">infer-owner</a>は、スクリプトを実行するディレクトリの所有権を推測して、ディレクトリのuid、gidを返してくれる。run-script.jsではこれを利用して<a target="_blank" rel="noopener" href="https://nodejs.org/docs/latest-v16.x/api/child_process.html#child_processspawncommand-args-options">child_process.spawn</a>をuid, gid付きで実行する。</p>

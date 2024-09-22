@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html</loc>
+    
+    <lastmod>2024-09-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://memolog.org/2024/the-book-of-why.html</loc>
     
     <lastmod>2024-09-22</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html</loc>
-    
-    <lastmod>2024-02-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html</loc>
     
     <lastmod>2024-02-20</lastmod>
     

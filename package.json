@@ -7,7 +7,7 @@
   },
   "scripts": {
     "pb": "primitive_bulk -i ~/Downloads/$DIRNAME.jpg -d ./source/assets/images/$DIRNAME --output $DIRNAME --format jpg,svg -m $MODE && find ./source/assets/images/$DIRNAME -name '*.svg' -o -name '*.jpg' | xargs open -a 'ImageOptim'",
-    "prepb": "primitive_bulk -i ~/Downloads/$DIRNAME.jpg"
+    "pre-pb": "primitive_bulk -i ~/Downloads/$DIRNAME.jpg"
   },
   "devDependencies": {
     "hexo": "^7.3.0",

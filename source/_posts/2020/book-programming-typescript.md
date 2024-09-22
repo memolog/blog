@@ -6,7 +6,7 @@ featured:
   authorLink: https://unsplash.com/@bulkan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2020-11-14 10:44:35
 ---
-<a href="https://www.amazon.co.jp/gp/product/4873119049?ie=UTF8&linkCode=li2&tag=yutakayamaguc-22&linkId=a1261b91949f0c41a7f34339beaba627&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4873119049&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=yutakayamaguc-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=yutakayamaguc-22&language=ja_JP&l=li2&o=9&a=4873119049" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />今回は[プログラミングTypeScript](https://www.amazon.co.jp/gp/product/4873119049/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=yutakayamaguc-22&linkId=3d63565fd35c0d79ec9996440384313f&language=ja_JP)を一通り読んだのでざっくり紹介。TypeScriptはたぶん3年くらい使っていて、特に不自由なく使えるのだけど、けっこう知らないこともあった。<!-- more -->
+今回は[プログラミングTypeScript](https://www.amazon.co.jp/gp/product/4873119049/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=yutakayamaguc-22&linkId=3d63565fd35c0d79ec9996440384313f&language=ja_JP)を一通り読んだのでざっくり紹介。TypeScriptはたぶん3年くらい使っていて、特に不自由なく使えるのだけど、けっこう知らないこともあった。<!-- more -->
 
 章立ては以下のような感じ。
 

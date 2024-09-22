@@ -9,11 +9,14 @@
     <% } %>
   </div>
   <% if (featured.author) { %>
-    <% if (featured.authorLink.match(/unsplash/)) { %>
+    <% if (featured.authorLink?.match(/unsplash/)) { %>
       <div class="featured__credit"><% if (!featured.original) { %>Original <% } %>Photo by <a href="<%= featured.authorLink %>" target="_blank" rel="noopener" tabindex="-1"><%= featured.author %></a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
     <% } %>
-    <% if (featured.authorLink.match(/artvee/)) { %>
+    <% if (featured.authorLink?.match(/artvee/)) { %>
       <div class="featured__credit"><% if (!featured.original) { %>Original <% } %>Photo from <a href="<%= featured.authorLink %>" target="_blank" rel="noopener" tabindex="-1"><%= featured.author %></a> on <a href="https://artvee.com/" target="_blank" rel="noopener" tabindex="-1">Artvee</a></div>
+    <% } %>
+    <% if (featured.author.match(/chatGPT/)) { %>
+      <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a> and <a href="https://github.com/fogleman/primitive" target="_blank">primitive</a></div>
     <% } %>
   <% } %>
 </div>

@@ -42,19 +42,19 @@ function render(data) {
     }
   }
 
-  width = width || 700;
-  height = height || 335;
+  width = width || 800;
+  height = height || 382;
   color = color || '#f5f2f0';
   alt = alt || '';
 
   const wRatio = height / width;
   const hRatio = width  / height;
 
-  if (width > 700) {
-    width = 700;
+  if (width > 800) {
+    width = 800;
     height = Math.floor(width * wRatio);
-    if (height < 335) {
-      height = 335;
+    if (height < 382) {
+      height = 382;
       width = Math.floor(height * hRatio);
     }
   }

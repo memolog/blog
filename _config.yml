@@ -43,11 +43,6 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
-  enable: false
-  line_number: true
-  auto_detect: false
-  tab_replace:
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -85,6 +80,9 @@ theme: little-code-bricks
 deploy:
   type: git
   repo: git@github.com:memolog/blog.git
+  branch: gh-pages
+  email: yyamaguchi@sixapart.com
+  token: $GITHUB_TOKEN
 
 feed:
   type: atom
@@ -95,5 +93,9 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
 
+syntax_highlighter: prismjs
 prismjs:
-    enable: true
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""

@@ -6,7 +6,7 @@
   <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2024-09-22T06:12:42.681Z</updated>
+  <updated>2024-09-29T12:51:05.222Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本: 武家政権成立史 - 気候変動と歴史学</title>
+    <link href="https://memolog.org/2024/origin-of-samurai-goverment.html"/>
+    <id>https://memolog.org/2024/origin-of-samurai-goverment.html</id>
+    <published>2024-09-29T10:00:47.000Z</published>
+    <updated>2024-09-29T12:51:05.222Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.yoshikawa-k.co.jp/book/b120824.html&quot;&gt;武家政権成立史&lt;/a&gt;では、12世紀に始まった気候の冷涼化が、武家政権の成立にどのような影響を与えたかを探究している。本書では、気候冷涼化による作物の不作が、飢饉を頻発、封戸収入の減少を引き起こし、収入を確保するために荘園が発展し、それにより国司による徴税と荘園権益の衝突が強まり、武力を必要とする時代を生み出していったしている。歴史とは、人間の意図・行動が歴史を作り、動かすというイメージが強いけれど、気候変動という人間には抗いがたい要因が社会的混乱を引き起こし、歴史を形作るという視点は新鮮で説得力があった。</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>本：因果推論の科学</title>
@@ -296,27 +311,6 @@
     
     
     <summary type="html">&lt;p&gt;時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#min-size-auto&quot;&gt;4.5. Automatic Minimum Size of Flex Items&lt;/a&gt;、autoキーワードで自動的に決定される最小値について。</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Collapsed Items</title>
-    <link href="https://memolog.org/2020/flex-collpased-items.html"/>
-    <id>https://memolog.org/2020/flex-collpased-items.html</id>
-    <published>2020-04-12T10:41:53.000Z</published>
-    <updated>2024-02-20T21:19:33.338Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#visibility-collapse&quot;&gt;4.4. Collapsed Items&lt;/a&gt;について&lt;!-- more </summary>
-        
-      
     
     
     

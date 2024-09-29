@@ -1,7 +1,8 @@
-const CACHE_MAIN = 'main1726986050708';
+const CACHE_MAIN = 'main1727614265222';
 const precacheList = [
   
   '/',
+  '/2024/origin-of-samurai-goverment.html',
   '/2022/npm-script-warns-permission-errors-in-the-cache-directory.html',
   '/2024/the-book-of-why.html',
   '/2020/book-programming-typescript.html',
@@ -11,7 +12,7 @@ const precacheList = [
   '/2020/fragmenting-flex-layout.html',
   '/2020/logical-assignment-operators.html',
   '/2020/got-100-lighthouse-score-in-all-categories-on-mobile.html',
-  '/2020/flex-layout-algorithm.html',
+  '/assets/images/generated-image-of-origin-of-samurai/generated-image-of-origin-of-samurai.svg',
   '/assets/images/pavan-prasad-nw1slFnKRYE-unsplash/pavan-prasad-nw1slFnKRYE-unsplash.svg',
   '/assets/images/generated-image-of-the-book-of-why/generated-image-of-the-book-of-why.svg',
   '/assets/images/bulkan-evcimen-LZg_PuyFPGo-unsplash/bulkan-evcimen-LZg_PuyFPGo-unsplash.svg',
@@ -21,7 +22,6 @@ const precacheList = [
   '/assets/images/tomas-malik-zlSzh2FP7LY-unsplash/tomas-malik-zlSzh2FP7LY-unsplash.svg',
   '/assets/images/cath-smith-PF5_cqOQFT4-unsplash/cath-smith-PF5_cqOQFT4-unsplash.svg',
   '/assets/images/ben-koorengevel-tpIWpoW3_Wc-unsplash/ben-koorengevel-tpIWpoW3_Wc-unsplash.svg',
-  '/assets/images/sarah-madaio-fpZHGVBzlYk-unsplash/sarah-madaio-fpZHGVBzlYk-unsplash.svg',
   '/css/prism.css',
   '/css/global_async.css',
 ];

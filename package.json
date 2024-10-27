@@ -6,8 +6,8 @@
     "version": "7.3.0"
   },
   "scripts": {
-    "pb": "primitive_bulk -i ~/Downloads/$DIRNAME.jpg -d ./source/assets/images/$DIRNAME --output $DIRNAME --format jpg,svg -m $MODE && find ./source/assets/images/$DIRNAME -name '*.svg' -o -name '*.jpg' | xargs open -a 'ImageOptim'",
-    "pre-pb": "primitive_bulk -i ~/Downloads/$DIRNAME.jpg"
+    "pb": "NUMBER=${NUMBER:-300} primitive_bulk -i ~/Downloads/$DIRNAME.jpg -d ./source/assets/images/$DIRNAME --output $DIRNAME --format jpg,svg -m $MODE -n $NUMBER && find ./source/assets/images/$DIRNAME -name '*.svg' -o -name '*.jpg' | xargs open -a 'ImageOptim'",
+    "pre-pb": "NUMBER=${NUMBER:-300} primitive_bulk -i ~/Downloads/$DIRNAME.jpg -n $NUMBER"
   },
   "devDependencies": {
     "hexo": "^7.3.0",

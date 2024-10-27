@@ -393,61 +393,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2013/11/ios_software_keyboard_with_input_types.html"
+          "url": "https://memolog.org/2013/12/cordova_project_failed_on_archiving.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2013/11/grunt-plistbuddy.html"
+          "url": "https://memolog.org/2013/11/ios_software_keyboard_with_input_types.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2013/11/jquery_1101ie11.html"
+          "url": "https://memolog.org/2013/11/grunt-plistbuddy.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2013/11/brew_update_error.html"
+          "url": "https://memolog.org/2013/11/jquery_1101ie11.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2013/10/ie8_dontenum_bug.html"
+          "url": "https://memolog.org/2013/11/brew_update_error.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2013/10/date_parse_and_timzone.html"
+          "url": "https://memolog.org/2013/10/ie8_dontenum_bug.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2013/09/ios7safariremote_debugging.html"
+          "url": "https://memolog.org/2013/10/date_parse_and_timzone.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2013/09/css_vertical_alignment.html"
+          "url": "https://memolog.org/2013/09/ios7safariremote_debugging.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2013/09/try_typesquare.html"
+          "url": "https://memolog.org/2013/09/css_vertical_alignment.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2013/09/test_content_security_policy_with_grunt-contrib-connect.html"
+          "url": "https://memolog.org/2013/09/try_typesquare.html"
         }
         
       ]
@@ -467,6 +467,26 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-12-04T18:30:00.000Z"><span class="calendar-icon">📅</span><span>2013年12月5日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/12/cordova_project_failed_on_archiving.html">Cordovaプロジェクトをアーカイブしたときにエラー</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>Cordova/PhoneGapで作成したXcodeのプロジェクトをアーカイブしようとしたときに下記のようなエラーが発生するようになりまして。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Stripping /Users/me/Library/Developer/Xcode/DerivedData/AppName-fiikgzftwgndirfiyeacmuhhgnft/Build/Intermediates/ArchiveIntermediates/AppName/IntermediateBuildFilesPath/UninstalledProducts/libCordova.a</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">    cd /Users/me/path/to/AppName/platforms/ios/CordovaLib</span><br><span class="line">    setenv PATH &quot;/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin&quot;</span><br><span class="line">    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -S /Users/me/Library/Developer/Xcode/DerivedData/AppName-fiikgzftwgndirfiyeacmuhhgnft/Build/Intermediates/ArchiveIntermediates/AppName/IntermediateBuildFilesPath/UninstalledProducts/libCordova.a</span><br><span class="line"></span><br><span class="line">/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip: can&#x27;t open temporary file: (null) (Bad address)</span><br><span class="line">Command /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip failed with exit code 1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>どうもCordovaLibのStrip Linked Productのプロセスで、Strippingするときにtemporary fileを開くところで失敗しているみたい。なので、CordovaLibの「Strip Linked Product」を「No」に設定すると回避できる。</p>
+<p><img src="http://farm6.staticflickr.com/5546/11203619224_9584d6cf87_o.png" alt=""></p>
+<p>根本的にはtmpディレクトリにアクセスできないのが原因のようなので、/private/tmpのディレクトリのパーミッションを変更すればエラーが発生しなくなる。tmpディレクトリのパーミションを変更した記憶はないのだけど…</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /private</span><br><span class="line">sudo <span class="built_in">chmod</span> 777 tmp</span><br><span class="line">sudo <span class="built_in">chmod</span> +t tmp</span><br></pre></td></tr></table></figure>
+<p>ほかの人や他のMacではこのパーミッションであったので、設定自体は問題ないと思いますけど、変えた記憶はないんだよなあ。</p>
+<p>というメモ。</p>
+</div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -596,20 +616,6 @@ sudo git stash clear</p>
           
             <div class="content"><p><a target="_blank" rel="noopener" href="http://typesquare.com/">TypeSquare</a>で0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。</p></div>
             <div><a href="/2013/09/try_typesquare.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2013-09-09T12:00:00.000Z"><span class="calendar-icon">📅</span><span>2013年9月9日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2013/09/test_content_security_policy_with_grunt-contrib-connect.html">grunt で Content Security Policy をテストする</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>Content Security Policy (CSP)をgrunt-contrib-connectで設定するのにはどうしたら良いかという話。</p>
-<p>やり方としては、<a href="/blog//2013/07/grunt-contrib-connect_with_cors/">grunt-contrib-connect タスクで CORS を有効にする - メモログ</a>と同様、middlewareのオプションに追加する。</p></div>
-            <div><a href="/2013/09/test_content_security_policy_with_grunt-contrib-connect.html">📖 続きを読む</a></div>
           
         </article>
       

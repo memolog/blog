@@ -6,7 +6,7 @@
   <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2024-10-06T23:44:01.590Z</updated>
+  <updated>2024-10-27T23:19:27.286Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>本: 動物心理学入門</title>
+    <title>本：長篠合戦</title>
+    <link href="https://memolog.org/2024/battle-of-nagashino.html"/>
+    <id>https://memolog.org/2024/battle-of-nagashino.html</id>
+    <published>2024-10-27T23:20:00.000Z</published>
+    <updated>2024-10-27T23:19:27.286Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>本：動物心理学入門</title>
     <link href="https://memolog.org/2024/introduction-to-animal-psychology.html"/>
     <id>https://memolog.org/2024/introduction-to-animal-psychology.html</id>
     <published>2024-10-06T08:00:34.000Z</published>
-    <updated>2024-10-06T23:44:01.590Z</updated>
+    <updated>2024-10-27T23:18:59.619Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.yuhikaku.co.jp/books/detail/9784641174887&quot;&gt;動物心理学入門&lt;/a&gt;という本を読んだ。本書によると、「動物心理学」とは「動物を対象とした研究を通して、ヒトの『ココロ』を理解しようとする学問領域」である（p.1 はじめに）。人と動物の異なる点を比較し、共通点を類推することで、ヒトの心理をより深く理解できるのだろうと感じた。</summary>
@@ -32,11 +53,11 @@
   </entry>
   
   <entry>
-    <title>本: 武家政権成立史 - 気候変動と歴史学</title>
+    <title>本：武家政権成立史 - 気候変動と歴史学</title>
     <link href="https://memolog.org/2024/origin-of-samurai-goverment.html"/>
     <id>https://memolog.org/2024/origin-of-samurai-goverment.html</id>
     <published>2024-09-29T10:00:47.000Z</published>
-    <updated>2024-10-06T11:32:55.702Z</updated>
+    <updated>2024-10-27T23:18:52.671Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.yoshikawa-k.co.jp/book/b120824.html&quot;&gt;武家政権成立史&lt;/a&gt;では、12世紀に始まった気候の冷涼化が、武家政権の成立にどのような影響を与えたかを探究している。本書では、気候冷涼化による作物の不作が、飢饉を頻発、封戸収入の減少を引き起こし、収入を確保するために荘園が発展し、それにより国司による徴税と荘園権益の衝突が強まり、武力を必要とする時代を生み出していったしている。歴史とは、人間の意図・行動が歴史を作り、動かすというイメージが強いけれど、気候変動という人間には抗いがたい要因が社会的混乱を引き起こし、歴史を形作るという視点は新鮮で説得力があった。</summary>
@@ -296,21 +317,6 @@
     
     
     <summary type="html">&lt;p&gt;前回の&lt;a href=&quot;https://memolog.org/2020/flex-flow-direction.html&quot;&gt;Flex Flow Direction: the flex-direction property&lt;/a&gt;から引き続き。&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-wrap-property&quot;&gt;5.2. Flex Line Wrapping: the flex-wrap property&lt;/a&gt;について</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Flex Flow Direction: the flex-direction property</title>
-    <link href="https://memolog.org/2020/flex-flow-direction.html"/>
-    <id>https://memolog.org/2020/flex-flow-direction.html</id>
-    <published>2020-05-20T15:00:00.000Z</published>
-    <updated>2024-02-20T21:19:33.338Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flow-order&quot;&gt;5. Ordering and Orientation&lt;/a&gt;の冒頭部分と、&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-direction-property&quot;&gt;5.1. Flex Flow Direction: the flex-direction property&lt;/a&gt;について。</summary>
     
     
     

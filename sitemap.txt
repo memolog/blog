@@ -1,5 +1,5 @@
-https://memolog.org/2024/beyond-weird.html
 https://memolog.org/2024/battle-of-nagashino.html
+https://memolog.org/2024/beyond-weird.html
 https://memolog.org/2024/introduction-to-animal-psychology.html
 https://memolog.org/2024/origin-of-samurai-goverment.html
 https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html

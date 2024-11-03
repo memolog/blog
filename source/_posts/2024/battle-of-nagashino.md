@@ -1,7 +1,7 @@
 ---
 title: 本：長篠合戦
 featured:
-  image: generated-image-of-battle-of-nagashino
+  image: generated-image-of-battle-of-nagashino-2
   author: chatGPT
   authorLink: null
 date: 2024-10-28 08:20:00

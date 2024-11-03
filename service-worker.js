@@ -1,4 +1,4 @@
-const CACHE_MAIN = 'main1730673987457';
+const CACHE_MAIN = 'main1730674185733';
 const precacheList = [
   
   '/',
@@ -12,7 +12,7 @@ const precacheList = [
   '/2022/webpack-5-compiles-code-with-es2015.html',
   '/2022/Unexpected-reserved-word-interface-on-jest.html',
   '/2022/the-two-ways-to-use-autocomplete-attribute.html',
-  '/assets/images/generated-image-of-battle-of-nagashino/generated-image-of-battle-of-nagashino.svg',
+  '/assets/images/generated-image-of-battle-of-nagashino-2/generated-image-of-battle-of-nagashino-2.svg',
   '/assets/images/generated-image-of-beyond-weird/generated-image-of-beyond-weird.svg',
   '/assets/images/generated-image-of-introduction-animal-psychology/generated-image-of-introduction-animal-psychology.svg',
   '/assets/images/generated-image-of-origin-of-samurai/generated-image-of-origin-of-samurai.svg',

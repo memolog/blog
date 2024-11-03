@@ -6,7 +6,7 @@
   <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2024-10-27T23:19:27.286Z</updated>
+  <updated>2024-11-03T00:25:50.620Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>本：量子力学は本当は量子の話ではない</title>
+    <link href="https://memolog.org/2024/beyond-weird.html"/>
+    <id>https://memolog.org/2024/beyond-weird.html</id>
+    <published>2024-11-03T00:00:00.000Z</published>
+    <updated>2024-11-03T00:25:50.620Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;「&lt;a href=&quot;https://www.kagakudojin.co.jp/book/b581820.html&quot;&gt;量子力学は本当は量子の話ではない&lt;/a&gt;」を読んだ。量子論が言う「粒子でもあり波でもある」という二重性や、「猫が死んでいるとも生きているとも言える（測定した瞬間に決定する）」といった重ね合わせ、量子がもつれた物体同士が瞬時に影響を与え合うといった奇妙な現象は、量子世界をイメージするための物語がもたらしたもので、量子力学の理論そのものが持つ本質ではないらしい。微粒子の性質・状態としてイメージしようとするから奇妙に見えるだけで、量子論は「情報の取得方法とその因果的影響」を扱う理論と捉えたほうが、筋が通る、というのが本書の内容。それが量子論の見方として正しいのかどうか、そもそも本書の内容をきちんと理解できてるかどうかわからないけど、そんな気がするかもしれないししないかもしれない（二重性）といった感想を持った。</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>本：長篠合戦</title>
     <link href="https://memolog.org/2024/battle-of-nagashino.html"/>
     <id>https://memolog.org/2024/battle-of-nagashino.html</id>
     <published>2024-10-27T23:20:00.000Z</published>
-    <updated>2024-10-27T23:19:27.286Z</updated>
+    <updated>2024-11-02T20:58:25.389Z</updated>
     
     
       
@@ -302,21 +317,6 @@
     
     
     <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-flow-property&quot;&gt;5.3. Flex Direction and Wrap: the flex-flow shorthand&lt;/a&gt;について。flex-flowは&lt;code&gt;flex-direction&lt;/code&gt;と&lt;code&gt;flex-wrap&lt;/code&gt;をまとめて設定できる。</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Flex Line Wrapping: the flex-wrap property</title>
-    <link href="https://memolog.org/2020/flex-wrap-property.html"/>
-    <id>https://memolog.org/2020/flex-wrap-property.html</id>
-    <published>2020-05-23T00:00:00.000Z</published>
-    <updated>2024-02-20T21:19:33.339Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;前回の&lt;a href=&quot;https://memolog.org/2020/flex-flow-direction.html&quot;&gt;Flex Flow Direction: the flex-direction property&lt;/a&gt;から引き続き。&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-wrap-property&quot;&gt;5.2. Flex Line Wrapping: the flex-wrap property&lt;/a&gt;について</summary>
     
     
     

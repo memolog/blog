@@ -6,7 +6,7 @@
   <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2024-11-03T00:25:50.620Z</updated>
+  <updated>2024-11-05T23:40:55.801Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本：エブリシング・バブル</title>
+    <link href="https://memolog.org/2024/after-everything-bubble.html"/>
+    <id>https://memolog.org/2024/after-everything-bubble.html</id>
+    <published>2024-11-05T21:33:16.000Z</published>
+    <updated>2024-11-05T23:40:55.801Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://presidentstore.jp/category/BOOKS/004053.html&quot;&gt;エブリシング・バブル 終わりと始まり&lt;/a&gt;と&lt;a href=&quot;https://bookclub.kodansha.co.jp/product?item=0000395731&quot;&gt;「エブリシング・バブル」リスクの深層&lt;/a&gt;を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>本：量子力学は本当は量子の話ではない</title>
@@ -302,21 +317,6 @@
     
     
     <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#order-property&quot;&gt;5.4. Display Order: the order property&lt;/a&gt;について。</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Flex Direction and Wrap: the flex-flow shorthand</title>
-    <link href="https://memolog.org/2020/flex-flow-shorthand.html"/>
-    <id>https://memolog.org/2020/flex-flow-shorthand.html</id>
-    <published>2020-05-23T15:00:00.000Z</published>
-    <updated>2024-02-20T21:19:33.338Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-flow-property&quot;&gt;5.3. Flex Direction and Wrap: the flex-flow shorthand&lt;/a&gt;について。flex-flowは&lt;code&gt;flex-direction&lt;/code&gt;と&lt;code&gt;flex-wrap&lt;/code&gt;をまとめて設定できる。</summary>
     
     
     

@@ -393,61 +393,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2015/08/encrypt-with-nodejs-and-then-decrypt-it-with-cryptoswift.html"
+          "url": "https://memolog.org/2016/01/view_controller_lifecycle.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2015/08/firefox_40_csp.html"
+          "url": "https://memolog.org/2015/08/encrypt-with-nodejs-and-then-decrypt-it-with-cryptoswift.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2015/08/try-cryptojs.html"
+          "url": "https://memolog.org/2015/08/firefox_40_csp.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2015/08/encrypt-with-cryptswift-and-then-decrypt-it-with-nodejs.html"
+          "url": "https://memolog.org/2015/08/try-cryptojs.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2014/08/convert_indexof_result_with_bitwise_operators.html"
+          "url": "https://memolog.org/2015/08/encrypt-with-cryptswift-and-then-decrypt-it-with-nodejs.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2014/08/angular_lightbox_and_right_click_with_firefox.html"
+          "url": "https://memolog.org/2014/08/convert_indexof_result_with_bitwise_operators.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2014/06/passing_by_value_or_reference_in_javascript.html"
+          "url": "https://memolog.org/2014/08/angular_lightbox_and_right_click_with_firefox.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2014/03/ngbindhtml_and_surrogate_pair.html"
+          "url": "https://memolog.org/2014/06/passing_by_value_or_reference_in_javascript.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2013/12/intrinsic_value_of_blog.html"
+          "url": "https://memolog.org/2014/03/ngbindhtml_and_surrogate_pair.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2013/12/appicon40x40_and_appicon60x60_are_not_found.html"
+          "url": "https://memolog.org/2013/12/intrinsic_value_of_blog.html"
         }
         
       ]
@@ -467,6 +467,20 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2016-01-11T13:15:00.000Z"><span class="calendar-icon">📅</span><span>2016年1月11日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2016/01/view_controller_lifecycle.html">View Controller Lifecycle</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>viewDidLoadとviewDidAppearの使い方についてのメモ（ほぼ公式ドキュメントのコピペ）。引用中の太字装飾は私。</p>
+<p><a target="_blank" rel="noopener" href="https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson4.html">Work with View Controllers</a>にある「Understand the View Controller Lifecycle」に書いてある説明は以下のような感じ。</p></div>
+            <div><a href="/2016/01/view_controller_lifecycle.html">📖 続きを読む</a></div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -601,37 +615,6 @@
             <div class="content"><p>（これは「<a target="_blank" rel="noopener" href="http://kotoripiyopiyo.com/2013/12/yorinuki201320131227.html">えいっ</a>」的なやつである。）</p>
 <p>マーク・ローランズの「<a target="_blank" rel="noopener" href="http://www.amazon.co.jp/gp/product/4560083215/ref=as_li_ss_il?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=4560083215&amp;linkCode=as2&amp;tag=yutakayamaguc-22">哲学者が走る</a>」という本では、走ることで得られる道具的価値と内在的価値について語られています。</p></div>
             <div><a href="/2013/12/intrinsic_value_of_blog.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2013-12-28T21:20:00.000Z"><span class="calendar-icon">📅</span><span>2013年12月29日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2013/12/appicon40x40_and_appicon60x60_are_not_found.html">AppIcon40x40とAppIcon60x60がないというエラー</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>Cordovaで作成したアプリでアイコンをasset catalogsに変換したら、iTunes Connectで申請したときに下記のようなエラーが発生しました。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Icon specified in the Info.plist not found under the top level app wrapper: AppIcon40x40</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">Icon specified in the Info.plist not found under the top level app wrapper: AppIcon60x60</span><br></pre></td></tr></table></figure>
-<p>エラーの内容を理解するのに時間がかかりましたが、どうやらビルドしたipaファイルのtop levelにAppIcon40x40とAppIcon60x60がないということらしい。</p>
-<p>なので、ipaファイルの展開して中身を確認してみる。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> Foobar.ipa Foobar.zip</span><br><span class="line">unzip Foobar.zip</span><br><span class="line"><span class="built_in">cd</span> Payload/Foobar.app/</span><br><span class="line"><span class="built_in">ls</span> -al</span><br></pre></td></tr></table></figure>
-<p><img src="http://farm4.staticflickr.com/3672/11617781174_39076cd6d0_o.png" alt=""></p>
-<p>たしかに存在しない。AppIcon40x40@2x.pngはあるけど、AppIcon40x40はない…</p>
-<p>そして、asset catalogsでアサインしたアイコン（AppIcon）は、ビルドしたipaファイルのInfo.plistの「CFBundleIconFiles」に「AppIcon40x40」のように値が追加される。ゆえに、上述のエラーが返ってくると。</p>
-<p><img src="http://farm4.staticflickr.com/3785/11617666323_3b51b040c6_o.png" alt=""></p>
-<p>しかし、AppIcon40x40を追加したくても、asset catalogsではRetina用の2xのアイコンしかアサインできない。AppIcon60x60も同じ。asset catalogsにアサインされていないアイコンは、ビルドしたipaファイルには入ってこないので、どうしようもない。</p>
-<p><img src="http://farm8.staticflickr.com/7430/11617188865_194437a006_o.png" alt=""></p>
-<p>うーん。Deployment Targetも7.0にしているし、AppIcon40x40.pngの出番はないはずなのだけど、何か見落としているのか…</p>
-<p>asset catalogsを使ってAppIcon40x40.pngというファイル名でリソースを追加する方法が見つからなかったので、AppIcon40x40.pngファイルを作成して、プロジェクトのResourcesに追加して回避することに…</p>
-<p><img src="http://farm3.staticflickr.com/2853/11617806263_e5889c6804_o.png" alt=""></p>
-<p>Cordovaで作成したプロジェクトでasset catalogsに変換した場合は、Resourcesの下に「icons」フォルダ（変換前に使用していたアイコンファイル）が残っているので、icon-40.pngをAppIcon40x40.pngに変更しても回避できます。</p>
-<p><img src="http://farm3.staticflickr.com/2850/11617536285_6d2747ce11_o.png" alt=""></p>
-<p>うーん。</p>
-<p>まあとにかく、これでビルドしたipaファイル（appファイル）にAppIcon40x40.pngが含まれるようになったので、問題を回避することができました。良い方法とは思えないけど。同様の手順でAppIcon60x60の問題も回避できます。</p>
-<p>というメモ。</p>
-</div>
           
         </article>
       

@@ -393,61 +393,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2013/12/update_xcode_deployment_info_with_node_xcode.html"
+          "url": "https://memolog.org/2013/12/appicon40x40_and_appicon60x60_are_not_found.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2013/12/cordova_project_failed_on_archiving.html"
+          "url": "https://memolog.org/2013/12/update_xcode_deployment_info_with_node_xcode.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2013/11/ios_software_keyboard_with_input_types.html"
+          "url": "https://memolog.org/2013/12/cordova_project_failed_on_archiving.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2013/11/grunt-plistbuddy.html"
+          "url": "https://memolog.org/2013/11/ios_software_keyboard_with_input_types.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2013/11/jquery_1101ie11.html"
+          "url": "https://memolog.org/2013/11/grunt-plistbuddy.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2013/11/brew_update_error.html"
+          "url": "https://memolog.org/2013/11/jquery_1101ie11.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2013/10/ie8_dontenum_bug.html"
+          "url": "https://memolog.org/2013/11/brew_update_error.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2013/10/date_parse_and_timzone.html"
+          "url": "https://memolog.org/2013/10/ie8_dontenum_bug.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2013/09/ios7safariremote_debugging.html"
+          "url": "https://memolog.org/2013/10/date_parse_and_timzone.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2013/09/css_vertical_alignment.html"
+          "url": "https://memolog.org/2013/09/ios7safariremote_debugging.html"
         }
         
       ]
@@ -467,6 +467,37 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2013-12-28T21:20:00.000Z"><span class="calendar-icon">📅</span><span>2013年12月29日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2013/12/appicon40x40_and_appicon60x60_are_not_found.html">AppIcon40x40とAppIcon60x60がないというエラー</a></h2>
+            
+          </header>
+          
+            <div class="content"><p>Cordovaで作成したアプリでアイコンをasset catalogsに変換したら、iTunes Connectで申請したときに下記のようなエラーが発生しました。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Icon specified in the Info.plist not found under the top level app wrapper: AppIcon40x40</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line">Icon specified in the Info.plist not found under the top level app wrapper: AppIcon60x60</span><br></pre></td></tr></table></figure>
+<p>エラーの内容を理解するのに時間がかかりましたが、どうやらビルドしたipaファイルのtop levelにAppIcon40x40とAppIcon60x60がないということらしい。</p>
+<p>なので、ipaファイルの展開して中身を確認してみる。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> Foobar.ipa Foobar.zip</span><br><span class="line">unzip Foobar.zip</span><br><span class="line"><span class="built_in">cd</span> Payload/Foobar.app/</span><br><span class="line"><span class="built_in">ls</span> -al</span><br></pre></td></tr></table></figure>
+<p><img src="http://farm4.staticflickr.com/3672/11617781174_39076cd6d0_o.png" alt=""></p>
+<p>たしかに存在しない。AppIcon40x40@2x.pngはあるけど、AppIcon40x40はない…</p>
+<p>そして、asset catalogsでアサインしたアイコン（AppIcon）は、ビルドしたipaファイルのInfo.plistの「CFBundleIconFiles」に「AppIcon40x40」のように値が追加される。ゆえに、上述のエラーが返ってくると。</p>
+<p><img src="http://farm4.staticflickr.com/3785/11617666323_3b51b040c6_o.png" alt=""></p>
+<p>しかし、AppIcon40x40を追加したくても、asset catalogsではRetina用の2xのアイコンしかアサインできない。AppIcon60x60も同じ。asset catalogsにアサインされていないアイコンは、ビルドしたipaファイルには入ってこないので、どうしようもない。</p>
+<p><img src="http://farm8.staticflickr.com/7430/11617188865_194437a006_o.png" alt=""></p>
+<p>うーん。Deployment Targetも7.0にしているし、AppIcon40x40.pngの出番はないはずなのだけど、何か見落としているのか…</p>
+<p>asset catalogsを使ってAppIcon40x40.pngというファイル名でリソースを追加する方法が見つからなかったので、AppIcon40x40.pngファイルを作成して、プロジェクトのResourcesに追加して回避することに…</p>
+<p><img src="http://farm3.staticflickr.com/2853/11617806263_e5889c6804_o.png" alt=""></p>
+<p>Cordovaで作成したプロジェクトでasset catalogsに変換した場合は、Resourcesの下に「icons」フォルダ（変換前に使用していたアイコンファイル）が残っているので、icon-40.pngをAppIcon40x40.pngに変更しても回避できます。</p>
+<p><img src="http://farm3.staticflickr.com/2850/11617536285_6d2747ce11_o.png" alt=""></p>
+<p>うーん。</p>
+<p>まあとにかく、これでビルドしたipaファイル（appファイル）にAppIcon40x40.pngが含まれるようになったので、問題を回避することができました。良い方法とは思えないけど。同様の手順でAppIcon60x60の問題も回避できます。</p>
+<p>というメモ。</p>
+</div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -599,23 +630,6 @@ sudo git stash clear</p>
             <div class="content"><p>iOS7のSafariでremote debuggingをしようとすると、inspect内容が途中で戻ってこなかったり、styleの情報が取得できなかったりする。</p>
 <p><a target="_blank" rel="noopener" href="http://www.mobilexweb.com/blog/safari-ios7-html5-problems-apis-review">Safari on iOS 7 and HTML5: problems, changes and new APIs | Breaking the Mobile Web</a>によると、Safariが6.1じゃないとダメらしい。でも、6.1は<a target="_blank" rel="noopener" href="https://developer.apple.com/downloads/index.action?name=Safari%206.1">プレビュー版</a>でしか使えない（現在の最新は6.0.5）。</p></div>
             <div><a href="/2013/09/ios7safariremote_debugging.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2013-09-14T17:55:00.000Z"><span class="calendar-icon">📅</span><span>2013年9月15日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2013/09/css_vertical_alignment.html">CSSで横並びで真ん中にそろえたい</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>横並びにした要素を真ん中揃えにしたいという話。アプローチはいろいろあります。floatは真ん中揃えはむずかしそうなので、除外…（できるのかな）</p>
-<ul>
-<li>line-heightでそろえる</li>
-<li>display:inline-boxでそろえる</li>
-</ul></div>
-            <div><a href="/2013/09/css_vertical_alignment.html">📖 続きを読む</a></div>
           
         </article>
       

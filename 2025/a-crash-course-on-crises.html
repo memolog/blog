@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <title>本：マクロ金融危機入門 | メモログ</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
+  <style>body {
+  background-color: white;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0 auto 2em;
+  font-family: Garamond, "Times New Roman", serif;
+}
+
+.header_component_global {
+  text-align: center;
+  margin: 1em auto;
+  max-width: 800px;
+}
+
+.header__title {
+  margin: 0.2em 0 0.2em;
+  font-size: 1.8em;
+  font-weight: normal;
+  vertical-align: bottom;
+}
+
+.header__title a,
+.header__title > span {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #f5f2f0;
+  padding: 5px;
+}
+
+.header_component_global .header__title {
+  font-size: 1.2em;
+}
+
+.header_component_global .header__title a {
+  text-decoration: none;
+  color: black;
+}
+
+.main .header .header__title {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.header__description {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.header_component_global .header__description {
+  color: #666;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.header__epigraph {
+  font-style: italic;
+  color: #666;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto 4em;
+  padding: 0 15px;
+  border-radius: 3px;
+}
+
+.content {
+  font-size: 1.125em;
+  line-height: 2em;
+  background: white;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content h2,
+.content h3 {
+  font-size: 1.4em;
+  margin: 2em 0 1em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.article-summary {
+  margin-bottom: 3.5em;
+}
+
+.header time {
+  display: inline-block;
+  font-size: 0.9125em;
+  color: #666;
+}
+
+.calendar-icon,
+.author-icon {
+  margin-right: 0.5em;
+}
+
+.content blockquote {
+  border: 5px solid #ddd;
+  background: #f9f9f9;
+  margin: 1.5em 0;
+  padding: 0 1em;
+}
+
+.content p > code,
+.content li > code {
+  background-color: #f5f2f0;
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 0.3em;
+  color: #444;
+}
+
+.content table {
+  background: #e0e0e0;
+}
+
+.content th {
+  background: #f0f0f0;
+}
+
+.content tr {
+  background: #fff;
+}
+
+.content tr:nth-child(even) {
+  background: #f0f0f0;
+}
+
+.content td {
+  padding: 5px 1em;
+  text-align: center;
+}
+
+.content code[class*="language-"] {
+  color: #444;
+}
+
+.header__feature {
+  margin: 0.5em 0 -0.5em;
+  position: relative;
+}
+
+.header__feature img {
+  overflow: hidden;
+}
+
+.featured__image {
+  background: white;
+  line-height: 0;
+  max-height: 335px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured__credit {
+  color: #333;
+  font-size: 0.825em;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 7px;
+  background: #f0f0f0;
+  opacity: 0.8;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0.5;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.youtube-wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .header__epigraph {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 1.2em;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .main .header .header__title {
+    margin-bottom: 30px;
+  }
+
+  .header__feature {
+    margin-top: -23px;
+  }
+
+  .featured__credit {
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"],
+  .youtube-wrapper {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .featured__image,
+  .content__image,
+  .content pre[class*="language-"] {
+    margin: 0 -15px;
+  }
+}
+
+/*
+.content p a[href]::before {
+  content: '🌐';
+  width: 24px;
+  display: inline-block;
+}
+
+.content p a[href].link-icon::before {
+  content: '';
+}
+
+.content p a[href].no-link-icon::before {
+  content: '';
+  width: 0;
+}
+
+.content p a.link-icon {
+  background-position-x: 4px;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+*/
+
+.post .writing-vertical {
+  writing-mode: vertical-rl;
+  font-family: serif;
+  font-size: 1em;
+  margin: 1.5em 0;
+  column-count: 2;
+  max-width: 800px;
+  width: 102%;
+  overflow: auto;
+  height: 800px;
+}
+
+.post .writing-vertical p {
+  margin: 0;
+}
+
+/*
+.post .writing-vertical p a {
+  padding-left: 0px;
+  padding-top: 24px;
+}
+*/
+
+.post .writing-vertical p:first-letter {
+  margin-top: 1em;
+}
+
+.post .writing-vertical .link-icon {
+  background-position-x: center;
+  background-position-y: 5px;
+}
+
+.post .writing-vertical blockquote {
+  border: none;
+  margin: 0 0.5em;
+  padding: 1em 0.5em;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 730px) {
+  .container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .post .writing-vertical {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .header__feature img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+</style>
+  <script>window.lazyLoadOptions = {};</script>
+  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
+  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
+  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+  <link rel="manifest" href="/manifest.json" >
+  <meta name="theme-color" content="white">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-955153-2');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph":
+    [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <meta name="description" content="マクロ金融危機入門を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対">
+<meta property="og:type" content="article">
+<meta property="og:title" content="本：マクロ金融危機入門">
+<meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html">
+<meta property="og:site_name" content="メモログ">
+<meta property="og:description" content="マクロ金融危機入門を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://memolog.org/assets/images/broken_piggy_bank/broken_piggy_bank.jpg">
+<meta property="article:published_time" content="2025-03-23T09:21:38.000Z">
+<meta property="article:modified_time" content="2025-03-23T21:14:55.104Z">
+<meta property="article:author" content="Yutaka Yamaguchi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://memolog.org/assets/images/broken_piggy_bank/broken_piggy_bank.jpg">
+<meta name="twitter:creator" content="@memolog">
+<meta name="twitter:site" content="https://twitter.com/memolog">
+<meta property="fb:app_id" content="168245123786587">
+  <link rel="canonical" href="https://memolog.org/2025/a-crash-course-on-crises.html">
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://memolog.org/2025/a-crash-course-on-crises.html"
+      },
+      "headline": "本：マクロ金融危機入門",
+      
+        "image": [
+          "https://memolog.org/assets/images/broken_piggy_bank/broken_piggy_bank.jpg"
+        ],
+      
+      "datePublished": "1742721698000",
+      "dateModified": "1742764495104",
+      "author": {
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "メモログ",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://memolog.org/assets/icons/icon-1024.png"
+        }
+      },
+      "description": "マクロ金融危機入門を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対処すべきかという政策の議論が展開されている。原題は「A Crash Course on Crises」で、まさに危機の入門書または短期集中講座といった内容になっている。"
+    }
+  </script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
+</head>
+<body class="post">
+    <header class="header header_component_global">
+    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
+    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
+    <p class="header__description">塵が積もって山とならないメモのログ</p>
+    <nav class="navigation navigation-global">
+      <a href="/" class="navigation__link">📘 最新のメモ</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <article>
+        <header class="header">
+          <div>
+            <time datetime="2025-03-23T09:21:38.000Z">
+              <span class="calendar-icon">📅</span><span>2025年3月23日</span>
+            </time>
+          </div>
+          <h2 class="header__title"><span>本：マクロ金融危機入門</span></h2>
+          
+            <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #c8bcb2"><img src="/assets/images/broken_piggy_bank/broken_piggy_bank.svg" alt="" role="presentation" loading="lazy" width="800" height="800" /></div>
+      
+    
+  </div>
+  
+    
+    
+    
+      <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a> and <a href="https://github.com/fogleman/primitive" target="_blank">primitive</a></div>
+    
+  
+</div>
+
+          
+        </header>
+        <div id="article-content" class="content "><p><a target="_blank" rel="noopener" href="https://www.keio-up.co.jp/np/isbn/9784766429886/">マクロ金融危機入門</a>を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対処すべきかという政策の議論が展開されている。原題は「A Crash Course on Crises」で、まさに危機の入門書または短期集中講座といった内容になっている。<span id="more"></span></p>
+<p>第1部は「バブルと信念」「資本流入とその（誤）配分」「現代の金融機関」という3章で構成されている。バブルは、ファンダメンタルズと市場価格の乖離によって生まれ、「外挿的予想（これまでの上昇が続くと期待すること）」がそれを支える。バブルの崩壊には、多くの投資家がその期待から逸脱し、売却を選ぶ必要があるため、タイミングの見極めは難しい。また、現代の金融機関は融資を証券化し、資金調達もホールセール市場に依存するため、従来の銀行よりも市場の変動に敏感になっている。バブルの発生自体を抑制することは難しい上、金融市場の発展がバブルの熟成にも一役買っている。</p>
+<p>第2部は「システミック・リスク、増幅、伝染」「支払能力と流動性」「民間部門と公共部門のつながり」の3章で構成されていて、個別のショックが金融システムを通じて全体に波及していく過程、いわゆるシステミック・リスクについて描かれている。システミック・リスクは、市場に敏感に反応する資金や、偏った資本構造によって増幅される。支払い能力があっても流動性が足りずに破綻するケースや、政府からの国債を購入する銀行と、その銀行を破綻から守らざるを得ない政府が相互に依存することで生じる「悪魔のループ」、さらには、国の債務が安全資産の地位を失い、資本が外国へ流出することで経済がより深刻なストレスに晒されるケースなどが紹介されている。</p>
+<p>第3部は「為替政策と回復の速さ」「新しい伝統的金融政策」「財政政策と実質金利」の3章で構成され、危機への対処と回復のための政策が扱われている。通貨安は短期的な景気回復を促すが、外貨建て債務が多いと副作用が大きい。金融政策では、中央銀行が準備に金利を支払うことで潤沢な資金供給と短期金利の操作を両立し、イールドカーブの操作など長期金利に働きかける手法も標準化されつつある。財政政策については、大恐慌期に効果があったという理解を踏まえつつ、金融危機を伴う不況においても、予備的貯蓄の増加や安全資産の供給力不足により均衡実質金利が低下するという理路を示し、財政赤字による経済刺激が依然として有効であることが論じられている。</p>
+<p>全体で170ページほどと分量は少なめだが、対象が経済学の学部生・院生向けで、IS-LM分析といった経済学の基礎知識がベースになっているため、内容はやや歯ごたえがあるが、理路は非常に整っており、経済学を知らないから理解できないというものではない。マクロ経済の仕組みを体系的に理解するにはとても良い本だと思った。</p>
+</div>
+        <footer class="profile">
+  <div class="profile-inner">
+    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
+    <h2 class="profile__heading">私について</h2>
+    <div class="profile__content">
+      <div>Yutaka Yamaguchi</div>
+      <div>東京在住。TypeScript, Node.js, Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。万年英語勉強中</div>
+      <ul class="profile__social-list">
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
+        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+      </article>
+    </main>
+  </div>
+  <script>
+  // http://css-tricks.com/favicons-next-to-external-links/
+  (function (){
+    'use strict';
+    if (/googlebot/i.test(navigator.userAgent)) {
+      return;
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll('.content p a');
+      const linkLength = links && links.length || 0;
+      for (var i=0; i<linkLength; i++){
+        const link = links[i];
+        const hostname = link.hostname;
+        if (hostname) {
+          const children = link.children || [];
+          const firstChild = children && children[0];
+          if (firstChild && firstChild.tagName === 'IMG') {
+            // For old amazon image link
+            if (link.hostname === 'www.amazon.co.jp') {
+              link.style.float = 'left';
+              link.style.marginRight = '1em';
+              link.style.paddingLeft = '0';
+            }
+            // link.classList.add('no-link-icon');
+            continue;
+          }
+
+          // link.classList.add('link-icon');
+          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
+        }
+      }
+    });
+  })();
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    // navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
+
+</body>
+</html>

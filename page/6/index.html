@@ -17,7 +17,7 @@
 }
 
 .header {
-  margin: 0 auto;
+  margin: 0 auto 2em;
   font-family: Garamond, "Times New Roman", serif;
 }
 
@@ -170,6 +170,9 @@
   line-height: 0;
   max-height: 335px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .featured__credit {
@@ -393,61 +396,61 @@
         {
           "@type":"ListItem",
           "position":1,
-          "url": "https://memolog.org/2020/optional-chaining-and-nullish-coalescing.html"
+          "url": "https://memolog.org/2020/web-workers-work-on-ie10.html"
         },
         
         {
           "@type":"ListItem",
           "position":2,
-          "url": "https://memolog.org/2020/event-target-and-currenttarget.html"
+          "url": "https://memolog.org/2020/optional-chaining-and-nullish-coalescing.html"
         },
         
         {
           "@type":"ListItem",
           "position":3,
-          "url": "https://memolog.org/2020/load-jquery-in-developer-console.html"
+          "url": "https://memolog.org/2020/event-target-and-currenttarget.html"
         },
         
         {
           "@type":"ListItem",
           "position":4,
-          "url": "https://memolog.org/2019/book-the-4th-revolution.html"
+          "url": "https://memolog.org/2020/load-jquery-in-developer-console.html"
         },
         
         {
           "@type":"ListItem",
           "position":5,
-          "url": "https://memolog.org/2019/generate-anki-cards-tool.html"
+          "url": "https://memolog.org/2019/book-the-4th-revolution.html"
         },
         
         {
           "@type":"ListItem",
           "position":6,
-          "url": "https://memolog.org/2018/merge-sort-in-javascript.html"
+          "url": "https://memolog.org/2019/generate-anki-cards-tool.html"
         },
         
         {
           "@type":"ListItem",
           "position":7,
-          "url": "https://memolog.org/2018/a11y-fixes-for-prism-default-theme.html"
+          "url": "https://memolog.org/2018/merge-sort-in-javascript.html"
         },
         
         {
           "@type":"ListItem",
           "position":8,
-          "url": "https://memolog.org/2018/add-json-ld-structured-data.html"
+          "url": "https://memolog.org/2018/a11y-fixes-for-prism-default-theme.html"
         },
         
         {
           "@type":"ListItem",
           "position":9,
-          "url": "https://memolog.org/2018/create-a-new-icon.html"
+          "url": "https://memolog.org/2018/add-json-ld-structured-data.html"
         },
         
         {
           "@type":"ListItem",
           "position":10,
-          "url": "https://memolog.org/2018/insertion-sort-in-javascript.html"
+          "url": "https://memolog.org/2018/create-a-new-icon.html"
         }
         
       ]
@@ -467,6 +470,38 @@
 
   <div class="container">
     <main class="main">
+      
+        <article class="article-summary">
+          <header class="header">
+            <div><time datetime="2020-02-06T21:18:11.000Z"><span class="calendar-icon">📅</span><span>2020年2月7日</span></time>
+            </div>
+            <h2 class="header__title article__title"><a href="/2020/web-workers-work-on-ie10.html">Web Workers work on IE10</a></h2>
+            
+              <div class="header__feature" aria-hidden="true">
+  <div class="featured__image">
+    
+      
+        <div style="background-color: #8fadcd"><img src="/assets/images/josue-isai-ramos-figueroa-Pj4je7OjrME-unsplash/josue-isai-ramos-figueroa-Pj4je7OjrME-unsplash.svg" alt="" role="presentation" loading="lazy" width="800" height="531" /></div>
+      
+    
+  </div>
+  
+    
+      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/@jramos10?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Josue Isai Ramos Figueroa</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+    
+    
+    
+  
+</div>
+
+            
+          </header>
+          
+            <div class="content"><p>JavaScriptはシングルスレッドでイベントドリブンであり、実行を非同期にすることはできるけど、基本的に同時に一つのことしかできない。<a target="_blank" rel="noopener" href="https://developer.mozilla.org/ja/docs/Web/API/Web_Workers_API">Web Workers</a>を使えば、メインスレッドとは別のスレッドで処理を実行することができるので、メインスレッドとは別の処理を同時に実行することができる。Web Workersを使ったメインスレッドの負荷低減は今後のフロンドエンドにおいて必携の技術になると思われる。</p>
+<p>なのだけど、Web Workersは意外と歴史があり（よく知らないけど）、IE10でも動作する（<a target="_blank" rel="noopener" href="https://caniuse.com/#feat=webworkers">Can I use Web Workers</a>）。</div>
+            <div><a href="/2020/web-workers-work-on-ie10.html">📖 続きを読む</a></div>
+          
+        </article>
       
         <article class="article-summary">
           <header class="header">
@@ -742,37 +777,6 @@
           
             <div class="content"><p>アイコンをsvgで作り直してページの一番上につけた。</div>
             <div><a href="/2018/create-a-new-icon.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2018-08-06T20:47:14.000Z"><span class="calendar-icon">📅</span><span>2018年8月7日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2018/insertion-sort-in-javascript.html">Insertion Sort in JavaScript</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #095367"><img src="/assets/images/mingwei-dong-651103-unsplash/mingwei-dong-651103-unsplash.svg" alt="" role="presentation" loading="lazy" width="800" height="446" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">mingwei dong</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p><a href="https://memolog.org/2018/selection-sort-in-javascript.html">Selection Sort in JavaScript</a>の記事から引き続き。内容は<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Insertion_sort">挿入ソート</a>からの抜粋なので詳細はそちらを参照。</div>
-            <div><a href="/2018/insertion-sort-in-javascript.html">📖 続きを読む</a></div>
           
         </article>
       

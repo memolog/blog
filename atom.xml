@@ -6,7 +6,7 @@
   <link href="https://memolog.org/atom.xml" rel="self"/>
   
   <link href="https://memolog.org/"/>
-  <updated>2024-11-05T23:40:55.801Z</updated>
+  <updated>2025-03-23T21:14:55.104Z</updated>
   <id>https://memolog.org/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本：マクロ金融危機入門</title>
+    <link href="https://memolog.org/2025/a-crash-course-on-crises.html"/>
+    <id>https://memolog.org/2025/a-crash-course-on-crises.html</id>
+    <published>2025-03-23T09:21:38.000Z</published>
+    <updated>2025-03-23T21:14:55.104Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.keio-up.co.jp/np/isbn/9784766429886/&quot;&gt;マクロ金融危機入門&lt;/a&gt;を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対処すべきかという政策の議論が展開されている。原題は「A Crash Course on Crises」で、まさに危機の入門書または短期集中講座といった内容になっている。</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>本：エブリシング・バブル</title>
@@ -36,7 +51,7 @@
     <link href="https://memolog.org/2024/beyond-weird.html"/>
     <id>https://memolog.org/2024/beyond-weird.html</id>
     <published>2024-11-03T00:00:00.000Z</published>
-    <updated>2024-11-03T00:25:50.620Z</updated>
+    <updated>2024-11-06T21:41:50.316Z</updated>
     
     
     <summary type="html">&lt;p&gt;「&lt;a href=&quot;https://www.kagakudojin.co.jp/book/b581820.html&quot;&gt;量子力学は本当は量子の話ではない&lt;/a&gt;」を読んだ。量子論が言う「粒子でもあり波でもある」という二重性や、「猫が死んでいるとも生きているとも言える（測定した瞬間に決定する）」といった重ね合わせ、量子がもつれた物体同士が瞬時に影響を与え合うといった奇妙な現象は、量子世界をイメージするための物語がもたらしたもので、量子力学の理論そのものが持つ本質ではないらしい。微粒子の性質・状態としてイメージしようとするから奇妙に見えるだけで、量子論は「情報の取得方法とその因果的影響」を扱う理論と捉えたほうが、筋が通る、というのが本書の内容。それが量子論の見方として正しいのかどうか、そもそも本書の内容をきちんと理解できてるかどうかわからないけど、そんな気がするかもしれないししないかもしれない（二重性）といった感想を持った。</summary>
@@ -302,21 +317,6 @@
     
     
     <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-lines&quot;&gt;6. Flex Lines&lt;/a&gt;について。</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Display Order: the order property</title>
-    <link href="https://memolog.org/2020/flex-order-property.html"/>
-    <id>https://memolog.org/2020/flex-order-property.html</id>
-    <published>2020-05-24T15:00:00.000Z</published>
-    <updated>2024-02-20T21:19:33.338Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#order-property&quot;&gt;5.4. Display Order: the order property&lt;/a&gt;について。</summary>
     
     
     

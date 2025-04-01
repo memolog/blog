@@ -3,7 +3,6 @@ title: 本：長篠合戦
 featured:
   image: generated-image-of-battle-of-nagashino-2
   author: chatGPT
-  authorLink: null
 date: 2024-10-28 08:20:00
 ---
 [長篠合戦](https://www.chuko.co.jp/shinsho/2023/12/102785.html)を読んだ。長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や、各勢力が自らを美化するための「化粧」が多分に含まれているようだ。本書では、成り行きで長篠周辺に戦場が定まった経緯を、武田家、徳川家、織田家の視点から丁寧に解説しており、とても興味深かった。

@@ -2,8 +2,6 @@
 title: Create a new icon
 featured:
   image: new-icon
-  author: null
-  authorLink: null
 date: 2018-08-12 07:28:32
 ---
 アイコンをsvgで作り直してページの一番上につけた。<!-- more -->

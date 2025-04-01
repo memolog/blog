@@ -3,7 +3,6 @@ title: 本：動物心理学入門
 featured:
   image: generated-image-of-introduction-animal-psychology
   author: chatGPT
-  authorLink: null
 date: 2024-10-06 17:00:34
 ---
 [動物心理学入門](https://www.yuhikaku.co.jp/books/detail/9784641174887)という本を読んだ。本書によると、「動物心理学」とは「動物を対象とした研究を通して、ヒトの『ココロ』を理解しようとする学問領域」である（p.1 はじめに）。人と動物の異なる点を比較し、共通点を類推することで、ヒトの心理をより深く理解できるのだろうと感じた。<!-- more -->

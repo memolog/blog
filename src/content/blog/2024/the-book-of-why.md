@@ -3,7 +3,6 @@ title: 本：因果推論の科学
 featured:
   image: generated-image-of-the-book-of-why
   author: chatGPT
-  authorLink: null
 date: 2024-09-22 11:32:11
 ---
 [因果推論の科学](https://amzn.to/3XQ5Zvv)を読んだので簡単に紹介。因果推論とは、原因と結果の関係を理解し、それを推論するための方法論。従来の統計学では「XとYの相関関係」を説明できても、実際に知りたいのは「XがYにどう影響を与えているか？」という因果関係だったりする。因果推論は、その点で画期的なアプローチを示している。<!-- more -->

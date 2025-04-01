@@ -1,0 +1,33 @@
+---
+title: 最近購入したCD
+date: 2005-07-10T14:24:12.000Z
+categories:
+- 雑文
+tags:
+- music
+---
+私はCDと本にかかるお金に無頓着な人間で、気がつくと大量のCDと本を購入していたりします。本は読むペースが限られているので、そこまで増えないのですが、CDは本当にあっという間に溜まっていきます。収納スペースは限られているので、結構悩ましい問題なのですが、それでも買ってしまいます・・ああ。
+<!-- more -->
+最近購入したCDは下記のような感じです。
+
+### RIZE - SPIT & YELL
+
+[![](http://images-jp.amazon.com/images/P/B0009QX4SU.09.TZZZZZZZ.jpg)](http://www.amazon.co.jp/exec/obidos/ASIN/B0009QX4SU/ref=nosim/yutakayamaguc-22) RIZEは「Why I'm Me」がsonyかどこかのテープかウォークマン（記憶曖昧だな）のCMで流れてほれて以来、隠れファンでした。1stアルバムの「ROOKEY」はそのときの友人から借りたので、今回が初めての購入CDです。8曲目の「CRY」がいい感じ。ジャンルは多分パンクとかラップとか。
+
+### TRIBAL CHAIR - little warmth
+
+[![](http://images-jp.amazon.com/images/P/B0009OASLS.09.TZZZZZZZ.jpg)](http://www.amazon.co.jp/exec/obidos/ASIN/B0009OASLS/ref=nosim/yutakayamaguc-22) 試聴買い。このバンドのことはよく知りません（おい）。ジャンルは多分エモコアあたりになるのではないかと思います。最近日本人でも英語で歌ったりするようですが、個人的には日本語エモの方が好きです。英語の方が韻をあわせやすいのかもしれないけど、日本語の方が伝わるものがあります。やっぱり、日本人ですから。英詩はよくわからない（単純に英語がわからないという話もあり）。
+
+### ケツメイシ \- ケツノポリス４
+
+[![](http://images-jp.amazon.com/images/P/B000456XQG.09.TZZZZZZZ.jpg)](http://www.amazon.co.jp/exec/obidos/ASIN/B000456XQG/ref=nosim/yutakayamaguc-22) Amazonのレビューを見ると「昔のアルバムの方が良かった」説を唱える人もいるようですが、僕は結構好きです。以前のアルバムを持っていないせいもあると思います。やはり、「さくら」は最高に良い！　涙がほろりです。あと個人的には「上がる」もかなり良い感じ。「上がる」みたいな歌詞の曲を私は自己啓発ソングと呼んでいます。ラップ。
+
+### Singer Songer - ばらいろポップ
+
+[![](http://images-jp.amazon.com/images/P/B0009HMX5O.09.TZZZZZZZ.jpg)](http://www.amazon.co.jp/exec/obidos/ASIN/B0009HMX5O/ref=nosim/yutakayamaguc-22) 基本的にCDは試聴をして良かったら購入するというスタイルを取っているのですが（有名なアーティストの駄作もあれば、無名なアーティストの名作もある）、このアルバムはAmazonで即買いしてしまいました。初花凛々がすごくいい曲だったので。届いたCDを聴いてみたら、想像していたより少しカントリー色を感じましたが、なかなか良かったです。個人的には「ロマンチックモード」が好き。
+
+### 風味堂 \- 風味堂
+
+[![](http://images-jp.amazon.com/images/P/B0009NZLW0.09.TZZZZZZZ.jpg)](http://www.amazon.co.jp/exec/obidos/ASIN/B0009NZLW0/ref=nosim/yutakayamaguc-22) 風味堂の1stフルアルバムです。今までフルアルバム出してなかったんだなあ。2003年に出ていた「sketch book」から少しだけファンでした。最近はずっと買い控えしていたのですが、試聴したときに「ナキムシのうた」がツボにはまってしまい購入しました。この曲、「世界ウルルン滞在記」のエンディングテーマにもなっていたらしい。今は知らないけど。確かにそれっぽい曲調で、よくよく聴いてみるとよくありがちな曲のようにも感じます。でも、いい曲だなあ。なんか明日も頑張るぞっという気分になります。自己啓発ソングです。はい。ジャンルはわりとスカ。
+
+あと「Foo Fighters - In Your Honor」と「Phoenix Alphabetical」と「Dpeche Mode - Violator」も購入したのですが、割愛。さすがに買い過ぎだなあ。今月はこれで控えよう・・でもm-flo loves Akiko Wadaはかなり欲しいなあ。

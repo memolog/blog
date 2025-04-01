@@ -71,4 +71,4 @@ App Manifest については静的なファイルを用意して、manifestへ�
 
 そして Lighthouse の結果。100点になりました👍
 
-![](../../assets/images/lighthouse-100s.png)
+![](/assets/images/lighthouse-100s.png)

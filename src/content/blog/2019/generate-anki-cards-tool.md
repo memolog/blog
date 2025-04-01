@@ -34,6 +34,6 @@ Cambridge Dictionary に画像または音声データがない場合は、[Goog
 
 なんやかんやで作りながら紆余曲折してしまったので、この年末年始の時間をだいぶ費やしてしまったけど、wikipediaやweblioからもデータの取得が可能で、こんな風に英語以外の暗記でも使える。使うかどうかはわからないけど。
 
-![](../../assets/images/screen_anki.png)
+![](/assets/images/screen_anki.png)
 
 というメモ。

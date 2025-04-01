@@ -59,7 +59,7 @@ const { title, date, featured } = Astro.props;
 		<main>
 			<article>
 				<div class="hero-image">
-					{featured && <img width={1020} height={510} src={featured.image} alt="" />}
+					{featured && <img width={1020} height={510} src={`/assets/images/${featured.image}/${featured.image}.svg`} alt="" />}
 				</div>
 				<div class="prose">
 					<div class="title">

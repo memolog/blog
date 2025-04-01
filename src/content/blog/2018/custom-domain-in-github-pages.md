@@ -15,5 +15,5 @@ date: 2018-07-08 05:58:41
 このままだとHexoでGithub Pagesに記事を更新するときにHTTPS設定が外れてしまうので、[hexo-deployer-gitのissue](https://github.com/hexojs/hexo-deployer-git/issues/87)を参考に、sourceのディレクトリに[CNAMEファイル](https://github.com/memolog/blog/blob/master/source/CNAME)を追加。
 
 Chromeでdev toolsで証明書の確認したらちゃんとLet's encryptから発行されていました。
-![](../../assets/images/certification-memolog.png)
+![](/assets/images/certification-memolog.png)
 

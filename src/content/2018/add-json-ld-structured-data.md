@@ -5,10 +5,13 @@ featured:
   author: Thomas Kelley
   authorLink: https://unsplash.com/photos/HBANPxXi3aQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2018-08-14 18:04:54
+excerpt: "構造化データ（structured data）の部分をmicrodataからJSON-LDに置き換えてみた。"
 ---
-構造化データ（structured data）の部分をmicrodataからJSON-LDに置き換えてみた。<!-- more -->
 
-とりあえず[Article | Search | Google Developers](https://developers.google.com/search/docs/data-types/article)にある「SEE MARKUP」からサンプルのJSON-LDのデータをコピーして、それを元にhexoのテンプレートの個別のページのアーカイブに下記のJSON-LDを追加。
+構造化データ（structured data）の部分を microdata から JSON-LD に置き換えてみた。
+
+とりあえず[Article | Search | Google Developers](https://developers.google.com/search/docs/data-types/article)にある「SEE MARKUP」からサンプルの JSON-LD のデータをコピーして、それを元に hexo のテンプレートの個別のページのアーカイブに下記の JSON-LD を追加。
+
 ```json
 <script type="application/ld+json">
   {
@@ -43,14 +46,18 @@ date: 2018-08-14 18:04:54
 </script>
 ```
 
-descriptionにはHTMLを含まないテキストを出力したいのだけど、hexoの`page.excerpt`の出力にはHTMLが含まれていてそれを取り除く手段が標準ではない（ように見える）。なので、`remove_html`という簡単なヘルパーを用意した。改行の情報などもいらないので、DOMにデータを入れてそれをtextContentでテキスト部分を取得するだけ。
+description には HTML を含まないテキストを出力したいのだけど、hexo の`page.excerpt`の出力には HTML が含まれていてそれを取り除く手段が標準ではない（ように見える）。なので、`remove_html`という簡単なヘルパーを用意した。改行の情報などもいらないので、DOM にデータを入れてそれを textContent でテキスト部分を取得するだけ。
 
 ```javascript
-const jsdom = require('jsdom');
+const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-hexo.extend.helper.register('remove_html', function(content){
-  return new JSDOM(`<div>${content}</div>`).window.document.getElementsByTagName('div')[0].textContent || '';
+hexo.extend.helper.register("remove_html", function (content) {
+  return (
+    new JSDOM(`<div>${content}</div>`).window.document.getElementsByTagName(
+      "div"
+    )[0].textContent || ""
+  );
 });
 ```
 
@@ -83,7 +90,8 @@ hexo.extend.helper.register('remove_html', function(content){
 }
 </script>
 ```
-二つのトップレベルのアイテムを一つのscriptタグで追加したい場合は、`@graph`で記入すると良いと[web - JSON-LD Schema.org: Multiple video/image page - Stack Overflow](https://stackoverflow.com/questions/30505796/json-ld-schema-org-multiple-video-image-page/30506476#30506476)に書かれてあったのでそのようにした（複数のscriptタグに分けてもいい）。
+
+二つのトップレベルのアイテムを一つの script タグで追加したい場合は、`@graph`で記入すると良いと[web - JSON-LD Schema.org: Multiple video/image page - Stack Overflow](https://stackoverflow.com/questions/30505796/json-ld-schema-org-multiple-video-image-page/30506476#30506476)に書かれてあったのでそのようにした（複数の script タグに分けてもいい）。
 
 インデックステンプレートの方には[Carousels](https://developers.google.com/search/docs/guides/mark-up-listings)の記述を入れることにした。
 
@@ -105,9 +113,9 @@ hexo.extend.helper.register('remove_html', function(content){
 </script>
 ```
 
-Carouselの表示は[Mark Up Your Content Items](https://developers.google.com/search/docs/guides/mark-up-content#content_types) には、「The Top stories carousel requires that your content be published in AMP. For more information, see [AMP with structured data.](https://developers.google.com/search/docs/data-types/article#amp-sd)」とあり、non-AMPページではいわゆるカルーセルでの表示ではなく、リスト表示になるようである。
+Carousel の表示は[Mark Up Your Content Items](https://developers.google.com/search/docs/guides/mark-up-content#content_types) には、「The Top stories carousel requires that your content be published in AMP. For more information, see [AMP with structured data.](https://developers.google.com/search/docs/data-types/article#amp-sd)」とあり、non-AMP ページではいわゆるカルーセルでの表示ではなく、リスト表示になるようである。
 
-ので、そのうちAMPにも対応したいなと思うけど、まあそのうち。
+ので、そのうち AMP にも対応したいなと思うけど、まあそのうち。
 
 最後に[構造化データ テストツール](https://search.google.com/structured-data/testing-tool)で表示を確認。実際の検索結果に出てくるかどうかはわからないけど、データ的には特に問題なさそうである。
 

@@ -5,10 +5,12 @@ featured:
   author: Erwan Hesry
   authorLink: https://unsplash.com/photos/Q34YB7yjAxA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2018-07-08 07:40:57
+excerpt: "Webpackではバンドルするファイルを3つのアプローチで分けることができる。エントリーポイントを複数設けたり、webpack.config.jsにsplitChunksの設定を入れたりなどの他に、Dyanmic importを使うことでもファイルを分けることができる。詳しくはCode Splittingを参照。"
 ---
-Webpackではバンドルするファイルを3つのアプローチで分けることができる。エントリーポイントを複数設けたり、webpack.config.jsにsplitChunksの設定を入れたりなどの他に、Dyanmic importを使うことでもファイルを分けることができる。詳しくは[Code Splitting](https://webpack.js.org/guides/code-splitting/)を参照。<!-- more -->
 
-[Dyanmic import](https://github.com/tc39/proposal-dynamic-import)はES2015の[import](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/import)が静的にライブラリを読み込むのに対して、動的に読み込む。たいていの場合普通のimportで事足りる一方、多言語用のファイルとか、普段は必要なくて全部読み込むとファイルサイズが大きくなるとか、なくてもまあ基本的な機能に問題ないみたいなものは必要なときに動的にファイルを読み込みたい場合もある。そういったときにDynamic Importを利用する。
+Webpack ではバンドルするファイルを 3 つのアプローチで分けることができる。エントリーポイントを複数設けたり、webpack.config.js に splitChunks の設定を入れたりなどの他に、Dyanmic import を使うことでもファイルを分けることができる。詳しくは[Code Splitting](https://webpack.js.org/guides/code-splitting/)を参照。
+
+[Dyanmic import](https://github.com/tc39/proposal-dynamic-import)は ES2015 の[import](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/import)が静的にライブラリを読み込むのに対して、動的に読み込む。たいていの場合普通の import で事足りる一方、多言語用のファイルとか、普段は必要なくて全部読み込むとファイルサイズが大きくなるとか、なくてもまあ基本的な機能に問題ないみたいなものは必要なときに動的にファイルを読み込みたい場合もある。そういったときに Dynamic Import を利用する。
 
 > **Motivation and use cases**
 
@@ -20,20 +22,20 @@ Webpackではバンドルするファイルを3つのアプローチで分ける
 
 > [Dyanmic import](https://github.com/tc39/proposal-dynamic-import)
 
-実装的にはこんな感じになる（[サンプルコード](https://github.com/memolog/typescript-webpack-dynamic-import-sample)）。Dynamic importの部分があるとwebpackが自動的にcode splittingしてくれるけれど、splitされたチャンク名をつけたい場合はファイル名の前にコメントをつける。
+実装的にはこんな感じになる（[サンプルコード](https://github.com/memolog/typescript-webpack-dynamic-import-sample)）。Dynamic import の部分があると webpack が自動的に code splitting してくれるけれど、split されたチャンク名をつけたい場合はファイル名の前にコメントをつける。
+
 ```javascript
-import(/* webpackChunkName: "hello" */ './hello_world')
-  .then(module => {
-    const hello = new module.HelloWorld();
-    hello.say();
-  });
+import(/* webpackChunkName: "hello" */ "./hello_world").then((module) => {
+  const hello = new module.HelloWorld();
+  hello.say();
+});
 ```
 
-TypeScriptの場合は、[Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)でremoveCommentsをtrueにしていると、webpackがsplitする前にコメントを消してしまうのでremoveCommentsをfalseにする必要がある（Productionモードの場合、[Webpackのminification](https://webpack.js.org/guides/production/#minification)で最終的にコメントを消してくれる）。
+TypeScript の場合は、[Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)で removeComments を true にしていると、webpack が split する前にコメントを消してしまうので removeComments を false にする必要がある（Production モードの場合、[Webpack の minification](https://webpack.js.org/guides/production/#minification)で最終的にコメントを消してくれる）。
 
-Webpackはデフォルトでnode_modulesから読み込んだライブラリを`vendors`のcacheGroupに分ける。Dynamic Importしたファイルでnode_modulesからライブラリを読み込んだりすると`vendors~hello.js`みたいな名前でファイルを分割する。vendorsにファイルを分けたくない場合は、cacheGroupでvendorsの設定をfalseにする。
+Webpack はデフォルトで node_modules から読み込んだライブラリを`vendors`の cacheGroup に分ける。Dynamic Import したファイルで node_modules からライブラリを読み込んだりすると`vendors~hello.js`みたいな名前でファイルを分割する。vendors にファイルを分けたくない場合は、cacheGroup で vendors の設定を false にする。
 
-あと、cacheGroupの名前とchunkの名前の間のdelimiterはデフォルトで`~`になっている。通常これで問題ないけど、AWSのCloudFrontでcacheをinvalidateしようするとvalidなファイル名じゃないとエラーになるので、変更する必要がでるかもしれない。そういうときには`automaticNameDelimiter`の設定で変更することができる。
+あと、cacheGroup の名前と chunk の名前の間の delimiter はデフォルトで`~`になっている。通常これで問題ないけど、AWS の CloudFront で cache を invalidate しようすると valid なファイル名じゃないとエラーになるので、変更する必要がでるかもしれない。そういうときには`automaticNameDelimiter`の設定で変更することができる。
 
 ```json
   optimization: {

@@ -5,11 +5,10 @@ featured:
   image: ilya-pavlov-87438
   author: Ilya Pavlov
   authorLink: https://unsplash.com/photos/OqtafYT5kTw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+excerpt: "久しく HTML 要素について振り返っていなかったので、このタイミングで一度主要な構造についての HTML 要素について振り返ってみようと思う。（TL;DR:適切な見出し要素が大事。あとはおまけ）"
 ---
 
 久しく HTML 要素について振り返っていなかったので、このタイミングで一度主要な構造についての HTML 要素について振り返ってみようと思う。（TL;DR:適切な見出し要素が大事。あとはおまけ）
-
-<!-- more -->
 
 ## セクショニングコンテンツについて
 

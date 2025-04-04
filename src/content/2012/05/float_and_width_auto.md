@@ -2,11 +2,13 @@
 title: floatとwidth&#x3a;auto
 date: 2012-05-23T15:41:00.000Z
 categories:
-- web
+  - web
 tags:
-- css
+  - css
+excerpt: "いまさらながらのfloatとwidth:autoの話。"
 ---
-いまさらながらのfloatとwidth:autoの話。<!-- more -->
+
+いまさらながらの float と width:auto の話。
 
 たとえば
 
@@ -19,16 +21,27 @@ tags:
 </div>
 ```
 
-というdivがあって、.sidebar1と.sidebar2を固定値のwidthにしてfloatして、.mainのwidthはautoにして可変にしたい...ということで、下記のようにCSSを設定してもうまくいかない。
+という div があって、.sidebar1 と.sidebar2 を固定値の width にして float して、.main の width は auto にして可変にしたい...ということで、下記のように CSS を設定してもうまくいかない。
 
 ```css
-.container{ width:auto; }
-.sidebar1{ float:left; width: 200px; }
-.main{ float:left; width:auto; }
-.sidebar2{ float:right; width: 200px; }
+.container {
+  width: auto;
+}
+.sidebar1 {
+  float: left;
+  width: 200px;
+}
+.main {
+  float: left;
+  width: auto;
+}
+.sidebar2 {
+  float: right;
+  width: 200px;
+}
 ```
 
-width:autoは通常は包含ブロックの幅にフィットするような感じに計算されるけれど、 floatが設定されている要素の場合、[10.3.5 Floating, non-replaced elements](http://www.w3.org/TR/CSS2/visudet.html#float-width)の仕様に従うようになる。
+width:auto は通常は包含ブロックの幅にフィットするような感じに計算されるけれど、 float が設定されている要素の場合、[10.3.5 Floating, non-replaced elements](http://www.w3.org/TR/CSS2/visudet.html#float-width)の仕様に従うようになる。
 
 > ### 10.3.5 Floating, non-replaced elements
 >
@@ -40,13 +53,13 @@ width:autoは通常は包含ブロックの幅にフィットするような感�
 >
 > Then the shrink-to-fit width is: min(max(preferred minimum width, available width), preferred width).
 
-まず、preferred widthという最大値と最小値が計算される。これは（明示的に改行を発生するところを除いて）改行しないで伸ばしたときの幅が最大幅で、改行できるところで全部改行したときに得られる幅が最小値になる（CSS 2.1では正確なアルゴリズムは定義されていない）。さらにavailable widthが求められる。これはこの場合は包含ブロックからmarginとか諸々の幅を差し引いた、利用できる正味の幅になる。
+まず、preferred width という最大値と最小値が計算される。これは（明示的に改行を発生するところを除いて）改行しないで伸ばしたときの幅が最大幅で、改行できるところで全部改行したときに得られる幅が最小値になる（CSS 2.1 では正確なアルゴリズムは定義されていない）。さらに available width が求められる。これはこの場合は包含ブロックから margin とか諸々の幅を差し引いた、利用できる正味の幅になる。
 
-それで、「preferred widthの最小幅」と「available width」のどちらか大きい方の幅と、「preferred widthの最大幅」を比較して、小さい方の幅をwidthの値として使用する。
+それで、「preferred width の最小幅」と「available width」のどちらか大きい方の幅と、「preferred width の最大幅」を比較して、小さい方の幅を width の値として使用する。
 
-なので、超長い文章の場合（available widthの方が小さくなる）ので、包含ブロックの幅一杯に.mainが広がることになる。
+なので、超長い文章の場合（available width の方が小さくなる）ので、包含ブロックの幅一杯に.main が広がることになる。
 
-上の例のような構成で3列にしたい場合は
+上の例のような構成で 3 列にしたい場合は
 
 ```html
 <div class="container">
@@ -55,17 +68,27 @@ width:autoは通常は包含ブロックの幅にフィットするような感�
   <div class="main">超長い文章のつもり</div>
   <div class="footer">フッター</div>
 </div>
-
 ```
 
 ```css
-.container{ width:auto; }
-.sidebar1{ float:left; width: 200px; }
-.sidebar2{ float:right; width: 200px; }
-.main{ width:auto; overflow:hidden; }
+.container {
+  width: auto;
+}
+.sidebar1 {
+  float: left;
+  width: 200px;
+}
+.sidebar2 {
+  float: right;
+  width: 200px;
+}
+.main {
+  width: auto;
+  overflow: hidden;
+}
 ```
 
-のように、.mainを.sidebar2の下にして、floatを外すとうまくいく。ただ、そのままだとサイドバーの下にテキストが回り込んでしまうので、overflow:hiddenを追加しておく。これはfloatと同様に [Block formatting contexts](http://www.w3.org/TR/CSS2/visuren.html#block-formatting)の原理が働くようにするため。
+のように、.main を.sidebar2 の下にして、float を外すとうまくいく。ただ、そのままだとサイドバーの下にテキストが回り込んでしまうので、overflow:hidden を追加しておく。これは float と同様に [Block formatting contexts](http://www.w3.org/TR/CSS2/visuren.html#block-formatting)の原理が働くようにするため。
 
 > ### 9.4.1 Block formatting contexts
 >
@@ -80,10 +103,3 @@ width:autoは通常は包含ブロックの幅にフィットするような感�
 > ...
 >
 > 9.5 Floats
-> ----------
->
-> ...
->
-> The border box of a table, a block-level replaced element, or an element in the normal flow that establishes a new block formatting context (such as an element with 'overflow' other than 'visible') must not overlap the margin box of any floats in the same block formatting context as the element itself. If necessary, implementations should clear the said element by placing it below any preceding floats, but may place it adjacent to such floats if there is sufficient space. They may even make the border box of said element narrower than defined by section 10.3.3. CSS2 does not define when a UA may put said element next to the float or by how much said element may become narrower.
-
-overflowで「visible」以外ではblock formatting contextsが新規に設定される。block formatting contextが設定された要素はその要素自身と同じblock formatting contextにあるfloatのマージンボックスと重なってはいけないということになっている（CSS2では要素がfloatの隣に配置されるタイミングやどこまで幅を狭くできるかについての定義はない）。そのため、float同士が（隣に十分なスペースがあれば）隣り合うように、floatとoverflow:hiddenも下に回りこまないように隣り合わせることができる。

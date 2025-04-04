@@ -2,13 +2,15 @@
 title: ThickBox対応したFlickrのAction Streamを作成する
 date: 2009-03-29T07:26:10.000Z
 categories:
-- web
+  - web
 tags:
-- mt
+  - mt
+excerpt: "Action Streamで得たFlickrのActivityをThickBoxを利用して表示したいなと思いたち、そこで独自のAction Streamsプラグインを作成するのページと、既存のAction Stream pluginとGoogle検索などを見ながら、自分用のFlickr for thickbox pluginを作成してみました。"
 ---
-Action Streamで得たFlickrのActivityをThickBoxを利用して表示したいなと思いたち、そこで[独自のAction Streamsプラグインを作成する](http://www.movabletype.jp/documentation/actionstreams/building_action_streams_plugin.html)のページと、既存のAction Stream pluginとGoogle検索などを見ながら、自分用のFlickr for thickbox pluginを作成してみました。
-<!-- more -->
-作成したconfig.yaml（action_streams部分のみ）はこんな感じ。
+
+Action Stream で得た Flickr の Activity を ThickBox を利用して表示したいなと思いたち、そこで[独自の Action Streams プラグインを作成する](http://www.movabletype.jp/documentation/actionstreams/building_action_streams_plugin.html)のページと、既存の Action Stream plugin と Google 検索などを見ながら、自分用の Flickr for thickbox plugin を作成してみました。
+
+作成した config.yaml（action_streams 部分のみ）はこんな感じ。
 
 ```
 action_streams:
@@ -48,13 +50,13 @@ callbacks:
 
 ```
 
-scraperで行ったのは、thickbox　実行時に表示するための大きな画像(thumbnail\_b)のURLを取得するために　'thumbnail\_b'=> \['@src',sub { s/\_m\\.jpg/\_b\\.jpg/}\]　みたいなことをやろうとしてのことだったのですが、Action Stream　のplugin上ではうまく動かず・・。結局、callbacksで置換するようにしました。scraperでやる必然性は特になく、atomでもrssでも同じことはできそう。
+scraper で行ったのは、thickbox 　実行時に表示するための大きな画像(thumbnail_b)の URL を取得するために　'thumbnail_b'=> \['@src',sub { s/\_m\\.jpg/\_b\\.jpg/}\]　みたいなことをやろうとしてのことだったのですが、Action Stream 　の plugin 上ではうまく動かず・・。結局、callbacks で置換するようにしました。scraper でやる必然性は特になく、atom でも rss でも同じことはできそう。
 
 そして実際に表示させてみたのですが、思ったより収まりが悪い。外観についてはまたそのうち考えてみよう・・
 
 **そして追記。**
 
-やはりatomから取得する方法変えてみました。あとストリームの名前を「flickr」にして、既存のflickrストリームを上書きするかたちにしました（それに伴ってfavoritesも一応追加）。pluginを追加する前のflickrのストリームには「thumbnail_b」がないので、リンクをクリックしても何も表示されないのが難点。
+やはり atom から取得する方法変えてみました。あとストリームの名前を「flickr」にして、既存の flickr ストリームを上書きするかたちにしました（それに伴って favorites も一応追加）。plugin を追加する前の flickr のストリームには「thumbnail_b」がないので、リンクをクリックしても何も表示されないのが難点。
 
 ```
 action_streams:

@@ -2,14 +2,14 @@
 title: Sass / Compass をインストール
 date: 2012-09-09T13:17:00.000Z
 categories:
-- web
+  - web
 tags:
-- ruby
-- sass
+  - ruby
+  - sass
+excerpt: "前回（RVM / JewelryBox / Homebrew をインストール - メモログ）でインストールした1.9.3に、SassとCompassをインストールするの巻。SassはCSSの記述をサポートしてくれるプリプロセッサー。CompassはSassのお役立ちMixinをたくさん用意しているCSS authoring framework。"
 ---
-前回（[RVM / JewelryBox / Homebrew をインストール - メモログ](/blog//2012/09/rvm_jewelrybox_homebrew/)）でインストールした1.9.3に、SassとCompassをインストールするの巻。[Sass](http://sass-lang.com/)はCSSの記述をサポートしてくれるプリプロセッサー。[Compass](http://compass-style.org/)はSassのお役立ちMixinをたくさん用意しているCSS authoring framework。
 
-<!-- more -->
+前回（[RVM / JewelryBox / Homebrew をインストール - メモログ](/blog//2012/09/rvm_jewelrybox_homebrew/)）でインストールした 1.9.3 に、Sass と Compass をインストールするの巻。[Sass](http://sass-lang.com/)は CSS の記述をサポートしてくれるプリプロセッサー。[Compass](http://compass-style.org/)は Sass のお役立ち Mixin をたくさん用意している CSS authoring framework。
 
 ### Sass / Compass のインストール
 
@@ -21,7 +21,7 @@ gem install compass
 
 ```
 
-### Sassの使い方
+### Sass の使い方
 
 コマンドライン上で下記のコマンドを実行。
 
@@ -30,13 +30,13 @@ sass --watch foobar.scss:foobar.css
 
 ```
 
-これでfoobar.scssを編集保存すると、foobar.cssにCSSが生成される。
+これで foobar.scss を編集保存すると、foobar.css に CSS が生成される。
 
 さらなる使い方は[Tutorial](http://sass-lang.com/tutorial.html)（[日本語が便利](http://hail2u.net/documents/sass-tutorial.html)）を読むと一通り分かる。
 
-### Compassの使い方
+### Compass の使い方
 
-Compassでは最初にプロジェクトを作成して、作成したプロジェクトでwatchする。
+Compass では最初にプロジェクトを作成して、作成したプロジェクトで watch する。
 
 ```
 compass create foobar
@@ -45,14 +45,14 @@ watch
 
 ```
 
-sassで--compassオプションを使って使用することもできる。
+sass で--compass オプションを使って使用することもできる。
 
 ```
 sass --watch foobar.scss:foobar.css --compass
 
 ```
 
-たとえばCompassを使ってlinear-gradientを作成する場合は下記のように、必要なpartialをimportして、[compassの書式](http://compass-style.org/reference/compass/css3/images/)にあわせて記述する。
+たとえば Compass を使って linear-gradient を作成する場合は下記のように、必要な partial を import して、[compass の書式](http://compass-style.org/reference/compass/css3/images/)にあわせて記述する。
 
 ```
 @import "compass/css3/images";
@@ -63,7 +63,7 @@ sass --watch foobar.scss:foobar.css --compass
 
 ```
 
-下記のようなCSSになる（-ms-は入らないのか）。
+下記のような CSS になる（-ms-は入らないのか）。
 
 ```
 #foobar {
@@ -75,11 +75,11 @@ sass --watch foobar.scss:foobar.css --compass
 
 ```
 
-さらなる使い方は[Compass Help | Compass Documentation](http://compass-style.org/help/)を参照。日本語のドキュメントとしては、[Sass入門](https://gihyo.jp/dp/ebook/2012/978-4-7741-5123-6)にチュートリアル的なのがある。[Compassを触ってみて、CSS3のモジュールを眺めてみる。｜linker journal｜linker](http://linker.in/journal/2011/07/compasscss3.php)も参考に。
+さらなる使い方は[Compass Help | Compass Documentation](http://compass-style.org/help/)を参照。日本語のドキュメントとしては、[Sass 入門](https://gihyo.jp/dp/ebook/2012/978-4-7741-5123-6)にチュートリアル的なのがある。[Compass を触ってみて、CSS3 のモジュールを眺めてみる。｜ linker journal ｜ linker](http://linker.in/journal/2011/07/compasscss3.php)も参考に。
 
-### 自分でmixinを書く
+### 自分で mixin を書く
 
-compassは便利だけど、都合にあわせて自分でmixin用意するなりした方が良い場合もあるかもしれない。たとえばvendor prefixをつけたいだけなら[@each](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#each-directive)を使うのでもいい。
+compass は便利だけど、都合にあわせて自分で mixin 用意するなりした方が良い場合もあるかもしれない。たとえば vendor prefix をつけたいだけなら[@each](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#each-directive)を使うのでもいい。
 
 ```
 #foobar{
@@ -90,7 +90,7 @@ compassは便利だけど、都合にあわせて自分でmixin用意するな�
 
 ```
 
-@eachの最後のnullは、non prefix用。Sass上で使われるnullは、#{}で指定された場合そこに何も出力しない。
+@each の最後の null は、non prefix 用。Sass 上で使われる null は、#{}で指定された場合そこに何も出力しない。
 
 ```
 #foobar {
@@ -105,7 +105,7 @@ compassは便利だけど、都合にあわせて自分でmixin用意するな�
 
 ### カスタムファンクションを書く
 
-rubyで自分用のカスタムファンクションを書くという手もある。
+ruby で自分用のカスタムファンクションを書くという手もある。
 
 ```
 module Sass::Script::Functions
@@ -124,7 +124,7 @@ end
 
 ```
 
-sassの-rオプションで用意したスクリプトをrequireする（ 上記のrubyスクリプトが~/Desktop/sample.rbという名前で存在すると想定）。
+sass の-r オプションで用意したスクリプトを require する（ 上記の ruby スクリプトが~/Desktop/sample.rb という名前で存在すると想定）。
 
 ```
 sass --watch foobar.scss:foobar.css -r /Users/username/Desktop/sample.rb
@@ -155,6 +155,6 @@ sass --watch foobar.scss:foobar.css -r /Users/username/Desktop/sample.rb
 
 ```
 
-となる。colorとpercentageを分けて指定できるようになっている。
+となる。color と percentage を分けて指定できるようになっている。
 
-という感じ。compassで簡単に対応可能かをみつつ、都合にあわせて自作mixinを作るというのが良いかもしれない。
+という感じ。compass で簡単に対応可能かをみつつ、都合にあわせて自作 mixin を作るというのが良いかもしれない。

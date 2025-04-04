@@ -5,14 +5,16 @@ featured:
   author: Pavan Prasad
   authorLink: https://unsplash.com/@light_rays?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2022-11-07 17:30:00
+excerpt: "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。"
 ---
-（そんなことするかどうかは置いておいて）たとえば[docker-node-npm-scripti-permission-issue-demo](https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo)を[Github codespaces](https://github.co.jp/features/codespaces)上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。<!-- more -->
 
-原因は`npm run build`の中身が `npm run tsc` になっているため。rootユーザーで別のユーザーが所有権を持つディレクトリで実行すると問題になる。
+（そんなことするかどうかは置いておいて）たとえば[docker-node-npm-scripti-permission-issue-demo](https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo)を[Github codespaces](https://github.co.jp/features/codespaces)上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーの WARN が発生する。
 
-解決方法はDocker containerを実行するユーザーを`node`に変更するとか、[npm config](https://docs.npmjs.com/cli/v6/using-npm/config#cache)で、`npm config set cache /tmp`と設定するとか（`export npm_config_cache=/tmp`でもいける雰囲気）、所有権を調整すると解決する。解決方法は他にもいろいろあると思う。
+原因は`npm run build`の中身が `npm run tsc` になっているため。root ユーザーで別のユーザーが所有権を持つディレクトリで実行すると問題になる。
 
-再現手順は[docker-node-npm-scripti-permission-issue-demo](https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo)のcodespacesのVS codeの中でターミナルを開いて、以下のような感じでDocker containerを起動して、`npm ci`と`npm run build`を実行するとエラーを再現することができる。動作環境はNode.js 16.18.0でnpmは8.19.2。たぶんNode.js 18.xでも発生する（npmのバージョンは変わらないので）。
+解決方法は Docker container を実行するユーザーを`node`に変更するとか、[npm config](https://docs.npmjs.com/cli/v6/using-npm/config#cache)で、`npm config set cache /tmp`と設定するとか（`export npm_config_cache=/tmp`でもいける雰囲気）、所有権を調整すると解決する。解決方法は他にもいろいろあると思う。
+
+再現手順は[docker-node-npm-scripti-permission-issue-demo](https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo)の codespaces の VS code の中でターミナルを開いて、以下のような感じで Docker container を起動して、`npm ci`と`npm run build`を実行するとエラーを再現することができる。動作環境は Node.js 16.18.0 で npm は 8.19.2。たぶん Node.js 18.x でも発生する（npm のバージョンは変わらないので）。
 
 ```bash
 docker build -f Dockerfile -t demo .
@@ -61,28 +63,16 @@ npm ERR! You can rerun the command with `--loglevel=verbose` to see the logs in 
 
 以下は詳細。
 
-npmのscriptは[@npmcli/run-script](https://github.com/npm/run-script)が実行スクリプトで`/usr/local/lib/node_modules/npm/node_modules/@npmcli`にある。これのバージョンは4.2.1なので、[run-script.js](https://github.com/npm/run-script/blob/v4.2.1/lib/run-script.js)が実際の処理になる。これを[run-script-pkg.js](https://github.com/npm/run-script/blob/v4.2.1/lib/run-script-pkg.js)、[@npmcli/promise-spawn](https://github.com/npm/promise-spawn)と辿っていくと、[promise-spawn/lib/index.js](https://github.com/npm/promise-spawn/blob/v3.0.0/lib/index.js)に到達する。
+npm の script は[@npmcli/run-script](https://github.com/npm/run-script)が実行スクリプトで`/usr/local/lib/node_modules/npm/node_modules/@npmcli`にある。これのバージョンは 4.2.1 なので、[run-script.js](https://github.com/npm/run-script/blob/v4.2.1/lib/run-script.js)が実際の処理になる。これを[run-script-pkg.js](https://github.com/npm/run-script/blob/v4.2.1/lib/run-script-pkg.js)、[@npmcli/promise-spawn](https://github.com/npm/promise-spawn)と辿っていくと、[promise-spawn/lib/index.js](https://github.com/npm/promise-spawn/blob/v3.0.0/lib/index.js)に到達する。
 
-ここで実行している[infer-owner](https://github.com/npm/infer-owner)は、スクリプトを実行するディレクトリの所有権を推測して、ディレクトリのuid、gidを返してくれる。run-script.jsではこれを利用して[child_process.spawn](https://nodejs.org/docs/latest-v16.x/api/child_process.html#child_processspawncommand-args-options)をuid, gid付きで実行する。
+ここで実行している[infer-owner](https://github.com/npm/infer-owner)は、スクリプトを実行するディレクトリの所有権を推測して、ディレクトリの uid、gid を返してくれる。run-script.js ではこれを利用して[child_process.spawn](https://nodejs.org/docs/latest-v16.x/api/child_process.html#child_processspawncommand-args-options)を uid, gid 付きで実行する。
 
-codespacesのディレクトリはcodespace(uid:1000)がオーナーで、Docker containerのユーザーはデフォルトではroot（uid:0）なので、codespaceが所有するディレクトリでrootユーザーが処理を実行する形になる。
+codespaces のディレクトリは codespace(uid:1000)がオーナーで、Docker container のユーザーはデフォルトでは root（uid:0）なので、codespace が所有するディレクトリで root ユーザーが処理を実行する形になる。
 
-具体的にはrootユーザーがnpm scriptが実行したとき、uid:1000, gid:0で[child_process.spawn](https://nodejs.org/docs/latest-v16.x/api/child_process.html#child_processspawncommand-args-options)を実行する。ここまでは特に問題ない。
+具体的には root ユーザーが npm script が実行したとき、uid:1000, gid:0 で[child_process.spawn](https://nodejs.org/docs/latest-v16.x/api/child_process.html#child_processspawncommand-args-options)を実行する。ここまでは特に問題ない。
 
-npm scriptの中で`npm run`を記述していると、`run-script`の中で`run-script`を実行する状態になる（npm scriptもnpm runも`run-script`で実行するので）。
+npm script の中で`npm run`を記述していると、`run-script`の中で`run-script`を実行する状態になる（npm script も npm run も`run-script`で実行するので）。
 
-つまり、root（uid:0）ユーザーが、uid:1000, gid:0で実行した処理の中で、uid:1000, gid:0で処理を実行する。すると[npm cache](https://docs.npmjs.com/cli/v8/commands/npm-cache#configuration)のディレクトリ、`/root/.npm` に対してログを出力しようとしてパーミッションエラーとなる雰囲気。なぜrootユーザーのキャッシュディレクトリを参照するとエラーになるかは理解できていない。run-scriptを実行してるユーザーのuidでファイルアクセスしようとするためなのだろうか。
+つまり、root（uid:0）ユーザーが、uid:1000, gid:0 で実行した処理の中で、uid:1000, gid:0 で処理を実行する。すると[npm cache](https://docs.npmjs.com/cli/v8/commands/npm-cache#configuration)のディレクトリ、`/root/.npm` に対してログを出力しようとしてパーミッションエラーとなる雰囲気。なぜ root ユーザーのキャッシュディレクトリを参照するとエラーになるかは理解できていない。run-script を実行してるユーザーの uid でファイルアクセスしようとするためなのだろうか。
 
-なので、Docker containerの実行ユーザーをrootではないユーザーに変更するか、rootユーザーを維持したければ、スクリプト実行前に`npm config set cache /tmp`みたいな感じで、キャッシュディレクトリを適当な場所に変更しておけば、問題は発生しない。
-
-----
-
-ところで、この[infer-owner](https://github.com/npm/infer-owner)による処理、[feat: remove infer-owner](https://github.com/npm/promise-spawn/pull/40)のプルリクエストで削除されることになった。@npmcli/promise-spawnの5.0以降は同じ問題は発生しなくなる。npm cliでは[9.0.1](https://github.com/npm/cli/releases/tag/v9.0.1)で5.0がインストールされるようになる。Node.jsでは[deps: upgrade npm to 9.1.0](https://github.com/nodejs/node/pull/45323)にて進行中のよう。
-
-しかしながら、run-scriptの処理は（[npm install](https://github.com/npm/cli/blob/v8.19.2/lib/commands/install.js#L158) / 詳細は未確認）でも利用されている。つまり今までは、npm installを実行するユーザーが誰であれ、インストール先のディレクトリのオーナーでインストールしてくれるということであり、インストールする実行ユーザーを気にしないで済んでいた。npm v9.0.1以降はそうはいかなくなる。
-
-たとえば、Docker container中で、rootユーザーで`npm ci`したりして、node_modulesの中だけ所有権がrootになってしまったり、npm scriptで生成したファイルの所有権がrootユーザーになったり（生成したファイルを他ユーザーで削除しようとしてエラーになったり）などという問題が発生する可能性がある。
-
-なのでnpm install、npm scriptの実行するユーザーは今のうちに見直しておくのが良いかもしれない。
-
-という長いメモであった。
+なので、Docker container の実行ユーザーを root ではないユーザーに変更するか、root ユーザーを維持したければ、スクリプト実行前に`npm config set cache /tmp`みたいな感じで、キャッシュディレクトリを適当な場所に変更しておけば、問題は発生しない。

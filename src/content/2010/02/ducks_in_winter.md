@@ -2,13 +2,13 @@
 title: カモづくし
 date: 2010-02-15T22:00:00.000Z
 categories:
-- 写真
+  - 写真
 tags:
-- photo
+  - photo
+excerpt: "![井の頭公園/オナガガモ](http://farm3.static.flickr.com/2685/4355668565_ebb6d881cc_b.jpg)"
 ---
-[![井の頭公園/オナガガモ](http://farm3.static.flickr.com/2685/4355668565_ebb6d881cc.jpg)](http://farm3.static.flickr.com/2685/4355668565_ebb6d881cc_b.jpg)
 
-<!-- more -->
+[![井の頭公園/オナガガモ](http://farm3.static.flickr.com/2685/4355668565_ebb6d881cc.jpg)](http://farm3.static.flickr.com/2685/4355668565_ebb6d881cc_b.jpg)
 
 冬の井の頭公園と小金井公園（の水場）にはいろんなカモが訪れるのです。ですから私は買いました。[カモハンドブック](http://www.amazon.co.jp/gp/product/4829921463?ie=UTF8&tag=yutakayamaguc-22&linkCode=xm2&camp=247&creativeASIN=4829921463)を！
 
@@ -16,7 +16,7 @@ tags:
 
 [![井の頭公園/オナガガモ](http://farm5.static.flickr.com/4018/4356416350_64bd4c0bdd.jpg)](http://farm5.static.flickr.com/4018/4356416350_64bd4c0bdd_b.jpg)
 
-上のはたぶんオナガガモの雌と思います。雌の方はけっこう判別がむずかしくて自信はありません。なお、カモハンドブックのp24には淡水ガモの雌の識別方法が記載されています。便利！
+上のはたぶんオナガガモの雌と思います。雌の方はけっこう判別がむずかしくて自信はありません。なお、カモハンドブックの p24 には淡水ガモの雌の識別方法が記載されています。便利！
 
 [![井の頭公園/ハジビロガモ](http://farm5.static.flickr.com/4033/4355660785_212a82f1aa.jpg)](http://farm5.static.flickr.com/4033/4355660785_212a82f1aa_b.jpg)[![小金井公園/マガモ](http://farm3.static.flickr.com/2570/4356398082_3c0884851e.jpg)](http://farm3.static.flickr.com/2570/4356398082_3c0884851e_b.jpg)
 

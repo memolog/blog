@@ -2,25 +2,27 @@
 title: inputでwidth&#x3a;100&#x25;を使うと若干はみ出る
 date: 2012-06-08T14:21:00.000Z
 categories:
-- web
+  - web
 tags:
-- css
-- html
+  - css
+  - html
 featured:
   image: henrique-ferreira-306706-unsplash
   author: Henrique Ferreira
   authorLink: https://unsplash.com/photos/ySgSnJdPhZg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+excerpt: "input要素にwidth:100&#x25;;を指定すると、微妙に包含ブロックからはみ出す。  なんでだろうなあと思っていたんですけど、input要素にはブラウザのデフォルトでpaddingやborderが入っているので、width:100&#x25;とするとpaddingやborderのサイズ分はみ出してしまうということでした。"
 ---
-input要素にwidth:100&#x25;;を指定すると、微妙に包含ブロックからはみ出す。
 
-なんでだろうなあと思っていたんですけど、input要素にはブラウザのデフォルトでpaddingやborderが入っているので、width:100&#x25;とするとpaddingやborderのサイズ分はみ出してしまうということでした。<!-- more -->
+input 要素に width:100&#x25;;を指定すると、微妙に包含ブロックからはみ出す。
+
+なんでだろうなあと思っていたんですけど、input 要素にはブラウザのデフォルトで padding や border が入っているので、width:100&#x25;とすると padding や border のサイズ分はみ出してしまうということでした。
 
 分かってしまうと大した話ではない。
 
-なので、input要素にwidth:100&#x25;に広げるときは、box-sizingをborder-boxに設定するか、padding/borderを削るとかすると、はみ出さずにはまる。うむ。
+なので、input 要素に width:100&#x25;に広げるときは、box-sizing を border-box に設定するか、padding/border を削るとかすると、はみ出さずにはまる。うむ。
 
 ```css
-input[type="text"]{
+input[type="text"] {
   width: 100%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -28,11 +30,11 @@ input[type="text"]{
 }
 ```
 
-そして蛇足ですけど、[Paul Irish - Google+ - box-sizing: border-box; ...is clearly superior to our...](http://paulirish.com/wp-content/uploads/2011/gplus-boxsizing.html)あたりの話を参考に確認したら、入力系のinput要素のうちtype=searchだけがborder-boxを使用しているみたいです（Firefoxは現状ではcontent-box）。searchのUI的にborder-boxの方が便利ということなのだろうか。
+そして蛇足ですけど、[Paul Irish - Google+ - box-sizing: border-box; ...is clearly superior to our...](http://paulirish.com/wp-content/uploads/2011/gplus-boxsizing.html)あたりの話を参考に確認したら、入力系の input 要素のうち type=search だけが border-box を使用しているみたいです（Firefox は現状では content-box）。search の UI 的に border-box の方が便利ということなのだろうか。
 
-とにかく。たとえばsearchとtext, email, urlなど別のtypeで同じwidthを指定したら、searchだけ少し幅が狭いみたいな現象が発生することになる。いっそのことinput要素はborder-boxに統一した方が便利な気がしなくもない。
+とにかく。たとえば search と text, email, url など別の type で同じ width を指定したら、search だけ少し幅が狭いみたいな現象が発生することになる。いっそのこと input 要素は border-box に統一した方が便利な気がしなくもない。
 
-そのへん、[normalize.css](http://necolas.github.com/normalize.css/)では、content-boxに統一するようにCSSが用意されていました（一緒にsearch用の外観も外しているんですけど、それをするなら普通にtype=text使えば良いんじゃないかと思わなくもない）。
+そのへん、[normalize.css](http://necolas.github.com/normalize.css/)では、content-box に統一するように CSS が用意されていました（一緒に search 用の外観も外しているんですけど、それをするなら普通に type=text 使えば良いんじゃないかと思わなくもない）。
 
 ```css
 /*
@@ -41,10 +43,10 @@ input[type="text"]{
  */
 
 input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; /* 2 */
-    box-sizing: content-box;
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
 }
 
 /*
@@ -53,6 +55,6 @@ input[type="search"] {
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 ```

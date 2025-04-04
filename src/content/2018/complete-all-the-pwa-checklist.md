@@ -5,11 +5,12 @@ featured:
   author: CloudVisual
   authorLink: https://unsplash.com/photos/sm8OE9daK2A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2018-07-14 11:32:41
+excerpt: "たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、Lighthouse の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応しました。"
 ---
 
-たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、[Lighthouse](https://developers.google.com/web/tools/lighthouse/?hl=ja) の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応しました。<!-- more -->
+たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、[Lighthouse](https://developers.google.com/web/tools/lighthouse/?hl=ja) の結果を見るたびに「PWA のチェックリストだけ 100 点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということで PWA のチェックリストを満たすべく、Service Worker と App manifest に対応しました。
 
-Service Worker をサイトに追加するのはとても簡単で、Service Worker 用のスクリプトファイルを用意して、`navigator.servceWoeker.register` で読み込むだけ。HTTPSでないといけないとか、スクリプトファイルの置き場所がscopeと異なる場合は `Service-Worker-Allowed` のヘッダーが必要とか、いろいろ考慮すべきところはあるけれど、Github pagesはHTTPSだし、ファイルもどこにでも置けるので特に気にしなくても大丈夫。
+Service Worker をサイトに追加するのはとても簡単で、Service Worker 用のスクリプトファイルを用意して、`navigator.servceWoeker.register` で読み込むだけ。HTTPS でないといけないとか、スクリプトファイルの置き場所が scope と異なる場合は `Service-Worker-Allowed` のヘッダーが必要とか、いろいろ考慮すべきところはあるけれど、Github pages は HTTPS だし、ファイルもどこにでも置けるので特に気にしなくても大丈夫。
 
 ```javascript
 <script async>
@@ -19,20 +20,26 @@ Service Worker をサイトに追加するのはとても簡単で、Service Wor
 </script>
 ```
 
-service-worker.js では、今のところ最新10件分のHTMLとfeatured imageに使っているsvgファイルをプリキャッシュするようにした。
+service-worker.js では、今のところ最新 10 件分の HTML と featured image に使っている svg ファイルをプリキャッシュするようにした。
 
-最新10件のポストデータを得るのに、まず script ディレクトリに service-worker.js を入れて、generatorを登録。
+最新 10 件のポストデータを得るのに、まず script ディレクトリに service-worker.js を入れて、generator を登録。
 
 ```javascript
-hexo.extend.generator.register('service-worker', (locals) => {
-  const posts = locals.posts.sort('-date').filter(post => post.draft !== true).limit(10).toArray();
+hexo.extend.generator.register("service-worker", (locals) => {
+  const posts = locals.posts
+    .sort("-date")
+    .filter((post) => post.draft !== true)
+    .limit(10)
+    .toArray();
 
-  const lastUpdated = posts.sort((a, b) => a.updated < b.updated ? 1 : -1 )[0].updated.valueOf();
+  const lastUpdated = posts
+    .sort((a, b) => (a.updated < b.updated ? 1 : -1))[0]
+    .updated.valueOf();
 
-  const precacheList = posts.map(post => post.path);
-  precacheList.unshift('/');
+  const precacheList = posts.map((post) => post.path);
+  precacheList.unshift("/");
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     const featuredImage = post.featured && post.featured.image;
     if (featuredImage) {
       precacheList.push(`/assets/images/${featuredImage}/${featuredImage}.svg`);
@@ -40,13 +47,13 @@ hexo.extend.generator.register('service-worker', (locals) => {
   });
 
   return {
-    path: 'service-worker.js',
+    path: "service-worker.js",
     data: {
       precacheList: precacheList,
-      lastUpdated: lastUpdated
+      lastUpdated: lastUpdated,
     },
-    layout: 'service-worker'
-  }
+    layout: "service-worker",
+  };
 });
 ```
 
@@ -61,14 +68,15 @@ const precacheList = [
 
 詳細は [service-worker.js](https://github.com/memolog/blog/blob/master/scripts/service-worker.js) と [service-worker.ejs](https://github.com/memolog/blog/blob/master/themes/little-code-bricks/layout/service-worker.ejs) を参照。
 
-App Manifest については静的なファイルを用意して、manifestへのリンクを追加しただけ。 theme-color はLight House がそう言ってくるので追加している。
+App Manifest については静的なファイルを用意して、manifest へのリンクを追加しただけ。 theme-color は Light House がそう言ってくるので追加している。
+
 ```html
-  <link rel="manifest" href="/manifest.json" >
-  <meta name="theme-color" content="white">
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="white" />
 ```
 
 詳細は [manifest.json](https://github.com/memolog/blog/blob/master/themes/little-code-bricks/source/manifest.json)。ただ値を入れるだけではあるけど、[スプラッシュスクリーンを有効にする](https://developers.google.com/web/tools/lighthouse/audits/custom-splash-screen)ためにいくつか要件があり、それを満たすようにアイコン画像を用意している。
 
-そして Lighthouse の結果。100点になりました👍
+そして Lighthouse の結果。100 点になりました 👍
 
 ![](/assets/images/lighthouse-100s.png)

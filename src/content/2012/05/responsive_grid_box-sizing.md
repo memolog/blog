@@ -2,18 +2,18 @@
 title: responsive grid と box-sizing
 date: 2012-05-21T15:25:46.000Z
 categories:
-- web
+  - web
 tags:
-- css3
-- responsive-design
+  - css3
+  - responsive-design
+excerpt: "Building a modern grid system | Tutorial | .net magazineにwidthをパーセントで指定したresponsiveなgrid（で、かつネストできてサイズの変更が簡単で..云々）を作成するという話が掲載されている。"
 ---
-[Building a modern grid system | Tutorial | .net magazine](http://www.netmagazine.com/tutorials/building-modern-grid-system)にwidthをパーセントで指定したresponsiveなgrid（で、かつネストできてサイズの変更が簡単で..云々）を作成するという話が掲載されている。
 
-<!-- more -->
+[Building a modern grid system | Tutorial | .net magazine](http://www.netmagazine.com/tutorials/building-modern-grid-system)に width をパーセントで指定した responsive な grid（で、かつネストできてサイズの変更が簡単で..云々）を作成するという話が掲載されている。
 
-このgridが便利かどうかは使ってみないとなんともですが、その中で紹介されているbox-sizingというプロパティが面白い（ずいぶん前からあるみたいですけど）。box-sizingではwidth/heightの数値にどの範囲までを含めるかを設定することができる（参照:[box-sizing - MDN](https://developer.mozilla.org/En/CSS/Box-sizing)）。初期設定は標準モードで使われる「content-box（widthはコンテンツのエリアのみでpadding/border/marginは含まれない）」。これを「border-box」に設定すると、widthにpaddingとborderを含めることができる（IE6の互換モードと同じ）。
+この grid が便利かどうかは使ってみないとなんともですが、その中で紹介されている box-sizing というプロパティが面白い（ずいぶん前からあるみたいですけど）。box-sizing では width/height の数値にどの範囲までを含めるかを設定することができる（参照:[box-sizing - MDN](https://developer.mozilla.org/En/CSS/Box-sizing)）。初期設定は標準モードで使われる「content-box（width はコンテンツのエリアのみで padding/border/margin は含まれない）」。これを「border-box」に設定すると、width に padding と border を含めることができる（IE6 の互換モードと同じ）。
 
-たとえば画像にborderで枠をつけつつ、横幅いっぱいに表示したいというときに、便利。content-boxのままだと、borderの1pxとかpaddingの幅をある程度考慮してwidthを調整しないといけなくなるけど、border-boxにしてしておけば
+たとえば画像に border で枠をつけつつ、横幅いっぱいに表示したいというときに、便利。content-box のままだと、border の 1px とか padding の幅をある程度考慮して width を調整しないといけなくなるけど、border-box にしてしておけば
 
 ```
 img.image-full{
@@ -27,6 +27,6 @@ img.image-full{
 
 ```
 
-みたいな感じで簡単に指定できる。IE8以降ではないと使用できないけど、[IE7/6用のpolyfill](https://github.com/Schepp/box-sizing-polyfill)が存在するので、IE6にも適用したい場合はそれを使うという手がある（試してないけど）。
+みたいな感じで簡単に指定できる。IE8 以降ではないと使用できないけど、[IE7/6 用の polyfill](https://github.com/Schepp/box-sizing-polyfill)が存在するので、IE6 にも適用したい場合はそれを使うという手がある（試してないけど）。
 
-responsiveなレイアウトではwidthには&#x25;が使われるので、border-boxを使うことでborderとpaddingを気にしなくて良いというのはそうとう便利な気がする（特にborderは&#x25;で指定できないのできびしい）。[\* { box-sizing: border-box } FTW « Paul Irish](http://paulirish.com/2012/box-sizing-border-box-ftw/)では、さらに全称セレクタでborder-boxを指定するというアイデアが紹介されている（box-sizingの指定は継承されない）。
+responsive なレイアウトでは width には&#x25;が使われるので、border-box を使うことで border と padding を気にしなくて良いというのはそうとう便利な気がする（特に border は&#x25;で指定できないのできびしい）。[\* { box-sizing: border-box } FTW « Paul Irish](http://paulirish.com/2012/box-sizing-border-box-ftw/)では、さらに全称セレクタで border-box を指定するというアイデアが紹介されている（box-sizing の指定は継承されない）。

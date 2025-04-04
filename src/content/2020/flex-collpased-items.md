@@ -5,7 +5,9 @@ featured:
   author: Nong Vang
   authorLink: https://unsplash.com/@californong?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2020-04-12 19:41:53
+excerpt: "今回は4.4. Collapsed Itemsについて<!-- more  -->  > Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, produ"
 ---
+
 今回は[4.4. Collapsed Items](https://www.w3.org/TR/css-flexbox-1/#visibility-collapse)について<!-- more  -->
 
 > Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, producing an effect similar to visibility:collapse on a table-row or table-column: the collapsed flex item is removed from rendering entirely, but leaves behind a "strut" that keeps the flex line’s cross-size stable. Thus, if a flex container has only one flex line, dynamically collapsing or uncollapsing items may change the flex container’s main size, but is guaranteed to have no effect on its cross size and won’t cause the rest of the page’s layout to "wobble". Flex line wrapping is re-done after collapsing, however, so the cross-size of a flex container with multiple lines might or might not change.
@@ -26,10 +28,12 @@ flex itemに`visibility:collapse`を指定するとflex itemが折り畳まれ�
 @media (min-width: 60em) {
   /* 十分な空間があるときだけ2カラムのレイアウトになる
   （文字サイズはデフォルトのサイズから相対的に決まる） */
-  div { display: flex; }
+  div {
+    display: flex;
+  }
   #main {
-    flex: 1;         /* メイン部分は残った空間全てを使う */
-    order: 1;        /* （右の）ナビゲーションの後に配置する */
+    flex: 1; /* メイン部分は残った空間全てを使う */
+    order: 1; /* （右の）ナビゲーションの後に配置する */
     min-width: 12em; /* メインコンテンツのサイズを最適化する */
   }
 }
@@ -47,26 +51,25 @@ nav > ul > li:not(:target):not(:hover) > ul {
 
 ```html
 <div>
-  <article id="main">
-    Interesting Stuff to Read
-  </article>
+  <article id="main">Interesting Stuff to Read</article>
   <nav>
     <ul>
-      <li id="nav-about"><a href="#nav-about">About</a>
-        …
-      <li id="nav-projects"><a href="#nav-projects">Projects</a>
+      <li id="nav-about"><a href="#nav-about">About</a> …</li>
+
+      <li id="nav-projects">
+        <a href="#nav-projects">Projects</a>
         <ul>
-          <li><a href="…">Art</a>
-          <li><a href="…">Architecture</a>
-          <li><a href="…">Music</a>
+          <li><a href="…">Art</a></li>
+          <li><a href="…">Architecture</a></li>
+          <li><a href="…">Music</a></li>
         </ul>
-      <li id="nav-interact"><a href="#nav-interact">Interact</a>
-        …
+      </li>
+
+      <li id="nav-interact"><a href="#nav-interact">Interact</a> …</li>
     </ul>
   </nav>
 </div>
-<footer>
-…
+<footer>…</footer>
 ```
 
 `flex`ショートハンドは、以下のような定義になっている。
@@ -76,7 +79,7 @@ nav > ul > li:not(:target):not(:hover) > ul {
 `flex: 1`の場合、`flex: 1 1 0` と記述されるのと同じになる。未設定の初期値は `flex: 0 1 auto`となるのだが、[7.1.1. Basic Values of flex](https://www.w3.org/TR/css-flexbox-1/#flex-initial)に以下のような説明がついている。
 
 > **flex: initial**
-Equivalent to flex: 0 1 auto. (This is the initial value.) Sizes the item based on the width/height properties. (If the item’s main size property computes to auto, this will size the flex item based on its contents.) Makes the flex item inflexible when there is positive free space, but allows it to shrink to its minimum size when there is insufficient space. The alignment abilities or auto margins can be used to align flex items along the main axis.
+> Equivalent to flex: 0 1 auto. (This is the initial value.) Sizes the item based on the width/height properties. (If the item’s main size property computes to auto, this will size the flex item based on its contents.) Makes the flex item inflexible when there is positive free space, but allows it to shrink to its minimum size when there is insufficient space. The alignment abilities or auto margins can be used to align flex items along the main axis.
 
 flex itemはwidth/heightのプロパティに基づいてサイズ調整される（もしitemのmain sizeプロパティがautoと計算された場合、そのコンテンツを基にサイズが調整される）。空いてるスペースがある場合、flex itemは不変（inflexible）であるけど、十分なスペースがない場合は最小サイズまで縮小することができる。alignmentやauto marginsはmain axisに沿ってflex itemsを揃えるために使われる。
 
@@ -91,4 +94,3 @@ flex itemはwidth/heightのプロパティに基づいてサイズ調整され�
 > **Note**: Using visibility:collapse on any flex items will cause the flex layout algorithm to repeat partway through, re-running the most expensive steps. It’s recommended that authors continue to use display:none to hide items if the items will not be dynamically collapsed and uncollapsed, as that is more efficient for the layout engine. (Since only part of the steps need to be repeated when visibility is changed, however, 'visibility: collapse' is still recommended for dynamic cases.)
 
 flex itemにvisibility:collapseを使うことは、flexレイアウトのアルゴリズムを途中で繰り返すことになり、最も高コストなステップを再実行することになる。もしitemを動的に折り畳んだり展開したりしないなら、アイテムを非表示にするのには display:none を使うことを推奨する。レイアウトエンジンにとってその方が効率的だから。（しかしながら、visibilityが変わったらステップの一部は繰り返す必要があるので、動的に変更するケースにおいては `visibility: collapse` は推奨される）。
-

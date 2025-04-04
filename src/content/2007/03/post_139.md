@@ -2,19 +2,19 @@
 title: フォントのサイズを段階的に変更するボタン
 date: 2007-03-04T15:21:05.000Z
 categories:
-- web
+  - web
 tags:
-- javascript
+  - javascript
+excerpt: " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。"
 ---
-[![](http://ec2.images-amazon.com/images/P/4861004314.01._AA130_SCLZZZZZZZ_.jpg)](http://www.amazon.co.jp/exec/obidos/ASIN/4861004314/ref=nosim/yutakayamaguc-22) [Ajaxライブラリリファレンス](http://www.amazon.co.jp/exec/obidos/ASIN/4861004314/ref=nosim/yutakayamaguc-22)を参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。
 
-<!-- more -->
+[](http://www.amazon.co.jp/exec/obidos/ASIN/4861004314/ref=nosim/yutakayamaguc-22) [Ajax ライブラリリファレンス](http://www.amazon.co.jp/exec/obidos/ASIN/4861004314/ref=nosim/yutakayamaguc-22)を参考に「フォントのサイズを段階的に変更する」という Javascript を実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。
 
-スクリプトは、[prototype.js](http://www.prototypejs.org/)と[moo.fx](http://moofx.mad4milk.net/)をインクルードして、利用できる関数を利用するだけで完成。Javascriptはよくわからないのであまり効率的な書き方にはなっていないと思いますが、なんとなく動いているようです（IE未確認）。ライブラリすごい。
+スクリプトは、[prototype.js](http://www.prototypejs.org/)と[moo.fx](http://moofx.mad4milk.net/)をインクルードして、利用できる関数を利用するだけで完成。Javascript はよくわからないのであまり効率的な書き方にはなっていないと思いますが、なんとなく動いているようです（IE 未確認）。ライブラリすごい。
 
-[Ajaxライブラリリファレンス](http://www.amazon.co.jp/exec/obidos/ASIN/4861004314/ref=nosim/yutakayamaguc-22)（p183）では、fx.Text()という関数での利用例が記載されていたのですが、どうやらmoo.fx.jsが2.xにアップデートしたときに、関数の構成が変わったようです（おそらくより汎用的になった）。fx.Testの代わりに`divObj = new fx.Style("latest-posts","font-size",{duration:100});`というような感じで利用すると、うまく動作します。
+[Ajax ライブラリリファレンス](http://www.amazon.co.jp/exec/obidos/ASIN/4861004314/ref=nosim/yutakayamaguc-22)（p183）では、fx.Text()という関数での利用例が記載されていたのですが、どうやら moo.fx.js が 2.x にアップデートしたときに、関数の構成が変わったようです（おそらくより汎用的になった）。fx.Test の代わりに`divObj = new fx.Style("latest-posts","font-size",{duration:100});`というような感じで利用すると、うまく動作します。
 
-この関数では始めのサイズと終わりのサイズを指定することができるのですが、始めのサイズを固定値にすると連続的な動きにならないので、現在のサイズを取得してそれを参照するようにしてみました。現在のサイズを取得するのもprototype.jsのElement.getStyleを利用して取得しています。うーん、便利。
+この関数では始めのサイズと終わりのサイズを指定することができるのですが、始めのサイズを固定値にすると連続的な動きにならないので、現在のサイズを取得してそれを参照するようにしてみました。現在のサイズを取得するのも prototype.js の Element.getStyle を利用して取得しています。うーん、便利。
 
 同じ要領で画像のサイズをページ内で拡大したり縮小したりもできそうですね。ふむふむ。
 
@@ -22,7 +22,7 @@ tags:
 <script type="text/javascript" src="<$MTBlogURL$>prototype.js"></script>
 <script type="text/javascript" src="<$MTBlogURL$>moo/moo.fx.js"></script>
 <script type="text/javascript" src="<$MTBlogURL$>moo/moo.fx.pack.js"></script>
-   
+
 <script type="text/javascript"><!--
 window.onload = function (){
 divObj = new fx.Style("latest-posts","font-size",{duration:100});

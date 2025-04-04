@@ -2,19 +2,19 @@
 title: MTIfタグを利用したタブ型ナビゲーション
 date: 2007-09-12T17:14:00.000Z
 categories:
-- web
+  - web
 tags:
-- css
-- mt
+  - css
+  - mt
+excerpt: "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム"
 ---
-*   [タグリファレンス：MTif](http://movabletype.jp/documentation/appendices/tags/if.html)
-*   [ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム](http://www.skyarc.co.jp/engineerblog/entry/3312.html)
 
-<!-- more -->
+- [タグリファレンス：MTif](http://movabletype.jp/documentation/appendices/tags/if.html)
+- [ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム](http://www.skyarc.co.jp/engineerblog/entry/3312.html)
 
-Movable Type 4 から追加されたMTIfタグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。作業内容的には[MTで奇数行、偶数行ごとに背景色をつける方法](/blog//2007/08/mt/)と変わりません。今回は分岐の条件をテンプレートの種類（名前）にしています。
+Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。作業内容的には[MT で奇数行、偶数行ごとに背景色をつける方法](/blog//2007/08/mt/)と変わりません。今回は分岐の条件をテンプレートの種類（名前）にしています。
 
-まずナビゲーションのHTMLがこちら。アクティブにしたいタブに「here」というclassを指定しています。MTUnless を併用するともう少しかしこいHTMLにできるかもしれません。
+まずナビゲーションの HTML がこちら。アクティブにしたいタブに「here」という class を指定しています。MTUnless を併用するともう少しかしこい HTML にできるかもしれません。
 
 ```
 <div id="banner-image">
@@ -40,7 +40,7 @@ MTIf name="entry_template"> here</MTIf><MTIf name="datebased_archive"> here</MTI
 
 ```
 
-CSSはこんな感じ。背景画像の上にタブを載せているので、表示がずれないようにピクセル単位でガチガチに指定しています（ulのマージンが入ることに気づかずに、しばらく悩んだ）。
+CSS はこんな感じ。背景画像の上にタブを載せているので、表示がずれないようにピクセル単位でガチガチに指定しています（ul のマージンが入ることに気づかずに、しばらく悩んだ）。
 
 ```
 /* top navigation */
@@ -51,7 +51,7 @@ CSSはこんな感じ。背景画像の上にタブを載せているので、�
 #topnavi-inner {padding-bottom:10px; padding-right:20px; text-align:center;}
 #topnavi ul {list-style-type:none; margin:0;}
 #topnavi li {width:54px; height:25px; margin:0 2px; float:right;}
-#topnavi li a {width:46px; height:17px; display:block; padding:4px; background-color:#e6e6e6; 
+#topnavi li a {width:46px; height:17px; display:block; padding:4px; background-color:#e6e6e6;
 font-size:11px; font-familiy:Verdana,sans-serif; opacity: 0.8;-moz-opacity: 0.8;filter: alpha(opacity=80);}
 #topnavi li a:link, #topnavi li a:visited {text-decoration:none;}
 #topnavi li.here a{background-color:#fff; opacity: 1;-moz-opacity: 1;filter: alpha(opacity=100);}

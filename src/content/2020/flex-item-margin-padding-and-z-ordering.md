@@ -1,11 +1,13 @@
 ---
-title: 'Flex Item Margin, Padding and Z-Ordering'
+title: "Flex Item Margin, Padding and Z-Ordering"
 featured:
   image: marc-klemm-rXDoLi1nqJo-unsplash
   author: Marc Klemm
   authorLink: https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2020-04-04 19:27:59
+excerpt: "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて<!-- more  -->  > **4.2. Flex"
 ---
+
 今回は[4.2. Flex Item Margins and Paddings](https://www.w3.org/TR/css-flexbox-1/#item-margins)と[4.3. Flex Item Z-Ordering](https://www.w3.org/TR/css-flexbox-1/#painting)について<!-- more  -->
 
 > **4.2. Flex Item Margins and Paddings**

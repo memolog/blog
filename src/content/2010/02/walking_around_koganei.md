@@ -2,13 +2,13 @@
 title: 小金井散歩：ツグミとハクセキレイ
 date: 2010-02-05T22:00:00.000Z
 categories:
-- 写真
+  - 写真
 tags:
-- photo
+  - photo
+excerpt: "![ツグミ](http://farm5.static.flickr.com/4040/4321663583_595fa06a4a_b.jpg)"
 ---
-[![ツグミ](http://farm5.static.flickr.com/4040/4321663583_595fa06a4a.jpg)](http://farm5.static.flickr.com/4040/4321663583_595fa06a4a_b.jpg)
 
-<!-- more -->
+[![ツグミ](http://farm5.static.flickr.com/4040/4321663583_595fa06a4a.jpg)](http://farm5.static.flickr.com/4040/4321663583_595fa06a4a_b.jpg)
 
 先週くらいに小金井周辺を散歩したときに名前の知らない野鳥に出会いまして。といっても名前の分かる野鳥はそれほど多くないのですけど、まあとにかく[ハケ森会・野川の自然・野鳥編](http://www.ne.jp/asahi/nogawa/hake/nature-bird.html)のサイトで調べてみたら、ツグミという名の鳥でした（上の写真）。代表的な冬鳥のひとつで、全国的に見ることができるそうです。
 

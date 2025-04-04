@@ -2,17 +2,19 @@
 title: Mac (tiger) で gem install mysql でエラー
 date: 2009-06-28T12:30:00.000Z
 categories:
-- web
+  - web
 tags:
-- mac
-- mysql
+  - mac
+  - mysql
+excerpt: "Mac(10.4.11)にgem istall mysqlしようとしたら、下記のようなエラーが出たのでメモ。  ```bash ~ sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config"
 ---
-Mac(10.4.11)にgem istall mysqlしようとしたら、下記のようなエラーが出たのでメモ。
+
+Mac(10.4.11)に gem istall mysql しようとしたら、下記のようなエラーが出たのでメモ。
 
 ```bash
 ~ sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
 
-<!-- more -->
+
 Password:
 Building native extensions.  This could take a while...
 ERROR:  Error installing mysql:
@@ -38,7 +40,7 @@ make: *** [mysql.bundle] Error 1
 
 ```
 
-いろいろ試してみましたが、最終的にはXcodeのバージョンが古かったのが原因みたいでした。2.5をWebからダウンロードしてインストールしたら、インストールすることができました。
+いろいろ試してみましたが、最終的には Xcode のバージョンが古かったのが原因みたいでした。2.5 を Web からダウンロードしてインストールしたら、インストールすることができました。
 
 ```bash
 ~ sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
@@ -51,7 +53,7 @@ Installing RDoc documentation for mysql-2.7...
 
 ```
 
-XcodeのバージョンアップにはApple developerサイトからダウンロードしてこないといけないのですが、Tiger用のXcodeはすでに最新のバージョンではないので、ダウンロードする場所がおそろしく分かりにくい。ので、メモ。
+Xcode のバージョンアップには Apple developer サイトからダウンロードしてこないといけないのですが、Tiger 用の Xcode はすでに最新のバージョンではないので、ダウンロードする場所がおそろしく分かりにくい。ので、メモ。
 
 1.  [Mac Dev Center](http://developer.apple.com/mac/) にアクセス
 2.  ログイン（登録していない場合は、まず登録する必要があります）

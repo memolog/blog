@@ -2,16 +2,16 @@
 title: MTで奇数行、偶数行ごとに背景色をつける方法
 date: 2007-07-31T16:41:00.000Z
 categories:
-- web
+  - web
 tags:
-- css
-- mt
+  - css
+  - mt
+excerpt: "*   The blog of H.Fujimoto：Movable Type 4のブロックタグ内で使える変数"
 ---
-*   [The blog of H.Fujimoto：Movable Type 4のブロックタグ内で使える変数](http://www.h-fj.com/blog/archives/2007/07/21-120042.php)
 
-<!-- more -->
+- [The blog of H.Fujimoto：Movable Type 4 のブロックタグ内で使える変数](http://www.h-fj.com/blog/archives/2007/07/21-120042.php)
 
-ブロックタグ内で使える変数を利用して、奇数行（odd）と偶数行（even）にわけてclassを指定することができます。偶数行と奇数行にわけて配色したいというときに非常に便利。これだけでデザインの幅がかなり広がる。右側の「最近のブログ記事」の一覧で実践してみました。作成したテンプレートは下記のようなかたち（不要な箇所は割愛しています）。
+ブロックタグ内で使える変数を利用して、奇数行（odd）と偶数行（even）にわけて class を指定することができます。偶数行と奇数行にわけて配色したいというときに非常に便利。これだけでデザインの幅がかなり広がる。右側の「最近のブログ記事」の一覧で実践してみました。作成したテンプレートは下記のようなかたち（不要な箇所は割愛しています）。
 
 ```
 <MTEntries lastn="10">
@@ -21,7 +21,7 @@ tags:
 
 ```
 
-そして適用したCSSは下記のような感じ。
+そして適用した CSS は下記のような感じ。
 
 ```
 .widget-archives .widget-header {border:none; padding-bottom:0; margin-bottom:0;}
@@ -36,4 +36,4 @@ tags:
 
 ```
 
-これで完了。MTEntriesの他に、MTCommentsでも利用可能。コメントの場合で、たとえばエントリーの投稿者のコメントには特別のCSSを入れたいという場合には、<MTIfCommenterIsEntryAuthor>author</MTIfCommenterIsEntryAuthor> というような形で、authorというclassを追加すると良いかもしれない。
+これで完了。MTEntries の他に、MTComments でも利用可能。コメントの場合で、たとえばエントリーの投稿者のコメントには特別の CSS を入れたいという場合には、<MTIfCommenterIsEntryAuthor>author</MTIfCommenterIsEntryAuthor> というような形で、author という class を追加すると良いかもしれない。

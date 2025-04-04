@@ -2,11 +2,13 @@
 title: watirでJavascriptのアラートを操作する
 date: 2009-05-09T16:27:30.000Z
 categories:
-- software testing
+  - software testing
 tags:
-- watir
+  - watir
+excerpt: "watirで操作をしているときに、Javascriptのアラートを操作しないといけないときがたまにあります。私は、最近は下記のようにautoitを使って操作しています。"
 ---
-watirで操作をしているときに、Javascriptのアラートを操作しないといけないときがたまにあります。私は、最近は下記のようにautoitを使って操作しています。<!-- more -->
+
+watir で操作をしているときに、Javascript のアラートを操作しないといけないときがたまにあります。私は、最近は下記のように autoit を使って操作しています。
 
 ```ruby
 def handling_javascript()
@@ -20,6 +22,6 @@ end
 
 ```
 
-title=@ie.Name では、IEの名称を取得しています。これはJavascriptのアラートを操作するときのwindowのtitleとして必要なのですが、IEの名称はIE6とIE7以降では異なるため、その都度取得しています。WinWaitは、titleに合致したwindowが表示されるまで待ちます。3つ目の引数でタイムアウトを設定できます。WinExistsは、titleで指定したwindowが存在する場合は1を返します。ControlFocusはtitleで指定したwindowにフォーカスします。ControlClickではtitleで指定したwindowにある、3つ目の引数で指定した文字列のボタンをクリックします。
+title=@ie.Name では、IE の名称を取得しています。これは Javascript のアラートを操作するときの window の title として必要なのですが、IE の名称は IE6 と IE7 以降では異なるため、その都度取得しています。WinWait は、title に合致した window が表示されるまで待ちます。3 つ目の引数でタイムアウトを設定できます。WinExists は、title で指定した window が存在する場合は 1 を返します。ControlFocus は title で指定した window にフォーカスします。ControlClick では title で指定した window にある、3 つ目の引数で指定した文字列のボタンをクリックします。
 
-これだけなのですが、最低限の操作はこれで可能です。そのほかJavascriptの操作の方法は、[watirのFAQ](http://wiki.openqa.org/display/WTR/JavaScript+Pop+Ups)や[WinClickerによる操作](http://wtr.rubyforge.org/rdoc/)とかを参照するといいかもしれません。
+これだけなのですが、最低限の操作はこれで可能です。そのほか Javascript の操作の方法は、[watir の FAQ](http://wiki.openqa.org/display/WTR/JavaScript+Pop+Ups)や[WinClicker による操作](http://wtr.rubyforge.org/rdoc/)とかを参照するといいかもしれません。

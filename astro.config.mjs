@@ -12,4 +12,7 @@ export default defineConfig({
       theme: "dracula",
     },
   },
+  build: {
+    format: "file",
+  },
 });

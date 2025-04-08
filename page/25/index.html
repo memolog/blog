@@ -1,0 +1,554 @@
+<!DOCTYPE html><html lang="ja"> <head><title>メモログ</title><meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="shortcut icon" href="/assets/icons/icon-32.ico"><style>
+  :root {
+    --container-width: 985px;
+    --link-color: #694b16;
+    --background-color: #e3ded5;
+    --lighter-color: #fdf8ee;
+    --darker-color: #cac5bc;
+    --more-dark-color: #b1aca4;
+    --border-color: #cac5bc;
+    --profile-text-color: #55514a;
+    --article-background-color: white;
+    --profile-background-color: var(--border-color);
+    --border-radius: 10px;
+  }
+  body {
+    background-color: var(--background-color);
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+  .header {
+    margin: 0 auto;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .header:has(.featured__image) {
+    margin-bottom: 2em;
+  }
+
+  .header_component_global {
+    width: 100%;
+  }
+
+  .header-inner {
+    text-align: center;
+    margin: 5px auto;
+    max-width: var(--container-width);
+    display: grid;
+    grid-template-columns: 36px 96px auto;
+    align-items: center;
+  }
+
+  .header__icon {
+    justify-self: end;
+  }
+
+  .header__title {
+    margin: 0.2em 0 0.2em;
+    font-size: 1.8em;
+    font-weight: normal;
+    vertical-align: bottom;
+  }
+
+  .header__title a,
+  .header__title > span {
+    color: black;
+    text-decoration: none;
+  }
+
+  .header_component_global .header__title {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    justify-self: start;
+  }
+
+  .header_component_global .header__title a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 5px;
+    background-color: transparent;
+  }
+
+  .header_component_global .navigation-global {
+    justify-self: end;
+    padding-right: 10px;
+    font-family: sans-serif;
+  }
+
+  .header__description {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header_component_global .header__description {
+    color: #666;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .header__epigraph {
+    font-style: italic;
+    color: #666;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto 4em;
+    padding: 0 15px;
+    border-radius: var(--border-radius);
+  }
+
+  article {
+    background-color: var(--article-background-color);
+    padding: 2em;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    font-size: 1.125em;
+    line-height: 2em;
+    background: var(--article-background-color);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .read-more {
+    margin-top: 1em;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-summary {
+    margin-bottom: 3.5em;
+  }
+
+  .header time {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: #666;
+    font-family: sans-serif;
+  }
+
+  .calendar-icon,
+  .author-icon {
+    margin-right: 0.5em;
+  }
+
+  .content blockquote {
+    border: 5px solid var(--border-color);
+    background: var(--lighter-color);
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+
+  .content p > code,
+  .content li > code {
+    background-color: #f5f2f0;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: var(--border-radius);
+    color: #444;
+  }
+
+  .content table {
+    background: #e0e0e0;
+  }
+
+  .content th {
+    background: #f0f0f0;
+  }
+
+  .content tr {
+    background: #fff;
+  }
+
+  .content tr:nth-child(even) {
+    background: #f0f0f0;
+  }
+
+  .content td {
+    padding: 5px 1em;
+    text-align: center;
+  }
+
+  .content code[class*="language-"] {
+    color: #444;
+  }
+
+  .header__feature {
+    margin: 0.5em 0 -0.5em;
+    position: relative;
+  }
+
+  .header__feature img {
+    overflow: hidden;
+  }
+
+  .featured__image {
+    background: #f5f2f0;
+    line-height: 0;
+    height: 335px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 -32px;
+  }
+
+  .featured__image picture {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .featured__image picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featured__credit {
+    color: #333;
+    font-size: 0.825em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"],
+    .youtube-wrapper {
+      margin: 0 -15px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -15px;
+    }
+  }
+
+  /*
+  .content p a[href]::before {
+    content: '🌐';
+    width: 24px;
+    display: inline-block;
+  }
+
+  .content p a[href].link-icon::before {
+    content: '';
+  }
+
+  .content p a[href].no-link-icon::before {
+    content: '';
+    width: 0;
+  }
+
+  .content p a.link-icon {
+    background-position-x: 4px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  */
+
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  /*
+  .post .writing-vertical p a {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+  */
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile {
+    border: 1px solid var(--profile-background-color);
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--profile-text-color);
+    border-radius: var(--border-radius);
+    background: var(--profile-background-color);
+  }
+
+  .profile__heading {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--profile-text-color);
+    display: inline-block;
+    font-weight: bold;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .profile__image {
+    float: left;
+    margin-right: 6px;
+  }
+
+  .profile__content {
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  .navigation__link,
+  .featured__credit a,
+  .profile__content a {
+    color: var(--profile-text-color);
+  }
+
+  .profile__social-list {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .profile__social-list-item {
+    display: inline;
+    margin-right: 0.5em;
+  }
+
+  .amazon-book-list {
+    margin-top: 2em;
+  }
+
+  .amazon-book-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  .amazon-book-list li {
+    display: table-cell;
+    padding: 10px;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  .amazon-book-list li a {
+    color: #666;
+  }
+
+  .amazon-book-list li img {
+    display: block;
+  }
+
+  .amazon-book-list-3 li {
+    width: 33%;
+  }
+
+  .amazon-book-list-4 li {
+    width: 25%;
+  }
+
+  .amazon-book-list-5 li {
+    width: 20%;
+  }
+
+  .content hr {
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-style: solid;
+    border-color: #ddd;
+    margin-top: 4em;
+  }
+
+  .pagination {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .page-number,
+  .extend.next,
+  .extend.prev,
+  .pagination .space {
+    min-width: 59px;
+    min-height: 59px;
+    text-align: center;
+    line-height: 59px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+  }
+
+  .pagination .space {
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--darker-color);
+    font-weight: bold;
+    color: white;
+    border-color: var(--darker-color);
+  }
+
+  pre {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+</style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph": [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2009/12/free.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2009/07/some_thoughts_on_jogging.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2009/06/mac_tiger_gem_mysql.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2009/06/proust_and_squid.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2009/06/kamakura-enoshima.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2009/05/future_of_water.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2009/05/watirjavascript.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2009/05/inherit.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2009/05/dp1.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2009/04/post_185.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2009-12-13T23:26:50.000Z"> <span class="calendar-icon">📅</span> <span>2009年12月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/12/free.html">本：FREE　「無料」からお金を生み出す新戦略</a> </h2>  </header> <div class="content">「ロングテール」の著者であるクリス・アンダーソンの著書。インターネットの世界に広がっている「フリー（自由/無料）」のサービスについて、どうしてフリーのサービスがうまれるのかについての解説と、フリーのサービスにおけるビジネスモデル、生産者と消費者との間にある取引についての整理分類をしています。</div> <div class="read-more"> <a href="/2009/12/free.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-07-12T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年7月12日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/07/some_thoughts_on_jogging.html">ジョギング中の頭の中</a> </h2>  </header> <div class="content">細く長く、止めたり再開したりしてるジョギングですが、している最中は特にすることもないので（ジョギングしているんですが）、とりとめもないことを考えています。考え事をしている方が、足に意識が行き過ぎないので、疲れにくい、気がするのです。</div> <div class="read-more"> <a href="/2009/07/some_thoughts_on_jogging.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-06-28T12:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年6月28日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/06/mac_tiger_gem_mysql.html">Mac (tiger) で gem install mysql でエラー</a> </h2>  </header> <div class="content">Mac(10.4.11)にgem istall mysqlしようとしたら、下記のようなエラーが出たのでメモ。  ```bash ~ sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config</div> <div class="read-more"> <a href="/2009/06/mac_tiger_gem_mysql.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-06-21T01:24:25.000Z"> <span class="calendar-icon">📅</span> <span>2009年6月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/06/proust_and_squid.html">本：プルーストとイカ - 読書は脳をどのように変えるのか?</a> </h2>  </header> <div class="content"> 「文字を読む」というのは、「ものを見る」ことや「音を聞く」のような、生来備わっている能力ではない。人は読書をどのように習得するのか、脳内ではどのように認識するのか、というような内容を「文字の発明の歴史」「子供が文字をどのように学ぶのか」「読字障害者（ディスレクシア）の研究」という3つのアプローチで紹介しています。</div> <div class="read-more"> <a href="/2009/06/proust_and_squid.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-06-13T14:06:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年6月13日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/06/kamakura-enoshima.html">鎌倉・新江ノ島水族館・片瀬西浜海水浴場</a> </h2>  </header> <div class="content">もう一ヶ月以上前になってしまいましたが、GW中に鎌倉と江ノ島に行ってきました。  まずは長谷で大仏様を参拝。内人(?)外人入り交じり、とても混んでいました。さすがGW。それともいつもああなのか。大仏様の背中が空いていることに、小さな感動。ちょっとしたロボみたいでした。</div> <div class="read-more"> <a href="/2009/06/kamakura-enoshima.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-05-25T14:17:15.000Z"> <span class="calendar-icon">📅</span> <span>2009年5月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/05/future_of_water.html">本：水の未来</a> </h2>  </header> <div class="content"> 水の未来についての本。10章構成で、水の使われ方から、現在の過度の取水状況、水が生み出す自然と災害、水紛争、これからの水との関わり方まで、水に関する話題を多角的に取り上げています。水資源の問題の本質は水そのものが足りなくなっているというよりは、国レベルでの非効率な水資源の使用（主に砂漠での灌漑農業やダムの建設）や、上流側の資源の独占による生態系の変化などにある、という印象を持ちました。</div> <div class="read-more"> <a href="/2009/05/future_of_water.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-05-09T16:27:30.000Z"> <span class="calendar-icon">📅</span> <span>2009年5月10日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/05/watirjavascript.html">watirでJavascriptのアラートを操作する</a> </h2>  </header> <div class="content">watirで操作をしているときに、Javascriptのアラートを操作しないといけないときがたまにあります。私は、最近は下記のようにautoitを使って操作しています。</div> <div class="read-more"> <a href="/2009/05/watirjavascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-05-06T09:27:10.000Z"> <span class="calendar-icon">📅</span> <span>2009年5月6日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/05/inherit.html">親要素の色をリンク色に継承させる</a> </h2>  </header> <div class="content">リンクの色の方が優先される理由の記事で、下記のHTMLの場合はリンクの色の方が優先されるという話をした。</div> <div class="read-more"> <a href="/2009/05/inherit.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-05-06T08:38:49.000Z"> <span class="calendar-icon">📅</span> <span>2009年5月6日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/05/dp1.html">明治神宮と原宿と雨上がりとdp1</a> </h2>  </header> <div class="content">4月の中頃に明治神宮に行ってきました。初めて行く場所ではマイ最強装備であるEOS 5D mark IIを持って行くのですが、明治神宮には何回か訪れているので今回は手軽なDP1を持参。この日は雨上がりだったので、ひさびさにサーキュラーをつけてみました。DP1でサーキュレータを利用すると、昼間でも光量が足りずにシャッタースピードが遅くなりがちですが、そこは絞り開放で撮るとか、日陰では撮らないとか、ISO感度を200にするとかして光量を工面（あと、頑張って固定する）。この光量を工面しつつ、カメラをぶらさないようになんとかかんとか工夫して撮るのが個人的にDP1の楽しいところ。</div> <div class="read-more"> <a href="/2009/05/dp1.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-04-26T15:40:56.000Z"> <span class="calendar-icon">📅</span> <span>2009年4月27日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2009/04/post_185.html">リンクの色の方が優先される理由</a> </h2>  </header> <div class="content">たとえば下記のようなHTMLに、下記のようなCSSを指定した場合、aタグに指定したCSSの方が有効に作用する。  ```html &lt;h3 class=&quot;entry-header&quot;&gt;&lt;a href=&quot;/post.html&quot;&gt;記事のタイトル&lt;/a&gt;&lt;/h3&gt;</div> <div class="read-more"> <a href="/2009/04/post_185.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/24/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/23/"> 23 </a><a class="page-number " href="/page/24/"> 24 </a><span class="page-number current">25</span><a class="page-number " href="/page/26/"> 26 </a><a class="page-number " href="/page/27/"> 27 </a><span class="space">…</span><a class="page-number " href="/page/37/"> 37 </a><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a> <a class="extend next" rel="next" href="/page/26/">
+Next
+</a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+東京在住。TypeScript, Node.js,
+        Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
+        860くらい。
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </div> </body></html>

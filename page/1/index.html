@@ -1,0 +1,554 @@
+<!DOCTYPE html><html lang="ja"> <head><title>メモログ</title><meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="shortcut icon" href="/assets/icons/icon-32.ico"><style>
+  :root {
+    --container-width: 985px;
+    --link-color: #694b16;
+    --background-color: #e3ded5;
+    --lighter-color: #fdf8ee;
+    --darker-color: #cac5bc;
+    --more-dark-color: #b1aca4;
+    --border-color: #cac5bc;
+    --profile-text-color: #55514a;
+    --article-background-color: white;
+    --profile-background-color: var(--border-color);
+    --border-radius: 10px;
+  }
+  body {
+    background-color: var(--background-color);
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+  .header {
+    margin: 0 auto;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .header:has(.featured__image) {
+    margin-bottom: 2em;
+  }
+
+  .header_component_global {
+    width: 100%;
+  }
+
+  .header-inner {
+    text-align: center;
+    margin: 5px auto;
+    max-width: var(--container-width);
+    display: grid;
+    grid-template-columns: 36px 96px auto;
+    align-items: center;
+  }
+
+  .header__icon {
+    justify-self: end;
+  }
+
+  .header__title {
+    margin: 0.2em 0 0.2em;
+    font-size: 1.8em;
+    font-weight: normal;
+    vertical-align: bottom;
+  }
+
+  .header__title a,
+  .header__title > span {
+    color: black;
+    text-decoration: none;
+  }
+
+  .header_component_global .header__title {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    justify-self: start;
+  }
+
+  .header_component_global .header__title a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 5px;
+    background-color: transparent;
+  }
+
+  .header_component_global .navigation-global {
+    justify-self: end;
+    padding-right: 10px;
+    font-family: sans-serif;
+  }
+
+  .header__description {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header_component_global .header__description {
+    color: #666;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .header__epigraph {
+    font-style: italic;
+    color: #666;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto 4em;
+    padding: 0 15px;
+    border-radius: var(--border-radius);
+  }
+
+  article {
+    background-color: var(--article-background-color);
+    padding: 2em;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    font-size: 1.125em;
+    line-height: 2em;
+    background: var(--article-background-color);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .read-more {
+    margin-top: 1em;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-summary {
+    margin-bottom: 3.5em;
+  }
+
+  .header time {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: #666;
+    font-family: sans-serif;
+  }
+
+  .calendar-icon,
+  .author-icon {
+    margin-right: 0.5em;
+  }
+
+  .content blockquote {
+    border: 5px solid var(--border-color);
+    background: var(--lighter-color);
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+
+  .content p > code,
+  .content li > code {
+    background-color: #f5f2f0;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: var(--border-radius);
+    color: #444;
+  }
+
+  .content table {
+    background: #e0e0e0;
+  }
+
+  .content th {
+    background: #f0f0f0;
+  }
+
+  .content tr {
+    background: #fff;
+  }
+
+  .content tr:nth-child(even) {
+    background: #f0f0f0;
+  }
+
+  .content td {
+    padding: 5px 1em;
+    text-align: center;
+  }
+
+  .content code[class*="language-"] {
+    color: #444;
+  }
+
+  .header__feature {
+    margin: 0.5em 0 -0.5em;
+    position: relative;
+  }
+
+  .header__feature img {
+    overflow: hidden;
+  }
+
+  .featured__image {
+    background: #f5f2f0;
+    line-height: 0;
+    height: 335px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 -32px;
+  }
+
+  .featured__image picture {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .featured__image picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featured__credit {
+    color: #333;
+    font-size: 0.825em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"],
+    .youtube-wrapper {
+      margin: 0 -15px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -15px;
+    }
+  }
+
+  /*
+  .content p a[href]::before {
+    content: '🌐';
+    width: 24px;
+    display: inline-block;
+  }
+
+  .content p a[href].link-icon::before {
+    content: '';
+  }
+
+  .content p a[href].no-link-icon::before {
+    content: '';
+    width: 0;
+  }
+
+  .content p a.link-icon {
+    background-position-x: 4px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  */
+
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  /*
+  .post .writing-vertical p a {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+  */
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile {
+    border: 1px solid var(--profile-background-color);
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--profile-text-color);
+    border-radius: var(--border-radius);
+    background: var(--profile-background-color);
+  }
+
+  .profile__heading {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--profile-text-color);
+    display: inline-block;
+    font-weight: bold;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .profile__image {
+    float: left;
+    margin-right: 6px;
+  }
+
+  .profile__content {
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  .navigation__link,
+  .featured__credit a,
+  .profile__content a {
+    color: var(--profile-text-color);
+  }
+
+  .profile__social-list {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .profile__social-list-item {
+    display: inline;
+    margin-right: 0.5em;
+  }
+
+  .amazon-book-list {
+    margin-top: 2em;
+  }
+
+  .amazon-book-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  .amazon-book-list li {
+    display: table-cell;
+    padding: 10px;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  .amazon-book-list li a {
+    color: #666;
+  }
+
+  .amazon-book-list li img {
+    display: block;
+  }
+
+  .amazon-book-list-3 li {
+    width: 33%;
+  }
+
+  .amazon-book-list-4 li {
+    width: 25%;
+  }
+
+  .amazon-book-list-5 li {
+    width: 20%;
+  }
+
+  .content hr {
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-style: solid;
+    border-color: #ddd;
+    margin-top: 4em;
+  }
+
+  .pagination {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .page-number,
+  .extend.next,
+  .extend.prev,
+  .pagination .space {
+    min-width: 59px;
+    min-height: 59px;
+    text-align: center;
+    line-height: 59px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+  }
+
+  .pagination .space {
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--darker-color);
+    font-weight: bold;
+    color: white;
+    border-color: var(--darker-color);
+  }
+
+  pre {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+</style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph": [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2025/a-crash-course-on-crises.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2024/after-everything-bubble.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2024/beyond-weird.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2024/battle-of-nagashino.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2024/introduction-to-animal-psychology.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2024/origin-of-samurai-goverment.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2024/the-book-of-why.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2022/the-two-ways-to-use-autocomplete-attribute.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2022/unexpected-reserved-word-interface-on-jest.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2025-03-23T18:21:38.000Z"> <span class="calendar-icon">📅</span> <span>2025年3月24日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2025/a-crash-course-on-crises.html">本：マクロ金融危機入門</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e3ded5;"> <picture> <source srcset="/assets/images/a-crash-course-on-crises-2/a-crash-course-on-crises-2_small.png, /assets/images/a-crash-course-on-crises-2/a-crash-course-on-crises-2_small@2x.png 2x, /assets/images/a-crash-course-on-crises-2/a-crash-course-on-crises-2_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/a-crash-course-on-crises-2/a-crash-course-on-crises-2_medium.webp, /assets/images/a-crash-course-on-crises-2/a-crash-course-on-crises-2_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/a-crash-course-on-crises-2/a-crash-course-on-crises-2_medium.png, /assets/images/a-crash-course-on-crises-2/a-crash-course-on-crises-2_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/a-crash-course-on-crises-2/a-crash-course-on-crises-2_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">マクロ金融危機入門を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対処すべきかという政策の議論が展開されている。原題は「A Crash Course on Crises」で、まさに危機の入門書または短期集中講座といった内容になっている。</div> <div class="read-more"> <a href="/2025/a-crash-course-on-crises.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2024-11-06T06:33:16.000Z"> <span class="calendar-icon">📅</span> <span>2024年11月6日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2024/after-everything-bubble.html">本：エブリシング・バブル</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #ccc5b5;"> <picture> <source srcset="/assets/images/after-everything-bubble/after-everything-bubble_small.png, /assets/images/after-everything-bubble/after-everything-bubble_small@2x.png 2x, /assets/images/after-everything-bubble/after-everything-bubble_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/after-everything-bubble/after-everything-bubble_medium.webp, /assets/images/after-everything-bubble/after-everything-bubble_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/after-everything-bubble/after-everything-bubble_medium.png, /assets/images/after-everything-bubble/after-everything-bubble_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/after-everything-bubble/after-everything-bubble_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">エブリシング・バブル 終わりと始まりと「エブリシング・バブル」リスクの深層を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。</div> <div class="read-more"> <a href="/2024/after-everything-bubble.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2024-11-03T09:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2024年11月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2024/beyond-weird.html">本：量子力学は本当は量子の話ではない</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c6beac;"> <picture> <source srcset="/assets/images/beyond-weird/beyond-weird_small.png, /assets/images/beyond-weird/beyond-weird_small@2x.png 2x, /assets/images/beyond-weird/beyond-weird_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/beyond-weird/beyond-weird_medium.webp, /assets/images/beyond-weird/beyond-weird_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/beyond-weird/beyond-weird_medium.png, /assets/images/beyond-weird/beyond-weird_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/beyond-weird/beyond-weird_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">「量子力学は本当は量子の話ではない」を読んだ。量子論が言う「粒子でもあり波でもある」という二重性や、「猫が死んでいるとも生きているとも言える（測定した瞬間に決定する）」といった重ね合わせ、量子がもつれた物体同士が瞬時に影響を与え合うといった奇妙な現象は、量子世界をイメージするための物語がもたらしたもので、量子力学の理論そのものが持つ本質ではないらしい。微粒子の性質・状態としてイメージしようとするから奇妙に見えるだけで、量子論は「情報の取得方法とその因果的影響」を扱う理論と捉えたほうが、筋が通る、というのが本書の内容。それが量子論の見方として正しいのかどうか、そもそも本書の内容をきちんと理解できてるかどうかわからないけど、そんな気がするかもしれないししないかもしれない（二重性）といった感想を持った。</div> <div class="read-more"> <a href="/2024/beyond-weird.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2024-10-28T08:20:00.000Z"> <span class="calendar-icon">📅</span> <span>2024年10月28日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2024/battle-of-nagashino.html">本：長篠合戦</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c8bfab;"> <picture> <source srcset="/assets/images/battle-of-nagashino/battle-of-nagashino_small.png, /assets/images/battle-of-nagashino/battle-of-nagashino_small@2x.png 2x, /assets/images/battle-of-nagashino/battle-of-nagashino_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/battle-of-nagashino/battle-of-nagashino_medium.webp, /assets/images/battle-of-nagashino/battle-of-nagashino_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/battle-of-nagashino/battle-of-nagashino_medium.png, /assets/images/battle-of-nagashino/battle-of-nagashino_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/battle-of-nagashino/battle-of-nagashino_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">長篠合戦を読んだ。長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や、各勢力が自らを美化するための「化粧」が多分に含まれているようだ。</div> <div class="read-more"> <a href="/2024/battle-of-nagashino.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2024-10-06T17:00:34.000Z"> <span class="calendar-icon">📅</span> <span>2024年10月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2024/introduction-to-animal-psychology.html">本：動物心理学入門</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c8bdab;"> <picture> <source srcset="/assets/images/introduction-animal-psychology/introduction-animal-psychology_small.png, /assets/images/introduction-animal-psychology/introduction-animal-psychology_small@2x.png 2x, /assets/images/introduction-animal-psychology/introduction-animal-psychology_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/introduction-animal-psychology/introduction-animal-psychology_medium.webp, /assets/images/introduction-animal-psychology/introduction-animal-psychology_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/introduction-animal-psychology/introduction-animal-psychology_medium.png, /assets/images/introduction-animal-psychology/introduction-animal-psychology_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/introduction-animal-psychology/introduction-animal-psychology_medium.png" alt width="750" height="1125" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">動物心理学入門という本を読んだ。本書によると、「動物心理学」とは「動物を対象とした研究を通して、ヒトの『ココロ』を理解しようとする学問領域」である（p.1 はじめに）。人と動物の異なる点を比較し、共通点を類推することで、ヒトの心理をより深く理解できるのだろうと感じた。</div> <div class="read-more"> <a href="/2024/introduction-to-animal-psychology.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2024-09-29T19:00:47.000Z"> <span class="calendar-icon">📅</span> <span>2024年9月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2024/origin-of-samurai-goverment.html">本：武家政権成立史 - 気候変動と歴史学</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #d8d4ce;"> <picture> <source srcset="/assets/images/origin-of-samurai/origin-of-samurai_small.png, /assets/images/origin-of-samurai/origin-of-samurai_small@2x.png 2x, /assets/images/origin-of-samurai/origin-of-samurai_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/origin-of-samurai/origin-of-samurai_medium.webp, /assets/images/origin-of-samurai/origin-of-samurai_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/origin-of-samurai/origin-of-samurai_medium.png, /assets/images/origin-of-samurai/origin-of-samurai_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/origin-of-samurai/origin-of-samurai_medium.png" alt width="750" height="1125" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">武家政権成立史では、12世紀に始まった気候の冷涼化が、武家政権の成立にどのような影響を与えたかを探究している。本書では、気候冷涼化による作物の不作が、飢饉を頻発、封戸収入の減少を引き起こし、収入を確保するために荘園が発展し、それにより国司による徴税と荘園権益の衝突が強まり、武力を必要とする時代を生み出していったしている。歴史とは、人間の意図・行動が歴史を作り、動かすというイメージが強いけれど、気候変動という人間には抗いがたい要因が社会的混乱を引き起こし、歴史を形作るという視点は新鮮で説得力があった。</div> <div class="read-more"> <a href="/2024/origin-of-samurai-goverment.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2024-09-22T11:32:11.000Z"> <span class="calendar-icon">📅</span> <span>2024年9月22日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2024/the-book-of-why.html">本：因果推論の科学</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cfcdc6;"> <picture> <source srcset="/assets/images/the-book-of-why/the-book-of-why_small.png, /assets/images/the-book-of-why/the-book-of-why_small@2x.png 2x, /assets/images/the-book-of-why/the-book-of-why_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/the-book-of-why/the-book-of-why_medium.webp, /assets/images/the-book-of-why/the-book-of-why_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/the-book-of-why/the-book-of-why_medium.png, /assets/images/the-book-of-why/the-book-of-why_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/the-book-of-why/the-book-of-why_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">因果推論の科学を読んだので簡単に紹介。因果推論とは、原因と結果の関係を理解し、それを推論するための方法論。従来の統計学では「XとYの相関関係」を説明できても、実際に知りたいのは「XがYにどう影響を与えているか？」という因果関係だったりする。因果推論は、その点で画期的なアプローチを示している。</div> <div class="read-more"> <a href="/2024/the-book-of-why.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2022-12-05T09:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2022年12月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2022/the-two-ways-to-use-autocomplete-attribute.html">hiddenのフィールドにautocomplete属性を入れる意味</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #ece9e4;"> <picture> <source srcset="/assets/images/the-two-ways-to-use-autocomplete-attribute/the-two-ways-to-use-autocomplete-attribute_small.png, /assets/images/the-two-ways-to-use-autocomplete-attribute/the-two-ways-to-use-autocomplete-attribute_small@2x.png 2x, /assets/images/the-two-ways-to-use-autocomplete-attribute/the-two-ways-to-use-autocomplete-attribute_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/the-two-ways-to-use-autocomplete-attribute/the-two-ways-to-use-autocomplete-attribute_medium.webp, /assets/images/the-two-ways-to-use-autocomplete-attribute/the-two-ways-to-use-autocomplete-attribute_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/the-two-ways-to-use-autocomplete-attribute/the-two-ways-to-use-autocomplete-attribute_medium.png, /assets/images/the-two-ways-to-use-autocomplete-attribute/the-two-ways-to-use-autocomplete-attribute_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/the-two-ways-to-use-autocomplete-attribute/the-two-ways-to-use-autocomplete-attribute_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">4.10.18.7.1 Autofilling form controls: the autocomplete attributeには、autocomplete属性には2つの利用方法があると書かれている。</div> <div class="read-more"> <a href="/2022/the-two-ways-to-use-autocomplete-attribute.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2022-11-07T17:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2022年11月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2022/npm-script-warns-permission-errors-in-the-cache-directory.html">npm script warns permission errors in the cache directory</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #d9d3c7;"> <picture> <source srcset="/assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_small.png, /assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_small@2x.png 2x, /assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_medium.webp, /assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_medium.png, /assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir &#39;/root/.npm/_logs&#39;` というエラーのWARNが発生する。</div> <div class="read-more"> <a href="/2022/npm-script-warns-permission-errors-in-the-cache-directory.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2022-09-30T06:23:42.000Z"> <span class="calendar-icon">📅</span> <span>2022年9月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2022/unexpected-reserved-word-interface-on-jest.html">Unexpected reserved word &#39;interface&#39; on jest</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e3ded7;"> <picture> <source srcset="/assets/images/Unexpected-reserved-word-interface-on-jest/Unexpected-reserved-word-interface-on-jest_small.png, /assets/images/Unexpected-reserved-word-interface-on-jest/Unexpected-reserved-word-interface-on-jest_small@2x.png 2x, /assets/images/Unexpected-reserved-word-interface-on-jest/Unexpected-reserved-word-interface-on-jest_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/Unexpected-reserved-word-interface-on-jest/Unexpected-reserved-word-interface-on-jest_medium.webp, /assets/images/Unexpected-reserved-word-interface-on-jest/Unexpected-reserved-word-interface-on-jest_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/Unexpected-reserved-word-interface-on-jest/Unexpected-reserved-word-interface-on-jest_medium.png, /assets/images/Unexpected-reserved-word-interface-on-jest/Unexpected-reserved-word-interface-on-jest_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/Unexpected-reserved-word-interface-on-jest/Unexpected-reserved-word-interface-on-jest_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">jestを28以降に更新したら、jestの実行時に`Unexpected reserved word &#39;interface&#39;`みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。</div> <div class="read-more"> <a href="/2022/unexpected-reserved-word-interface-on-jest.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/">Prev</a> <a class="page-number" href="/">1</a> <a class="page-number " href="/page/2/"> 2 </a><a class="page-number " href="/page/3/"> 3 </a><a class="page-number " href="/page/4/"> 4 </a><a class="page-number " href="/page/5/"> 5 </a><a class="page-number " href="/page/6/"> 6 </a><a class="page-number " href="/page/7/"> 7 </a><span class="space">…</span><a class="page-number " href="/page/37/"> 37 </a><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a> <a class="extend next" rel="next" href="/page/2/">
+Next
+</a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+東京在住。TypeScript, Node.js,
+        Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
+        860くらい。
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </div> </body></html>

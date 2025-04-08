@@ -4,9 +4,11 @@ import path from "path";
 type Props = {
   src: string;
   alt?: string;
+  width?: number;
+  height?: number;
 };
 
-const { src, alt } = Astro.props;
+const { src, alt, width, height } = Astro.props;
 const { dir, name, ext } = path.parse(src);
 ---
 
@@ -27,6 +29,8 @@ const { dir, name, ext } = path.parse(src);
   <img
     src={`${dir}/${name}_medium${ext}`}
     alt={alt}
+    width={width}
+    height={height}
     role="presentation"
     loading="lazy"
   />

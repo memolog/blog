@@ -5,6 +5,9 @@ import path from "path";
 import { imageSizeFromFile } from "image-size/fromFile";
 import { JSDOM } from "jsdom";
 import Picture from "./Picture.astro";
+// @ts-ignore
+import ColorThief from "colorthief";
+import chroma from "chroma-js";
 
 type Props = {
   featured: NonNullable<CollectionEntry<"blog">["data"]["featured"]>;
@@ -45,10 +48,11 @@ if (!width || !height) {
       svgDom.children[0].getAttribute("fill") ||
       "";
   } else {
-    const dimension = await imageSizeFromFile(
-      path.resolve(source, `${name}/${name}_medium${ext}`)
-    );
-    width = Math.min(dimension.width, 900);
+    const src = path.resolve(source, `${name}/${name}_medium${ext}`);
+    color ||= chroma(await ColorThief.getColor(src)).hex();
+
+    const dimension = await imageSizeFromFile(src);
+    width = Math.min(dimension.width, 985);
     height = dimension.height * (width / dimension.width);
   }
 }
@@ -88,7 +92,7 @@ if (width > maxWidth) {
           />
         </div>
       ) : (
-        <Picture src={src} alt="" />
+        <Picture src={src} alt="" width={width} height={height} />
       )
     }
   </div>

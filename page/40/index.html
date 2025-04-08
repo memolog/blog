@@ -1,371 +1,531 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <title>メモログ</title>
-  <meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description">
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://www.google-analytics.com">
-  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
-  <style>body {
-  background-color: white;
-  color: black;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html><html lang="ja"> <head><title>メモログ</title><meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="shortcut icon" href="/assets/icons/icon-32.ico"><style>
+  :root {
+    --container-width: 985px;
+    --link-color: #694b16;
+    --background-color: #e3ded5;
+    --lighter-color: #fdf8ee;
+    --darker-color: #cac5bc;
+    --more-dark-color: #b1aca4;
+    --border-color: #cac5bc;
+    --profile-text-color: #55514a;
+    --article-background-color: white;
+    --profile-background-color: var(--border-color);
+    --border-radius: 10px;
+  }
+  body {
+    background-color: var(--background-color);
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-.header {
-  margin: 0 auto 2em;
-  font-family: Garamond, "Times New Roman", serif;
-}
+  a {
+    color: var(--link-color);
+  }
 
-.header_component_global {
-  text-align: center;
-  margin: 1em auto;
-  max-width: 800px;
-}
+  .header {
+    margin: 0 auto;
+    font-family: Garamond, "Times New Roman", serif;
+  }
 
-.header__title {
-  margin: 0.2em 0 0.2em;
-  font-size: 1.8em;
-  font-weight: normal;
-  vertical-align: bottom;
-}
+  .header:has(.featured__image) {
+    margin-bottom: 2em;
+  }
 
-.header__title a,
-.header__title > span {
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #f5f2f0;
-  padding: 5px;
-}
+  .header_component_global {
+    width: 100%;
+  }
 
-.header_component_global .header__title {
-  font-size: 1.2em;
-}
+  .header-inner {
+    text-align: center;
+    margin: 5px auto;
+    max-width: var(--container-width);
+    display: grid;
+    grid-template-columns: 36px 96px auto;
+    align-items: center;
+  }
 
-.header_component_global .header__title a {
-  text-decoration: none;
-  color: black;
-}
-
-.main .header .header__title {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  opacity: 0.8;
-  margin-bottom: 0;
-}
-
-.header__description {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-.header_component_global .header__description {
-  color: #666;
-  margin: 0 auto;
-  padding: 0 5px;
-}
-
-.header__epigraph {
-  font-style: italic;
-  color: #666;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.container {
-  width: 800px;
-  margin: 0 auto 4em;
-  padding: 0 15px;
-  border-radius: 3px;
-}
-
-.content {
-  font-size: 1.125em;
-  line-height: 2em;
-  background: white;
-  color: #222;
-  -webkit-font-smoothing: antialiased;
-}
-
-.content h2,
-.content h3 {
-  font-size: 1.4em;
-  margin: 2em 0 1em 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.article-summary {
-  margin-bottom: 3.5em;
-}
-
-.header time {
-  display: inline-block;
-  font-size: 0.9125em;
-  color: #666;
-}
-
-.calendar-icon,
-.author-icon {
-  margin-right: 0.5em;
-}
-
-.content blockquote {
-  border: 5px solid #ddd;
-  background: #f9f9f9;
-  margin: 1.5em 0;
-  padding: 0 1em;
-}
-
-.content p > code,
-.content li > code {
-  background-color: #f5f2f0;
-  display: inline-block;
-  padding: 0 6px;
-  border-radius: 0.3em;
-  color: #444;
-}
-
-.content table {
-  background: #e0e0e0;
-}
-
-.content th {
-  background: #f0f0f0;
-}
-
-.content tr {
-  background: #fff;
-}
-
-.content tr:nth-child(even) {
-  background: #f0f0f0;
-}
-
-.content td {
-  padding: 5px 1em;
-  text-align: center;
-}
-
-.content code[class*="language-"] {
-  color: #444;
-}
-
-.header__feature {
-  margin: 0.5em 0 -0.5em;
-  position: relative;
-}
-
-.header__feature img {
-  overflow: hidden;
-}
-
-.featured__image {
-  background: white;
-  line-height: 0;
-  max-height: 335px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.featured__credit {
-  color: #333;
-  font-size: 0.825em;
-  text-align: right;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 7px;
-  background: #f0f0f0;
-  opacity: 0.8;
-}
-
-.lazyload,
-.lazyloading {
-  opacity: 0.5;
-}
-
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
-}
-
-.content img {
-  max-width: 100%;
-}
-
-.youtube-wrapper {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-}
-
-.youtube-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  border: 0;
-}
-
-@media screen and (max-width: 500px) {
-  .header__epigraph {
-    display: none;
+  .header__icon {
+    justify-self: end;
   }
 
   .header__title {
-    font-size: 1.2em;
+    margin: 0.2em 0 0.2em;
+    font-size: 1.8em;
+    font-weight: normal;
+    vertical-align: bottom;
   }
 
-  .content h2 {
-    font-size: 1.2em;
+  .header__title a,
+  .header__title > span {
+    color: black;
+    text-decoration: none;
   }
 
-  .main .header .header__title {
-    margin-bottom: 30px;
+  .header_component_global .header__title {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    justify-self: start;
+  }
+
+  .header_component_global .header__title a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 5px;
+    background-color: transparent;
+  }
+
+  .header_component_global .navigation-global {
+    justify-self: end;
+    padding-right: 10px;
+    font-family: sans-serif;
+  }
+
+  .header__description {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header_component_global .header__description {
+    color: #666;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .header__epigraph {
+    font-style: italic;
+    color: #666;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto 4em;
+    padding: 0 15px;
+    border-radius: var(--border-radius);
+  }
+
+  article {
+    background-color: var(--article-background-color);
+    padding: 2em;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    font-size: 1.125em;
+    line-height: 2em;
+    background: var(--article-background-color);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .read-more {
+    margin-top: 1em;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-summary {
+    margin-bottom: 3.5em;
+  }
+
+  .header time {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: #666;
+    font-family: sans-serif;
+  }
+
+  .calendar-icon,
+  .author-icon {
+    margin-right: 0.5em;
+  }
+
+  .content blockquote {
+    border: 5px solid var(--border-color);
+    background: var(--lighter-color);
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+
+  .content p > code,
+  .content li > code {
+    background-color: #f5f2f0;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: var(--border-radius);
+    color: #444;
+  }
+
+  .content table {
+    background: #e0e0e0;
+  }
+
+  .content th {
+    background: #f0f0f0;
+  }
+
+  .content tr {
+    background: #fff;
+  }
+
+  .content tr:nth-child(even) {
+    background: #f0f0f0;
+  }
+
+  .content td {
+    padding: 5px 1em;
+    text-align: center;
+  }
+
+  .content code[class*="language-"] {
+    color: #444;
   }
 
   .header__feature {
-    margin-top: -23px;
-  }
-
-  .featured__credit {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin: 0.5em 0 -0.5em;
     position: relative;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .featured__image,
-  .content__image,
-  .content pre[class*="language-"],
-  .youtube-wrapper {
-    margin: 0 -15px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .featured__image,
-  .content__image,
-  .content pre[class*="language-"] {
-    margin: 0 -15px;
-  }
-}
-
-/*
-.content p a[href]::before {
-  content: '🌐';
-  width: 24px;
-  display: inline-block;
-}
-
-.content p a[href].link-icon::before {
-  content: '';
-}
-
-.content p a[href].no-link-icon::before {
-  content: '';
-  width: 0;
-}
-
-.content p a.link-icon {
-  background-position-x: 4px;
-  background-position-y: center;
-  background-repeat: no-repeat;
-}
-*/
-
-.post .writing-vertical {
-  writing-mode: vertical-rl;
-  font-family: serif;
-  font-size: 1em;
-  margin: 1.5em 0;
-  column-count: 2;
-  max-width: 800px;
-  width: 102%;
-  overflow: auto;
-  height: 800px;
-}
-
-.post .writing-vertical p {
-  margin: 0;
-}
-
-/*
-.post .writing-vertical p a {
-  padding-left: 0px;
-  padding-top: 24px;
-}
-*/
-
-.post .writing-vertical p:first-letter {
-  margin-top: 1em;
-}
-
-.post .writing-vertical .link-icon {
-  background-position-x: center;
-  background-position-y: 5px;
-}
-
-.post .writing-vertical blockquote {
-  border: none;
-  margin: 0 0.5em;
-  padding: 1em 0.5em;
-  background: #f0f0f0;
-}
-
-@media screen and (max-width: 730px) {
-  .container {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .post .writing-vertical {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
   }
 
   .header__feature img {
-    max-width: 100%;
-    height: auto;
+    overflow: hidden;
   }
-}
-</style>
-  <script>window.lazyLoadOptions = {};</script>
-  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
-  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
-  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
-  <link rel="manifest" href="/manifest.json" >
-  <meta name="theme-color" content="white">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  .featured__image {
+    background: #f5f2f0;
+    line-height: 0;
+    max-height: 335px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 -32px;
+  }
 
-    gtag('config', 'UA-955153-2');
-  </script>
-  <script type="application/ld+json">
+  .featured__image picture {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .featured__image picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featured__credit {
+    color: #333;
+    font-size: 0.825em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"],
+    .youtube-wrapper {
+      margin: 0 -15px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -15px;
+    }
+  }
+
+  /*
+  .content p a[href]::before {
+    content: '🌐';
+    width: 24px;
+    display: inline-block;
+  }
+
+  .content p a[href].link-icon::before {
+    content: '';
+  }
+
+  .content p a[href].no-link-icon::before {
+    content: '';
+    width: 0;
+  }
+
+  .content p a.link-icon {
+    background-position-x: 4px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  */
+
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  /*
+  .post .writing-vertical p a {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+  */
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile {
+    border: 1px solid var(--profile-background-color);
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--profile-text-color);
+    border-radius: var(--border-radius);
+    background: var(--profile-background-color);
+  }
+
+  .profile__heading {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--profile-text-color);
+    display: inline-block;
+    font-weight: bold;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .profile__image {
+    float: left;
+    margin-right: 6px;
+  }
+
+  .profile__content {
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  .navigation__link,
+  .featured__credit a,
+  .profile__content a {
+    color: var(--profile-text-color);
+  }
+
+  .profile__social-list {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .profile__social-list-item {
+    display: inline;
+    margin-right: 0.5em;
+  }
+
+  .amazon-book-list {
+    margin-top: 2em;
+  }
+
+  .amazon-book-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  .amazon-book-list li {
+    display: table-cell;
+    padding: 10px;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  .amazon-book-list li a {
+    color: #666;
+  }
+
+  .amazon-book-list li img {
+    display: block;
+  }
+
+  .amazon-book-list-3 li {
+    width: 33%;
+  }
+
+  .amazon-book-list-4 li {
+    width: 25%;
+  }
+
+  .amazon-book-list-5 li {
+    width: 20%;
+  }
+
+  .content hr {
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-style: solid;
+    border-color: #ddd;
+    margin-top: 4em;
+  }
+
+  .pagination {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .page-number,
+  .extend.next,
+  .extend.prev,
+  .pagination .space {
+    min-width: 59px;
+    min-height: 59px;
+    text-align: center;
+    line-height: 59px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+  }
+
+  .pagination .space {
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--darker-color);
+    font-weight: bold;
+    color: white;
+    border-color: var(--darker-color);
+  }
+
+  pre {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+</style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
     "@context": "http://schema.org",
-    "@graph":
-    [
+    "@graph": [
       {
         "@context": "http://schema.org",
         "@type": "Organization",
@@ -385,310 +545,8 @@
       }
     ]
   }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context":"http://schema.org",
-      "@type":"ItemList",
-      "itemListElement":[
-        
-        {
-          "@type":"ListItem",
-          "position":1,
-          "url": "https://memolog.org/2004/12/11.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":2,
-          "url": "https://memolog.org/2004/12/post_38.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":3,
-          "url": "https://memolog.org/2004/12/post_32.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":4,
-          "url": "https://memolog.org/2004/11/tokona_x.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":5,
-          "url": "https://memolog.org/2004/11/post_14.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":6,
-          "url": "https://memolog.org/2004/11/post_7.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":7,
-          "url": "https://memolog.org/2004/11/post_6.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":8,
-          "url": "https://memolog.org/2004/11/2046.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":9,
-          "url": "https://memolog.org/2004/11/post_4.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":10,
-          "url": "https://memolog.org/2004/03/post.html"
-        }
-        
-      ]
-    }
-  </script>
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
-</head>
-<body>
-    <header class="header header_component_global">
-    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
-    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
-    <p class="header__description">塵が積もって山とならないメモのログ</p>
-    <nav class="navigation navigation-global">
-      <a href="/" class="navigation__link">📘 最新のメモ</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <main class="main">
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-12-29T06:54:32.000Z"><span class="calendar-icon">📅</span><span>2004年12月29日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/12/11.html">1文1アイデアの文を書く</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><img src="/assets/i/web/003.gif" alt="挿絵"></p>
-<p>ほとんどの訪問者がWEBサイトに情報を求めて訪れます。訪問者にとって便利なサイトとは、求めている情報が簡単に発見でき、そしてその情報が役に立つことです。WEBサイトの価値を向上させるには、両者を向上させることが肝要です。使いやすいWEBサイトでも情報が役立たなければ意味がないですし、有益な情報が載っていても見つけられなければ使いようがありません。</p>
-<p>WEB制作では、サイトの使いやすさを向上させる技術はよく解説されていますが、有益な情報を作る技術についてはあまり解説されません。有益な情報を作る技術とは、たとえば、情報に対するアプローチの仕方であったり、取材を段取りよくすすめる技術であったり、魅力的な文章作成技術であったり、WEB制作の技術というより、企画・編集・ライティングの技術に属するからでしょう。実は個人サイトの制作するということは、一人で企画から編集、ライティング、デザイン、オペレーションまで行う事であり、雑誌や本を一人で制作することと同じです。ですから、WEBサイトの質を向上させるためには、それらの技術を幅広く向上させる事が求められます。</p>
-<p>しかし、全ての技術を網羅的に習得するのを待っていたら、いつまで経ってもWEBサイトは作れません。とりあえずWEBサイトを作りながら、コツコツと改善していくというのが、もっとも自然で長続きするやり方です。今回はライティングの中でも、「分かりやすい文を書く」技術に注目したいと思います。前置き長いな。</p></div>
-            <div><a href="/2004/12/11.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-12-22T12:15:18.000Z"><span class="calendar-icon">📅</span><span>2004年12月22日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/12/post_38.html">ブロックとインラインについて</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><img src="/assets/i/web/002.gif" alt="挿絵"></p>
-<p>今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。</p></div>
-            <div><a href="/2004/12/post_38.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-12-15T20:26:11.000Z"><span class="calendar-icon">📅</span><span>2004年12月16日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/12/post_32.html">要素と属性について</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><img src="/assets/i/web/001.gif" alt="挿絵"></p>
-<p>WEBの制作をしていると良く出てくるのが、「要素」と「属性」という言葉。専門用語ではなく単なる日本語として扱われているためか、はたまた常識として認知されているためか、その意味はWEB制作本の片隅にも載りません。でもWEB制作、特にHTML制作において「要素」と「属性」の区別がつかないと難儀します。抽象的な言葉なので分からないままにしておくと何が「要素」で何が「属性」なのか分からなくなってきます。一度その定義のようなものを理解しておくとWEBの制作はぐっと楽になります。</p></div>
-            <div><a href="/2004/12/post_32.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-25T07:45:23.000Z"><span class="calendar-icon">📅</span><span>2004年11月25日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/tokona_x.html">TOKONA X 死去</a></h2>
-            
-          </header>
-          
-            <div class="content"><ul>
-<li><a target="_blank" rel="noopener" href="http://www.bounce.com/news/daily.php?C=4566">bounce.com：名古屋ヒップホップ・シーンの顔役ラッパー、TOKONA-Xが急逝</a></li>
-<li><a target="_blank" rel="noopener" href="http://www.j-wave.co.jp/original/soultrain/contents.htm">SOUL TRAIN</a></li>
-</ul>
-<p>SOUL TRAINにて。TOKONA Xが死去したと報じられました。死因は熱中症による体力低下らしいです。熱中症とは、体の中と外の&quot;あつさ&quot;によって引き起こされる、様々な体の不調。重度になると体内の血液が凝固し、脳、肺、肝臓、腎臓などの全身の臓器の障害を生じる多臓器不全となり、死亡に至ることもあるのだそう（参考：<a target="_blank" rel="noopener" href="http://www.heat.gr.jp/explain/index.html">熱中症とは</a>）。</p></div>
-            <div><a href="/2004/11/tokona_x.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-21T11:19:20.000Z"><span class="calendar-icon">📅</span><span>2004年11月21日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/post_14.html">アフィリエイト所感</a></h2>
-            
-          </header>
-          
-            <div class="content"><ul>
-<li><a target="_blank" rel="noopener" href="http://www.shijo24.com/blog/archives/000544.html">波多野blog：さらに浸透する！アフィリエイトサービス</a></li>
-</ul>
-<p>ここ３〜４ヶ月の間にアフィリエイトの取り上げられ方が非常に大きくなったと思います。アフィリエイトと名のつく関連本も数多く出版されるようになりました。そろそろ宝島ムックでも登場する頃でしょうか。</p>
-<p>私がアフィリエイトについて思うことは、アフィリエイトというのがギャンブル的要素が強いということ。儲かった人がその快感を大きく伝えてる、あるいは受け手に大きく印象に残るので、アフィリエイトがすごい儲かるのではないかと幻想を抱かせるところや、誰にでもできること、成功者と自分との差があまりないように感じることなど、ギャンブルとよく似ています。また、運否天賦で短期的に儲かる人もいるけれど、長期的にはきっちり情報収集して分析して、それなりに時間をかけている人が勝利しているところも、ギャンブルに近しいものを感じます。</p>
-<p>だから、アフィリエイトはすごく儲かるような印象があるけれども、実際にはギャンブルと一緒で儲かる人もいるけれど、それは一握りで実際にはそんなに儲からない。</p></div>
-            <div><a href="/2004/11/post_14.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-14T10:54:39.000Z"><span class="calendar-icon">📅</span><span>2004年11月14日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/post_7.html">コラテラルをみました</a></h2>
-            
-          </header>
-          
-            <div class="content"><ul>
-<li><a target="_blank" rel="noopener" href="http://www.collateral.jp/">コラテラル</a></li>
-</ul>
-<p>評価：★★★★☆<br>
-殺人を依頼された殺し屋ヴィンセント（トム・クルーズ）が、拾ったタクシーの運転手マックス（ジェイミー・フォックス）を巻き添えにして次々と「仕事」をこなしていくというストーリー。特に前提知識のようなものも必要なく、素直に映画を楽しめます。胸に2発、頭に1発、正確に撃ち込むところがプロの殺し屋の手際の良さ、キレのようなものを感じさせます。トム・クルーズは役作りにあたって、元SAS隊員に指導を受けたのだそうです。</p></div>
-            <div><a href="/2004/11/post_7.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-11T10:52:44.000Z"><span class="calendar-icon">📅</span><span>2004年11月11日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/post_6.html">みんな誰かの愛しい人を見ました。</a></h2>
-            
-          </header>
-          
-            <div class="content"><ul>
-<li><a target="_blank" rel="noopener" href="http://www.gaga.ne.jp/dare-ai/">みんな誰かの愛しい人</a></li>
-</ul>
-<p>評価：★★★★★<br>
-主人公のロリータはぽっちゃりした体型がコンプレックスの大作家を父親（エチエンヌ）を持つ女の子。淡い期待が裏切られるたび「必要なのは自分じゃなくて父親とのコネクション」という孤独感が募る。</p></div>
-            <div><a href="/2004/11/post_6.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-09T15:08:33.000Z"><span class="calendar-icon">📅</span><span>2004年11月10日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/2046.html">2046をみてきました。</a></h2>
-            
-          </header>
-          
-            <div class="content"><ul>
-<li><a target="_blank" rel="noopener" href="http://www.2046.jp/">2046</a></li>
-</ul>
-<p>評価：★☆☆☆☆<br>
-「2046」とは主人公のチャウが映画の中で創り上げる小説のタイトルであり、小説の世界でミステリートレインが目指す先でもあります。チャウはミステリートレインが2046に向かう途中で起きる出来事として、彼の身の回りに起きた出来事を比喩的に表現していきます。小説の中の登場人物は彼の身の周りにいる人たちだけれども、小説の中の登場人物は彼というフィルターを通して描かれているから、つまるところそれは彼自身。現実世界で起きた出来事が、「2046」という小説の世界にも反映され、書き加えられていきます。そしてチャウの中に出てきた一つの結論が、小説の結末となって表現されていきます。</p></div>
-            <div><a href="/2004/11/2046.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-11-07T18:38:03.000Z"><span class="calendar-icon">📅</span><span>2004年11月8日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/11/post_4.html">らくだの涙を見てきました</a></h2>
-            
-          </header>
-          
-            <div class="content"><ul>
-<li><a target="_blank" rel="noopener" href="http://www.klockworx.com/rakuda/index.html">らくだの涙 公式サイト</a></li>
-</ul>
-<p>評価：★★★★☆<br>
-モンゴル南部に居住する遊牧民とらくだの暮らし・文化を追ったドキュメンタリーです。初産の苦しみ故か子らくだを遠ざける母らくだに対して、子らくだを受け入れ乳を与えるようにモンゴルの家族たちが手段を尽くしていくというのが話の中心。母らくだに近づけず子らくだが遠くの方で独り寂しそうな声で泣くというシーンがあるのですが、それが本当に寂しそうで泣けてきました。</p></div>
-            <div><a href="/2004/11/post_4.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2004-03-17T13:09:49.000Z"><span class="calendar-icon">📅</span><span>2004年3月17日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2004/03/post.html">誕生日事典（誕生日辞典）で性格診断</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="http://www.amazon.co.jp/exec/obidos/ASIN/4047913510/ref=nosim/yutakayamaguc-22"><img src="http://ec2.images-amazon.com/images/I/51NV0TY105L._SL180_.jpg" alt="誕生日事典"></a> この本は誕生日からその日に生まれた人の性格を診断するという本です。ページの内容は、その日を特徴づける一言と、解説（目算で600字程度）、ナンバーと惑星（支配される数字と惑星）、タロット（タロットカードの顕示）、健康、アドバイス、瞑想の言葉などです。1日ごとに2ページの構成なので、本はかなりの大容量で分厚いです。</p></div>
-            <div><a href="/2004/03/post.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-      <footer class="pagination"><a class="extend prev" rel="prev" href="/page/39/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><a class="page-number" href="/page/33/">33</a><a class="page-number" href="/page/34/">34</a><a class="page-number" href="/page/35/">35</a><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><span class="page-number current">40</span></footer>
-    </main>
-    <footer class="profile">
-  <div class="profile-inner">
-    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
-    <h2 class="profile__heading">私について</h2>
-    <div class="profile__content">
-      <div>Yutaka Yamaguchi</div>
-      <div>東京在住。TypeScript, Node.js, Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。万年英語勉強中</div>
-      <ul class="profile__social-list">
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-  </div>
-  <script>
-  // http://css-tricks.com/favicons-next-to-external-links/
-  (function (){
-    'use strict';
-    if (/googlebot/i.test(navigator.userAgent)) {
-      return;
-    }
-    window.addEventListener("DOMContentLoaded", () => {
-      const links = document.querySelectorAll('.content p a');
-      const linkLength = links && links.length || 0;
-      for (var i=0; i<linkLength; i++){
-        const link = links[i];
-        const hostname = link.hostname;
-        if (hostname) {
-          const children = link.children || [];
-          const firstChild = children && children[0];
-          if (firstChild && firstChild.tagName === 'IMG') {
-            // For old amazon image link
-            if (link.hostname === 'www.amazon.co.jp') {
-              link.style.float = 'left';
-              link.style.marginRight = '1em';
-              link.style.paddingLeft = '0';
-            }
-            // link.classList.add('no-link-icon');
-            continue;
-          }
-
-          // link.classList.add('link-icon');
-          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
-        }
-      }
-    });
-  })();
-</script>
-<script>
-  if ('serviceWorker' in navigator) {
-    // navigator.serviceWorker.register('/service-worker.js');
-  }
-</script>
-
-</body>
-</html>
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2004/12/11.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2004/12/post_38.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2004/12/post_32.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2004/11/tokona_x.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2004/11/post_14.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2004/11/post_7.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2004/11/post_6.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2004/11/2046.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2004/11/post_4.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2004/03/post.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2004-12-29T15:54:32.000Z"> <span class="calendar-icon">📅</span> <span>2004年12月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/12/11.html">1文1アイデアの文を書く</a> </h2>  </header> <div class="content">ほとんどの訪問者がWEBサイトに情報を求めて訪れます。訪問者にとって便利なサイトとは、求めている情報が簡単に発見でき、そしてその情報が役に立つことです。WEBサイトの価値を向上させるには、両者を向上させることが肝要です。使いやすいWEBサイトでも情報が役立たなければ意味がないですし、有益な情報が載っていても見つけられなければ使いようがありません。</div> <div class="read-more"> <a href="/2004/12/11.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-12-22T21:15:18.000Z"> <span class="calendar-icon">📅</span> <span>2004年12月23日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/12/post_38.html">ブロックとインラインについて</a> </h2>  </header> <div class="content">今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。</div> <div class="read-more"> <a href="/2004/12/post_38.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-12-16T05:26:11.000Z"> <span class="calendar-icon">📅</span> <span>2004年12月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/12/post_32.html">要素と属性について</a> </h2>  </header> <div class="content">WEBの制作をしていると良く出てくるのが、「要素」と「属性」という言葉。専門用語ではなく単なる日本語として扱われているためか、はたまた常識として認知されているためか、その意味はWEB制作本の片隅にも載りません。でもWEB制作、特にHTML制作において「要素」と「属性」の区別がつかないと難儀します。抽象的な言葉なので分からないままにしておくと何が「要素」で何が「属性」なのか分からなくなってきます。一度その定義のようなものを理解しておくとWEBの制作はぐっと楽になります。</div> <div class="read-more"> <a href="/2004/12/post_32.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-11-25T16:45:23.000Z"> <span class="calendar-icon">📅</span> <span>2004年11月26日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/11/tokona_x.html">TOKONA X 死去</a> </h2>  </header> <div class="content">*   bounce.com：名古屋ヒップホップ・シーンの顔役ラッパー、TOKONA-Xが急逝 *   SOUL TRAIN  SOUL TRAINにて。TOKONA Xが死去したと報じられました。死因は熱中症による体力低下らしいです。熱中症とは、体の中と外の&quot;あつさ&quot;によって引き起こされる、様々な体の不調。重度になると体内の血液が凝固し、脳、肺、肝臓、腎臓などの全身の臓器の障害を生じる多臓器不全となり、死亡に至ることもあるのだそう（参考：熱中症とは）。</div> <div class="read-more"> <a href="/2004/11/tokona_x.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-11-21T20:19:20.000Z"> <span class="calendar-icon">📅</span> <span>2004年11月22日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/11/post_14.html">アフィリエイト所感</a> </h2>  </header> <div class="content">*   波多野blog：さらに浸透する！アフィリエイトサービス  ここ３〜４ヶ月の間にアフィリエイトの取り上げられ方が非常に大きくなったと思います。アフィリエイトと名のつく関連本も数多く出版されるようになりました。そろそろ宝島ムックでも登場する頃でしょうか。  私がアフィリエイトについて思うことは、アフィリエイトというのがギャンブル的要素が強いということ。儲かった人がその快感を大きく伝えてる、あるいは受け手に大きく印象に残るので、アフィリエイトがすごい儲かるのではないかと幻想を抱かせるところや、誰にでもできること、成功者と自分との差があまりないように感じることなど、ギャンブルとよく似ています。また、運否天賦で短期的に儲かる人もいるけれど、長期的にはきっちり情報収集して分析して、それなりに時間をかけている人が勝利しているところも、ギャンブルに近しいものを感じます。  だから、アフィリエイトはすごく儲かるような印象があるけれども、実際にはギャンブルと一緒で儲かる人もいるけれど、それは一握りで実際にはそんなに儲からない。</div> <div class="read-more"> <a href="/2004/11/post_14.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-11-14T19:54:39.000Z"> <span class="calendar-icon">📅</span> <span>2004年11月15日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/11/post_7.html">コラテラルをみました</a> </h2>  </header> <div class="content">*   コラテラル  評価：★★★★☆   殺人を依頼された殺し屋ヴィンセント（トム・クルーズ）が、拾ったタクシーの運転手マックス（ジェイミー・フォックス）を巻き添えにして次々と「仕事」をこなしていくというストーリー。特に前提知識のようなものも必要なく、素直に映画を楽しめます。胸に2発、頭に1発、正確に撃ち込むところがプロの殺し屋の手際の良さ、キレのようなものを感じさせます。トム・クルーズは役作りにあたって、元SAS隊員に指導を受けたのだそうです。</div> <div class="read-more"> <a href="/2004/11/post_7.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-11-11T19:52:44.000Z"> <span class="calendar-icon">📅</span> <span>2004年11月12日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/11/post_6.html">みんな誰かの愛しい人を見ました。</a> </h2>  </header> <div class="content">*   みんな誰かの愛しい人         評価：★★★★★   主人公のロリータはぽっちゃりした体型がコンプレックスの大作家を父親（エチエンヌ）を持つ女の子。淡い期待が裏切られるたび「必要なのは自分じゃなくて父親とのコネクション」という孤独感が募る。</div> <div class="read-more"> <a href="/2004/11/post_6.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-11-10T00:08:33.000Z"> <span class="calendar-icon">📅</span> <span>2004年11月10日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/11/2046.html">2046をみてきました。</a> </h2>  </header> <div class="content">*   2046  評価：★☆☆☆☆   「2046」とは主人公のチャウが映画の中で創り上げる小説のタイトルであり、小説の世界でミステリートレインが目指す先でもあります。チャウはミステリートレインが2046に向かう途中で起きる出来事として、彼の身の回りに起きた出来事を比喩的に表現していきます。小説の中の登場人物は彼の身の周りにいる人たちだけれども、小説の中の登場人物は彼というフィルターを通して描かれているから、つまるところそれは彼自身。現実世界で起きた出来事が、「2046」という小説の世界にも反映され、書き加えられていきます。そしてチャウの中に出てきた一つの結論が、小説の結末となって表現されていきます。</div> <div class="read-more"> <a href="/2004/11/2046.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-11-08T03:38:03.000Z"> <span class="calendar-icon">📅</span> <span>2004年11月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/11/post_4.html">らくだの涙を見てきました</a> </h2>  </header> <div class="content">*   らくだの涙 公式サイト  評価：★★★★☆   モンゴル南部に居住する遊牧民とらくだの暮らし・文化を追ったドキュメンタリーです。初産の苦しみ故か子らくだを遠ざける母らくだに対して、子らくだを受け入れ乳を与えるようにモンゴルの家族たちが手段を尽くしていくというのが話の中心。母らくだに近づけず子らくだが遠くの方で独り寂しそうな声で泣くというシーンがあるのですが、それが本当に寂しそうで泣けてきました。</div> <div class="read-more"> <a href="/2004/11/post_4.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-03-17T22:09:49.000Z"> <span class="calendar-icon">📅</span> <span>2004年3月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2004/03/post.html">誕生日事典（誕生日辞典）で性格診断</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #f5f2f0;"> <picture> <source srcset="/assets/images/book-of-birthday/book-of-birthday_small.png, /assets/images/book-of-birthday/book-of-birthday_small@2x.png 2x, /assets/images/book-of-birthday/book-of-birthday_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/book-of-birthday/book-of-birthday_medium.webp, /assets/images/book-of-birthday/book-of-birthday_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/book-of-birthday/book-of-birthday_medium.png, /assets/images/book-of-birthday/book-of-birthday_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/book-of-birthday/book-of-birthday_medium.png" alt role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content"> この本は誕生日からその日に生まれた人の性格を診断するという本です。ページの内容は、その日を特徴づける一言と、解説（目算で600字程度）、ナンバーと惑星（支配される数字と惑星）、タロット（タロットカードの顕示）、健康、アドバイス、瞑想の言葉などです。1日ごとに2ページの構成なので、本はかなりの大容量で分厚いです。</div> <div class="read-more"> <a href="/2004/03/post.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/39/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/30/"> 30 </a><a class="page-number " href="/page/31/"> 31 </a><a class="page-number " href="/page/32/"> 32 </a><a class="page-number " href="/page/33/"> 33 </a><a class="page-number " href="/page/34/"> 34 </a><a class="page-number " href="/page/35/"> 35 </a><a class="page-number " href="/page/36/"> 36 </a><a class="page-number " href="/page/37/"> 37 </a><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><span class="page-number current">40</span>  </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+東京在住。TypeScript, Node.js,
+        Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
+        860くらい。
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </div> </body></html>

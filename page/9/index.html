@@ -1,371 +1,531 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <title>メモログ</title>
-  <meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description">
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://www.google-analytics.com">
-  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
-  <style>body {
-  background-color: white;
-  color: black;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html><html lang="ja"> <head><title>メモログ</title><meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="shortcut icon" href="/assets/icons/icon-32.ico"><style>
+  :root {
+    --container-width: 985px;
+    --link-color: #694b16;
+    --background-color: #e3ded5;
+    --lighter-color: #fdf8ee;
+    --darker-color: #cac5bc;
+    --more-dark-color: #b1aca4;
+    --border-color: #cac5bc;
+    --profile-text-color: #55514a;
+    --article-background-color: white;
+    --profile-background-color: var(--border-color);
+    --border-radius: 10px;
+  }
+  body {
+    background-color: var(--background-color);
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-.header {
-  margin: 0 auto 2em;
-  font-family: Garamond, "Times New Roman", serif;
-}
+  a {
+    color: var(--link-color);
+  }
 
-.header_component_global {
-  text-align: center;
-  margin: 1em auto;
-  max-width: 800px;
-}
+  .header {
+    margin: 0 auto;
+    font-family: Garamond, "Times New Roman", serif;
+  }
 
-.header__title {
-  margin: 0.2em 0 0.2em;
-  font-size: 1.8em;
-  font-weight: normal;
-  vertical-align: bottom;
-}
+  .header:has(.featured__image) {
+    margin-bottom: 2em;
+  }
 
-.header__title a,
-.header__title > span {
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #f5f2f0;
-  padding: 5px;
-}
+  .header_component_global {
+    width: 100%;
+  }
 
-.header_component_global .header__title {
-  font-size: 1.2em;
-}
+  .header-inner {
+    text-align: center;
+    margin: 5px auto;
+    max-width: var(--container-width);
+    display: grid;
+    grid-template-columns: 36px 96px auto;
+    align-items: center;
+  }
 
-.header_component_global .header__title a {
-  text-decoration: none;
-  color: black;
-}
-
-.main .header .header__title {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  opacity: 0.8;
-  margin-bottom: 0;
-}
-
-.header__description {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-.header_component_global .header__description {
-  color: #666;
-  margin: 0 auto;
-  padding: 0 5px;
-}
-
-.header__epigraph {
-  font-style: italic;
-  color: #666;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.container {
-  width: 800px;
-  margin: 0 auto 4em;
-  padding: 0 15px;
-  border-radius: 3px;
-}
-
-.content {
-  font-size: 1.125em;
-  line-height: 2em;
-  background: white;
-  color: #222;
-  -webkit-font-smoothing: antialiased;
-}
-
-.content h2,
-.content h3 {
-  font-size: 1.4em;
-  margin: 2em 0 1em 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.article-summary {
-  margin-bottom: 3.5em;
-}
-
-.header time {
-  display: inline-block;
-  font-size: 0.9125em;
-  color: #666;
-}
-
-.calendar-icon,
-.author-icon {
-  margin-right: 0.5em;
-}
-
-.content blockquote {
-  border: 5px solid #ddd;
-  background: #f9f9f9;
-  margin: 1.5em 0;
-  padding: 0 1em;
-}
-
-.content p > code,
-.content li > code {
-  background-color: #f5f2f0;
-  display: inline-block;
-  padding: 0 6px;
-  border-radius: 0.3em;
-  color: #444;
-}
-
-.content table {
-  background: #e0e0e0;
-}
-
-.content th {
-  background: #f0f0f0;
-}
-
-.content tr {
-  background: #fff;
-}
-
-.content tr:nth-child(even) {
-  background: #f0f0f0;
-}
-
-.content td {
-  padding: 5px 1em;
-  text-align: center;
-}
-
-.content code[class*="language-"] {
-  color: #444;
-}
-
-.header__feature {
-  margin: 0.5em 0 -0.5em;
-  position: relative;
-}
-
-.header__feature img {
-  overflow: hidden;
-}
-
-.featured__image {
-  background: white;
-  line-height: 0;
-  max-height: 335px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.featured__credit {
-  color: #333;
-  font-size: 0.825em;
-  text-align: right;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 7px;
-  background: #f0f0f0;
-  opacity: 0.8;
-}
-
-.lazyload,
-.lazyloading {
-  opacity: 0.5;
-}
-
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
-}
-
-.content img {
-  max-width: 100%;
-}
-
-.youtube-wrapper {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-}
-
-.youtube-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  border: 0;
-}
-
-@media screen and (max-width: 500px) {
-  .header__epigraph {
-    display: none;
+  .header__icon {
+    justify-self: end;
   }
 
   .header__title {
-    font-size: 1.2em;
+    margin: 0.2em 0 0.2em;
+    font-size: 1.8em;
+    font-weight: normal;
+    vertical-align: bottom;
   }
 
-  .content h2 {
-    font-size: 1.2em;
+  .header__title a,
+  .header__title > span {
+    color: black;
+    text-decoration: none;
   }
 
-  .main .header .header__title {
-    margin-bottom: 30px;
+  .header_component_global .header__title {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    justify-self: start;
+  }
+
+  .header_component_global .header__title a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 5px;
+    background-color: transparent;
+  }
+
+  .header_component_global .navigation-global {
+    justify-self: end;
+    padding-right: 10px;
+    font-family: sans-serif;
+  }
+
+  .header__description {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header_component_global .header__description {
+    color: #666;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .header__epigraph {
+    font-style: italic;
+    color: #666;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto 4em;
+    padding: 0 15px;
+    border-radius: var(--border-radius);
+  }
+
+  article {
+    background-color: var(--article-background-color);
+    padding: 2em;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    font-size: 1.125em;
+    line-height: 2em;
+    background: var(--article-background-color);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .read-more {
+    margin-top: 1em;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-summary {
+    margin-bottom: 3.5em;
+  }
+
+  .header time {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: #666;
+    font-family: sans-serif;
+  }
+
+  .calendar-icon,
+  .author-icon {
+    margin-right: 0.5em;
+  }
+
+  .content blockquote {
+    border: 5px solid var(--border-color);
+    background: var(--lighter-color);
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+
+  .content p > code,
+  .content li > code {
+    background-color: #f5f2f0;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: var(--border-radius);
+    color: #444;
+  }
+
+  .content table {
+    background: #e0e0e0;
+  }
+
+  .content th {
+    background: #f0f0f0;
+  }
+
+  .content tr {
+    background: #fff;
+  }
+
+  .content tr:nth-child(even) {
+    background: #f0f0f0;
+  }
+
+  .content td {
+    padding: 5px 1em;
+    text-align: center;
+  }
+
+  .content code[class*="language-"] {
+    color: #444;
   }
 
   .header__feature {
-    margin-top: -23px;
-  }
-
-  .featured__credit {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin: 0.5em 0 -0.5em;
     position: relative;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .featured__image,
-  .content__image,
-  .content pre[class*="language-"],
-  .youtube-wrapper {
-    margin: 0 -15px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .featured__image,
-  .content__image,
-  .content pre[class*="language-"] {
-    margin: 0 -15px;
-  }
-}
-
-/*
-.content p a[href]::before {
-  content: '🌐';
-  width: 24px;
-  display: inline-block;
-}
-
-.content p a[href].link-icon::before {
-  content: '';
-}
-
-.content p a[href].no-link-icon::before {
-  content: '';
-  width: 0;
-}
-
-.content p a.link-icon {
-  background-position-x: 4px;
-  background-position-y: center;
-  background-repeat: no-repeat;
-}
-*/
-
-.post .writing-vertical {
-  writing-mode: vertical-rl;
-  font-family: serif;
-  font-size: 1em;
-  margin: 1.5em 0;
-  column-count: 2;
-  max-width: 800px;
-  width: 102%;
-  overflow: auto;
-  height: 800px;
-}
-
-.post .writing-vertical p {
-  margin: 0;
-}
-
-/*
-.post .writing-vertical p a {
-  padding-left: 0px;
-  padding-top: 24px;
-}
-*/
-
-.post .writing-vertical p:first-letter {
-  margin-top: 1em;
-}
-
-.post .writing-vertical .link-icon {
-  background-position-x: center;
-  background-position-y: 5px;
-}
-
-.post .writing-vertical blockquote {
-  border: none;
-  margin: 0 0.5em;
-  padding: 1em 0.5em;
-  background: #f0f0f0;
-}
-
-@media screen and (max-width: 730px) {
-  .container {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .post .writing-vertical {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
   }
 
   .header__feature img {
-    max-width: 100%;
-    height: auto;
+    overflow: hidden;
   }
-}
-</style>
-  <script>window.lazyLoadOptions = {};</script>
-  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
-  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
-  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
-  <link rel="manifest" href="/manifest.json" >
-  <meta name="theme-color" content="white">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  .featured__image {
+    background: #f5f2f0;
+    line-height: 0;
+    max-height: 335px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 -32px;
+  }
 
-    gtag('config', 'UA-955153-2');
-  </script>
-  <script type="application/ld+json">
+  .featured__image picture {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .featured__image picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featured__credit {
+    color: #333;
+    font-size: 0.825em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"],
+    .youtube-wrapper {
+      margin: 0 -15px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -15px;
+    }
+  }
+
+  /*
+  .content p a[href]::before {
+    content: '🌐';
+    width: 24px;
+    display: inline-block;
+  }
+
+  .content p a[href].link-icon::before {
+    content: '';
+  }
+
+  .content p a[href].no-link-icon::before {
+    content: '';
+    width: 0;
+  }
+
+  .content p a.link-icon {
+    background-position-x: 4px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  */
+
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  /*
+  .post .writing-vertical p a {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+  */
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile {
+    border: 1px solid var(--profile-background-color);
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--profile-text-color);
+    border-radius: var(--border-radius);
+    background: var(--profile-background-color);
+  }
+
+  .profile__heading {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--profile-text-color);
+    display: inline-block;
+    font-weight: bold;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .profile__image {
+    float: left;
+    margin-right: 6px;
+  }
+
+  .profile__content {
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  .navigation__link,
+  .featured__credit a,
+  .profile__content a {
+    color: var(--profile-text-color);
+  }
+
+  .profile__social-list {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .profile__social-list-item {
+    display: inline;
+    margin-right: 0.5em;
+  }
+
+  .amazon-book-list {
+    margin-top: 2em;
+  }
+
+  .amazon-book-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  .amazon-book-list li {
+    display: table-cell;
+    padding: 10px;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  .amazon-book-list li a {
+    color: #666;
+  }
+
+  .amazon-book-list li img {
+    display: block;
+  }
+
+  .amazon-book-list-3 li {
+    width: 33%;
+  }
+
+  .amazon-book-list-4 li {
+    width: 25%;
+  }
+
+  .amazon-book-list-5 li {
+    width: 20%;
+  }
+
+  .content hr {
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-style: solid;
+    border-color: #ddd;
+    margin-top: 4em;
+  }
+
+  .pagination {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .page-number,
+  .extend.next,
+  .extend.prev,
+  .pagination .space {
+    min-width: 59px;
+    min-height: 59px;
+    text-align: center;
+    line-height: 59px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+  }
+
+  .pagination .space {
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--darker-color);
+    font-weight: bold;
+    color: white;
+    border-color: var(--darker-color);
+  }
+
+  pre {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+</style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
     "@context": "http://schema.org",
-    "@graph":
-    [
+    "@graph": [
       {
         "@context": "http://schema.org",
         "@type": "Organization",
@@ -385,401 +545,10 @@
       }
     ]
   }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context":"http://schema.org",
-      "@type":"ItemList",
-      "itemListElement":[
-        
-        {
-          "@type":"ListItem",
-          "position":1,
-          "url": "https://memolog.org/2018/inline-svg-as-an-image-placeholder.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":2,
-          "url": "https://memolog.org/2018/image-manipulation-with-primitive.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":3,
-          "url": "https://memolog.org/2018/display-featured-image.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":4,
-          "url": "https://memolog.org/2018/import-from-old-blog.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":5,
-          "url": "https://memolog.org/2018/New-Year-Resolutions.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":6,
-          "url": "https://memolog.org/2017/html-elements.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":7,
-          "url": "https://memolog.org/2017/hello-hexo.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":8,
-          "url": "https://memolog.org/2017/hello-gatsby.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":9,
-          "url": "https://memolog.org/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":10,
-          "url": "https://memolog.org/2016/01/angular2_and_import_statement.html"
-        }
-        
-      ]
-    }
-  </script>
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
-</head>
-<body>
-    <header class="header header_component_global">
-    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
-    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
-    <p class="header__description">塵が積もって山とならないメモのログ</p>
-    <nav class="navigation navigation-global">
-      <a href="/" class="navigation__link">📘 最新のメモ</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <main class="main">
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2018-01-15T16:39:56.000Z"><span class="calendar-icon">📅</span><span>2018年1月16日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2018/inline-svg-as-an-image-placeholder.html">画像のプレースホルダーとしてインラインSVGを使う</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #a39889"><img src="/assets/images/kelly-sikkema-511604/kelly-sikkema-511604.svg" alt="" role="presentation" loading="lazy" width="800" height="493" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/N3o-leQyFsI?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kelly Sikkema</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p>画像が読み込まれた後にレイアウトが動かないように、画像のプレースホルダーを入れた。最初はpng画像をインラインで挿入していたのだけど、svgの方が画像のサイズをみてその場その場で適切なものを作成しやすかったので、svgを使うようにしてみた。処理自体はNode.js（Hexoの処理の中）で行っている。現在のコンテンツの最大幅は750pxなので、それを基準に縦横比が合うようにheightを計算している。</div>
-            <div><a href="/2018/inline-svg-as-an-image-placeholder.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2018-01-13T21:44:06.000Z"><span class="calendar-icon">📅</span><span>2018年1月14日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2018/image-manipulation-with-primitive.html">Primitiveを使って画像を変換する</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #2c462e"><img src="/assets/images/rommanas-kongmeng-422586/rommanas-kongmeng-422586.svg" alt="" role="presentation" loading="lazy" width="800" height="493" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Rommanas Kongmeng</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p>Featured Imageとか言いながら、ただ写真を置くだけなのも何だなあとか思い、<a target="_blank" rel="noopener" href="https://github.com/fogleman/primitive">Primitive</a>を使用して、上に表示されている画像を変換してみた。Primitiveは画像を幾何学的なPrimitive（線とか丸、三角、四角）の集まりに変換してくれる。試行錯誤した結果を貼り付けていく。画像の下に変換するときに使用したオプションを添付してある。</p></div>
-            <div><a href="/2018/image-manipulation-with-primitive.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2018-01-08T02:07:38.000Z"><span class="calendar-icon">📅</span><span>2018年1月8日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2018/display-featured-image.html">Featured Image を設置する</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #85c3fc"><img src="/assets/images/igor-ovsyannykov-258206/igor-ovsyannykov-258206.svg" alt="" role="presentation" loading="lazy" width="800" height="531" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/7oTkp6P8PhM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Igor Ovsyannykov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p>記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、<a target="_blank" rel="noopener" href="https://unsplash.com">Unsplash</a>から良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。</p>
-<p>でも大きな画像をそのまま使うのはファイルサイズ的に大きすぎるので、リサイズしたい。できれば各端末に適したサイズにしておきたい… と、なんかいろいろ思ってしまい、最終的にUnsplashのサイトからダウンロードしたデータを個人的に使いたい大きさにリサイズするサービスを用意してみた。<a target="_blank" rel="noopener" href="https://github.com/memolog/convert-a-image-to-responsive-images">convert-a-image-to-responsive-images</a>に公開している（ES2015をターゲットにしているので、IE11では動かない）。ただの思いつきに思ったより時間をかけてしまった。最初はAWS Lambdaで画像をリサイズするつもりだったが、リサイズに使っている<a target="_blank" rel="noopener" href="https://github.com/lovell/sharp">Sharp</a>の扱いが少し難しく、メモリ容量のところでエラーになってしまった（これを解決する方法はありそうなのだが、やってる時間がなくなったので、しばし保留）。いずれにせよ最終的にはWEBサービスとして公開したいなと思っている。週末に時間があれば。</div>
-            <div><a href="/2018/display-featured-image.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2018-01-03T18:36:06.000Z"><span class="calendar-icon">📅</span><span>2018年1月4日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2018/import-from-old-blog.html">古い記事をインポートする</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #a7c1db"><img src="/assets/images/jordan-sanchez-111052/jordan-sanchez-111052.svg" alt="" role="presentation" loading="lazy" width="800" height="493" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/71hQxE-Sfvg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jordan Sanchez</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p>ブログの古い記事なんてほとんど顧みることはない。ほとんどの記事が「以前は役に立ったかもしれないけど、すでに役には立たない」コードの端切れのようなもので古い記事なんてそのまま放置していつの日かインターネットから姿を消すくらいでもいいかなあとか思っていた。</p>
-<p>のだが、数は少ないけどまだ誰かの役に立つかもしれないものもたぶんあるだろうし、過去の時点で自分が何を書いていたのか振り返ることもあるかもしれない（今まで一度もなかったけど）と思い直し、頑張ってインポートをしてみることにした。</div>
-            <div><a href="/2018/import-from-old-blog.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2018-01-02T22:34:59.000Z"><span class="calendar-icon">📅</span><span>2018年1月3日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2018/New-Year-Resolutions.html">新年の抱負を考える</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #291e30"><img src="/assets/images/nordwood-themes-467442/nordwood-themes-467442.svg" alt="" role="presentation" loading="lazy" width="800" height="493" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/zNS6oFkwlG4?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">NordWood Themes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p>今年は何をするかについて簡単なメモをとっておこうと思う。全部はできないとは思うけど、いくつかは達成したい。</p>
-<ul>
-<li>learn Python: <a target="_blank" rel="noopener" href="https://www.packtpub.com/application-development/learning-python-video">Learn Python (2.7)</a> / <a target="_blank" rel="noopener" href="https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11">Introduction to Computer Science and Programming Using Python (3.5)</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.packtpub.com/big-data-and-business-intelligence/python-finance-second-edition">Python for Finance</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/">LeetCode</a></li>
-<li>touch OpenCV</li>
-<li>touch Microsoft cognitive service</li>
-<li>touch Tensorflow</li>
-</ul>
-<p>あとブログの更新をできるだけ続ける</p>
-</div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2017-12-30T15:00:00.000Z"><span class="calendar-icon">📅</span><span>2017年12月31日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2017/html-elements.html">HTMLの構造を再確認する</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #3a3b3c"><img src="/assets/images/ilya-pavlov-87438/ilya-pavlov-87438.svg" alt="" role="presentation" loading="lazy" width="800" height="493" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/OqtafYT5kTw?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Ilya Pavlov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p>久しくHTML要素について振り返っていなかったので、このタイミングで一度主要な構造についてのHTML要素について振り返ってみようと思う。（TL;DR:適切な見出し要素が大事。あとはおまけ）</p></div>
-            <div><a href="/2017/html-elements.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2017-12-29T15:00:00.000Z"><span class="calendar-icon">📅</span><span>2017年12月30日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2017/hello-hexo.html">Hello Hexo</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/">Gatsby</a> はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>にすることにした。</p>
-<p><a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/">Gatsby</a> は高機能ゆえにたとえばデザインを少し変えたいというときに、<a target="_blank" rel="noopener" href="http://kyleamathews.github.io/typography.js/">Typography</a> の実装上でどう変更するかを調べる必要があったり、<a target="_blank" rel="noopener" href="https://github.com/KyleAMathews/react-responsive-grid">react-responsive-grid</a> とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。</div>
-            <div><a href="/2017/hello-hexo.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2017-12-28T15:00:00.000Z"><span class="calendar-icon">📅</span><span>2017年12月29日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2017/hello-gatsby.html">Gatsbyでスタティックサイトを作成する</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>更新しなくなったブログをリニューアルしようと思って、<a target="_blank" rel="noopener" href="https://www.gatsbyjs.org">Gatsby</a> で構築しようと思い立って、今作成してみている。</p>
-<p>Gatsbyは「Blazing-fast static site generator for React」ということで、Reactベースのスタティックサイトジェネレータらしいのだけど、実のところまだよくわかっていない。<a target="_blank" rel="noopener" href="https://www.gatsbyjs.org/docs/">Getting Started</a> のドキュメントをみて、<a target="_blank" rel="noopener" href="https://github.com/gatsbyjs/gatsby-starter-blog">gatsby-starter-blog</a> のstarterをGithub pages で公開しているだけなのだ。</div>
-            <div><a href="/2017/hello-gatsby.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2016-02-03T12:37:00.000Z"><span class="calendar-icon">📅</span><span>2016年2月3日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">Bitcodeを使ったアプリがCrashlyticsでmissing dSYMsになる</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>Xcodeでpublishした内部テスター向けのビルドで、<a target="_blank" rel="noopener" href="https://fabric.io/kits/ios/crashlytics">Crashlytics</a>へクラッシュレポートが届かない。「missing dSYM」というエラーが出てるので、dSYMの問題だろうというところまでわかるけど、<a target="_blank" rel="noopener" href="https://docs.fabric.io/ios/crashlytics/index.html">CrashlyticsのDocument</a>などを読んでもわからない。Crashlyticsのmissing dSYMの画面に出てるUUIDを検索しても見つからない…</p></div>
-            <div><a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2016-01-16T07:00:00.000Z"><span class="calendar-icon">📅</span><span>2016年1月16日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2016/01/angular2_and_import_statement.html">Angular2とimport statement</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a href="/blog//2016/01/angular2_with_decorators/">Angular2とDecorators - メモログ</a>に出した<a target="_blank" rel="noopener" href="https://angular.io/docs/ts/latest/quickstart.html">5 Min Quickstart</a>のサンプルを再掲すると、冒頭にimportのstatementがあります。</p></div>
-            <div><a href="/2016/01/angular2_and_import_statement.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-      <footer class="pagination"><a class="extend prev" rel="prev" href="/page/8/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="page-number" href="/page/40/">40</a><a class="extend next" rel="next" href="/page/10/">Next</a></footer>
-    </main>
-    <footer class="profile">
-  <div class="profile-inner">
-    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
-    <h2 class="profile__heading">私について</h2>
-    <div class="profile__content">
-      <div>Yutaka Yamaguchi</div>
-      <div>東京在住。TypeScript, Node.js, Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。万年英語勉強中</div>
-      <ul class="profile__social-list">
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-  </div>
-  <script>
-  // http://css-tricks.com/favicons-next-to-external-links/
-  (function (){
-    'use strict';
-    if (/googlebot/i.test(navigator.userAgent)) {
-      return;
-    }
-    window.addEventListener("DOMContentLoaded", () => {
-      const links = document.querySelectorAll('.content p a');
-      const linkLength = links && links.length || 0;
-      for (var i=0; i<linkLength; i++){
-        const link = links[i];
-        const hostname = link.hostname;
-        if (hostname) {
-          const children = link.children || [];
-          const firstChild = children && children[0];
-          if (firstChild && firstChild.tagName === 'IMG') {
-            // For old amazon image link
-            if (link.hostname === 'www.amazon.co.jp') {
-              link.style.float = 'left';
-              link.style.marginRight = '1em';
-              link.style.paddingLeft = '0';
-            }
-            // link.classList.add('no-link-icon');
-            continue;
-          }
-
-          // link.classList.add('link-icon');
-          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
-        }
-      }
-    });
-  })();
-</script>
-<script>
-  if ('serviceWorker' in navigator) {
-    // navigator.serviceWorker.register('/service-worker.js');
-  }
-</script>
-
-</body>
-</html>
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2018/inline-svg-as-an-image-placeholder.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2018/image-manipulation-with-primitive.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2018/display-featured-image.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2018/import-from-old-blog.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2018/new-year-resolutions.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2017/html-elements.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2017/hello-hexo.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2017/hello-gatsby.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2016/01/angular2_and_import_statement.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-16T01:39:56.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/inline-svg-as-an-image-placeholder.html">画像のプレースホルダーとしてインラインSVGを使う</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a39889;"> <div style="background-color: #a39889"> <img src="/assets/images/kelly-sikkema-511604/kelly-sikkema-511604.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/N3o-leQyFsI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kelly Sikkema</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">画像が読み込まれた後にレイアウトが動かないように、画像のプレースホルダーを入れた。最初はpng画像をインラインで挿入していたのだけど、svgの方が画像のサイズをみてその場その場で適切なものを作成しやすかったので、svgを使うようにしてみた。処理自体はNode.js（Hexoの処理の中）で行っている。現在のコンテンツの最大幅は750pxなので、それを基準に縦横比が合うようにheightを計算している。</div> <div class="read-more"> <a href="/2018/inline-svg-as-an-image-placeholder.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-14T06:44:06.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/image-manipulation-with-primitive.html">Primitiveを使って画像を変換する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #2c462e;"> <div style="background-color: #2c462e"> <img src="/assets/images/rommanas-kongmeng-422586/rommanas-kongmeng-422586.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Rommanas Kongmeng</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Featured Image とか言いながら、ただ写真を置くだけなのも何だなあとか思い、Primitiveを使用して、上に表示されている画像を変換してみた。Primitive は画像を幾何学的な Primitive（線とか丸、三角、四角）の集まりに変換してくれる。試行錯誤した結果を貼り付けていく。画像の下に変換するときに使用したオプションを添付してある。</div> <div class="read-more"> <a href="/2018/image-manipulation-with-primitive.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-08T11:07:38.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/display-featured-image.html">Featured Image を設置する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #f5f2f0;"> <picture> <source srcset="/assets/images/display-featured-image/display-featured-image_small.png, /assets/images/display-featured-image/display-featured-image_small@2x.png 2x, /assets/images/display-featured-image/display-featured-image_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/display-featured-image/display-featured-image_medium.webp, /assets/images/display-featured-image/display-featured-image_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/display-featured-image/display-featured-image_medium.png, /assets/images/display-featured-image/display-featured-image_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/display-featured-image/display-featured-image_medium.png" alt role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。</div> <div class="read-more"> <a href="/2018/display-featured-image.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-04T03:36:06.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/import-from-old-blog.html">古い記事をインポートする</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a7c1db;"> <div style="background-color: #a7c1db"> <img src="/assets/images/jordan-sanchez-111052/jordan-sanchez-111052.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/71hQxE-Sfvg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jordan Sanchez</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">ブログの古い記事なんてほとんど顧みることはない。ほとんどの記事が「以前は役に立ったかもしれないけど、すでに役には立たない」コードの端切れのようなもので古い記事なんてそのまま放置していつの日かインターネットから姿を消すくらいでもいいかなあとか思っていた。  のだが、数は少ないけどまだ誰かの役に立つかもしれないものもたぶんあるだろうし、過去の時点で自分が何を書いていたのか振り返ることもあるかもしれない（今まで一度もなかったけど）と思い直し、頑張ってインポートをしてみることにした。</div> <div class="read-more"> <a href="/2018/import-from-old-blog.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-03T07:34:59.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/new-year-resolutions.html">新年の抱負を考える</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #291e30;"> <div style="background-color: #291e30"> <img src="/assets/images/nordwood-themes-467442/nordwood-themes-467442.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/zNS6oFkwlG4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">NordWood Themes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">今年は何をするかについて簡単なメモをとっておこうと思う。全部はできないとは思うけど、いくつかは達成したい。  * learn Python: Learn Python (2.7) / [Introduction to Computer Science</div> <div class="read-more"> <a href="/2018/new-year-resolutions.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-31T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2017/html-elements.html">HTMLの構造を再確認する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #3a3b3c;"> <div style="background-color: #3a3b3c"> <img src="/assets/images/ilya-pavlov-87438/ilya-pavlov-87438.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/OqtafYT5kTw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Ilya Pavlov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">久しく HTML 要素について振り返っていなかったので、このタイミングで一度主要な構造についての HTML 要素について振り返ってみようと思う。（TL;DR:適切な見出し要素が大事。あとはおまけ）</div> <div class="read-more"> <a href="/2017/html-elements.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-30T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2017/hello-hexo.html">Hello Hexo</a> </h2>  </header> <div class="content">Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。</div> <div class="read-more"> <a href="/2017/hello-hexo.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-29T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2017/hello-gatsby.html">Gatsbyでスタティックサイトを作成する</a> </h2>  </header> <div class="content">更新しなくなったブログをリニューアルしようと思って、Gatsby で構築しようと思い立って、今作成してみている。  Gatsbyは「Blazing-fast static site generator for React」ということで、Reactベースのスタティックサイトジェネレータらしいのだけど、実のところまだよくわかっていない。Getting Started のドキュメントをみて、gatsby-starter-blog のstarterをGithub pages で公開しているだけなのだ。</div> <div class="read-more"> <a href="/2017/hello-gatsby.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2016-02-03T21:37:00.000Z"> <span class="calendar-icon">📅</span> <span>2016年2月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">Bitcodeを使ったアプリがCrashlyticsでmissing dSYMsになる</a> </h2>  </header> <div class="content">Xcodeでpublishした内部テスター向けのビルドで、Crashlyticsへクラッシュレポートが届かない。「missing dSYM」というエラーが出てるので、dSYMの問題だろうというところまでわかるけど、CrashlyticsのDocumentなどを読んでもわからない。Crashlyticsのmissing dSYMの画面に出てるUUIDを検索しても見つからない...</div> <div class="read-more"> <a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2016-01-16T16:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2016年1月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2016/01/angular2_and_import_statement.html">Angular2とimport statement</a> </h2>  </header> <div class="content">Angular2とDecorators - メモログに出した5 Min Quickstartのサンプルを再掲すると、冒頭にimportのstatementがあります。</div> <div class="read-more"> <a href="/2016/01/angular2_and_import_statement.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/8/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/7/"> 7 </a><a class="page-number " href="/page/8/"> 8 </a><span class="page-number current">9</span><a class="page-number " href="/page/10/"> 10 </a><a class="page-number " href="/page/11/"> 11 </a><span class="space">…</span><a class="page-number " href="/page/37/"> 37 </a><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a> <a class="extend next" rel="next" href="/page/10/">
+Next
+</a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+東京在住。TypeScript, Node.js,
+        Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
+        860くらい。
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </div> </body></html>

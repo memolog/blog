@@ -1,371 +1,531 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <title>メモログ</title>
-  <meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description">
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://www.google-analytics.com">
-  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
-  <style>body {
-  background-color: white;
-  color: black;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html><html lang="ja"> <head><title>メモログ</title><meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="shortcut icon" href="/assets/icons/icon-32.ico"><style>
+  :root {
+    --container-width: 985px;
+    --link-color: #694b16;
+    --background-color: #e3ded5;
+    --lighter-color: #fdf8ee;
+    --darker-color: #cac5bc;
+    --more-dark-color: #b1aca4;
+    --border-color: #cac5bc;
+    --profile-text-color: #55514a;
+    --article-background-color: white;
+    --profile-background-color: var(--border-color);
+    --border-radius: 10px;
+  }
+  body {
+    background-color: var(--background-color);
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-.header {
-  margin: 0 auto 2em;
-  font-family: Garamond, "Times New Roman", serif;
-}
+  a {
+    color: var(--link-color);
+  }
 
-.header_component_global {
-  text-align: center;
-  margin: 1em auto;
-  max-width: 800px;
-}
+  .header {
+    margin: 0 auto;
+    font-family: Garamond, "Times New Roman", serif;
+  }
 
-.header__title {
-  margin: 0.2em 0 0.2em;
-  font-size: 1.8em;
-  font-weight: normal;
-  vertical-align: bottom;
-}
+  .header:has(.featured__image) {
+    margin-bottom: 2em;
+  }
 
-.header__title a,
-.header__title > span {
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #f5f2f0;
-  padding: 5px;
-}
+  .header_component_global {
+    width: 100%;
+  }
 
-.header_component_global .header__title {
-  font-size: 1.2em;
-}
+  .header-inner {
+    text-align: center;
+    margin: 5px auto;
+    max-width: var(--container-width);
+    display: grid;
+    grid-template-columns: 36px 96px auto;
+    align-items: center;
+  }
 
-.header_component_global .header__title a {
-  text-decoration: none;
-  color: black;
-}
-
-.main .header .header__title {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  opacity: 0.8;
-  margin-bottom: 0;
-}
-
-.header__description {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-.header_component_global .header__description {
-  color: #666;
-  margin: 0 auto;
-  padding: 0 5px;
-}
-
-.header__epigraph {
-  font-style: italic;
-  color: #666;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.container {
-  width: 800px;
-  margin: 0 auto 4em;
-  padding: 0 15px;
-  border-radius: 3px;
-}
-
-.content {
-  font-size: 1.125em;
-  line-height: 2em;
-  background: white;
-  color: #222;
-  -webkit-font-smoothing: antialiased;
-}
-
-.content h2,
-.content h3 {
-  font-size: 1.4em;
-  margin: 2em 0 1em 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.article-summary {
-  margin-bottom: 3.5em;
-}
-
-.header time {
-  display: inline-block;
-  font-size: 0.9125em;
-  color: #666;
-}
-
-.calendar-icon,
-.author-icon {
-  margin-right: 0.5em;
-}
-
-.content blockquote {
-  border: 5px solid #ddd;
-  background: #f9f9f9;
-  margin: 1.5em 0;
-  padding: 0 1em;
-}
-
-.content p > code,
-.content li > code {
-  background-color: #f5f2f0;
-  display: inline-block;
-  padding: 0 6px;
-  border-radius: 0.3em;
-  color: #444;
-}
-
-.content table {
-  background: #e0e0e0;
-}
-
-.content th {
-  background: #f0f0f0;
-}
-
-.content tr {
-  background: #fff;
-}
-
-.content tr:nth-child(even) {
-  background: #f0f0f0;
-}
-
-.content td {
-  padding: 5px 1em;
-  text-align: center;
-}
-
-.content code[class*="language-"] {
-  color: #444;
-}
-
-.header__feature {
-  margin: 0.5em 0 -0.5em;
-  position: relative;
-}
-
-.header__feature img {
-  overflow: hidden;
-}
-
-.featured__image {
-  background: white;
-  line-height: 0;
-  max-height: 335px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.featured__credit {
-  color: #333;
-  font-size: 0.825em;
-  text-align: right;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 7px;
-  background: #f0f0f0;
-  opacity: 0.8;
-}
-
-.lazyload,
-.lazyloading {
-  opacity: 0.5;
-}
-
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
-}
-
-.content img {
-  max-width: 100%;
-}
-
-.youtube-wrapper {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-}
-
-.youtube-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  border: 0;
-}
-
-@media screen and (max-width: 500px) {
-  .header__epigraph {
-    display: none;
+  .header__icon {
+    justify-self: end;
   }
 
   .header__title {
-    font-size: 1.2em;
+    margin: 0.2em 0 0.2em;
+    font-size: 1.8em;
+    font-weight: normal;
+    vertical-align: bottom;
   }
 
-  .content h2 {
-    font-size: 1.2em;
+  .header__title a,
+  .header__title > span {
+    color: black;
+    text-decoration: none;
   }
 
-  .main .header .header__title {
-    margin-bottom: 30px;
+  .header_component_global .header__title {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    justify-self: start;
+  }
+
+  .header_component_global .header__title a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 5px;
+    background-color: transparent;
+  }
+
+  .header_component_global .navigation-global {
+    justify-self: end;
+    padding-right: 10px;
+    font-family: sans-serif;
+  }
+
+  .header__description {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header_component_global .header__description {
+    color: #666;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .header__epigraph {
+    font-style: italic;
+    color: #666;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto 4em;
+    padding: 0 15px;
+    border-radius: var(--border-radius);
+  }
+
+  article {
+    background-color: var(--article-background-color);
+    padding: 2em;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    font-size: 1.125em;
+    line-height: 2em;
+    background: var(--article-background-color);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .read-more {
+    margin-top: 1em;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-summary {
+    margin-bottom: 3.5em;
+  }
+
+  .header time {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: #666;
+    font-family: sans-serif;
+  }
+
+  .calendar-icon,
+  .author-icon {
+    margin-right: 0.5em;
+  }
+
+  .content blockquote {
+    border: 5px solid var(--border-color);
+    background: var(--lighter-color);
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+
+  .content p > code,
+  .content li > code {
+    background-color: #f5f2f0;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: var(--border-radius);
+    color: #444;
+  }
+
+  .content table {
+    background: #e0e0e0;
+  }
+
+  .content th {
+    background: #f0f0f0;
+  }
+
+  .content tr {
+    background: #fff;
+  }
+
+  .content tr:nth-child(even) {
+    background: #f0f0f0;
+  }
+
+  .content td {
+    padding: 5px 1em;
+    text-align: center;
+  }
+
+  .content code[class*="language-"] {
+    color: #444;
   }
 
   .header__feature {
-    margin-top: -23px;
-  }
-
-  .featured__credit {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin: 0.5em 0 -0.5em;
     position: relative;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .featured__image,
-  .content__image,
-  .content pre[class*="language-"],
-  .youtube-wrapper {
-    margin: 0 -15px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .featured__image,
-  .content__image,
-  .content pre[class*="language-"] {
-    margin: 0 -15px;
-  }
-}
-
-/*
-.content p a[href]::before {
-  content: '🌐';
-  width: 24px;
-  display: inline-block;
-}
-
-.content p a[href].link-icon::before {
-  content: '';
-}
-
-.content p a[href].no-link-icon::before {
-  content: '';
-  width: 0;
-}
-
-.content p a.link-icon {
-  background-position-x: 4px;
-  background-position-y: center;
-  background-repeat: no-repeat;
-}
-*/
-
-.post .writing-vertical {
-  writing-mode: vertical-rl;
-  font-family: serif;
-  font-size: 1em;
-  margin: 1.5em 0;
-  column-count: 2;
-  max-width: 800px;
-  width: 102%;
-  overflow: auto;
-  height: 800px;
-}
-
-.post .writing-vertical p {
-  margin: 0;
-}
-
-/*
-.post .writing-vertical p a {
-  padding-left: 0px;
-  padding-top: 24px;
-}
-*/
-
-.post .writing-vertical p:first-letter {
-  margin-top: 1em;
-}
-
-.post .writing-vertical .link-icon {
-  background-position-x: center;
-  background-position-y: 5px;
-}
-
-.post .writing-vertical blockquote {
-  border: none;
-  margin: 0 0.5em;
-  padding: 1em 0.5em;
-  background: #f0f0f0;
-}
-
-@media screen and (max-width: 730px) {
-  .container {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .post .writing-vertical {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
   }
 
   .header__feature img {
-    max-width: 100%;
-    height: auto;
+    overflow: hidden;
   }
-}
-</style>
-  <script>window.lazyLoadOptions = {};</script>
-  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
-  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
-  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
-  <link rel="manifest" href="/manifest.json" >
-  <meta name="theme-color" content="white">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  .featured__image {
+    background: #f5f2f0;
+    line-height: 0;
+    max-height: 335px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 -32px;
+  }
 
-    gtag('config', 'UA-955153-2');
-  </script>
-  <script type="application/ld+json">
+  .featured__image picture {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .featured__image picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featured__credit {
+    color: #333;
+    font-size: 0.825em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"],
+    .youtube-wrapper {
+      margin: 0 -15px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -15px;
+    }
+  }
+
+  /*
+  .content p a[href]::before {
+    content: '🌐';
+    width: 24px;
+    display: inline-block;
+  }
+
+  .content p a[href].link-icon::before {
+    content: '';
+  }
+
+  .content p a[href].no-link-icon::before {
+    content: '';
+    width: 0;
+  }
+
+  .content p a.link-icon {
+    background-position-x: 4px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  */
+
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  /*
+  .post .writing-vertical p a {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+  */
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile {
+    border: 1px solid var(--profile-background-color);
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--profile-text-color);
+    border-radius: var(--border-radius);
+    background: var(--profile-background-color);
+  }
+
+  .profile__heading {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--profile-text-color);
+    display: inline-block;
+    font-weight: bold;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .profile__image {
+    float: left;
+    margin-right: 6px;
+  }
+
+  .profile__content {
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  .navigation__link,
+  .featured__credit a,
+  .profile__content a {
+    color: var(--profile-text-color);
+  }
+
+  .profile__social-list {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .profile__social-list-item {
+    display: inline;
+    margin-right: 0.5em;
+  }
+
+  .amazon-book-list {
+    margin-top: 2em;
+  }
+
+  .amazon-book-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  .amazon-book-list li {
+    display: table-cell;
+    padding: 10px;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  .amazon-book-list li a {
+    color: #666;
+  }
+
+  .amazon-book-list li img {
+    display: block;
+  }
+
+  .amazon-book-list-3 li {
+    width: 33%;
+  }
+
+  .amazon-book-list-4 li {
+    width: 25%;
+  }
+
+  .amazon-book-list-5 li {
+    width: 20%;
+  }
+
+  .content hr {
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-style: solid;
+    border-color: #ddd;
+    margin-top: 4em;
+  }
+
+  .pagination {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .page-number,
+  .extend.next,
+  .extend.prev,
+  .pagination .space {
+    min-width: 59px;
+    min-height: 59px;
+    text-align: center;
+    line-height: 59px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+  }
+
+  .pagination .space {
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--darker-color);
+    font-weight: bold;
+    color: white;
+    border-color: var(--darker-color);
+  }
+
+  pre {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+</style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
     "@context": "http://schema.org",
-    "@graph":
-    [
+    "@graph": [
       {
         "@context": "http://schema.org",
         "@type": "Organization",
@@ -385,281 +545,10 @@
       }
     ]
   }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context":"http://schema.org",
-      "@type":"ItemList",
-      "itemListElement":[
-        
-        {
-          "@type":"ListItem",
-          "position":1,
-          "url": "https://memolog.org/2012/05/responsive_grid_box-sizing.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":2,
-          "url": "https://memolog.org/2012/04/install_watir-webdriver_to_windows_xp.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":3,
-          "url": "https://memolog.org/2012/03/responsive-is.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":4,
-          "url": "https://memolog.org/2012/03/the_big_short.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":5,
-          "url": "https://memolog.org/2012/03/pseudo-classes-for-form.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":6,
-          "url": "https://memolog.org/2012/01/book_of_george_w_bush.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":7,
-          "url": "https://memolog.org/2011/12/redesign_2012.php.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":8,
-          "url": "https://memolog.org/2011/09/add-unsupported-tag-in-watir-webdriver.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":9,
-          "url": "https://memolog.org/2011/09/add-attribute-in-element-about-watir-webdriver.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":10,
-          "url": "https://memolog.org/2011/09/diff-image-with-watir-webdriver.html"
-        }
-        
-      ]
-    }
-  </script>
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
-</head>
-<body>
-    <header class="header header_component_global">
-    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
-    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
-    <p class="header__description">塵が積もって山とならないメモのログ</p>
-    <nav class="navigation navigation-global">
-      <a href="/" class="navigation__link">📘 最新のメモ</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <main class="main">
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-05-21T06:25:46.000Z"><span class="calendar-icon">📅</span><span>2012年5月21日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/05/responsive_grid_box-sizing.html">responsive grid と box-sizing</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="http://www.netmagazine.com/tutorials/building-modern-grid-system">Building a modern grid system | Tutorial | .net magazine</a>にwidthをパーセントで指定したresponsiveなgrid（で、かつネストできてサイズの変更が簡単で…云々）を作成するという話が掲載されている。</p></div>
-            <div><a href="/2012/05/responsive_grid_box-sizing.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-04-12T04:38:21.000Z"><span class="calendar-icon">📅</span><span>2012年4月12日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/04/install_watir-webdriver_to_windows_xp.html">Windows XPにwatir-webdriverをインストールする</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>gem installするだけで簡単だろうと思って始めてみたら意外と面倒だったのでメモ。Rubyは<a target="_blank" rel="noopener" href="http://rubyinstaller.org/downloads">RubyInstallerのDownloadページ</a>から「Ruby 1.8.7-p358」をダウンロードしてインストールしました。</p></div>
-            <div><a href="/2012/04/install_watir-webdriver_to_windows_xp.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-03-17T20:32:00.000Z"><span class="calendar-icon">📅</span><span>2012年3月18日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/03/responsive-is.html">Responsive.is&#x3a; レスポンシブデザイン対応を確認できるサイト</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="http://responsive.is/">Responsive.is</a>というサイトで 自分のサイトがiPhoneやiPadなどでどのように表示されるかを疑似体験することができます（via <a target="_blank" rel="noopener" href="http://konigi.com/tools/submissions/responsiveis-display-and-present-responsive-web-designs">Responsive.is: Display and present responsive web designs | Konigi</a>）。実際には解像度の違いがあるのでiPhone4以降や最新のiPadでは画像の解像感に違いはありますけど、手元にiPhoneやiPadがない場合に、レスポンシブデザインに対応した自分のサイトがどのように見えるかを確認するには十分かなと思います。</p></div>
-            <div><a href="/2012/03/responsive-is.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-03-16T20:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年3月17日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/03/the_big_short.html">本&#x3a; 世紀の空売り</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="http://www.amazon.co.jp/gp/product/4163730907/ref=as_li_ss_il?ie=UTF8&amp;tag=yutakayamaguc-22&amp;linkCode=as2&amp;camp=247&amp;creative=7399&amp;creativeASIN=4163730907"><img src="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&amp;Format=_SL160_&amp;ASIN=4163730907&amp;MarketPlace=JP&amp;ID=AsinImage&amp;WS=1&amp;tag=yutakayamaguc-22&amp;ServiceVersion=20070822" alt=""></a><img src="http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&amp;l=as2&amp;o=9&amp;a=4163730907" alt=""></p></div>
-            <div><a href="/2012/03/the_big_short.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-03-04T04:31:00.000Z"><span class="calendar-icon">📅</span><span>2012年3月4日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/03/pseudo-classes-for-form.html">Form関連の疑似クラス</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="http://html5doctor.com/css3-pseudo-classes-and-html5-forms/">CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctor</a>で紹介されているForm関連の疑似クラスを試してみるというだけの内容。<a target="_blank" rel="noopener" href="http://www.w3.org/TR/css3-ui/#pseudo-validity">W3Cの定義はこのあたり</a>。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。</p></div>
-            <div><a href="/2012/03/pseudo-classes-for-form.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-01-05T05:14:38.000Z"><span class="calendar-icon">📅</span><span>2012年1月5日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/01/book_of_george_w_bush.html">本&#x3a; ジョージ・W・ブッシュ 決断のとき</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="http://www.amazon.co.jp/gp/product/4532167825/ref=as_li_ss_il?ie=UTF8&amp;tag=yutakayamaguc-22&amp;linkCode=as2&amp;camp=247&amp;creative=7399&amp;creativeASIN=4532167825"><img src="http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&amp;Format=_SL160_&amp;ASIN=4532167825&amp;MarketPlace=JP&amp;ID=AsinImage&amp;WS=1&amp;tag=yutakayamaguc-22&amp;ServiceVersion=20070822" alt=""></a><img src="http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&amp;l=as2&amp;o=9&amp;a=4532167825" alt=""> ジョージ・W・ブッシュの回顧録。テキサス州知事時代から大統領任期中の間にあった重要な決断をテーマに章立てられています。やはり大統領任期中に大きく紙面が割かれているわけですが、読みながら、2000年のインターネットバブルに始まり、9.11、アフガニスタン、イラク、カトリーナ、金融危機と、、いろいろあったなあと感慨を覚えました。</p></div>
-            <div><a href="/2012/01/book_of_george_w_bush.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2011-12-24T09:04:00.000Z"><span class="calendar-icon">📅</span><span>2011年12月24日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2011/12/redesign_2012.php.html">デザインを変更（2011/12）</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>デザインを変更してみました。前回の変更は<a href="/blog//2010/12/redesign_2011/">こちら</a>。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。</p>
-<p>メインの変更としましては、今年流行の<a target="_blank" rel="noopener" href="http://www.alistapart.com/articles/responsive-web-design/">responsive web design</a>的な対応をしてみました。<a target="_blank" rel="noopener" href="http://coliss.com/articles/build-websites/operation/javascript/jquery-plugin-breakpoints.html">Breakpoints.js</a>というjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name="viewport" content="width=device-width" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。</p></div>
-            <div><a href="/2011/12/redesign_2012.php.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2011-09-15T06:25:00.000Z"><span class="calendar-icon">📅</span><span>2011年9月15日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2011/09/add-unsupported-tag-in-watir-webdriver.html">watir-webdriver&#x3a; 使用できる要素を追加する</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>watir-webdriverでは広範囲のHTMLタグ（ほとんど全部）をサポートしているけれど、svgやcircleなど一部のタグは現在のところサポートしていません（参考：<a target="_blank" rel="noopener" href="http://groups.google.com/group/watir-general/msg/271325e18d2b98f2?pli=1">Does watir support svg - Watir General | Google グループ</a>）。</p></div>
-            <div><a href="/2011/09/add-unsupported-tag-in-watir-webdriver.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2011-09-13T06:30:00.000Z"><span class="calendar-icon">📅</span><span>2011年9月13日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2011/09/add-attribute-in-element-about-watir-webdriver.html">watir-webdriver&#x3a; 要素で使用できる属性を増やす</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>watir-webdriverでは、たとえば「b.link(:id,‘memolog’).href」みたいなかたちで要素を特定させて、特定した要素の属性を取得することができます（詳細は<a target="_blank" rel="noopener" href="http://jarib.github.com/watir-webdriver/doc/">API</a>などを参照）。ただ<a target="_blank" rel="noopener" href="http://dev.w3.org/html5/spec/Overview.html#the-a-element">W3C</a>で規定されている属性しかメソッド化されていないので、たとえばtwitterのt.coのリンクの元URLの属性（data-expanded-url）などは通常では取得することができません。</p></div>
-            <div><a href="/2011/09/add-attribute-in-element-about-watir-webdriver.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2011-09-11T04:36:00.000Z"><span class="calendar-icon">📅</span><span>2011年9月11日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2011/09/diff-image-with-watir-webdriver.html">watir-webdriver で画像データを評価する</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>たとえば、画像ファイルが上書きされているかどうかを確認したい場合などで、画像のsrcなどには差分がなく画像データを比較しないとその動作の正否が分からないとか、そういうときはやはり画像データを評価して差を見るしかない。</p></div>
-            <div><a href="/2011/09/diff-image-with-watir-webdriver.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-      <footer class="pagination"><a class="extend prev" rel="prev" href="/page/18/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="page-number" href="/page/40/">40</a><a class="extend next" rel="next" href="/page/20/">Next</a></footer>
-    </main>
-    <footer class="profile">
-  <div class="profile-inner">
-    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
-    <h2 class="profile__heading">私について</h2>
-    <div class="profile__content">
-      <div>Yutaka Yamaguchi</div>
-      <div>東京在住。TypeScript, Node.js, Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。万年英語勉強中</div>
-      <ul class="profile__social-list">
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-  </div>
-  <script>
-  // http://css-tricks.com/favicons-next-to-external-links/
-  (function (){
-    'use strict';
-    if (/googlebot/i.test(navigator.userAgent)) {
-      return;
-    }
-    window.addEventListener("DOMContentLoaded", () => {
-      const links = document.querySelectorAll('.content p a');
-      const linkLength = links && links.length || 0;
-      for (var i=0; i<linkLength; i++){
-        const link = links[i];
-        const hostname = link.hostname;
-        if (hostname) {
-          const children = link.children || [];
-          const firstChild = children && children[0];
-          if (firstChild && firstChild.tagName === 'IMG') {
-            // For old amazon image link
-            if (link.hostname === 'www.amazon.co.jp') {
-              link.style.float = 'left';
-              link.style.marginRight = '1em';
-              link.style.paddingLeft = '0';
-            }
-            // link.classList.add('no-link-icon');
-            continue;
-          }
-
-          // link.classList.add('link-icon');
-          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
-        }
-      }
-    });
-  })();
-</script>
-<script>
-  if ('serviceWorker' in navigator) {
-    // navigator.serviceWorker.register('/service-worker.js');
-  }
-</script>
-
-</body>
-</html>
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2012/05/responsive_grid_box-sizing.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2012/04/install_watir-webdriver_to_windows_xp.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2012/03/responsive-is.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2012/03/the_big_short.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2012/03/pseudo-classes-for-form.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2012/01/book_of_george_w_bush.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2011/12/redesign_2012php.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2011/09/add-unsupported-tag-in-watir-webdriver.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2011/09/add-attribute-in-element-about-watir-webdriver.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2011/09/diff-image-with-watir-webdriver.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-21T15:25:46.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月22日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/05/responsive_grid_box-sizing.html">responsive grid と box-sizing</a> </h2>  </header> <div class="content">Building a modern grid system | Tutorial | .net magazineにwidthをパーセントで指定したresponsiveなgrid（で、かつネストできてサイズの変更が簡単で..云々）を作成するという話が掲載されている。</div> <div class="read-more"> <a href="/2012/05/responsive_grid_box-sizing.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-04-12T13:38:21.000Z"> <span class="calendar-icon">📅</span> <span>2012年4月12日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/04/install_watir-webdriver_to_windows_xp.html">Windows XPにwatir-webdriverをインストールする</a> </h2>  </header> <div class="content">gem installするだけで簡単だろうと思って始めてみたら意外と面倒だったのでメモ。RubyはRubyInstallerのDownloadページから「Ruby 1.8.7-p358」をダウンロードしてインストールしました。</div> <div class="read-more"> <a href="/2012/04/install_watir-webdriver_to_windows_xp.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-03-18T05:32:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年3月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/03/responsive-is.html">Responsive.is：レスポンシブデザイン対応を確認できるサイト</a> </h2>  </header> <div class="content">Responsive.isというサイトで 自分のサイトがiPhoneやiPadなどでどのように表示されるかを疑似体験することができます（via Responsive.is: Display and present responsive web designs | Konigi）。実際には解像度の違いがあるのでiPhone4以降や最新のiPadでは画像の解像感に違いはありますけど、手元にiPhoneやiPadがない場合に、レスポンシブデザインに対応した自分のサイトがどのように見えるかを確認するには十分かなと思います。</div> <div class="read-more"> <a href="/2012/03/responsive-is.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-03-17T05:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年3月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/03/the_big_short.html">本：世紀の空売り</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #f5f2f0;"> <picture> <source srcset="/assets/images/the_big_short/the_big_short_small.png, /assets/images/the_big_short/the_big_short_small@2x.png 2x, /assets/images/the_big_short/the_big_short_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/the_big_short/the_big_short_medium.webp, /assets/images/the_big_short/the_big_short_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/the_big_short/the_big_short_medium.png, /assets/images/the_big_short/the_big_short_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/the_big_short/the_big_short_medium.png" alt role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。</div> <div class="read-more"> <a href="/2012/03/the_big_short.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-03-04T13:31:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年3月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/03/pseudo-classes-for-form.html">Form関連の疑似クラス</a> </h2>  </header> <div class="content">CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。</div> <div class="read-more"> <a href="/2012/03/pseudo-classes-for-form.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-01-05T14:14:38.000Z"> <span class="calendar-icon">📅</span> <span>2012年1月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/01/book_of_george_w_bush.html">本：ジョージ・W・ブッシュ 決断のとき</a> </h2>  </header> <div class="content">ジョージ・W・ブッシュの回顧録。テキサス州知事時代から大統領任期中の間にあった重要な決断をテーマに章立てられています。やはり大統領任期中に大きく紙面が割かれているわけですが、読みながら、2000年のインターネットバブルに始まり、9.11、アフガニスタン、イラク、カトリーナ、金融危機と、、いろいろあったなあと感慨を覚えました。</div> <div class="read-more"> <a href="/2012/01/book_of_george_w_bush.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-12-24T18:04:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年12月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/12/redesign_2012php.html">デザインを変更（2011/12）</a> </h2>  </header> <div class="content">デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。</div> <div class="read-more"> <a href="/2011/12/redesign_2012php.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-15T15:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/add-unsupported-tag-in-watir-webdriver.html">watir-webdriver：使用できる要素を追加する</a> </h2>  </header> <div class="content">watir-webdriverでは広範囲のHTMLタグ（ほとんど全部）をサポートしているけれど、svgやcircleなど一部のタグは現在のところサポートしていません（参考：Does watir support svg - Watir General | Google グループ）。</div> <div class="read-more"> <a href="/2011/09/add-unsupported-tag-in-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-13T15:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/add-attribute-in-element-about-watir-webdriver.html">watir-webdriver：要素で使用できる属性を増やす</a> </h2>  </header> <div class="content">watir-webdriverでは、たとえば「b.link(:id,&#39;memolog&#39;).href」みたいなかたちで要素を特定させて、特定した要素の属性を取得することができます（詳細はAPIなどを参照）。ただW3Cで規定されている属性しかメソッド化されていないので、たとえばtwitterのt.coのリンクの元URLの属性（data-expanded-url）などは通常では取得することができません。</div> <div class="read-more"> <a href="/2011/09/add-attribute-in-element-about-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-11T13:36:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/diff-image-with-watir-webdriver.html">watir-webdriver で画像データを評価する</a> </h2>  </header> <div class="content">たとえば、画像ファイルが上書きされているかどうかを確認したい場合などで、画像のsrcなどには差分がなく画像データを比較しないとその動作の正否が分からないとか、そういうときはやはり画像データを評価して差を見るしかない。</div> <div class="read-more"> <a href="/2011/09/diff-image-with-watir-webdriver.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/18/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/17/"> 17 </a><a class="page-number " href="/page/18/"> 18 </a><span class="page-number current">19</span><a class="page-number " href="/page/20/"> 20 </a><a class="page-number " href="/page/21/"> 21 </a><span class="space">…</span><a class="page-number " href="/page/37/"> 37 </a><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a> <a class="extend next" rel="next" href="/page/20/">
+Next
+</a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+東京在住。TypeScript, Node.js,
+        Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
+        860くらい。
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </div> </body></html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html><html lang="ja"> <head><title>Display module glossary | メモログ</title><meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="shortcut icon" href="/assets/icons/icon-32.ico"><style>
+  :root {
+    --container-width: 985px;
+    --link-color: #694b16;
+    --background-color: #e3ded5;
+    --lighter-color: #fdf8ee;
+    --darker-color: #cac5bc;
+    --more-dark-color: #b1aca4;
+    --border-color: #cac5bc;
+    --profile-text-color: #55514a;
+    --article-background-color: white;
+    --profile-background-color: var(--border-color);
+    --border-radius: 10px;
+  }
+  body {
+    background-color: var(--background-color);
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+  .header {
+    margin: 0 auto;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .header:has(.featured__image) {
+    margin-bottom: 2em;
+  }
+
+  .header_component_global {
+    width: 100%;
+  }
+
+  .header-inner {
+    text-align: center;
+    margin: 5px auto;
+    max-width: var(--container-width);
+    display: grid;
+    grid-template-columns: 36px 96px auto;
+    align-items: center;
+  }
+
+  .header__icon {
+    justify-self: end;
+  }
+
+  .header__title {
+    margin: 0.2em 0 0.2em;
+    font-size: 1.8em;
+    font-weight: normal;
+    vertical-align: bottom;
+  }
+
+  .header__title a,
+  .header__title > span {
+    color: black;
+    text-decoration: none;
+  }
+
+  .header_component_global .header__title {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    justify-self: start;
+  }
+
+  .header_component_global .header__title a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 5px;
+    background-color: transparent;
+  }
+
+  .header_component_global .navigation-global {
+    justify-self: end;
+    padding-right: 10px;
+    font-family: sans-serif;
+  }
+
+  .header__description {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header_component_global .header__description {
+    color: #666;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .header__epigraph {
+    font-style: italic;
+    color: #666;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto 4em;
+    padding: 0 15px;
+    border-radius: var(--border-radius);
+  }
+
+  article {
+    background-color: var(--article-background-color);
+    padding: 2em;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    font-size: 1.125em;
+    line-height: 2em;
+    background: var(--article-background-color);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .read-more {
+    margin-top: 1em;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-summary {
+    margin-bottom: 3.5em;
+  }
+
+  .header time {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: #666;
+    font-family: sans-serif;
+  }
+
+  .calendar-icon,
+  .author-icon {
+    margin-right: 0.5em;
+  }
+
+  .content blockquote {
+    border: 5px solid var(--border-color);
+    background: var(--lighter-color);
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+
+  .content p > code,
+  .content li > code {
+    background-color: #f5f2f0;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: var(--border-radius);
+    color: #444;
+  }
+
+  .content table {
+    background: #e0e0e0;
+  }
+
+  .content th {
+    background: #f0f0f0;
+  }
+
+  .content tr {
+    background: #fff;
+  }
+
+  .content tr:nth-child(even) {
+    background: #f0f0f0;
+  }
+
+  .content td {
+    padding: 5px 1em;
+    text-align: center;
+  }
+
+  .content code[class*="language-"] {
+    color: #444;
+  }
+
+  .header__feature {
+    margin: 0.5em 0 -0.5em;
+    position: relative;
+  }
+
+  .header__feature img {
+    overflow: hidden;
+  }
+
+  .featured__image {
+    background: #f5f2f0;
+    line-height: 0;
+    max-height: 335px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 -32px;
+  }
+
+  .featured__image picture {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .featured__image picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featured__credit {
+    color: #333;
+    font-size: 0.825em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"],
+    .youtube-wrapper {
+      margin: 0 -15px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -15px;
+    }
+  }
+
+  /*
+  .content p a[href]::before {
+    content: '🌐';
+    width: 24px;
+    display: inline-block;
+  }
+
+  .content p a[href].link-icon::before {
+    content: '';
+  }
+
+  .content p a[href].no-link-icon::before {
+    content: '';
+    width: 0;
+  }
+
+  .content p a.link-icon {
+    background-position-x: 4px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  */
+
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  /*
+  .post .writing-vertical p a {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+  */
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile {
+    border: 1px solid var(--profile-background-color);
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--profile-text-color);
+    border-radius: var(--border-radius);
+    background: var(--profile-background-color);
+  }
+
+  .profile__heading {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--profile-text-color);
+    display: inline-block;
+    font-weight: bold;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .profile__image {
+    float: left;
+    margin-right: 6px;
+  }
+
+  .profile__content {
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  .navigation__link,
+  .featured__credit a,
+  .profile__content a {
+    color: var(--profile-text-color);
+  }
+
+  .profile__social-list {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .profile__social-list-item {
+    display: inline;
+    margin-right: 0.5em;
+  }
+
+  .amazon-book-list {
+    margin-top: 2em;
+  }
+
+  .amazon-book-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  .amazon-book-list li {
+    display: table-cell;
+    padding: 10px;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  .amazon-book-list li a {
+    color: #666;
+  }
+
+  .amazon-book-list li img {
+    display: block;
+  }
+
+  .amazon-book-list-3 li {
+    width: 33%;
+  }
+
+  .amazon-book-list-4 li {
+    width: 25%;
+  }
+
+  .amazon-book-list-5 li {
+    width: 20%;
+  }
+
+  .content hr {
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-style: solid;
+    border-color: #ddd;
+    margin-top: 4em;
+  }
+
+  .pagination {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .page-number,
+  .extend.next,
+  .extend.prev,
+  .pagination .space {
+    min-width: 59px;
+    min-height: 59px;
+    text-align: center;
+    line-height: 59px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+  }
+
+  .pagination .space {
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--darker-color);
+    font-weight: bold;
+    color: white;
+    border-color: var(--darker-color);
+  }
+
+  pre {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+</style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph": [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+</script><meta property="og:type" content="article"><meta property="og:title" content="Display module glossary"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="今回はDisplay ModuleのAppendix A: Glossaryのところで、今までちゃんと確認しなかったもので、気になるところを簡単に確認しようかなと思う。そのうち見直すかも。"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="/assets/images/display-module-glossary/display-module-glossary_medium.png"><meta property="article:published_time" content="2020-03-14T19:02:28.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://memolog.org/assets/images/display-module-glossary/display-module-glossary_medium.png"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2020/display-module-glossary.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
+📘 最新のメモ
+</a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2020-03-14T19:02:28.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月15日</span> </time> </div> <h2 class="header__title"><span>Display module glossary</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #f5f2f0;"> <picture> <source srcset="/assets/images/display-module-glossary/display-module-glossary_small.png, /assets/images/display-module-glossary/display-module-glossary_small@2x.png 2x, /assets/images/display-module-glossary/display-module-glossary_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/display-module-glossary/display-module-glossary_medium.webp, /assets/images/display-module-glossary/display-module-glossary_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/display-module-glossary/display-module-glossary_medium.png, /assets/images/display-module-glossary/display-module-glossary_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/display-module-glossary/display-module-glossary_medium.png" alt role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div id="article-content" class="content">  <p>今回は Display Module の<a href="https://www.w3.org/TR/css-display-3/#glossary">Appendix A: Glossary</a>のところで、今までちゃんと確認しなかったもので、気になるところを簡単に確認しようかなと思う。そのうち見直すかも。</p>
+<h3 id="block-container">block container</h3>
+<blockquote>
+<p>A block container either contains only inline-level boxes participating in an inline formatting context, or contains only block-level boxes participating in a block formatting context (possibly generating anonymous block boxes to ensure this constraint, as defined in CSS2§9.2.1.1).</p>
+</blockquote>
+<p>block container は、inline formatting context に参加するインラインレベルの box だけを含むか、block formatting context に参加するブロックレベルの box のみを含んでいる（この制約を保証するために anonymous box を生成する可能性がある）。</p>
+<blockquote>
+<p>A block container that contains only inline-level content establishes a new inline formatting context. The element then also generates a root inline box which wraps all of its inline content.
+<strong>Note</strong>, this root inline box concept effectively replaces the “anonymous inline element” concept introduced in CSS2§9.2.2.1.</p>
+</blockquote>
+<p>インラインレベルのコンテンツのみを含む block container は、新しい inline formatting context を設置する。その要素はインラインのコンテンツをすべて囲うような root inline box もまた設置する。</p>
+<p>この root inline box のコンセプトは、「anonymous inline element」のコンセプトを実質的に置き換えるものである。</p>
+<blockquote>
+<p>A block container establishes a new block formatting context if its parent formatting context is not a block formatting context; otherwise, when participating in a block formatting context itself, it either establishes a new block formatting context for its contents or continues the one in which it participates, as determined by the constraints of other properties (such as overflow or align-content).</p>
+</blockquote>
+<p>block container は、親の formatting context が block formatting context ではない場合、新しい block formatting context を設置する。そうでない場合、block formatting context 自身に参加するときに、（overflow や align-content などのような）他のプロパティの制約を基にして、自身のコンテンツのための新しい block formatting context を設置するか、参加してる context を継続する。</p>
+<blockquote>
+<p><strong>Note</strong>: A block container box can both establish a block formatting context and an inline formatting context simultaneously.</p>
+</blockquote>
+<p>block container box は、block formatting context と inline formatting context を同時に設置することもできる。</p>
+<h3 id="block-box">block box</h3>
+<blockquote>
+<p>A block-level box that is also a block container.
+<strong>Note</strong>: Not all block container boxes are block-level boxes: non-replaced inline blocks and non-replaced table cells, for example, are block containers but not block-level boxes. Similarly, not all block-level boxes are block containers: block-level replaced elements (display: block) and flex containers (display: flex), for example, are not block containers.</p>
+</blockquote>
+<p>block container でもあるブロックレベルの box。</p>
+<p>すべての block container box がブロックレベルの box というわけではない。たとえば、非置換のインラインブロックや、非置換のテーブルセルは、block container であるけど、ブロックレベルの box ではない。同様に、すべてのブロックレベルの box が block container というわけではない。たとえば、ブロックレベルの置換要素（<code>display: block</code>）や flex container（<code>display: flex</code>）は block container ではない。</p>
+<h3 id="containing-block">containing block</h3>
+<blockquote>
+<p>A rectangle that forms the basis of sizing and positioning for the boxes associated with it (usually the children of the box that generated it). Notably, a containing block is not a box (it is a rectangle), however it is often derived from the dimensions of a box. If properties of a containing block are referenced, they reference the values on the box that generated the containing block. (For the initial containing block, values are taken from the root element unless otherwise specified.) See [CSS2] Section 9.1.2 and Section 10.1 for details.</p>
+</blockquote>
+<p>関連する box（たいてい生成した box の子）のために、縦横幅やポジションなどの基本的な値な形成する長方形（rectangle）。containing block は box ではない（it is a rectangle）。けれども、しばしば rectangle は box の寸法から導き出される。もし containing block のプロパティが参照される場合、それらは containing block を生成した box の値を参照する。（特に指定がなければ initial containing block では、値はルートの要素から導かれる。）</p>
+<h3 id="initial-containing-block">initial containing block</h3>
+<blockquote>
+<p>The containing block of the root element. See CSS2.1§10.1 for continuous media; and [CSS3PAGE] for paged media.</p>
+</blockquote>
+<p>ルート要素の containing block</p>
+<h3 id="out-of-flow--in-flow">out-of-flow / in-flow</h3>
+<blockquote>
+<p>A box is out-of-flow if it is floated (via float) or absolutely-positioned (via position). A box is in-flow if it is not out-of-flow.</p>
+</blockquote>
+<p>box が float している、または position によって絶対配置されている場合、box は out-of-flow の状態にある。box が out-of-flow でなければ box が in-flow の状態になる。</p>
+<blockquote>
+<p><strong>Note</strong>: some formatting contexts inhibit floating, so that an element with float: left is not necessarily out-of-flow.</p>
+</blockquote>
+<p>いくつかの formatting context は floating を抑制する。そのため<code>float: left</code>のついた要素が必ず out-of-flow になるわけではない。</p>
+<h3 id="independent-formatting-context">independent formatting context</h3>
+<blockquote>
+<p>When a box establishes an independent formatting context (whether that formatting context is of the same type as its parent or not), it essentially creates a new, independent layout environment: except through the sizing of the box itself, the layout of its descendants is (generally) not affected by the the rules and contents of the formatting context outside the box, and vice versa.</p>
+</blockquote>
+<p>box が（formatting context は親と同じタイプかどうかに関係なく）independent formatting context を設置するとき、新しい、独立したレイアウト環境を作成する。box 自身のサイズを除いて、その子孫のレイアウトは（一般的に）box の外側の formatting context のルールやコンテンツによって影響を受けない。反対も同じ。</p>
+<blockquote>
+<p><strong>EXAMPLE 4</strong>
+For example, in a block formatting context, floated boxes affect the layout of surrounding boxes. But their effects do not escape their formatting context: the box establishing their formatting context grows to fully contain them, and floats from outside that box are not allowed to protrude into and affect the contents inside the box.</p>
+</blockquote>
+<p>たとえば、block formatting context の中で、floated boxes は周囲の box のレイアウトに影響を与える。しかし、それらの効果は、それらの formatting context からは逃れられない。それらの formatting context を生成した box は、それらが完全に含まれるように大きくなり、外側から float する。外側の box は、box の内側のコンテンツに影響を与えたりはみ出させたりすることは許されない。</p>
+<blockquote>
+<p><strong>EXAMPLE 5</strong>
+As another example, margins do not collapse across formatting context boundaries.</p>
+</blockquote>
+<p>別の例としては、マージンは formatting context の境界を越えて折りたたまれない。</p>
+<blockquote>
+<p>Exclusions are able to affect content across independent formatting context boundaries. (At time of writing, they are the only layout feature that can.) [CSS3-EXCLUSIONS]</p>
+</blockquote>
+<p>Exclusions は、formatting context を越えてコンテンツに影響を与えることができる（執筆時点では、exclusions はそのようなことができる唯一のレイアウトである）。</p>
+<blockquote>
+<p>Certain properties can force a box to establish an independent formatting context in cases where it wouldn’t ordinarily. For example, making a box out-of-flow causes it to blockify as well as to establish an independent formatting context. As another example, certain values of the contain property can cause a box to establish an independent formatting context. Turning a block into a scroll container will cause it to establish an independent formatting context; however turning a subgrid into a scroll container will not—it continues to act as a subgrid, with its contents participating in the layout of its parent grid container.</p>
+</blockquote>
+<p>特定のプロパティは、通常ではないケースにおいて、box に independent formatting context を設置することを強制できる。たとえば、box を out-of-flow にすると、box のブロック化と independent formatting context の確率を引き起こす。別の例としては、特定のプロパティの特定の値は、box に independent formatting context を設置させることができる。ブロックを scroll container にすることで independent formatting context を設置するだろう。しかしながら、subgrid を scroll container にしてもそうはならない。subgrid として引き続き機能して、親の grid container のレイアウトにコンテンツに参加し続ける。</p>
+<blockquote>
+<p>A block box that establishes an independent formatting context establishes a new block formatting context for its contents. In most other cases, forcing a box to establish an independent formatting context is a no-op—either the box already establishes an independent formatting context (e.g. flex containers), or it’s not possible to establish a totally independent new formatting context on that type of box (e.g. non-replaced inline boxes).</p>
+</blockquote>
+<p>independent formatting context を設置したブロックはそのコンテンツのための新しい block formatting context を設置する。他のほとんどの場合、box は independent formatting context を設置することを強制しても何も処理されない（no-op）。その box は（flex container のように）すでに independent formatting context を確立しているか、（非置換インライン box のような）box 上で independent な新しい formatting context を確立できない。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+東京在住。TypeScript, Node.js,
+        Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
+        860くらい。
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>

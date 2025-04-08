@@ -1,0 +1,641 @@
+<!DOCTYPE html><html lang="ja"> <head><title>Fragmenting Flex Layout | メモログ</title><meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="shortcut icon" href="/assets/icons/icon-32.ico"><style>
+  :root {
+    --container-width: 985px;
+    --link-color: #694b16;
+    --background-color: #e3ded5;
+    --lighter-color: #fdf8ee;
+    --darker-color: #cac5bc;
+    --more-dark-color: #b1aca4;
+    --border-color: #cac5bc;
+    --profile-text-color: #55514a;
+    --article-background-color: white;
+    --profile-background-color: var(--border-color);
+    --border-radius: 10px;
+  }
+  body {
+    background-color: var(--background-color);
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+  .header {
+    margin: 0 auto;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .header:has(.featured__image) {
+    margin-bottom: 2em;
+  }
+
+  .header_component_global {
+    width: 100%;
+  }
+
+  .header-inner {
+    text-align: center;
+    margin: 5px auto;
+    max-width: var(--container-width);
+    display: grid;
+    grid-template-columns: 36px 96px auto;
+    align-items: center;
+  }
+
+  .header__icon {
+    justify-self: end;
+  }
+
+  .header__title {
+    margin: 0.2em 0 0.2em;
+    font-size: 1.8em;
+    font-weight: normal;
+    vertical-align: bottom;
+  }
+
+  .header__title a,
+  .header__title > span {
+    color: black;
+    text-decoration: none;
+  }
+
+  .header_component_global .header__title {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    justify-self: start;
+  }
+
+  .header_component_global .header__title a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 5px;
+    background-color: transparent;
+  }
+
+  .header_component_global .navigation-global {
+    justify-self: end;
+    padding-right: 10px;
+    font-family: sans-serif;
+  }
+
+  .header__description {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header_component_global .header__description {
+    color: #666;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .header__epigraph {
+    font-style: italic;
+    color: #666;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto 4em;
+    padding: 0 15px;
+    border-radius: var(--border-radius);
+  }
+
+  article {
+    background-color: var(--article-background-color);
+    padding: 2em;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    font-size: 1.125em;
+    line-height: 2em;
+    background: var(--article-background-color);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .read-more {
+    margin-top: 1em;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-summary {
+    margin-bottom: 3.5em;
+  }
+
+  .header time {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: #666;
+    font-family: sans-serif;
+  }
+
+  .calendar-icon,
+  .author-icon {
+    margin-right: 0.5em;
+  }
+
+  .content blockquote {
+    border: 5px solid var(--border-color);
+    background: var(--lighter-color);
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+
+  .content p > code,
+  .content li > code {
+    background-color: #f5f2f0;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: var(--border-radius);
+    color: #444;
+  }
+
+  .content table {
+    background: #e0e0e0;
+  }
+
+  .content th {
+    background: #f0f0f0;
+  }
+
+  .content tr {
+    background: #fff;
+  }
+
+  .content tr:nth-child(even) {
+    background: #f0f0f0;
+  }
+
+  .content td {
+    padding: 5px 1em;
+    text-align: center;
+  }
+
+  .content code[class*="language-"] {
+    color: #444;
+  }
+
+  .header__feature {
+    margin: 0.5em 0 -0.5em;
+    position: relative;
+  }
+
+  .header__feature img {
+    overflow: hidden;
+  }
+
+  .featured__image {
+    background: #f5f2f0;
+    line-height: 0;
+    max-height: 335px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 -32px;
+  }
+
+  .featured__image picture {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .featured__image picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featured__credit {
+    color: #333;
+    font-size: 0.825em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"],
+    .youtube-wrapper {
+      margin: 0 -15px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -15px;
+    }
+  }
+
+  /*
+  .content p a[href]::before {
+    content: '🌐';
+    width: 24px;
+    display: inline-block;
+  }
+
+  .content p a[href].link-icon::before {
+    content: '';
+  }
+
+  .content p a[href].no-link-icon::before {
+    content: '';
+    width: 0;
+  }
+
+  .content p a.link-icon {
+    background-position-x: 4px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  */
+
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  /*
+  .post .writing-vertical p a {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+  */
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile {
+    border: 1px solid var(--profile-background-color);
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--profile-text-color);
+    border-radius: var(--border-radius);
+    background: var(--profile-background-color);
+  }
+
+  .profile__heading {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--profile-text-color);
+    display: inline-block;
+    font-weight: bold;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .profile__image {
+    float: left;
+    margin-right: 6px;
+  }
+
+  .profile__content {
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  .navigation__link,
+  .featured__credit a,
+  .profile__content a {
+    color: var(--profile-text-color);
+  }
+
+  .profile__social-list {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .profile__social-list-item {
+    display: inline;
+    margin-right: 0.5em;
+  }
+
+  .amazon-book-list {
+    margin-top: 2em;
+  }
+
+  .amazon-book-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  .amazon-book-list li {
+    display: table-cell;
+    padding: 10px;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  .amazon-book-list li a {
+    color: #666;
+  }
+
+  .amazon-book-list li img {
+    display: block;
+  }
+
+  .amazon-book-list-3 li {
+    width: 33%;
+  }
+
+  .amazon-book-list-4 li {
+    width: 25%;
+  }
+
+  .amazon-book-list-5 li {
+    width: 20%;
+  }
+
+  .content hr {
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-style: solid;
+    border-color: #ddd;
+    margin-top: 4em;
+  }
+
+  .pagination {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .page-number,
+  .extend.next,
+  .extend.prev,
+  .pagination .space {
+    min-width: 59px;
+    min-height: 59px;
+    text-align: center;
+    line-height: 59px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+  }
+
+  .pagination .space {
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--darker-color);
+    font-weight: bold;
+    color: white;
+    border-color: var(--darker-color);
+  }
+
+  pre {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+</style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph": [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+</script><meta property="og:type" content="article"><meta property="og:title" content="Fragmenting Flex Layout"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="今回は10. Fragmenting Flex Layout について。"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="/assets/images/tomas-malik-zlSzh2FP7LY-unsplash/tomas-malik-zlSzh2FP7LY-unsplash.jpg"><meta property="article:published_time" content="2020-09-09T10:06:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://memolog.org/assets/images/tomas-malik-zlSzh2FP7LY-unsplash/tomas-malik-zlSzh2FP7LY-unsplash.jpg"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2020/fragmenting-flex-layout.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
+📘 最新のメモ
+</a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2020-09-09T10:06:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年9月9日</span> </time> </div> <h2 class="header__title"><span>Fragmenting Flex Layout</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #716556;"> <div style="background-color: #716556"> <img src="/assets/images/tomas-malik-zlSzh2FP7LY-unsplash/tomas-malik-zlSzh2FP7LY-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="642"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@malcoo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Tomáš Malík</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div id="article-content" class="content">  <p>今回は<a href="https://www.w3.org/TR/css-flexbox-1/#pagination">10. Fragmenting Flex Layout
+</a>について。</p>
+<blockquote>
+<p>Flex containers can break across pages between items, between lines of items (in multi-line mode), and inside items. The <a href="https://www.w3.org/TR/css3-break/#propdef-break-before">break-*</a> properties apply to flex containers as normal for block-level or inline-level boxes. This section defines how they apply to flex items and the contents of flex items. See the <a href="http://www.w3.org/TR/css-break/">CSS Fragmentation Module</a> for more context <a href="https://www.w3.org/TR/css-flexbox-1/#biblio-css3-break">[CSS3-BREAK]</a>.</p>
+</blockquote>
+<p>flex container は items の間や、item の行の間（複数行モードの場合）、そして items の内部でページをまたぐことができる。<a href="https://www.w3.org/TR/css3-break/#propdef-break-before">break-*</a>のプロパティはブロックやインラインレベルと同じように flex containers に適用される。このセクションはそれらがどのように flex item や flex items のコンテンツに適用されるかを定義している。詳細は<a href="http://www.w3.org/TR/css-break/">CSS Fragmentation Module</a>を参照<a href="https://www.w3.org/TR/css-flexbox-1/#biblio-css3-break">[CSS3-BREAK]</a>。</p>
+<blockquote>
+<p>The following breaking rules refer to the <a href="https://www.w3.org/TR/css3-break/#fragmentation-container">fragmentation container</a> as the “page”. The same rules apply in any other <a href="https://www.w3.org/TR/css3-break/#fragmentation-context">fragmentation context</a>. (Substitute “page” with the appropriate fragmentation container type as needed.) For readability, in this section the terms “row” and “column” refer to the relative orientation of the flex container with respect to the block flow direction of the fragmentation context, rather than to that of the flex container itself.</p>
+</blockquote>
+<p>次の改行ルールでは<a href="https://www.w3.org/TR/css3-break/#fragmentation-container">fragmentation container</a>を「ページ」として言及する。同じルールが他の<a href="https://www.w3.org/TR/css3-break/#fragmentation-context">fragmentation context</a>においても適用される。（必要に応じて「ページ」を適切な fragmentation container type に置き換える。）可読性のために、このセクションにおいては「行」「列」の用語を、flex container 自身のそれではなく、fragmentation context のブロックフローに対する flex container の相対的な方向として言及する。</p>
+<blockquote>
+<p>The exact layout of a fragmented flex container is not defined in this level of Flexible Box Layout. However, breaks inside a flex container are subject to the following rules (interpreted using order-modified document order):</p>
+</blockquote>
+<p>fragmented flex container の正確なレイアウトは Flexible Box Layout のこのレベルでは定義されていない。しかしながら、flex container 内部での改行は次のルールに従う（order-modified document order を使用していると解釈される）。</p>
+<blockquote>
+<ul>
+<li>In a row flex container, the break-before and break-after values on flex items are propagated to the flex line. The break-before values on the first line and the break-after values on the last line are propagated to the flex container.<br><strong>Note:</strong> Break propagation (like text-decoration propagation) does not affect computed values.</li>
+<li>In a column flex container, the break-before values on the first item and the break-after values on the last item are propagated to the flex container. Forced breaks on other items are applied to the item itself.</li>
+<li>A forced break inside a flex item effectively increases the size of its contents; it does not trigger a forced break inside sibling items.</li>
+<li>In a row flex container, <a href="https://www.w3.org/TR/css3-break/#btw-blocks">Class A break opportunities</a> occur between sibling flex lines, and <a href="https://www.w3.org/TR/css3-break/#end-block">Class C break opportunities</a> occur between the first/last flex line and the flex container’s content edges. In a column flex container, Class A break opportunities occur between sibling flex items, and Class C break opportunities occur between the first/last flex items on a line and the flex container’s content edges. [CSS3-BREAK]</li>
+<li>When a flex container is continued after a break, the space available to its flex items (in the block flow direction of the fragmentation context) is reduced by the space consumed by flex container fragments on previous pages. The space consumed by a flex container fragment is the size of its content box on that page. If as a result of this adjustment the available space becomes negative, it is set to zero.</li>
+<li>If the first fragment of the flex container is not at the top of the page, and none of its flex items fit in the remaining space on the page, the entire fragment is moved to the next page.</li>
+<li>When a multi-line column flex container breaks, each fragment has its own “stack” of flex lines, just like each fragment of a multi-column container has its own row of column boxes.</li>
+<li>Aside from the rearrangement of items imposed by the previous point, UAs should attempt to minimize distortion of the flex container with respect to unfragmented flow.</li>
+</ul>
+</blockquote>
+<ul>
+<li>flex container の行において、flex items 上の<code>break-before</code>と<code>break-after</code>の値は、flex 行に伝播する。最初の行の break-before の値と最後の行の break-after の値は、flex container に伝播する。<br>**注:**改行の伝播は（text-decoration の伝播のように）計算値に影響を与えない</li>
+<li>flex container の列において、最初の item の break-before の値と最後の item の break-after の値は flex container に伝播する。他の items 上の強制的な改行は item それ自身に適用される。</li>
+<li>flex item 内の強制改行はコンテンツのサイズを効果的に増加させる。それは隣の items 内の強制改行を引き起こさない。</li>
+<li>flex container の行において、<a href="https://www.w3.org/TR/css3-break/#btw-blocks">Class A break opportunities</a>は隣り合う flex 行の間で発生して、<a href="https://www.w3.org/TR/css3-break/#end-block">Class C break opportunities</a>は最初・最後の flex 行と flex container のコンテンツの端の間で発生する。flex container の列にといては、Class A break opportunities は隣り合う flex items の間で起こり、Class C break opportunities は最初・最後の flex items と flex container のコンテンツの端との間で発生する。</li>
+<li>flex container が改行の後に継続する場合、flex items に対する余白スペース（fragmentation context のブロックフロー方向において）は、前のページ上の flex container fragments によって使われたスペースを差し引かれる。もしこの調整の結果として余白スペースが負になる場合は、ゼロにセットされる。</li>
+<li>flex container の最初の fragment がページのトップではなく、ページ上の残りのスペースの中でどの flex items もフィットしない場合、全ての fragment が次のページに移動する。</li>
+<li>flex container の複数行の列が改行した場合、ちょうど複数列の container の各 fragment が独自の列 boxes の行を持つように、各 fragment は flex 行の独自の「スタック」を持つ。</li>
+<li>先のポイントによって課される items の再調整からさらに、ユーザーエージェントは unfragmented フローに対する flex container の歪みを最小限にすることを努力すべきである。</li>
+</ul>
+<h3 id="101-sample-flex-fragmentation-algorithm">10.1. Sample Flex Fragmentation Algorithm</h3>
+<blockquote>
+<p>This informative section presents a possible fragmentation algorithm for flex containers. Implementors are encouraged to improve on this algorithm and provide feedback to the CSS Working Group.</p>
+</blockquote>
+<p>この informative セクションは flex container に対しての可能な fragmentation アルゴリズムを提示する。実装においてはこのアルゴリズムを改善し、CSS Working Group にフィードバックを与えることが推奨される。</p>
+<blockquote>
+<p><strong>EXAMPLE 14</strong>
+This algorithm assumes that pagination always proceeds only in the forward direction; therefore, in the algorithms below, alignment is mostly ignored prior to pagination. Advanced layout engines may be able to honor alignment across fragments.</p>
+</blockquote>
+<p>このアルゴリズムはページネーションが常に前方方向にのみ進んでいくことを仮定する。したがって、下のアルゴリズムにおいては、alignment はページネーションの前にたいてい無視される。高度なレイアウトエンジンは fragments にまたがって alignment を履行することができるかもしれない。</p>
+<blockquote>
+<p><strong>single-line column flex container</strong></p>
+<ol>
+<li>Run the flex layout algorithm (without regards to pagination) through <a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a>.</li>
+<li>Lay out as many consecutive flex items or item fragments as possible (but at least one or a fragment thereof), starting from the first, until there is no more room on the page or a forced break is encountered.</li>
+<li>If the previous step ran out of room and the free space is positive, the UA may reduce the distributed free space on this page (down to, but not past, zero) in order to make room for the next unbreakable flex item or fragment. Otherwise, the item or fragment that does not fit is pushed to the next page. The UA should pull up if more than 50% of the fragment would have fit in the remaining space and should push otherwise.</li>
+<li>If there are any flex items or fragments not laid out by the previous steps, rerun the flex layout algorithm from <a href="https://www.w3.org/TR/css-flexbox-1/#line-sizing">Line Length Determination</a> through <a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a> with the next page’s size and all the contents (including those already laid out), and return to the previous step, but starting from the first item or fragment not already laid out.</li>
+<li>For each fragment of the flex container, continue the flex layout algorithm from <a href="https://www.w3.org/TR/css-flexbox-1/#main-alignment">Main-Axis Alignment</a> to its finish.</li>
+</ol>
+</blockquote>
+<ol>
+<li><a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a>を通して、flex レイアウトアルゴリズム（ページネーションに関係なく）を実行する</li>
+<li>最初の item から始めてページ上に余白がなくなるか強制的な改行が起こるまで、可能な限り多く（少なくとも 1 つまたは 1 つの fragment）の連続した flex item または item fragments をレイアウトする。</li>
+<li>もし先のステップで余白が不足し、かつ余白スペースが正の場合、ユーザーエージェントは次の改行できない flex item や fragment のための余白を確保するために、このページの配分された余白スペースを減らすかもしれない（ゼロまで）。ユーザーエージェントはもし fragment の 50%以上が残りのスペースの中でフィットする場合は引き上げ、それ以外の場合は引き下げるべきだろう。</li>
+<li>もし先のステップによってレイアウトされていない flex items または fragments がある場合、次のページのサイズとすべてのコンテンツ（すでにレイアウトされているものも含む）を使用して、<a href="https://www.w3.org/TR/css-flexbox-1/#line-sizing">Line Length Determination</a>から<a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a>までの flex レイアウトアルゴリズムを再実行して、先のステップに戻り、まだレイアウトされていない最初の item または fragment から始める。</li>
+<li>flex container の各 fragment に対して、<a href="https://www.w3.org/TR/css-flexbox-1/#main-alignment">Main-Axis Alignment</a>からその終了までレイアウトアルゴリズムを続ける。</li>
+</ol>
+<blockquote>
+<p>It is the intent of this algorithm that column-direction single-line flex containers paginate very similarly to block flow. As a test of the intent, a flex container with justify-content:start and no flexible items should paginate identically to a block with in-flow children with same content, same used size and same used margins.</p>
+</blockquote>
+<p>このアルゴリズムの意図は column-direction single-line flex container が、ブロックフローにとても似たページネートを行うということである。その意図のテストとして、<code>justify-content:start</code>を持つ flex container で flexible ではない items が、同じコンテンツで同じ使用サイズ、同じマージンの in-flow children を持つブロックが同様にページネートするべきである。</p>
+<p><strong>multi-line column flex container</strong></p>
+<blockquote>
+<ol>
+<li>Run the flex layout algorithm with regards to pagination (limiting the flex container’s maximum line length to the space left on the page) through <a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a>.</li>
+<li>Lay out as many flex lines as possible (but at least one) until there is no more room in the flex container in the cross dimension or a forced break is encountered:</li>
+<li>Lay out as many consecutive flex items as possible (but at least one), starting from the first, until there is no more room on the page or a forced break is encountered. Forced breaks within flex items are ignored.</li>
+<li>If this is the first flex container fragment, this line contains only a single flex item that is larger than the space left on the page, and the flex container is not at the top of the page already, move the flex container to the next page and restart flex container layout entirely.</li>
+<li>If there are any flex items not laid out by the first step, rerun the flex layout algorithm from <a href="https://www.w3.org/TR/css-flexbox-1/#main-sizing">Main Sizing Determination</a> through <a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a> using only the items not laid out on a previous line, and return to the previous step, starting from the first item not already laid out.</li>
+<li>If there are any flex items not laid out by the previous step, rerun the flex layout algorithm from Line Sizing Determination through <a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a> with the next page’s size and only the items not already laid out, and return to the previous step, but starting from the first item not already laid out.</li>
+<li>For each fragment of the flex container, continue the flex layout algorithm from Main-Axis Alignment to its finish.</li>
+</ol>
+</blockquote>
+<ol>
+<li><a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a>を通して、ページネーションに考慮しつつ（flex container の最大行数をページの残りスペースに制限する）flex レイアウトアルゴリズムを実行する。</li>
+<li>cross dimension における flex container 内の余白がなくなるまで、または強制的な改行が発生するまで可能な限り（少なくとも一つ）の flex 行を配置する。</li>
+<li>最初の item からページ上に余白スペースがなくなる、または強制的な改行が発生するまで、可能な限りの連続した flex items（少なくとも一つ）を配置する。flex items 内部の強制的な改行は無視される</li>
+<li>もしこれが最初の flex container fragment の場合で、ページ上に残っているスペースよりも大きい 1 つの flex item のみがこの行に含まれる場合で、かつ flex container がすでにページのトップではない場合、flex container を次のページに移動して flex container レイアウトを全体的に再開する。</li>
+<li>もし最初のステップによってレイアウトされていない flex items がある場合、先の行でレイアウトされていない items のみを使って、<a href="https://www.w3.org/TR/css-flexbox-1/#main-sizing">Main Sizing Determination</a>から<a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a>までの flex レイアウトアルゴリズムを再実行する。</li>
+<li>もし先のステップでレイアウトされていない flex items があったら、次のページのサイズとまだレイアウトされていない items を使用して、<a href="https://www.w3.org/TR/css-flexbox-1/#line-sizing">Line Length Determination</a>から<a href="https://www.w3.org/TR/css-flexbox-1/#cross-sizing">Cross Sizing Determination</a>までの flex レイアウトアルゴリズムを再実行して、先のステップに戻り、まだレイアウトされていない最初の item から始める。</li>
+<li>flex container の各 fragment に対して、<a href="https://www.w3.org/TR/css-flexbox-1/#main-alignment">Main-Axis Alignment</a>からその終了までレイアウトアルゴリズムを続ける。</li>
+</ol>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+東京在住。TypeScript, Node.js,
+        Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
+        860くらい。
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>

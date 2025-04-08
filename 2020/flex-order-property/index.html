@@ -1,0 +1,698 @@
+<!DOCTYPE html><html lang="ja"> <head><title>Display Order：the order property | メモログ</title><meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="shortcut icon" href="/assets/icons/icon-32.ico"><style>
+  :root {
+    --container-width: 985px;
+    --link-color: #694b16;
+    --background-color: #e3ded5;
+    --lighter-color: #fdf8ee;
+    --darker-color: #cac5bc;
+    --more-dark-color: #b1aca4;
+    --border-color: #cac5bc;
+    --profile-text-color: #55514a;
+    --article-background-color: white;
+    --profile-background-color: var(--border-color);
+    --border-radius: 10px;
+  }
+  body {
+    background-color: var(--background-color);
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: var(--link-color);
+  }
+
+  .header {
+    margin: 0 auto;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .header:has(.featured__image) {
+    margin-bottom: 2em;
+  }
+
+  .header_component_global {
+    width: 100%;
+  }
+
+  .header-inner {
+    text-align: center;
+    margin: 5px auto;
+    max-width: var(--container-width);
+    display: grid;
+    grid-template-columns: 36px 96px auto;
+    align-items: center;
+  }
+
+  .header__icon {
+    justify-self: end;
+  }
+
+  .header__title {
+    margin: 0.2em 0 0.2em;
+    font-size: 1.8em;
+    font-weight: normal;
+    vertical-align: bottom;
+  }
+
+  .header__title a,
+  .header__title > span {
+    color: black;
+    text-decoration: none;
+  }
+
+  .header_component_global .header__title {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    justify-self: start;
+  }
+
+  .header_component_global .header__title a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 5px;
+    background-color: transparent;
+  }
+
+  .header_component_global .navigation-global {
+    justify-self: end;
+    padding-right: 10px;
+    font-family: sans-serif;
+  }
+
+  .header__description {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header_component_global .header__description {
+    color: #666;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .header__epigraph {
+    font-style: italic;
+    color: #666;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto 4em;
+    padding: 0 15px;
+    border-radius: var(--border-radius);
+  }
+
+  article {
+    background-color: var(--article-background-color);
+    padding: 2em;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    font-size: 1.125em;
+    line-height: 2em;
+    background: var(--article-background-color);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .read-more {
+    margin-top: 1em;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-summary {
+    margin-bottom: 3.5em;
+  }
+
+  .header time {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: #666;
+    font-family: sans-serif;
+  }
+
+  .calendar-icon,
+  .author-icon {
+    margin-right: 0.5em;
+  }
+
+  .content blockquote {
+    border: 5px solid var(--border-color);
+    background: var(--lighter-color);
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+
+  .content p > code,
+  .content li > code {
+    background-color: #f5f2f0;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: var(--border-radius);
+    color: #444;
+  }
+
+  .content table {
+    background: #e0e0e0;
+  }
+
+  .content th {
+    background: #f0f0f0;
+  }
+
+  .content tr {
+    background: #fff;
+  }
+
+  .content tr:nth-child(even) {
+    background: #f0f0f0;
+  }
+
+  .content td {
+    padding: 5px 1em;
+    text-align: center;
+  }
+
+  .content code[class*="language-"] {
+    color: #444;
+  }
+
+  .header__feature {
+    margin: 0.5em 0 -0.5em;
+    position: relative;
+  }
+
+  .header__feature img {
+    overflow: hidden;
+  }
+
+  .featured__image {
+    background: #f5f2f0;
+    line-height: 0;
+    max-height: 335px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 -32px;
+  }
+
+  .featured__image picture {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .featured__image picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featured__credit {
+    color: #333;
+    font-size: 0.825em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"],
+    .youtube-wrapper {
+      margin: 0 -15px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -15px;
+    }
+  }
+
+  /*
+  .content p a[href]::before {
+    content: '🌐';
+    width: 24px;
+    display: inline-block;
+  }
+
+  .content p a[href].link-icon::before {
+    content: '';
+  }
+
+  .content p a[href].no-link-icon::before {
+    content: '';
+    width: 0;
+  }
+
+  .content p a.link-icon {
+    background-position-x: 4px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  */
+
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  /*
+  .post .writing-vertical p a {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+  */
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile {
+    border: 1px solid var(--profile-background-color);
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--profile-text-color);
+    border-radius: var(--border-radius);
+    background: var(--profile-background-color);
+  }
+
+  .profile__heading {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--profile-text-color);
+    display: inline-block;
+    font-weight: bold;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .profile__image {
+    float: left;
+    margin-right: 6px;
+  }
+
+  .profile__content {
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  .navigation__link,
+  .featured__credit a,
+  .profile__content a {
+    color: var(--profile-text-color);
+  }
+
+  .profile__social-list {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .profile__social-list-item {
+    display: inline;
+    margin-right: 0.5em;
+  }
+
+  .amazon-book-list {
+    margin-top: 2em;
+  }
+
+  .amazon-book-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  .amazon-book-list li {
+    display: table-cell;
+    padding: 10px;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  .amazon-book-list li a {
+    color: #666;
+  }
+
+  .amazon-book-list li img {
+    display: block;
+  }
+
+  .amazon-book-list-3 li {
+    width: 33%;
+  }
+
+  .amazon-book-list-4 li {
+    width: 25%;
+  }
+
+  .amazon-book-list-5 li {
+    width: 20%;
+  }
+
+  .content hr {
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-style: solid;
+    border-color: #ddd;
+    margin-top: 4em;
+  }
+
+  .pagination {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .page-number,
+  .extend.next,
+  .extend.prev,
+  .pagination .space {
+    min-width: 59px;
+    min-height: 59px;
+    text-align: center;
+    line-height: 59px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+  }
+
+  .pagination .space {
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--darker-color);
+    font-weight: bold;
+    color: white;
+    border-color: var(--darker-color);
+  }
+
+  pre {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+</style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph": [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+</script><meta property="og:type" content="article"><meta property="og:title" content="Display Order：the order property"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="今回は5.4. Display Order: the order propertyについて。"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="/assets/images/estudio-bloom-ezqnxsqUZ80-unsplash/estudio-bloom-ezqnxsqUZ80-unsplash.jpg"><meta property="article:published_time" content="2020-05-25T00:00:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://memolog.org/assets/images/estudio-bloom-ezqnxsqUZ80-unsplash/estudio-bloom-ezqnxsqUZ80-unsplash.jpg"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2020/flex-order-property.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
+📘 最新のメモ
+</a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2020-05-25T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月25日</span> </time> </div> <h2 class="header__title"><span>Display Order：the order property</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dda1ae;"> <div style="background-color: #dda1ae"> <img src="/assets/images/estudio-bloom-ezqnxsqUZ80-unsplash/estudio-bloom-ezqnxsqUZ80-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@estudiobloom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Estúdio Bloom</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div id="article-content" class="content">  <p>今回は<a href="https://www.w3.org/TR/css-flexbox-1/#order-property">5.4. Display Order: the order property</a>について。</p>
+<blockquote>
+<p>Flex items are, by default, displayed and laid out in the same order as they appear in the source document. The order property can be used to change this ordering.</p>
+</blockquote>
+<p>Flex items はデフォルトで source document に出現するのと同じ順番で表示・配置される。<code>order</code>プロパティはこの並び順を変更するために使われる。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>key</th><th>value</th></tr></thead><tbody><tr><td>Name</td><td>order</td></tr><tr><td>Value</td><td>&#x3C;integer></td></tr><tr><td>Initial</td><td>0</td></tr><tr><td>Applies to</td><td>flex items</td></tr><tr><td>Inherited</td><td>no</td></tr><tr><td>Percentages</td><td>n/a</td></tr><tr><td>Computed value</td><td>specified integer</td></tr><tr><td>Canonical order</td><td>per grammar</td></tr><tr><td>Animation type</td><td>by computed value type</td></tr></tbody></table>
+<blockquote>
+<p>The order property controls the order in which flex items appear within the flex container, by assigning them to ordinal groups. It takes a single <integer> value, which specifies which ordinal group the flex item belongs to.</integer></p>
+</blockquote>
+<p><code>order</code>プロパティは flex items に ordinal group を割り当てることで、それらが flex container 内で表示される順番を制御する。integer 値を渡して、flex item が所属する ordinal group を指定する。</p>
+<blockquote>
+<p>A flex container lays out its content in order-modified document order, starting from the lowest numbered ordinal group and going up. Items with the same ordinal group are laid out in the order they appear in the source document. This also affects the painting order [CSS21], exactly as if the flex items were reordered in the source document. Absolutely-positioned children of a flex container are treated as having order: 0 for the purpose of determining their painting order relative to flex items.</p>
+</blockquote>
+<p>flex container は、order-modified された document の並び順に沿ってコンテンツを ordinal group の数値の小さい順に配置する。同じ ordinal group の items は、source document に出現する順番で配置される。これは、まるで flex items が source document で並び変えられたかのように正確に、描画の順番にも影響を与える。flex container の絶対配置された子供たちは、flex items と相対的な描画順序を決定するために、<code>0</code>の order を持っているとみなして扱われる。</p>
+<blockquote>
+<p><strong>EXAMPLE 6</strong>
+The following figure shows a simple tabbed interface, where the tab for the active pane is always first:</p>
+<img src="https://www.w3.org/TR/css-flexbox-1/images/flex-order-example.png">
+<p>This could be implemented with the following CSS (showing only the relevant code):</p>
+</blockquote>
+<p>上記の図は、簡単なタブインターフェイスを表したもので、アクティブなタブは常に最初（一番左）に表示される。
+これは下のような CSS（関連する部分のみ）で実装される</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#50FA7B;font-style:italic">.tabs</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#8BE9FD">  display</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> flex</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"><span style="color:#50FA7B;font-style:italic">.tabs</span><span style="color:#FF79C6"> > </span><span style="color:#50FA7B;font-style:italic">.current</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#8BE9FD">  order</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> -1</span><span style="color:#F8F8F2">; </span><span style="color:#6272A4">/* デフォルトの0より小さくする */</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<blockquote>
+<p>Unless otherwise specified by a future specification, this property has no effect on boxes that are not flex items.</p>
+</blockquote>
+<p>将来的な仕様で指定されない限りは、このプロパティは flex items ではない boxes には何も効果を与えない。</p>
+<h3 id="541-reordering-and-accessibility">5.4.1. Reordering and Accessibility</h3>
+<blockquote>
+<p>The order property does not affect ordering in non-visual media (such as speech). Likewise, order does not affect the default traversal order of sequential navigation modes (such as cycling through links, see e.g. tabindex [HTML]).</p>
+</blockquote>
+<p>order プロパティは non-visual media（スピーチなど）の順番には影響を与えない。同様に、order プロパティは sequential navigation mode（tabindex のようなリンクを巡回するようなもの）のデフォルトの走査順序にも影響を与えない。</p>
+<blockquote>
+<p><strong>Authors must use order only for visual, not logical, reordering of content. Style sheets that use order to perform logical reordering are non-conforming.</strong></p>
+</blockquote>
+<p>制作者はコンテンツの視覚的な（論理的なのではなく）並び替えに対してのみ order プロパティを使わなければならない。論理的なコンテンツの並び替えに order プロパティを利用したスタイルシートは非準拠である。</p>
+<blockquote>
+<p><strong>Note:</strong> This is so that non-visual media and non-CSS UAs, which typically present content linearly, can rely on a logical source order, while order is used to tailor the visual order. (Since visual perception is two-dimensional and non-linear, the desired visual order is not always logical.)</p>
+</blockquote>
+<p><strong>注意</strong>：これは、一般的に現在のコンテンツを直線的に出力する、non-visual media と non-CSS ユーザーエージェント（ブラウザなど）が、論理的な source order に依拠できるようにしつつ、一方で order プロパティを利用することで視覚的な順番を調整できるようにするためである。（視覚による知覚は、二次元的であり直線的ではない。望ましい視覚的な順番は常に論理的なものであるとは限らないので。）</p>
+<blockquote>
+<p><strong>EXAMPLE 7</strong>
+Many web pages have a similar shape in the markup, with a header on top, a footer on bottom, and then a content area and one or two additional columns in the middle. Generally, it’s desirable that the content come first in the page’s source code, before the additional columns. However, this makes many common designs, such as simply having the additional columns on the left and the content area on the right, difficult to achieve. This has been addressed in many ways over the years, often going by the name “Holy Grail Layout” when there are two additional columns. order makes this trivial. For example, take the following sketch of a page’s code and desired layout:</p>
+</blockquote>
+<p>多くのウェブページがマークアップにおいて同じような形、上の方にヘッダーがあり、下側にフッターがあり、真ん中にコンテンツエリアと 1 つか 2 つの付帯的なカラムを持つ。一般的に、ページの source code 上では、付帯的なカラムの前に、コンテンツが最初に来るのが望ましい。しかしながら、この（ソースコードの並び順は）多くのよくあるデザインがするような、付帯的なカラムを左において、コンテンツエリアを右に置くようなシンプルなデザインを作るのが難しくなる。これは長年に渡って様々な方法で対処されてきた課題で、二つの付帯的なカラムを持つレイアウトはしばしば「Holy Grail Layout」という名前で呼ばれてきた。order プロパティはこの課題を簡単なものにする。例えば、次のようなページコードと、望ましいレイアウトのスケッチがあるとする。</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#F8F8F2">&#x3C;!</span><span style="color:#FF79C6">DOCTYPE</span><span style="color:#50FA7B;font-style:italic"> html</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">header</span><span style="color:#F8F8F2">>...&#x3C;/</span><span style="color:#FF79C6">header</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">main</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#FF79C6">article</span><span style="color:#F8F8F2">>...&#x3C;/</span><span style="color:#FF79C6">article</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#FF79C6">nav</span><span style="color:#F8F8F2">>...&#x3C;/</span><span style="color:#FF79C6">nav</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#FF79C6">aside</span><span style="color:#F8F8F2">>...&#x3C;/</span><span style="color:#FF79C6">aside</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#FF79C6">main</span><span style="color:#F8F8F2">></span></span>
+<span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">footer</span><span style="color:#F8F8F2">>...&#x3C;/</span><span style="color:#FF79C6">footer</span><span style="color:#F8F8F2">></span></span></code></pre>
+<img src="https://www.w3.org/TR/css-flexbox-1/images/flex-order-page.svg">
+<blockquote>
+<p>This layout can be easily achieved with flex layout:</p>
+</blockquote>
+<p>このレイアウトは flex レイアウトで簡単に作ることができる。</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF79C6">main</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#8BE9FD">  display</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> flex</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"><span style="color:#FF79C6">main > article</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#8BE9FD">  order</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#8BE9FD">  min-width</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 12</span><span style="color:#FF79C6">em</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#8BE9FD">  flex</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"><span style="color:#FF79C6">main > nav</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#8BE9FD">  order</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#8BE9FD">  width</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#FF79C6">px</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span>
+<span class="line"><span style="color:#FF79C6">main > aside</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#8BE9FD">  order</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 3</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#8BE9FD">  width</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 200</span><span style="color:#FF79C6">px</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<blockquote>
+<p>As an added bonus, the columns will all be equal-height by default, and the main content will be as wide as necessary to fill the screen. Additionally, this can then be combined with media queries to switch to an all-vertical layout on narrow screens:</p>
+</blockquote>
+<p>追加特典として、カラムはデフォルトで同じ高さになり、メインコンテンツは画面を埋めるのに必要なだけの幅になる。さらに、media queries と組み合わせることで、狭い画面上においては縦一列（all-vertical）のレイアウトにスイッチすることができる。</p>
+<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF79C6">@media</span><span style="color:#BD93F9"> all</span><span style="color:#FF79C6"> and</span><span style="color:#F8F8F2"> (</span><span style="color:#8BE9FD">max-width</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 600</span><span style="color:#FF79C6">px</span><span style="color:#F8F8F2">) {</span></span>
+<span class="line"><span style="color:#6272A4">  /* 3カラムに対応するには狭すぎる */</span></span>
+<span class="line"><span style="color:#FF79C6">  main</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#8BE9FD">    flex-flow</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> column</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  }</span></span>
+<span class="line"><span style="color:#FF79C6">  main > article</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#FF79C6">  main > nav</span><span style="color:#F8F8F2">,</span></span>
+<span class="line"><span style="color:#FF79C6">  main > aside</span><span style="color:#F8F8F2"> {</span></span>
+<span class="line"><span style="color:#6272A4">    /* documentの並び順にする */</span></span>
+<span class="line"><span style="color:#8BE9FD">    order</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#8BE9FD">    width</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> auto</span><span style="color:#F8F8F2">;</span></span>
+<span class="line"><span style="color:#F8F8F2">  }</span></span>
+<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<blockquote>
+<p>(Further use of multi-line flex containers to achieve even more intelligent wrapping left as an exercise for the reader.)</p>
+</blockquote>
+<p>（読者のための演習として、複数行の flex container を使ってよりインテリジェントに囲う方法もあることを記しておく）</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+東京在住。TypeScript, Node.js,
+        Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
+        860くらい。
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>

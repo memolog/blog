@@ -1,371 +1,531 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <title>メモログ</title>
-  <meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description">
-    <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://www.google-analytics.com">
-  <link rel="shortcut icon" href="/assets/icons/icon-32.ico">
-  <style>body {
-  background-color: white;
-  color: black;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-    "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html><html lang="ja"> <head><title>メモログ</title><meta name="description" content="塵が積もって山とならないメモのログ" id="meta-description"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://www.google-analytics.com"><link rel="shortcut icon" href="/assets/icons/icon-32.ico"><style>
+  :root {
+    --container-width: 985px;
+    --link-color: #694b16;
+    --background-color: #e3ded5;
+    --lighter-color: #fdf8ee;
+    --darker-color: #cac5bc;
+    --more-dark-color: #b1aca4;
+    --border-color: #cac5bc;
+    --profile-text-color: #55514a;
+    --article-background-color: white;
+    --profile-background-color: var(--border-color);
+    --border-radius: 10px;
+  }
+  body {
+    background-color: var(--background-color);
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+      "Hiragino Kaku Gothic Pro", YuGothic, "Yu Gothic", Meiryo, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-.header {
-  margin: 0 auto 2em;
-  font-family: Garamond, "Times New Roman", serif;
-}
+  a {
+    color: var(--link-color);
+  }
 
-.header_component_global {
-  text-align: center;
-  margin: 1em auto;
-  max-width: 800px;
-}
+  .header {
+    margin: 0 auto;
+    font-family: Garamond, "Times New Roman", serif;
+  }
 
-.header__title {
-  margin: 0.2em 0 0.2em;
-  font-size: 1.8em;
-  font-weight: normal;
-  vertical-align: bottom;
-}
+  .header:has(.featured__image) {
+    margin-bottom: 2em;
+  }
 
-.header__title a,
-.header__title > span {
-  color: black;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #f5f2f0;
-  padding: 5px;
-}
+  .header_component_global {
+    width: 100%;
+  }
 
-.header_component_global .header__title {
-  font-size: 1.2em;
-}
+  .header-inner {
+    text-align: center;
+    margin: 5px auto;
+    max-width: var(--container-width);
+    display: grid;
+    grid-template-columns: 36px 96px auto;
+    align-items: center;
+  }
 
-.header_component_global .header__title a {
-  text-decoration: none;
-  color: black;
-}
-
-.main .header .header__title {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  opacity: 0.8;
-  margin-bottom: 0;
-}
-
-.header__description {
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-
-.header_component_global .header__description {
-  color: #666;
-  margin: 0 auto;
-  padding: 0 5px;
-}
-
-.header__epigraph {
-  font-style: italic;
-  color: #666;
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.container {
-  width: 800px;
-  margin: 0 auto 4em;
-  padding: 0 15px;
-  border-radius: 3px;
-}
-
-.content {
-  font-size: 1.125em;
-  line-height: 2em;
-  background: white;
-  color: #222;
-  -webkit-font-smoothing: antialiased;
-}
-
-.content h2,
-.content h3 {
-  font-size: 1.4em;
-  margin: 2em 0 1em 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.article-summary {
-  margin-bottom: 3.5em;
-}
-
-.header time {
-  display: inline-block;
-  font-size: 0.9125em;
-  color: #666;
-}
-
-.calendar-icon,
-.author-icon {
-  margin-right: 0.5em;
-}
-
-.content blockquote {
-  border: 5px solid #ddd;
-  background: #f9f9f9;
-  margin: 1.5em 0;
-  padding: 0 1em;
-}
-
-.content p > code,
-.content li > code {
-  background-color: #f5f2f0;
-  display: inline-block;
-  padding: 0 6px;
-  border-radius: 0.3em;
-  color: #444;
-}
-
-.content table {
-  background: #e0e0e0;
-}
-
-.content th {
-  background: #f0f0f0;
-}
-
-.content tr {
-  background: #fff;
-}
-
-.content tr:nth-child(even) {
-  background: #f0f0f0;
-}
-
-.content td {
-  padding: 5px 1em;
-  text-align: center;
-}
-
-.content code[class*="language-"] {
-  color: #444;
-}
-
-.header__feature {
-  margin: 0.5em 0 -0.5em;
-  position: relative;
-}
-
-.header__feature img {
-  overflow: hidden;
-}
-
-.featured__image {
-  background: white;
-  line-height: 0;
-  max-height: 335px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.featured__credit {
-  color: #333;
-  font-size: 0.825em;
-  text-align: right;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 7px;
-  background: #f0f0f0;
-  opacity: 0.8;
-}
-
-.lazyload,
-.lazyloading {
-  opacity: 0.5;
-}
-
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
-}
-
-.content img {
-  max-width: 100%;
-}
-
-.youtube-wrapper {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-}
-
-.youtube-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  border: 0;
-}
-
-@media screen and (max-width: 500px) {
-  .header__epigraph {
-    display: none;
+  .header__icon {
+    justify-self: end;
   }
 
   .header__title {
-    font-size: 1.2em;
+    margin: 0.2em 0 0.2em;
+    font-size: 1.8em;
+    font-weight: normal;
+    vertical-align: bottom;
   }
 
-  .content h2 {
-    font-size: 1.2em;
+  .header__title a,
+  .header__title > span {
+    color: black;
+    text-decoration: none;
   }
 
-  .main .header .header__title {
-    margin-bottom: 30px;
+  .header_component_global .header__title {
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    justify-self: start;
+  }
+
+  .header_component_global .header__title a {
+    text-decoration: none;
+    color: black;
+    padding: 7px 5px;
+    background-color: transparent;
+  }
+
+  .header_component_global .navigation-global {
+    justify-self: end;
+    padding-right: 10px;
+    font-family: sans-serif;
+  }
+
+  .header__description {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .header_component_global .header__description {
+    color: #666;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  .header__epigraph {
+    font-style: italic;
+    color: #666;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: var(--container-width);
+    max-width: 100%;
+    margin: 0 auto 4em;
+    padding: 0 15px;
+    border-radius: var(--border-radius);
+  }
+
+  article {
+    background-color: var(--article-background-color);
+    padding: 2em;
+    border-radius: var(--border-radius);
+  }
+
+  .content {
+    font-size: 1.125em;
+    line-height: 2em;
+    background: var(--article-background-color);
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .read-more {
+    margin-top: 1em;
+  }
+
+  .content h2,
+  .content h3 {
+    font-size: 1.4em;
+    margin: 2em 0 1em 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-summary {
+    margin-bottom: 3.5em;
+  }
+
+  .header time {
+    display: inline-block;
+    font-size: 0.8125em;
+    color: #666;
+    font-family: sans-serif;
+  }
+
+  .calendar-icon,
+  .author-icon {
+    margin-right: 0.5em;
+  }
+
+  .content blockquote {
+    border: 5px solid var(--border-color);
+    background: var(--lighter-color);
+    margin: 1.5em 0;
+    padding: 0 1em;
+  }
+
+  .content p > code,
+  .content li > code {
+    background-color: #f5f2f0;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: var(--border-radius);
+    color: #444;
+  }
+
+  .content table {
+    background: #e0e0e0;
+  }
+
+  .content th {
+    background: #f0f0f0;
+  }
+
+  .content tr {
+    background: #fff;
+  }
+
+  .content tr:nth-child(even) {
+    background: #f0f0f0;
+  }
+
+  .content td {
+    padding: 5px 1em;
+    text-align: center;
+  }
+
+  .content code[class*="language-"] {
+    color: #444;
   }
 
   .header__feature {
-    margin-top: -23px;
-  }
-
-  .featured__credit {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin: 0.5em 0 -0.5em;
     position: relative;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .featured__image,
-  .content__image,
-  .content pre[class*="language-"],
-  .youtube-wrapper {
-    margin: 0 -15px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .featured__image,
-  .content__image,
-  .content pre[class*="language-"] {
-    margin: 0 -15px;
-  }
-}
-
-/*
-.content p a[href]::before {
-  content: '🌐';
-  width: 24px;
-  display: inline-block;
-}
-
-.content p a[href].link-icon::before {
-  content: '';
-}
-
-.content p a[href].no-link-icon::before {
-  content: '';
-  width: 0;
-}
-
-.content p a.link-icon {
-  background-position-x: 4px;
-  background-position-y: center;
-  background-repeat: no-repeat;
-}
-*/
-
-.post .writing-vertical {
-  writing-mode: vertical-rl;
-  font-family: serif;
-  font-size: 1em;
-  margin: 1.5em 0;
-  column-count: 2;
-  max-width: 800px;
-  width: 102%;
-  overflow: auto;
-  height: 800px;
-}
-
-.post .writing-vertical p {
-  margin: 0;
-}
-
-/*
-.post .writing-vertical p a {
-  padding-left: 0px;
-  padding-top: 24px;
-}
-*/
-
-.post .writing-vertical p:first-letter {
-  margin-top: 1em;
-}
-
-.post .writing-vertical .link-icon {
-  background-position-x: center;
-  background-position-y: 5px;
-}
-
-.post .writing-vertical blockquote {
-  border: none;
-  margin: 0 0.5em;
-  padding: 1em 0.5em;
-  background: #f0f0f0;
-}
-
-@media screen and (max-width: 730px) {
-  .container {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .post .writing-vertical {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
   }
 
   .header__feature img {
-    max-width: 100%;
-    height: auto;
+    overflow: hidden;
   }
-}
-</style>
-  <script>window.lazyLoadOptions = {};</script>
-  <link rel="preload" as="style" href="/css/global_async.css" onload="this.rel='stylesheet'">
-  <link rel="alternate" href="http://feeds.feedburner.com/jp/memolog" title="Latest Articles" >
-  <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
-  <link rel="manifest" href="/manifest.json" >
-  <meta name="theme-color" content="white">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  .featured__image {
+    background: #f5f2f0;
+    line-height: 0;
+    max-height: 335px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: 0 -32px;
+  }
 
-    gtag('config', 'UA-955153-2');
-  </script>
-  <script type="application/ld+json">
+  .featured__image picture {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .featured__image picture img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .featured__credit {
+    color: #333;
+    font-size: 0.825em;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 7px;
+    background: #f0f0f0;
+    opacity: 0.8;
+  }
+
+  .lazyload,
+  .lazyloading {
+    opacity: 0.5;
+  }
+
+  .lazyloaded {
+    opacity: 1;
+    transition: opacity 2s 0.3s cubic-bezier(0.3, 0.18, 0.15, 1);
+  }
+
+  .content img {
+    max-width: 100%;
+  }
+
+  .youtube-wrapper {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+  }
+
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"],
+    .youtube-wrapper {
+      margin: 0 -15px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -15px;
+    }
+  }
+
+  /*
+  .content p a[href]::before {
+    content: '🌐';
+    width: 24px;
+    display: inline-block;
+  }
+
+  .content p a[href].link-icon::before {
+    content: '';
+  }
+
+  .content p a[href].no-link-icon::before {
+    content: '';
+    width: 0;
+  }
+
+  .content p a.link-icon {
+    background-position-x: 4px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+  }
+  */
+
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  /*
+  .post .writing-vertical p a {
+    padding-left: 0px;
+    padding-top: 24px;
+  }
+  */
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile {
+    border: 1px solid var(--profile-background-color);
+    padding: 1em;
+    margin-top: 2em;
+    color: var(--profile-text-color);
+    border-radius: var(--border-radius);
+    background: var(--profile-background-color);
+  }
+
+  .profile__heading {
+    margin-bottom: 0.3em;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--profile-text-color);
+    display: inline-block;
+    font-weight: bold;
+    font-family: Garamond, "Times New Roman", serif;
+  }
+
+  .profile__image {
+    float: left;
+    margin-right: 6px;
+  }
+
+  .profile__content {
+    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 1.5em;
+  }
+
+  .navigation__link,
+  .featured__credit a,
+  .profile__content a {
+    color: var(--profile-text-color);
+  }
+
+  .profile__social-list {
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .profile__social-list-item {
+    display: inline;
+    margin-right: 0.5em;
+  }
+
+  .amazon-book-list {
+    margin-top: 2em;
+  }
+
+  .amazon-book-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    width: 100%;
+  }
+
+  .amazon-book-list li {
+    display: table-cell;
+    padding: 10px;
+    font-size: 0.875em;
+    line-height: 1.5;
+  }
+
+  .amazon-book-list li a {
+    color: #666;
+  }
+
+  .amazon-book-list li img {
+    display: block;
+  }
+
+  .amazon-book-list-3 li {
+    width: 33%;
+  }
+
+  .amazon-book-list-4 li {
+    width: 25%;
+  }
+
+  .amazon-book-list-5 li {
+    width: 20%;
+  }
+
+  .content hr {
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-style: solid;
+    border-color: #ddd;
+    margin-top: 4em;
+  }
+
+  .pagination {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  .page-number,
+  .extend.next,
+  .extend.prev,
+  .pagination .space {
+    min-width: 59px;
+    min-height: 59px;
+    text-align: center;
+    line-height: 59px;
+    margin: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--background-color);
+  }
+
+  .pagination .space {
+    border-color: transparent;
+  }
+
+  .page-number.current {
+    background: var(--darker-color);
+    font-weight: bold;
+    color: white;
+    border-color: var(--darker-color);
+  }
+
+  pre {
+    padding: 1em;
+    font-size: 1.2em;
+  }
+</style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
     "@context": "http://schema.org",
-    "@graph":
-    [
+    "@graph": [
       {
         "@context": "http://schema.org",
         "@type": "Organization",
@@ -385,299 +545,10 @@
       }
     ]
   }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context":"http://schema.org",
-      "@type":"ItemList",
-      "itemListElement":[
-        
-        {
-          "@type":"ListItem",
-          "position":1,
-          "url": "https://memolog.org/2012/06/collapsing_magin_with_overflow_or_clearance.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":2,
-          "url": "https://memolog.org/2012/06/focus_on_the_content.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":3,
-          "url": "https://memolog.org/2012/05/b_element.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":4,
-          "url": "https://memolog.org/2012/05/invited_elements.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":5,
-          "url": "https://memolog.org/2012/05/favicons_next_to_external_link.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":6,
-          "url": "https://memolog.org/2012/05/css_selector_performance.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":7,
-          "url": "https://memolog.org/2012/05/aria-hidden.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":8,
-          "url": "https://memolog.org/2012/05/sublime_text_2_zen_coding.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":9,
-          "url": "https://memolog.org/2012/05/last-child-required-the-last-child-in-the-parent-element.html"
-        },
-        
-        {
-          "@type":"ListItem",
-          "position":10,
-          "url": "https://memolog.org/2012/05/float_and_width_auto.html"
-        }
-        
-      ]
-    }
-  </script>
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml">
-</head>
-<body>
-    <header class="header header_component_global">
-    <div class="header__icon" aria-hidden="true"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon" loading="lazy"></div>
-    <h1 class="header__title header__title"><a href="/">メモログ</a></h1>
-    <p class="header__description">塵が積もって山とならないメモのログ</p>
-    <nav class="navigation navigation-global">
-      <a href="/" class="navigation__link">📘 最新のメモ</a>
-    </nav>
-  </header>
-
-  <div class="container">
-    <main class="main">
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-06-04T11:15:00.000Z"><span class="calendar-icon">📅</span><span>2012年6月4日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/06/collapsing_magin_with_overflow_or_clearance.html">マージンの相殺とoverflow, clear&#x3a;both</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>垂直方向に隣接するマージンは<a target="_blank" rel="noopener" href="http://www.w3.org/TR/CSS21/box#collapsing-margins">マージンの相殺（collapsing）</a>が働くけれど、overflow:hiddenがあると相殺されない、という仕様の話。あとclearanceについて。</p></div>
-            <div><a href="/2012/06/collapsing_magin_with_overflow_or_clearance.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-06-03T12:33:00.000Z"><span class="calendar-icon">📅</span><span>2012年6月3日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/06/focus_on_the_content.html">広告についてのてきとうな雑感</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>Zeldmanが自身のサイトのリデザインについて<a target="_blank" rel="noopener" href="http://www.zeldman.com/2012/05/18/web-design-manifesto-2012/">自分のサイト</a>と<a target="_blank" rel="noopener" href="http://www.netmagazine.com/interviews/jeffrey-zeldman-his-web-design-manifesto-2012">.net Magazing</a>で解説しています。</p></div>
-            <div><a href="/2012/06/focus_on_the_content.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-05-30T06:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年5月30日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/05/b_element.html">b要素について</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>HTML5になってb要素の定義が変更されている。4.01のときの仕様は<a target="_blank" rel="noopener" href="http://www.w3.org/TR/1999/REC-html401-19991224/present/graphics.html#edef-B">Alignment, font styles, and horizontal rules in HTML documents</a>に書かれていて、太字でスタイリングされることが書かれている（強調表示みたいな含意がある…ように思ってたけど、覚えてない）。HTML5での定義は<a target="_blank" rel="noopener" href="http://www.w3.org/TR/html5-diff/#changed-elements">HTML5 differences from HTML4</a>や<a target="_blank" rel="noopener" href="http://www.w3.org/TR/html5/the-b-element.html#the-b-element">4.6.17 The b element — HTML5</a>で、下記のように書かれている。</p></div>
-            <div><a href="/2012/05/b_element.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-05-29T06:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年5月29日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/05/invited_elements.html">独自要素を作成する</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>少し前に<a target="_blank" rel="noopener" href="http://meyerweb.com/eric/thoughts/2012/03/23/invented-elements/">Eric’s Archived Thoughts:Invented Elements</a>、<a target="_blank" rel="noopener" href="http://meyerweb.com/eric/thoughts/2012/03/28/customizing-your-markup/">Eric’s Archived Thoughts:Customizing Your Markup</a>、<a target="_blank" rel="noopener" href="http://meyerweb.com/eric/thoughts/2012/04/10/element-customization/">Eric’s Archived Thoughts:Element Customization</a>で解説されていた話。</p></div>
-            <div><a href="/2012/05/invited_elements.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-05-28T06:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年5月28日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/05/favicons_next_to_external_link.html">リンクの隣りにfaviconを表示する</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="http://css-tricks.com/favicons-next-to-external-links/">Favicons Next To External Links | CSS-Tricks</a>という、リンクの左側にリンク先のfaviconを表示するというテクニックが紹介されていて、試してみました。簡単にできて、見た目にも華やかになるので面白い（個人的に）。</p></div>
-            <div><a href="/2012/05/favicons_next_to_external_link.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-05-27T06:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年5月27日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/05/css_selector_performance.html">CSS Selector Performance</a></h2>
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/">Performance Calendar » CSS Selector Performance has changed! (For the better)</a>にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています（via <a target="_blank" rel="noopener" href="http://paulirish.com/2012/box-sizing-border-box-ftw/">* { box-sizing: border-box } FTW « Paul Irish</a>）。という話の紹介。</p></div>
-            <div><a href="/2012/05/css_selector_performance.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-05-26T06:48:00.000Z"><span class="calendar-icon">📅</span><span>2012年5月26日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/05/aria-hidden.html">aria-hiddenについて</a></h2>
-            
-              <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
-    
-      
-        <div style="background-color: #759295"><img src="/assets/images/anthony-delanoix-28851-unsplash/anthony-delanoix-28851-unsplash.svg" alt="" role="presentation" loading="lazy" width="800" height="531" /></div>
-      
-    
-  </div>
-  
-    
-      <div class="featured__credit">Original Photo by <a href="https://unsplash.com/photos/Hk7l6DmgO7Q?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Anthony DELANOIX</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
-    
-    
-    
-  
-</div>
-
-            
-          </header>
-          
-            <div class="content"><p><a target="_blank" rel="noopener" href="http://css-tricks.com/html-for-icon-font-usage/">HTML for Icon Font Usage | CSS-Tricks</a>でアイコン用フォントを使用して、対象の左側にアイコン画像を表示するという方法が紹介されているのですが、その中でスクリーンリーダー対策として「aria-hidden」という属性を入れている。</div>
-            <div><a href="/2012/05/aria-hidden.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-05-25T07:52:13.000Z"><span class="calendar-icon">📅</span><span>2012年5月25日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/05/sublime_text_2_zen_coding.html">Sublime Text 2 で Zen Coding (Emmet)</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>（追記 2013/1/30）Packageの名前がZen Codingから「<a target="_blank" rel="noopener" href="https://github.com/sergeche/emmet-sublime">Emmet</a>」に変わっていました。ので、Packageの名前をEmmetに差し替えました。あわせて最後に書いていたスニペットの変更方法もちゃんとした（？）方法に書き換えました。</p></div>
-            <div><a href="/2012/05/sublime_text_2_zen_coding.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-05-24T06:00:00.000Z"><span class="calendar-icon">📅</span><span>2012年5月24日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/05/last-child-required-the-last-child-in-the-parent-element.html">last-child は親要素からみて最後の子要素</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>（そのままではないか）</p>
-<p>たとえば以下のようなHTMLがあるとして、</div>
-            <div><a href="/2012/05/last-child-required-the-last-child-in-the-parent-element.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-        <article class="article-summary">
-          <header class="header">
-            <div><time datetime="2012-05-23T06:41:00.000Z"><span class="calendar-icon">📅</span><span>2012年5月23日</span></time>
-            </div>
-            <h2 class="header__title article__title"><a href="/2012/05/float_and_width_auto.html">floatとwidth&#x3a;auto</a></h2>
-            
-          </header>
-          
-            <div class="content"><p>いまさらながらのfloatとwidth:autoの話。</div>
-            <div><a href="/2012/05/float_and_width_auto.html">📖 続きを読む</a></div>
-          
-        </article>
-      
-      <footer class="pagination"><a class="extend prev" rel="prev" href="/page/17/">Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><a class="page-number" href="/page/27/">27</a><a class="page-number" href="/page/28/">28</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="page-number" href="/page/37/">37</a><a class="page-number" href="/page/38/">38</a><a class="page-number" href="/page/39/">39</a><a class="page-number" href="/page/40/">40</a><a class="extend next" rel="next" href="/page/19/">Next</a></footer>
-    </main>
-    <footer class="profile">
-  <div class="profile-inner">
-    <div class="profile__image"><img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"></div>
-    <h2 class="profile__heading">私について</h2>
-    <div class="profile__content">
-      <div>Yutaka Yamaguchi</div>
-      <div>東京在住。TypeScript, Node.js, Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。万年英語勉強中</div>
-      <ul class="profile__social-list">
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://twitter.com/memolog">Twitter</a></li>
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a></li>
-        <li class="profile__social-list-item"><a target="_blank" rel="noopener" href="https://www.facebook.com/yutaka.yamaguchi">Facebook</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
-  </div>
-  <script>
-  // http://css-tricks.com/favicons-next-to-external-links/
-  (function (){
-    'use strict';
-    if (/googlebot/i.test(navigator.userAgent)) {
-      return;
-    }
-    window.addEventListener("DOMContentLoaded", () => {
-      const links = document.querySelectorAll('.content p a');
-      const linkLength = links && links.length || 0;
-      for (var i=0; i<linkLength; i++){
-        const link = links[i];
-        const hostname = link.hostname;
-        if (hostname) {
-          const children = link.children || [];
-          const firstChild = children && children[0];
-          if (firstChild && firstChild.tagName === 'IMG') {
-            // For old amazon image link
-            if (link.hostname === 'www.amazon.co.jp') {
-              link.style.float = 'left';
-              link.style.marginRight = '1em';
-              link.style.paddingLeft = '0';
-            }
-            // link.classList.add('no-link-icon');
-            continue;
-          }
-
-          // link.classList.add('link-icon');
-          // link.style.backgroundImage = `url(https://www.google.com/s2/favicons?domain=${hostname})`;
-        }
-      }
-    });
-  })();
-</script>
-<script>
-  if ('serviceWorker' in navigator) {
-    // navigator.serviceWorker.register('/service-worker.js');
-  }
-</script>
-
-</body>
-</html>
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2012/06/collapsing_magin_with_overflow_or_clearance.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2012/06/focus_on_the_content.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2012/05/b_element.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2012/05/invited_elements.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2012/05/favicons_next_to_external_link.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2012/05/css_selector_performance.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2012/05/aria-hidden.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2012/05/sublime_text_2_zen_coding.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2012/05/last-child-required-the-last-child-in-the-parent-element.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2012/05/float_and_width_auto.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-04T20:15:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/collapsing_magin_with_overflow_or_clearance.html">マージンの相殺とoverflow, clear：both</a> </h2>  </header> <div class="content">垂直方向に隣接するマージンはマージンの相殺（collapsing）が働くけれど、overflow:hiddenがあると相殺されない、という仕様の話。あとclearanceについて。</div> <div class="read-more"> <a href="/2012/06/collapsing_magin_with_overflow_or_clearance.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-03T21:33:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/focus_on_the_content.html">広告についてのてきとうな雑感</a> </h2>  </header> <div class="content">Zeldmanが自身のサイトのリデザインについて自分のサイトと.net Magazingで解説しています。</div> <div class="read-more"> <a href="/2012/06/focus_on_the_content.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-30T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/05/b_element.html">b要素について</a> </h2>  </header> <div class="content">HTML5になってb要素の定義が変更されている。4.01のときの仕様はAlignment, font styles, and horizontal rules in HTML documentsに書かれていて、太字でスタイリングされることが書かれている（強調表示みたいな含意がある..ように思ってたけど、覚えてない）。HTML5での定義はHTML5 differences from HTML4や4.6.17 The b element — HTML5で、下記のように書かれている。</div> <div class="read-more"> <a href="/2012/05/b_element.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-29T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/05/invited_elements.html">独自要素を作成する</a> </h2>  </header> <div class="content">少し前にEric&#39;s Archived Thoughts:Invented Elements、Eric&#39;s Archived Thoughts:Customizing Your Markup、Eric&#39;s Archived Thoughts:Element Customizationで解説されていた話。</div> <div class="read-more"> <a href="/2012/05/invited_elements.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-28T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/05/favicons_next_to_external_link.html">リンクの隣りにfaviconを表示する</a> </h2>  </header> <div class="content">Favicons Next To External Links | CSS-Tricksという、リンクの左側にリンク先のfaviconを表示するというテクニックが紹介されていて、試してみました。簡単にできて、見た目にも華やかになるので面白い（個人的に）。</div> <div class="read-more"> <a href="/2012/05/favicons_next_to_external_link.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-27T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月28日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/05/css_selector_performance.html">CSS Selector Performance</a> </h2>  </header> <div class="content">Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています</div> <div class="read-more"> <a href="/2012/05/css_selector_performance.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-26T15:48:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月27日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/05/aria-hidden.html">aria-hiddenについて</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #759295;"> <div style="background-color: #759295"> <img src="/assets/images/anthony-delanoix-28851-unsplash/anthony-delanoix-28851-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/Hk7l6DmgO7Q?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Anthony DELANOIX</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">HTML for Icon Font Usage | CSS-Tricksでアイコン用フォントを使用して、対象の左側にアイコン画像を表示するという方法が紹介されているのですが、その中でスクリーンリーダー対策として「aria-hidden」という属性を入れている。</div> <div class="read-more"> <a href="/2012/05/aria-hidden.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-25T16:52:13.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月26日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/05/sublime_text_2_zen_coding.html">Sublime Text 2 で Zen Coding (Emmet)</a> </h2>  </header> <div class="content">（追記 2013/1/30）Packageの名前がZen Codingから「Emmet」に変わっていました。ので、Packageの名前をEmmetに差し替えました。あわせて最後に書いていたスニペットの変更方法もちゃんとした（？）方法に書き換えました。</div> <div class="read-more"> <a href="/2012/05/sublime_text_2_zen_coding.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-24T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/05/last-child-required-the-last-child-in-the-parent-element.html">last-child は親要素からみて最後の子要素</a> </h2>  </header> <div class="content">（そのままではないか）  たとえば以下のようなHTMLがあるとして、</div> <div class="read-more"> <a href="/2012/05/last-child-required-the-last-child-in-the-parent-element.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-23T15:41:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月24日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/05/float_and_width_auto.html">floatとwidth：auto</a> </h2>  </header> <div class="content">いまさらながらのfloatとwidth:autoの話。</div> <div class="read-more"> <a href="/2012/05/float_and_width_auto.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/17/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/16/"> 16 </a><a class="page-number " href="/page/17/"> 17 </a><span class="page-number current">18</span><a class="page-number " href="/page/19/"> 19 </a><a class="page-number " href="/page/20/"> 20 </a><span class="space">…</span><a class="page-number " href="/page/37/"> 37 </a><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a> <a class="extend next" rel="next" href="/page/19/">
+Next
+</a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+東京在住。TypeScript, Node.js,
+        Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
+        860くらい。
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </div> </body></html>

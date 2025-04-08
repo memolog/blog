@@ -1,326 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>メモログ</title>
-  
   <subtitle>塵が積もって山とならないメモのログ</subtitle>
   <link href="https://memolog.org/atom.xml" rel="self"/>
-  
   <link href="https://memolog.org/"/>
-  <updated>2025-03-23T21:14:55.104Z</updated>
+  <updated>2025-03-23T18:21:38.000Z</updated>
   <id>https://memolog.org/</id>
-  
-  <author>
-    <name>Yutaka Yamaguchi</name>
-    
-  </author>
-  
-  <generator uri="https://hexo.io/">Hexo</generator>
+  <author><name>Yutaka Yamaguchi</name></author>
   
   <entry>
     <title>本：マクロ金融危機入門</title>
-    <link href="https://memolog.org/2025/a-crash-course-on-crises.html"/>
-    <id>https://memolog.org/2025/a-crash-course-on-crises.html</id>
-    <published>2025-03-23T09:21:38.000Z</published>
-    <updated>2025-03-23T21:14:55.104Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.keio-up.co.jp/np/isbn/9784766429886/&quot;&gt;マクロ金融危機入門&lt;/a&gt;を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対処すべきかという政策の議論が展開されている。原題は「A Crash Course on Crises」で、まさに危機の入門書または短期集中講座といった内容になっている。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2025-03-23T18:21:38.000Z</published>
+    <summary type="html">マクロ金融危機入門を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対処すべきかという政策の議論が展開されている。原題は「A Crash Course on Crises」で、まさに危機の入門書または短期集中講座といった内容になっている。</summary>
   </entry>
-  
+    
   <entry>
     <title>本：エブリシング・バブル</title>
-    <link href="https://memolog.org/2024/after-everything-bubble.html"/>
-    <id>https://memolog.org/2024/after-everything-bubble.html</id>
-    <published>2024-11-05T21:33:16.000Z</published>
-    <updated>2024-11-05T23:40:55.801Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://presidentstore.jp/category/BOOKS/004053.html&quot;&gt;エブリシング・バブル 終わりと始まり&lt;/a&gt;と&lt;a href=&quot;https://bookclub.kodansha.co.jp/product?item=0000395731&quot;&gt;「エブリシング・バブル」リスクの深層&lt;/a&gt;を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2024-11-06T06:33:16.000Z</published>
+    <summary type="html">エブリシング・バブル 終わりと始まりと「エブリシング・バブル」リスクの深層を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。</summary>
   </entry>
-  
+    
   <entry>
     <title>本：量子力学は本当は量子の話ではない</title>
-    <link href="https://memolog.org/2024/beyond-weird.html"/>
-    <id>https://memolog.org/2024/beyond-weird.html</id>
-    <published>2024-11-03T00:00:00.000Z</published>
-    <updated>2024-11-06T21:41:50.316Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;「&lt;a href=&quot;https://www.kagakudojin.co.jp/book/b581820.html&quot;&gt;量子力学は本当は量子の話ではない&lt;/a&gt;」を読んだ。量子論が言う「粒子でもあり波でもある」という二重性や、「猫が死んでいるとも生きているとも言える（測定した瞬間に決定する）」といった重ね合わせ、量子がもつれた物体同士が瞬時に影響を与え合うといった奇妙な現象は、量子世界をイメージするための物語がもたらしたもので、量子力学の理論そのものが持つ本質ではないらしい。微粒子の性質・状態としてイメージしようとするから奇妙に見えるだけで、量子論は「情報の取得方法とその因果的影響」を扱う理論と捉えたほうが、筋が通る、というのが本書の内容。それが量子論の見方として正しいのかどうか、そもそも本書の内容をきちんと理解できてるかどうかわからないけど、そんな気がするかもしれないししないかもしれない（二重性）といった感想を持った。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2024-11-03T09:00:00.000Z</published>
+    <summary type="html">「量子力学は本当は量子の話ではない」を読んだ。量子論が言う「粒子でもあり波でもある」という二重性や、「猫が死んでいるとも生きているとも言える（測定した瞬間に決定する）」といった重ね合わせ、量子がもつれた物体同士が瞬時に影響を与え合うといった奇妙な現象は、量子世界をイメージするための物語がもたらしたもので、量子力学の理論そのものが持つ本質ではないらしい。微粒子の性質・状態としてイメージしようとするから奇妙に見えるだけで、量子論は「情報の取得方法とその因果的影響」を扱う理論と捉えたほうが、筋が通る、というのが本書の内容。それが量子論の見方として正しいのかどうか、そもそも本書の内容をきちんと理解できてるかどうかわからないけど、そんな気がするかもしれないししないかもしれない（二重性）といった感想を持った。</summary>
   </entry>
-  
+    
   <entry>
     <title>本：長篠合戦</title>
-    <link href="https://memolog.org/2024/battle-of-nagashino.html"/>
-    <id>https://memolog.org/2024/battle-of-nagashino.html</id>
-    <published>2024-10-27T23:20:00.000Z</published>
-    <updated>2024-11-03T22:49:45.733Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2024-10-28T08:20:00.000Z</published>
+    <summary type="html">長篠合戦を読んだ。長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や、各勢力が自らを美化するための「化粧」が多分に含まれているようだ。</summary>
   </entry>
-  
+    
   <entry>
     <title>本：動物心理学入門</title>
-    <link href="https://memolog.org/2024/introduction-to-animal-psychology.html"/>
-    <id>https://memolog.org/2024/introduction-to-animal-psychology.html</id>
-    <published>2024-10-06T08:00:34.000Z</published>
-    <updated>2024-10-27T23:18:59.619Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.yuhikaku.co.jp/books/detail/9784641174887&quot;&gt;動物心理学入門&lt;/a&gt;という本を読んだ。本書によると、「動物心理学」とは「動物を対象とした研究を通して、ヒトの『ココロ』を理解しようとする学問領域」である（p.1 はじめに）。人と動物の異なる点を比較し、共通点を類推することで、ヒトの心理をより深く理解できるのだろうと感じた。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2024-10-06T17:00:34.000Z</published>
+    <summary type="html">動物心理学入門という本を読んだ。本書によると、「動物心理学」とは「動物を対象とした研究を通して、ヒトの『ココロ』を理解しようとする学問領域」である（p.1 はじめに）。人と動物の異なる点を比較し、共通点を類推することで、ヒトの心理をより深く理解できるのだろうと感じた。</summary>
   </entry>
-  
+    
   <entry>
     <title>本：武家政権成立史 - 気候変動と歴史学</title>
-    <link href="https://memolog.org/2024/origin-of-samurai-goverment.html"/>
-    <id>https://memolog.org/2024/origin-of-samurai-goverment.html</id>
-    <published>2024-09-29T10:00:47.000Z</published>
-    <updated>2024-10-27T23:18:52.671Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.yoshikawa-k.co.jp/book/b120824.html&quot;&gt;武家政権成立史&lt;/a&gt;では、12世紀に始まった気候の冷涼化が、武家政権の成立にどのような影響を与えたかを探究している。本書では、気候冷涼化による作物の不作が、飢饉を頻発、封戸収入の減少を引き起こし、収入を確保するために荘園が発展し、それにより国司による徴税と荘園権益の衝突が強まり、武力を必要とする時代を生み出していったしている。歴史とは、人間の意図・行動が歴史を作り、動かすというイメージが強いけれど、気候変動という人間には抗いがたい要因が社会的混乱を引き起こし、歴史を形作るという視点は新鮮で説得力があった。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2024-09-29T19:00:47.000Z</published>
+    <summary type="html">武家政権成立史では、12世紀に始まった気候の冷涼化が、武家政権の成立にどのような影響を与えたかを探究している。本書では、気候冷涼化による作物の不作が、飢饉を頻発、封戸収入の減少を引き起こし、収入を確保するために荘園が発展し、それにより国司による徴税と荘園権益の衝突が強まり、武力を必要とする時代を生み出していったしている。歴史とは、人間の意図・行動が歴史を作り、動かすというイメージが強いけれど、気候変動という人間には抗いがたい要因が社会的混乱を引き起こし、歴史を形作るという視点は新鮮で説得力があった。</summary>
   </entry>
-  
+    
   <entry>
     <title>本：因果推論の科学</title>
-    <link href="https://memolog.org/2024/the-book-of-why.html"/>
-    <id>https://memolog.org/2024/the-book-of-why.html</id>
-    <published>2024-09-22T02:32:11.000Z</published>
-    <updated>2024-09-22T06:12:42.681Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://amzn.to/3XQ5Zvv&quot;&gt;因果推論の科学&lt;/a&gt;を読んだので簡単に紹介。因果推論とは、原因と結果の関係を理解し、それを推論するための方法論。従来の統計学では「XとYの相関関係」を説明できても、実際に知りたいのは「XがYにどう影響を与えているか？」という因果関係だったりする。因果推論は、その点で画期的なアプローチを示している。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2024-09-22T11:32:11.000Z</published>
+    <summary type="html">因果推論の科学を読んだので簡単に紹介。因果推論とは、原因と結果の関係を理解し、それを推論するための方法論。従来の統計学では「XとYの相関関係」を説明できても、実際に知りたいのは「XがYにどう影響を与えているか？」という因果関係だったりする。因果推論は、その点で画期的なアプローチを示している。</summary>
   </entry>
-  
+    
   <entry>
     <title>hiddenのフィールドにautocomplete属性を入れる意味</title>
-    <link href="https://memolog.org/2022/the-two-ways-to-use-autocomplete-attribute.html"/>
-    <id>https://memolog.org/2022/the-two-ways-to-use-autocomplete-attribute.html</id>
-    <published>2022-12-05T00:00:00.000Z</published>
-    <updated>2024-02-20T21:19:33.340Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute&quot;&gt;4.10.18.7.1 Autofilling form controls: the autocomplete attribute&lt;/a&gt;には、autocomplete属性には2つの利用方法があると書かれている。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2022-12-05T09:00:00.000Z</published>
+    <summary type="html">4.10.18.7.1 Autofilling form controls: the autocomplete attributeには、autocomplete属性には2つの利用方法があると書かれている。</summary>
   </entry>
-  
+    
   <entry>
     <title>npm script warns permission errors in the cache directory</title>
-    <link href="https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html"/>
-    <id>https://memolog.org/2022/npm-script-warns-permission-errors-in-the-cache-directory.html</id>
-    <published>2022-11-07T08:30:00.000Z</published>
-    <updated>2024-09-22T06:20:50.708Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;（そんなことするかどうかは置いておいて）たとえば&lt;a href=&quot;https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo&quot;&gt;docker-node-npm-scripti-permission-issue-demo&lt;/a&gt;を&lt;a href=&quot;https://github.co.jp/features/codespaces&quot;&gt;Github codespaces&lt;/a&gt;上で起動して、&lt;code&gt;npm ci&lt;/code&gt;して、&lt;code&gt;npm run build&lt;/code&gt;を実行すると、&lt;code&gt;permission denied, scandir &#39;/root/.npm/_logs&#39;&lt;/code&gt; というエラーのWARNが発生する。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2022-11-07T17:30:00.000Z</published>
+    <summary type="html">（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。</summary>
   </entry>
-  
+    
   <entry>
-    <title>Unexpected reserved word &#39;interface&#39; on jest</title>
-    <link href="https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html"/>
-    <id>https://memolog.org/2022/Unexpected-reserved-word-interface-on-jest.html</id>
-    <published>2022-09-29T21:23:42.000Z</published>
-    <updated>2024-02-20T21:19:33.340Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;jestを28以降に更新したら、jestの実行時に&lt;code&gt;Unexpected reserved word &#39;interface&#39;&lt;/code&gt;みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。</summary>
-    
-    
-    
-    
+    <title>Unexpected reserved word 'interface' on jest</title>
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2022-09-30T06:23:42.000Z</published>
+    <summary type="html">jestを28以降に更新したら、jestの実行時に`Unexpected reserved word 'interface'`みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。</summary>
   </entry>
-  
+    
   <entry>
     <title>Webpack 5 compiles code with ES2015</title>
-    <link href="https://memolog.org/2022/webpack-5-compiles-code-with-es2015.html"/>
-    <id>https://memolog.org/2022/webpack-5-compiles-code-with-es2015.html</id>
-    <published>2022-09-18T01:20:39.000Z</published>
-    <updated>2024-02-20T21:19:33.340Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Webpackのバージョン5ではコンパイルしたコードにES2015（アロー関数など）が含まれるようになる。これはWebpackが生成する部分に関する仕様なので、babelの設定でES5だけに制限していてもES2015が使われる。IE11ではアロー関数が処理できずに丸ごとエラーとなるので、IE11にまだ対応する必要があれば設定を確認する必要がある（今さらだけど）。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2022-09-18T10:20:39.000Z</published>
+    <summary type="html">Webpackのバージョン5ではコンパイルしたコードにES2015（アロー関数など）が含まれるようになる。これはWebpackが生成する部分に関する仕様なので、babelの設定でES5だけに制限していてもES2015が使われる。IE11ではアロー関数が処理できずに丸ごとエラーとなるので、IE11にまだ対応する必要があれば設定を確認する必要がある（今さらだけど）。</summary>
   </entry>
-  
+    
   <entry>
-    <title>Book: Programming TypeScript</title>
-    <link href="https://memolog.org/2020/book-programming-typescript.html"/>
-    <id>https://memolog.org/2020/book-programming-typescript.html</id>
-    <published>2020-11-14T01:44:35.000Z</published>
-    <updated>2024-09-22T03:12:18.795Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.amazon.co.jp/gp/product/4873119049/ref=as_li_ss_il?ie=UTF8&amp;amp;linkCode=li2&amp;amp;tag=yutakayamaguc-22&amp;amp;linkId=3d63565fd35c0d79ec9996440384313f&amp;amp;language=ja_JP&quot;&gt;プログラミングTypeScript&lt;/a&gt;を一通り読んだのでざっくり紹介。TypeScriptはたぶん3年くらい使っていて、特に不自由なく使えるのだけど、けっこう知らないこともあった。</summary>
-    
-    
-    
-    
+    <title>Book：Programming TypeScript</title>
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2020-11-14T10:44:35.000Z</published>
+    <summary type="html">今回はプログラミングTypeScriptを一通り読んだのでざっくり紹介。TypeScriptはたぶん3年くらい使っていて、特に不自由なく使えるのだけど、けっこう知らないこともあった。</summary>
   </entry>
-  
+    
   <entry>
     <title>Got 100 lighthouse score in all categories on mobile</title>
-    <link href="https://memolog.org/2020/got-100-lighthouse-score-in-all-categories-on-mobile.html"/>
-    <id>https://memolog.org/2020/got-100-lighthouse-score-in-all-categories-on-mobile.html</id>
-    <published>2020-09-16T03:45:52.000Z</published>
-    <updated>2024-02-20T21:19:33.339Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2020-09-16T12:45:52.000Z</published>
+    <summary type="html">ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。</summary>
   </entry>
-  
+    
   <entry>
     <title>Logical AND/OR/Nullish assignment operators</title>
-    <link href="https://memolog.org/2020/logical-assignment-operators.html"/>
-    <id>https://memolog.org/2020/logical-assignment-operators.html</id>
-    <published>2020-09-09T04:03:29.000Z</published>
-    <updated>2024-02-20T21:19:33.339Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;http://esnextnews.com/&quot;&gt;ES.next News&lt;/a&gt;の9/1の回のメールにあった&lt;a href=&quot;https://dev.to/hemanth/logical-assignment-operators-in-javascript-inh&quot;&gt;Logical assignment operators in JavaScript&lt;/a&gt;について。&lt;a href=&quot;https://devblogs.microsoft.com/typescript/announcing-typescript-4-0-rc/#short-circuiting-assignment-operators&quot;&gt;TypeScript 4.0 から利用可能&lt;/a&gt;。&lt;/p&gt;</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2020-09-09T13:03:29.000Z</published>
+    <summary type="html">ES.next Newsの9/1の回のメールにあったLogical assignment operators in JavaScriptについて。TypeScript 4.0 から利用可能。</summary>
   </entry>
-  
+    
   <entry>
     <title>Fragmenting Flex Layout</title>
-    <link href="https://memolog.org/2020/fragmenting-flex-layout.html"/>
-    <id>https://memolog.org/2020/fragmenting-flex-layout.html</id>
-    <published>2020-09-09T01:06:00.000Z</published>
-    <updated>2024-02-20T21:19:33.339Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#pagination&quot;&gt;10. Fragmenting Flex Layout&lt;br&gt;
-&lt;/a&gt;について。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2020-09-09T10:06:00.000Z</published>
+    <summary type="html">今回は10. Fragmenting Flex Layout について。</summary>
   </entry>
-  
+    
   <entry>
     <title>Flex Layout Algorithm</title>
-    <link href="https://memolog.org/2020/flex-layout-algorithm.html"/>
-    <id>https://memolog.org/2020/flex-layout-algorithm.html</id>
-    <published>2020-07-26T02:56:00.000Z</published>
-    <updated>2024-02-20T21:19:33.338Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#layout-algorithm&quot;&gt;9. Flex Layout Algorithm&lt;/a&gt;について。この章は見なくて良いんじゃないかと思いつつ、写経のような感じでやっていこうと思う。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2020-07-26T11:56:00.000Z</published>
+    <summary type="html">今回は9. Flex Layout Algorithmについて。この章は見なくて良いんじゃないかと思いつつ、写経のような感じでやっていこうと思う。</summary>
   </entry>
-  
+    
   <entry>
     <title>Flex Alignment</title>
-    <link href="https://memolog.org/2020/flex-alignment.html"/>
-    <id>https://memolog.org/2020/flex-alignment.html</id>
-    <published>2020-07-18T02:52:00.000Z</published>
-    <updated>2024-02-20T21:19:33.337Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#alignment&quot;&gt;8. Alignment&lt;/a&gt;について。長いけど一気に。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2020-07-18T11:52:00.000Z</published>
+    <summary type="html">今回は8. Alignmentについて。長いけど一気に。</summary>
   </entry>
-  
+    
   <entry>
     <title>Components of Flexibility</title>
-    <link href="https://memolog.org/2020/components-of-flexibility.html"/>
-    <id>https://memolog.org/2020/components-of-flexibility.html</id>
-    <published>2020-07-01T08:46:00.000Z</published>
-    <updated>2024-02-20T21:19:33.336Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-components&quot;&gt;7.2. Components of Flexibility&lt;/a&gt;について。各ロングハンドの説明は&lt;a href=&quot;https://memolog.org/2020/flex-shorthand.html&quot;&gt;flex ショートハンド&lt;/a&gt;の方に書かれていて、ここには載ってない。今回は読み飛ばして良い感じの内容になってる。&lt;/p&gt;</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2020-07-01T17:46:00.000Z</published>
+    <summary type="html">7.2. Components of Flexibilityについて。各ロングハンドの説明はflex ショートハンドの方に書かれていて、ここには載ってない。今回は読み飛ばして良い感じの内容になってる。</summary>
   </entry>
-  
+    
   <entry>
     <title>The flex Shorthand</title>
-    <link href="https://memolog.org/2020/flex-shorthand.html"/>
-    <id>https://memolog.org/2020/flex-shorthand.html</id>
-    <published>2020-06-30T05:09:49.000Z</published>
-    <updated>2024-02-20T21:19:33.339Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flexibility&quot;&gt;7. Flexibility&lt;/a&gt;について。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2020-06-30T14:09:49.000Z</published>
+    <summary type="html">今回は7. Flexibilityについて。</summary>
   </entry>
-  
+    
   <entry>
     <title>Flex Lines</title>
-    <link href="https://memolog.org/2020/flex-lines.html"/>
-    <id>https://memolog.org/2020/flex-lines.html</id>
-    <published>2020-05-30T14:45:00.000Z</published>
-    <updated>2024-02-20T21:19:33.338Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今回は&lt;a href=&quot;https://www.w3.org/TR/css-flexbox-1/#flex-lines&quot;&gt;6. Flex Lines&lt;/a&gt;について。</summary>
-    
-    
-    
-    
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2020-05-30T23:45:00.000Z</published>
+    <summary type="html">今回は6. Flex Linesについて。</summary>
   </entry>
-  
+    
 </feed>

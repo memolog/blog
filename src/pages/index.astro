@@ -66,7 +66,7 @@ const posts = allPosts.slice(0, 10);
               .map((_, i) => i + 2)
               .map((i) => {
                 return (
-                  <a class="page-number" href={`/page/${i}.html`}>
+                  <a class="page-number" href={`/page/${i}/`}>
                     {i}
                   </a>
                 );
@@ -79,13 +79,13 @@ const posts = allPosts.slice(0, 10);
               .reverse()
               .map((i) => {
                 return (
-                  <a class="page-number" href={`/page/${i}.html`}>
+                  <a class="page-number" href={`/page/${i}/`}>
                     {i}
                   </a>
                 );
               })
           }
-          <a class="extend next" rel="next" href="/page/2.html">Next</a>
+          <a class="extend next" rel="next" href="/page/2/">Next</a>
         </footer>
       </main>
       <Footer />

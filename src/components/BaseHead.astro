@@ -1,0 +1,62 @@
+---
+import GlobalCss from "./GlobalCss.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<meta name="description" content={SITE_DESCRIPTION} id="meta-description" />
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://www.google-analytics.com" />
+<link rel="shortcut icon" href="/assets/icons/icon-32.ico" />
+<GlobalCss />
+<link
+  rel="alternate"
+  href="/atom.xml"
+  title={SITE_TITLE}
+  type="application/atom+xml"
+/>
+<link
+  rel="alternate"
+  href="https://memolog.org/atom.xml"
+  title="Latest Articles"
+/>
+<link rel="apple-touch-icon" href="/assets/icons/icon-192.png" />
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="white" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"
+></script>
+<script>
+  // @ts-nocheck
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "UA-955153-2");
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@graph": [
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "http://memolog.org",
+        "logo": "https://memolog.org/assets/icons/icon-1024.png"
+      },
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yutaka Yamaguchi",
+        "url": "http://memolog.org",
+        "sameAs": [
+          "https://www.facebook.com/yutaka.yamaguchi",
+          "https://www.linkedin.com/in/yutakayamaguchi/",
+          "https://twitter.com/memolog"
+        ]
+      }
+    ]
+  }
+</script>

@@ -1,0 +1,27 @@
+{
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
+  "hexo": {
+    "version": "7.3.0"
+  },
+  "scripts": {
+    "pb": "primitive_bulk -i ~/Downloads/$D.jpg -d ./source/assets/images/$D --output $D --format jpg,svg -m $M -n $N && find ./source/assets/images/$D -name '*.svg' -o -name '*.jpg' | xargs open -a 'ImageOptim'",
+    "pre-pb": "primitive_bulk -i ~/Downloads/$D.jpg -n $N"
+  },
+  "devDependencies": {
+    "hexo": "^7.3.0",
+    "hexo-deployer-git": "^4.0.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-sitemap": "^3.0.1",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-markdown-it": "^7.1.1",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "image-size": "^1.1.1",
+    "jsdom": "^25.0.0",
+    "lazysizes": "^5.3.2",
+    "primitive_bulk": "^1.2.1"
+  }
+}

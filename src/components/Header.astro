@@ -1,0 +1,31 @@
+---
+import { SITE_TITLE } from "../consts";
+const { slug } = Astro.params;
+---
+
+<header class="header header_component_global">
+  <div class="header-inner">
+    <div class="header__icon" aria-hidden="true">
+      <img
+        src="/assets/icons/icon.svg"
+        role="presentation"
+        width="32"
+        height="32"
+        alt="icon"
+        loading="lazy"
+      />
+    </div>
+    <h1 class="header__title">
+      <a href="/">{SITE_TITLE}</a>
+    </h1>
+    {
+      slug && (
+        <nav class="navigation navigation-global">
+          <a href="/" class="navigation__link">
+            📘 最新のメモ
+          </a>
+        </nav>
+      )
+    }
+  </div>
+</header>

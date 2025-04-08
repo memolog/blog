@@ -1,0 +1,20 @@
+---
+interface Props {
+  date: Date;
+}
+
+const { date } = Astro.props;
+---
+
+<time datetime={date.toISOString()}>
+  <span class="calendar-icon">📅</span>
+  <span
+    >{
+      date.toLocaleDateString("ja", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    }</span
+  >
+</time>

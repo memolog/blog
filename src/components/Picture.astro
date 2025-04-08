@@ -1,0 +1,37 @@
+---
+import path from "path";
+
+type Props = {
+  src: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+};
+
+const { src, alt, width, height } = Astro.props;
+const { dir, name, ext } = path.parse(src);
+---
+
+<picture>
+  <source
+    srcset={`${dir}/${name}_small${ext}, ${dir}/${name}_small@2x${ext} 2x, ${dir}/${name}_small@3x${ext} 3x`}
+    type="image/jpg"
+    media="(max-width: 450px)"
+  />
+  <source
+    srcset={`${dir}/${name}_medium.webp, ${dir}/${name}_medium@2x.webp 2x`}
+    type="image/webp"
+  />
+  <source
+    srcset={`${dir}/${name}_medium${ext}, ${dir}/${name}_medium@2x${ext} 2x`}
+    type="image/jpg"
+  />
+  <img
+    src={`${dir}/${name}_medium${ext}`}
+    alt={alt}
+    width={width}
+    height={height}
+    role="presentation"
+    loading="lazy"
+  />
+</picture>

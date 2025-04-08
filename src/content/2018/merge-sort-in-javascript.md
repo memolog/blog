@@ -12,7 +12,7 @@ excerpt: "Insertion Sort in JavaScriptからの引き続き。内容はMerge sor
 
 マージソートには n 個の配列を、n 個のサブ配列（配列の中には 1 個の要素が入ってる）に分割していって、それぞれソートした 2 つの配列を結合して、結合した配列でソートを行う。そして結合した 2 つ配列を結合して、ソートする...ということを繰り返していく。
 
-{%  youtube id=XaqR3G_NVoo title="Merge-sort with Transylvanian-saxon (German) folk dance" %}
+<div class="youtube-wrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XaqR3G_NVoo?si=Rx3X_qy5mKt1R0sR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 マージソートはトップダウンで行う実装とボトムアップで行う実装とがある。下の実装例は[Merge sort](https://en.wikipedia.org/wiki/Merge_sort#Top-down_implementation)の Top-down implementation をそのまま JavaScript に置き換えただけである。二つの配列を交互に使いまわしていく。ので、ちょっとわかりにくい。[The Merge sort algorithm - Ben's Blog](http://blog.benoitvallon.com/sorting-algorithms-in-javascript/the-merge-sort-algorithm/)にあるコードの方が見やすい。けど、マージを実行するたびに新しく配列を作成した上にそれを concat で渡すので、上記 URL の実装だと空間計算量的には良くない。
 

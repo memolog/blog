@@ -1,5 +1,5 @@
 ---
-title: MTPaginate&#x3a; Movable Typeでページネーションをする
+title: MTPaginate：Movable Typeでページネーションをする
 date: 2007-10-27T14:46:00.000Z
 categories:
   - web

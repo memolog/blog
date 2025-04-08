@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 11&#x3a; Avoid Redirects
+title: YSLOW 勉強：11：Avoid Redirects
 date: 2007-08-14T16:13:41.000Z
 categories:
   - web

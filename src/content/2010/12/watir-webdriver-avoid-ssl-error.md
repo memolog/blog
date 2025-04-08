@@ -1,5 +1,5 @@
 ---
-title: watir-webdriver&#x3a; 証明書エラーを回避する
+title: watir-webdriver：証明書エラーを回避する
 date: 2010-12-27T14:00:00.000Z
 categories:
   - software testing

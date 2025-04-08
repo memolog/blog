@@ -1,5 +1,5 @@
 ---
-title: watir-webdriver&#x3a; バックグラウンドで実行する
+title: watir-webdriver：バックグラウンドで実行する
 date: 2011-01-17T03:00:00.000Z
 categories:
   - software testing

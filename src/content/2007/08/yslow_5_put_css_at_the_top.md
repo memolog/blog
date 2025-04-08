@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 5&#x3a; Put CSS at the Top
+title: YSLOW 勉強：5：Put CSS at the Top
 date: 2007-08-08T15:22:00.000Z
 categories:
   - web

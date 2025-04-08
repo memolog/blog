@@ -1,9 +1,8 @@
 ---
 title: npm script warns permission errors in the cache directory
 featured:
-  image: pavan-prasad-nw1slFnKRYE-unsplash
-  author: Pavan Prasad
-  authorLink: https://unsplash.com/@light_rays?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  image: npm-script-warns-permission-errors-in-the-cache-directory.png
+  author: chatGPT
 date: 2022-11-07 17:30:00
 excerpt: "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。"
 ---

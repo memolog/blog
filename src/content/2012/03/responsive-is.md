@@ -1,5 +1,5 @@
 ---
-title: Responsive.is&#x3a; レスポンシブデザイン対応を確認できるサイト
+title: Responsive.is：レスポンシブデザイン対応を確認できるサイト
 date: 2012-03-18T05:32:00.000Z
 categories:
   - web

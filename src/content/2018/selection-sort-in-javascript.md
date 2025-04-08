@@ -1,9 +1,8 @@
 ---
 title: Selection Sort in JavaScript
 featured:
-  image: pietro-mattia-764559-unsplash
-  author: Pietro Mattia
-  authorLink: https://unsplash.com/photos/zXqizKxnbBU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  image: selection-sort-in-javascript.png
+  author: chatGPT
 date: 2018-08-05 05:57:21
 excerpt: "Bubble Sort in JavaScriptの記事から引き続き。内容はほぼ選択ソートから抜粋してるだけなので、詳しくはそちらを参照。JavaScript上で自前のソートを実装する意味はあまりないのだが、試しに選択ソートを実装してみた。"
 ---
@@ -16,7 +15,7 @@ swap をする回数が 1 回の繰り返しで 1 度しか発生しないので
 
 下の動画は選択ソートを Gypsy folk dance で表現したもの。長い... 途中で倍速になるけど長い。最小値が変更されるときにそれぞれの人の場所が swap してしまってるけど、実際はそのタイミングで swap しない。
 
-{% youtube id=Ns4TPTC8whw title="Select-sort with Gypsy folk dance" %}
+<div class="youtube-wrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ns4TPTC8whw?si=99WOl3Z4_dFJGi73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 実装例は[選択ソート](https://en.wikipedia.org/wiki/Selection_sort#Implementation)や[The Selection sort algorithm - Ben's Blog](http://blog.benoitvallon.com/sorting-algorithms-in-javascript/the-selection-sort-algorithm/)のと変わらないけど下記。
 

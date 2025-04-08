@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 12&#x3a; Remove Duplicate Scripts
+title: YSLOW 勉強：12：Remove Duplicate Scripts
 date: 2007-08-15T15:11:00.000Z
 categories:
   - web

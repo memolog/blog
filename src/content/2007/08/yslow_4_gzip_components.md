@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 4&#x3a; Gzip Components
+title: YSLOW 勉強：4：Gzip Components
 date: 2007-08-07T16:30:00.000Z
 categories:
   - web

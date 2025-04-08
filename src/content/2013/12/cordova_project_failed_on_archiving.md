@@ -6,7 +6,7 @@ categories:
 tags:
   - phonegap
   - xcode
-excerpt: "Cordova/PhoneGapで作成したXcodeのプロジェクトをアーカイブしようとしたときに下記のようなエラーが発生するようになりまして。  ```none Stripping /Users/me/Library/Developer/Xcode/DerivedData/AppName-fiikgzftwgndirfiyeacmuhhgnft/Build/Intermediates/ArchiveIntermediates/AppName/IntermediateBuildFilesPath/UninstalledProducts/libCordova.a"
+excerpt: "Cordova/PhoneGapで作成したXcodeのプロジェクトをアーカイブしようとしたときに下記のようなエラーが発生するようになりまして。"
 ---
 
 Cordova/PhoneGap で作成した Xcode のプロジェクトをアーカイブしようとしたときに下記のようなエラーが発生するようになりまして。
@@ -14,14 +14,12 @@ Cordova/PhoneGap で作成した Xcode のプロジェクトをアーカイブ�
 ```
 Stripping /Users/me/Library/Developer/Xcode/DerivedData/AppName-fiikgzftwgndirfiyeacmuhhgnft/Build/Intermediates/ArchiveIntermediates/AppName/IntermediateBuildFilesPath/UninstalledProducts/libCordova.a
 
-
-    cd /Users/me/path/to/AppName/platforms/ios/CordovaLib
-    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -S /Users/me/Library/Developer/Xcode/DerivedData/AppName-fiikgzftwgndirfiyeacmuhhgnft/Build/Intermediates/ArchiveIntermediates/AppName/IntermediateBuildFilesPath/UninstalledProducts/libCordova.a
+cd /Users/me/path/to/AppName/platforms/ios/CordovaLib
+setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -S /Users/me/Library/Developer/Xcode/DerivedData/AppName-fiikgzftwgndirfiyeacmuhhgnft/Build/Intermediates/ArchiveIntermediates/AppName/IntermediateBuildFilesPath/UninstalledProducts/libCordova.a
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip: can't open temporary file: (null) (Bad address)
 Command /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip failed with exit code 1
-
 ```
 
 どうも CordovaLib の Strip Linked Product のプロセスで、Stripping するときに temporary file を開くところで失敗しているみたい。なので、CordovaLib の「Strip Linked Product」を「No」に設定すると回避できる。

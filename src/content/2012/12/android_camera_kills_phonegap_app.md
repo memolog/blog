@@ -1,5 +1,5 @@
 ---
-title: PhoneGap&#x3a; Androidでカメラを使用するとアプリが止まる
+title: PhoneGap：Androidでカメラを使用するとアプリが止まる
 date: 2012-12-21T12:11:00.000Z
 categories:
   - web

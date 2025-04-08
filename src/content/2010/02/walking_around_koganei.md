@@ -5,7 +5,7 @@ categories:
   - 写真
 tags:
   - photo
-excerpt: "![ツグミ](http://farm5.static.flickr.com/4040/4321663583_595fa06a4a_b.jpg)"
+excerpt: "先週くらいに小金井周辺を散歩したときに名前の知らない野鳥に出会いまして。"
 ---
 
 [![ツグミ](http://farm5.static.flickr.com/4040/4321663583_595fa06a4a.jpg)](http://farm5.static.flickr.com/4040/4321663583_595fa06a4a_b.jpg)

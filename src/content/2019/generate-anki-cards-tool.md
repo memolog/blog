@@ -33,7 +33,8 @@ generate-anki-cards -i ./data.csv -o ./out
 Cambridge Dictionary に画像または音声データがない場合は、[Google Translate](https://translate.google.com/) のサイトから音声データを取得したり、Unsplash からダウンロードしたりします。Google Translate に Puppeteer で音声データを取得するより、[CLOUD TEXT-TO-SPEECH](https://cloud.google.com/text-to-speech/)を使う方が良いのかなという思いはありつつ、大量にアクセスするようなものでもないし、とりあえずそのまま。Unsplash についても API を使うべきと思いつつ、Puppeteer でアクセスしてダウンロードしている。個人利用だし、単語リストの元になる CSV ファイルは公開してないので、、このくらいは良いかなと...
 
 なんやかんやで作成した読み込みファイルを使って Anki カードを作成した結果がこんな感じ。
-{% youtube id=zRsiGZloIaY title="he screen cast to describe how to work Anki cards with my 'generate-anki-cards' cli tool" %}
+
+<div class="youtube-wrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zRsiGZloIaY?si=vMeGcvHKQLRwhOyP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 なんやかんやで作りながら紆余曲折してしまったので、この年末年始の時間をだいぶ費やしてしまったけど、wikipedia や weblio からもデータの取得が可能で、こんな風に英語以外の暗記でも使える。使うかどうかはわからないけど。
 

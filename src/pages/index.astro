@@ -5,15 +5,19 @@ import Footer from "../components/Footer.astro";
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import FeaturedImage from "../components/FeaturedImage.astro";
+import { SITE_TITLE } from "../consts";
 
-const posts = (await getCollection("blog")).sort(
+const allPosts = (await getCollection("blog")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
+const totalPages = Math.ceil(allPosts.length / 10);
+const posts = allPosts.slice(0, 10);
 ---
 
 <!doctype html>
 <html lang="ja">
   <head>
+    <title>{SITE_TITLE}</title>
     <BaseHead />
     <script
       type="application/ld+json"
@@ -24,7 +28,7 @@ const posts = (await getCollection("blog")).sort(
           return {
             "@type": "ListItem",
             position: index + 1,
-            url: post.filePath,
+            url: `https://memolog.org/${post.id}.html`,
           };
         }),
       })}
@@ -42,19 +46,47 @@ const posts = (await getCollection("blog")).sort(
                   <FormattedDate date={post.data.date} />
                 </div>
                 <h2 class="header__title article__title">
-                  <a href={`/${post.id}/`}>{post.data.title}</a>
+                  <a href={`/${post.id}.html`}>{post.data.title}</a>
                 </h2>
                 {post.data.featured && (
                   <FeaturedImage featured={post.data.featured} />
                 )}
               </header>
               <div class="content">{post.data.excerpt}</div>
-              <div>
-                <a href={`/${post.id}/`}>📖 続きを読む</a>
+              <div class="read-more">
+                <a href={`/${post.id}.html`}>📖 続きを読む</a>
               </div>
             </article>
           ))
         }
+        <footer class="pagination">
+          <span class="page-number current">1</span>
+          {
+            [...Array(7)]
+              .map((_, i) => i + 2)
+              .map((i) => {
+                return (
+                  <a class="page-number" href={`/page/${i}/`}>
+                    {i}
+                  </a>
+                );
+              })
+          }
+          <span class="space">…</span>
+          {
+            [...Array(4)]
+              .map((_, i) => totalPages - i)
+              .reverse()
+              .map((i) => {
+                return (
+                  <a class="page-number" href={`/page/${i}/`}>
+                    {i}
+                  </a>
+                );
+              })
+          }
+          <a class="extend next" rel="next" href="/page/2/">Next</a>
+        </footer>
       </main>
       <Footer />
     </div>

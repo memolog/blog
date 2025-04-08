@@ -12,7 +12,7 @@ excerpt: "Selection Sort in JavaScriptの記事から引き続き。内容は挿
 
 [挿入ソート](https://en.wikipedia.org/wiki/Insertion_sort)は配列から左から順に値を取り出して、ソート済みの配列の適切な場所に値を挿入していく、ということを繰り返し行う。配列は左から順にソート済み状態となり、最後までソート済みになったところで終了。[選択ソート](https://en.wikipedia.org/wiki/Selection_sort)と同じ O(n^2)であるけど、選択ソートが取り出す値を見つけるのにソートされていない値をすべて確認しなければならないのに対して、挿入ソートはソート済みの値を比較して挿入位置が見つかったらそこで確認を終えることができる。ので、挿入ソートの方が実際の効率は良いとされている。
 
-{% youtube id=ROalU379l3U title="Insert-sort with Romanian folk dance" %}
+<div class="youtube-wrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ROalU379l3U?si=LZ4Vjxb5U44sv1eX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 実装例は[The Insertion sort algorithm - Ben's Blog](http://blog.benoitvallon.com/sorting-algorithms-in-javascript/the-insertion-sort-algorithm/)と[V8 の array.js](https://github.com/v8/v8/blob/master/src/js/array.js#L645)を参考にしている。
 

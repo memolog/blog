@@ -1,5 +1,5 @@
 ---
-title: "Flex Direction and Wrap: the flex-flow shorthand"
+title: "Flex Direction and Wrap：the flex-flow shorthand"
 featured:
   image: ben-mcleod-2UfVYE2S7B4-unsplash
   author: Ben McLeod

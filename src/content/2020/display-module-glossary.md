@@ -1,9 +1,8 @@
 ---
 title: Display module glossary
 featured:
-  image: francesco-ungaro-JHypHcOObf4-unsplash
-  author: Francesco Ungaro
-  authorLink: https://unsplash.com/@francesco_ungaro?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  image: display-module-glossary.png
+  author: chatGPT
 date: 2020-03-14 19:02:28
 excerpt: "今回はDisplay ModuleのAppendix A: Glossaryのところで、今までちゃんと確認しなかったもので、気になるところを簡単に確認しようかなと思う。そのうち見直すかも。"
 ---

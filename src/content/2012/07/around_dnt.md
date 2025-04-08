@@ -5,7 +5,7 @@ categories:
   - web
 tags:
   - tracking
-excerpt: "!  > It's important that the signal represents a choice made by the person behind the keyboard and not the software maker, because ultimately it's not the browser being tracked, it's the user."
+excerpt: "少し前にあった、IE10 で DNT の設定を初期設定でオンの状態にするという話。"
 ---
 
 ![](http://farm8.staticflickr.com/7276/7476633588_616b9eeb33_z.jpg)

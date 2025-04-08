@@ -1,5 +1,5 @@
 ---
-title: CSS Transforms&#x3a; くるくる回るサイコロのサンプル
+title: CSS Transforms：くるくる回るサイコロのサンプル
 date: 2012-09-26T22:00:00.000Z
 categories:
   - web

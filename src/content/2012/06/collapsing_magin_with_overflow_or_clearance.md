@@ -1,5 +1,5 @@
 ---
-title: マージンの相殺とoverflow, clear&#x3a;both
+title: マージンの相殺とoverflow, clear：both
 date: 2012-06-04T20:15:00.000Z
 categories:
   - web

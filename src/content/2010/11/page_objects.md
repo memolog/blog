@@ -1,5 +1,5 @@
 ---
-title: Page Objects &#x3a; テストスイート構築のためのデザインパターン
+title: Page Objects ：テストスイート構築のためのデザインパターン
 date: 2010-11-20T10:12:10.000Z
 categories:
   - software testing

@@ -1,9 +1,8 @@
 ---
 title: Array.prototype.sort について
 featured:
-  image: max-panama-387781-unsplash
-  author: Max Panamá
-  authorLink: https://unsplash.com/photos/Gt1A0jNzzbM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  image: about-array-prototype-sort.png
+  author: chatGPT
 date: 2018-07-30 05:49:48
 excerpt: "JavaScriptの配列にはsortメソッドがあり配列のソートを実行することができるけど、この配列のソートの中の実装はどうなっているのかという話。v8における配列ソートについての記事が大変参考になりました。"
 ---

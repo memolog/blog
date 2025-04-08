@@ -8,7 +8,7 @@ tags:
 excerpt: " バベル（BABEL）をDVDで見ました。周囲の人の前評判はかなり悪かったのですが、個人的にはそんなに悪くなかったです。時間軸が並行して話が展開する映画が、個人的な趣向に合っているためかもしれません。同じ理由でペイチェックやハリー・ポッターとアズカバンの囚人とかもわりと好み。"
 ---
 
-[](http://www.amazon.co.jp/gp/product/B000UDNQZS?ie=UTF8&tag=yutakayamaguc-22&linkCode=xm2&camp=247&creativeASIN=B000UDNQZS) バベル（BABEL）を DVD で見ました。周囲の人の前評判はかなり悪かったのですが、個人的にはそんなに悪くなかったです。時間軸が並行して話が展開する映画が、個人的な趣向に合っているためかもしれません。同じ理由で[ペイチェック](http://www.amazon.co.jp/gp/product/B000WZO3NS?ie=UTF8&tag=yutakayamaguc-22&linkCode=xm2&camp=247&creativeASIN=B000WZO3NS)や[ハリー・ポッターとアズカバンの囚人](http://www.amazon.co.jp/gp/product/B000F3N5HW?ie=UTF8&tag=yutakayamaguc-22&linkCode=xm2&camp=247&creativeASIN=B000F3N5HW)とかもわりと好み。
+バベル（BABEL）を DVD で見ました。周囲の人の前評判はかなり悪かったのですが、個人的にはそんなに悪くなかったです。時間軸が並行して話が展開する映画が、個人的な趣向に合っているためかもしれません。同じ理由で[ペイチェック](http://www.amazon.co.jp/gp/product/B000WZO3NS?ie=UTF8&tag=yutakayamaguc-22&linkCode=xm2&camp=247&creativeASIN=B000WZO3NS)や[ハリー・ポッターとアズカバンの囚人](http://www.amazon.co.jp/gp/product/B000F3N5HW?ie=UTF8&tag=yutakayamaguc-22&linkCode=xm2&camp=247&creativeASIN=B000F3N5HW)とかもわりと好み。
 
 菊地凛子が演じるろうあの少女は、世の中に自分のことを受け入れてくれる人はいないのではないか、という不安や寂しさを表現していて、個人的には良かった。劇中に音のないシーンがあって、それが耳が聞こえない世界とはどんなものかを疑似体験するのに役立ちました。ただ、表現の切り口が、東京の性の乱れのようなものを想起させる。そこがちょっと極端すぎるような気も、東京に住む私は感じました。しかし迫真の演技です。
 

@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 2&#x3a; Use a Content Delivery Network
+title: YSLOW 勉強：2：Use a Content Delivery Network
 date: 2007-08-05T06:20:05.000Z
 categories:
   - web

@@ -1,5 +1,5 @@
 ---
-title: Font Tester &#x3a; 使いたいフォントをウェブ上で比較検討
+title: Font Tester ：使いたいフォントをウェブ上で比較検討
 date: 2007-08-13T15:07:33.000Z
 categories:
   - web

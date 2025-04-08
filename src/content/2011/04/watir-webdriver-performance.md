@@ -1,5 +1,5 @@
 ---
-title: watir-webdriver-performance&#x3a; PerformanceTimingの集計
+title: watir-webdriver-performance：PerformanceTimingの集計
 date: 2011-04-19T21:00:00.000Z
 categories:
   - software testing

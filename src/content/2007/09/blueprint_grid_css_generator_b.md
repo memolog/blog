@@ -1,5 +1,5 @@
 ---
-title: Blueprint Grid CSS Generator &#x3a; Blueprint のグリッド編集ツール
+title: Blueprint Grid CSS Generator ：Blueprint のグリッド編集ツール
 date: 2007-09-01T08:00:00.000Z
 categories:
   - web

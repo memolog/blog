@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 9&#x3a; Reduce DNS Lookups
+title: YSLOW 勉強：9：Reduce DNS Lookups
 date: 2007-08-12T15:24:00.000Z
 categories:
   - web

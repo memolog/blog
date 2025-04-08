@@ -1,5 +1,5 @@
 ---
-title: "Flex Line Wrapping: the flex-wrap property"
+title: "Flex Line Wrapping：the flex-wrap property"
 featured:
   image: jerry-wang-xiie4XeSzTU-unsplash
   author: Jerry Wang

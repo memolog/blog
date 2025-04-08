@@ -1,5 +1,5 @@
 ---
-title: Hayaku &#x3a; CSSを早く書くためのSublime text 2 plugin
+title: Hayaku ：CSSを早く書くためのSublime text 2 plugin
 date: 2012-12-09T12:51:00.000Z
 categories:
   - web

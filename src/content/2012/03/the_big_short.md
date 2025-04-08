@@ -1,17 +1,18 @@
 ---
-title: 本&#x3a; 世紀の空売り
+title: 本：世紀の空売り
 date: 2012-03-17T05:00:00.000Z
+featured:
+  image: the_big_short.png
+  author: chatGPT
 categories:
   - 本
 tags:
   - book
   - usa
-excerpt: "![](http://www.amazon.co.jp/gp/product/4163730907/ref=as_li_ss_il?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4163730907)!"
+excerpt: "「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。"
 ---
 
-[![](http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&Format=_SL160_&ASIN=4163730907&MarketPlace=JP&ID=AsinImage&WS=1&tag=yutakayamaguc-22&ServiceVersion=20070822)](http://www.amazon.co.jp/gp/product/4163730907/ref=as_li_ss_il?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4163730907)![](http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&l=as2&o=9&a=4163730907)
-
-「[マネー・ボール](http://www.amazon.co.jp/gp/product/4270100281/ref=as_li_ss_tl?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4270100281)![](http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&l=as2&o=9&a=4270100281)」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。
+「[マネー・ボール](http://www.amazon.co.jp/gp/product/4270100281/ref=as_li_ss_tl?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4270100281)」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。
 
 モーゲージ債がいずれ破綻すると予測するに至った経緯から、破綻する側に賭けるためにはどうしたら良いのかとか、物語としての面白さもありつつ、大手投資銀行の投資家達が破綻に至るまでどうして気がつかなかったのか、格付け機関がどうして正常に機能しなかったのかとか、その結果、サブプライム問題がどのようにして起こったのかなど、その背景描写も興味深かったです。
 
@@ -19,6 +20,4 @@ excerpt: "![](http://www.amazon.co.jp/gp/product/4163730907/ref=as_li_ss_il?ie=U
 
 そして、最終的にモーゲージ債が破綻する側に賭けて、賭けには勝ったはずなのに、手に入るはずのお金が入らないかもしれないリスクにさらされたりとか、未来予想に乏しく最終的に負けたはずの金融機関の人間が、その人個人としては多額の報酬を受けて今も悠々としている、その不思議なギャップも面白い。
 
-マイケル・ルイスの本は、このあと「[ブーメラン 欧州から恐慌が返ってくる](http://www.amazon.co.jp/gp/product/4163749004/ref=as_li_ss_tl?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4163749004)![](http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&l=as2&o=9&a=4163749004)」の方も読んでみましたが、こちらも面白かったです。でも個人的には「[世紀の空売り](http://www.amazon.co.jp/gp/product/4163730907/ref=as_li_ss_tl?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4163730907)![](http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&l=as2&o=9&a=4163730907)」の方が「相手を出し抜く」面白さがあっておすすめです。
-
-[![](http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&Format=_SL110_&ASIN=4270100281&MarketPlace=JP&ID=AsinImage&WS=1&tag=yutakayamaguc-22&ServiceVersion=20070822)](http://www.amazon.co.jp/gp/product/4270100281/ref=as_li_ss_il?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4270100281)![](http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&l=as2&o=9&a=4270100281) [![](http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&Format=_SL110_&ASIN=4775970623&MarketPlace=JP&ID=AsinImage&WS=1&tag=yutakayamaguc-22&ServiceVersion=20070822)](http://www.amazon.co.jp/gp/product/4775970623/ref=as_li_ss_il?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4775970623)![](http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&l=as2&o=9&a=4775970623) [![](http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&Format=_SL110_&ASIN=4532163609&MarketPlace=JP&ID=AsinImage&WS=1&tag=yutakayamaguc-22&ServiceVersion=20070822)](http://www.amazon.co.jp/gp/product/4532163609/ref=as_li_ss_il?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4532163609)![](http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&l=as2&o=9&a=4532163609) [![](http://ws.assoc-amazon.jp/widgets/q?_encoding=UTF8&Format=_SL110_&ASIN=4163749004&MarketPlace=JP&ID=AsinImage&WS=1&tag=yutakayamaguc-22&ServiceVersion=20070822)](http://www.amazon.co.jp/gp/product/4163749004/ref=as_li_ss_il?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4163749004)![](http://www.assoc-amazon.jp/e/ir?t=yutakayamaguc-22&l=as2&o=9&a=4163749004)
+マイケル・ルイスの本は、このあと「[ブーメラン 欧州から恐慌が返ってくる](http://www.amazon.co.jp/gp/product/4163749004/ref=as_li_ss_tl?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4163749004)」の方も読んでみましたが、こちらも面白かったです。でも個人的には「[世紀の空売り](http://www.amazon.co.jp/gp/product/4163730907/ref=as_li_ss_tl?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=4163730907)」の方が「相手を出し抜く」面白さがあっておすすめです。

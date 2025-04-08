@@ -1,5 +1,5 @@
 ---
-title: watir&#x3a; click_no_wait が動作しない
+title: watir：click_no_wait が動作しない
 date: 2010-07-13T12:45:00.000Z
 categories:
   - software testing

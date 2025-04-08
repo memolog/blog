@@ -1,9 +1,8 @@
 ---
 title: Flex Lines
 featured:
-  image: alex-chernenko-To28QYvt5q4-unsplash
-  author: Alex Chernenko
-  authorLink: https://unsplash.com/@achernenko?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  image: flex-lines.png
+  author: chatGPT
 date: 2020-05-30 23:45:00
 excerpt: "今回は6. Flex Linesについて。"
 ---

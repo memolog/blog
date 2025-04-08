@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 3&#x3a; Add an Expires Header
+title: YSLOW 勉強：3：Add an Expires Header
 date: 2007-08-06T15:52:00.000Z
 categories:
   - web

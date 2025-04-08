@@ -11,16 +11,23 @@ type Props = {
 };
 
 const { featured } = Astro.props;
-const src = `/assets/images/${featured.image}/${featured.image}.svg`;
-
-let width, height, color, alt;
-const { dir, name, ext } = path.parse(src);
+let { name, ext } = path.parse(featured.image || "");
+ext ||= ".svg";
+const dir = "/assets/images";
+const src = `${dir}/${name}/${name}${ext}`;
+let width,
+  height,
+  color = featured.color || "",
+  alt;
 
 // Calculate the width and height if not provided
 if (!width || !height) {
   const source = dir.replace(/^\//, "./public/");
   if (ext === ".svg") {
-    const file = fs.readFileSync(path.resolve(source, `${name}${ext}`), "utf8");
+    const file = fs.readFileSync(
+      path.resolve(source, `${name}/${name}${ext}`),
+      "utf8"
+    );
     const svgDom = new JSDOM(file).window.document.getElementsByTagName(
       "svg"
     )[0];
@@ -35,41 +42,44 @@ if (!width || !height) {
     color =
       color ||
       svgDom.getAttribute("fill") ||
-      svgDom.children[0].getAttribute("fill");
+      svgDom.children[0].getAttribute("fill") ||
+      "";
   } else {
     const dimension = await imageSizeFromFile(
-      path.resolve(source, `${name}${ext}`)
+      path.resolve(source, `${name}/${name}_medium${ext}`)
     );
     width = Math.min(dimension.width, 900);
     height = dimension.height * (width / dimension.width);
   }
 }
 
-width = width || 1020;
-height = height || 510;
+const maxWidth = 985;
+const maxHeight = 482;
+width = width || maxWidth;
+height = height || maxHeight;
 color = color || "#f5f2f0";
 alt = alt || "";
 
 const wRatio = height / width;
 const hRatio = width / height;
 
-if (width > 800) {
-  width = 800;
+if (width > maxWidth) {
+  width = maxWidth;
   height = Math.floor(width * wRatio);
-  if (height < 382) {
-    height = 382;
+  if (height < maxHeight) {
+    height = maxHeight;
     width = Math.floor(height * hRatio);
   }
 }
 ---
 
 <div class="header__feature" aria-hidden="true">
-  <div class="featured__image">
+  <div class="featured__image" style=`background-color: ${color};`>
     {
       ext === ".svg" ? (
         <div style={`background-color: ${color}`}>
           <img
-            src={`${dir}/${name}${ext}`}
+            src={`${dir}/${name}/${name}${ext}`}
             alt={`${alt}`}
             role="presentation"
             loading="lazy"
@@ -90,7 +100,7 @@ if (width > 800) {
         </div>
       ) : featured.author.match(/chatGPT/) ? (
         // prettier-ignore
-        <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a> and <a href="https://github.com/fogleman/primitive" target="_blank">primitive</a></div>
+        <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div>
       ) : featured.authorLink?.match(/artvee/) ? (
         // prettier-ignore
         <div class="featured__credit">Photo from <a href={featured.authorLink} target="_blank" rel="noopener" tabindex="-1">{featured.author}</a> on <a href="https://artvee.com/" target="_blank" rel="noopener" tabindex="-1">Artvee</a></div>

@@ -1,5 +1,5 @@
 ---
-title: Firefox &#x3a; link prefetching（リンクの先読み機能）
+title: Firefox ：link prefetching（リンクの先読み機能）
 date: 2007-08-21T15:41:00.000Z
 categories:
   - web

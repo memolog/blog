@@ -1,5 +1,5 @@
 ---
-title: "Display Order: the order property"
+title: "Display Order：the order property"
 featured:
   image: estudio-bloom-ezqnxsqUZ80-unsplash
   author: Estúdio Bloom

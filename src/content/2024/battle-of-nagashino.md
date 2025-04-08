@@ -1,7 +1,7 @@
 ---
 title: 本：長篠合戦
 featured:
-  image: generated-image-of-battle-of-nagashino-2
+  image: battle-of-nagashino.png
   author: chatGPT
 date: 2024-10-28 08:20:00
 excerpt: "長篠合戦を読んだ。長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や、各勢力が自らを美化するための「化粧」が多分に含まれているようだ。"

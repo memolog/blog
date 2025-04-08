@@ -1,0 +1,152 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { type PaginateFunction, type Page } from "astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import FeaturedImage from "../../components/FeaturedImage.astro";
+import { SITE_TITLE } from "../../consts";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const posts = (await getCollection("blog")).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  );
+  return paginate(posts, { pageSize: 10 });
+}
+
+type Props = {
+  page: Page<CollectionEntry<"blog">>;
+};
+
+const { page } = Astro.props;
+const posts = page.data;
+const { lastPage, currentPage } = page;
+const previousPage = currentPage - 1;
+const prevLink = previousPage > 1 ? `/page/${previousPage}/` : `/`;
+const nextLink = currentPage + 1 > lastPage ? "" : `/page/${currentPage + 1}/`;
+
+const pageNumbers = new Map<number, number>();
+if (currentPage < 5) {
+  for (let i = 2; i <= 7; i++) {
+    pageNumbers.set(i, i);
+  }
+} else if (currentPage > lastPage - 7) {
+  const start = currentPage === lastPage ? 10 : 9;
+  for (let i = lastPage - start; i <= lastPage; i++) {
+    pageNumbers.set(i, i);
+  }
+}
+
+for (let i = currentPage - 2; i <= currentPage + 2; i++) {
+  pageNumbers.set(i, i);
+}
+
+for (let i = 0; i <= 4; i++) {
+  const pageNumber = lastPage - i;
+  pageNumbers.set(pageNumber, pageNumber);
+}
+
+const pageNumbersArray = [...pageNumbers.values()]
+  .filter((i) => i > 1 && i <= lastPage)
+  .sort((a, b) => a - b)
+  .reduce<(number | string)[]>(
+    (acc, i) => {
+      const prev = acc[acc.length - 1];
+      if (prev && typeof prev === "number" && i - prev > 1) {
+        acc.push("...");
+      } else {
+        acc.push(i);
+      }
+      return acc;
+    },
+    [] as (number | string)[]
+  );
+
+if (pageNumbersArray[0] !== 2) {
+  pageNumbersArray.unshift("...");
+}
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <title>{SITE_TITLE}</title>
+    <BaseHead />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "http://schema.org",
+        "@type": "ItemList",
+        itemListElement: posts.map((post, index) => {
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            url: `https://memolog.org/${post.id}.html`,
+          };
+        }),
+      })}
+    />
+  </head>
+  <body>
+    <Header />
+    <div class="container">
+      <main class="main">
+        {
+          posts.map((post) => (
+            <article class="article-summary">
+              <header class="header">
+                <div>
+                  <FormattedDate date={post.data.date} />
+                </div>
+                <h2 class="header__title article__title">
+                  <a href={`/${post.id}.html`}>{post.data.title}</a>
+                </h2>
+                {post.data.featured && (
+                  <FeaturedImage featured={post.data.featured} />
+                )}
+              </header>
+              <div class="content">{post.data.excerpt}</div>
+              <div class="read-more">
+                <a href={`/${post.id}.html`}>📖 続きを読む</a>
+              </div>
+            </article>
+          ))
+        }
+
+        <footer class="pagination">
+          <a class="extend prev" rel="prev" href={prevLink}>Prev</a>
+          <a class="page-number" href="/">1</a>
+          {
+            pageNumbersArray.map((i) => {
+              return i === "..." ? (
+                <span class="space">…</span>
+              ) : i === currentPage ? (
+                <span class="page-number current">{i}</span>
+              ) : (
+                <a
+                  class={`page-number ${i === currentPage ? "current" : ""}`}
+                  href={`/page/${i}/`}
+                >
+                  {i}
+                </a>
+              );
+            })
+          }
+          {
+            nextLink && (
+              <a class="extend next" rel="next" href={nextLink}>
+                Next
+              </a>
+            )
+          }
+        </footer>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>

@@ -1,9 +1,8 @@
 ---
 title: hiddenのフィールドにautocomplete属性を入れる意味
 featured:
-  image: craig-manners-vtG_gpJn9OM-unsplash
-  author: Craig Manners
-  authorLink: https://unsplash.com/@craigmanners_com?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  image: the-two-ways-to-use-autocomplete-attribute.png
+  author: chatGPT
 date: 2022-12-05 09:00:00
 excerpt: "4.10.18.7.1 Autofilling form controls: the autocomplete attributeには、autocomplete属性には2つの利用方法があると書かれている。"
 ---

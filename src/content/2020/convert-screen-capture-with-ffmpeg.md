@@ -1,9 +1,8 @@
 ---
 title: Convert screen capture to animation GIF
 featured:
-  image: jakob-owens-CiUR8zISX60-unsplash
-  author: Jakob Owens
-  authorLink: https://unsplash.com/@jakobowens1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  image: convert-screen-capture-with-ffmpeg.png
+  author: chatGPT
 date: 2020-02-10 06:49:09
 excerpt: "Macの場合、Quicktime Playerのファイルメニューの「新規画面収録」から簡単にスクリーンキャプチャを録画することができる（iPhoneの場合はiPhone、iPad、iPod touch で画面を録画する方法参照）。再現性が難しいケースなどで複雑な手順を書き記すよりずっとわかりやすく動作を見せることができるのでとても便利。だけれども、動画はmov形式で保存されるので、githubのissueに貼り付ける事ができない。なので、ffmpegを使ってgifに変換しようという話。gifならgithubのissueに貼り付けられる。"
 ---

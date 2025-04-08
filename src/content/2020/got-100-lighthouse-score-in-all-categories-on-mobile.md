@@ -12,7 +12,7 @@ excerpt: "ふとLighthouseを走らせみたら、微妙に100点行ってなか
 
 そして mobile/pc ともに 100 点を獲得した。オール 100 になると花火があがる。
 
-{% youtube id=tFSOmRADKvk title="Got 100 score in all categories on mobile" %}
+<div class="youtube-wrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tFSOmRADKvk?si=0nDbwXmrD5_h1oul" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 といっても数回に 1 回、100 点になるみたいな感じで、微妙に 100 点いかない。
 

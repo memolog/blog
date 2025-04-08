@@ -1,5 +1,5 @@
 ---
-title: text-align&#x3a; justifyで段落を両端揃えにする
+title: text-align：justifyで段落を両端揃えにする
 date: 2008-06-09T12:45:46.000Z
 categories:
   - web

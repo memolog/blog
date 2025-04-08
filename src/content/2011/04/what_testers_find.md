@@ -6,7 +6,7 @@ categories:
 excerpt: "James Bach's Blog » Blog Archive » What Testers Findの記事の紹介。James Bachはソフトウェアテスト293の鉄則!の著者でもある。"
 ---
 
-[James Bach's Blog » Blog Archive » What Testers Find](http://www.satisfice.com/blog/archives/572)の記事の紹介。James Bach は[ソフトウェアテスト 293 の鉄則](http://www.amazon.co.jp/gp/product/482228154X/ref=as_li_ss_tl?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=482228154X)![](http://www.assoc-amazon.jp/e/ir?t=&l=as2&o=9&a=482228154X)の著者でもある。
+[James Bach's Blog » Blog Archive » What Testers Find](http://www.satisfice.com/blog/archives/572)の記事の紹介。James Bach は[ソフトウェアテスト 293 の鉄則](http://www.amazon.co.jp/gp/product/482228154X/ref=as_li_ss_tl?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=7399&creativeASIN=482228154X)の著者でもある。
 
 What testers find、直訳すると「テスターは何を見つけるのか」です。テスターとはテストをすることで「発見する」ことを職務として求められているわけですから、テスターが見つけるものは何かということは、テスターの仕事とは何か、テスターとは何かに通じてくるわけです。つまりテスターの要件とも通じてくるわけです。上記の URL では下記のようなことが「テスターが見つけるもの」として挙げられています。以下は半分は原文の意訳的なものですが、半分は個人的な意見を述べています。
 

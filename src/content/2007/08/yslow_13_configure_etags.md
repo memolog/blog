@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 13&#x3a; Configure ETags
+title: YSLOW 勉強：13：Configure ETags
 date: 2007-08-16T16:29:00.000Z
 categories:
   - web

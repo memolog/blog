@@ -14,7 +14,7 @@ excerpt: "Array.prototype.sort についてとTypedArray.prototype.sort につ�
 
 下の動画はバブルソートをハンガリアンフォークダンスで表現したもの。うける。開始 50 秒くらいはただ踊ってるだけである。左から進んで、隣り合う人同士で数値を比較して、大きい人が右側に移動していく。
 
-{% youtube id=lyZQPjUT5B4 title="Bubble-sort with Hungarian ("Csángó") folk dance" %}
+<div class="youtube-wrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lyZQPjUT5B4?si=c5TLdAMbXIzwx-kl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ポイントとしては、
 

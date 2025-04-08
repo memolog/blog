@@ -1,5 +1,5 @@
 ---
-title: "Flex Flow Direction: the flex-direction property"
+title: "Flex Flow Direction：the flex-direction property"
 featured:
   image: juliana-arruda-iVPWGCbFwd8-unsplash
   author: Juliana Arruda

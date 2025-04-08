@@ -1,5 +1,5 @@
 ---
-title: WYSIWYG &#x3a; IEのDOMではobjectタグの中にあるembedタグを認識しない？
+title: WYSIWYG ：IEのDOMではobjectタグの中にあるembedタグを認識しない？
 date: 2007-08-06T14:45:00.000Z
 categories:
   - web

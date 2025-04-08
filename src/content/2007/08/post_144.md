@@ -8,7 +8,7 @@ tags:
 excerpt: " ハーバード流交渉術の続編的な性格も持っているため「新ハーバード交渉術」という日本語タイトルにしたそうです。原題は「Beyond Reason : Using Emotions As You Negotiate（理性を超えて：交渉に感情を用いる）」。"
 ---
 
-[](http://www.amazon.co.jp/gp/product/4062134411?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=1211&creativeASIN=4062134411) [ハーバード流交渉術](http://www.amazon.co.jp/gp/product/4837903606?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=1211&creativeASIN=4837903606)の続編的な性格も持っているため「新ハーバード交渉術」という日本語タイトルにしたそうです。原題は「Beyond Reason : Using Emotions As You Negotiate（理性を超えて：交渉に感情を用いる）」。
+[ハーバード流交渉術](http://www.amazon.co.jp/gp/product/4837903606?ie=UTF8&tag=yutakayamaguc-22&linkCode=as2&camp=247&creative=1211&creativeASIN=4837903606)の続編的な性格も持っているため「新ハーバード交渉術」という日本語タイトルにしたそうです。原題は「Beyond Reason : Using Emotions As You Negotiate（理性を超えて：交渉に感情を用いる）」。
 
 本書の内容は「交渉相手との感情的な関係を「ポジティブ」にする」ことで交渉を成功させるといったもの。3 部構成で、1 部でポジティブ（ネガティブ）な感情を生み出す源となる 5 つの「革新的な欲求」を提示して、2 部で 5 つの革新的な欲求について、実践例を交えて詳細に説明しています。最後の 3 部ではより実践的なアドバイスとして、「強いネガティブな感情に対処しよう」「準備の重要性」「アイデアを実世界で使う」という 3 点について書かれています。5 つの革新的な欲求について簡単な要約を下記に記します。
 

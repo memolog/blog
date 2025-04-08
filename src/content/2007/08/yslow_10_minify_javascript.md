@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 10&#x3a; Minify JavaScript
+title: YSLOW 勉強：10：Minify JavaScript
 date: 2007-08-13T14:52:01.000Z
 categories:
   - web

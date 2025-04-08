@@ -1,5 +1,5 @@
 ---
-title: Google Closure&#x3a; compileしたjavascriptを複数同時に使う
+title: Google Closureでcompileしたjavascriptを複数同時に使う
 date: 2012-12-29T22:00:00.000Z
 categories:
   - web
@@ -14,7 +14,7 @@ Closure Compiler の Advanced mode で script を compile した場合、Propert
 併用するスクリプトを全部まとめて 1 つのファイルに compile することで回避することもできますが、--output_wrapper というオプションでスクリプト全体を無名関数で囲われるかたちにすれば、複数のスクリプトを併用しつつ、global scope 上でプロパティ名が衝突するのを回避することができます。
 
 ```
-java -jar compiler.jar --output_wrapper="(function(){&#x25;output&#x25;})();" ....
+java -jar compiler.jar --output_wrapper="(function(){%output$%$})();" ....
 
 ```
 

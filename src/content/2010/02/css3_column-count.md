@@ -5,7 +5,7 @@ categories:
   - web
 tags:
   - css
-excerpt: "*   Stronger, Better, Faster Design with CSS3"
+excerpt: "フッター部分を 3 列にしてみようかなと唐突に思いついて、以前から興味あった column-count を使って 3 列にしてみました。Firefox と Safari でのみ対応（IE では 1 列のまま表示されます）。Pico のデザインのバランスを崩している気がしないでもないですけど、まあいいか。"
 ---
 
 - [Stronger, Better, Faster Design with CSS3](http://www.smashingmagazine.com/2009/12/16/stronger-better-faster-design-with-css3/)

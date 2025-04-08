@@ -6,17 +6,22 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "gi": "generate-responsive-images -i ~/Downloads/$I -d ./public/assets/images",
+    "pb": "primitive_bulk -i ~/Downloads/$D.jpg -d ./source/assets/images/$D --output $D --format jpg,svg -m $M -n $N && find ./source/assets/images/$D -name '*.svg' -o -name '*.jpg' | xargs open -a 'ImageOptim'",
+    "pre-pb": "primitive_bulk -i ~/Downloads/$D.png -n $N"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.3",
     "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.3.0",
     "astro": "^5.5.6"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^3.3.0",
     "@types/jsdom": "^21.1.7",
+    "generate-responsive-images": "^2.0.0",
     "image-size": "^2.0.2",
-    "jsdom": "^26.0.0"
+    "jsdom": "^26.0.0",
+    "primitive_bulk": "^1.2.1"
   }
 }

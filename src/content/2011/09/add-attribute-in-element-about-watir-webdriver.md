@@ -1,5 +1,5 @@
 ---
-title: watir-webdriver&#x3a; 要素で使用できる属性を増やす
+title: watir-webdriver：要素で使用できる属性を増やす
 date: 2011-09-13T15:30:00.000Z
 categories:
   - software testing

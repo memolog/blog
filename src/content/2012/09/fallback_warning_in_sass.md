@@ -1,5 +1,5 @@
 ---
-title: Sass&#x3a; Fallbackでpollingしているとwarning
+title: Sass：Fallbackでpollingしているとwarning
 date: 2012-09-25T13:03:56.000Z
 categories:
   - web

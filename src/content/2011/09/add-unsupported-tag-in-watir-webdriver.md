@@ -1,5 +1,5 @@
 ---
-title: watir-webdriver&#x3a; 使用できる要素を追加する
+title: watir-webdriver：使用できる要素を追加する
 date: 2011-09-15T15:25:00.000Z
 categories:
   - software testing

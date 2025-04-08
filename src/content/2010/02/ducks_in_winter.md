@@ -5,7 +5,7 @@ categories:
   - 写真
 tags:
   - photo
-excerpt: "![井の頭公園/オナガガモ](http://farm3.static.flickr.com/2685/4355668565_ebb6d881cc_b.jpg)"
+excerpt: "別にカモの種類なんて分からなくても良いんですけど、違いが分かるだけでカモウォッチングが数倍楽しくなるのです（たぶん）。上の白と灰色のコントラストがきれいなカモはオナガガモです。プリップリッと鳴くらしいです。"
 ---
 
 [![井の頭公園/オナガガモ](http://farm3.static.flickr.com/2685/4355668565_ebb6d881cc.jpg)](http://farm3.static.flickr.com/2685/4355668565_ebb6d881cc_b.jpg)

@@ -7,14 +7,13 @@ tags:
   - ios
   - phonegap
   - xcode
-excerpt: "Cordovaで作成したアプリでアイコンをasset catalogsに変換したら、iTunes Connectで申請したときに下記のようなエラーが発生しました。  ```none Icon specified in the Info.plist not found under the top level app wrapper: AppIcon40x40"
+excerpt: "Cordovaで作成したアプリでアイコンをasset catalogsに変換したら、iTunes Connectで申請したときに下記のようなエラーが発生しました。"
 ---
 
 Cordova で作成したアプリでアイコンを asset catalogs に変換したら、iTunes Connect で申請したときに下記のようなエラーが発生しました。
 
 ```
 Icon specified in the Info.plist not found under the top level app wrapper: AppIcon40x40
-
 
 Icon specified in the Info.plist not found under the top level app wrapper: AppIcon60x60
 ```

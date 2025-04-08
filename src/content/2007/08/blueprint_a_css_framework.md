@@ -1,5 +1,5 @@
 ---
-title: Blueprint &#x3a; CSSのフレームワーク
+title: Blueprint ：CSSのフレームワーク
 date: 2007-08-19T02:49:38.000Z
 categories:
   - web

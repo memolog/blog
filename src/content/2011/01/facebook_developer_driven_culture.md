@@ -1,5 +1,5 @@
 ---
-title: Facebookの開発体制&#x3a; developer driven culture
+title: Facebookの開発体制：developer driven culture
 date: 2011-01-29T02:22:00.000Z
 categories:
   - software testing

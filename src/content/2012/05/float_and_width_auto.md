@@ -1,5 +1,5 @@
 ---
-title: floatとwidth&#x3a;auto
+title: floatとwidth：auto
 date: 2012-05-23T15:41:00.000Z
 categories:
   - web

@@ -1,5 +1,5 @@
 ---
-title: CSS3 &#x3a; resize プロパティ
+title: CSS3：resize プロパティ
 date: 2007-07-29T14:35:00.000Z
 categories:
   - web

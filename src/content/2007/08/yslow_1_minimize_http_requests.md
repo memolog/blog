@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 1&#x3a; Minimize HTTP Requests
+title: YSLOW 勉強：1：Minimize HTTP Requests
 date: 2007-08-04T15:46:10.000Z
 categories:
   - web

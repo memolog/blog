@@ -1,7 +1,7 @@
 ---
 title: 本：エブリシング・バブル
 featured:
-  image: generated-image-of-after-everything-bubble
+  image: after-everything-bubble.png
   author: chatGPT
 date: 2024-11-06 06:33:16
 excerpt: "エブリシング・バブル 終わりと始まりと「エブリシング・バブル」リスクの深層を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。"

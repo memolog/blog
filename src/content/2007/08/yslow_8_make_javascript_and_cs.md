@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 8&#x3a; Make JavaScript and CSS External
+title: YSLOW 勉強：8：Make JavaScript and CSS External
 date: 2007-08-11T16:08:00.000Z
 categories:
   - web

@@ -1,5 +1,5 @@
 ---
-title: Gridinit&#x3a; クラウドベースで複数ブラウザにテスト配布
+title: Gridinit：クラウドベースで複数ブラウザにテスト配布
 date: 2011-05-15T14:30:00.000Z
 categories:
   - software testing

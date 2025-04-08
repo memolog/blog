@@ -1,5 +1,5 @@
 ---
-title: Checkbot &#x3a; ウェブページのリンクを自動チェックしてくれるツール
+title: Checkbot ：ウェブページのリンクを自動チェックしてくれるツール
 date: 2007-08-18T10:07:29.000Z
 categories:
   - web

@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 7&#x3a; Avoid CSS Expressions
+title: YSLOW 勉強：7：Avoid CSS Expressions
 date: 2007-08-09T15:58:00.000Z
 categories:
   - web

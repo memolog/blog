@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; 6&#x3a; Move Scripts to the Bottom
+title: YSLOW 勉強：6：Move Scripts to the Bottom
 date: 2007-08-09T15:35:00.000Z
 categories:
   - web

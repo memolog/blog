@@ -1,5 +1,5 @@
 ---
-title: a&#x3a;link, a&#x3a;visitedの詳細度はclass selectorのみより大きい
+title: a:link, a：visitedの詳細度はclass selectorのみより大きい
 date: 2013-08-30T21:00:00.000Z
 categories:
   - web

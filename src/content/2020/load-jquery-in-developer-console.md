@@ -22,7 +22,7 @@ script.integrity = "sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=";
 document.head.appendChild(script);
 ```
 
-{% youtube id=0okbda7OiSI title="How to load jQuery library in the Chrome developer console" %}
+<div class="youtube-wrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0okbda7OiSI?si=cquMNigbiSUbTSwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 同じ方法で jQuery に限らず、一時的にページにライブラリをロードさせることができるので、まあまあ応用の利くハックかなと思う。スニペットの存在そのものを忘れる可能性はある。
 

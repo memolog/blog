@@ -1,5 +1,5 @@
 ---
-title: inputでwidth&#x3a;100&#x25;を使うと若干はみ出る
+title: inputでwidthを100%で使うと若干はみ出る
 date: 2012-06-08T14:21:00.000Z
 categories:
   - web
@@ -10,7 +10,7 @@ featured:
   image: henrique-ferreira-306706-unsplash
   author: Henrique Ferreira
   authorLink: https://unsplash.com/photos/ySgSnJdPhZg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
-excerpt: "input要素にwidth:100&#x25;;を指定すると、微妙に包含ブロックからはみ出す。  なんでだろうなあと思っていたんですけど、input要素にはブラウザのデフォルトでpaddingやborderが入っているので、width:100&#x25;とするとpaddingやborderのサイズ分はみ出してしまうということでした。"
+excerpt: "input要素にwidth:100%;を指定すると、微妙に包含ブロックからはみ出す。  なんでだろうなあと思っていたんですけど、input要素にはブラウザのデフォルトでpaddingやborderが入っているので、width:100%;とするとpaddingやborderのサイズ分はみ出してしまうということでした。"
 ---
 
 input 要素に width:100&#x25;;を指定すると、微妙に包含ブロックからはみ出す。

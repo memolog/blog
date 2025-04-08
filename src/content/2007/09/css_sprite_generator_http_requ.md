@@ -1,5 +1,5 @@
 ---
-title: CSS Sprite Generator &#x3a; 画像を統合してHTTP requestを減らす
+title: CSS Sprite Generator ：画像を統合してHTTP requestを減らす
 date: 2007-09-29T14:24:00.000Z
 categories:
   - web

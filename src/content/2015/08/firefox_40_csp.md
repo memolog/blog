@@ -1,5 +1,5 @@
 ---
-title: Firefox 40 の CSP で「*」だけでは blob&#x3a; を許容しなくなった。
+title: Firefox 40 の CSP で「*」だけでは blob：を許容しなくなった。
 date: 2015-08-24T14:51:00.000Z
 categories:
   - web

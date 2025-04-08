@@ -5,7 +5,7 @@ categories:
   - 写真
 tags:
   - photo
-excerpt: "![井の頭公園/カワセミ](http://farm3.static.flickr.com/2723/4334055081_642e553e79_b.jpg)"
+excerpt: "2月6日に寒空の中カメラを持って井の頭公園に行ったのです。まあカモでも撮ろうかなと。そうしたらなんとなんとカワセミを発見したのです"
 ---
 
 [![井の頭公園/カワセミ](http://farm3.static.flickr.com/2723/4334055081_642e553e79.jpg)](http://farm3.static.flickr.com/2723/4334055081_642e553e79_b.jpg)

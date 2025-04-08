@@ -1,5 +1,5 @@
 ---
-title: YSLOW 勉強 &#x3a; まとめ
+title: YSLOW 勉強 ：まとめ
 date: 2007-08-18T16:29:00.000Z
 categories:
   - web

@@ -4,10 +4,18 @@
   <subtitle>塵が積もって山とならないメモのログ</subtitle>
   <link href="https://memolog.org/atom.xml" rel="self"/>
   <link href="https://memolog.org/"/>
-  <updated>2025-03-23T18:21:38.000Z</updated>
+  <updated>2025-04-09T00:00:00.000Z</updated>
   <id>https://memolog.org/</id>
   <author><name>Yutaka Yamaguchi</name></author>
   
+  <entry>
+    <title>Hello Astro</title>
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2025-04-09T00:00:00.000Z</published>
+    <summary type="html">2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。</summary>
+  </entry>
+    
   <entry>
     <title>本：マクロ金融危機入門</title>
     <link href="https://memolog.org/undefined.html"/>
@@ -158,14 +166,6 @@
     <id>https://memolog.org/undefined.html</id>
     <published>2020-06-30T14:09:49.000Z</published>
     <summary type="html">今回は7. Flexibilityについて。</summary>
-  </entry>
-    
-  <entry>
-    <title>Flex Lines</title>
-    <link href="https://memolog.org/undefined.html"/>
-    <id>https://memolog.org/undefined.html</id>
-    <published>2020-05-30T23:45:00.000Z</published>
-    <summary type="html">今回は6. Flex Linesについて。</summary>
   </entry>
     
 </feed>

@@ -566,7 +566,7 @@
 <p>横幅も少し広くしました。
 いまは <a href="https://www.dell.com/ja-jp/shop/dell-27-4k-uhd-usb-c-%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-s2722qc/apd/210-bcdd">Dell 27 4K UHD USB-C モニター - S2722QC</a> をメインで使っていて、そのモニターで見たときに「もう少し広く表示したいな」と思ったからです。</p>
 <p>完全に自分のためだけど、いまや自分のためだけに書いているブログなので、それでいいかなと。レスポンシブ対応はそのまま。</p>
-<p>とくに意味はないけど賑やかしとして入れるようになった <a href="2018/display-featured-image.html">Featured Image</a> は継続。ただ、全体的に単色っぽい感じにしたかったので、1ページ目の記事を中心に画像を差し替えてみました。</p>
+<p>とくに意味はないけど賑やかしとして入れるようになった <a href="/2018/display-featured-image.html">Featured Image</a> は継続。ただ、全体的に単色っぽい感じにしたかったので、1ページ目の記事を中心に画像を差し替えてみました。</p>
 <p>画像は ChatGPT に以下のようなプロンプトを渡して生成してます。</p>
 <blockquote>
 <p>「以下の内容をもとにモノクロ水彩風のイラストを描いて。表現は豊かだがミニマルな構成で、ゆるいインクの輪郭と柔らかなグレーの影で描かれている。スケッチ風で落ち着いたクラシカルな雰囲気。」</p>
@@ -574,7 +574,7 @@
 <p>この指示内容には紆余曲折あり、自分で読んでも「なんでこんな内容にしたんだっけ？」という感じですが、いまのところいい感じに動いてる気がする。</p>
 <p>画像のファイルサイズは以前より大きくなっていますが、今どきは <a href="https://developer.mozilla.org/ja/docs/Web/Performance/Guides/Lazy_loading">Lazy Loading</a> にも <a href="https://caniuse.com/webp">WebP</a> にも対応しているので、あまり気にならないかなと。</p>
 <p>Hexo から Astro に移行したときの作業内容は、数日前のことなのにすでにだいぶ忘れてしまいましたが、記憶では <code>npm create astro@latest -- --template blog</code> でテンプレートから作成して、そこから <code>.astro</code> ファイルを調整していった感じです。</p>
-<p>Hexo で使っていた <code>&#x3C;!-- more --></code> による概要生成ができなくなったので、ChatGPT が作ってくれた <a href="tools/migrateExcerpt.ts">migrateExcerpt.ts</a> を調整しつつ、Markdown の frontmatter に移行しました。</p>
+<p>Hexo で使っていた <code>&#x3C;!-- more --></code> による概要生成ができなくなったので、ChatGPT が作ってくれた移行ツールを調整しつつ、Markdown の frontmatter に移行しました。</p>
 <p>他には sitemap とかページネーションとか細かい調整をいろいろしていますが、概ねすんなり移行できた気がします。まだ気づいていない問題があるかもしれませんが。</p>
 <p>この移行にあたって、しばらく触っていなかった <a href="https://uicolor-converter.memolog.org/">UIColor Converter</a> や <a href="https://github.com/memolog/generate-responsive-images-service">generate-responsive-images-service</a> も使いたくて更新しました。それについては、気が向いたらメモに残すかも（残さないかも）。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

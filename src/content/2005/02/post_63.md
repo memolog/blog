@@ -1,6 +1,9 @@
 ---
-title: 「サムライと英語」を読みました。
+title: 本：サムライと英語
 date: 2005-02-20T16:13:01.000Z
+featured:
+  image: samurai_english.png
+  author: chatGPT
 categories:
   - 本
 tags:

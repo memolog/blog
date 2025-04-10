@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -582,4 +642,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-23T12:24:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月23日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/09/css_transforms_3d_and_transform-style.html">CSS Transforms：3D rendering context (transform-style)</a> </h3>  </header> <div class="content">CSS Transforms: (3D/perspective) - メモログの続きで3d rendering contextについて。CSS TransformsのExample7から9を紹介するだけという内容。</div> <div class="read-more"> <a href="/2012/09/css_transforms_3d_and_transform-style.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-09T18:35:47.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月10日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/display-value-property-3.html">The display value property (box / legacy)</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #648488;"> <div style="background-color: #648488"> <img src="/assets/images/whoisbenjamin-ApJp5Nk24a0-unsplash/whoisbenjamin-ApJp5Nk24a0-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@whoisbenjamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Whoisbenjamin</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">The display value property (list-item / internal)の続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて、残りのboxとlegacyについて確認していく。</div> <div class="read-more"> <a href="/2020/display-value-property-3.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-21T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月21日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/flex-flow-direction.html">Flex Flow Direction：the flex-direction property</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #553d17;"> <div style="background-color: #553d17"> <img src="/assets/images/juliana-arruda-iVPWGCbFwd8-unsplash/juliana-arruda-iVPWGCbFwd8-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@julianaaphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Juliana Arruda</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">今回は5. Ordering and Orientationの冒頭部分と、5.1. Flex Flow Direction: the flex-direction propertyについて。</div> <div class="read-more"> <a href="/2020/flex-flow-direction.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-10T22:12:24.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月11日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/automatic-box-type-transformations.html">Automatic Box Type Transformations</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #948e88;"> <div style="background-color: #948e88"> <img src="/assets/images/jeremy-bishop-t52E8yzCURM-unsplash/jeremy-bishop-t52E8yzCURM-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="550"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jeremy Bishop</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Box Layout Modes: the display propertyの最後の節として 2.7. Automatic Box Type Transformationsについて書かれているので、簡単に確認する。何らかのレイアウト効果の影響でboxのタイプが自動的に変わる場合があるという話。</div> <div class="read-more"> <a href="/2020/automatic-box-type-transformations.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

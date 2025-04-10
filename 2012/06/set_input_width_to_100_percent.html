@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -604,4 +664,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-08T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/08/supported_in_ie8.html">あらためて IE8 について</a> </h3>  </header> <div class="content">少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。</div> <div class="read-more"> <a href="/2013/08/supported_in_ie8.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-21T15:25:46.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月22日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/05/responsive_grid_box-sizing.html">responsive grid と box-sizing</a> </h3>  </header> <div class="content">Building a modern grid system | Tutorial | .net magazineにwidthをパーセントで指定したresponsiveなgrid（で、かつネストできてサイズの変更が簡単で..云々）を作成するという話が掲載されている。</div> <div class="read-more"> <a href="/2012/05/responsive_grid_box-sizing.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2025-04-09T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2025年4月9日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2025/hello-astro.html">Hello Astro</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e3dccf;"> <picture> <source srcset="/assets/images/hello-astro/hello-astro_small.png, /assets/images/hello-astro/hello-astro_small@2x.png 2x, /assets/images/hello-astro/hello-astro_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/hello-astro/hello-astro_medium.webp, /assets/images/hello-astro/hello-astro_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/hello-astro/hello-astro_medium.png, /assets/images/hello-astro/hello-astro_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/hello-astro/hello-astro_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。</div> <div class="read-more"> <a href="/2025/hello-astro.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-27T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/05/css_selector_performance.html">CSS Selector Performance</a> </h3>  </header> <div class="content">Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています</div> <div class="read-more"> <a href="/2012/05/css_selector_performance.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

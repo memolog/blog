@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -579,4 +639,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-04T15:46:10.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/yslow_1_minimize_http_requests.html">YSLOW 勉強：1：Minimize HTTP Requests</a> </h3>  </header> <div class="content">*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。</div> <div class="read-more"> <a href="/2007/08/yslow_1_minimize_http_requests.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-19T02:49:38.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月19日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/blueprint_a_css_framework.html">Blueprint ：CSSのフレームワーク</a> </h3>  </header> <div class="content">*   Raging Thunderbolt. Blueprint 0.4 released</div> <div class="read-more"> <a href="/2007/08/blueprint_a_css_framework.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-12T07:28:32.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/create-a-new-icon.html">Create a new icon</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #fff;"> <div style="background-color: #fff"> <img src="/assets/images/new-icon/new-icon.svg" alt role="presentation" loading="lazy" width="987" height="482"> </div> </div>  </div> </header> <div class="content">アイコンをsvgで作り直してページの一番上につけた。</div> <div class="read-more"> <a href="/2018/create-a-new-icon.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-12-24T22:10:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年12月25日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/12/adobe_css_filterlab.html">Filter Effects / Adobe CSS FilterLab</a> </h3>  </header> <div class="content">Filter Effects 1.0では、HTML上に配置した画像とかにグレースケールなどのフィルターをかけることができます。Understanding CSS Filter Effects - HTML5 Rocksにて詳しく紹介されていますが、HTMLの要素に適用できるようにSVGから取り入れられた仕様で、多くのFilter Functionは高速に動きます（手元で試している限りではblurも速い）。対応状況は、Can I use CSS Filter Effectsにて。今のところChromeとSafariでのみwebkitのプレフィックス付きで確認できます。</div> <div class="read-more"> <a href="/2012/12/adobe_css_filterlab.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

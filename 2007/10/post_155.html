@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -574,4 +634,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-22T22:57:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月23日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/01/10_1.html">本：効率が10倍アップする新・知的生産術--自分をグーグル化する方法</a> </h3>  </header> <div class="content"> 生産性を上げるための方法を著者の経験をもとにまとめた本。「自分をグーグル化する」という意味は、情報を武器に生産性を上げるといった感じです。全体が280ページほどですが、ざっと3時間ほどで読みました。要点箇所は太字になっているので、流し読みはしやすいです。どうも売れに売れているようで、わたしの持っている本は第七刷でした。発売一ヶ月で七刷まで出てるのはけっこうすごいと思います、たぶん。</div> <div class="read-more"> <a href="/2008/01/10_1.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-01T14:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月1日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_145.html">伝説のホテルマン「おもてなし」の極意</a> </h3>  </header> <div class="content"> キャピトル東急ホテル エグゼクティブコンシェルジェであった加藤健二さんの本。5部構成で、1〜3部が加藤さんの半生記、4部が加藤流サービスの各論といった感じで、5部はこぼれ話といった感じです。</div> <div class="read-more"> <a href="/2007/09/post_145.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-02-03T14:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年2月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/02/post_173.html">映画：いのちの食べ方</a> </h3>  </header> <div class="content">*   ｜いのちの食べかた｜  原題は「Our Daily Bread（日々の糧）」。「食料生産のグローバル・スタンダード」というあおりが印象的だったので、モンドヴィーノみたいな映画（地域色（ローカル）とグローバリゼーションの対比）なのかなと思っていたのですが、そうではなかったです。食べ物が食卓に届くまでに、どんな作業をしていて、どんな人が関わっているのか、という作業の流れを客観的にまとめていて、解説のない社会見学みたい映画でした。作り手からのメッセージがないから、見る側の考える余地が大きい。</div> <div class="read-more"> <a href="/2008/02/post_173.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-20T16:49:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月21日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/post_143.html">アンビエント・ファインダビリティ</a> </h3>  </header> <div class="content"> ambient（周囲を取り巻く・完全に包囲している）とfindability（位置特定可能な・特定の対象物の発見のしやすさ）を二つあわせて、アンビエント・ファインダビリティ。直訳すると「周囲を取り巻く特定の対象物の発見のしやすさ」というような感じですが、私なりに解釈するとしたら「自分の取り囲む広大な情報の波から特定の情報を発見する」ようなことを表しているのかと思います。アンビエント・ファインダビリティの世界では、個人は「広大な情報から適切な素早く情報を入手する」ことが肝要で、本書では情報とは何か、情報の見つけやすさとは何かを伝え、最後に台頭しつつある情報を選りすぐる社会的な仕組み（タクソノミーとかフォークソノミーとか）などを次々と紹介しています。</div> <div class="read-more"> <a href="/2007/08/post_143.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -575,4 +635,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-08T14:28:19.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_129.html">最近読んだ本（２）</a> </h3>  </header> <div class="content">「最近読んだ本（１）」の続き。本を読んだときにする行動の一つが「文中に気になった箇所があったらページの端を折る」ことです。同じ本を繰り返し読むのは飽きるので、再読するときはその折り目を中心にその部分だけ読んだりします。ページに折り目がつく本ほど私にとって有益な本になります。</div> <div class="read-more"> <a href="/2006/04/post_129.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-11-15T17:44:28.000Z"> <span class="calendar-icon">📅</span> <span>2005年11月16日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/11/post_117.html">逆説的アプローチがかっこいい</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #d8d3c9;"> <picture> <source srcset="/assets/images/paradoxical_approach/paradoxical_approach_small.png, /assets/images/paradoxical_approach/paradoxical_approach_small@2x.png 2x, /assets/images/paradoxical_approach/paradoxical_approach_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/paradoxical_approach/paradoxical_approach_medium.webp, /assets/images/paradoxical_approach/paradoxical_approach_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/paradoxical_approach/paradoxical_approach_medium.png, /assets/images/paradoxical_approach/paradoxical_approach_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/paradoxical_approach/paradoxical_approach_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">突然ですが、逆説的なアプローチが好きです（逆説ではなくて逆説的という微妙なニュアンスがポイント）。逆説とは「真理（結論）と反対なことを言っているようで、よく考えると一種の真理（結論と同じこと）を言い表している説（負けるが勝ちなど）」という意味（岩波国語辞典）。逆説のように考えることはシンプルだけれど機知に富んでいる。逆説的に考えることは発想の転換を促す。新しい発見は逆説的アプローチから生まれるのだ。とにかく。逆説的思考はかっこいい。クールだ。</div> <div class="read-more"> <a href="/2005/11/post_117.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-11T13:40:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月11日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/11/post_159.html">続・ブログとは何か</a> </h3>  </header> <div class="content">*   ブログとは何か - メモログ  1年半くらい前に書いた記事をきゅうに思い出して、その続きを書いてみようと思い立ちました。いい加減な私。以前に記した「自分をまとめるためのツール」という考え方は、まだ変わっていません。ただ、今はアウトプットするよりもインプットする方に関心が向いています。</div> <div class="read-more"> <a href="/2007/11/post_159.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-01-11T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年1月11日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2011/01/a_man_in_a_box.html">本：箱男</a> </h3>  </header> <div class="content"> 腰まである段ボール箱を頭からかぶっているという男、箱男の話です。読んでみて最初わけがわからず、「結局どういうことになったんだ?」という感じでしたが、巻末の平岡篤頼さんの解説を読みつつ、二度読みしてみて、何となく自分なりの解釈ができたような気がします。でも、やっぱりわけわからないのは、わけわからないのですが。</div> <div class="read-more"> <a href="/2011/01/a_man_in_a_box.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

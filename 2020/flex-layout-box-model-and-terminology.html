@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -616,4 +676,4 @@ The width or height of a flex container or flex item, whichever is in the cross 
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2020-04-04T15:57:26.000Z"> <span class="calendar-icon">📅</span> <span>2020年4月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/absolutely-positioned-flex-children.html">Absolutely-Positioned Flex Children</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #627e6a;"> <div style="background-color: #627e6a"> <img src="/assets/images/patrick-schneider-8bPJ0vagphw-unsplash/patrick-schneider-8bPJ0vagphw-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@patrick_schneider?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Patrick Schneider</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">前回のFlex Itemsに引き続き、4.1. Absolutely-Positioned Flex Childrenについてを読む。</div> <div class="read-more"> <a href="/2020/absolutely-positioned-flex-children.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-15T21:16:28.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月16日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/css-flexible-box-layout-module-introduction.html">CSS Flexible Box Layout Module Introduction</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #374a50;"> <div style="background-color: #374a50"> <img src="/assets/images/mick-haupt-XMLRK8xpEIs-unsplash/mick-haupt-XMLRK8xpEIs-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@rocinante_11?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Mick Haupt</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">前回CSS Display Moduleについて一通り確認したので、今回からはCSS Flexible Box Layout Moduleを確認しようかなと思っている。flex boxはCan I use flexboxによると、IE11以外では問題なく利用できる。IE11についてはいろいろ問題があるそうでPartial Supportという扱いになっている。Flexbugsにいろいろ問題やそれに対する回避策などが書いてある。</div> <div class="read-more"> <a href="/2020/css-flexible-box-layout-module-introduction.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-24T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月24日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/flex-flow-shorthand.html">Flex Direction and Wrap：the flex-flow shorthand</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #949593;"> <div style="background-color: #949593"> <img src="/assets/images/ben-mcleod-2UfVYE2S7B4-unsplash/ben-mcleod-2UfVYE2S7B4-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@ben_mcleod?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Ben McLeod</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">今回は5.3. Flex Direction and Wrap: the flex-flow shorthandについて。flex-flowは`flex-direction`と`flex-wrap`をまとめて設定できる。</div> <div class="read-more"> <a href="/2020/flex-flow-shorthand.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-06-30T14:09:49.000Z"> <span class="calendar-icon">📅</span> <span>2020年6月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/flex-shorthand.html">The flex Shorthand</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #3d5a66;"> <div style="background-color: #3d5a66"> <img src="/assets/images/steve-douglas-80Pr_AfC71Y-unsplash/steve-douglas-80Pr_AfC71Y-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@sldoug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Steve Douglas</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">今回は7. Flexibilityについて。</div> <div class="read-more"> <a href="/2020/flex-shorthand.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

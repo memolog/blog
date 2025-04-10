@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -575,4 +635,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-17T07:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月17日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/11/post_163.html">本：幽霊を捕まえようとした科学者たち</a> </h3>  </header> <div class="content"> 4,5ヶ月前に読んだ本なので、読み返しながら作文。幽霊の存在を科学的アプローチで立証しようと試みた科学者たちの物語です。科学系のノンフィクションは好きです。</div> <div class="read-more"> <a href="/2007/11/post_163.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-06-04T22:00:30.000Z"> <span class="calendar-icon">📅</span> <span>2008年6月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/06/post_177.html">本：第三の脳</a> </h3>  </header> <div class="content">皮膚の研究をしている著者が、皮膚についての考察をまとめた本です。六章構成で、最初の二章は皮膚の構造や機能について書かれており、残りの四章は皮膚に関する考察・仮説などが書かれております。文体が語り口調というのと、文中に著者の体験談が比較的多く含まれているのとで、全体的にエッセイ的な雰囲気がそこはかとなくあります。220ページ。斜め読みでさらっと読めます。「第三の脳」というふれこみは、刺激をどんな刺激かを判断して対処する組織を「考える臓器」たる脳の主要な機能とするならば、消化器はいわば「第二の脳」であるという説からきています。皮膚にも自律的な仕組みが組み込まれている、だからいわば「第三の脳」と言えるのではないか、みたいな感じ。</div> <div class="read-more"> <a href="/2008/06/post_177.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-20T16:49:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月21日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/post_143.html">アンビエント・ファインダビリティ</a> </h3>  </header> <div class="content"> ambient（周囲を取り巻く・完全に包囲している）とfindability（位置特定可能な・特定の対象物の発見のしやすさ）を二つあわせて、アンビエント・ファインダビリティ。直訳すると「周囲を取り巻く特定の対象物の発見のしやすさ」というような感じですが、私なりに解釈するとしたら「自分の取り囲む広大な情報の波から特定の情報を発見する」ようなことを表しているのかと思います。アンビエント・ファインダビリティの世界では、個人は「広大な情報から適切な素早く情報を入手する」ことが肝要で、本書では情報とは何か、情報の見つけやすさとは何かを伝え、最後に台頭しつつある情報を選りすぐる社会的な仕組み（タクソノミーとかフォークソノミーとか）などを次々と紹介しています。</div> <div class="read-more"> <a href="/2007/08/post_143.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-08-12T14:09:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年8月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/08/post_178.html">セレンディピティと仮説立案</a> </h3>  </header> <div class="content">今現在「セレンディピティの探求」という本を読んでいます。最初の方はセレンディピティの意味論的なところをあつかっていて、個人的にはあまり関心がそそらなかったのですが、今読んでいる「仮説立案」という章はなかなか面白いです。</div> <div class="read-more"> <a href="/2008/08/post_178.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

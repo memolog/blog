@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -573,4 +633,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2010-02-16T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年2月17日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/02/hooked.html">本：銀むつクライシス</a> </h3>  </header> <div class="content"> かなり前に読んだ本。マゼランアイナメ（和名：銀むつ）を漁獲するとある密猟船をオーストリアの巡視船が追跡するという話を主筋に、なぜ銀むつが乱獲されるようになったのかなどの背景を説明していきます。環境問題（魚の乱獲）を扱った本ですが密漁船と巡視船の攻防に緊迫感があって、普通の読み物としても面白い内容となっています。とくに南極でのチェイスにはドキドキしました。密漁船が他国の領海に入ってしまった場合の捕縛の難しさや国によって船舶の許可の基準が違うことによる弊害（規制の緩い国が違法船の温床となる）など、漁業ならではの問題にも端々触れています。</div> <div class="read-more"> <a href="/2010/02/hooked.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-08T14:28:19.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_129.html">最近読んだ本（２）</a> </h3>  </header> <div class="content">「最近読んだ本（１）」の続き。本を読んだときにする行動の一つが「文中に気になった箇所があったらページの端を折る」ことです。同じ本を繰り返し読むのは飽きるので、再読するときはその折り目を中心にその部分だけ読んだりします。ページに折り目がつく本ほど私にとって有益な本になります。</div> <div class="read-more"> <a href="/2006/04/post_129.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-25T04:26:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月25日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/post_144.html">新ハーバード流交渉術</a> </h3>  </header> <div class="content"> ハーバード流交渉術の続編的な性格も持っているため「新ハーバード交渉術」という日本語タイトルにしたそうです。原題は「Beyond Reason : Using Emotions As You Negotiate（理性を超えて：交渉に感情を用いる）」。</div> <div class="read-more"> <a href="/2007/08/post_144.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-27T16:05:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/01/post_172.html">本：もっとわがままになれ!</a> </h3>  </header> <div class="content">「わがまま」とは、yahoo辞書で調べると、「自分の思いどおりに振る舞うこと。また、そのさま。気まま。ほしいまま。自分勝手。「―を通す」「―な人」」という意味ですが、本書における「わがまま」とは、どちらかというと「日和見主義にならずに、自分が正しいと思うことや、やりたいと思うこと実践するために、アクションを起こすこと」という感じの意味。おかしな常識を疑うことや、創意工夫を奨励するための言葉としても、本書では「わがまま」という言葉を使って表現しています。</div> <div class="read-more"> <a href="/2008/01/post_172.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

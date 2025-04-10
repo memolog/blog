@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -590,4 +650,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-06T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月6日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/watir-webdriver_handling_javascript.html">watir-webdriver でjavascriptのポップアップをなんとかする</a> </h3>  </header> <div class="content">watirとwatir-webdriver違いはComparison with watir 1.x - watir-webdriver - GitHubにリストアップされていますが、ここにリストアップされていないもので大きな点というと、autoitを扱えなくなったという点があります。autoitはwindowsでのみ動作しない機能ですし、マルチプラットフォーム化しているwebdriverでは当たり前と言えば当たり前ですが。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver_handling_javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-13T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月13日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/watir-webdriver_with_firebug.html">watir-webdriver で開いたFirefoxのFirebugを起動状態にする</a> </h3>  </header> <div class="content">watir-webdriverからFirefoxを起動すると、webdriver用に調整された設定(profile)を使用します（厳密にはSelenium::Webdriverが用意した設定）。この調整された設定では、アドオンはwebdriverしか起動状態になりません。そのため、watir-webdriverで開いたFirefoxでFirebugを起動させたい場合は、用意された設定に予め追加しておく必要があります。具体的には下記のような感じ。Handle Security warining - Watir General | Google グループの情報を参考にしています。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver_with_firebug.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-05T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/watir-webdriver_drag-and-drop.html">watir-webdriver でドラッグアンドドロップをする</a> </h3>  </header> <div class="content">一つ前の記事でwatirはselenium-webdriverのラッパー的な感じであると申しました。なので、watir-webdriverでもselenium-webdriverで実装されているメソッドを直接使用することも可能です。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver_drag-and-drop.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-02-02T13:52:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年2月2日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/02/inspect_android_webview_with_weinre.html">weinreでAndroidのWebViewをInspectする</a> </h3>  </header> <div class="content">AndroidのWebViewをinspectするという話。調べてたら第3回　weinreを使ったiOS／Androidアプリの動作検証：もっと使おうPhoneGap／Cordova 2.0.0｜gihyo.jp ... 技術評論社にすでに詳細に書いてあったのでそちらも参考に。Remote Debugging Firefox OS with Weinre ✩Mozilla Hacks – the Web developer blogの話だと、Firefox OSでも同じようにinspectができるみたい。</div> <div class="read-more"> <a href="/2013/02/inspect_android_webview_with_weinre.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

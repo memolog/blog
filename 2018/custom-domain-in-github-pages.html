@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -577,4 +637,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-18T05:22:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/mt4mt3.html">MT4のダッシュボードにMT3ライクなブログ一覧を表示</a> </h3>  </header> <div class="content">*   My Blogs | Movalog Plugins: Movable Type plugins by Arvind Satyanarayan</div> <div class="read-more"> <a href="/2007/09/mt4mt3.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-06T14:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月6日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/08/chrome_workspace.html">Chrome の workspace を使う</a> </h3>  </header> <div class="content">Chrome DevTools Revolutions 2013 - HTML5 Rocksで紹介されていた話で、最近になってChromeにも追加されました。Workspaceを追加して、変更するファイルにマップを設定すると、ChromeのDeveloper tool上で行った変更がマップしたファイルにも反映されるようになります。</div> <div class="read-more"> <a href="/2013/08/chrome_workspace.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-27T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月27日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/watir-webdriver-avoid-ssl-error.html">watir-webdriver：証明書エラーを回避する</a> </h3>  </header> <div class="content">SSL証明書が（本番の環境の証明書を流用していてドメインが合わないとか有効期限切れとかで）エラーとなるような環境でテストする場合、watir-webdriverをそのまま実行しようとしても証明書エラーとなりその先に進むことができません。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver-avoid-ssl-error.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-09-09T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年9月10日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/09/test_content_security_policy_with_grunt-contrib-connect.html">grunt で Content Security Policy をテストする</a> </h3>  </header> <div class="content">Content Security Policy (CSP)をgrunt-contrib-connectで設定するのにはどうしたら良いかという話。  やり方としては、grunt-contrib-connect タスクで CORS を有効にする - メモログと同様、middlewareのオプションに追加する。</div> <div class="read-more"> <a href="/2013/09/test_content_security_policy_with_grunt-contrib-connect.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -581,4 +641,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2009-04-12T14:01:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年4月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/04/shinjuku-gyoen-1.html">兼六園菊桜とハクセキレイ</a> </h3>  </header> <div class="content">カメラから花見とバードウォッチングに趣味がシフトしつつある今日この頃。本日は新宿御苑で兼六園菊桜とハクセキレイを見つけてきました。野鳥はまだメジロ、シジュウカラ、ヒヨドリ、ムクドリくらいしか判別できない。ハクセキレイは今回初めて認知できました。これハクセキレイですよね・・シロクロな鳥を見つけたら、とりあえずシジュウカラと思うようにしてたので、若干自信薄。</div> <div class="read-more"> <a href="/2009/04/shinjuku-gyoen-1.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-04-08T21:09:42.000Z"> <span class="calendar-icon">📅</span> <span>2009年4月9日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/04/shinagawa-aqualium.html">品川水族館</a> </h3>  </header> <div class="content">先々週に品川水族館に行ってまいりました。水族館の中では基本的に薄暗く、フラッシュ撮影が禁止だったり、三脚も（但し書きはなかったですが、常識的に）禁止。高感度で撮影ができる最近のデジカメの強みを活かせるスポットとも言えるかもしれません。</div> <div class="read-more"> <a href="/2009/04/shinagawa-aqualium.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-05-06T08:38:49.000Z"> <span class="calendar-icon">📅</span> <span>2009年5月6日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/05/dp1.html">明治神宮と原宿と雨上がりとdp1</a> </h3>  </header> <div class="content">4月の中頃に明治神宮に行ってきました。初めて行く場所ではマイ最強装備であるEOS 5D mark IIを持って行くのですが、明治神宮には何回か訪れているので今回は手軽なDP1を持参。この日は雨上がりだったので、ひさびさにサーキュラーをつけてみました。DP1でサーキュレータを利用すると、昼間でも光量が足りずにシャッタースピードが遅くなりがちですが、そこは絞り開放で撮るとか、日陰では撮らないとか、ISO感度を200にするとかして光量を工面（あと、頑張って固定する）。この光量を工面しつつ、カメラをぶらさないようになんとかかんとか工夫して撮るのが個人的にDP1の楽しいところ。</div> <div class="read-more"> <a href="/2009/05/dp1.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-04-07T23:21:16.000Z"> <span class="calendar-icon">📅</span> <span>2009年4月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/04/sacasiso.html">Sacas夜景とISO感度</a> </h3>  </header> <div class="content">オフィス近くのSacasと帰りがけの四ツ谷で夜景を撮ってみました。三脚なしの直立撮りでブレも少なく撮れました。ISO感度の向上には目を見張るものがありますね（よく知りませんけど・・）。6400でも問題なく奇麗。</div> <div class="read-more"> <a href="/2009/04/sacasiso.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

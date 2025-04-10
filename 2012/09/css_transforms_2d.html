@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -596,4 +656,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-15T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月15日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/09/css_transforms_2d_2.html">CSS Transforms：transform-origin</a> </h3>  </header> <div class="content">CSS Transforms (2D) - メモログの続きで、transform-originについて。回転などtransformの変換はデフォルトでは要素の中心（50&amp;#x25; 50&amp;#x25;）を軸に行われる。たとえば、rotate(45deg)の場合は以下のような感じ</div> <div class="read-more"> <a href="/2012/09/css_transforms_2d_2.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-26T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月27日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/09/css_transforms_sample.html">CSS Transforms：くるくる回るサイコロのサンプル</a> </h3>  </header> <div class="content">CSS Transforms関連記事のまとめ的意味を込めて、くるくる回るサイコロを作成してみました。下のサイコロ（の開き）をクリック（またはhover）すると、クリックした間だけアニメーションします。CSSのみ（と思ったらiPhoneだと期待したようにactive状態にならないので、touchstartしたときにdice-actionというclassを追加するようにJavascriptを入れた）。</div> <div class="read-more"> <a href="/2012/09/css_transforms_sample.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-22T12:26:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月22日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/09/css_transforms_3d_and_perspective.html">CSS Transforms：perspective</a> </h3>  </header> <div class="content">3D Transform Renderingについては、下記のように記述されている。</div> <div class="read-more"> <a href="/2012/09/css_transforms_3d_and_perspective.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-23T12:24:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月23日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/09/css_transforms_3d_and_transform-style.html">CSS Transforms：3D rendering context (transform-style)</a> </h3>  </header> <div class="content">CSS Transforms: (3D/perspective) - メモログの続きで3d rendering contextについて。CSS TransformsのExample7から9を紹介するだけという内容。</div> <div class="read-more"> <a href="/2012/09/css_transforms_3d_and_transform-style.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

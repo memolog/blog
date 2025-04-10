@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -579,4 +639,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-08T17:05:05.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月9日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_130.html">ブログとは何か</a> </h3>  </header> <div class="content">もしも「ブログとは何か？」と尋ねられたら、私は「WEBページを作成するためのWEBアプリケーション」と答える。「ブログとは○○である」という議論は、たいていブログに対する個人的な主張（あるいは社会学）や、ブログの使い方の提案であって「ブログ」そのものの意味を扱った議論ではない。これは「ブログとは○○である」論が間違っているというわけではなく、単純に質問に対する回答が異なるという話。大した話ではない。たとえば「はさみとは何か？」と尋ねられたら、「はさみとは物をはさみ切るための道具（岩波国語辞典）」と答えるのが適切だろう。それ以外はすべて「用例（あるいは意味の拡張）」であって、本来的な意味ではない。質問に対する答えを間違えると「（自分にとって）ブログとはそうではない）」という議論が巻き起こる。質問の答えを間違えてはいけない。</div> <div class="read-more"> <a href="/2006/04/post_130.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-08T14:28:19.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_129.html">最近読んだ本（２）</a> </h3>  </header> <div class="content">「最近読んだ本（１）」の続き。本を読んだときにする行動の一つが「文中に気になった箇所があったらページの端を折る」ことです。同じ本を繰り返し読むのは飽きるので、再読するときはその折り目を中心にその部分だけ読んだりします。ページに折り目がつく本ほど私にとって有益な本になります。</div> <div class="read-more"> <a href="/2006/04/post_129.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-07-12T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年7月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/07/some_thoughts_on_jogging.html">ジョギング中の頭の中</a> </h3>  </header> <div class="content">細く長く、止めたり再開したりしてるジョギングですが、している最中は特にすることもないので（ジョギングしているんですが）、とりとめもないことを考えています。考え事をしている方が、足に意識が行き過ぎないので、疲れにくい、気がするのです。</div> <div class="read-more"> <a href="/2009/07/some_thoughts_on_jogging.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-07T13:27:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_148.html">ハーバードでは教えない実践経営学</a> </h3>  </header> <div class="content"> 1985年に「マコーマックのマンビジネス」というタイトルで出版された本の新訳版です。いわゆるビジネスに必要な「処世術」、パートナーシップの構築など、筆者曰く「ハーバード・ビジネススクールでは教えたくても教えられない（p8）」内容を扱っています。「人間」「営業と交渉」「企業経営」の３部構成。</div> <div class="read-more"> <a href="/2007/09/post_148.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -575,4 +635,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-03-18T05:32:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年3月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/03/responsive-is.html">Responsive.is：レスポンシブデザイン対応を確認できるサイト</a> </h3>  </header> <div class="content">Responsive.isというサイトで 自分のサイトがiPhoneやiPadなどでどのように表示されるかを疑似体験することができます（via Responsive.is: Display and present responsive web designs | Konigi）。実際には解像度の違いがあるのでiPhone4以降や最新のiPadでは画像の解像感に違いはありますけど、手元にiPhoneやiPadがない場合に、レスポンシブデザインに対応した自分のサイトがどのように見えるかを確認するには十分かなと思います。</div> <div class="read-more"> <a href="/2012/03/responsive-is.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-26T03:28:07.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月26日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/09/phonegap21-xcode45.html">PhoneGap2.1とXcode4.5でエラー</a> </h3>  </header> <div class="content">PhoneGapの2.1を使用して作成したプロジェクトを、Xcodeの4.5でRunしたら下記のようなエラーが発生。  ``` clang: error: no such file or directory:</div> <div class="read-more"> <a href="/2012/09/phonegap21-xcode45.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-12-21T12:11:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年12月21日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/12/android_camera_kills_phonegap_app.html">PhoneGap：Androidでカメラを使用するとアプリが止まる</a> </h3>  </header> <div class="content">PhoneGapからAndroidでカメラを起動して撮影すると、たまにアプリが止まってしまうという問題について。  これはカメラが起動している間は、PhoneGapのアプリ本体はバックグラウンドにいるので、その間にガベージコレクタがメモリを解放しようとして、アプリ本体のアクティビティをkillするのだそう（おそらくカメラ機能はメモリをたくさん使う）。</div> <div class="read-more"> <a href="/2012/12/android_camera_kills_phonegap_app.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2015-08-13T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2015年8月13日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2015/08/encrypt-with-cryptswift-and-then-decrypt-it-with-nodejs.html">CryptoSwiftを使ってAES-256-CBCで暗号化してNodeで復号化する</a> </h3>  </header> <div class="content">iOS側でCryptoSwiftを使ってAES-256-CBCで暗号化したデータを、Node.jsで受け取って復号化するという話。</div> <div class="read-more"> <a href="/2015/08/encrypt-with-cryptswift-and-then-decrypt-it-with-nodejs.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -574,4 +634,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2008-02-03T04:40:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年2月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/02/target_pseudo_selector.html">target疑似クラスを使って、表示をオン・オフする</a> </h3>  </header> <div class="content">*   Vitamin Features » Stay on :target *   :target pseudo selector tutorial - CSS3 . Info</div> <div class="read-more"> <a href="/2008/02/target_pseudo_selector.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-01-27T22:05:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年1月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/01/style_scoped.html">style要素のscoped属性</a> </h3>  </header> <div class="content">Firefox Development Highlights - H.264 &amp; MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。</div> <div class="read-more"> <a href="/2013/01/style_scoped.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-01T05:23:27.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月1日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/about-typedarray-prototype-sort.html">TypedArray.prototype.sort について</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #826c4e;"> <div style="background-color: #826c4e"> <img src="/assets/images/marcus-depaula-43304-unsplash/marcus-depaula-43304-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/tk7OAxsXNL0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Marcus dePaula</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">前回の「Array.prototype.sort について」に引き続き、今度はTypedArrayのsortについて。実装は別だけど対応は基本的に同じなので簡単に。</div> <div class="read-more"> <a href="/2018/about-typedarray-prototype-sort.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-10-15T15:45:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年10月16日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/10/watir_166.html">watir 1.6.6 リリース</a> </h3>  </header> <div class="content">2週間近く前ですが、watirの1.6.6がリリースされましたね。変更点はWatir 1.6.6 final releasedに書かれている通りで、個人的には確実に使用するclick no waitのメソッドが修正されているのが大きいなあと思います。以前に「watir: click no wait が動作しない - メモログ」で行った修正で動作することにはするのですが、処理に妙に時間がかかってしまってました。1.6.6ではそういう副作用もなく解消されているようです。</div> <div class="read-more"> <a href="/2010/10/watir_166.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

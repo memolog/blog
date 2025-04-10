@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -577,4 +637,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-01T14:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月1日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_145.html">伝説のホテルマン「おもてなし」の極意</a> </h3>  </header> <div class="content"> キャピトル東急ホテル エグゼクティブコンシェルジェであった加藤健二さんの本。5部構成で、1〜3部が加藤さんの半生記、4部が加藤流サービスの各論といった感じで、5部はこぼれ話といった感じです。</div> <div class="read-more"> <a href="/2007/09/post_145.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-05T15:31:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月6日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/01/post_165.html">映画：バベル</a> </h3>  </header> <div class="content"> バベル（BABEL）をDVDで見ました。周囲の人の前評判はかなり悪かったのですが、個人的にはそんなに悪くなかったです。時間軸が並行して話が展開する映画が、個人的な趣向に合っているためかもしれません。同じ理由でペイチェックやハリー・ポッターとアズカバンの囚人とかもわりと好み。</div> <div class="read-more"> <a href="/2008/01/post_165.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-12-30T01:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年12月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/12/learning-as-a-job.html">本：職業としての学問</a> </h3>  </header> <div class="content"> マックス・ウェーバーの「職業としての学問」を「下流社会」の三浦展さんが現代訳として意訳しています。内容としては、学問することを職業としようと考えている学生に対して、努力をしても職が得られるとは限らないし、才能の多寡によって出世が決まるとも限らない、という職業としての現実を諭していくといったもの。とにかく「安心で確実な未来などなく、答えなどない」という現実感をひたすらつきつけていきます。学問を志すにあたってどのような心構えであるべきかと言えば、ひたむきに取り組んでいくことだろうと述べている。そこから得られる「ひらめき」によって、後世に残るような業績を成し遂げることができると。しかし、だからといってひたむきな人が必ずひらめきを得られるわけではない、努力を重ねてもまったくひらめかない人もいるし、やはり運も必要であると言ってしまう。</div> <div class="read-more"> <a href="/2009/12/learning-as-a-job.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-11T13:40:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月11日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/11/post_159.html">続・ブログとは何か</a> </h3>  </header> <div class="content">*   ブログとは何か - メモログ  1年半くらい前に書いた記事をきゅうに思い出して、その続きを書いてみようと思い立ちました。いい加減な私。以前に記した「自分をまとめるためのツール」という考え方は、まだ変わっていません。ただ、今はアウトプットするよりもインプットする方に関心が向いています。</div> <div class="read-more"> <a href="/2007/11/post_159.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

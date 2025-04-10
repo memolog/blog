@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -574,4 +634,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-01T14:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月1日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_145.html">伝説のホテルマン「おもてなし」の極意</a> </h3>  </header> <div class="content"> キャピトル東急ホテル エグゼクティブコンシェルジェであった加藤健二さんの本。5部構成で、1〜3部が加藤さんの半生記、4部が加藤流サービスの各論といった感じで、5部はこぼれ話といった感じです。</div> <div class="read-more"> <a href="/2007/09/post_145.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-10-06T16:05:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年10月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/10/post_155.html">ダメなら、さっさとやめなさい！</a> </h3>  </header> <div class="content">原題は「THE DIP」。dipは「くぼみ」とかそういう意味で、本書では「大勢の足をすくう落とし穴（この本では「運命の谷」と呼ぶ）（p9）」という意味。本書では、人生の壁（運命の谷）にぶつかったときに、闇雲に進むのではなく、打ち込む価値がなければ退く（やめる）ことも視野に入れることを喚起しています。分量的には100ページ前後で、1時間〜2時間くらいでさっと読むことができます。</div> <div class="read-more"> <a href="/2007/10/post_155.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-03T14:20:26.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_147.html">頭のいい人の時間攻略法</a> </h3>  </header> <div class="content"> 最近、勉強本がブームなのかよくわかりませんが、この手の本が書店にたくさん並んでいます。ついついなんとなく買ってしまいました。</div> <div class="read-more"> <a href="/2007/09/post_147.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-07-12T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年7月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/07/some_thoughts_on_jogging.html">ジョギング中の頭の中</a> </h3>  </header> <div class="content">細く長く、止めたり再開したりしてるジョギングですが、している最中は特にすることもないので（ジョギングしているんですが）、とりとめもないことを考えています。考え事をしている方が、足に意識が行き過ぎないので、疲れにくい、気がするのです。</div> <div class="read-more"> <a href="/2009/07/some_thoughts_on_jogging.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -574,4 +634,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2008-06-09T12:45:46.000Z"> <span class="calendar-icon">📅</span> <span>2008年6月9日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/06/text-align_justify.html">text-align：justifyで段落を両端揃えにする</a> </h3>  </header> <div class="content">*   text-align−スタイルシートリファレンス  「text-align:justify」は、対応していないブラウザがあるから使わない・・と思っていたのでが、今ではどのブラウザでもだいたい対応しているということに今さら気がつきました。いちど見捨てたプロパティにはなかなか目を向けないものだなと思った次第でございます。</div> <div class="read-more"> <a href="/2008/06/text-align_justify.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-03-04T15:21:05.000Z"> <span class="calendar-icon">📅</span> <span>2007年3月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/03/post_139.html">フォントのサイズを段階的に変更するボタン</a> </h3>  </header> <div class="content"> Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。</div> <div class="read-more"> <a href="/2007/03/post_139.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-04T07:19:43.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/load-jquery-in-developer-console.html">Load jQuery library in the Chrome developer console</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #4a5e69;"> <div style="background-color: #4a5e69"> <img src="/assets/images/harsh-jain-xoMeq3-GwTY-unsplash/harsh-jain-xoMeq3-GwTY-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="554"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@harshjain1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Harsh Jain</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">スクリプト内のDOM操作でjQueryを使っているけれど、処理がスクリプト内で完結していて、GlobalにはjQueryをロードさせていないという場合がある。あると思う。  そういった場合、例えばそのスクリプトに新しい実装を入れたいけどjQueryでのDOM操作が自分の期待通りに行えるかをChromeのデベロッパーツールでちょっと確認したいみたいな時に少し困る。大して困らない気もするけど、少し手間ではある。</div> <div class="read-more"> <a href="/2020/load-jquery-in-developer-console.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-11-28T11:37:23.000Z"> <span class="calendar-icon">📅</span> <span>2006年11月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/11/html_linthtml.html">HTML LINTから学んだHTMLとアクセシビリティ</a> </h3>  </header> <div class="content">CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。</div> <div class="read-more"> <a href="/2006/11/html_linthtml.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

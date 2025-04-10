@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -576,4 +636,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2011-06-19T22:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年6月20日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2011/06/books_around_me.html">本とわたし</a> </h3>  </header> <div class="content">2008年の9月ごろからgoodreadsというサービスで読んだ本の履歴をつけていたのですが、履歴にたまった本が200冊くらいになりました。1年平均70冊くらい読んでいるみたいですね。（内容的/量的に）薄い本とかも含まれるので、読んだぞと実感を込めて言えるのは40〜50冊といったところかなあという感じですけど。とはいえ、ほとんどすべての本について詳細は覚えてないですけど。</div> <div class="read-more"> <a href="/2011/06/books_around_me.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-16T05:29:40.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月16日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_133.html">最近読んだ本（３）</a> </h3>  </header> <div class="content">「最近読んだ本（１）」「最近読んだ本（２）」の続き。読書が趣味ですと自信を持って言うにはどのくらい読めば良いのでしょう。</div> <div class="read-more"> <a href="/2006/04/post_133.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-10-14T10:58:03.000Z"> <span class="calendar-icon">📅</span> <span>2007年10月14日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/10/post_156.html">本：捨てられるホワイトカラー</a> </h3>  </header> <div class="content"> ホワイトカラーの転職を題材にした体験ルポ。序盤から中盤までは転職のカウンセリングとか、転職指導などの体験ルポが中心で、中盤から終盤にかけて「ネットワーキング」をするための活動が中心です。300ページくらいあるので、分量的にはまあまあありますが、情景描写とか著者の感情描写などが多いので、そのあたりをざっと読んでいくと2〜3日で読みこなせる感じです。</div> <div class="read-more"> <a href="/2007/10/post_156.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-01-03T03:45:53.000Z"> <span class="calendar-icon">📅</span> <span>2009年1月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/01/post_180.html">今年の抱負（とデザイン変更）</a> </h3>  </header> <div class="content">ブログの見た目を少し変えてみたのです。シンプルに。jqueryを試してみたのだが、TypePad Connectで利用しているYUIと相性がよろしくないよう。回避方法が皆目見当がつかなかったので、TypePad Connect はとりあえずクローズした。とりあえず。暇なときにちょこちょこ変えていこうと思う。</div> <div class="read-more"> <a href="/2009/01/post_180.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

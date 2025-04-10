@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -575,4 +635,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-26T03:28:07.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月26日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/09/phonegap21-xcode45.html">PhoneGap2.1とXcode4.5でエラー</a> </h3>  </header> <div class="content">PhoneGapの2.1を使用して作成したプロジェクトを、Xcodeの4.5でRunしたら下記のようなエラーが発生。  ``` clang: error: no such file or directory:</div> <div class="read-more"> <a href="/2012/09/phonegap21-xcode45.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-04T15:46:10.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/yslow_1_minimize_http_requests.html">YSLOW 勉強：1：Minimize HTTP Requests</a> </h3>  </header> <div class="content">*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。</div> <div class="read-more"> <a href="/2007/08/yslow_1_minimize_http_requests.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-27T05:31:39.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月27日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/pass-arguments-to-npm-run-script.html">npm run script に引数を渡す</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #bec0c1;"> <div style="background-color: #bec0c1"> <img src="/assets/images/chelsea-aaron-312666-unsplash/chelsea-aaron-312666-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/IeTmKYls1vM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Chelsea Aaron</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">この記事の上にあるFeatured Imageを生成するときに毎回`primitive_bulk`のコマンドを入力していたのだけど、 しかしさすがに面倒になってきたので、`npm run script` にショートカットを用意してショートカットに引数を渡すようにしてみた。</div> <div class="read-more"> <a href="/2018/pass-arguments-to-npm-run-script.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-02-02T13:52:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年2月2日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/02/inspect_android_webview_with_weinre.html">weinreでAndroidのWebViewをInspectする</a> </h3>  </header> <div class="content">AndroidのWebViewをinspectするという話。調べてたら第3回　weinreを使ったiOS／Androidアプリの動作検証：もっと使おうPhoneGap／Cordova 2.0.0｜gihyo.jp ... 技術評論社にすでに詳細に書いてあったのでそちらも参考に。Remote Debugging Firefox OS with Weinre ✩Mozilla Hacks – the Web developer blogの話だと、Firefox OSでも同じようにinspectができるみたい。</div> <div class="read-more"> <a href="/2013/02/inspect_android_webview_with_weinre.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

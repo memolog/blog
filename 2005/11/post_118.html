@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -580,4 +640,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2009-01-03T03:45:53.000Z"> <span class="calendar-icon">📅</span> <span>2009年1月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/01/post_180.html">今年の抱負（とデザイン変更）</a> </h3>  </header> <div class="content">ブログの見た目を少し変えてみたのです。シンプルに。jqueryを試してみたのだが、TypePad Connectで利用しているYUIと相性がよろしくないよう。回避方法が皆目見当がつかなかったので、TypePad Connect はとりあえずクローズした。とりあえず。暇なときにちょこちょこ変えていこうと思う。</div> <div class="read-more"> <a href="/2009/01/post_180.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-11-15T17:44:28.000Z"> <span class="calendar-icon">📅</span> <span>2005年11月16日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/11/post_117.html">逆説的アプローチがかっこいい</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #d8d3c9;"> <picture> <source srcset="/assets/images/paradoxical_approach/paradoxical_approach_small.png, /assets/images/paradoxical_approach/paradoxical_approach_small@2x.png 2x, /assets/images/paradoxical_approach/paradoxical_approach_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/paradoxical_approach/paradoxical_approach_medium.webp, /assets/images/paradoxical_approach/paradoxical_approach_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/paradoxical_approach/paradoxical_approach_medium.png, /assets/images/paradoxical_approach/paradoxical_approach_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/paradoxical_approach/paradoxical_approach_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">突然ですが、逆説的なアプローチが好きです（逆説ではなくて逆説的という微妙なニュアンスがポイント）。逆説とは「真理（結論）と反対なことを言っているようで、よく考えると一種の真理（結論と同じこと）を言い表している説（負けるが勝ちなど）」という意味（岩波国語辞典）。逆説のように考えることはシンプルだけれど機知に富んでいる。逆説的に考えることは発想の転換を促す。新しい発見は逆説的アプローチから生まれるのだ。とにかく。逆説的思考はかっこいい。クールだ。</div> <div class="read-more"> <a href="/2005/11/post_117.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-03-08T08:09:09.000Z"> <span class="calendar-icon">📅</span> <span>2018年3月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/book-mind-control.html">「マインド・コントロール」と「影響力の正体」を読んだ</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dcdddf;"> <div style="background-color: #dcdddf"> <img src="/assets/images/federica-galli-449563-unsplash/federica-galli-449563-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="619"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/aiqKc07b5PA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Federica Galli</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">マインド・コントロールと影響力の正体という本を読んだ。マインドコントロールとは、Wikipediaには「他人の思想や情報をコントロールし、個人が意思決定する際に、特定の結論へと誘導する技術を指す概念」と書いてある。「マインド・コントロール」の方は題名そのまんまマインドコントロールに扱った本であるけど、「影響力の正体」の方も「相手をYESという結論に導く技術」という意味でマインドコントロールを扱った本と言える。どちらの本も内容も人間の根本的な性質を利用したものでかなりやっかいな技術だなと思った。</div> <div class="read-more"> <a href="/2018/book-mind-control.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-25T04:26:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月25日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/post_144.html">新ハーバード流交渉術</a> </h3>  </header> <div class="content"> ハーバード流交渉術の続編的な性格も持っているため「新ハーバード交渉術」という日本語タイトルにしたそうです。原題は「Beyond Reason : Using Emotions As You Negotiate（理性を超えて：交渉に感情を用いる）」。</div> <div class="read-more"> <a href="/2007/08/post_144.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -575,4 +635,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2006-11-28T11:37:23.000Z"> <span class="calendar-icon">📅</span> <span>2006年11月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/11/html_linthtml.html">HTML LINTから学んだHTMLとアクセシビリティ</a> </h3>  </header> <div class="content">CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。</div> <div class="read-more"> <a href="/2006/11/html_linthtml.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2004-12-22T21:15:18.000Z"> <span class="calendar-icon">📅</span> <span>2004年12月23日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2004/12/post_38.html">ブロックとインラインについて</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #d6d1c6;"> <picture> <source srcset="/assets/images/about_block_and_inline/about_block_and_inline_small.png, /assets/images/about_block_and_inline/about_block_and_inline_small@2x.png 2x, /assets/images/about_block_and_inline/about_block_and_inline_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/about_block_and_inline/about_block_and_inline_medium.webp, /assets/images/about_block_and_inline/about_block_and_inline_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/about_block_and_inline/about_block_and_inline_medium.png, /assets/images/about_block_and_inline/about_block_and_inline_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/about_block_and_inline/about_block_and_inline_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。</div> <div class="read-more"> <a href="/2004/12/post_38.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-06T14:45:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月6日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/wysiwyg_iedomobjectembed.html">WYSIWYG ：IEのDOMではobjectタグの中にあるembedタグを認識しない？</a> </h3>  </header> <div class="content">あいまいなタイトル。実のところ、詳しくはよくわかっていないのですが、どうもIEのDOMではobjectタグの中にあるembedタグは削ってしまうようなのである。謎なのです。  webアプリケーションでよくあるWYSIWYGエディタ（リッチテキスト）では、すごくざっくりいうと、Javascriptで入力フォームであるiframe中のHTMLをツールボタンのクリックなどのイベントにあわせて、書き換えて動かしている。言い換えると、ブラウザが持っている情報を引き出して、変更して押し込んで、というやりとりをしている。そのため、ブラウザ側で期待されるデータを出力してくれないと、エディタから情報が消えてしまったりする可能性がある。</div> <div class="read-more"> <a href="/2007/08/wysiwyg_iedomobjectembed.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-04-26T15:40:56.000Z"> <span class="calendar-icon">📅</span> <span>2009年4月27日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/04/post_185.html">リンクの色の方が優先される理由</a> </h3>  </header> <div class="content">たとえば下記のようなHTMLに、下記のようなCSSを指定した場合、aタグに指定したCSSの方が有効に作用する。  ```html &lt;h3 class=&quot;entry-header&quot;&gt;&lt;a href=&quot;/post.html&quot;&gt;記事のタイトル&lt;/a&gt;&lt;/h3&gt;</div> <div class="read-more"> <a href="/2009/04/post_185.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

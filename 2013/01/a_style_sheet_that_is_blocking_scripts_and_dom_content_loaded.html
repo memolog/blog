@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -581,4 +641,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2013-07-31T11:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年7月31日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/07/grunt-contrib-connect_with_cors.html">grunt-contrib-connect タスクで CORS を有効にする</a> </h3>  </header> <div class="content">grunt-contrib-jasmineのThird party templatesにあるCode coverage output with Istanbulを使ってjasmineテストのcoverageの計測をしようとしているのですが、XMLHttpRequestを実行するところでCross Originの制約にひっかかってエラーになってしまう。localhostで実行されるのが理由かなとは思われるのですが、普通にjasmineテストを実行した場合はひっかからない不思議...（エラーに「file://」が出ているのも不明） jasmineのcoverage用のタスクのオプションでhostをlocalhostに指定していなかったためだった。そのため、localfile system (file://) で起動していた... 設定を追加したらCORSの設定は必要なかった。</div> <div class="read-more"> <a href="/2013/07/grunt-contrib-connect_with_cors.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-02-03T04:40:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年2月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/02/target_pseudo_selector.html">target疑似クラスを使って、表示をオン・オフする</a> </h3>  </header> <div class="content">*   Vitamin Features » Stay on :target *   :target pseudo selector tutorial - CSS3 . Info</div> <div class="read-more"> <a href="/2008/02/target_pseudo_selector.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-29T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/05/invited_elements.html">独自要素を作成する</a> </h3>  </header> <div class="content">少し前にEric&#39;s Archived Thoughts:Invented Elements、Eric&#39;s Archived Thoughts:Customizing Your Markup、Eric&#39;s Archived Thoughts:Element Customizationで解説されていた話。</div> <div class="read-more"> <a href="/2012/05/invited_elements.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-07T05:47:14.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/insertion-sort-in-javascript.html">Insertion Sort in JavaScript</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #095367;"> <div style="background-color: #095367"> <img src="/assets/images/mingwei-dong-651103-unsplash/mingwei-dong-651103-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="550"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">mingwei dong</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Selection Sort in JavaScriptの記事から引き続き。内容は挿入ソートからの抜粋なので詳細はそちらを参照。</div> <div class="read-more"> <a href="/2018/insertion-sort-in-javascript.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

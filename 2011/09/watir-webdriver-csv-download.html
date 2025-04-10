@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -583,4 +643,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-13T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月13日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/watir-webdriver_with_firebug.html">watir-webdriver で開いたFirefoxのFirebugを起動状態にする</a> </h3>  </header> <div class="content">watir-webdriverからFirefoxを起動すると、webdriver用に調整された設定(profile)を使用します（厳密にはSelenium::Webdriverが用意した設定）。この調整された設定では、アドオンはwebdriverしか起動状態になりません。そのため、watir-webdriverで開いたFirefoxでFirebugを起動させたい場合は、用意された設定に予め追加しておく必要があります。具体的には下記のような感じ。Handle Security warining - Watir General | Google グループの情報を参考にしています。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver_with_firebug.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-03T12:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2011/09/save-screenshot-with-watir-webdriver.html">watir-webdriver でスクリーンショットを撮る</a> </h3>  </header> <div class="content">小ネタでも挟もうではありませんか。watir-webdriverを使って簡単にスクリーンショット撮ることができます。Macにはrubyがもともと入っているので、事前準備はwatir-webdriverをインストールするだけです。インストールは、ターミナルを開いて下記のコマンドを実行する。</div> <div class="read-more"> <a href="/2011/09/save-screenshot-with-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-12T05:26:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/convert-video-files-with-ffmpegjs-worker.html">Convert video files with the ffmpeg.js worker</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #353330;"> <div style="background-color: #353330"> <img src="/assets/images/greg-rakozy-0LU4vO5iFpM-unsplash/greg-rakozy-0LU4vO5iFpM-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="507"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@grakozy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Greg Rakozy</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Convert screen capture to animation GIFの話でffmpegを使ってキャプチャをGIFに変えるということをした。Macだとffmpegのインストールは簡単だしその方が良いと思うけど、環境によっては難しい場合もあるだろうし、そもそもインストールしてはならない状況もあるかもしれない。そんな時にffmpeg.jsをWeb Workersで動かすのはどうだろうかと思ってやってみた。</div> <div class="read-more"> <a href="/2020/convert-video-files-with-ffmpegjs-worker.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-14T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月14日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/watir-webdriver_with_firemobilesimulator.html">watir-webdriver でFireMobileSimulatorを使用する</a> </h3>  </header> <div class="content">watir-webdriver で開いたFirefoxのFirebugを起動状態にすると同じ要領で、FireMobileSimulatorを起動した状態でwatir-webdriverを実行することができます。ただFirebugに比べると若干設定の追加が必要です。具体的には下記のような感じ。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver_with_firemobilesimulator.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

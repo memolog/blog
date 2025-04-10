@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -582,4 +642,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-28T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月29日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/optimize_css_selectors.html">CSSセレクタを効率的な記述にする</a> </h3>  </header> <div class="content">Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。</div> <div class="read-more"> <a href="/2010/12/optimize_css_selectors.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-11-13T16:21:45.000Z"> <span class="calendar-icon">📅</span> <span>2005年11月14日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/11/post_116.html">時代は黒ジャケットからグレージャケットへ</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c4bcb1;"> <picture> <source srcset="/assets/images/gray_jacket/gray_jacket_small.png, /assets/images/gray_jacket/gray_jacket_small@2x.png 2x, /assets/images/gray_jacket/gray_jacket_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/gray_jacket/gray_jacket_medium.webp, /assets/images/gray_jacket/gray_jacket_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/gray_jacket/gray_jacket_medium.png, /assets/images/gray_jacket/gray_jacket_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/gray_jacket/gray_jacket_medium.png" alt width="750" height="1125" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">Web Acrossのサイトでは渋谷・原宿・渋谷を歩く人のファッション動向を「今月の定点観測」として情報発信しています。毎月見ているわけではありませんが、たまに見ると新しい発見があって面白い。</div> <div class="read-more"> <a href="/2005/11/post_116.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-08T14:21:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/06/set_input_width_to_100_percent.html">inputでwidthを100%で使うと若干はみ出る</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #855d41;"> <div style="background-color: #855d41"> <img src="/assets/images/henrique-ferreira-306706-unsplash/henrique-ferreira-306706-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/ySgSnJdPhZg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Henrique Ferreira</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">input要素にwidth:100%;を指定すると、微妙に包含ブロックからはみ出す。  なんでだろうなあと思っていたんですけど、input要素にはブラウザのデフォルトでpaddingやborderが入っているので、width:100%;とするとpaddingやborderのサイズ分はみ出してしまうということでした。</div> <div class="read-more"> <a href="/2012/06/set_input_width_to_100_percent.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-02T16:26:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/css.html">拡張CSSで角丸コーナーを作る</a> </h3>  </header> <div class="content">*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained</div> <div class="read-more"> <a href="/2007/08/css.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

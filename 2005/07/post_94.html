@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -574,4 +634,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2005-11-26T17:33:44.000Z"> <span class="calendar-icon">📅</span> <span>2005年11月27日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/11/post_120.html">ランド・オブ・プレンティを見てきました。</a> </h3>  </header> <div class="content">*   ランド・オブ・プレンティ  &gt; アメリカとヨーロッパの市民のうえに暗い影が落ちた。わたしは一生をテロの恐怖のなかで過ごしてきたイスラエル人として、次のことを断言できる。テロは人生を苦いものにする。人々は「軍事的な」気構えでふるまうようになり、絶えまないストレスにさらされることになる。ー「死を生きながら」p172より</div> <div class="read-more"> <a href="/2005/11/post_120.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-02-16T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年2月17日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/02/hooked.html">本：銀むつクライシス</a> </h3>  </header> <div class="content"> かなり前に読んだ本。マゼランアイナメ（和名：銀むつ）を漁獲するとある密猟船をオーストリアの巡視船が追跡するという話を主筋に、なぜ銀むつが乱獲されるようになったのかなどの背景を説明していきます。環境問題（魚の乱獲）を扱った本ですが密漁船と巡視船の攻防に緊迫感があって、普通の読み物としても面白い内容となっています。とくに南極でのチェイスにはドキドキしました。密漁船が他国の領海に入ってしまった場合の捕縛の難しさや国によって船舶の許可の基準が違うことによる弊害（規制の緩い国が違法船の温床となる）など、漁業ならではの問題にも端々触れています。</div> <div class="read-more"> <a href="/2010/02/hooked.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-08T14:28:19.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_129.html">最近読んだ本（２）</a> </h3>  </header> <div class="content">「最近読んだ本（１）」の続き。本を読んだときにする行動の一つが「文中に気になった箇所があったらページの端を折る」ことです。同じ本を繰り返し読むのは飽きるので、再読するときはその折り目を中心にその部分だけ読んだりします。ページに折り目がつく本ほど私にとって有益な本になります。</div> <div class="read-more"> <a href="/2006/04/post_129.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-08-14T17:18:05.000Z"> <span class="calendar-icon">📅</span> <span>2005年8月15日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/08/post_98.html">本：石油の終焉</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dcd4c9;"> <picture> <source srcset="/assets/images/the_end_of_oil/the_end_of_oil_small.png, /assets/images/the_end_of_oil/the_end_of_oil_small@2x.png 2x, /assets/images/the_end_of_oil/the_end_of_oil_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/the_end_of_oil/the_end_of_oil_medium.webp, /assets/images/the_end_of_oil/the_end_of_oil_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/the_end_of_oil/the_end_of_oil_medium.png, /assets/images/the_end_of_oil/the_end_of_oil_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/the_end_of_oil/the_end_of_oil_medium.png" alt width="750" height="500" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">現在のエネルギー事情について多角的な視点で考察しており、いろんな人に読んでもらいたい本です。500ページ超の分量なので読むの大変かと思いますが、読み応えはあります。</div> <div class="read-more"> <a href="/2005/08/post_98.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -583,4 +643,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-30T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2017/hello-hexo.html">Hello Hexo</a> </h3>  </header> <div class="content">Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。</div> <div class="read-more"> <a href="/2017/hello-hexo.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-04T03:36:06.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/import-from-old-blog.html">古い記事をインポートする</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a7c1db;"> <div style="background-color: #a7c1db"> <img src="/assets/images/jordan-sanchez-111052/jordan-sanchez-111052.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/71hQxE-Sfvg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jordan Sanchez</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">ブログの古い記事なんてほとんど顧みることはない。ほとんどの記事が「以前は役に立ったかもしれないけど、すでに役には立たない」コードの端切れのようなもので古い記事なんてそのまま放置していつの日かインターネットから姿を消すくらいでもいいかなあとか思っていた。  のだが、数は少ないけどまだ誰かの役に立つかもしれないものもたぶんあるだろうし、過去の時点で自分が何を書いていたのか振り返ることもあるかもしれない（今まで一度もなかったけど）と思い直し、頑張ってインポートをしてみることにした。</div> <div class="read-more"> <a href="/2018/import-from-old-blog.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-02-04T16:35:42.000Z"> <span class="calendar-icon">📅</span> <span>2018年2月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/retrieve-json-from-require-method.html">JSONデータを読み込んで差し替える</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #4795ab;"> <div style="background-color: #4795ab"> <img src="/assets/images/aaron-burden-286686/aaron-burden-286686.svg" alt role="presentation" loading="lazy" width="985" height="738"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/h7wpIMY3O3E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Aaron Burden</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Node.jsの中であれば単に`const config = require(&#39;config.json&#39;)`すれば良いのだけれど、フロントエンド側のJavaScriptではそうはいかない。XMLHttpRequestとかFetch APIを使うか、requireで書いたものをwe</div> <div class="read-more"> <a href="/2018/retrieve-json-from-require-method.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-29T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月29日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2017/hello-gatsby.html">Gatsbyでスタティックサイトを作成する</a> </h3>  </header> <div class="content">更新しなくなったブログをリニューアルしようと思って、Gatsby で構築しようと思い立って、今作成してみている。  Gatsbyは「Blazing-fast static site generator for React」ということで、Reactベースのスタティックサイトジェネレータらしいのだけど、実のところまだよくわかっていない。Getting Started のドキュメントをみて、gatsby-starter-blog のstarterをGithub pages で公開しているだけなのだ。</div> <div class="read-more"> <a href="/2017/hello-gatsby.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

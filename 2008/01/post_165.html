@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -574,4 +634,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-06T16:21:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/01/post_166.html">映画：アイ・アム・レジェンド</a> </h3>  </header> <div class="content">同名のSF小説「アイ･アム･レジェンド」の映画版。アメリカ映画として映像化されたのは「地球最後の男」と「地球最後の男 オメガマン」に続いて三回目なのだそう。簡単なあらすじだけで予備知識なく見に行ったため、内容的には「あっ、こういう映画だったんだ」と思いました。ドキドキしたくない人にはお勧めしません。</div> <div class="read-more"> <a href="/2008/01/post_166.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-02-03T14:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年2月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/02/post_173.html">映画：いのちの食べ方</a> </h3>  </header> <div class="content">*   ｜いのちの食べかた｜  原題は「Our Daily Bread（日々の糧）」。「食料生産のグローバル・スタンダード」というあおりが印象的だったので、モンドヴィーノみたいな映画（地域色（ローカル）とグローバリゼーションの対比）なのかなと思っていたのですが、そうではなかったです。食べ物が食卓に届くまでに、どんな作業をしていて、どんな人が関わっているのか、という作業の流れを客観的にまとめていて、解説のない社会見学みたい映画でした。作り手からのメッセージがないから、見る側の考える余地が大きい。</div> <div class="read-more"> <a href="/2008/02/post_173.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-11-26T17:33:44.000Z"> <span class="calendar-icon">📅</span> <span>2005年11月27日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/11/post_120.html">ランド・オブ・プレンティを見てきました。</a> </h3>  </header> <div class="content">*   ランド・オブ・プレンティ  &gt; アメリカとヨーロッパの市民のうえに暗い影が落ちた。わたしは一生をテロの恐怖のなかで過ごしてきたイスラエル人として、次のことを断言できる。テロは人生を苦いものにする。人々は「軍事的な」気構えでふるまうようになり、絶えまないストレスにさらされることになる。ー「死を生きながら」p172より</div> <div class="read-more"> <a href="/2005/11/post_120.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-01T14:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月1日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_145.html">伝説のホテルマン「おもてなし」の極意</a> </h3>  </header> <div class="content"> キャピトル東急ホテル エグゼクティブコンシェルジェであった加藤健二さんの本。5部構成で、1〜3部が加藤さんの半生記、4部が加藤流サービスの各論といった感じで、5部はこぼれ話といった感じです。</div> <div class="read-more"> <a href="/2007/09/post_145.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

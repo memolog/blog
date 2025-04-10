@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -573,4 +633,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-03T14:20:26.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_147.html">頭のいい人の時間攻略法</a> </h3>  </header> <div class="content"> 最近、勉強本がブームなのかよくわかりませんが、この手の本が書店にたくさん並んでいます。ついついなんとなく買ってしまいました。</div> <div class="read-more"> <a href="/2007/09/post_147.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-12-25T16:08:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年12月26日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/12/post_164.html">本：進化するネットワーキング</a> </h3>  </header> <div class="content"> 半年くらい前に読んだ本。読み返しながらまとめています。「ネットワーク」について、経済学的な見地を中心に解説しています。第一章から第四章が第一部で「ネットワークの外部性」について。第一章は、クリティカル・マス、ティッピング・ポイント、QWERYの経済学など、他人が利用することによる利便性が他人を引きつけて集団を形成するという、ネットワークの特性を経済学でいう「外部性」とからめて話を展開しています。第二章は、ネットワークの外部性による「ひとり勝ち」の状況と、経済学でいう「市場の独占」とからめた内容。第三章は電話回線などの物理的なネットワークについて、他社・他国のネットワークを相互接続するときのネットワークの外部性による恩恵・コストをどのように他社間・多国間でバランスさせるかとかいう話。第四章は政策論的な性格が強く、ユニバーサル・サービス（全国どこに住んでいても、利用しやすい料金で利用できるサービス（p152））という視点から、ネットワーク産業について論じています。</div> <div class="read-more"> <a href="/2007/12/post_164.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-22T22:57:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月23日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/01/10_1.html">本：効率が10倍アップする新・知的生産術--自分をグーグル化する方法</a> </h3>  </header> <div class="content"> 生産性を上げるための方法を著者の経験をもとにまとめた本。「自分をグーグル化する」という意味は、情報を武器に生産性を上げるといった感じです。全体が280ページほどですが、ざっと3時間ほどで読みました。要点箇所は太字になっているので、流し読みはしやすいです。どうも売れに売れているようで、わたしの持っている本は第七刷でした。発売一ヶ月で七刷まで出てるのはけっこうすごいと思います、たぶん。</div> <div class="read-more"> <a href="/2008/01/10_1.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-08-12T14:09:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年8月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/08/post_178.html">セレンディピティと仮説立案</a> </h3>  </header> <div class="content">今現在「セレンディピティの探求」という本を読んでいます。最初の方はセレンディピティの意味論的なところをあつかっていて、個人的にはあまり関心がそそらなかったのですが、今読んでいる「仮説立案」という章はなかなか面白いです。</div> <div class="read-more"> <a href="/2008/08/post_178.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

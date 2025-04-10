@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -587,4 +647,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2022-09-18T10:20:39.000Z"> <span class="calendar-icon">📅</span> <span>2022年9月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2022/webpack-5-compiles-code-with-es2015.html">Webpack 5 compiles code with ES2015</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #6f7faa;"> <div style="background-color: #6f7faa"> <img src="/assets/images/martin-bennie-xVgHduP61HY-unsplash/martin-bennie-xVgHduP61HY-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="565"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/es/@martinbennie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">martin bennie</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Webpackのバージョン5ではコンパイルしたコードにES2015（アロー関数など）が含まれるようになる。これはWebpackが生成する部分に関する仕様なので、babelの設定でES5だけに制限していてもES2015が使われる。IE11ではアロー関数が処理できずに丸ごとエラーとなるので、IE11にまだ対応する必要があれば設定を確認する必要がある（今さらだけど）。</div> <div class="read-more"> <a href="/2022/webpack-5-compiles-code-with-es2015.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-08T05:55:41.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/top-level-await-will-be-soon.html">Top-level await will be soon</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #8c8988;"> <div style="background-color: #8c8988"> <img src="/assets/images/kai-pilger-1k3vsv7iIIc-unsplash/kai-pilger-1k3vsv7iIIc-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@kaip?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kai Pilger</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">asyncとawaitの書き方に慣れてくると、非同期の処理を待つ時はいつでもawaitを使いたくなるのだが、使えるのはasyncのついたfunctionの中だけでトップレベルでは使えない。</div> <div class="read-more"> <a href="/2020/top-level-await-will-be-soon.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-01-17T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年1月17日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2011/01/watir-webdriver-in-headless.html">watir-webdriver：バックグラウンドで実行する</a> </h3>  </header> <div class="content">「Watir-WebDriver: A detailed introduction | WatirMelon」の「The remote WebDriver Server」と「Hello Watir-WebDriver in Headless (HTML Unit)」あたりの話。Seleniumのサーバーを使うことで、ブラウザを立ち上げずにバックグラウンドでwebdriverを実行することができます。</div> <div class="read-more"> <a href="/2011/01/watir-webdriver-in-headless.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-11-14T10:44:35.000Z"> <span class="calendar-icon">📅</span> <span>2020年11月14日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/book-programming-typescript.html">Book：Programming TypeScript</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #2b140e;"> <div style="background-color: #2b140e"> <img src="/assets/images/bulkan-evcimen-LZg_PuyFPGo-unsplash/bulkan-evcimen-LZg_PuyFPGo-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@bulkan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Bulkan Evcimen</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">今回はプログラミングTypeScriptを一通り読んだのでざっくり紹介。TypeScriptはたぶん3年くらい使っていて、特に不自由なく使えるのだけど、けっこう知らないこともあった。</div> <div class="read-more"> <a href="/2020/book-programming-typescript.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

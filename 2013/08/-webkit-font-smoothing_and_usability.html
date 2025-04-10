@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -592,4 +652,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-13T16:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月14日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_149.html">透明度のクロスブラウザ対応</a> </h3>  </header> <div class="content">*   Cross Browser Transparency | Design Shack</div> <div class="read-more"> <a href="/2007/09/post_149.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-29T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/05/invited_elements.html">独自要素を作成する</a> </h3>  </header> <div class="content">少し前にEric&#39;s Archived Thoughts:Invented Elements、Eric&#39;s Archived Thoughts:Customizing Your Markup、Eric&#39;s Archived Thoughts:Element Customizationで解説されていた話。</div> <div class="read-more"> <a href="/2012/05/invited_elements.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-27T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/05/css_selector_performance.html">CSS Selector Performance</a> </h3>  </header> <div class="content">Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています</div> <div class="read-more"> <a href="/2012/05/css_selector_performance.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-12-29T16:21:34.000Z"> <span class="calendar-icon">📅</span> <span>2005年12月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/12/post_124.html">マインドマップでキャリアの棚卸しをしよう</a> </h3>  </header> <div class="content">最近わたしの中でマインドマップが大流行中です。このマインドマップを利用して自分の今までのキャリアの棚卸しをしてみました（マインドマップの作成にはFreeMindを利用）。まだ書き足りないところもたくさんありますが、とりあえず下の画像のような感じ。転職を考えている方や就職活動中の学生にも是非試していただきたい。下手な自己分析よりもすっきりするかもしれません。</div> <div class="read-more"> <a href="/2005/12/post_124.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

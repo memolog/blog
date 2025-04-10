@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -611,4 +671,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-30T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2017/hello-hexo.html">Hello Hexo</a> </h3>  </header> <div class="content">Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。</div> <div class="read-more"> <a href="/2017/hello-hexo.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-08T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/08/supported_in_ie8.html">あらためて IE8 について</a> </h3>  </header> <div class="content">少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。</div> <div class="read-more"> <a href="/2013/08/supported_in_ie8.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-24T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月25日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/redesign_2011.html">デザイン変更</a> </h3>  </header> <div class="content">ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&amp;API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。</div> <div class="read-more"> <a href="/2010/12/redesign_2011.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-04T07:00:11.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/bubble-sort-in-javascript.html">Bubble Sort in JavaScript</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #26657a;"> <div style="background-color: #26657a"> <img src="/assets/images/jong-marshes-458354-unsplash/jong-marshes-458354-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="738"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/photos/79mNMAvSORg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jong Marshes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Array.prototype.sort についてとTypedArray.prototype.sort についてで書いたようにビルトインされているsortメソッドが効率的なソートを実行できるように実装されているので、JavaScript上で自前のソートを実装する意味はあまりないのだけど、試しにバブルソートをJavaScript上で作ってみた。</div> <div class="read-more"> <a href="/2018/bubble-sort-in-javascript.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

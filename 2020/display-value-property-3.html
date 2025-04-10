@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -643,4 +703,4 @@ Behaves as inline grid.</li>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-10T22:12:24.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月11日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/automatic-box-type-transformations.html">Automatic Box Type Transformations</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #948e88;"> <div style="background-color: #948e88"> <img src="/assets/images/jeremy-bishop-t52E8yzCURM-unsplash/jeremy-bishop-t52E8yzCURM-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="550"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jeremy Bishop</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Box Layout Modes: the display propertyの最後の節として 2.7. Automatic Box Type Transformationsについて書かれているので、簡単に確認する。何らかのレイアウト効果の影響でboxのタイプが自動的に変わる場合があるという話。</div> <div class="read-more"> <a href="/2020/automatic-box-type-transformations.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-07T17:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/display-value-property.html">The display value property (outside / inside)</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #eab8d6;"> <div style="background-color: #eab8d6"> <img src="/assets/images/pawel-czerwinski-31xVIgIXbws-unsplash/pawel-czerwinski-31xVIgIXbws-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Paweł Czerwiński</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Inner and outer display typesの続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて確認していく。</div> <div class="read-more"> <a href="/2020/display-value-property.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-07-24T17:50:55.000Z"> <span class="calendar-icon">📅</span> <span>2007年7月25日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/07/pseudo-classes-pseudo-elements.html">疑似クラス、疑似要素とは何か</a> </h3>  </header> <div class="content">*   http://www.w3.org/TR/2005/WD-css3-selectors-20051215/#pseudo-classes</div> <div class="read-more"> <a href="/2007/07/pseudo-classes-pseudo-elements.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-16T23:17:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月17日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/css-display-module-introduction.html">CSS Display Module Introduction</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7f8e97;"> <div style="background-color: #7f8e97"> <img src="/assets/images/saad-chaudhry-pM2Hpsi-Hxs-unsplash/saad-chaudhry-pM2Hpsi-Hxs-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@saadchdhry?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Saad Chaudhry</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">用語的な理解を得るために、CSS Display Module Level 3 Introductionの部分を読んで簡単にメモる、というメモ。日本語訳も参考にしてる。内容を見直して、変だなと思うところは随時修正してる。</div> <div class="read-more"> <a href="/2020/css-display-module-introduction.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

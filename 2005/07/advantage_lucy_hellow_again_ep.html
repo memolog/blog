@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -580,4 +640,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2005-05-28T14:25:04.000Z"> <span class="calendar-icon">📅</span> <span>2005年5月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/05/singer_songer.html">SINGER SONGER 「初花凛々」</a> </h3>  </header> <div class="content">SINGER SONGER の「初花凛々（しょかりんりん）」がついに家に届きました。</div> <div class="read-more"> <a href="/2005/05/singer_songer.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-02T15:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/nunchaku.html">ヌンチャク再結成・コンプリートBOX発売</a> </h3>  </header> <div class="content">*   ヌンチャク オフィシャル ウェブサイト *   ヌンチャクの期間限定 もうふぶかないブログ</div> <div class="read-more"> <a href="/2007/09/nunchaku.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-07-10T14:24:12.000Z"> <span class="calendar-icon">📅</span> <span>2005年7月10日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/07/cd.html">最近購入したCD</a> </h3>  </header> <div class="content">私はCDと本にかかるお金に無頓着な人間で、気がつくと大量のCDと本を購入していたりします。本は読むペースが限られているので、そこまで増えないのですが、CDは本当にあっという間に溜まっていきます。収納スペースは限られているので、結構悩ましい問題なのですが、それでも買ってしまいます・・ああ。</div> <div class="read-more"> <a href="/2005/07/cd.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-03-19T15:16:06.000Z"> <span class="calendar-icon">📅</span> <span>2006年3月20日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/03/cd320.html">最近買ったCD（3/20）</a> </h3>  </header> <div class="content">いろいろと書きたいことはたまりつつも、なかなかまとまりきれずにいます。とりあえず最近買ったCDについてでも・・  #### Arctic Monkeys - Whatever People Say I Am, That&#39;s What I&#39;m Not</div> <div class="read-more"> <a href="/2006/03/cd320.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

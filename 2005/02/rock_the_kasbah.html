@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -578,4 +638,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2008-02-10T05:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年2月10日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/02/post_174.html">最近の自分のライフスタイルの変化</a> </h3>  </header> <div class="content">ここ5年くらいの間に、自分のライフスタイルがいくつか変わっている。それを簡単にまとめてみようという話。年をとったというのもありますけど、物理的な制限が少なくなって、選択肢が増えたことで、自分向けににチューニングされた快適生活が安定してできるようになったというのもあるのかなと思う次第です。</div> <div class="read-more"> <a href="/2008/02/post_174.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-07-10T14:24:12.000Z"> <span class="calendar-icon">📅</span> <span>2005年7月10日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/07/cd.html">最近購入したCD</a> </h3>  </header> <div class="content">私はCDと本にかかるお金に無頓着な人間で、気がつくと大量のCDと本を購入していたりします。本は読むペースが限られているので、そこまで増えないのですが、CDは本当にあっという間に溜まっていきます。収納スペースは限られているので、結構悩ましい問題なのですが、それでも買ってしまいます・・ああ。</div> <div class="read-more"> <a href="/2005/07/cd.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-09-18T17:08:33.000Z"> <span class="calendar-icon">📅</span> <span>2005年9月19日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/09/cd919.html">最近購入したCD（9/19）</a> </h3>  </header> <div class="content">気がついたら２ヶ月近くCDを買いに行ってなかったのですが、先週末に久しぶりに渋谷HMVに行ってきました。会社帰りに急に思いついて閉店間際に行ったため、かなりざっくりと、大量に買ってきてしまいました。だめな私。しばらく節制の日々が続きそうです。</div> <div class="read-more"> <a href="/2005/09/cd919.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-08-13T14:07:29.000Z"> <span class="calendar-icon">📅</span> <span>2006年8月13日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/08/post_138.html">最近読んだ本ダイジェスト</a> </h3>  </header> <div class="content">本は読んでるけれど、エントリーにするほど時間がない今日のこのごろ。  *   デイトレのリアル！：熊野英生 他       1時間くらいでざっくりと。いわゆる「損切り」の大事さを身をもって体験している人の体験談（失敗談）みたいな感じ。</div> <div class="read-more"> <a href="/2006/08/post_138.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

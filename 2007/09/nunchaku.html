@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -585,4 +645,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2005-02-20T16:13:01.000Z"> <span class="calendar-icon">📅</span> <span>2005年2月21日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/02/post_63.html">本：サムライと英語</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #bfb7a8;"> <picture> <source srcset="/assets/images/samurai_english/samurai_english_small.png, /assets/images/samurai_english/samurai_english_small@2x.png 2x, /assets/images/samurai_english/samurai_english_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/samurai_english/samurai_english_medium.webp, /assets/images/samurai_english/samurai_english_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/samurai_english/samurai_english_medium.png, /assets/images/samurai_english/samurai_english_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/samurai_english/samurai_english_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">「サムライと英語」は、国連の要職を歴任された明石康さんの名著です。幕末から明治後半までの歴史を辿りながら、堀達之助（浦賀奉行通詩）、福沢諭吉、大久保利通、新渡戸稲造など、西洋文化と向き合うサムライの姿が描かれています。ちょうど「お〜い！竜馬」を読破して独り幕末ブームの中、非常に面白く読めました。</div> <div class="read-more"> <a href="/2005/02/post_63.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-08T14:28:19.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_129.html">最近読んだ本（２）</a> </h3>  </header> <div class="content">「最近読んだ本（１）」の続き。本を読んだときにする行動の一つが「文中に気になった箇所があったらページの端を折る」ことです。同じ本を繰り返し読むのは飽きるので、再読するときはその折り目を中心にその部分だけ読んだりします。ページに折り目がつく本ほど私にとって有益な本になります。</div> <div class="read-more"> <a href="/2006/04/post_129.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-09-18T17:08:33.000Z"> <span class="calendar-icon">📅</span> <span>2005年9月19日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/09/cd919.html">最近購入したCD（9/19）</a> </h3>  </header> <div class="content">気がついたら２ヶ月近くCDを買いに行ってなかったのですが、先週末に久しぶりに渋谷HMVに行ってきました。会社帰りに急に思いついて閉店間際に行ったため、かなりざっくりと、大量に買ってきてしまいました。だめな私。しばらく節制の日々が続きそうです。</div> <div class="read-more"> <a href="/2005/09/cd919.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-06-19T22:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年6月20日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2011/06/books_around_me.html">本とわたし</a> </h3>  </header> <div class="content">2008年の9月ごろからgoodreadsというサービスで読んだ本の履歴をつけていたのですが、履歴にたまった本が200冊くらいになりました。1年平均70冊くらい読んでいるみたいですね。（内容的/量的に）薄い本とかも含まれるので、読んだぞと実感を込めて言えるのは40〜50冊といったところかなあという感じですけど。とはいえ、ほとんどすべての本について詳細は覚えてないですけど。</div> <div class="read-more"> <a href="/2011/06/books_around_me.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

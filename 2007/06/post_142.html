@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -592,4 +652,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2009-01-03T03:45:53.000Z"> <span class="calendar-icon">📅</span> <span>2009年1月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/01/post_180.html">今年の抱負（とデザイン変更）</a> </h3>  </header> <div class="content">ブログの見た目を少し変えてみたのです。シンプルに。jqueryを試してみたのだが、TypePad Connectで利用しているYUIと相性がよろしくないよう。回避方法が皆目見当がつかなかったので、TypePad Connect はとりあえずクローズした。とりあえず。暇なときにちょこちょこ変えていこうと思う。</div> <div class="read-more"> <a href="/2009/01/post_180.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-03-17T05:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年3月17日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/03/the_big_short.html">本：世紀の空売り</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #d0cdc7;"> <picture> <source srcset="/assets/images/the_big_short/the_big_short_small.png, /assets/images/the_big_short/the_big_short_small@2x.png 2x, /assets/images/the_big_short/the_big_short_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/the_big_short/the_big_short_medium.webp, /assets/images/the_big_short/the_big_short_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/the_big_short/the_big_short_medium.png, /assets/images/the_big_short/the_big_short_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/the_big_short/the_big_short_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。</div> <div class="read-more"> <a href="/2012/03/the_big_short.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-07T13:27:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_148.html">ハーバードでは教えない実践経営学</a> </h3>  </header> <div class="content"> 1985年に「マコーマックのマンビジネス」というタイトルで出版された本の新訳版です。いわゆるビジネスに必要な「処世術」、パートナーシップの構築など、筆者曰く「ハーバード・ビジネススクールでは教えたくても教えられない（p8）」内容を扱っています。「人間」「営業と交渉」「企業経営」の３部構成。</div> <div class="read-more"> <a href="/2007/09/post_148.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-16T05:29:40.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月16日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_133.html">最近読んだ本（３）</a> </h3>  </header> <div class="content">「最近読んだ本（１）」「最近読んだ本（２）」の続き。読書が趣味ですと自信を持って言うにはどのくらい読めば良いのでしょう。</div> <div class="read-more"> <a href="/2006/04/post_133.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

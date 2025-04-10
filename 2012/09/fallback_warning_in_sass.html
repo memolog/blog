@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -592,4 +652,4 @@ Listen will be polling changes. Learn more at <a href="https://github.com/guard/
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-17T06:08:02.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月17日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/redirect-to-my-old-blog.html">元のブログからリダイレクトをかける</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e6e1d7;"> <picture> <source srcset="/assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_small.png, /assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_small@2x.png 2x, /assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium.webp, /assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium.png, /assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium.png" alt width="750" height="1125" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">このブログは今はGitHub Pages上で公開しているが、AWS上でドメイン取得して公開しようかな、でもお金かかるしどうしようかなと微妙に悩んでいた。AWSにしても個人ブログのトラフィックなんて程度が知れているので、たいした金額になることはないとは思いつつも、いつ課金されるかわからないから状況をモニタリングしなければならないというのが圧倒的に面倒臭い... ただその日のメモを残したいだけだというのに。</div> <div class="read-more"> <a href="/2018/redirect-to-my-old-blog.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-30T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2017/hello-hexo.html">Hello Hexo</a> </h3>  </header> <div class="content">Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。</div> <div class="read-more"> <a href="/2017/hello-hexo.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2016-02-03T21:37:00.000Z"> <span class="calendar-icon">📅</span> <span>2016年2月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">Bitcodeを使ったアプリがCrashlyticsでmissing dSYMsになる</a> </h3>  </header> <div class="content">Xcodeでpublishした内部テスター向けのビルドで、Crashlyticsへクラッシュレポートが届かない。「missing dSYM」というエラーが出てるので、dSYMの問題だろうというところまでわかるけど、CrashlyticsのDocumentなどを読んでもわからない。Crashlyticsのmissing dSYMの画面に出てるUUIDを検索しても見つからない...</div> <div class="read-more"> <a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-24T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月25日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/redesign_2011.html">デザイン変更</a> </h3>  </header> <div class="content">ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&amp;API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。</div> <div class="read-more"> <a href="/2010/12/redesign_2011.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

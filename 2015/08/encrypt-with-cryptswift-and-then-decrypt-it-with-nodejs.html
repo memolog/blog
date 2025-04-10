@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -573,4 +633,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2015-08-27T14:15:00.000Z"> <span class="calendar-icon">📅</span> <span>2015年8月27日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2015/08/encrypt-with-nodejs-and-then-decrypt-it-with-cryptoswift.html">Node.js で AES-256-CBC で暗号化したデータを CryptoSwift で復号化する</a> </h3>  </header> <div class="content">CryptoSwiftを使ってAES-256-CBCで暗号化してNodeで復号化するの記事で、CryptoSwift (iOS) で暗号化したデータをサーバー側（Node.js）で復号化する話をしましたが、今回はその逆向きで、Node.jsでABS-256-CBCで暗号化したデータをCryptoSwiftで復号化するという話。</div> <div class="read-more"> <a href="/2015/08/encrypt-with-nodejs-and-then-decrypt-it-with-cryptoswift.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-09-25T15:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年9月26日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/09/ios7safariremote_debugging.html">iOS7のSafariでremote debuggingできない</a> </h3>  </header> <div class="content">iOS7のSafariでremote debuggingをしようとすると、inspect内容が途中で戻ってこなかったり、styleの情報が取得できなかったりする。  Safari on iOS 7 and HTML5: problems, changes and new APIs | Breaking the Mobile Webによると、Safariが6.1じゃないとダメらしい。でも、6.1はプレビュー版でしか使えない（現在の最新は6.0.5）。</div> <div class="read-more"> <a href="/2013/09/ios7safariremote_debugging.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-03-18T05:32:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年3月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/03/responsive-is.html">Responsive.is：レスポンシブデザイン対応を確認できるサイト</a> </h3>  </header> <div class="content">Responsive.isというサイトで 自分のサイトがiPhoneやiPadなどでどのように表示されるかを疑似体験することができます（via Responsive.is: Display and present responsive web designs | Konigi）。実際には解像度の違いがあるのでiPhone4以降や最新のiPadでは画像の解像感に違いはありますけど、手元にiPhoneやiPadがない場合に、レスポンシブデザインに対応した自分のサイトがどのように見えるかを確認するには十分かなと思います。</div> <div class="read-more"> <a href="/2012/03/responsive-is.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-04T04:36:20.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/safari_3_webkit_css_3.html">Safari 3 (webkit) がサポートしている CSS 3 プロパティ</a> </h3>  </header> <div class="content">*   CSS3 properties tests for webkit based browsers, including the iPhone</div> <div class="read-more"> <a href="/2007/08/safari_3_webkit_css_3.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -573,4 +633,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2010-07-13T12:45:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年7月13日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/07/watir_click_no_wait_doesnt_work.html">watir：click_no_wait が動作しない</a> </h3>  </header> <div class="content">普段watirで使用していないPCにwatir (version 1.6.5) をインストールして使用したところ、click no waitのメソッドがなぜか動作しない。clickとclick!のメソッドは問題なく動作しました。</div> <div class="read-more"> <a href="/2010/07/watir_click_no_wait_doesnt_work.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2022-09-18T10:20:39.000Z"> <span class="calendar-icon">📅</span> <span>2022年9月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2022/webpack-5-compiles-code-with-es2015.html">Webpack 5 compiles code with ES2015</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #6f7faa;"> <div style="background-color: #6f7faa"> <img src="/assets/images/martin-bennie-xVgHduP61HY-unsplash/martin-bennie-xVgHduP61HY-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="565"> </div> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/es/@martinbennie?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">martin bennie</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a> </div> </div> </header> <div class="content">Webpackのバージョン5ではコンパイルしたコードにES2015（アロー関数など）が含まれるようになる。これはWebpackが生成する部分に関する仕様なので、babelの設定でES5だけに制限していてもES2015が使われる。IE11ではアロー関数が処理できずに丸ごとエラーとなるので、IE11にまだ対応する必要があれば設定を確認する必要がある（今さらだけど）。</div> <div class="read-more"> <a href="/2022/webpack-5-compiles-code-with-es2015.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-11-27T01:47:26.000Z"> <span class="calendar-icon">📅</span> <span>2006年11月27日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/11/ie_float_bug.html">IE float bug</a> </h3>  </header> <div class="content">*   The IE Doubled Float-Margin Bug</div> <div class="read-more"> <a href="/2006/11/ie_float_bug.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-04T03:54:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/watir-webdriver-alternative-attach-method.html">watir-webdriver のattachメソッドの代替メソッド</a> </h3>  </header> <div class="content">去年の今頃、watir 2.0 として始まったwatir-webdriverですが、現在 0.1.7。着々と進んでいます。その当時はseleniumとwatirの関係性がよくわかってませんでしたが、watirはselenium-webdriverのラッパー的な感じみたいです。watir-webdriverの内部では、Selenium::Webdriver.for でseleniumのdriverを呼び出しています。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver-alternative-attach-method.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

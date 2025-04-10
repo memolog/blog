@@ -277,6 +277,58 @@
     border: 0;
   }
 
+  .related-posts > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(355px, 1fr));
+    gap: 20px;
+  }
+
+  .related-posts h2 {
+    font-size: 1em;
+    font-weight: normal;
+    margin: 2.5em 0 0.5em 0.5em;
+  }
+
+  .related-posts article {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .related-posts article .header:has(.featured__image) {
+    margin-bottom: 1em;
+  }
+
+  .related-posts .article__title {
+    font-size: 1.2em;
+  }
+
+  .related-posts .content {
+    font-size: 1em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+  .related-posts .featured__image {
+    max-height: 150px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .related-posts .featured__image img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .related-posts .featured__credit {
+    display: none;
+  }
+
+  .related-posts .featured__image:empty {
+    height: 150px;
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -302,6 +354,10 @@
       margin-left: -15px;
       margin-right: -15px;
       position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
     }
   }
 
@@ -403,6 +459,10 @@
     .header__feature img {
       max-width: 100%;
       height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
     }
   }
 
@@ -587,4 +647,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2010-02-11T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年2月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/02/extended_phenotype.html">本：延長された表現型</a> </h3>  </header> <div class="content"> 「利己的な遺伝子」の著者、リチャード・ドーキンスの本。「延長された表現型（extended phenotype）」というのは遺伝子による生物個体への発現（表現型）を生物個体によってもたらされる形成物（たとえばクモにクモの巣、ビーバーによるダム）にまで延長（拡張）した概念。本書では最終的に「寄生体による寄主」に対する表現型効果や、「母による子」への表現型効果（遠隔作用）にまで広げていきます。</div> <div class="read-more"> <a href="/2010/02/extended_phenotype.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-12-17T20:24:14.000Z"> <span class="calendar-icon">📅</span> <span>2005年12月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/12/post_122.html">最近読んだ本と映画</a> </h3>  </header> <div class="content">一つひとつまとめたいのですが、どんどんたまっていくので簡単に列挙  #### 最近見た映画  *   青い棘       1927年のベルリンで起きた実際の事件をもとにした映画。映画の中に導出される「人生の絶頂の時に死ぬべきではないか」という哲学は、なかなか深い。若さとはワインを飲まずして酔っている状態なのだ（ゲーテ）。</div> <div class="read-more"> <a href="/2005/12/post_122.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-08-13T14:07:29.000Z"> <span class="calendar-icon">📅</span> <span>2006年8月13日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/08/post_138.html">最近読んだ本ダイジェスト</a> </h3>  </header> <div class="content">本は読んでるけれど、エントリーにするほど時間がない今日のこのごろ。  *   デイトレのリアル！：熊野英生 他       1時間くらいでざっくりと。いわゆる「損切り」の大事さを身をもって体験している人の体験談（失敗談）みたいな感じ。</div> <div class="read-more"> <a href="/2006/08/post_138.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2019-05-02T08:41:09.000Z"> <span class="calendar-icon">📅</span> <span>2019年5月2日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2019/book-the-4th-revolution.html">「第四の革命」を読んだ</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c8c5bc;"> <picture> <source srcset="/assets/images/book-the-4th-revolution/book-the-4th-revolution_small.png, /assets/images/book-the-4th-revolution/book-the-4th-revolution_small@2x.png 2x, /assets/images/book-the-4th-revolution/book-the-4th-revolution_small@3x.png 3x" type="image/jpg" media="(max-width: 450px)"> <source srcset="/assets/images/book-the-4th-revolution/book-the-4th-revolution_medium.webp, /assets/images/book-the-4th-revolution/book-the-4th-revolution_medium@2x.webp 2x" type="image/webp"> <source srcset="/assets/images/book-the-4th-revolution/book-the-4th-revolution_medium.png, /assets/images/book-the-4th-revolution/book-the-4th-revolution_medium@2x.png 2x" type="image/jpg"> <img src="/assets/images/book-the-4th-revolution/book-the-4th-revolution_medium.png" alt width="750" height="750" role="presentation" loading="lazy"> </picture> </div> <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div> </div> </header> <div class="content">「第四の革命」を読んだ。情報通信技術が、従来の「記録する・履歴をとる」という単純な伝達手段であったものから飛躍して、記録・履歴のデータが処理され、情報として再利用されるようになった。それが様々なテクノロジーに内包されるにつれ、情報通信技術が単なるツールという枠を越えて、情報世界（情報圏・インフォスフィア）を構成するようになっている。インフォスフィアがどのように個々人や世界に影響をもたらすのか、といった内容である。</div> <div class="read-more"> <a href="/2019/book-the-4th-revolution.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

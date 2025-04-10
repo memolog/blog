@@ -26,4 +26,4 @@ HTML と CSS の分離に代表されるように、ここ１〜２年の間で�
 
 Weblog・SNS の絶対数の増加に伴い、Scalability が重要な課題になってきているのは間違いないと思います。これからはディスク容量は機能面だけではなく、安定性と快適なトランザクションがサービスのウリになっていくものかと思います。
 
-[![](/blog//assets/i/etc/data.gif)](/blog//assets/i/etc/data.gif)
+[![](/assets/i/etc/data.gif)](/assets/i/etc/data.gif)

@@ -12,4 +12,4 @@ excerpt: '単純にwidthを指定しているところであればブロック�
 
 [WEB Developer](https://addons.mozilla.org/ja/firefox/addon/60)の「Display Block Size」（information のメニューの中の項目）では、実際に表示されているブロック要素の縦幅と横幅を表示してくれます。欠点はブロック要素がたくさん入れ子になっていると、下の画像のように重なりまくってしまい何がなんだかわからない状態になってしまうところ。
 
-その欠点を補うために、Firefox アドオンの「[View Source Chart](https://addons.mozilla.org/ja/firefox/addon/655)」を利用。View Source Chart は構造化した状態で HTML ソースを表示してくれます。「Display Block Size」を適用した状態で、View souce chart を表示すると、それぞれのブロック要素のサイズが構造化された HTML ソース上にうまいこと表示してくれます。これでブロック要素のサイズが重なって見えないということは回避することができる。 ![080701.gif](/blog//assets/i/2007/08/080701.gif)
+その欠点を補うために、Firefox アドオンの「[View Source Chart](https://addons.mozilla.org/ja/firefox/addon/655)」を利用。View Source Chart は構造化した状態で HTML ソースを表示してくれます。「Display Block Size」を適用した状態で、View souce chart を表示すると、それぞれのブロック要素のサイズが構造化された HTML ソース上にうまいこと表示してくれます。これでブロック要素のサイズが重なって見えないということは回避することができる。 ![080701.gif](/assets/i/2007/08/080701.gif)

@@ -24,7 +24,7 @@ Movable Type 4 から追加された MTIf タグを利用して、現在いる�
 <div id="topnavi-inner">
 <ul>
 <li class="rss"><a href="http://feeds.feedburner.jp/memolog">
-<img width="9" height="9" alt="RSS" src="/blog//assets/mt/mt-static/images/status_icons/feed.gif"/>
+<img width="9" height="9" alt="RSS" src="/assets/mt/mt-static/images/status_icons/feed.gif"/>
 RSS</a></li>
 <li class="archives<MTIf name="archive_index"> here</MTIf><
 MTIf name="entry_template"> here</MTIf><MTIf name="datebased_archive"> here</MTIf>"><a href="
@@ -44,7 +44,7 @@ CSS はこんな感じ。背景画像の上にタブを載せているので、�
 
 ```
 /* top navigation */
-#banner-image {height:160px; background:#fff url(/blog//assets/site-design/0701/050101.gif) no-repeat; width:940px; margin:0 auto;}
+#banner-image {height:160px; background:#fff url(/assets/site-design/0701/050101.gif) no-repeat; width:940px; margin:0 auto;}
 #banner-image-inner {padding-top:125px;}
 
 #topnavi {height:35px;}

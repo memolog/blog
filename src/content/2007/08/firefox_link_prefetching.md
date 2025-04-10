@@ -13,4 +13,4 @@ excerpt: "*   Link prefetching FAQ *   sks blog » FirefoxのLink Prefetching（
 
 ただし、href にクエリストリングが含まれるような場合や（/blog//index/?foo=0 みたいな）、href が http 以外の場合は prefetch は行わないようになっている。逆に言えば、prefetch してほしくないときは href に適当なクエリストリング的なパスを入れておけば良いみたい。
 
-prefetch による HTTP リクエストには「X-moz: prefetch」というヘッダが付与されているのでどのリクエストが prefetch によるものかは判別できる。これをうまく利用して prefetch をしないようにすることもできるかのかなと思います。 ![cap082101.png](/blog//assets/i/2007/08/cap082101.png)
+prefetch による HTTP リクエストには「X-moz: prefetch」というヘッダが付与されているのでどのリクエストが prefetch によるものかは判別できる。これをうまく利用して prefetch をしないようにすることもできるかのかなと思います。 ![cap082101.png](/assets/i/2007/08/cap082101.png)

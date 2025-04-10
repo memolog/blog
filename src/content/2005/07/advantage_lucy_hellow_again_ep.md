@@ -1,14 +1,14 @@
 ---
-title: advantage Lucy 「Hellow again e.p.」
+title: advantage Lucy 「Hello again e.p.」
 date: 2005-07-12T15:29:52.000Z
 categories:
   - 雑文
 tags:
   - music
-excerpt: "*   advantage Lucy  私の中ではNo.1ギターポップバンドのAdvantage Lucyのサイトがリニューアルオープンしました。なかなかいい感じです。そしてなんとなんとmaxi singleを7/22に出すそうです。ライブ会場＆ホームページのみの限定販売ということで、とりあえずメールオーダーしました。到着が楽しみであります。秋には待望のnew albumが出るとのことで、かなり期待大であります。"
+excerpt: "私の中ではNo.1ギターポップバンドのAdvantage Lucyのサイトがリニューアルオープンしました。なかなかいい感じです。そしてなんとなんとmaxi singleを7/22に出すそうです。ライブ会場＆ホームページのみの限定販売ということで、とりあえずメールオーダーしました。到着が楽しみであります。秋には待望のnew albumが出るとのことで、かなり期待大であります。"
 ---
 
-- [advantage Lucy](http://www006.upp.so-net.ne.jp/advantageLucy/index.html)
+- [advantage Lucy](https://advantagelucy.com/)
 
 私の中では No.1 ギターポップバンドの Advantage Lucy のサイトがリニューアルオープンしました。なかなかいい感じです。そしてなんとなんと maxi single を 7/22 に出すそうです。ライブ会場＆ホームページのみの限定販売ということで、とりあえずメールオーダーしました。到着が楽しみであります。秋には待望の new album が出るとのことで、かなり期待大であります。
 

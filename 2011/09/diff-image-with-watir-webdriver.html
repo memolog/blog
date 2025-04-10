@@ -570,7 +570,7 @@
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2011-09-11T13:36:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月11日</span> </time> </div> <h2 class="header__title"><span>watir-webdriver で画像データを評価する</span></h2>  </header> <div id="article-content" class="content">  <p>たとえば、画像ファイルが上書きされているかどうかを確認したい場合などで、画像の src などには差分がなく画像データを比較しないとその動作の正否が分からないとか、そういうときはやはり画像データを評価して差を見るしかない。</p>
 <p>しかし、webdriver 上では画像をローカルに保存するようなメソッドはいまのところ実装されていなくて、通常の driver では画像のデータにアクセスする方法がない。public なところにある画像なら、Net::HTTP とかその他何らかの方法で画像をダウンロードしてきてダウンロードした画像を評価すれば良いのだけど、ログインしないとたどり着けないようなところにある画像の場合はやっかいなので、やはり webdriver 上でなんとかしたい。</p>
-<p>では、どうするか。2 つの方法にたどり着きました。一つは Firefox の about:cache というページで length を比較するというもの。Firefox の cache は「<a href="about:cache-entry?client=HTTP&#x26;sb=1&#x26;key=/blog//assets/images/banner.gif">about:cache-entry?client=HTTP&#x26;sb=1&#x26;key=/blog//assets/images/banner.gif</a>」というかたちでアクセスできる。この画面には Data size などの情報が含まれていて、このあたりの情報から画像が期待通りの状態になっているのかを判断する。判断することができれば。</p>
+<p>では、どうするか。2 つの方法にたどり着きました。一つは Firefox の about:cache というページで length を比較するというもの。Firefox の cache は「<a href="about:cache-entry?client=HTTP&#x26;sb=1&#x26;key=/assets/images/banner.gif">about:cache-entry?client=HTTP&#x26;sb=1&#x26;key=/assets/images/banner.gif</a>」というかたちでアクセスできる。この画面には Data size などの情報が含まれていて、このあたりの情報から画像が期待通りの状態になっているのかを判断する。判断することができれば。</p>
 <p>もう一つは HtmlUnitDriver を使用する方法。HtmlUnitDriver では下記のような形で画像のデータにアクセスすることができます（いまのところ）。</p>
 <pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>require 'watir-webdriver'</span></span>
 <span class="line"><span>require 'selenium/server'</span></span>
@@ -585,7 +585,7 @@
 <span class="line"><span></span></span>
 <span class="line"><span>b = Watir::Browser.new(:remote, :url => "http://127.0.0.1:4444/wd/hub",</span></span>
 <span class="line"><span>                       :desired_capabilities => capabilities)</span></span>
-<span class="line"><span>b.goto '/blog//assets/images/banner.gif'</span></span>
+<span class="line"><span>b.goto '/assets/images/banner.gif'</span></span>
 <span class="line"><span>data = Base64.encode64(b.html)</span></span>
 <span class="line"><span></span></span></code></pre>
 <p>通常の Driver の場合、html メソッドを使用すると、指定した要素の html が出力されるのですが、HtmlUnitDriver では、画像にアクセスしている場合は画像のデータを返してきます。このデータを Base64 でエンコードして比較する（とよいと教えてもらった）。</p>

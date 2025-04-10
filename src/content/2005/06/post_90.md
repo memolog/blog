@@ -1,6 +1,9 @@
 ---
-title: 危ない食卓を読みました
+title: 本：危ない食卓
 date: 2005-06-26T16:00:00.000Z
+featured:
+  image: not_on_the_label.png
+  author: chatGPT
 categories:
   - 本
 tags:

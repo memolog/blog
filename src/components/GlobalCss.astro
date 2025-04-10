@@ -209,7 +209,7 @@
   .featured__image {
     background: #f5f2f0;
     line-height: 0;
-    height: 335px;
+    max-height: 335px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -322,7 +322,7 @@
     .featured__image,
     .content__image,
     .content pre[class*="language-"] {
-      margin: 0 -15px;
+      margin: 0 -2em;
     }
   }
 
@@ -390,8 +390,12 @@
 
   @media screen and (max-width: 730px) {
     .container {
-      width: 100%;
-      box-sizing: border-box;
+      padding: 0;
+      border-radius: 0;
+    }
+
+    article {
+      border-radius: 0;
     }
 
     .post .writing-vertical {
@@ -405,6 +409,14 @@
       height: auto;
     }
   }
+
+  @media screen and (max-width: 985px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
   .profile {
     border: 1px solid var(--profile-background-color);
     padding: 1em;

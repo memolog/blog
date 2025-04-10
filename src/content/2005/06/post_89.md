@@ -1,6 +1,9 @@
 ---
 title: リチャード・ニクソン暗殺を企てた男を見ました
 date: 2005-06-26T06:53:00.000Z
+featured:
+  image: assassination_of_Richard_Nixon.png
+  author: chatGPT
 categories:
   - 雑文
 tags:

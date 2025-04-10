@@ -8,6 +8,18 @@ import FeaturedImage from "../components/FeaturedImage.astro";
 import { SITE_TITLE } from "../consts";
 import path from "path";
 
+import related from "../data/related.json";
+type RelatedItem = {
+  id: string;
+  title: string;
+  date: Date;
+  excerpt: string;
+  featured?: {
+    image: string;
+    credit?: string;
+  };
+};
+
 type Props = CollectionEntry<"blog">["data"];
 
 const { slug } = Astro.params;
@@ -24,6 +36,8 @@ if (name) {
     ogImage = `${dir}/${name}/${name}_medium${ext}`;
   }
 }
+// @ts-ignore
+const relatedPosts = (slug && related[slug]) || [];
 ---
 
 <!doctype html>
@@ -73,6 +87,30 @@ if (name) {
           <Footer />
         </article>
       </main>
+      <aside class="related-posts">
+        <h2 class="header__title">📖 関連メモ</h2>
+        <div>
+          {
+            relatedPosts.map((item: RelatedItem) => (
+              <article class="article-summary">
+                <header class="header">
+                  <div>
+                    <FormattedDate date={new Date(item.date)} />
+                  </div>
+                  <h3 class="header__title article__title">
+                    <a href={`/${item.id}.html`}>{item.title}</a>
+                  </h3>
+                  {item.featured && <FeaturedImage featured={item.featured} />}
+                </header>
+                <div class="content">{item.excerpt}</div>
+                <div class="read-more">
+                  <a href={`/${item.id}.html`}>📖 続きを読む</a>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </aside>
     </div>
   </body>
 </html>

@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -634,33 +911,34 @@
 <p><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4861004314/ref=nosim/yutakayamaguc-22">Ajax ライブラリリファレンス</a>（p183）では、fx.Text()という関数での利用例が記載されていたのですが、どうやら moo.fx.js が 2.x にアップデートしたときに、関数の構成が変わったようです（おそらくより汎用的になった）。fx.Test の代わりに<code>divObj = new fx.Style("latest-posts","font-size",{duration:100});</code>というような感じで利用すると、うまく動作します。</p>
 <p>この関数では始めのサイズと終わりのサイズを指定することができるのですが、始めのサイズを固定値にすると連続的な動きにならないので、現在のサイズを取得してそれを参照するようにしてみました。現在のサイズを取得するのも prototype.js の Element.getStyle を利用して取得しています。うーん、便利。</p>
 <p>同じ要領で画像のサイズをページ内で拡大したり縮小したりもできそうですね。ふむふむ。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;script type="text/javascript" src="&#x3C;$MTBlogURL$>prototype.js">&#x3C;/script></span></span>
-<span class="line"><span>&#x3C;script type="text/javascript" src="&#x3C;$MTBlogURL$>moo/moo.fx.js">&#x3C;/script></span></span>
-<span class="line"><span>&#x3C;script type="text/javascript" src="&#x3C;$MTBlogURL$>moo/moo.fx.pack.js">&#x3C;/script></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>&#x3C;script type="text/javascript">&#x3C;!--</span></span>
-<span class="line"><span>window.onload = function (){</span></span>
-<span class="line"><span>divObj = new fx.Style("latest-posts","font-size",{duration:100});</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>function changeTextSize(num){</span></span>
-<span class="line"><span>n = Element.getStyle("latest-posts", "font-size") ;</span></span>
-<span class="line"><span>size = { current:"", changed:""};</span></span>
-<span class="line"><span>size.current = parseInt(n.replace("px", ""));</span></span>
-<span class="line"><span>size.changed = size.current + num;</span></span>
-<span class="line"><span>divObj.custom(size.current, size.changed);</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>function changeTextSizeReset(){</span></span>
-<span class="line"><span>n = Element.getStyle("latest-posts", "font-size") ;</span></span>
-<span class="line"><span>size = { current:"", changed:""};</span></span>
-<span class="line"><span>size.current = parseInt(n.replace("px", ""));</span></span>
-<span class="line"><span>divObj.custom( size.current, 12);</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>// --></span></span>
-<span class="line"><span></span></span></code></pre>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">&#x3C;script type="text/javascript" src="&#x3C;$MTBlogURL$>prototype.js">&#x3C;/script>
+&#x3C;script type="text/javascript" src="&#x3C;$MTBlogURL$>moo/moo.fx.js">&#x3C;/script>
+&#x3C;script type="text/javascript" src="&#x3C;$MTBlogURL$>moo/moo.fx.pack.js">&#x3C;/script>
+
+&#x3C;script type="text/javascript">&#x3C;!--
+window.onload = function (){
+divObj = new fx.Style("latest-posts","font-size",{duration:100});
+}
+
+function changeTextSize(num){
+n = Element.getStyle("latest-posts", "font-size") ;
+size = { current:"", changed:""};
+size.current = parseInt(n.replace("px", ""));
+size.changed = size.current + num;
+divObj.custom(size.current, size.changed);
+}
+
+function changeTextSizeReset(){
+n = Element.getStyle("latest-posts", "font-size") ;
+size = { current:"", changed:""};
+size.current = parseInt(n.replace("px", ""));
+divObj.custom( size.current, 12);
+}
+
+// -->
+
+</code></pre>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-30T22:50:15.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月31日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/convert-multiple-primitive-images-at-once.html">Primitiveの変換をまとめて行う</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3b272;"> <div style="background-color: #c3b272"> <img src="/assets/images/kazuend-25767/kazuend-25767.svg" alt role="presentation" loading="lazy" width="985" height="604"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">kazuend</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。</div> <div class="read-more"> <a href="/2018/convert-multiple-primitive-images-at-once.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-09-10T22:55:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年9月11日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/09/try_typesquare.html">TypeSquareを試してみる</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cec7bc;"> <img src="/assets/images/trying_typesquare/trying_typesquare_medium.webp" srcset="/assets/images/trying_typesquare/trying_typesquare_medium.webp, /assets/images/trying_typesquare/trying_typesquare_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="657" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。</div> <div class="read-more"> <a href="/2013/09/try_typesquare.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-04T15:46:10.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/yslow_1_minimize_http_requests.html">YSLOW 勉強：1：Minimize HTTP Requests</a> </h3>  </header> <div class="content">*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。</div> <div class="read-more"> <a href="/2007/08/yslow_1_minimize_http_requests.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-08T11:07:38.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/display-featured-image.html">Featured Image を設置する</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #ccc4b5;"> <img src="/assets/images/display-featured-image/display-featured-image_medium.webp" srcset="/assets/images/display-featured-image/display-featured-image_medium.webp, /assets/images/display-featured-image/display-featured-image_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。</div> <div class="read-more"> <a href="/2018/display-featured-image.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-30T22:50:15.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月31日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/convert-multiple-primitive-images-at-once.html">Primitiveの変換をまとめて行う</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3b272;"> <div style="background-color: #c3b272"> <img src="/assets/images/kazuend-25767/kazuend-25767.svg" alt role="presentation" loading="lazy" width="985" height="604"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">kazuend</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。</div> <div class="read-more"> <a href="/2018/convert-multiple-primitive-images-at-once.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-09-10T22:55:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年9月11日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/09/try_typesquare.html">TypeSquareを試してみる</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cec7bc;"> <img src="/assets/images/trying_typesquare/trying_typesquare_medium.webp" srcset="/assets/images/trying_typesquare/trying_typesquare_medium.webp, /assets/images/trying_typesquare/trying_typesquare_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="657" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。</div> <div class="read-more"> <a href="/2013/09/try_typesquare.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-04T15:46:10.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/yslow_1_minimize_http_requests.html">YSLOW 勉強: 1: Minimize HTTP Requests</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cdc8bc;"> <img src="/assets/images/yslow_1_minimize_http_requests/yslow_1_minimize_http_requests_medium.webp" srcset="/assets/images/yslow_1_minimize_http_requests/yslow_1_minimize_http_requests_medium.webp, /assets/images/yslow_1_minimize_http_requests/yslow_1_minimize_http_requests_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。</div> <div class="read-more"> <a href="/2007/08/yslow_1_minimize_http_requests.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-08T11:07:38.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/display-featured-image.html">Featured Image を設置する</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #ccc4b5;"> <img src="/assets/images/display-featured-image/display-featured-image_medium.webp" srcset="/assets/images/display-featured-image/display-featured-image_medium.webp, /assets/images/display-featured-image/display-featured-image_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。</div> <div class="read-more"> <a href="/2018/display-featured-image.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

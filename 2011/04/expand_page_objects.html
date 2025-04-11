@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -634,58 +911,61 @@
 <p>ただ、テスト手順として、連続性のない複数のページのアクションを実行する場合、Page Objects のパターンでは悩ましいところがあります。たとえば、ブログの設定ページで設定をしたあとに、記事作成ページで記事を作成して、その記事がブログに期待通りに生成されているかを確認する、とか。それぞれのページは独立していて、アクション間の連携はない場合、Page Object を渡すわけにはいかない。リンクをクリックしてページを遷移していくことで連携させることもできるけれど、効率性から考えるとやはり直接該当のページにアクセスしたい（リンクをたどった方がより人間的と言えるかもしれないけど）。とか。</p>
 <p>Page Objects の上位のオブジェクトして「Site Object」を設けて、そこから操作するとそうした悩みがなくなります。たとえば<a href="http://zenback.jp">zenback</a>なら、「Dashboard」とか「Customize」とかの Page Objects の他に「zenback」という Site Object を設ける。zenback という Site Object から、Dashboard や Customize などの Page Objects を操作したり、ページ間の移動を行うことで Dashboard と Customize のページがアクション（サービス）で連携がない場合でも連続的に操作を行うことができる。</p>
 <p>イメージとしてはこんな感じ。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>(lib/zenback)</span></span>
-<span class="line"><span>require 'watir-webdriver'</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>module Zenback</span></span>
-<span class="line"><span>class Zenback</span></span>
-<span class="line"><span>  def initialize</span></span>
-<span class="line"><span>    @b = Webdriver::Browser.new</span></span>
-<span class="line"><span>  end</span></span>
-<span class="line"><span>  def dashboard</span></span>
-<span class="line"><span>    Dashboard.new @b</span></span>
-<span class="line"><span>  end</span></span>
-<span class="line"><span>  def customize</span></span>
-<span class="line"><span>    Customize.new @b</span></span>
-<span class="line"><span>  end</span></span>
-<span class="line"><span>end</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>class Dashboard</span></span>
-<span class="line"><span>  def initialize(b)</span></span>
-<span class="line"><span>    @b = b</span></span>
-<span class="line"><span>  end</span></span>
-<span class="line"><span>  def add(blog)</span></span>
-<span class="line"><span>     @b.link(:href,/add_blog/).click</span></span>
-<span class="line"><span>     # scripts for adding blog action (service)</span></span>
-<span class="line"><span>  end</span></span>
-<span class="line"><span>end</span></span>
-<span class="line"><span>....</span></span>
-<span class="line"><span>end</span></span>
-<span class="line"><span></span></span></code></pre>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>require 'lib/zenback'</span></span>
-<span class="line"><span>z = Zenback::Zenback.new</span></span>
-<span class="line"><span>z.goto 'http://zenback.jp/dashboard'</span></span>
-<span class="line"><span>z.dashboard.add 'http://memolog.org'</span></span>
-<span class="line"><span>z.goto 'http://zenback.jp/dashboard/blog/123456789/'</span></span>
-<span class="line"><span>z.customize.set_modules</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">(lib/zenback)
+require 'watir-webdriver'
+
+module Zenback
+class Zenback
+  def initialize
+    @b = Webdriver::Browser.new
+  end
+  def dashboard
+    Dashboard.new @b
+  end
+  def customize
+    Customize.new @b
+  end
+end
+
+class Dashboard
+  def initialize(b)
+    @b = b
+  end
+  def add(blog)
+     @b.link(:href,/add_blog/).click
+     # scripts for adding blog action (service)
+  end
+end
+....
+end
+
+</code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">require 'lib/zenback'
+z = Zenback::Zenback.new
+z.goto 'http://zenback.jp/dashboard'
+z.dashboard.add 'http://memolog.org'
+z.goto 'http://zenback.jp/dashboard/blog/123456789/'
+z.customize.set_modules
+
+</code></pre>
 <p>実際のスクリプトはページごとにスクリプトファイル変えたりとか、単純に goto メソッドで画面遷移しないとかいろいろあったりしますが、基本的なイメージとしてはこんな感じです。「zenback」という Site Object を呼び出して、Site Object から Page Objects を操作していく。Page Objects のパターンではアクション実行後に Page Object を返すのが基本ですが、Site Object があると Page Objects の選択は Site Object 上で自分で選択できるので Page Object の返りはあってもなくてもいい。あと zenback の Site Object で起動した watir-webdriver のオブジェクトを Page Objects の引数として渡すことで Page Objects 個々の独立性を保ちつつ、サイト全体で watir-webdriver のオブジェクトを使えるようにしています。</p>
 <p>そして、Page Object の下位のオブジェクトとして「Data Objects」も（必要に応じて）設けます。たとえば記事の一覧のページなど、ページには表示するデータがあって、それをひとつのオブジェクトとして捉えて、データの各要素（id とか title とか）を取り出しやすい形にしておく。イメージとしてはこんな感じ（こちらもかなり省略しています）。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>module Zenback</span></span>
-<span class="line"><span>class Dashboard</span></span>
-<span class="line"><span>  class Blog</span></span>
-<span class="line"><span>    attr_accessor :id, :name</span></span>
-<span class="line"><span>    def initialize(tr)</span></span>
-<span class="line"><span>       @id = tr.th.link.href.slice(/[0-9]+/)</span></span>
-<span class="line"><span>       @name = tr.tr.link.text</span></span>
-<span class="line"><span>    end</span></span>
-<span class="line"><span>  end</span></span>
-<span class="line"><span>  def blog(tr)</span></span>
-<span class="line"><span>    Blog.new tr</span></span>
-<span class="line"><span>  end</span></span>
-<span class="line"><span>end</span></span>
-<span class="line"><span>end</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">module Zenback
+class Dashboard
+  class Blog
+    attr_accessor :id, :name
+    def initialize(tr)
+       @id = tr.th.link.href.slice(/[0-9]+/)
+       @name = tr.tr.link.text
+    end
+  end
+  def blog(tr)
+    Blog.new tr
+  end
+end
+end
+
+</code></pre>
 <p>zenback で言うと、ダッシュボードに表示されるブログ一覧の一つのブログを「Data Object」として捉えて、id や名前を取り出しやすい形にしておく。これで blog.id とかでブログの id を取り出すことできます。Blog の class に「tr」を渡していますが、これはこの一覧が table で組まれていて、tr ごとにブログのデータが記載されるためです。</p>
 <p>このへん、私自身としてはまだ試行錯誤中といったところではありますが、今のところテストスクリプトを構築する上でのモデルになっています。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

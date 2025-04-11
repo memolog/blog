@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -630,15 +907,16 @@
 </script><meta property="og:type" content="article"><meta property="og:title" content="ngBindHtmlとサロゲートペア"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="AngularJSでngBindHtmlを使用すると、ngSanitize(angular-sanitize.js)のencodeEntitiesに行き着く（はず）。そこでは下記のような処理が行われています。"><meta property="og:locale" content="ja_JP"><meta property="article:published_time" content="2014-03-02T20:50:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2014/03/ngbindhtml_and_surrogate_pair.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2014-03-02T20:50:00.000Z"> <span class="calendar-icon">📅</span> <span>2014年3月3日</span> </time> </div> <h2 class="header__title"><span>ngBindHtmlとサロゲートペア</span></h2>  </header> <div id="article-content" class="content">  <p>AngularJS で<a href="http://docs.angularjs.org/api/ng/directive/ngBindHtml">ngBindHtml</a>を使用すると、ngSanitize(angular-sanitize.js)の encodeEntities に行き着く（はず）。そこでは下記のような処理が行われています。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> encodeEntities</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">value</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">  return</span><span style="color:#F8F8F2"> value.</span></span>
-<span class="line"><span style="color:#50FA7B">    replace</span><span style="color:#F8F8F2">(</span><span style="color:#FF5555">/</span><span style="color:#F1FA8C">&#x26;</span><span style="color:#FF5555">/</span><span style="color:#FF79C6">g</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">&#x26;</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">).</span></span>
-<span class="line"><span style="color:#50FA7B">    replace</span><span style="color:#F8F8F2">(NON_ALPHANUMERIC_REGEXP, </span><span style="color:#FF79C6">function</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">value</span><span style="color:#F8F8F2">){</span></span>
-<span class="line"><span style="color:#FF79C6">      return</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">&#x26;#</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> +</span><span style="color:#F8F8F2"> value.</span><span style="color:#50FA7B">charCodeAt</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">+</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">;</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">    }).</span></span>
-<span class="line"><span style="color:#50FA7B">    replace</span><span style="color:#F8F8F2">(</span><span style="color:#6272A4">//g, '>');</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">function</span> <span class="token function">encodeEntities</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> value<span class="token punctuation">.</span>
+    <span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">&#x26;</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">,</span> <span class="token string">'&#x26;'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>
+    <span class="token function">replace</span><span class="token punctuation">(</span><span class="token constant">NON_ALPHANUMERIC_REGEXP</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'&#x26;#'</span> <span class="token operator">+</span> value<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">';'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span>
+    <span class="token function">replace</span><span class="token punctuation">(</span><span class="token comment">//g, '>');</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
 <p>NON_ALPHANUMERIC_REGEXP は、/([^\#-~| |!])/g;でマッチした値。文字列はこの処理を通る感じになる。charCodeAt の処理は<a href="http://mdn.beonex.com/en/Core_JavaScript_1.5_Reference/Global_Objects/String/charCodeAt.html">charCodeAt - MDN</a>を参照。</p>
 <blockquote>
 <p>Note that charCodeAt will always return a value that is less than 65,536. This is because the higher code points are represented by a pair of (lower valued) “surrogate” pseudo-characters which are used to comprise the real character.</p>
@@ -646,29 +924,30 @@
 <p>charCodeAt はつねに 65,536 以下の値が返ってくるようになっていて、それ以上のコードポイントの場合は、サロゲートペアの状態になってくる。サロゲートペアについては、<a href="http://codezine.jp/article/detail/1592">サロゲートペア入門</a>の「サロゲートペアとは？」を参照。</p>
 <p>なので、ngBindHtml で絵文字のように 65,356 以上のコードポイントを持ってそうな文字列を通すと、サロゲートペアをひとつずつ実体参照の状態にしてしまい、うまく表示できない。</p>
 <p>ngBindHtml でそのような文字列を表示するためには、なんとかしないといけない。それでとりあえず<a href="https://github.com/eller86/surrogate-pair.js">eller86/surrogate-pair.js</a>を使って surrogate pair を処理するように対応。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> handleSurrogatePair</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">content</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">  if</span><span style="color:#F8F8F2"> (sp.</span><span style="color:#50FA7B">findSurrogatePair</span><span style="color:#F8F8F2">(content)) {</span></span>
-<span class="line"><span style="color:#F8F8F2">    content </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> $sce.</span><span style="color:#50FA7B">getTrustedHtml</span><span style="color:#F8F8F2">(content);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">    var</span><span style="color:#F8F8F2"> match </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> content.</span><span style="color:#50FA7B">match</span><span style="color:#F8F8F2">(</span><span style="color:#FF5555">/</span><span style="color:#F1FA8C">\&#x26;\#5</span><span style="color:#8BE9FD">[</span><span style="color:#BD93F9">5-6</span><span style="color:#8BE9FD">][</span><span style="color:#BD93F9">0-9</span><span style="color:#8BE9FD">]</span><span style="color:#FF79C6">{3}</span><span style="color:#F1FA8C">;\&#x26;\#5</span><span style="color:#8BE9FD">[</span><span style="color:#BD93F9">6-7</span><span style="color:#8BE9FD">][</span><span style="color:#BD93F9">0-9</span><span style="color:#8BE9FD">]</span><span style="color:#FF79C6">{3}</span><span style="color:#F1FA8C">;</span><span style="color:#FF5555">/</span><span style="color:#FF79C6">g</span><span style="color:#F8F8F2">),</span></span>
-<span class="line"><span style="color:#F8F8F2">      i </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">      len </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> match.length,</span></span>
-<span class="line"><span style="color:#F8F8F2">      str;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">    for</span><span style="color:#F8F8F2"> (; i </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2"> len; i</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#F8F8F2">      str </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> match[i].</span><span style="color:#50FA7B">match</span><span style="color:#F8F8F2">(</span><span style="color:#FF5555">/</span><span style="color:#8BE9FD">[</span><span style="color:#BD93F9">0-9</span><span style="color:#8BE9FD">]</span><span style="color:#FF79C6">+</span><span style="color:#FF5555">/</span><span style="color:#FF79C6">g</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">      if</span><span style="color:#F8F8F2"> (sp.</span><span style="color:#50FA7B">checkHighSurrogate</span><span style="color:#F8F8F2">(str[</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">])) {</span></span>
-<span class="line"><span style="color:#F8F8F2">        content </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> content.</span><span style="color:#50FA7B">replace</span><span style="color:#F8F8F2">(</span></span>
-<span class="line"><span style="color:#F8F8F2">          match[i],</span></span>
-<span class="line"><span style="color:#E9F284">          "</span><span style="color:#F1FA8C">&#x26;#</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> +</span><span style="color:#F8F8F2"> ((str[</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">] </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9"> 0xd800</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">*</span><span style="color:#BD93F9"> 0x400</span><span style="color:#FF79C6"> +</span><span style="color:#F8F8F2"> (str[</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">] </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9"> 0xdc00</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">+</span><span style="color:#BD93F9"> 0x10000</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">+</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">;</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#F8F8F2">        );</span></span>
-<span class="line"><span style="color:#F8F8F2">      }</span></span>
-<span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> content;</span></span>
-<span class="line"><span style="color:#F8F8F2">  } </span><span style="color:#FF79C6">else</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> $sce.</span><span style="color:#50FA7B">trustAsHtml</span><span style="color:#F8F8F2">($sce.</span><span style="color:#50FA7B">getTrustedHtml</span><span style="color:#F8F8F2">(content));</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">function</span> <span class="token function">handleSurrogatePair</span><span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>sp<span class="token punctuation">.</span><span class="token function">findSurrogatePair</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    content <span class="token operator">=</span> $sce<span class="token punctuation">.</span><span class="token function">getTrustedHtml</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">var</span> match <span class="token operator">=</span> content<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\&#x26;\#5[5-6][0-9]{3};\&#x26;\#5[6-7][0-9]{3};</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      len <span class="token operator">=</span> match<span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+      str<span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      str <span class="token operator">=</span> match<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[0-9]+</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>sp<span class="token punctuation">.</span><span class="token function">checkHighSurrogate</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        content <span class="token operator">=</span> content<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>
+          match<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token string">"&#x26;#"</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">0xd800</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">0x400</span> <span class="token operator">+</span> <span class="token punctuation">(</span>str<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">0xdc00</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">0x10000</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">";"</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> content<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> $sce<span class="token punctuation">.</span><span class="token function">trustAsHtml</span><span class="token punctuation">(</span>$sce<span class="token punctuation">.</span><span class="token function">getTrustedHtml</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>$sceは<a href="http://docs.angularjs.org/api/ng/service/$sce#Example">Strict Contextual Escaping services to AngularJS</a>を参照。対処療法に過ぎないので、あんまりいい感じではないけど、一応表示できるようになる。</p>
 <p>そもそも、ngSanitize で surrogate pair を適切に処理するように pull request を作るべきなんだろうなあと思いつつ、そこまでいたってない。そして基本的には、ngBindHtml を使わずに ngBind だけでうまく設計する方がいい。ngSanitize の処理量半端ない。</p>
 <p>というメモ。走り書き。</p>

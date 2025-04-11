@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -635,43 +912,45 @@
 </ul>
 <p>Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。作業内容的には<a href="/blog//2007/08/mt/">MT で奇数行、偶数行ごとに背景色をつける方法</a>と変わりません。今回は分岐の条件をテンプレートの種類（名前）にしています。</p>
 <p>まずナビゲーションの HTML がこちら。アクティブにしたいタブに「here」という class を指定しています。MTUnless を併用するともう少しかしこい HTML にできるかもしれません。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div id="banner-image"></span></span>
-<span class="line"><span>&#x3C;div id="banner-image-inner"></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>&#x3C;div id="topnavi"></span></span>
-<span class="line"><span>&#x3C;div id="topnavi-inner"></span></span>
-<span class="line"><span>&#x3C;ul></span></span>
-<span class="line"><span>&#x3C;li class="rss">&#x3C;a href="http://feeds.feedburner.jp/memolog"></span></span>
-<span class="line"><span>&#x3C;img width="9" height="9" alt="RSS" src="/assets/mt/mt-static/images/status_icons/feed.gif"/></span></span>
-<span class="line"><span>RSS&#x3C;/a>&#x3C;/li></span></span>
-<span class="line"><span>&#x3C;li class="archives&#x3C;MTIf name="archive_index"> here&#x3C;/MTIf>&#x3C;</span></span>
-<span class="line"><span>MTIf name="entry_template"> here&#x3C;/MTIf>&#x3C;MTIf name="datebased_archive"> here&#x3C;/MTIf>">&#x3C;a href="</span></span>
-<span class="line"><span>&#x3C;$MTBlogURL$>/archives.html">archives&#x3C;/a>&#x3C;/li></span></span>
-<span class="line"><span>&#x3C;li class="profile">&#x3C;a href="http://memolog.org/mt/mt-search.cgi?tag=profile&#x26;IncludeBlogs=5">profile&#x3C;/a>&#x3C;/li></span></span>
-<span class="line"><span>&#x3C;li class="home &#x3C;MTIf name="main_index">here&#x3C;/MTIf>">&#x3C;a href="&#x3C;$MTBlogURL$>">home&#x3C;/a>&#x3C;/li></span></span>
-<span class="line"><span>&#x3C;/ul></span></span>
-<span class="line"><span>&#x3C;/div></span></span>
-<span class="line"><span>&#x3C;/div></span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>&#x3C;/div></span></span>
-<span class="line"><span>&#x3C;/div></span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">&#x3C;div id="banner-image">
+&#x3C;div id="banner-image-inner">
+
+&#x3C;div id="topnavi">
+&#x3C;div id="topnavi-inner">
+&#x3C;ul>
+&#x3C;li class="rss">&#x3C;a href="http://feeds.feedburner.jp/memolog">
+&#x3C;img width="9" height="9" alt="RSS" src="/assets/mt/mt-static/images/status_icons/feed.gif"/>
+RSS&#x3C;/a>&#x3C;/li>
+&#x3C;li class="archives&#x3C;MTIf name="archive_index"> here&#x3C;/MTIf>&#x3C;
+MTIf name="entry_template"> here&#x3C;/MTIf>&#x3C;MTIf name="datebased_archive"> here&#x3C;/MTIf>">&#x3C;a href="
+&#x3C;$MTBlogURL$>/archives.html">archives&#x3C;/a>&#x3C;/li>
+&#x3C;li class="profile">&#x3C;a href="http://memolog.org/mt/mt-search.cgi?tag=profile&#x26;IncludeBlogs=5">profile&#x3C;/a>&#x3C;/li>
+&#x3C;li class="home &#x3C;MTIf name="main_index">here&#x3C;/MTIf>">&#x3C;a href="&#x3C;$MTBlogURL$>">home&#x3C;/a>&#x3C;/li>
+&#x3C;/ul>
+&#x3C;/div>
+&#x3C;/div>
+
+&#x3C;/div>
+&#x3C;/div>
+
+</code></pre>
 <p>CSS はこんな感じ。背景画像の上にタブを載せているので、表示がずれないようにピクセル単位でガチガチに指定しています（ul のマージンが入ることに気づかずに、しばらく悩んだ）。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>/* top navigation */</span></span>
-<span class="line"><span>#banner-image {height:160px; background:#fff url(/assets/site-design/0701/050101.gif) no-repeat; width:940px; margin:0 auto;}</span></span>
-<span class="line"><span>#banner-image-inner {padding-top:125px;}</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>#topnavi {height:35px;}</span></span>
-<span class="line"><span>#topnavi-inner {padding-bottom:10px; padding-right:20px; text-align:center;}</span></span>
-<span class="line"><span>#topnavi ul {list-style-type:none; margin:0;}</span></span>
-<span class="line"><span>#topnavi li {width:54px; height:25px; margin:0 2px; float:right;}</span></span>
-<span class="line"><span>#topnavi li a {width:46px; height:17px; display:block; padding:4px; background-color:#e6e6e6;</span></span>
-<span class="line"><span>font-size:11px; font-familiy:Verdana,sans-serif; opacity: 0.8;-moz-opacity: 0.8;filter: alpha(opacity=80);}</span></span>
-<span class="line"><span>#topnavi li a:link, #topnavi li a:visited {text-decoration:none;}</span></span>
-<span class="line"><span>#topnavi li.here a{background-color:#fff; opacity: 1;-moz-opacity: 1;filter: alpha(opacity=100);}</span></span>
-<span class="line"><span>#topnavi li a:hover {background-color:#A1D0FF; opacity: 1;-moz-opacity: 1;filter: alpha(opacity=100);}</span></span>
-<span class="line"><span>#topnavi li.rss img {margin-right:4px;}</span></span>
-<span class="line"><span></span></span></code></pre>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">/* top navigation */
+#banner-image {height:160px; background:#fff url(/assets/site-design/0701/050101.gif) no-repeat; width:940px; margin:0 auto;}
+#banner-image-inner {padding-top:125px;}
+
+#topnavi {height:35px;}
+#topnavi-inner {padding-bottom:10px; padding-right:20px; text-align:center;}
+#topnavi ul {list-style-type:none; margin:0;}
+#topnavi li {width:54px; height:25px; margin:0 2px; float:right;}
+#topnavi li a {width:46px; height:17px; display:block; padding:4px; background-color:#e6e6e6;
+font-size:11px; font-familiy:Verdana,sans-serif; opacity: 0.8;-moz-opacity: 0.8;filter: alpha(opacity=80);}
+#topnavi li a:link, #topnavi li a:visited {text-decoration:none;}
+#topnavi li.here a{background-color:#fff; opacity: 1;-moz-opacity: 1;filter: alpha(opacity=100);}
+#topnavi li a:hover {background-color:#A1D0FF; opacity: 1;-moz-opacity: 1;filter: alpha(opacity=100);}
+#topnavi li.rss img {margin-right:4px;}
+
+</code></pre>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。

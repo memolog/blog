@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -630,27 +907,33 @@
 </script><meta property="og:type" content="article"><meta property="og:title" content="Angular2とimport statement"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="Angular2とDecorators - メモログに出した5 Min Quickstartのサンプルを再掲すると、冒頭にimportのstatementがあります。"><meta property="og:locale" content="ja_JP"><meta property="article:published_time" content="2016-01-16T16:00:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2016/01/angular2_and_import_statement.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2016-01-16T16:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2016年1月17日</span> </time> </div> <h2 class="header__title"><span>Angular2とimport statement</span></h2>  </header> <div id="article-content" class="content">  <p><a href="/blog//2016/01/angular2_with_decorators/">Angular2 と Decorators - メモログ</a>に出した<a href="https://angular.io/docs/ts/latest/quickstart.html">5 Min Quickstart</a>のサンプルを再掲すると、冒頭に import の statement があります。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { Component } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">angular2/core</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">@</span><span style="color:#50FA7B">Component</span><span style="color:#F8F8F2">({</span></span>
-<span class="line"><span style="color:#F8F8F2">  selector</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">my-app</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">  template</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">My First Angular 2 App</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">})</span></span>
-<span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> class</span><span style="color:#8BE9FD"> AppComponent</span><span style="color:#F8F8F2"> {}</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"angular2/core"</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">"my-app"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token string">"My First Angular 2 App"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppComponent</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
 <p>これは ES6（ES2015）で追加された<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">import</a>機能。ES7 でも<a href="https://github.com/leebyron/ecmascript-more-export-from">javascript-decorators/README.md at master ? wycats/javascript-decorators</a>にて追加の宣言が提案されていて、このページには、ES6 の宣言方法もリストにされてあって見やすい。</p>
 <p>使い方は、たとえばモジュール側で<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">export</a>で下記のように宣言したとする。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> foo</span><span style="color:#F8F8F2">() {}</span></span>
-<span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> function</span><span style="color:#50FA7B"> bar</span><span style="color:#F8F8F2">() {}</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
 <p>それを import で呼び出すには、同じ function 名を使って呼び出すだけでいい。カンマ区切りで複数の function を同時に import できる。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { foo, bar } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">./foobar.js</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> foo<span class="token punctuation">,</span> bar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./foobar.js"</span><span class="token punctuation">;</span>
+</code></pre>
 <p>モジュール全体を呼び出すなら、「*」を使って呼び出すだけで良い。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#BD93F9"> *</span><span style="color:#FF79C6"> as</span><span style="color:#F8F8F2"> foobar </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">./foobar.js</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">foobar.</span><span style="color:#50FA7B">foo</span><span style="color:#F8F8F2">();</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> foobar <span class="token keyword">from</span> <span class="token string">"./foobar.js"</span><span class="token punctuation">;</span>
+foobar<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>export するモジュールで default が設定されていれば、default のモジュールをシンプルな書き方で呼び出せる。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">export</span><span style="color:#FF79C6"> default</span><span style="color:#FF79C6"> function</span><span style="color:#F8F8F2"> () {</span></span>
-<span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">foobar</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> foobar </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">foobar.js</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"foobar"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">import</span> foobar <span class="token keyword">from</span> <span class="token string">"foobar.js"</span><span class="token punctuation">;</span>
+</code></pre>
 <p>import / export の statement は、現状で使われている CommonJS 方式や AMD 方式のメリットを踏襲しつつ、より簡潔で静的な解析がしやすい（=optimize がしやすい）ものになっている。らしい。詳しくは<a href="http://www.2ality.com/2014/09/es6-modules-final.html">ECMAScript 6 modules: the final syntax</a>が参考になる。いまのところ直接サポートしているブラウザはなくて、<a href="https://babeljs.io/docs/learn-es2015/#modules">Babel</a>などの transpiler を使う感じになる。</p>
 <p>なお、webpack の <a href="https://webpack.github.io/docs/code-splitting.html#es6-modules">code splitting</a>　は import の書式に対応していないらしい（webpack で bundle する前に CommonJS か AMD 方式に transpiler などで変換する必要がある）。そして、webpack の code splitting を使いたい場合は、CommonJS 方式の require.ensure か、AMD 方式の require か、いずれかを使った方がいい。</p>
 <blockquote>

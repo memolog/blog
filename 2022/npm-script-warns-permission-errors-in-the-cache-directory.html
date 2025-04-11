@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -633,42 +910,45 @@
 <p>原因は<code>npm run build</code>の中身が <code>npm run tsc</code> になっているため。root ユーザーで別のユーザーが所有権を持つディレクトリで実行すると問題になる。</p>
 <p>解決方法は Docker container を実行するユーザーを<code>node</code>に変更するとか、<a href="https://docs.npmjs.com/cli/v6/using-npm/config#cache">npm config</a>で、<code>npm config set cache /tmp</code>と設定するとか（<code>export npm_config_cache=/tmp</code>でもいける雰囲気）、所有権を調整すると解決する。解決方法は他にもいろいろあると思う。</p>
 <p>再現手順は<a href="https://github.com/memolog/docker-node-npm-scripti-permission-issue-demo">docker-node-npm-scripti-permission-issue-demo</a>の codespaces の VS code の中でターミナルを開いて、以下のような感じで Docker container を起動して、<code>npm ci</code>と<code>npm run build</code>を実行するとエラーを再現することができる。動作環境は Node.js 16.18.0 で npm は 8.19.2。たぶん Node.js 18.x でも発生する（npm のバージョンは変わらないので）。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> build</span><span style="color:#BD93F9"> -f</span><span style="color:#F1FA8C"> Dockerfile</span><span style="color:#BD93F9"> -t</span><span style="color:#F1FA8C"> demo</span><span style="color:#F1FA8C"> .</span></span>
-<span class="line"><span style="color:#50FA7B">docker</span><span style="color:#F1FA8C"> run</span><span style="color:#BD93F9"> -it</span><span style="color:#BD93F9"> --rm</span><span style="color:#BD93F9"> -v</span><span style="color:#F1FA8C"> `</span><span style="color:#8BE9FD">pwd</span><span style="color:#F1FA8C">`</span><span style="color:#50FA7B">:/current</span><span style="color:#BD93F9"> -w</span><span style="color:#F1FA8C"> /current</span><span style="color:#F1FA8C"> demo</span><span style="color:#F1FA8C"> bash</span></span></code></pre>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#50FA7B">root@71524f7f2bea:/current#</span><span style="color:#F1FA8C"> npm</span><span style="color:#F1FA8C"> ci</span></span>
-<span class="line"><span style="color:#8BE9FD">...</span><span style="color:#F8F8F2"> (snip) ...</span></span>
-<span class="line"><span style="color:#50FA7B">added</span><span style="color:#BD93F9"> 1</span><span style="color:#F1FA8C"> package,</span><span style="color:#F1FA8C"> and</span><span style="color:#F1FA8C"> audited</span><span style="color:#BD93F9"> 2</span><span style="color:#F1FA8C"> packages</span><span style="color:#F1FA8C"> in</span><span style="color:#F1FA8C"> 2s</span></span>
-<span class="line"><span style="color:#50FA7B">found</span><span style="color:#BD93F9"> 0</span><span style="color:#F1FA8C"> vulnerabilities</span></span>
-<span class="line"><span style="color:#8BE9FD">...</span><span style="color:#F8F8F2"> (snip) ...</span></span></code></pre>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#50FA7B">root@71524f7f2bea:/current#</span><span style="color:#F1FA8C"> npm</span><span style="color:#F1FA8C"> run</span><span style="color:#F1FA8C"> build</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> docker-node-npm-scripti-permission-issue-demo@1.0.0 build</span></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> npm run tsc</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> WARN</span><span style="color:#F1FA8C"> logfile</span><span style="color:#F1FA8C"> Error:</span><span style="color:#F1FA8C"> EACCES:</span><span style="color:#F1FA8C"> permission</span><span style="color:#F1FA8C"> denied,</span><span style="color:#F1FA8C"> scandir</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/root/.npm/_logs</span><span style="color:#E9F284">'</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> WARN</span><span style="color:#F1FA8C"> logfile</span><span style="color:#F1FA8C">  error</span><span style="color:#F1FA8C"> cleaning</span><span style="color:#F1FA8C"> log</span><span style="color:#F1FA8C"> files</span><span style="color:#F8F8F2"> [Error: </span><span style="color:#F1FA8C">EACCES:</span><span style="color:#F1FA8C"> permission</span><span style="color:#F1FA8C"> denied,</span><span style="color:#F1FA8C"> scandir</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/root/.npm/_logs</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">]</span><span style="color:#F1FA8C"> {</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> WARN</span><span style="color:#F1FA8C"> logfile</span><span style="color:#F1FA8C">   errno:</span><span style="color:#BD93F9"> -13,</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> WARN</span><span style="color:#F1FA8C"> logfile</span><span style="color:#F1FA8C">   code:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">EACCES</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">,</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> WARN</span><span style="color:#F1FA8C"> logfile</span><span style="color:#F1FA8C">   syscall:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">scandir</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">,</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> WARN</span><span style="color:#F1FA8C"> logfile</span><span style="color:#F1FA8C">   path:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">/root/.npm/_logs</span><span style="color:#E9F284">'</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> WARN</span><span style="color:#F1FA8C"> logfile</span><span style="color:#F1FA8C"> }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> docker-node-npm-scripti-permission-issue-demo@1.0.0 tsc</span></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#F8F8F2"> tsc</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C"> code</span><span style="color:#F1FA8C"> EACCES</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C"> syscall</span><span style="color:#F1FA8C"> mkdir</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C"> path</span><span style="color:#F1FA8C"> /root/.npm/_cacache/tmp</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C"> errno</span><span style="color:#BD93F9"> -13</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C"> Your</span><span style="color:#F1FA8C"> cache</span><span style="color:#F1FA8C"> folder</span><span style="color:#F1FA8C"> contains</span><span style="color:#F1FA8C"> root-owned</span><span style="color:#F1FA8C"> files,</span><span style="color:#F1FA8C"> due</span><span style="color:#F1FA8C"> to</span><span style="color:#F1FA8C"> a</span><span style="color:#F1FA8C"> bug</span><span style="color:#F1FA8C"> in</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C"> previous</span><span style="color:#F1FA8C"> versions</span><span style="color:#F1FA8C"> of</span><span style="color:#F1FA8C"> npm</span><span style="color:#F1FA8C"> which</span><span style="color:#F1FA8C"> has</span><span style="color:#F1FA8C"> since</span><span style="color:#F1FA8C"> been</span><span style="color:#F1FA8C"> addressed.</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C"> To</span><span style="color:#F1FA8C"> permanently</span><span style="color:#F1FA8C"> fix</span><span style="color:#F1FA8C"> this</span><span style="color:#F1FA8C"> problem,</span><span style="color:#F1FA8C"> please</span><span style="color:#F1FA8C"> run:</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C">   sudo</span><span style="color:#F1FA8C"> chown</span><span style="color:#BD93F9"> -R</span><span style="color:#F1FA8C"> 1000:0</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">/root/.npm</span><span style="color:#E9F284">"</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C"> Log</span><span style="color:#F1FA8C"> files</span><span style="color:#F1FA8C"> were</span><span style="color:#F1FA8C"> not</span><span style="color:#F1FA8C"> written</span><span style="color:#F1FA8C"> due</span><span style="color:#F1FA8C"> to</span><span style="color:#F1FA8C"> an</span><span style="color:#F1FA8C"> error</span><span style="color:#F1FA8C"> writing</span><span style="color:#F1FA8C"> to</span><span style="color:#F1FA8C"> the</span><span style="color:#F1FA8C"> directory:</span><span style="color:#F1FA8C"> /root/.npm/_logs</span></span>
-<span class="line"><span style="color:#50FA7B">npm</span><span style="color:#F1FA8C"> ERR!</span><span style="color:#F1FA8C"> You</span><span style="color:#F1FA8C"> can</span><span style="color:#F1FA8C"> rerun</span><span style="color:#F1FA8C"> the</span><span style="color:#F1FA8C"> command</span><span style="color:#F1FA8C"> with</span><span style="color:#F1FA8C"> `</span><span style="color:#BD93F9">--loglevel</span><span style="color:#FF79C6">=</span><span style="color:#F1FA8C">verbose`</span><span style="color:#50FA7B"> to</span><span style="color:#F1FA8C"> see</span><span style="color:#F1FA8C"> the</span><span style="color:#F1FA8C"> logs</span><span style="color:#F1FA8C"> in</span><span style="color:#F1FA8C"> your</span><span style="color:#F1FA8C"> terminal</span></span></code></pre>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token function">docker</span> build <span class="token parameter variable">-f</span> Dockerfile <span class="token parameter variable">-t</span> demo <span class="token builtin class-name">.</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-it</span> <span class="token parameter variable">--rm</span> <span class="token parameter variable">-v</span> <span class="token variable"><span class="token variable">`</span><span class="token builtin class-name">pwd</span><span class="token variable">`</span></span>:/current <span class="token parameter variable">-w</span> /current demo <span class="token function">bash</span>
+</code></pre>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash">root@71524f7f2bea:/current<span class="token comment"># npm ci</span>
+<span class="token punctuation">..</span>. <span class="token punctuation">(</span>snip<span class="token punctuation">)</span> <span class="token punctuation">..</span>.
+added <span class="token number">1</span> package, and audited <span class="token number">2</span> packages <span class="token keyword">in</span> 2s
+found <span class="token number">0</span> vulnerabilities
+<span class="token punctuation">..</span>. <span class="token punctuation">(</span>snip<span class="token punctuation">)</span> <span class="token punctuation">..</span>.
+</code></pre>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash">root@71524f7f2bea:/current<span class="token comment"># npm run build</span>
+
+<span class="token operator">></span> docker-node-npm-scripti-permission-issue-demo@1.0.0 build
+<span class="token operator">></span> <span class="token function">npm</span> run tsc
+
+<span class="token function">npm</span> WARN logfile Error: EACCES: permission denied, scandir <span class="token string">'/root/.npm/_logs'</span>
+<span class="token function">npm</span> WARN logfile  error cleaning log files <span class="token punctuation">[</span>Error: EACCES: permission denied, scandir <span class="token string">'/root/.npm/_logs'</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+<span class="token function">npm</span> WARN logfile   errno: -13,
+<span class="token function">npm</span> WARN logfile   code: <span class="token string">'EACCES'</span>,
+<span class="token function">npm</span> WARN logfile   syscall: <span class="token string">'scandir'</span>,
+<span class="token function">npm</span> WARN logfile   path: <span class="token string">'/root/.npm/_logs'</span>
+<span class="token function">npm</span> WARN logfile <span class="token punctuation">}</span>
+
+<span class="token operator">></span> docker-node-npm-scripti-permission-issue-demo@1.0.0 tsc
+<span class="token operator">></span> tsc
+
+<span class="token function">npm</span> ERR<span class="token operator">!</span> code EACCES
+<span class="token function">npm</span> ERR<span class="token operator">!</span> syscall <span class="token function">mkdir</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> path /root/.npm/_cacache/tmp
+<span class="token function">npm</span> ERR<span class="token operator">!</span> errno <span class="token parameter variable">-13</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> Your cache folder contains root-owned files, due to a bug <span class="token keyword">in</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> previous versions of <span class="token function">npm</span> <span class="token function">which</span> has since been addressed.
+<span class="token function">npm</span> ERR<span class="token operator">!</span>
+<span class="token function">npm</span> ERR<span class="token operator">!</span> To permanently fix this problem, please run:
+<span class="token function">npm</span> ERR<span class="token operator">!</span>   <span class="token function">sudo</span> <span class="token function">chown</span> <span class="token parameter variable">-R</span> <span class="token number">1000</span>:0 <span class="token string">"/root/.npm"</span>
+
+<span class="token function">npm</span> ERR<span class="token operator">!</span> Log files were not written due to an error writing to the directory: /root/.npm/_logs
+<span class="token function">npm</span> ERR<span class="token operator">!</span> You can rerun the <span class="token builtin class-name">command</span> with <span class="token variable"><span class="token variable">`</span><span class="token parameter variable">--loglevel</span><span class="token operator">=</span>verbose<span class="token variable">`</span></span> to see the logs <span class="token keyword">in</span> your terminal
+</code></pre>
 <p>以下は詳細。</p>
 <p>npm の script は<a href="https://github.com/npm/run-script">@npmcli/run-script</a>が実行スクリプトで<code>/usr/local/lib/node_modules/npm/node_modules/@npmcli</code>にある。これのバージョンは 4.2.1 なので、<a href="https://github.com/npm/run-script/blob/v4.2.1/lib/run-script.js">run-script.js</a>が実際の処理になる。これを<a href="https://github.com/npm/run-script/blob/v4.2.1/lib/run-script-pkg.js">run-script-pkg.js</a>、<a href="https://github.com/npm/promise-spawn">@npmcli/promise-spawn</a>と辿っていくと、<a href="https://github.com/npm/promise-spawn/blob/v3.0.0/lib/index.js">promise-spawn/lib/index.js</a>に到達する。</p>
 <p>ここで実行している<a href="https://github.com/npm/infer-owner">infer-owner</a>は、スクリプトを実行するディレクトリの所有権を推測して、ディレクトリの uid、gid を返してくれる。run-script.js ではこれを利用して<a href="https://nodejs.org/docs/latest-v16.x/api/child_process.html#child_processspawncommand-args-options">child_process.spawn</a>を uid, gid 付きで実行する。</p>

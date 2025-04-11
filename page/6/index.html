@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -627,7 +904,7 @@
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2020/convert-screen-capture-with-ffmpeg.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2020/top-level-await-will-be-soon.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2020/web-workers-work-on-ie10.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2020/optional-chaining-and-nullish-coalescing.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2020/event-target-and-currenttarget.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2020/load-jquery-in-developer-console.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2019/book-the-4th-revolution.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2019/generate-anki-cards-tool.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2018/merge-sort-in-javascript.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2018/a11y-fixes-for-prism-default-theme.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-10T06:49:09.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月10日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/convert-screen-capture-with-ffmpeg.html">Convert screen capture to animation GIF</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #eaeae4;"> <img src="/assets/images/convert-screen-capture-with-ffmpeg/convert-screen-capture-with-ffmpeg_medium.webp" srcset="/assets/images/convert-screen-capture-with-ffmpeg/convert-screen-capture-with-ffmpeg_medium.webp, /assets/images/convert-screen-capture-with-ffmpeg/convert-screen-capture-with-ffmpeg_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">Macの場合、Quicktime Playerのファイルメニューの「新規画面収録」から簡単にスクリーンキャプチャを録画することができる（iPhoneの場合はiPhone、iPad、iPod touch で画面を録画する方法参照）。再現性が難しいケースなどで複雑な手順を書き記すよりずっとわかりやすく動作を見せることができるのでとても便利。だけれども、動画はmov形式で保存されるので、githubのissueに貼り付ける事ができない。なので、ffmpegを使ってgifに変換しようという話。gifならgithubのissueに貼り付けられる。</div> <div class="read-more"> <a href="/2020/convert-screen-capture-with-ffmpeg.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-08T05:55:41.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/top-level-await-will-be-soon.html">Top-level await will be soon</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #8c8988;"> <div style="background-color: #8c8988"> <img src="/assets/images/kai-pilger-1k3vsv7iIIc-unsplash/kai-pilger-1k3vsv7iIIc-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@kaip?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kai Pilger</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">asyncとawaitの書き方に慣れてくると、非同期の処理を待つ時はいつでもawaitを使いたくなるのだが、使えるのはasyncのついたfunctionの中だけでトップレベルでは使えない。</div> <div class="read-more"> <a href="/2020/top-level-await-will-be-soon.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-07T06:18:11.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/web-workers-work-on-ie10.html">Web Workers work on IE10</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #8fadcd;"> <div style="background-color: #8fadcd"> <img src="/assets/images/josue-isai-ramos-figueroa-Pj4je7OjrME-unsplash/josue-isai-ramos-figueroa-Pj4je7OjrME-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@jramos10?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Josue Isai Ramos Figueroa</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">JavaScriptはシングルスレッドでイベントドリブンであり、実行を非同期にすることはできるけど、基本的に同時に一つのことしかできない。Web Workersを使えば、メインスレッドとは別のスレッドで処理を実行することができるので、メインスレッドとは別の処理を同時に実行することができる。Web Workersを使ったメインスレッドの負荷低減は今後のフロンドエンドにおいて必携の技術になると思われる。  なのだけど、Web Workersは意外と歴史があり（よく知らないけど）、IE10でも動作する（Can I use Web Workers）。</div> <div class="read-more"> <a href="/2020/web-workers-work-on-ie10.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-06T07:25:28.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月6日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/optional-chaining-and-nullish-coalescing.html">Optional chaining and Nullish coalescing</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #2d5938;"> <div style="background-color: #2d5938"> <img src="/assets/images/ben-hershey-1IZBAlIs4ug-unsplash/ben-hershey-1IZBAlIs4ug-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@introspectivedsgn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Ben Hershey</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">ES2020で新しく追加された機能（ECMAScript 2016+ compatibility tableの画面の下の方にある）はどれもわりと実用的で、なくても大丈夫なんだけどあると便利といったものが並んでいる。Bigintは日常的には使わないとは思うけど。  その中で、Nullish coalescingとOptional chaining はかなり便利。なくても大丈夫だし、使わなくても良いんだけど、便利だから日常的に書かれるJavaScriptの書き方を変えるものになると思う。</div> <div class="read-more"> <a href="/2020/optional-chaining-and-nullish-coalescing.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-05T07:32:36.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/event-target-and-currenttarget.html">Event target and currentTarget</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #89949b;"> <div style="background-color: #89949b"> <img src="/assets/images/erik-mclean-CIO4c2xmtHQ-unsplash/erik-mclean-CIO4c2xmtHQ-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/s/photos/current-target?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Erik Mclean</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">EventオブジェクトにはcurrentTargetとtargetの2つのプロパティがあるけど、いつもどっちがどっちか混同する。</div> <div class="read-more"> <a href="/2020/event-target-and-currenttarget.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-04T07:19:43.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/load-jquery-in-developer-console.html">Load jQuery library in the Chrome developer console</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #4a5e69;"> <div style="background-color: #4a5e69"> <img src="/assets/images/harsh-jain-xoMeq3-GwTY-unsplash/harsh-jain-xoMeq3-GwTY-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="554"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@harshjain1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Harsh Jain</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">スクリプト内のDOM操作でjQueryを使っているけれど、処理がスクリプト内で完結していて、GlobalにはjQueryをロードさせていないという場合がある。あると思う。  そういった場合、例えばそのスクリプトに新しい実装を入れたいけどjQueryでのDOM操作が自分の期待通りに行えるかをChromeのデベロッパーツールでちょっと確認したいみたいな時に少し困る。大して困らない気もするけど、少し手間ではある。</div> <div class="read-more"> <a href="/2020/load-jquery-in-developer-console.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2019-05-02T08:41:09.000Z"> <span class="calendar-icon">📅</span> <span>2019年5月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2019/book-the-4th-revolution.html">「第四の革命」を読んだ</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c8c5bc;"> <img src="/assets/images/book-the-4th-revolution/book-the-4th-revolution_medium.webp" srcset="/assets/images/book-the-4th-revolution/book-the-4th-revolution_medium.webp, /assets/images/book-the-4th-revolution/book-the-4th-revolution_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">「第四の革命」を読んだ。情報通信技術が、従来の「記録する・履歴をとる」という単純な伝達手段であったものから飛躍して、記録・履歴のデータが処理され、情報として再利用されるようになった。それが様々なテクノロジーに内包されるにつれ、情報通信技術が単なるツールという枠を越えて、情報世界（情報圏・インフォスフィア）を構成するようになっている。インフォスフィアがどのように個々人や世界に影響をもたらすのか、といった内容である。</div> <div class="read-more"> <a href="/2019/book-the-4th-revolution.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2019-01-04T11:47:48.000Z"> <span class="calendar-icon">📅</span> <span>2019年1月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2019/generate-anki-cards-tool.html">Genarate Anki Cards Tool</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #b1b5b0;"> <div style="background-color: #b1b5b0"> <img src="/assets/images/kate-krivanec-212730-unsplash/kate-krivanec-212730-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/moW-dSe5CiU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kate Krivanec</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">最近Ankiを使って単語の記憶をしようという試みをしている。もともとはFluent Foreverという本に載っていたところからこのアプリを知った（最近になって邦訳「脳が認める外国語勉強法」があると知った）。</div> <div class="read-more"> <a href="/2019/generate-anki-cards-tool.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-19T17:43:28.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/merge-sort-in-javascript.html">Merge Sort in JavaScript</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #4d7773;"> <div style="background-color: #4d7773"> <img src="/assets/images/tj-holowaychuk-62184-unsplash/tj-holowaychuk-62184-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/lssS7acGDls?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Tj Holowaychu</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Insertion Sort in JavaScriptからの引き続き。内容はMerge sortからの抜粋なので、詳細はそちらを参照。</div> <div class="read-more"> <a href="/2018/merge-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-18T00:18:27.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/a11y-fixes-for-prism-default-theme.html">A11y fixes for prism default theme</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7b8389;"> <div style="background-color: #7b8389"> <img src="/assets/images/stas-ovsky-781959-unsplash/stas-ovsky-781959-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/JlBYy9eaOxg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Stas Ovsky</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Lighthouse reported color contrast issues in the code block colored by prism.js. Actually I don&#39;t care about these issues because people doesn&#39;t read code blocks carefully. However, I just did the quick fixes for them by changing the color to see the contrast ratio in Chrome developer console.</div> <div class="read-more"> <a href="/2018/a11y-fixes-for-prism-default-theme.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/5/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/4/"> 4 </a><a class="page-number " href="/page/5/"> 5 </a><span class="page-number current">6</span><a class="page-number " href="/page/7/"> 7 </a><a class="page-number " href="/page/8/"> 8 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/7/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2020/n2-sort-algorithms-again.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2020/convert-screen-capture-with-ffmpeg.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2020/top-level-await-will-be-soon.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2020/web-workers-work-on-ie10.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2020/optional-chaining-and-nullish-coalescing.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2020/event-target-and-currenttarget.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2020/load-jquery-in-developer-console.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2019/book-the-4th-revolution.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2019/generate-anki-cards-tool.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2018/merge-sort-in-javascript.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-11T13:54:52.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/n2-sort-algorithms-again.html">n^2 sort algorithms again</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #efe9e6;"> <img src="/assets/images/n2-sort-algorithms-again/n2-sort-algorithms-again_medium.webp" srcset="/assets/images/n2-sort-algorithms-again/n2-sort-algorithms-again_medium.webp, /assets/images/n2-sort-algorithms-again/n2-sort-algorithms-again_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">O(n^2)の計算量で実行するソートアルゴリズムについては、Bubble Sort in JavaScript（バブルソート）、Insertion Sort in JavaScript（挿入ソート）、Selection Sort in JavaScript（選択ソート）にて扱ったのだけど、完全に忘れてしまったので、もう一度確認する。</div> <div class="read-more"> <a href="/2020/n2-sort-algorithms-again.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-10T06:49:09.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月10日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/convert-screen-capture-with-ffmpeg.html">Convert screen capture to animation GIF</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #eaeae4;"> <img src="/assets/images/convert-screen-capture-with-ffmpeg/convert-screen-capture-with-ffmpeg_medium.webp" srcset="/assets/images/convert-screen-capture-with-ffmpeg/convert-screen-capture-with-ffmpeg_medium.webp, /assets/images/convert-screen-capture-with-ffmpeg/convert-screen-capture-with-ffmpeg_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">Macの場合、Quicktime Playerのファイルメニューの「新規画面収録」から簡単にスクリーンキャプチャを録画することができる（iPhoneの場合はiPhone、iPad、iPod touch で画面を録画する方法参照）。再現性が難しいケースなどで複雑な手順を書き記すよりずっとわかりやすく動作を見せることができるのでとても便利。だけれども、動画はmov形式で保存されるので、githubのissueに貼り付ける事ができない。なので、ffmpegを使ってgifに変換しようという話。gifならgithubのissueに貼り付けられる。</div> <div class="read-more"> <a href="/2020/convert-screen-capture-with-ffmpeg.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-08T05:55:41.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/top-level-await-will-be-soon.html">Top-level await will be soon</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #8c8988;"> <div style="background-color: #8c8988"> <img src="/assets/images/kai-pilger-1k3vsv7iIIc-unsplash/kai-pilger-1k3vsv7iIIc-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@kaip?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kai Pilger</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">asyncとawaitの書き方に慣れてくると、非同期の処理を待つ時はいつでもawaitを使いたくなるのだが、使えるのはasyncのついたfunctionの中だけでトップレベルでは使えない。</div> <div class="read-more"> <a href="/2020/top-level-await-will-be-soon.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-07T06:18:11.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/web-workers-work-on-ie10.html">Web Workers work on IE10</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #8fadcd;"> <div style="background-color: #8fadcd"> <img src="/assets/images/josue-isai-ramos-figueroa-Pj4je7OjrME-unsplash/josue-isai-ramos-figueroa-Pj4je7OjrME-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@jramos10?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Josue Isai Ramos Figueroa</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">JavaScriptはシングルスレッドでイベントドリブンであり、実行を非同期にすることはできるけど、基本的に同時に一つのことしかできない。Web Workersを使えば、メインスレッドとは別のスレッドで処理を実行することができるので、メインスレッドとは別の処理を同時に実行することができる。Web Workersを使ったメインスレッドの負荷低減は今後のフロンドエンドにおいて必携の技術になると思われる。  なのだけど、Web Workersは意外と歴史があり（よく知らないけど）、IE10でも動作する（Can I use Web Workers）。</div> <div class="read-more"> <a href="/2020/web-workers-work-on-ie10.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-06T07:25:28.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月6日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/optional-chaining-and-nullish-coalescing.html">Optional chaining and Nullish coalescing</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #2d5938;"> <div style="background-color: #2d5938"> <img src="/assets/images/ben-hershey-1IZBAlIs4ug-unsplash/ben-hershey-1IZBAlIs4ug-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@introspectivedsgn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Ben Hershey</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">ES2020で新しく追加された機能（ECMAScript 2016+ compatibility tableの画面の下の方にある）はどれもわりと実用的で、なくても大丈夫なんだけどあると便利といったものが並んでいる。Bigintは日常的には使わないとは思うけど。  その中で、Nullish coalescingとOptional chaining はかなり便利。なくても大丈夫だし、使わなくても良いんだけど、便利だから日常的に書かれるJavaScriptの書き方を変えるものになると思う。</div> <div class="read-more"> <a href="/2020/optional-chaining-and-nullish-coalescing.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-05T07:32:36.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/event-target-and-currenttarget.html">Event target and currentTarget</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #89949b;"> <div style="background-color: #89949b"> <img src="/assets/images/erik-mclean-CIO4c2xmtHQ-unsplash/erik-mclean-CIO4c2xmtHQ-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/s/photos/current-target?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Erik Mclean</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">EventオブジェクトにはcurrentTargetとtargetの2つのプロパティがあるけど、いつもどっちがどっちか混同する。</div> <div class="read-more"> <a href="/2020/event-target-and-currenttarget.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-04T07:19:43.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/load-jquery-in-developer-console.html">Load jQuery library in the Chrome developer console</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #4a5e69;"> <div style="background-color: #4a5e69"> <img src="/assets/images/harsh-jain-xoMeq3-GwTY-unsplash/harsh-jain-xoMeq3-GwTY-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="554"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@harshjain1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Harsh Jain</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">スクリプト内のDOM操作でjQueryを使っているけれど、処理がスクリプト内で完結していて、GlobalにはjQueryをロードさせていないという場合がある。あると思う。  そういった場合、例えばそのスクリプトに新しい実装を入れたいけどjQueryでのDOM操作が自分の期待通りに行えるかをChromeのデベロッパーツールでちょっと確認したいみたいな時に少し困る。大して困らない気もするけど、少し手間ではある。</div> <div class="read-more"> <a href="/2020/load-jquery-in-developer-console.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2019-05-02T08:41:09.000Z"> <span class="calendar-icon">📅</span> <span>2019年5月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2019/book-the-4th-revolution.html">「第四の革命」を読んだ</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c8c5bc;"> <img src="/assets/images/book-the-4th-revolution/book-the-4th-revolution_medium.webp" srcset="/assets/images/book-the-4th-revolution/book-the-4th-revolution_medium.webp, /assets/images/book-the-4th-revolution/book-the-4th-revolution_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">「第四の革命」を読んだ。情報通信技術が、従来の「記録する・履歴をとる」という単純な伝達手段であったものから飛躍して、記録・履歴のデータが処理され、情報として再利用されるようになった。それが様々なテクノロジーに内包されるにつれ、情報通信技術が単なるツールという枠を越えて、情報世界（情報圏・インフォスフィア）を構成するようになっている。インフォスフィアがどのように個々人や世界に影響をもたらすのか、といった内容である。</div> <div class="read-more"> <a href="/2019/book-the-4th-revolution.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2019-01-04T11:47:48.000Z"> <span class="calendar-icon">📅</span> <span>2019年1月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2019/generate-anki-cards-tool.html">Genarate Anki Cards Tool</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #b1b5b0;"> <div style="background-color: #b1b5b0"> <img src="/assets/images/kate-krivanec-212730-unsplash/kate-krivanec-212730-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/moW-dSe5CiU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kate Krivanec</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">最近Ankiを使って単語の記憶をしようという試みをしている。もともとはFluent Foreverという本に載っていたところからこのアプリを知った（最近になって邦訳「脳が認める外国語勉強法」があると知った）。</div> <div class="read-more"> <a href="/2019/generate-anki-cards-tool.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-19T17:43:28.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/merge-sort-in-javascript.html">Merge Sort in JavaScript</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #4d7773;"> <div style="background-color: #4d7773"> <img src="/assets/images/tj-holowaychuk-62184-unsplash/tj-holowaychuk-62184-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/lssS7acGDls?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Tj Holowaychu</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Insertion Sort in JavaScriptからの引き続き。内容はMerge sortからの抜粋なので、詳細はそちらを参照。</div> <div class="read-more"> <a href="/2018/merge-sort-in-javascript.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/5/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/4/"> 4 </a><a class="page-number " href="/page/5/"> 5 </a><span class="page-number current">6</span><a class="page-number " href="/page/7/"> 7 </a><a class="page-number " href="/page/8/"> 8 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/7/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

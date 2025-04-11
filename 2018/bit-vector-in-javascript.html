@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -642,45 +919,51 @@ The Number type has exactly 18437736874454810627 (that is, 2^64−2^53+3) values
 <a href="https://www.oreilly.co.jp/books/9784873115733/">JavaScript 第 6 版</a> 73 ページ</p>
 </blockquote>
 <p>特定のビットを 1（True）にセットする場合は下記のような感じのことをする。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> bits </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">bits </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> bits </span><span style="color:#FF79C6">|</span><span style="color:#F8F8F2"> (</span><span style="color:#BD93F9">1</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">let</span> bits <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+bits <span class="token operator">=</span> bits <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&#x3C;&#x3C;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p><code>a &#x3C;&#x3C; b</code>は a を b ビット分だけ左にシフトして、右側に 0 を埋める。<code>1 &#x3C;&#x3C; 2</code>だと、<code>00000000000000000000000000000001</code>というビットの並びを <code>00000000000000000000000000000100</code>とする感じ。<code>a | b</code>は a か b のどちらかのビットが 1 だったら 1 にするので、<code>0 | (1 &#x3C;&#x3C; 2)</code>の場合、<code>00000000000000000000000000000000 | 00000000000000000000000000000100</code>となるので、<code>00000000000000000000000000000100</code>というビットの並びが返ってくる。右から 3 つ目のビットだけ True に設定できる。</p>
 <p>特定のビットを 0（False）にセットする場合は下記のような感じになる。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F8F8F2">bits </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> bits </span><span style="color:#FF79C6">&#x26;</span><span style="color:#FF79C6"> ~</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">1</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript">bits <span class="token operator">=</span> bits <span class="token operator">&#x26;</span> <span class="token operator">~</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&#x3C;&#x3C;</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p><code>~</code>は各ビットを反転させるので、<code>~(1 &#x3C;&#x3C; 2)</code>の返りは<code>11111111111111111111111111111011</code>となる。<code>a &#x26; b</code>は a と b の両方のビットがどちらも 1 の場合は 1 を返す。例えば<code>bits</code>の値が<code>00010000000000000000000000100101</code>だとしたら、<code>bits &#x26; ~(1 &#x3C;&#x3C; 2)</code>のは <code>00010000000000000000000000100101 &#x26; 11111111111111111111111111111011</code>となるので、<code>00010000000000000000000000100001</code>というビットの並びが返ってくる。右から 3 つ目のビットだけを 0 に変更できる。</p>
 <p>特定のビットが 1（True）かどうかを確認するのには、下記のような感じになる。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">return</span><span style="color:#F8F8F2"> bits </span><span style="color:#FF79C6">&#x26;</span><span style="color:#F8F8F2"> (</span><span style="color:#BD93F9">1</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#BD93F9"> 2</span><span style="color:#FF79C6"> !==</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">return</span> bits <span class="token operator">&#x26;</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&#x3C;&#x3C;</span> <span class="token number">2</span> <span class="token operator">!==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>例えば bits の値が<code>00010000000000000000000000100101</code>としたら、<code>bits &#x26; (1 &#x3C;&#x3C; 2)</code>は<code>00010000000000000000000000100101 &#x26; 00000000000000000000000000000100</code> となるので返りは<code>00000000000000000000000000000100</code>となる。これは 10 進数でいうと<code>4</code>になるので、<code>4 !== 0</code>ということで True になる。bits の値が<code>00010000000000000000000000100001</code>としたら、返りは<code>00000000000000000000000000000000</code>となるので <code>0 !== 0</code> ということで False となる。</p>
 <p>1 つの数値は 32 個のビットの並びになるので、32 個の True/False の値を保持できる。たとえば特定のアルファベット（大文字小文字区別しない）が使われたかどうかを確認するとしたら、</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> bits </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#50FA7B"> checkThisAlphabetIsAlreadyUsed</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">char</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> index </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> char.</span><span style="color:#50FA7B">toLowerCase</span><span style="color:#F8F8F2">().</span><span style="color:#50FA7B">charCodeAt</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9"> 97</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">  if</span><span style="color:#F8F8F2"> ((bits </span><span style="color:#FF79C6">&#x26;</span><span style="color:#F8F8F2"> (</span><span style="color:#BD93F9">1</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> index)) </span><span style="color:#FF79C6">!==</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">    return</span><span style="color:#BD93F9"> false</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">  bits </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> bits </span><span style="color:#FF79C6">|</span><span style="color:#F8F8F2"> (</span><span style="color:#BD93F9">1</span><span style="color:#FF79C6"> &#x3C;&#x3C;</span><span style="color:#F8F8F2"> index);</span></span>
-<span class="line"><span style="color:#FF79C6">  return</span><span style="color:#BD93F9"> true</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#50FA7B"> useAlphabetOnlyOnce</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">char</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">  if</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">!</span><span style="color:#50FA7B">checkThisAlphabetIsAlreadyUsed</span><span style="color:#F8F8F2">(char)) {</span></span>
-<span class="line"><span style="color:#FF79C6">    throw</span><span style="color:#50FA7B"> Error</span><span style="color:#F8F8F2">(</span><span style="color:#F1FA8C">`'</span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">char</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">' is already in use`</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(</span><span style="color:#F1FA8C">`Use </span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">char</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">`</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">let</span> bits <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">checkThisAlphabetIsAlreadyUsed</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">char</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> index <span class="token operator">=</span> char<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">97</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>bits <span class="token operator">&#x26;</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&#x3C;&#x3C;</span> index<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  bits <span class="token operator">=</span> bits <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&#x3C;&#x3C;</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">useAlphabetOnlyOnce</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">char</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">checkThisAlphabetIsAlreadyUsed</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">throw</span> <span class="token function">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">'</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>char<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">' is already in use</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Use </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>char<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
 <p>みたいな感じで、各アルファベットが使われたどうかを 1 から 26 個目までのビットに格納する。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> useAlphabetOnlyOnce</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">a</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">Use a</span></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> useAlphabetOnlyOnce</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">a</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">Error: </span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">a</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2"> is already </span><span style="color:#FF79C6">in</span><span style="color:#F8F8F2"> use</span></span>
-<span class="line"><span style="color:#F8F8F2">    at </span><span style="color:#50FA7B">useAlphabetOnlyOnce</span><span style="color:#F8F8F2"> (repl:</span><span style="color:#BD93F9">3</span><span style="color:#F8F8F2">:</span><span style="color:#BD93F9">11</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> useAlphabetOnlyOnce</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">b</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">Use b</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token operator">></span> <span class="token function">useAlphabetOnlyOnce</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Use a
+<span class="token operator">></span> <span class="token function">useAlphabetOnlyOnce</span><span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token literal-property property">Error</span><span class="token operator">:</span> <span class="token string">'a'</span> is already <span class="token keyword">in</span> use
+    at <span class="token function">useAlphabetOnlyOnce</span> <span class="token punctuation">(</span>repl<span class="token operator">:</span><span class="token number">3</span><span class="token operator">:</span><span class="token number">11</span><span class="token punctuation">)</span>
+<span class="token operator">></span> <span class="token function">useAlphabetOnlyOnce</span><span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Use b
+</code></pre>
 <p>32 個以上の値を保持したい場合は、<code>bits</code>を配列にして数値を複数扱うようにすれば良い。<a href="https://github.com/ashaffer/bit-vector">bit-vector</a>ではそのようにして 32 個以上の値を保持できるようにしている。<a href="https://github.com/ashaffer/bit-vector/blob/master/src/index.js">index.js</a>を見ると、設定する index を 32 で割って、配列の index と、数値の 32 ビットの位置とを分けている。</p>
 <p><a href="https://jsperf.com/bit-vector-vs-object/2">js-perf の結果</a>を見ると、普通のオブジェクトに値を保持するよりもだいぶ高速に処理できている。</p>
 <p>これは蛇足だけど、bit-vector では<code>FastArray</code>ということで、</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> FastArray </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> typeof</span><span style="color:#F8F8F2"> Uint32Array </span><span style="color:#FF79C6">===</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">undefined</span><span style="color:#E9F284">"</span><span style="color:#FF79C6"> ?</span><span style="color:#F8F8F2"> Array </span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> Uint32Array;</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> FastArray <span class="token operator">=</span> <span class="token keyword">typeof</span> Uint32Array <span class="token operator">===</span> <span class="token string">"undefined"</span> <span class="token operator">?</span> Array <span class="token operator">:</span> Uint32Array<span class="token punctuation">;</span>
+</code></pre>
 <p>と言う感じで、Uint32Array が利用可能な場合は<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array">Uint32Array</a>を使用している。Uint32Array のような<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a>は、通常の配列（standard array）に比べると高速らしいのだが、実際に測定してみると同じくらいの速度になる(<a href="https://stackoverflow.com/a/24855023/634197">Javascript TypedArray performance</a>)。これは JavaScript のエンジンが内部で最適化していて、通常の配列でも利用可能な場合は同じように<code>true array</code>を使い、使えない場合は<code>old-fashioned property map "arrays,"</code>を使うためらしい。</p>
 <blockquote>
 <p>That suggests that because you’re filling the array in a simple, predictable way, a modern engine continues to use a true array (with the performance benefits thereof) under the covers rather than shifting over. We see basically the same performance for both. The difference in speed could relate to type conversion taking the Uint32 value and assigning it to sum as a number (though I’m surprised if that type conversion isn’t deferred…).

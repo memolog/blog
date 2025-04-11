@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -630,17 +907,19 @@
 </script><meta property="og:type" content="article"><meta property="og:title" content="リンクの色の方が優先される理由"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="たとえば下記のようなHTMLに、下記のようなCSSを指定した場合、aタグに指定したCSSの方が有効に作用する。  ```html <h3 class=&#34;entry-header&#34;><a href=&#34;/post.html&#34;>記事のタイトル</a></h3>"><meta property="og:locale" content="ja_JP"><meta property="article:published_time" content="2009-04-26T15:40:56.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2009/04/post_185.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2009-04-26T15:40:56.000Z"> <span class="calendar-icon">📅</span> <span>2009年4月27日</span> </time> </div> <h2 class="header__title"><span>リンクの色の方が優先される理由</span></h2>  </header> <div id="article-content" class="content">  <p>たとえば下記のような HTML に、下記のような CSS を指定した場合、a タグに指定した CSS の方が有効に作用する。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">h3</span><span style="color:#50FA7B;font-style:italic"> class</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">entry-header</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">>&#x3C;</span><span style="color:#FF79C6">a</span><span style="color:#50FA7B;font-style:italic"> href</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">/post.html</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">>記事のタイトル&#x3C;/</span><span style="color:#FF79C6">a</span><span style="color:#F8F8F2">>&#x3C;/</span><span style="color:#FF79C6">h3</span><span style="color:#F8F8F2">></span></span></code></pre>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#FF79C6">a</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#8BE9FD">  color</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> blue</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"><span style="color:#FF79C6">h3</span><span style="color:#50FA7B;font-style:italic">.entry-header</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#8BE9FD">  color</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> red</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<pre class="language-html" data-language="html"><code is:raw="" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>entry-header<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/post.html<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>記事のタイトル<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>h3</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class="language-css" data-language="css"><code is:raw="" class="language-css"><span class="token selector">a</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h3.entry-header</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>まあそういうものなのだと、普段はたいして気にとめていなかったのですが、あらためて説明しようとすると、これがよく分からない。単純に詳細度で考えたら、h3.entry-header の方が強いのにどうしてだろう。ということで、<a href="http://www.amazon.co.jp/gp/product/487311232X?ie=UTF8&#x26;tag=yutakayamaguc-22&#x26;linkCode=xm2&#x26;camp=247&#x26;creativeASIN=487311232X">CSS 完全ガイド</a>を購入して、きちんと読んでみました（3 章まで）。p71〜p74 あたりにそのあたりのことが説明されていた。</p>
 <p>要するに、祖先から継承した指定の詳細度は「なし」という扱いになるため、a タグに指定した内容の方が詳細度が高く、より強く作用するということなのだ。うーん、調べてみてみると、そんなに難しい話じゃない。継承した指定の詳細度がもともとと同じ詳細度を持っていたら、たとえば body#foo というような指定があったら、いろんな子孫に不要に作用してしまう。うまくできている。</p>
 <p>ふむ。つまり。この件について、CSS を生業としていないような人に質問されたら、「より内側にあるタグに指定した CSS の方が、外側のタグに指定したものより有効に作用します」と伝えても特に問題はなさそうだ。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2006-11-28T11:37:23.000Z"> <span class="calendar-icon">📅</span> <span>2006年11月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/11/html_linthtml.html">HTML LINTから学んだHTMLとアクセシビリティ</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #b9b1a4;"> <img src="/assets/images/html_linthtml/html_linthtml_medium.webp" srcset="/assets/images/html_linthtml/html_linthtml_medium.webp, /assets/images/html_linthtml/html_linthtml_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。</div> <div class="read-more"> <a href="/2006/11/html_linthtml.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-30T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月31日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/08/specificity_of_pseudo_class.html">a:link, a：visitedの詳細度はclass selectorのみより大きい</a> </h3>  </header> <div class="content">a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector&#39;s specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。</div> <div class="read-more"> <a href="/2013/08/specificity_of_pseudo_class.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-05-06T09:27:10.000Z"> <span class="calendar-icon">📅</span> <span>2009年5月6日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/05/inherit.html">親要素の色をリンク色に継承させる</a> </h3>  </header> <div class="content">リンクの色の方が優先される理由の記事で、下記のHTMLの場合はリンクの色の方が優先されるという話をした。</div> <div class="read-more"> <a href="/2009/05/inherit.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-28T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月29日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/optimize_css_selectors.html">CSSセレクタを効率的な記述にする</a> </h3>  </header> <div class="content">Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。</div> <div class="read-more"> <a href="/2010/12/optimize_css_selectors.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2006-11-28T11:37:23.000Z"> <span class="calendar-icon">📅</span> <span>2006年11月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/11/html_linthtml.html">HTML LINTから学んだHTMLとアクセシビリティ</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #b9b1a4;"> <img src="/assets/images/html_linthtml/html_linthtml_medium.webp" srcset="/assets/images/html_linthtml/html_linthtml_medium.webp, /assets/images/html_linthtml/html_linthtml_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。</div> <div class="read-more"> <a href="/2006/11/html_linthtml.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-30T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月31日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/08/specificity_of_pseudo_class.html">a:link, a：visitedの詳細度はclass selectorのみより大きい</a> </h3>  </header> <div class="content">a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector&#39;s specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。</div> <div class="read-more"> <a href="/2013/08/specificity_of_pseudo_class.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-28T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月29日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2010/12/optimize_css_selectors.html">CSSセレクタを効率的な記述にする</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c8c2b5;"> <img src="/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp" srcset="/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp, /assets/images/optimize_css_selectors/optimize_css_selectors_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。</div> <div class="read-more"> <a href="/2010/12/optimize_css_selectors.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-05-06T09:27:10.000Z"> <span class="calendar-icon">📅</span> <span>2009年5月6日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/05/inherit.html">親要素の色をリンク色に継承させる</a> </h3>  </header> <div class="content">リンクの色の方が優先される理由の記事で、下記のHTMLの場合はリンクの色の方が優先されるという話をした。</div> <div class="read-more"> <a href="/2009/05/inherit.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

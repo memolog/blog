@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -627,7 +904,7 @@
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2014/06/passing_by_value_or_reference_in_javascript.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2014/03/ngbindhtml_and_surrogate_pair.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2013/12/intrinsic_value_of_blog.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2013/12/appicon40x40_and_appicon60x60_are_not_found.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2013/12/update_xcode_deployment_info_with_node_xcode.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2013/12/cordova_project_failed_on_archiving.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2013/11/ios_software_keyboard_with_input_types.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2013/11/grunt-plistbuddy.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2013/11/jquery_1101ie11.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2013/11/brew_update_error.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2014-06-08T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2014年6月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2014/06/passing_by_value_or_reference_in_javascript.html">JavaScriptにおける値の受け渡しについて</a> </h2>  </header> <div class="content">少し前にJavaScriptの値の受け渡し方について改めて調べていたら、Passing by value vs. by referenceの話が大変参考になった。詳しくは上記リンクを参照。</div> <div class="read-more"> <a href="/2014/06/passing_by_value_or_reference_in_javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2014-03-02T20:50:00.000Z"> <span class="calendar-icon">📅</span> <span>2014年3月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2014/03/ngbindhtml_and_surrogate_pair.html">ngBindHtmlとサロゲートペア</a> </h2>  </header> <div class="content">AngularJSでngBindHtmlを使用すると、ngSanitize(angular-sanitize.js)のencodeEntitiesに行き着く（はず）。そこでは下記のような処理が行われています。</div> <div class="read-more"> <a href="/2014/03/ngbindhtml_and_surrogate_pair.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-12-30T06:20:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年12月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/12/intrinsic_value_of_blog.html">ブログの内在的価値</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e9e8e2;"> <img src="/assets/images/intrinsic_value_of_blog/intrinsic_value_of_blog_medium.webp" srcset="/assets/images/intrinsic_value_of_blog/intrinsic_value_of_blog_medium.webp, /assets/images/intrinsic_value_of_blog/intrinsic_value_of_blog_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="657" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">マーク・ローランズの「哲学者が走る」という本では、走ることで得られる道具的価値と内在的価値について語られています。</div> <div class="read-more"> <a href="/2013/12/intrinsic_value_of_blog.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-12-29T06:20:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年12月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/12/appicon40x40_and_appicon60x60_are_not_found.html">AppIcon40x40とAppIcon60x60がないというエラー</a> </h2>  </header> <div class="content">Cordovaで作成したアプリでアイコンをasset catalogsに変換したら、iTunes Connectで申請したときに下記のようなエラーが発生しました。</div> <div class="read-more"> <a href="/2013/12/appicon40x40_and_appicon60x60_are_not_found.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-12-08T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年12月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/12/update_xcode_deployment_info_with_node_xcode.html">gruntからXcodeプロジェクトのDeployment infoを変更する</a> </h2>  </header> <div class="content">gruntからXcodeプロジェクトのDeployment infoを変更する。Xcodeから変更するのは簡単。でもそれをgruntでtaskとして実行する。こうした作業をgrunt taskで行うメリットは、繰り返し行う作業の場合は、それを自動化できるという点。</div> <div class="read-more"> <a href="/2013/12/update_xcode_deployment_info_with_node_xcode.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-12-05T03:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年12月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/12/cordova_project_failed_on_archiving.html">Cordovaプロジェクトをアーカイブしたときにエラー</a> </h2>  </header> <div class="content">Cordova/PhoneGapで作成したXcodeのプロジェクトをアーカイブしようとしたときに下記のようなエラーが発生するようになりまして。</div> <div class="read-more"> <a href="/2013/12/cordova_project_failed_on_archiving.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-11-30T05:06:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年11月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/11/ios_software_keyboard_with_input_types.html">input typeで表示されるキーボード</a> </h2>  </header> <div class="content">iOSではinputフォームのtypeでキーボードの配置が変わります（Androidは4.2のstock browserでは変わらなかったけど、網羅的には調べていない）。その配置を覚えてるようであまり覚えてない。ので、忘れた時のリファレンスとして。</div> <div class="read-more"> <a href="/2013/11/ios_software_keyboard_with_input_types.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-11-29T03:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年11月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/11/grunt-plistbuddy.html">gruntでXcodeプロジェクトのVersion/Buildを変更する</a> </h2>  </header> <div class="content">![Xcode_General_setting](http://www.flickr.com/photos/91221720@N00/11110211616 &quot;Xcode_General_setting by Yutaka Yamaguchi, on Flickr&quot;)</div> <div class="read-more"> <a href="/2013/11/grunt-plistbuddy.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-11-20T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年11月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/11/jquery_1101ie11.html">jQuery 1.10.1とIE11の組み合わせでエラーが発生する場合がある</a> </h2>  </header> <div class="content">モーダルなどjQueryでiframeを開いた場合に、jQuery 1.10.1とIE11の組み合わせだとエラーが発生する。ので、モーダル使っているなら、1.10.2にアップデートしないといけない。これはバンドルされてるSizzleに下記のような処理があるため。</div> <div class="read-more"> <a href="/2013/11/jquery_1101ie11.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-11-20T11:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年11月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/11/brew_update_error.html">brew update でエラー</a> </h2>  </header> <div class="content">brew updateしたら下記のようなエラーになった。  ```bash error: Your local changes to the following files would be overwritten by merge:</div> <div class="read-more"> <a href="/2013/11/brew_update_error.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/10/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/9/"> 9 </a><a class="page-number " href="/page/10/"> 10 </a><span class="page-number current">11</span><a class="page-number " href="/page/12/"> 12 </a><a class="page-number " href="/page/13/"> 13 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/12/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2014/08/angular_lightbox_and_right_click_with_firefox.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2014/06/passing_by_value_or_reference_in_javascript.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2014/03/ngbindhtml_and_surrogate_pair.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2013/12/intrinsic_value_of_blog.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2013/12/appicon40x40_and_appicon60x60_are_not_found.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2013/12/update_xcode_deployment_info_with_node_xcode.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2013/12/cordova_project_failed_on_archiving.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2013/11/ios_software_keyboard_with_input_types.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2013/11/grunt-plistbuddy.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2013/11/jquery_1101ie11.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2014-08-25T08:31:00.000Z"> <span class="calendar-icon">📅</span> <span>2014年8月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2014/08/angular_lightbox_and_right_click_with_firefox.html">AngularJSとlightBoxと右クリックとFirefox</a> </h2>  </header> <div class="content">javascript - Firefox strange right click event bubbling behavior - Stack Overflowでレポートされている変な挙動はFirefox 31.0でも残っているようで、右クリックしたときに、documentに対してclickイベントを発火する。他の要素ではlistenできないようなので、どうもbubblingしてきたのではなくて、documentにclickイベントが起きている。みたい。</div> <div class="read-more"> <a href="/2014/08/angular_lightbox_and_right_click_with_firefox.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2014-06-08T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2014年6月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2014/06/passing_by_value_or_reference_in_javascript.html">JavaScriptにおける値の受け渡しについて</a> </h2>  </header> <div class="content">少し前にJavaScriptの値の受け渡し方について改めて調べていたら、Passing by value vs. by referenceの話が大変参考になった。詳しくは上記リンクを参照。</div> <div class="read-more"> <a href="/2014/06/passing_by_value_or_reference_in_javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2014-03-02T20:50:00.000Z"> <span class="calendar-icon">📅</span> <span>2014年3月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2014/03/ngbindhtml_and_surrogate_pair.html">ngBindHtmlとサロゲートペア</a> </h2>  </header> <div class="content">AngularJSでngBindHtmlを使用すると、ngSanitize(angular-sanitize.js)のencodeEntitiesに行き着く（はず）。そこでは下記のような処理が行われています。</div> <div class="read-more"> <a href="/2014/03/ngbindhtml_and_surrogate_pair.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-12-30T06:20:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年12月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/12/intrinsic_value_of_blog.html">ブログの内在的価値</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e9e8e2;"> <img src="/assets/images/intrinsic_value_of_blog/intrinsic_value_of_blog_medium.webp" srcset="/assets/images/intrinsic_value_of_blog/intrinsic_value_of_blog_medium.webp, /assets/images/intrinsic_value_of_blog/intrinsic_value_of_blog_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="657" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">マーク・ローランズの「哲学者が走る」という本では、走ることで得られる道具的価値と内在的価値について語られています。</div> <div class="read-more"> <a href="/2013/12/intrinsic_value_of_blog.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-12-29T06:20:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年12月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/12/appicon40x40_and_appicon60x60_are_not_found.html">AppIcon40x40とAppIcon60x60がないというエラー</a> </h2>  </header> <div class="content">Cordovaで作成したアプリでアイコンをasset catalogsに変換したら、iTunes Connectで申請したときに下記のようなエラーが発生しました。</div> <div class="read-more"> <a href="/2013/12/appicon40x40_and_appicon60x60_are_not_found.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-12-08T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年12月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/12/update_xcode_deployment_info_with_node_xcode.html">gruntからXcodeプロジェクトのDeployment infoを変更する</a> </h2>  </header> <div class="content">gruntからXcodeプロジェクトのDeployment infoを変更する。Xcodeから変更するのは簡単。でもそれをgruntでtaskとして実行する。こうした作業をgrunt taskで行うメリットは、繰り返し行う作業の場合は、それを自動化できるという点。</div> <div class="read-more"> <a href="/2013/12/update_xcode_deployment_info_with_node_xcode.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-12-05T03:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年12月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/12/cordova_project_failed_on_archiving.html">Cordovaプロジェクトをアーカイブしたときにエラー</a> </h2>  </header> <div class="content">Cordova/PhoneGapで作成したXcodeのプロジェクトをアーカイブしようとしたときに下記のようなエラーが発生するようになりまして。</div> <div class="read-more"> <a href="/2013/12/cordova_project_failed_on_archiving.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-11-30T05:06:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年11月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/11/ios_software_keyboard_with_input_types.html">input typeで表示されるキーボード</a> </h2>  </header> <div class="content">iOSではinputフォームのtypeでキーボードの配置が変わります（Androidは4.2のstock browserでは変わらなかったけど、網羅的には調べていない）。その配置を覚えてるようであまり覚えてない。ので、忘れた時のリファレンスとして。</div> <div class="read-more"> <a href="/2013/11/ios_software_keyboard_with_input_types.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-11-29T03:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年11月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/11/grunt-plistbuddy.html">gruntでXcodeプロジェクトのVersion/Buildを変更する</a> </h2>  </header> <div class="content">![Xcode_General_setting](http://www.flickr.com/photos/91221720@N00/11110211616 &quot;Xcode_General_setting by Yutaka Yamaguchi, on Flickr&quot;)</div> <div class="read-more"> <a href="/2013/11/grunt-plistbuddy.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-11-20T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年11月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/11/jquery_1101ie11.html">jQuery 1.10.1とIE11の組み合わせでエラーが発生する場合がある</a> </h2>  </header> <div class="content">モーダルなどjQueryでiframeを開いた場合に、jQuery 1.10.1とIE11の組み合わせだとエラーが発生する。ので、モーダル使っているなら、1.10.2にアップデートしないといけない。これはバンドルされてるSizzleに下記のような処理があるため。</div> <div class="read-more"> <a href="/2013/11/jquery_1101ie11.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/10/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/9/"> 9 </a><a class="page-number " href="/page/10/"> 10 </a><span class="page-number current">11</span><a class="page-number " href="/page/12/"> 12 </a><a class="page-number " href="/page/13/"> 13 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/12/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

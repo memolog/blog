@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -630,41 +907,43 @@
 </script><meta property="og:type" content="article"><meta property="og:title" content="Mac (tiger) で gem install mysql でエラー"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="Mac(10.4.11)にgem istall mysqlしようとしたら、下記のようなエラーが出たのでメモ。  ```bash ~ sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config"><meta property="og:locale" content="ja_JP"><meta property="article:published_time" content="2009-06-28T12:30:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2009/06/mac_tiger_gem_mysql.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2009-06-28T12:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年6月28日</span> </time> </div> <h2 class="header__title"><span>Mac (tiger) で gem install mysql でエラー</span></h2>  </header> <div id="article-content" class="content">  <p>Mac(10.4.11)に gem istall mysql しようとしたら、下記のようなエラーが出たのでメモ。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FF79C6">~</span><span style="color:#F8F8F2"> sudo gem install mysql -- </span><span style="color:#BD93F9">--with-mysql-config</span><span style="color:#FF79C6">=</span><span style="color:#F1FA8C">/usr/local/mysql/bin/mysql_config</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B">Password:</span></span>
-<span class="line"><span style="color:#50FA7B">Building</span><span style="color:#F1FA8C"> native</span><span style="color:#F1FA8C"> extensions.</span><span style="color:#F1FA8C">  This</span><span style="color:#F1FA8C"> could</span><span style="color:#F1FA8C"> take</span><span style="color:#F1FA8C"> a</span><span style="color:#F1FA8C"> while...</span></span>
-<span class="line"><span style="color:#50FA7B">ERROR:</span><span style="color:#F1FA8C">  Error</span><span style="color:#F1FA8C"> installing</span><span style="color:#F1FA8C"> mysql:</span></span>
-<span class="line"><span style="color:#50FA7B">        ERROR:</span><span style="color:#F1FA8C"> Failed</span><span style="color:#F1FA8C"> to</span><span style="color:#F1FA8C"> build</span><span style="color:#F1FA8C"> gem</span><span style="color:#F1FA8C"> native</span><span style="color:#F1FA8C"> extension.</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B">/opt/local/bin/ruby</span><span style="color:#F1FA8C"> extconf.rb</span><span style="color:#BD93F9"> --with-mysql-config=/usr/local/mysql/bin/mysql_config</span></span>
-<span class="line"><span style="color:#50FA7B">checking</span><span style="color:#F1FA8C"> for</span><span style="color:#F1FA8C"> mysql_ssl_set</span><span style="color:#F8F8F2">()</span><span style="color:#F1FA8C">...</span><span style="color:#F1FA8C"> no</span></span>
-<span class="line"><span style="color:#50FA7B">checking</span><span style="color:#F1FA8C"> for</span><span style="color:#F1FA8C"> mysql.h...</span><span style="color:#F1FA8C"> yes</span></span>
-<span class="line"><span style="color:#50FA7B">creating</span><span style="color:#F1FA8C"> Makefile</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B">make</span></span>
-<span class="line"><span style="color:#50FA7B">gcc</span><span style="color:#BD93F9"> -I.</span><span style="color:#BD93F9"> -I.</span><span style="color:#BD93F9"> -I/opt/local/lib/ruby/1.8/i686-darwin8.10.1</span><span style="color:#BD93F9"> -I.</span><span style="color:#BD93F9"> -DHAVE_MYSQL_H</span><span style="color:#BD93F9"> -I/opt/local/include</span><span style="color:#BD93F9"> -I/usr/local/mysql/include</span><span style="color:#BD93F9">  -g</span><span style="color:#BD93F9"> -Os</span><span style="color:#BD93F9"> -arch</span><span style="color:#F1FA8C"> i386</span><span style="color:#BD93F9"> -no-cpp-precomp</span><span style="color:#BD93F9"> -mmacosx-version-min=10.4</span><span style="color:#BD93F9"> -isysroot</span><span style="color:#F1FA8C"> /Developer/SDKs/MacOSX10.4u.sdk</span><span style="color:#BD93F9"> -fno-common</span><span style="color:#BD93F9">   -D_P1003_1B_VISIBLE</span><span style="color:#BD93F9"> -DSIGNAL_WITH_VIO_CLOSE</span><span style="color:#BD93F9"> -DSIGNALS_DONT_BREAK_READ</span><span style="color:#BD93F9"> -DIGNORE_SIGHUP_SIGQUIT</span><span style="color:#BD93F9"> -fno-common</span><span style="color:#BD93F9"> -O2</span><span style="color:#BD93F9">  -fno-common</span><span style="color:#BD93F9"> -pipe</span><span style="color:#BD93F9"> -fno-common</span><span style="color:#BD93F9">  -c</span><span style="color:#F1FA8C"> mysql.c</span></span>
-<span class="line"><span style="color:#50FA7B">cc</span><span style="color:#BD93F9"> -dynamic</span><span style="color:#BD93F9"> -bundle</span><span style="color:#BD93F9"> -undefined</span><span style="color:#F1FA8C"> suppress</span><span style="color:#BD93F9"> -flat_namespace</span><span style="color:#BD93F9"> -L/opt/local/lib</span><span style="color:#BD93F9">   -L</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">/opt/local/lib</span><span style="color:#E9F284">"</span><span style="color:#BD93F9"> -o</span><span style="color:#F1FA8C"> mysql.bundle</span><span style="color:#F1FA8C"> mysql.o</span><span style="color:#BD93F9">  -lruby</span><span style="color:#BD93F9"> -arch</span><span style="color:#F1FA8C"> i386</span><span style="color:#BD93F9">  -L/usr/local/mysql/lib</span><span style="color:#BD93F9"> -lmysqlclient</span><span style="color:#BD93F9"> -lz</span><span style="color:#BD93F9"> -lm</span><span style="color:#BD93F9">     -lmygcc</span><span style="color:#BD93F9">  -lpthread</span><span style="color:#BD93F9"> -ldl</span><span style="color:#BD93F9"> -lobjc</span></span>
-<span class="line"><span style="color:#50FA7B">/usr/bin/ld:</span><span style="color:#F1FA8C"> /usr/local/mysql/lib/libmysqlclient.dylib</span><span style="color:#F1FA8C"> load</span><span style="color:#F1FA8C"> command</span><span style="color:#BD93F9"> 5</span><span style="color:#F1FA8C"> unknown</span><span style="color:#F1FA8C"> cmd</span><span style="color:#F1FA8C"> field</span></span>
-<span class="line"><span style="color:#50FA7B">/usr/bin/ld:</span><span style="color:#F1FA8C"> warning</span><span style="color:#F1FA8C"> multiple</span><span style="color:#F1FA8C"> definitions</span><span style="color:#F1FA8C"> of</span><span style="color:#F1FA8C"> symbol</span><span style="color:#F1FA8C"> _setregid</span></span>
-<span class="line"><span style="color:#50FA7B">/opt/local/lib/libruby.dylib(process.o</span><span style="color:#F8F8F2">) definition of _setregid</span></span>
-<span class="line"><span style="color:#50FA7B">/usr/lib/gcc/i686-apple-darwin8/4.0.1/../../../libm.dylib(setregid.So</span><span style="color:#F8F8F2">) definition of _setregid</span></span>
-<span class="line"><span style="color:#50FA7B">/usr/bin/ld:</span><span style="color:#F1FA8C"> warning</span><span style="color:#F1FA8C"> multiple</span><span style="color:#F1FA8C"> definitions</span><span style="color:#F1FA8C"> of</span><span style="color:#F1FA8C"> symbol</span><span style="color:#F1FA8C"> _setreuid</span></span>
-<span class="line"><span style="color:#50FA7B">/opt/local/lib/libruby.dylib(process.o</span><span style="color:#F8F8F2">) definition of _setreuid</span></span>
-<span class="line"><span style="color:#50FA7B">/usr/lib/gcc/i686-apple-darwin8/4.0.1/../../../libm.dylib(setreuid.So</span><span style="color:#F8F8F2">) definition of _setreuid</span></span>
-<span class="line"><span style="color:#50FA7B">collect2:</span><span style="color:#F1FA8C"> ld</span><span style="color:#F1FA8C"> returned</span><span style="color:#BD93F9"> 1</span><span style="color:#F1FA8C"> exit</span><span style="color:#F1FA8C"> status</span></span>
-<span class="line"><span style="color:#50FA7B">make:</span><span style="color:#BD93F9;font-style:italic"> ***</span><span style="color:#F8F8F2"> [mysql.bundle] Error 1</span></span>
-<span class="line"></span></code></pre>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash">~ <span class="token function">sudo</span> gem <span class="token function">install</span> mysql -- --with-mysql-config<span class="token operator">=</span>/usr/local/mysql/bin/mysql_config
+
+
+Password:
+Building native extensions.  This could take a while<span class="token punctuation">..</span>.
+ERROR:  Error installing mysql:
+        ERROR: Failed to build gem native extension.
+
+/opt/local/bin/ruby extconf.rb --with-mysql-config<span class="token operator">=</span>/usr/local/mysql/bin/mysql_config
+checking <span class="token keyword">for</span> mysql_ssl_set<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">..</span>. no
+checking <span class="token keyword">for</span> mysql.h<span class="token punctuation">..</span>. <span class="token function">yes</span>
+creating Makefile
+
+<span class="token function">make</span>
+gcc -I. -I. -I/opt/local/lib/ruby/1.8/i686-darwin8.10.1 -I. <span class="token parameter variable">-DHAVE_MYSQL_H</span> -I/opt/local/include -I/usr/local/mysql/include  <span class="token parameter variable">-g</span> <span class="token parameter variable">-Os</span> <span class="token parameter variable">-arch</span> i386 -no-cpp-precomp -mmacosx-version-min<span class="token operator">=</span><span class="token number">10.4</span> <span class="token parameter variable">-isysroot</span> /Developer/SDKs/MacOSX10.4u.sdk -fno-common   <span class="token parameter variable">-D_P1003_1B_VISIBLE</span> <span class="token parameter variable">-DSIGNAL_WITH_VIO_CLOSE</span> <span class="token parameter variable">-DSIGNALS_DONT_BREAK_READ</span> <span class="token parameter variable">-DIGNORE_SIGHUP_SIGQUIT</span> -fno-common <span class="token parameter variable">-O2</span>  -fno-common <span class="token parameter variable">-pipe</span> -fno-common  <span class="token parameter variable">-c</span> mysql.c
+cc <span class="token parameter variable">-dynamic</span> <span class="token parameter variable">-bundle</span> <span class="token parameter variable">-undefined</span> suppress <span class="token parameter variable">-flat_namespace</span> -L/opt/local/lib   -L<span class="token string">"/opt/local/lib"</span> <span class="token parameter variable">-o</span> mysql.bundle mysql.o  <span class="token parameter variable">-lruby</span> <span class="token parameter variable">-arch</span> i386  -L/usr/local/mysql/lib <span class="token parameter variable">-lmysqlclient</span> <span class="token parameter variable">-lz</span> <span class="token parameter variable">-lm</span>     <span class="token parameter variable">-lmygcc</span>  <span class="token parameter variable">-lpthread</span> <span class="token parameter variable">-ldl</span> <span class="token parameter variable">-lobjc</span>
+/usr/bin/ld: /usr/local/mysql/lib/libmysqlclient.dylib load <span class="token builtin class-name">command</span> <span class="token number">5</span> unknown cmd field
+/usr/bin/ld: warning multiple definitions of symbol _setregid
+/opt/local/lib/libruby.dylib<span class="token punctuation">(</span>process.o<span class="token punctuation">)</span> definition of _setregid
+/usr/lib/gcc/i686-apple-darwin8/4.0.1/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/libm.dylib<span class="token punctuation">(</span>setregid.So<span class="token punctuation">)</span> definition of _setregid
+/usr/bin/ld: warning multiple definitions of symbol _setreuid
+/opt/local/lib/libruby.dylib<span class="token punctuation">(</span>process.o<span class="token punctuation">)</span> definition of _setreuid
+/usr/lib/gcc/i686-apple-darwin8/4.0.1/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/<span class="token punctuation">..</span>/libm.dylib<span class="token punctuation">(</span>setreuid.So<span class="token punctuation">)</span> definition of _setreuid
+collect2: ld returned <span class="token number">1</span> <span class="token builtin class-name">exit</span> status
+make: *** <span class="token punctuation">[</span>mysql.bundle<span class="token punctuation">]</span> Error <span class="token number">1</span>
+
+</code></pre>
 <p>いろいろ試してみましたが、最終的には Xcode のバージョンが古かったのが原因みたいでした。2.5 を Web からダウンロードしてインストールしたら、インストールすることができました。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FF79C6">~</span><span style="color:#F8F8F2"> sudo gem install mysql -- </span><span style="color:#BD93F9">--with-mysql-config</span><span style="color:#FF79C6">=</span><span style="color:#F1FA8C">/usr/local/mysql/bin/mysql_config</span></span>
-<span class="line"><span style="color:#50FA7B">Password:</span></span>
-<span class="line"><span style="color:#50FA7B">Building</span><span style="color:#F1FA8C"> native</span><span style="color:#F1FA8C"> extensions.</span><span style="color:#F1FA8C">  This</span><span style="color:#F1FA8C"> could</span><span style="color:#F1FA8C"> take</span><span style="color:#F1FA8C"> a</span><span style="color:#F1FA8C"> while...</span></span>
-<span class="line"><span style="color:#50FA7B">Successfully</span><span style="color:#F1FA8C"> installed</span><span style="color:#F1FA8C"> mysql-2.7</span></span>
-<span class="line"><span style="color:#50FA7B">1</span><span style="color:#F1FA8C"> gem</span><span style="color:#F1FA8C"> installed</span></span>
-<span class="line"><span style="color:#50FA7B">Installing</span><span style="color:#F1FA8C"> ri</span><span style="color:#F1FA8C"> documentation</span><span style="color:#F1FA8C"> for</span><span style="color:#F1FA8C"> mysql-2.7...</span></span>
-<span class="line"><span style="color:#50FA7B">Installing</span><span style="color:#F1FA8C"> RDoc</span><span style="color:#F1FA8C"> documentation</span><span style="color:#F1FA8C"> for</span><span style="color:#F1FA8C"> mysql-2.7...</span></span>
-<span class="line"></span></code></pre>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash">~ <span class="token function">sudo</span> gem <span class="token function">install</span> mysql -- --with-mysql-config<span class="token operator">=</span>/usr/local/mysql/bin/mysql_config
+Password:
+Building native extensions.  This could take a while<span class="token punctuation">..</span>.
+Successfully installed mysql-2.7
+<span class="token number">1</span> gem installed
+Installing ri documentation <span class="token keyword">for</span> mysql-2.7<span class="token punctuation">..</span>.
+Installing RDoc documentation <span class="token keyword">for</span> mysql-2.7<span class="token punctuation">..</span>.
+
+</code></pre>
 <p>Xcode のバージョンアップには Apple developer サイトからダウンロードしてこないといけないのですが、Tiger 用の Xcode はすでに最新のバージョンではないので、ダウンロードする場所がおそろしく分かりにくい。ので、メモ。</p>
 <ol>
 <li><a href="http://developer.apple.com/mac/">Mac Dev Center</a> にアクセス</li>

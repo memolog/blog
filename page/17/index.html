@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -627,7 +904,7 @@
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2012/09/sass_compass.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2012/09/rvm_jewelrybox_homebrew.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2012/07/phonegap_and_xcode_version.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2012/07/dropped_pubdate_in_time_element.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2012/07/rich_snippets_testing_tool.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2012/07/around_dnt.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2012/06/around_social_buttons.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2012/06/viewport_declaration_in_css.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2012/06/stream_webcam_with_javascript.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2012/06/jquery_masonry.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-09T13:17:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/sass_compass.html">Sass / Compass をインストール</a> </h2>  </header> <div class="content">前回（RVM / JewelryBox / Homebrew をインストール - メモログ）でインストールした1.9.3に、SassとCompassをインストールするの巻。SassはCSSの記述をサポートしてくれるプリプロセッサー。CompassはSassのお役立ちMixinをたくさん用意しているCSS authoring framework。</div> <div class="read-more"> <a href="/2012/09/sass_compass.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-08T12:39:03.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/rvm_jewelrybox_homebrew.html">RVM / JewelryBox / Homebrew をインストール</a> </h2>  </header> <div class="content">RVM（Ruby version manager）はMacでデフォルトのバージョン以外のRubyをインストールするときに便利。JewelryBoxはRVMのGUIツールでインストールしたRubyを可視化してくれる。Homebrewはパッケージマネージャーで面倒なインストールを楽にしてくれる。これらをインストールしたので、そのメモ。</div> <div class="read-more"> <a href="/2012/09/rvm_jewelrybox_homebrew.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-16T13:45:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/phonegap_and_xcode_version.html">PhoneGapとXcode</a> </h2>  </header> <div class="content">機会があってXcodeのバージョンとインストールできるPhoneGapの現在の組み合わせを調べてみました（2012/7/16現在）。4.2については現状ではissueがあって1.9.0をインストールしてもビルドでエラーになる。</div> <div class="read-more"> <a href="/2012/07/phonegap_and_xcode_version.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-02T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/dropped_pubdate_in_time_element.html">time要素からpubdate属性が抜けていた</a> </h2>  </header> <div class="content">何の気なしにValidator.nu (X)HTML5 Validatorでサイトの検証をしてみたら、time要素のpubdateがnot allowedだと言われて、気がついたらW3Cの仕様のContent Attributesからも抹消されているので、なんでだろうなあと調べていたら20120329の更新で、pubdateが削除されていた（The time element was redesigned to make it match how people wanted to use it. Its pubdate attribute was dropped. ）。参考HTML5 (と関連WD) 更新 - fragmentary。</div> <div class="read-more"> <a href="/2012/07/dropped_pubdate_in_time_element.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-01T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/rich_snippets_testing_tool.html">Microdata/Microformatsの検証ができるRich Snippets Testing Tool</a> </h2>  </header> <div class="content">GoogleのWebmaster toolsのひとつにRich Snippets Testing Toolというのがあって、このツールではサイトに記述したMicrodataやMicroformatsなどの構造化データマークアップ(structured data markup)をGoogleがきちんとパースしてくれるかどうかをチェックすることができます。</div> <div class="read-more"> <a href="/2012/07/rich_snippets_testing_tool.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-01T05:20:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月1日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/around_dnt.html">DNTについて</a> </h2>  </header> <div class="content">少し前にあった、IE10 で DNT の設定を初期設定でオンの状態にするという話。</div> <div class="read-more"> <a href="/2012/07/around_dnt.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-27T20:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月28日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/around_social_buttons.html">ソーシャルボタンはあるべきかないべきか</a> </h2>  </header> <div class="content">Sweep the Sleaze | Information Architectsや、&#39;Drop social media buttons&#39; callとかでソーシャルボタンの有効性について話されている。詳しくは上記のリンクを参照という感じですが、おおまかに言うと、ソーシャルネットワーク経由で来ている人にはソーシャルネットワークについて伝える必要はないし、ソーシャルネット使わない人には不要だよねとか、優れたコンテンツならボタンがなくても参照されるし読まれるとか、そういう感じ。</div> <div class="read-more"> <a href="/2012/06/around_social_buttons.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-24T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/viewport_declaration_in_css.html">viewportをCSSで指定する</a> </h2>  </header> <div class="content">Internet Explorer 10 Guide for DevelopersのDevice adaptationにて、@viewportについての説明がされています。現時点ではmsのprefixが必要なので、実際に使用する場合は @-ms-viewportということになる（そして@-o-viewportの形でOperaでも対応しているとBruce Lawsonからコメントがついている）。</div> <div class="read-more"> <a href="/2012/06/viewport_declaration_in_css.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-24T12:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月24日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/stream_webcam_with_javascript.html">JavascriptでWebカメラを動かす</a> </h2>  </header> <div class="content">Stream Your Webcam to a Browser in JavaScriptというSitepointの記事で、Operaがバージョン12でgetUserMediaに対応したという話が掲載されていて、サンプルのJavascriptが載っていたので試してみました。シンプルなJavascriptでWebカメラが動くというところが面白い。</div> <div class="read-more"> <a href="/2012/06/stream_webcam_with_javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-18T12:36:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/jquery_masonry.html">縦方向のfloatを実現するjQuery Masonry</a> </h2>  </header> <div class="content">いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。</div> <div class="read-more"> <a href="/2012/06/jquery_masonry.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/16/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/15/"> 15 </a><a class="page-number " href="/page/16/"> 16 </a><span class="page-number current">17</span><a class="page-number " href="/page/18/"> 18 </a><a class="page-number " href="/page/19/"> 19 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/18/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2012/09/css_transforms_2d.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2012/09/sass_compass.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2012/09/rvm_jewelrybox_homebrew.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2012/07/phonegap_and_xcode_version.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2012/07/dropped_pubdate_in_time_element.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2012/07/rich_snippets_testing_tool.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2012/07/around_dnt.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2012/06/around_social_buttons.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2012/06/viewport_declaration_in_css.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2012/06/stream_webcam_with_javascript.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-10T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月10日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/css_transforms_2d.html">CSS Transforms：transform</a> </h2>  </header> <div class="content">CSS Transformは要素の座標変換を行うもので、transformにtransform functionsを指定することで移動/拡大/縮小/回転などを簡単に行うことができる。2Dと3Dの変換に対応していて、transform-styleが設定されていない場合は2D（flat）となる。</div> <div class="read-more"> <a href="/2012/09/css_transforms_2d.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-09T13:17:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/sass_compass.html">Sass / Compass をインストール</a> </h2>  </header> <div class="content">前回（RVM / JewelryBox / Homebrew をインストール - メモログ）でインストールした1.9.3に、SassとCompassをインストールするの巻。SassはCSSの記述をサポートしてくれるプリプロセッサー。CompassはSassのお役立ちMixinをたくさん用意しているCSS authoring framework。</div> <div class="read-more"> <a href="/2012/09/sass_compass.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-08T12:39:03.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/rvm_jewelrybox_homebrew.html">RVM / JewelryBox / Homebrew をインストール</a> </h2>  </header> <div class="content">RVM（Ruby version manager）はMacでデフォルトのバージョン以外のRubyをインストールするときに便利。JewelryBoxはRVMのGUIツールでインストールしたRubyを可視化してくれる。Homebrewはパッケージマネージャーで面倒なインストールを楽にしてくれる。これらをインストールしたので、そのメモ。</div> <div class="read-more"> <a href="/2012/09/rvm_jewelrybox_homebrew.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-16T13:45:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/phonegap_and_xcode_version.html">PhoneGapとXcode</a> </h2>  </header> <div class="content">機会があってXcodeのバージョンとインストールできるPhoneGapの現在の組み合わせを調べてみました（2012/7/16現在）。4.2については現状ではissueがあって1.9.0をインストールしてもビルドでエラーになる。</div> <div class="read-more"> <a href="/2012/07/phonegap_and_xcode_version.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-02T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/dropped_pubdate_in_time_element.html">time要素からpubdate属性が抜けていた</a> </h2>  </header> <div class="content">何の気なしにValidator.nu (X)HTML5 Validatorでサイトの検証をしてみたら、time要素のpubdateがnot allowedだと言われて、気がついたらW3Cの仕様のContent Attributesからも抹消されているので、なんでだろうなあと調べていたら20120329の更新で、pubdateが削除されていた（The time element was redesigned to make it match how people wanted to use it. Its pubdate attribute was dropped. ）。参考HTML5 (と関連WD) 更新 - fragmentary。</div> <div class="read-more"> <a href="/2012/07/dropped_pubdate_in_time_element.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-01T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/rich_snippets_testing_tool.html">Microdata/Microformatsの検証ができるRich Snippets Testing Tool</a> </h2>  </header> <div class="content">GoogleのWebmaster toolsのひとつにRich Snippets Testing Toolというのがあって、このツールではサイトに記述したMicrodataやMicroformatsなどの構造化データマークアップ(structured data markup)をGoogleがきちんとパースしてくれるかどうかをチェックすることができます。</div> <div class="read-more"> <a href="/2012/07/rich_snippets_testing_tool.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-01T05:20:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月1日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/around_dnt.html">DNTについて</a> </h2>  </header> <div class="content">少し前にあった、IE10 で DNT の設定を初期設定でオンの状態にするという話。</div> <div class="read-more"> <a href="/2012/07/around_dnt.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-27T20:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月28日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/around_social_buttons.html">ソーシャルボタンはあるべきかないべきか</a> </h2>  </header> <div class="content">Sweep the Sleaze | Information Architectsや、&#39;Drop social media buttons&#39; callとかでソーシャルボタンの有効性について話されている。詳しくは上記のリンクを参照という感じですが、おおまかに言うと、ソーシャルネットワーク経由で来ている人にはソーシャルネットワークについて伝える必要はないし、ソーシャルネット使わない人には不要だよねとか、優れたコンテンツならボタンがなくても参照されるし読まれるとか、そういう感じ。</div> <div class="read-more"> <a href="/2012/06/around_social_buttons.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-24T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/viewport_declaration_in_css.html">viewportをCSSで指定する</a> </h2>  </header> <div class="content">Internet Explorer 10 Guide for DevelopersのDevice adaptationにて、@viewportについての説明がされています。現時点ではmsのprefixが必要なので、実際に使用する場合は @-ms-viewportということになる（そして@-o-viewportの形でOperaでも対応しているとBruce Lawsonからコメントがついている）。</div> <div class="read-more"> <a href="/2012/06/viewport_declaration_in_css.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-24T12:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月24日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/stream_webcam_with_javascript.html">JavascriptでWebカメラを動かす</a> </h2>  </header> <div class="content">Stream Your Webcam to a Browser in JavaScriptというSitepointの記事で、Operaがバージョン12でgetUserMediaに対応したという話が掲載されていて、サンプルのJavascriptが載っていたので試してみました。シンプルなJavascriptでWebカメラが動くというところが面白い。</div> <div class="read-more"> <a href="/2012/06/stream_webcam_with_javascript.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/16/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/15/"> 15 </a><a class="page-number " href="/page/16/"> 16 </a><span class="page-number current">17</span><a class="page-number " href="/page/18/"> 18 </a><a class="page-number " href="/page/19/"> 19 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/18/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -632,92 +909,104 @@
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2012-09-09T13:17:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月9日</span> </time> </div> <h2 class="header__title"><span>Sass / Compass をインストール</span></h2>  </header> <div id="article-content" class="content">  <p>前回（<a href="/blog//2012/09/rvm_jewelrybox_homebrew/">RVM / JewelryBox / Homebrew をインストール - メモログ</a>）でインストールした 1.9.3 に、Sass と Compass をインストールするの巻。<a href="http://sass-lang.com/">Sass</a>は CSS の記述をサポートしてくれるプリプロセッサー。<a href="http://compass-style.org/">Compass</a>は Sass のお役立ち Mixin をたくさん用意している CSS authoring framework。</p>
 <h3 id="sass--compass-のインストール">Sass / Compass のインストール</h3>
 <p>ターミナルで下記を実行。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>gem install sass</span></span>
-<span class="line"><span>gem install compass</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">gem install sass
+gem install compass
+
+</code></pre>
 <h3 id="sass-の使い方">Sass の使い方</h3>
 <p>コマンドライン上で下記のコマンドを実行。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>sass --watch foobar.scss:foobar.css</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">sass --watch foobar.scss:foobar.css
+
+</code></pre>
 <p>これで foobar.scss を編集保存すると、foobar.css に CSS が生成される。</p>
 <p>さらなる使い方は<a href="http://sass-lang.com/tutorial.html">Tutorial</a>（<a href="http://hail2u.net/documents/sass-tutorial.html">日本語が便利</a>）を読むと一通り分かる。</p>
 <h3 id="compass-の使い方">Compass の使い方</h3>
 <p>Compass では最初にプロジェクトを作成して、作成したプロジェクトで watch する。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>compass create foobar</span></span>
-<span class="line"><span>cd foobar</span></span>
-<span class="line"><span>watch</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">compass create foobar
+cd foobar
+watch
+
+</code></pre>
 <p>sass で—compass オプションを使って使用することもできる。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>sass --watch foobar.scss:foobar.css --compass</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">sass --watch foobar.scss:foobar.css --compass
+
+</code></pre>
 <p>たとえば Compass を使って linear-gradient を作成する場合は下記のように、必要な partial を import して、<a href="http://compass-style.org/reference/compass/css3/images/">compass の書式</a>にあわせて記述する。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@import "compass/css3/images";</span></span>
-<span class="line"><span></span></span>
-<span class="line"><span>#foobar{</span></span>
-<span class="line"><span>  @include background(linear-gradient(45deg, #333 30&#x26;#x25;, #0c0));</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">@import "compass/css3/images";
+
+#foobar{
+  @include background(linear-gradient(45deg, #333 30&#x26;#x25;, #0c0));
+}
+
+</code></pre>
 <p>下記のような CSS になる（-ms-は入らないのか）。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>#foobar {</span></span>
-<span class="line"><span>  background: -webkit-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background: -moz-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background: -o-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background: linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">#foobar {
+  background: -webkit-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background: -moz-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background: -o-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background: linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+}
+
+</code></pre>
 <p>さらなる使い方は<a href="http://compass-style.org/help/">Compass Help | Compass Documentation</a>を参照。日本語のドキュメントとしては、<a href="https://gihyo.jp/dp/ebook/2012/978-4-7741-5123-6">Sass 入門</a>にチュートリアル的なのがある。<a href="http://linker.in/journal/2011/07/compasscss3.php">Compass を触ってみて、CSS3 のモジュールを眺めてみる。｜ linker journal ｜ linker</a>も参考に。</p>
 <h3 id="自分で-mixin-を書く">自分で mixin を書く</h3>
 <p>compass は便利だけど、都合にあわせて自分で mixin 用意するなりした方が良い場合もあるかもしれない。たとえば vendor prefix をつけたいだけなら<a href="http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#each-directive">@each</a>を使うのでもいい。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>#foobar{</span></span>
-<span class="line"><span>  @each $vendor in -webkit-,-moz-,-ms-,-o-,null {</span></span>
-<span class="line"><span>    background: #{$vendor}linear-gradient(45deg,#333 30&#x26;#x25;, #0c0);</span></span>
-<span class="line"><span>  }</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">#foobar{
+  @each $vendor in -webkit-,-moz-,-ms-,-o-,null {
+    background: #{$vendor}linear-gradient(45deg,#333 30&#x26;#x25;, #0c0);
+  }
+}
+
+</code></pre>
 <p>@each の最後の null は、non prefix 用。Sass 上で使われる null は、#{}で指定された場合そこに何も出力しない。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>#foobar {</span></span>
-<span class="line"><span>  background: -webkit-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background: -moz-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background: -ms-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background: -o-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background: linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">#foobar {
+  background: -webkit-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background: -moz-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background: -ms-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background: -o-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background: linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+}
+
+</code></pre>
 <h3 id="カスタムファンクションを書く">カスタムファンクションを書く</h3>
 <p>ruby で自分用のカスタムファンクションを書くという手もある。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>module Sass::Script::Functions</span></span>
-<span class="line"><span>  def generate_linear_gradient(*list)</span></span>
-<span class="line"><span>    array = []</span></span>
-<span class="line"><span>    list.each_with_index do |li,i|</span></span>
-<span class="line"><span>      if i == 0 || li.is_a?(Sass::Script::Color) then</span></span>
-<span class="line"><span>        array.push(li)</span></span>
-<span class="line"><span>      else</span></span>
-<span class="line"><span>        array[i-1] = Sass::Script::String.new("#{array[i-1]} #{li}")</span></span>
-<span class="line"><span>      end</span></span>
-<span class="line"><span>    end</span></span>
-<span class="line"><span>    Sass::Script::List.new(array,',')</span></span>
-<span class="line"><span>  end</span></span>
-<span class="line"><span>end</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">module Sass::Script::Functions
+  def generate_linear_gradient(*list)
+    array = []
+    list.each_with_index do |li,i|
+      if i == 0 || li.is_a?(Sass::Script::Color) then
+        array.push(li)
+      else
+        array[i-1] = Sass::Script::String.new("#{array[i-1]} #{li}")
+      end
+    end
+    Sass::Script::List.new(array,',')
+  end
+end
+
+</code></pre>
 <p>sass の-r オプションで用意したスクリプトを require する（ 上記の ruby スクリプトが~/Desktop/sample.rb という名前で存在すると想定）。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>sass --watch foobar.scss:foobar.css -r /Users/username/Desktop/sample.rb</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">sass --watch foobar.scss:foobar.css -r /Users/username/Desktop/sample.rb
+
+</code></pre>
 <p>上のスクリプトの場合は、</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>#foobar{</span></span>
-<span class="line"><span>  @each $vendor in -webkit-,-moz-,-ms-,-o-,null {</span></span>
-<span class="line"><span>    background-image: #{$vendor}linear-gradient(generate_linear_gradient(45deg,#333,30&#x26;#x25;,#0c0));</span></span>
-<span class="line"><span>  }</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">#foobar{
+  @each $vendor in -webkit-,-moz-,-ms-,-o-,null {
+    background-image: #{$vendor}linear-gradient(generate_linear_gradient(45deg,#333,30&#x26;#x25;,#0c0));
+  }
+}
+
+</code></pre>
 <p>とすると、</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>#foobar {</span></span>
-<span class="line"><span>  background-image: -webkit-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background-image: -moz-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background-image: -ms-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background-image: -o-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>  background-image: linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);</span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">#foobar {
+  background-image: -webkit-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background-image: -moz-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background-image: -ms-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background-image: -o-linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+  background-image: linear-gradient(45deg, #333333 30&#x26;#x25;, #00cc00);
+}
+
+</code></pre>
 <p>となる。color と percentage を分けて指定できるようになっている。</p>
 <p>という感じ。compass で簡単に対応可能かをみつつ、都合にあわせて自作 mixin を作るというのが良いかもしれない。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

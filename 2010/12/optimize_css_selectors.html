@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -627,13 +904,13 @@
       }
     ]
   }
-</script><meta property="og:type" content="article"><meta property="og:title" content="CSSセレクタを効率的な記述にする"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。"><meta property="og:locale" content="ja_JP"><meta property="article:published_time" content="2010-12-28T21:00:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2010/12/optimize_css_selectors.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
+</script><meta property="og:type" content="article"><meta property="og:title" content="CSSセレクタを効率的な記述にする"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp"><meta property="article:published_time" content="2010-12-28T21:00:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://memolog.org/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2010/12/optimize_css_selectors.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
-</a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2010-12-28T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月29日</span> </time> </div> <h2 class="header__title"><span>CSSセレクタを効率的な記述にする</span></h2>  </header> <div id="article-content" class="content">  <p><a href="http://code.google.com/intl/ja/speed/page-speed/">Page Speed</a>の評価の一つに<a href="http://code.google.com/intl/ja/speed/page-speed/docs/rendering.html#UseEfficientCSSSelectors">Use efficient CSS selectors</a>という項目があり、そこで効率的な CSS セレクタを使用するという話が挙げられています。</p>
+</a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2010-12-28T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月29日</span> </time> </div> <h2 class="header__title"><span>CSSセレクタを効率的な記述にする</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c8c2b5;"> <img src="/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp" srcset="/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp, /assets/images/optimize_css_selectors/optimize_css_selectors_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div id="article-content" class="content">  <p><a href="http://code.google.com/intl/ja/speed/page-speed/">Page Speed</a>の評価の一つに<a href="http://code.google.com/intl/ja/speed/page-speed/docs/rendering.html#UseEfficientCSSSelectors">Use efficient CSS selectors</a>という項目があり、そこで効率的な CSS セレクタを使用するという話が挙げられています。</p>
 <p>ブラウザではセレクタの規則を右から左にフィルターしていくそうなのですが（「div img a」なら a タグを見つけて、先祖に img があるもので絞り込んで、さらにその先祖に div であるもので絞り込む ）、このフィルターの処理がパフォーマンスを悪化させるらしいのです。だからパフォーマンス的には子孫セレクタの指定はできるだけ避けた方がよくて（子供セレクタの方がましらしい）、ID のみとか class のみとかできるだけシンプルな方が良い、という話。</p>
-<p>ブラウザの内部処理を考えれば、当たり前と言えば当たり前のように感じますが、CSS の書き方でパフォーマンスが劣化するという意識したことがなかったのでなかなか興味深かったです。私はどちらかというとスタイルの宣言の予期せぬ競合を避けるために余分に詳細度を上げている方だったのですが、今回はかなりシンプルに変更してみました。</p><li>タグのそれぞれに class 属性挿入していくの面倒くさいなあとか思いつつも、今回は class 属性でリストを特定できるように全部入れてみました。サイトの構築のスピードとか class 属性の記述漏れなどを考えると、</li><li>タグは親の<ul>タグに class 属性つけて「.list &#x3C; li」みたいに指定するのは許容範囲なのかなあとは個人的には思いますけど。<p></p>
-<p>そして、実際のところ、CSS の記述の仕方を変えたことによるパフォーマンスの向上はあまり感じられないわけですが。まあとにかく、大きなサイトでトラフィックもあり CSS の量も多いという場合には一考の余地はあるのではないのかなと思います。</p></ul></li>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+<p>ブラウザの内部処理を考えれば、当たり前と言えば当たり前のように感じますが、CSS の書き方でパフォーマンスが劣化するという意識したことがなかったのでなかなか興味深かったです。私はどちらかというとスタイルの宣言の予期せぬ競合を避けるために余分に詳細度を上げている方だったのですが、今回はかなりシンプルに変更してみました。<code>&#x3C;li></code>タグのそれぞれに class 属性挿入していくの面倒くさいなあとか思いつつも、今回は class 属性でリストを特定できるように全部入れてみました。サイトの構築のスピードとか class 属性の記述漏れなどを考えると、<code>&#x3C;li></code>タグは親の<code>&#x3C;ul></code>タグに class 属性つけて「<code>.list &#x3C; li</code>」みたいに指定するのは許容範囲なのかなあとは個人的には思いますけど。</p>
+<p>そして、実際のところ、CSS の記述の仕方を変えたことによるパフォーマンスの向上はあまり感じられないわけですが。まあとにかく、大きなサイトでトラフィックもあり CSS の量も多いという場合には一考の余地はあるのではないのかなと思います。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-04T15:46:10.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/yslow_1_minimize_http_requests.html">YSLOW 勉強：1：Minimize HTTP Requests</a> </h3>  </header> <div class="content">*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。</div> <div class="read-more"> <a href="/2007/08/yslow_1_minimize_http_requests.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-18T12:36:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/06/jquery_masonry.html">縦方向のfloatを実現するjQuery Masonry</a> </h3>  </header> <div class="content">いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。</div> <div class="read-more"> <a href="/2012/06/jquery_masonry.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2025-04-09T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2025年4月9日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2025/hello-astro.html">Hello Astro</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e2dbce;"> <img src="/assets/images/hello-astro/hello-astro_medium.webp" srcset="/assets/images/hello-astro/hello-astro_medium.webp, /assets/images/hello-astro/hello-astro_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。</div> <div class="read-more"> <a href="/2025/hello-astro.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-12-24T18:04:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年12月25日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2011/12/redesign_2012.html">デザインを変更（2011/12）</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #97948c;"> <img src="/assets/images/redesign_2012/redesign_2012_medium.webp" srcset="/assets/images/redesign_2012/redesign_2012_medium.webp, /assets/images/redesign_2012/redesign_2012_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="657" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。</div> <div class="read-more"> <a href="/2011/12/redesign_2012.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2025-04-09T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2025年4月9日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2025/hello-astro.html">Hello Astro</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e2dbce;"> <img src="/assets/images/hello-astro/hello-astro_medium.webp" srcset="/assets/images/hello-astro/hello-astro_medium.webp, /assets/images/hello-astro/hello-astro_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。</div> <div class="read-more"> <a href="/2025/hello-astro.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-12-24T18:04:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年12月25日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2011/12/redesign_2012.html">デザインを変更（2011/12）</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #97948c;"> <img src="/assets/images/redesign_2012/redesign_2012_medium.webp" srcset="/assets/images/redesign_2012/redesign_2012_medium.webp, /assets/images/redesign_2012/redesign_2012_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="657" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。</div> <div class="read-more"> <a href="/2011/12/redesign_2012.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-18T12:36:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/06/jquery_masonry.html">縦方向のfloatを実現するjQuery Masonry</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cbc7ba;"> <img src="/assets/images/jquery_masonry/jquery_masonry_medium.webp" srcset="/assets/images/jquery_masonry/jquery_masonry_medium.webp, /assets/images/jquery_masonry/jquery_masonry_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div>  </div> </header> <div class="content">いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。</div> <div class="read-more"> <a href="/2012/06/jquery_masonry.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-04T15:46:10.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/yslow_1_minimize_http_requests.html">YSLOW 勉強: 1: Minimize HTTP Requests</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cdc8bc;"> <img src="/assets/images/yslow_1_minimize_http_requests/yslow_1_minimize_http_requests_medium.webp" srcset="/assets/images/yslow_1_minimize_http_requests/yslow_1_minimize_http_requests_medium.webp, /assets/images/yslow_1_minimize_http_requests/yslow_1_minimize_http_requests_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。</div> <div class="read-more"> <a href="/2007/08/yslow_1_minimize_http_requests.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

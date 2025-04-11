@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -631,52 +908,56 @@
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2018-07-14T11:32:41.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月14日</span> </time> </div> <h2 class="header__title"><span>PWAのチェックリストを満たす</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #6d6861;"> <div style="background-color: #6d6861"> <img src="/assets/images/cloudvisual-146380-unsplash/cloudvisual-146380-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="734"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/sm8OE9daK2A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">CloudVisual</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div id="article-content" class="content">  <p>たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、<a href="https://developers.google.com/web/tools/lighthouse/?hl=ja">Lighthouse</a> の結果を見るたびに「PWA のチェックリストだけ 100 点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということで PWA のチェックリストを満たすべく、Service Worker と App manifest に対応しました。</p>
 <p>Service Worker をサイトに追加するのはとても簡単で、Service Worker 用のスクリプトファイルを用意して、<code>navigator.servceWoeker.register</code> で読み込むだけ。HTTPS でないといけないとか、スクリプトファイルの置き場所が scope と異なる場合は <code>Service-Worker-Allowed</code> のヘッダーが必要とか、いろいろ考慮すべきところはあるけれど、Github pages は HTTPS だし、ファイルもどこにでも置けるので特に気にしなくても大丈夫。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">script</span><span style="color:#50FA7B;font-style:italic"> async</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">  if ('serviceWorker' in navigator) </span><span style="color:#FF79C6">{</span></span>
-<span class="line"><span style="color:#F8F8F2">    navigator.serviceWorker.</span><span style="color:#50FA7B">register</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">/service-worker.js</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#FF79C6">script</span><span style="color:#F8F8F2">></span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token operator">&#x3C;</span>script async<span class="token operator">></span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">'serviceWorker'</span> <span class="token keyword">in</span> navigator<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    navigator<span class="token punctuation">.</span>serviceWorker<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'/service-worker.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&#x3C;</span><span class="token operator">/</span>script<span class="token operator">></span>
+</code></pre>
 <p>service-worker.js では、今のところ最新 10 件分の HTML と featured image に使っている svg ファイルをプリキャッシュするようにした。</p>
 <p>最新 10 件のポストデータを得るのに、まず script ディレクトリに service-worker.js を入れて、generator を登録。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F8F8F2">hexo.extend.generator.</span><span style="color:#50FA7B">register</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">service-worker</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, (</span><span style="color:#FFB86C;font-style:italic">locals</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> posts </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> locals.posts</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">sort</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-date</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">filter</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">post</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> post.draft </span><span style="color:#FF79C6">!==</span><span style="color:#BD93F9"> true</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">limit</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">toArray</span><span style="color:#F8F8F2">();</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> lastUpdated </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> posts</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">sort</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">a</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">b</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> (a.updated </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2"> b.updated </span><span style="color:#FF79C6">?</span><span style="color:#BD93F9"> 1</span><span style="color:#FF79C6"> :</span><span style="color:#FF79C6"> -</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">))[</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">]</span></span>
-<span class="line"><span style="color:#F8F8F2">    .updated.</span><span style="color:#50FA7B">valueOf</span><span style="color:#F8F8F2">();</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> precacheList </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> posts.</span><span style="color:#50FA7B">map</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">post</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> post.path);</span></span>
-<span class="line"><span style="color:#F8F8F2">  precacheList.</span><span style="color:#50FA7B">unshift</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">/</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">  posts.</span><span style="color:#50FA7B">forEach</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">post</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> featuredImage </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> post.featured </span><span style="color:#FF79C6">&#x26;&#x26;</span><span style="color:#F8F8F2"> post.featured.image;</span></span>
-<span class="line"><span style="color:#FF79C6">    if</span><span style="color:#F8F8F2"> (featuredImage) {</span></span>
-<span class="line"><span style="color:#F8F8F2">      precacheList.</span><span style="color:#50FA7B">push</span><span style="color:#F8F8F2">(</span><span style="color:#F1FA8C">`/assets/images/</span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">featuredImage</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">/</span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">featuredImage</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">.svg`</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#F8F8F2">  });</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">  return</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#F8F8F2">    path</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">service-worker.js</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">    data</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#F8F8F2">      precacheList</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> precacheList,</span></span>
-<span class="line"><span style="color:#F8F8F2">      lastUpdated</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> lastUpdated,</span></span>
-<span class="line"><span style="color:#F8F8F2">    },</span></span>
-<span class="line"><span style="color:#F8F8F2">    layout</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">service-worker</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">  };</span></span>
-<span class="line"><span style="color:#F8F8F2">});</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript">hexo<span class="token punctuation">.</span>extend<span class="token punctuation">.</span>generator<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">"service-worker"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">locals</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> posts <span class="token operator">=</span> locals<span class="token punctuation">.</span>posts
+    <span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token string">"-date"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">post</span><span class="token punctuation">)</span> <span class="token operator">=></span> post<span class="token punctuation">.</span>draft <span class="token operator">!==</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">limit</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">toArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> lastUpdated <span class="token operator">=</span> posts
+    <span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>updated <span class="token operator">&#x3C;</span> b<span class="token punctuation">.</span>updated <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token punctuation">.</span>updated<span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> precacheList <span class="token operator">=</span> posts<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">post</span><span class="token punctuation">)</span> <span class="token operator">=></span> post<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  precacheList<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  posts<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">post</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> featuredImage <span class="token operator">=</span> post<span class="token punctuation">.</span>featured <span class="token operator">&#x26;&#x26;</span> post<span class="token punctuation">.</span>featured<span class="token punctuation">.</span>image<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>featuredImage<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      precacheList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/assets/images/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>featuredImage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>featuredImage<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.svg</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"service-worker.js"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">precacheList</span><span class="token operator">:</span> precacheList<span class="token punctuation">,</span>
+      <span class="token literal-property property">lastUpdated</span><span class="token operator">:</span> lastUpdated<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">layout</span><span class="token operator">:</span> <span class="token string">"service-worker"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>そのあと theme の layout に service-worker.ejs を追加して、Service Worker のスクリプトファイルを生成。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> precacheList </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> [</span></span>
-<span class="line"><span style="color:#FF79C6">  &#x3C;%</span><span style="color:#F8F8F2"> page.precacheList.</span><span style="color:#50FA7B">forEach</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">function</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">item</span><span style="color:#F8F8F2">){ </span><span style="color:#FF79C6">%></span></span>
-<span class="line"><span style="color:#E9F284">  '</span><span style="color:#F1FA8C">&#x3C;%- url_for(item) %></span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span><span style="color:#FF79C6">&#x3C;%</span><span style="color:#F8F8F2"> }); </span><span style="color:#FF79C6">%></span></span>
-<span class="line"><span style="color:#F8F8F2">];</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> precacheList <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token operator">&#x3C;</span><span class="token operator">%</span> page<span class="token punctuation">.</span>precacheList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token operator">%</span><span class="token operator">></span>
+  <span class="token string">'&#x3C;%- url_for(item) %>'</span><span class="token punctuation">,</span><span class="token operator">&#x3C;</span><span class="token operator">%</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</code></pre>
 <p>詳細は <a href="https://github.com/memolog/blog/blob/master/scripts/service-worker.js">service-worker.js</a> と <a href="https://github.com/memolog/blog/blob/master/themes/little-code-bricks/layout/service-worker.ejs">service-worker.ejs</a> を参照。</p>
 <p>App Manifest については静的なファイルを用意して、manifest へのリンクを追加しただけ。 theme-color は Light House がそう言ってくるので追加している。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">link</span><span style="color:#50FA7B;font-style:italic"> rel</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">manifest</span><span style="color:#E9F284">"</span><span style="color:#50FA7B;font-style:italic"> href</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">/manifest.json</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2"> /></span></span>
-<span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">meta</span><span style="color:#50FA7B;font-style:italic"> name</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">theme-color</span><span style="color:#E9F284">"</span><span style="color:#50FA7B;font-style:italic"> content</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">white</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2"> /></span></span></code></pre>
+<pre class="language-html" data-language="html"><code is:raw="" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>manifest<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/manifest.json<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>theme-color<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>white<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
 <p>詳細は <a href="https://github.com/memolog/blog/blob/master/themes/little-code-bricks/source/manifest.json">manifest.json</a>。ただ値を入れるだけではあるけど、<a href="https://developers.google.com/web/tools/lighthouse/audits/custom-splash-screen">スプラッシュスクリーンを有効にする</a>ためにいくつか要件があり、それを満たすようにアイコン画像を用意している。</p>
 <p>そして Lighthouse の結果。100 点になりました 👍</p>
 <p><img src="/assets/images/lighthouse-100s.png" alt=""></p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>

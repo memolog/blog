@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -633,46 +910,48 @@
 <p>できあがった関連メモは以下のキャプチャのような感じ。これは<a href="/2025/a-crash-course-on-crises.html">本：マクロ金融危機入門</a>の記事の関連メモ。「本」というカテゴリでは揃っているものの、関連性があるようなないような微妙なライン。データがもっと増えれば、それっぽい結果になってくるのかなあ。</p>
 <img src="/assets/images/related-entries.png" class="screenshot" loading="lazy" width="923" height="566">
 <p>実際にやったことは、Markdownファイルから取得した記事の本文にベクトル化処理をかけて、</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#FF79C6">import</span><span style="color:#F8F8F2"> { pipeline } </span><span style="color:#FF79C6">from</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">@xenova/transformers</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> embedder </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> await</span><span style="color:#50FA7B"> pipeline</span><span style="color:#F8F8F2">(</span></span>
-<span class="line"><span style="color:#E9F284">  "</span><span style="color:#F1FA8C">feature-extraction</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#E9F284">  "</span><span style="color:#F1FA8C">Xenova/paraphrase-multilingual-MiniLM-L12-v2</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> embeddings </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6"> await</span><span style="color:#8BE9FD;font-style:italic"> Promise</span><span style="color:#F8F8F2">.</span><span style="color:#50FA7B">all</span><span style="color:#F8F8F2">(</span></span>
-<span class="line"><span style="color:#F8F8F2">  contents.</span><span style="color:#50FA7B">map</span><span style="color:#F8F8F2">(</span><span style="color:#FF79C6">async</span><span style="color:#F8F8F2"> (</span><span style="color:#FFB86C;font-style:italic">content</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">    return</span><span style="color:#FF79C6"> await</span><span style="color:#50FA7B"> embedder</span><span style="color:#F8F8F2">(content, { pooling</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> "</span><span style="color:#F1FA8C">mean</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">, normalize</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> true</span><span style="color:#F8F8F2"> });</span></span>
-<span class="line"><span style="color:#F8F8F2">  })</span></span>
-<span class="line"><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="language-typescript" data-language="typescript"><code is:raw="" class="language-typescript"><span class="token keyword">import</span> <span class="token punctuation">{</span> pipeline <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@xenova/transformers"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> embedder <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">pipeline</span><span class="token punctuation">(</span>
+  <span class="token string">"feature-extraction"</span><span class="token punctuation">,</span>
+  <span class="token string">"Xenova/paraphrase-multilingual-MiniLM-L12-v2"</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> embeddings <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>
+  contents<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span>content<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">await</span> <span class="token function">embedder</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> <span class="token punctuation">{</span> pooling<span class="token operator">:</span> <span class="token string">"mean"</span><span class="token punctuation">,</span> normalize<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>コサイン類似度でスコアを出し、高い順に4件まで抽出してJSONに保存。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#6272A4">// 類似度関数</span></span>
-<span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> cosine</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">a</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> any</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">b</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> any</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">  let</span><span style="color:#F8F8F2"> dot </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">    normA </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">    normB </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">  for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">; i </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2"> a.length; i</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#F8F8F2">    dot </span><span style="color:#FF79C6">+=</span><span style="color:#F8F8F2"> a[i] </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> b[i];</span></span>
-<span class="line"><span style="color:#F8F8F2">    normA </span><span style="color:#FF79C6">+=</span><span style="color:#F8F8F2"> a[i] </span><span style="color:#FF79C6">**</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">    normB </span><span style="color:#FF79C6">+=</span><span style="color:#F8F8F2"> b[i] </span><span style="color:#FF79C6">**</span><span style="color:#BD93F9"> 2</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#FF79C6">  return</span><span style="color:#F8F8F2"> dot </span><span style="color:#FF79C6">/</span><span style="color:#F8F8F2"> (Math.</span><span style="color:#50FA7B">sqrt</span><span style="color:#F8F8F2">(normA) </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> Math.</span><span style="color:#50FA7B">sqrt</span><span style="color:#F8F8F2">(normB));</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6272A4">// 関連記事計算</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> related</span><span style="color:#FF79C6">:</span><span style="color:#8BE9FD;font-style:italic"> any</span><span style="color:#FF79C6"> =</span><span style="color:#F8F8F2"> {};</span></span>
-<span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">; i </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2"> docs.length; i</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#F8F8F2">  related[docs[i].id] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> docs</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">map</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">_</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">j</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">      return</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">        ...</span><span style="color:#F8F8F2">docs[j],</span></span>
-<span class="line"><span style="color:#F8F8F2">        score</span><span style="color:#FF79C6">:</span><span style="color:#50FA7B"> cosine</span><span style="color:#F8F8F2">(embeddings[i].data, embeddings[j].data),</span></span>
-<span class="line"><span style="color:#F8F8F2">      };</span></span>
-<span class="line"><span style="color:#F8F8F2">    })</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">filter</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">s</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> s.id </span><span style="color:#FF79C6">!==</span><span style="color:#F8F8F2"> docs[i].id)</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">sort</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">a</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">b</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> b.score </span><span style="color:#FF79C6">-</span><span style="color:#F8F8F2"> a.score)</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">slice</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F8F8F2">fs.</span><span style="color:#50FA7B">writeFileSync</span><span style="color:#F8F8F2">(outputPath, </span><span style="color:#BD93F9">JSON</span><span style="color:#F8F8F2">.</span><span style="color:#50FA7B">stringify</span><span style="color:#F8F8F2">(related, </span><span style="color:#BD93F9">null</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2</span><span style="color:#F8F8F2">), </span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">utf-8</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="language-typescript" data-language="typescript"><code is:raw="" class="language-typescript"><span class="token comment">// 類似度関数</span>
+<span class="token keyword">function</span> <span class="token function">cosine</span><span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">,</span> b<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> dot <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    normA <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    normB <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> a<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    dot <span class="token operator">+=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    normA <span class="token operator">+=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    normB <span class="token operator">+=</span> b<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> dot <span class="token operator">/</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>normA<span class="token punctuation">)</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>normB<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 関連記事計算</span>
+<span class="token keyword">const</span> related<span class="token operator">:</span> <span class="token builtin">any</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> docs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  related<span class="token punctuation">[</span>docs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> docs
+    <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_<span class="token punctuation">,</span> j<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token operator">...</span>docs<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>
+        score<span class="token operator">:</span> <span class="token function">cosine</span><span class="token punctuation">(</span>embeddings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>data<span class="token punctuation">,</span> embeddings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">=></span> s<span class="token punctuation">.</span>id <span class="token operator">!==</span> docs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=></span> b<span class="token punctuation">.</span>score <span class="token operator">-</span> a<span class="token punctuation">.</span>score<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+fs<span class="token punctuation">.</span><span class="token function">writeFileSync</span><span class="token punctuation">(</span>outputPath<span class="token punctuation">,</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>related<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>このJSONをAstro側で読み込んで表示する、という割とシンプルな感じです。</p>
 <p>ベクトルDBを使わなくても、JSON保存で十分機能するので、このくらいのブログ規模なら手軽でちょうどいい感じ。ただ、全記事のベクトル化に体感で20〜30秒ほどかかっており、そこそこ重めの処理にはなってます。</p>
 <p>ちなみに実装のほとんどはChatGPT任せで、実装よりもむしろスタイル調整の方に時間を使ってる感じがある。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>

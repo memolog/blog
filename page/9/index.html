@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -627,7 +904,7 @@
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2018/life-project.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2018/redirect-to-my-old-blog.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2018/inline-svg-as-an-image-placeholder.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2018/image-manipulation-with-primitive.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2018/display-featured-image.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2018/import-from-old-blog.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2018/new-year-resolutions.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2017/html-elements.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2017/hello-hexo.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2017/hello-gatsby.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-18T08:37:06.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/life-project.html">本：ライフプロジェクト</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #948184;"> <div style="background-color: #948184"> <img src="/assets/images/freestocks-org-73878/freestocks-org-73878.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/AOod3VqkEfQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">freestocks.org</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">イギリスで継続して行われている大規模コホート研究プロジェクトについての物語。</div> <div class="read-more"> <a href="/2018/life-project.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-17T06:08:02.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/redirect-to-my-old-blog.html">元のブログからリダイレクトをかける</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e6e1d8;"> <img src="/assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium.webp" srcset="/assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium.webp, /assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="1478" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">このブログは今はGitHub Pages上で公開しているが、AWS上でドメイン取得して公開しようかな、でもお金かかるしどうしようかなと微妙に悩んでいた。AWSにしても個人ブログのトラフィックなんて程度が知れているので、たいした金額になることはないとは思いつつも、いつ課金されるかわからないから状況をモニタリングしなければならないというのが圧倒的に面倒臭い... ただその日のメモを残したいだけだというのに。</div> <div class="read-more"> <a href="/2018/redirect-to-my-old-blog.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-16T01:39:56.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/inline-svg-as-an-image-placeholder.html">画像のプレースホルダーとしてインラインSVGを使う</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a39889;"> <div style="background-color: #a39889"> <img src="/assets/images/kelly-sikkema-511604/kelly-sikkema-511604.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/N3o-leQyFsI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kelly Sikkema</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">画像が読み込まれた後にレイアウトが動かないように、画像のプレースホルダーを入れた。最初はpng画像をインラインで挿入していたのだけど、svgの方が画像のサイズをみてその場その場で適切なものを作成しやすかったので、svgを使うようにしてみた。処理自体はNode.js（Hexoの処理の中）で行っている。現在のコンテンツの最大幅は750pxなので、それを基準に縦横比が合うようにheightを計算している。</div> <div class="read-more"> <a href="/2018/inline-svg-as-an-image-placeholder.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-14T06:44:06.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/image-manipulation-with-primitive.html">Primitiveを使って画像を変換する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #2c462e;"> <div style="background-color: #2c462e"> <img src="/assets/images/rommanas-kongmeng-422586/rommanas-kongmeng-422586.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Rommanas Kongmeng</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Featured Image とか言いながら、ただ写真を置くだけなのも何だなあとか思い、Primitiveを使用して、上に表示されている画像を変換してみた。Primitive は画像を幾何学的な Primitive（線とか丸、三角、四角）の集まりに変換してくれる。試行錯誤した結果を貼り付けていく。画像の下に変換するときに使用したオプションを添付してある。</div> <div class="read-more"> <a href="/2018/image-manipulation-with-primitive.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-08T11:07:38.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/display-featured-image.html">Featured Image を設置する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #ccc4b5;"> <img src="/assets/images/display-featured-image/display-featured-image_medium.webp" srcset="/assets/images/display-featured-image/display-featured-image_medium.webp, /assets/images/display-featured-image/display-featured-image_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。</div> <div class="read-more"> <a href="/2018/display-featured-image.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-04T03:36:06.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/import-from-old-blog.html">古い記事をインポートする</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a7c1db;"> <div style="background-color: #a7c1db"> <img src="/assets/images/jordan-sanchez-111052/jordan-sanchez-111052.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/71hQxE-Sfvg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jordan Sanchez</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">ブログの古い記事なんてほとんど顧みることはない。ほとんどの記事が「以前は役に立ったかもしれないけど、すでに役には立たない」コードの端切れのようなもので古い記事なんてそのまま放置していつの日かインターネットから姿を消すくらいでもいいかなあとか思っていた。  のだが、数は少ないけどまだ誰かの役に立つかもしれないものもたぶんあるだろうし、過去の時点で自分が何を書いていたのか振り返ることもあるかもしれない（今まで一度もなかったけど）と思い直し、頑張ってインポートをしてみることにした。</div> <div class="read-more"> <a href="/2018/import-from-old-blog.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-03T07:34:59.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/new-year-resolutions.html">新年の抱負を考える</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #291e30;"> <div style="background-color: #291e30"> <img src="/assets/images/nordwood-themes-467442/nordwood-themes-467442.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/zNS6oFkwlG4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">NordWood Themes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今年は何をするかについて簡単なメモをとっておこうと思う。全部はできないとは思うけど、いくつかは達成したい。  * learn Python: Learn Python (2.7) / [Introduction to Computer Science</div> <div class="read-more"> <a href="/2018/new-year-resolutions.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-31T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2017/html-elements.html">HTMLの構造を再確認する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #3a3b3c;"> <div style="background-color: #3a3b3c"> <img src="/assets/images/ilya-pavlov-87438/ilya-pavlov-87438.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/OqtafYT5kTw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Ilya Pavlov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">久しく HTML 要素について振り返っていなかったので、このタイミングで一度主要な構造についての HTML 要素について振り返ってみようと思う。（TL;DR:適切な見出し要素が大事。あとはおまけ）</div> <div class="read-more"> <a href="/2017/html-elements.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-30T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2017/hello-hexo.html">Hello Hexo</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #b5b2aa;"> <img src="/assets/images/hello-hexo/hello-hexo_medium.webp" srcset="/assets/images/hello-hexo/hello-hexo_medium.webp, /assets/images/hello-hexo/hello-hexo_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。</div> <div class="read-more"> <a href="/2017/hello-hexo.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-29T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2017/hello-gatsby.html">Gatsbyでスタティックサイトを作成する</a> </h2>  </header> <div class="content">更新しなくなったブログをリニューアルしようと思って、Gatsby で構築しようと思い立って、今作成してみている。  Gatsbyは「Blazing-fast static site generator for React」ということで、Reactベースのスタティックサイトジェネレータらしいのだけど、実のところまだよくわかっていない。Getting Started のドキュメントをみて、gatsby-starter-blog のstarterをGithub pages で公開しているだけなのだ。</div> <div class="read-more"> <a href="/2017/hello-gatsby.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/8/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/7/"> 7 </a><a class="page-number " href="/page/8/"> 8 </a><span class="page-number current">9</span><a class="page-number " href="/page/10/"> 10 </a><a class="page-number " href="/page/11/"> 11 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/10/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2018/book-intro-blockchain.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2018/life-project.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2018/redirect-to-my-old-blog.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2018/inline-svg-as-an-image-placeholder.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2018/image-manipulation-with-primitive.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2018/display-featured-image.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2018/import-from-old-blog.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2018/new-year-resolutions.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2017/html-elements.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2017/hello-hexo.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-25T08:53:27.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/book-intro-blockchain.html">「ブロックチェーン技術入門」を読んだ</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c0cfda;"> <div style="background-color: #c0cfda"> <img src="/assets/images/william-bout-264826/william-bout-264826.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/RkJF2BMrLJc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">William Bout</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">ブロックチェーン技術入門という本を読んだ。ビットコイン・ブロックチェーン関連の書籍は最近多く出版されているが、ブロックチェーン技術そのものにフォーカスした本は珍しい。160ページという文量で簡潔に「ブロックチェーン技術とは何か」を知ることができる良書である。  ブロックチェーンの特徴は「データが正当なものかどうかをネットワーク参加者の誰でも検証できる」というところ。改ざんされたトランザクションが送られてきても棄却できるし、ブロックの改ざんも第三者の検証をクリアするのがとても難しく不可能。それがブロックチェーンに登録されたデータの真正性を保証している。データの真正性が保証されると、不動産の登記のような「だれが資産を所有しているか」を保証するシステムや、トレーサビリティの確保するシステムなどにも応用できる。</div> <div class="read-more"> <a href="/2018/book-intro-blockchain.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-18T08:37:06.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/life-project.html">本：ライフプロジェクト</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #948184;"> <div style="background-color: #948184"> <img src="/assets/images/freestocks-org-73878/freestocks-org-73878.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/AOod3VqkEfQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">freestocks.org</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">イギリスで継続して行われている大規模コホート研究プロジェクトについての物語。</div> <div class="read-more"> <a href="/2018/life-project.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-17T06:08:02.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/redirect-to-my-old-blog.html">元のブログからリダイレクトをかける</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e6e1d8;"> <img src="/assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium.webp" srcset="/assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium.webp, /assets/images/redirect-to-my-old-blog/redirect-to-my-old-blog_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="1478" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">このブログは今はGitHub Pages上で公開しているが、AWS上でドメイン取得して公開しようかな、でもお金かかるしどうしようかなと微妙に悩んでいた。AWSにしても個人ブログのトラフィックなんて程度が知れているので、たいした金額になることはないとは思いつつも、いつ課金されるかわからないから状況をモニタリングしなければならないというのが圧倒的に面倒臭い... ただその日のメモを残したいだけだというのに。</div> <div class="read-more"> <a href="/2018/redirect-to-my-old-blog.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-16T01:39:56.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/inline-svg-as-an-image-placeholder.html">画像のプレースホルダーとしてインラインSVGを使う</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a39889;"> <div style="background-color: #a39889"> <img src="/assets/images/kelly-sikkema-511604/kelly-sikkema-511604.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/N3o-leQyFsI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Kelly Sikkema</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">画像が読み込まれた後にレイアウトが動かないように、画像のプレースホルダーを入れた。最初はpng画像をインラインで挿入していたのだけど、svgの方が画像のサイズをみてその場その場で適切なものを作成しやすかったので、svgを使うようにしてみた。処理自体はNode.js（Hexoの処理の中）で行っている。現在のコンテンツの最大幅は750pxなので、それを基準に縦横比が合うようにheightを計算している。</div> <div class="read-more"> <a href="/2018/inline-svg-as-an-image-placeholder.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-14T06:44:06.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/image-manipulation-with-primitive.html">Primitiveを使って画像を変換する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #2c462e;"> <div style="background-color: #2c462e"> <img src="/assets/images/rommanas-kongmeng-422586/rommanas-kongmeng-422586.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Rommanas Kongmeng</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Featured Image とか言いながら、ただ写真を置くだけなのも何だなあとか思い、Primitiveを使用して、上に表示されている画像を変換してみた。Primitive は画像を幾何学的な Primitive（線とか丸、三角、四角）の集まりに変換してくれる。試行錯誤した結果を貼り付けていく。画像の下に変換するときに使用したオプションを添付してある。</div> <div class="read-more"> <a href="/2018/image-manipulation-with-primitive.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-08T11:07:38.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/display-featured-image.html">Featured Image を設置する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #ccc4b5;"> <img src="/assets/images/display-featured-image/display-featured-image_medium.webp" srcset="/assets/images/display-featured-image/display-featured-image_medium.webp, /assets/images/display-featured-image/display-featured-image_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。</div> <div class="read-more"> <a href="/2018/display-featured-image.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-04T03:36:06.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/import-from-old-blog.html">古い記事をインポートする</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a7c1db;"> <div style="background-color: #a7c1db"> <img src="/assets/images/jordan-sanchez-111052/jordan-sanchez-111052.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/71hQxE-Sfvg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jordan Sanchez</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">ブログの古い記事なんてほとんど顧みることはない。ほとんどの記事が「以前は役に立ったかもしれないけど、すでに役には立たない」コードの端切れのようなもので古い記事なんてそのまま放置していつの日かインターネットから姿を消すくらいでもいいかなあとか思っていた。  のだが、数は少ないけどまだ誰かの役に立つかもしれないものもたぶんあるだろうし、過去の時点で自分が何を書いていたのか振り返ることもあるかもしれない（今まで一度もなかったけど）と思い直し、頑張ってインポートをしてみることにした。</div> <div class="read-more"> <a href="/2018/import-from-old-blog.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-03T07:34:59.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/new-year-resolutions.html">新年の抱負を考える</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #291e30;"> <div style="background-color: #291e30"> <img src="/assets/images/nordwood-themes-467442/nordwood-themes-467442.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/zNS6oFkwlG4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">NordWood Themes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今年は何をするかについて簡単なメモをとっておこうと思う。全部はできないとは思うけど、いくつかは達成したい。  * learn Python: Learn Python (2.7) / [Introduction to Computer Science</div> <div class="read-more"> <a href="/2018/new-year-resolutions.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-31T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2017/html-elements.html">HTMLの構造を再確認する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #3a3b3c;"> <div style="background-color: #3a3b3c"> <img src="/assets/images/ilya-pavlov-87438/ilya-pavlov-87438.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/OqtafYT5kTw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Ilya Pavlov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">久しく HTML 要素について振り返っていなかったので、このタイミングで一度主要な構造についての HTML 要素について振り返ってみようと思う。（TL;DR:適切な見出し要素が大事。あとはおまけ）</div> <div class="read-more"> <a href="/2017/html-elements.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-30T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2017/hello-hexo.html">Hello Hexo</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #b5b2aa;"> <img src="/assets/images/hello-hexo/hello-hexo_medium.webp" srcset="/assets/images/hello-hexo/hello-hexo_medium.webp, /assets/images/hello-hexo/hello-hexo_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。</div> <div class="read-more"> <a href="/2017/hello-hexo.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/8/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/7/"> 7 </a><a class="page-number " href="/page/8/"> 8 </a><span class="page-number current">9</span><a class="page-number " href="/page/10/"> 10 </a><a class="page-number " href="/page/11/"> 11 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/10/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

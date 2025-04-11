@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -632,109 +909,114 @@
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2018-01-08T11:07:38.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月8日</span> </time> </div> <h2 class="header__title"><span>Featured Image を設置する</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #ccc4b5;"> <img src="/assets/images/display-featured-image/display-featured-image_medium.webp" srcset="/assets/images/display-featured-image/display-featured-image_medium.webp, /assets/images/display-featured-image/display-featured-image_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div id="article-content" class="content">  <p>記事のタイトル下によくある Featured Image を設置してみようと思い立って、<a href="https://unsplash.com">Unsplash</a>から良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。</p>
 <p>でも大きな画像をそのまま使うのはファイルサイズ的に大きすぎるので、リサイズしたい。できれば各端末に適したサイズにしておきたい… と、なんかいろいろ思ってしまい、最終的に Unsplash のサイトからダウンロードしたデータを個人的に使いたい大きさにリサイズするサービスを用意してみた。<a href="https://github.com/memolog/convert-a-image-to-responsive-images">convert-a-image-to-responsive-images</a>に公開している（ES2015 をターゲットにしているので、IE11 では動かない）。ただの思いつきに思ったより時間をかけてしまった。最初は AWS Lambda で画像をリサイズするつもりだったが、リサイズに使っている<a href="https://github.com/lovell/sharp">Sharp</a>の扱いが少し難しく、メモリ容量のところでエラーになってしまった（これを解決する方法はありそうなのだが、やってる時間がなくなったので、しばし保留）。いずれにせよ最終的には WEB サービスとして公開したいなと思っている。週末に時間があれば。</p>
 <p>サーバーの実装は簡単で、<a href="https://github.com/mscdex/busboy">busboy</a>でファイルを受け取ったあとに、指定したサイズで sharp を実行するだけである。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> resizeImage</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">buffer</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">size</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">name</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">ext</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">scale</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">  return</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#8BE9FD;font-style:italic"> Promise</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">fulfill</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">reject</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#F8F8F2">    scale </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> scale </span><span style="color:#FF79C6">||</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">    ext </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> ext.</span><span style="color:#50FA7B">replace</span><span style="color:#F8F8F2">(</span><span style="color:#FF5555">/</span><span style="color:#FF79C6">^</span><span style="color:#F1FA8C">\.</span><span style="color:#FF5555">/</span><span style="color:#F8F8F2">, </span><span style="color:#E9F284">""</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> scaleStr </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> scale </span><span style="color:#FF79C6">===</span><span style="color:#BD93F9"> 1</span><span style="color:#FF79C6"> ?</span><span style="color:#E9F284"> ""</span><span style="color:#FF79C6"> :</span><span style="color:#F1FA8C"> `@</span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">scale</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">x`</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> relativePath </span><span style="color:#FF79C6">=</span><span style="color:#F1FA8C"> `images/</span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">name</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">/</span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">name</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">_</span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">size</span><span style="color:#FF79C6">}${</span><span style="color:#F8F8F2">scaleStr</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">.</span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">ext</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">`</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> filePath </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> path.</span><span style="color:#50FA7B">resolve</span><span style="color:#F8F8F2">(</span></span>
-<span class="line"><span style="color:#F8F8F2">      __dirname,</span></span>
-<span class="line"><span style="color:#F1FA8C">      `../static/public/</span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">relativePath</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">`</span></span>
-<span class="line"><span style="color:#F8F8F2">    );</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B">    sharp</span><span style="color:#F8F8F2">(buffer)</span></span>
-<span class="line"><span style="color:#F8F8F2">      .</span><span style="color:#50FA7B">resize</span><span style="color:#F8F8F2">(size </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> scale)</span></span>
-<span class="line"><span style="color:#F8F8F2">      .</span><span style="color:#50FA7B">toFile</span><span style="color:#F8F8F2">(filePath, (</span><span style="color:#FFB86C;font-style:italic">err</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">        if</span><span style="color:#F8F8F2"> (err) {</span></span>
-<span class="line"><span style="color:#50FA7B">          reject</span><span style="color:#F8F8F2">(err);</span></span>
-<span class="line"><span style="color:#FF79C6">          return</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">        }</span></span>
-<span class="line"><span style="color:#50FA7B">        fulfill</span><span style="color:#F8F8F2">(relativePath);</span></span>
-<span class="line"><span style="color:#F8F8F2">      });</span></span>
-<span class="line"><span style="color:#F8F8F2">  });</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">function</span> <span class="token function">resizeImage</span><span class="token punctuation">(</span><span class="token parameter">buffer<span class="token punctuation">,</span> size<span class="token punctuation">,</span> name<span class="token punctuation">,</span> ext<span class="token punctuation">,</span> scale</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">fulfill<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    scale <span class="token operator">=</span> scale <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    ext <span class="token operator">=</span> ext<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^\.</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> scaleStr <span class="token operator">=</span> scale <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">""</span> <span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">@</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>scale<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">x</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> relativePath <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">images/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>size<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>scaleStr<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>ext<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> filePath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>
+      __dirname<span class="token punctuation">,</span>
+      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">../static/public/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>relativePath<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">sharp</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>size <span class="token operator">*</span> scale<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">toFile</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">fulfill</span><span class="token punctuation">(</span>relativePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>フロント側も簡単で、基本的には Fetch API を使ってリクエストを送っているだけである。レンダリングには<a href="https://preactjs.com/">preact</a>を使ってみた。preact/TypeScript/SCSS などを Webpack でバンドルするのが一番面倒くさいは面倒くさい（最初だけだけど）。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#50FA7B">submitHandler</span><span style="color:#F8F8F2">(event){</span></span>
-<span class="line"><span style="color:#F8F8F2">		event.</span><span style="color:#50FA7B">preventDefault</span><span style="color:#F8F8F2">();</span></span>
-<span class="line"><span style="color:#F8F8F2">		event.</span><span style="color:#50FA7B">stopPropagation</span><span style="color:#F8F8F2">();</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> fileElement </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> document.</span><span style="color:#50FA7B">getElementById</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">upload-image</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">    if</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">!</span><span style="color:#F8F8F2">(fileElement </span><span style="color:#FF79C6">instanceof</span><span style="color:#8BE9FD;font-style:italic"> HTMLInputElement</span><span style="color:#F8F8F2">)) {</span></span>
-<span class="line"><span style="color:#FF79C6">      return</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> uploadFile </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> fileElement.files[</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">];</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> formData </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> FormData</span><span style="color:#F8F8F2">();</span></span>
-<span class="line"><span style="color:#F8F8F2">    formData.</span><span style="color:#50FA7B">append</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">image</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, uploadFile);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B">    fetch</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">http://localhost:3000/convert</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, {</span></span>
-<span class="line"><span style="color:#F8F8F2">      method</span><span style="color:#FF79C6">:</span><span style="color:#E9F284"> '</span><span style="color:#F1FA8C">POST</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#F8F8F2">      body</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> formData</span></span>
-<span class="line"><span style="color:#F8F8F2">    })</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">then</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">resp</span><span style="color:#F8F8F2">)</span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2">{</span></span>
-<span class="line"><span style="color:#FF79C6">      return</span><span style="color:#F8F8F2"> resp.</span><span style="color:#50FA7B">json</span><span style="color:#F8F8F2">();</span></span>
-<span class="line"><span style="color:#F8F8F2">    })</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">then</span><span style="color:#F8F8F2">((</span><span style="color:#FFB86C;font-style:italic">data</span><span style="color:#F8F8F2">) </span><span style="color:#FF79C6">=></span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#BD93F9;font-style:italic">      this</span><span style="color:#F8F8F2">.</span><span style="color:#50FA7B">setState</span><span style="color:#F8F8F2">({</span></span>
-<span class="line"><span style="color:#F8F8F2">        images</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> data </span><span style="color:#FF79C6">&#x26;&#x26;</span><span style="color:#F8F8F2"> data.filePaths </span><span style="color:#FF79C6">||</span><span style="color:#F8F8F2"> []</span></span>
-<span class="line"><span style="color:#F8F8F2">      });</span></span>
-<span class="line"><span style="color:#F8F8F2">    })</span></span>
-<span class="line"><span style="color:#F8F8F2">    .</span><span style="color:#50FA7B">catch</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">err</span><span style="color:#FF79C6"> =></span><span style="color:#F8F8F2"> console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(err));</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token function">submitHandler</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		event<span class="token punctuation">.</span><span class="token function">stopPropagation</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> fileElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'upload-image'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>fileElement <span class="token keyword">instanceof</span> <span class="token class-name">HTMLInputElement</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">const</span> uploadFile <span class="token operator">=</span> fileElement<span class="token punctuation">.</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FormData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    formData<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">'image'</span><span class="token punctuation">,</span> uploadFile<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'http://localhost:3000/convert'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">'POST'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">body</span><span class="token operator">:</span> formData
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resp</span><span class="token punctuation">)</span><span class="token operator">=></span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> resp<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">images</span><span class="token operator">:</span> data <span class="token operator">&#x26;&#x26;</span> data<span class="token punctuation">.</span>filePaths <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre>
 <p>Hexo のテンプレートの方は、<a href="https://hexo.io/docs/front-matter.html">Front-matter | Hexo</a>の部分にイメージ画像に関する情報を入れて、それをテンプレートに追加する。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="yaml"><code><span class="line"><span style="color:#8BE9FD">title</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> Featured Image を設置する</span></span>
-<span class="line"><span style="color:#8BE9FD">date</span><span style="color:#FF79C6">:</span><span style="color:#FFB86C"> 2018-01-08 11:07:38</span></span>
-<span class="line"><span style="color:#8BE9FD">featured</span><span style="color:#FF79C6">:</span></span>
-<span class="line"><span style="color:#8BE9FD">  image</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> benjamin-voros-365387</span></span>
-<span class="line"><span style="color:#8BE9FD">  author</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> Benjamin Voros</span></span>
-<span class="line"><span style="color:#8BE9FD">  authorLink</span><span style="color:#FF79C6">:</span><span style="color:#F1FA8C"> https://unsplash.com/photos/StFUwkNsvcY?utm_source=unsplash&#x26;utm_medium=referral&#x26;utm_content=creditCopyText</span></span></code></pre>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="html"><code><span class="line"><span style="color:#F8F8F2">&#x3C;</span><span style="color:#FF79C6">div</span><span style="color:#50FA7B;font-style:italic"> class</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">header__feature</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#FF79C6">div</span><span style="color:#50FA7B;font-style:italic"> class</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">featured__image</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">    &#x3C;</span><span style="color:#FF79C6">picture</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">      &#x3C;</span><span style="color:#FF79C6">source</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        data-srcset</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">/blog/assets/images/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>_450.jpg, /blog/assets/images/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>_450@2x.jpg 2x, /blog/assets/images/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>_450@3x.jpg 3x</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        type</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">image/jpeg</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        media</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">(max-width: 450px)</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#F8F8F2">      /></span></span>
-<span class="line"><span style="color:#F8F8F2">      &#x3C;</span><span style="color:#FF79C6">source</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        data-srcset</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">/blog/assets/images/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>_750.webp, /blog/assets/images/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>_750@2x.webp 2x</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        type</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">image/webp</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#F8F8F2">      /></span></span>
-<span class="line"><span style="color:#F8F8F2">      &#x3C;</span><span style="color:#FF79C6">source</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        data-srcset</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">/blog/assets/images/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>_750.jpeg, /blog/assets/images/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>_750@2x.jpeg 2x</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        type</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">image/jpeg</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#F8F8F2">      /></span></span>
-<span class="line"><span style="color:#F8F8F2">      &#x3C;</span><span style="color:#FF79C6">img</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        src</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">data:image/png;base64,iVBORw0KGgoAAAANS...VORK5CYII=</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        data-src</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">/blog/assets/images/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>/</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.image %>_750.jpg</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">        class</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">lazyload blur-up</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#F8F8F2">      /></span></span>
-<span class="line"><span style="color:#F8F8F2">    &#x3C;/</span><span style="color:#FF79C6">picture</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">  &#x3C;/</span><span style="color:#FF79C6">div</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">  &#x3C;</span><span style="color:#FF79C6">div</span><span style="color:#50FA7B;font-style:italic"> class</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">featured__credit</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">    Photo by</span></span>
-<span class="line"><span style="color:#F8F8F2">    &#x3C;</span><span style="color:#FF79C6">a</span><span style="color:#50FA7B;font-style:italic"> href</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F1FA8C">%= featured.authorLink %></span><span style="color:#E9F284">"</span><span style="color:#50FA7B;font-style:italic"> target</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">_blank</span><span style="color:#E9F284">"</span><span style="color:#50FA7B;font-style:italic"> rel</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">noopener</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#F8F8F2">      ></span><span style="color:#FF5555;font-style:italic;text-decoration:underline">&#x3C;</span><span style="color:#F8F8F2">%= featured.author %>&#x3C;/</span><span style="color:#FF79C6">a</span></span>
-<span class="line"><span style="color:#F8F8F2">    ></span></span>
-<span class="line"><span style="color:#F8F8F2">    on</span></span>
-<span class="line"><span style="color:#F8F8F2">    &#x3C;</span><span style="color:#FF79C6">a</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">      href</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">https://unsplash.com/?utm_source=unsplash&#x26;utm_medium=referral&#x26;utm_content=creditCopyText</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">      target</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">_blank</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">      rel</span><span style="color:#FF79C6">=</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">noopener</span><span style="color:#E9F284">"</span></span>
-<span class="line"><span style="color:#F8F8F2">      >Unsplash&#x3C;/</span><span style="color:#FF79C6">a</span></span>
-<span class="line"><span style="color:#F8F8F2">    ></span></span>
-<span class="line"><span style="color:#F8F8F2">  &#x3C;/</span><span style="color:#FF79C6">div</span><span style="color:#F8F8F2">></span></span>
-<span class="line"><span style="color:#F8F8F2">&#x3C;/</span><span style="color:#FF79C6">div</span><span style="color:#F8F8F2">></span></span></code></pre>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="css"><code><span class="line"><span style="color:#50FA7B;font-style:italic">.lazyload</span><span style="color:#F8F8F2">,</span></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">.lazyloading</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#8BE9FD">  opacity</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B;font-style:italic">.lazyloaded</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#8BE9FD">  opacity</span><span style="color:#FF79C6">:</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#8BE9FD">  transition</span><span style="color:#FF79C6">:</span><span style="color:#F8F8F2"> opacity </span><span style="color:#BD93F9">2</span><span style="color:#FF79C6">s</span><span style="color:#BD93F9"> 0.3</span><span style="color:#FF79C6">s</span><span style="color:#8BE9FD"> cubic-bezier</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">0.5</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<pre class="language-yaml" data-language="yaml"><code is:raw="" class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> Featured Image を設置する
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2018-01-08 11:07:38</span>
+<span class="token key atrule">featured</span><span class="token punctuation">:</span>
+  <span class="token key atrule">image</span><span class="token punctuation">:</span> benjamin<span class="token punctuation">-</span>voros<span class="token punctuation">-</span><span class="token number">365387</span>
+  <span class="token key atrule">author</span><span class="token punctuation">:</span> Benjamin Voros
+  <span class="token key atrule">authorLink</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//unsplash.com/photos/StFUwkNsvcY<span class="token punctuation">?</span>utm_source=unsplash<span class="token important">&#x26;utm_medium=referral&#x26;utm_content=creditCopyText</span>
+</code></pre>
+<pre class="language-html" data-language="html"><code is:raw="" class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>header__feature<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>featured__image<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>picture</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>source</span>
+        <span class="token attr-name">data-srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/blog/assets/images/&#x3C;%= featured.image %>/&#x3C;%= featured.image %>_450.jpg, /blog/assets/images/&#x3C;%= featured.image %>/&#x3C;%= featured.image %>_450@2x.jpg 2x, /blog/assets/images/&#x3C;%= featured.image %>/&#x3C;%= featured.image %>_450@3x.jpg 3x<span class="token punctuation">"</span></span>
+        <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/jpeg<span class="token punctuation">"</span></span>
+        <span class="token attr-name">media</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>(max-width: 450px)<span class="token punctuation">"</span></span>
+      <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>source</span>
+        <span class="token attr-name">data-srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/blog/assets/images/&#x3C;%= featured.image %>/&#x3C;%= featured.image %>_750.webp, /blog/assets/images/&#x3C;%= featured.image %>/&#x3C;%= featured.image %>_750@2x.webp 2x<span class="token punctuation">"</span></span>
+        <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/webp<span class="token punctuation">"</span></span>
+      <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>source</span>
+        <span class="token attr-name">data-srcset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/blog/assets/images/&#x3C;%= featured.image %>/&#x3C;%= featured.image %>_750.jpeg, /blog/assets/images/&#x3C;%= featured.image %>/&#x3C;%= featured.image %>_750@2x.jpeg 2x<span class="token punctuation">"</span></span>
+        <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/jpeg<span class="token punctuation">"</span></span>
+      <span class="token punctuation">/></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>img</span>
+        <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>data:image/png;base64,iVBORw0KGgoAAAANS...VORK5CYII=<span class="token punctuation">"</span></span>
+        <span class="token attr-name">data-src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/blog/assets/images/&#x3C;%= featured.image %>/&#x3C;%= featured.image %>_750.jpg<span class="token punctuation">"</span></span>
+        <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lazyload blur-up<span class="token punctuation">"</span></span>
+      <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>picture</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>featured__credit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    Photo by
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&#x3C;%= featured.authorLink %><span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>noopener<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>&#x3C;%= featured.author %><span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>a</span>
+    <span class="token punctuation">></span></span>
+    on
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;</span>a</span>
+      <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://unsplash.com/?utm_source=unsplash&#x26;utm_medium=referral&#x26;utm_content=creditCopyText<span class="token punctuation">"</span></span>
+      <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span>
+      <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>noopener<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span>Unsplash<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>a</span>
+    <span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class="language-css" data-language="css"><code is:raw="" class="language-css"><span class="token selector">.lazyload,
+.lazyloading</span> <span class="token punctuation">{</span>
+  <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.lazyloaded</span> <span class="token punctuation">{</span>
+  <span class="token property">opacity</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> opacity 2s 0.3s <span class="token function">cubic-bezier</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0.5<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>最初のロードで画像は表示したくないので<a href="https://github.com/aFarkas/lazysizes">lazysizes</a>で画像を遅延読み込みしている。</p>
 <p>あと CloudFormation で作成した画像を配信するためのスタックを用意しているけど、、書いてる時間がなくなったのでまた別の機会に書く。</p>
 <p>まだいろいろ課題はあって…</p>
@@ -749,4 +1031,4 @@
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-04T07:00:11.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/bubble-sort-in-javascript.html">Bubble Sort in JavaScript</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #26657a;"> <div style="background-color: #26657a"> <img src="/assets/images/jong-marshes-458354-unsplash/jong-marshes-458354-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="738"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/79mNMAvSORg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jong Marshes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Array.prototype.sort についてとTypedArray.prototype.sort についてで書いたようにビルトインされているsortメソッドが効率的なソートを実行できるように実装されているので、JavaScript上で自前のソートを実装する意味はあまりないのだけど、試しにバブルソートをJavaScript上で作ってみた。</div> <div class="read-more"> <a href="/2018/bubble-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-04T15:46:10.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/yslow_1_minimize_http_requests.html">YSLOW 勉強：1：Minimize HTTP Requests</a> </h3>  </header> <div class="content">*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。</div> <div class="read-more"> <a href="/2007/08/yslow_1_minimize_http_requests.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-07T05:47:14.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/insertion-sort-in-javascript.html">Insertion Sort in JavaScript</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #095367;"> <div style="background-color: #095367"> <img src="/assets/images/mingwei-dong-651103-unsplash/mingwei-dong-651103-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="550"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">mingwei dong</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Selection Sort in JavaScriptの記事から引き続き。内容は挿入ソートからの抜粋なので詳細はそちらを参照。</div> <div class="read-more"> <a href="/2018/insertion-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-18T12:36:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/06/jquery_masonry.html">縦方向のfloatを実現するjQuery Masonry</a> </h3>  </header> <div class="content">いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。</div> <div class="read-more"> <a href="/2012/06/jquery_masonry.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-04T07:00:11.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/bubble-sort-in-javascript.html">Bubble Sort in JavaScript</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #26657a;"> <div style="background-color: #26657a"> <img src="/assets/images/jong-marshes-458354-unsplash/jong-marshes-458354-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="738"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/79mNMAvSORg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jong Marshes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Array.prototype.sort についてとTypedArray.prototype.sort についてで書いたようにビルトインされているsortメソッドが効率的なソートを実行できるように実装されているので、JavaScript上で自前のソートを実装する意味はあまりないのだけど、試しにバブルソートをJavaScript上で作ってみた。</div> <div class="read-more"> <a href="/2018/bubble-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-04T15:46:10.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月5日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/yslow_1_minimize_http_requests.html">YSLOW 勉強: 1: Minimize HTTP Requests</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cdc8bc;"> <img src="/assets/images/yslow_1_minimize_http_requests/yslow_1_minimize_http_requests_medium.webp" srcset="/assets/images/yslow_1_minimize_http_requests/yslow_1_minimize_http_requests_medium.webp, /assets/images/yslow_1_minimize_http_requests/yslow_1_minimize_http_requests_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。</div> <div class="read-more"> <a href="/2007/08/yslow_1_minimize_http_requests.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-07T05:47:14.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2018/insertion-sort-in-javascript.html">Insertion Sort in JavaScript</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #095367;"> <div style="background-color: #095367"> <img src="/assets/images/mingwei-dong-651103-unsplash/mingwei-dong-651103-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="550"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">mingwei dong</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Selection Sort in JavaScriptの記事から引き続き。内容は挿入ソートからの抜粋なので詳細はそちらを参照。</div> <div class="read-more"> <a href="/2018/insertion-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-18T12:36:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月18日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/06/jquery_masonry.html">縦方向のfloatを実現するjQuery Masonry</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cbc7ba;"> <img src="/assets/images/jquery_masonry/jquery_masonry_medium.webp" srcset="/assets/images/jquery_masonry/jquery_masonry_medium.webp, /assets/images/jquery_masonry/jquery_masonry_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div>  </div> </header> <div class="content">いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。</div> <div class="read-more"> <a href="/2012/06/jquery_masonry.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

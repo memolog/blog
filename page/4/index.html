@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -627,7 +904,7 @@
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2020/flex-items.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2020/flex-containers.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2020/flex-layout-box-model-and-terminology.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2020/css-flexible-box-layout-module-introduction.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2020/display-module-glossary.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2020/automatic-box-type-transformations.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2020/display-value-property-3.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2020/display-value-property-2.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2020/display-value-property.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2020/css-flow-layout.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-21T18:17:12.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月22日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-items.html">Flex Items</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #534d2c;"> <div style="background-color: #534d2c"> <img src="/assets/images/vincent-van-zalinge-8bOwZ8ag9UY-unsplash/vincent-van-zalinge-8bOwZ8ag9UY-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@vincentvanzalinge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Vincent van Zalinge</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Flex Containersから引き続き、4. Flex Itemsについて確認していく。</div> <div class="read-more"> <a href="/2020/flex-items.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-20T17:45:51.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-containers.html">Flex Containers</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #476b71;"> <div style="background-color: #476b71"> <img src="/assets/images/wengang-zhai-rNO0c2rlVUo-unsplash/wengang-zhai-rNO0c2rlVUo-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@wgzhai?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Wengang Zhai</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Flex Layout Box Model and Terminologyから引き続き、3. Flex Containers: the flex and inline-flex display valuesについて確認していく。</div> <div class="read-more"> <a href="/2020/flex-containers.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-20T16:21:22.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-layout-box-model-and-terminology.html">Flex Layout Box Model and Terminology</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #102435;"> <div style="background-color: #102435"> <img src="/assets/images/greg-jeanneau-ZUSyn7L6o68-unsplash/greg-jeanneau-ZUSyn7L6o68-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@gregjeanneau?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Greg Jeanneau</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">CSS Flexible Box Layout Module Introductionから引き続き、2. Flex Layout Box Model and Terminologyについて確認する。</div> <div class="read-more"> <a href="/2020/flex-layout-box-model-and-terminology.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-15T21:16:28.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/css-flexible-box-layout-module-introduction.html">CSS Flexible Box Layout Module Introduction</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3b09a;"> <img src="/assets/images/mick-haupt-XMLRK8xpEIs-unsplash/mick-haupt-XMLRK8xpEIs-unsplash_medium.webp" srcset="/assets/images/mick-haupt-XMLRK8xpEIs-unsplash/mick-haupt-XMLRK8xpEIs-unsplash_medium.webp, /assets/images/mick-haupt-XMLRK8xpEIs-unsplash/mick-haupt-XMLRK8xpEIs-unsplash_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="657" alt> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@rocinante_11?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Mick Haupt</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div> </div> </header> <div class="content">前回CSS Display Moduleについて一通り確認したので、今回からはCSS Flexible Box Layout Moduleを確認しようかなと思っている。flex boxはCan I use flexboxによると、IE11以外では問題なく利用できる。IE11についてはいろいろ問題があるそうでPartial Supportという扱いになっている。Flexbugsにいろいろ問題やそれに対する回避策などが書いてある。</div> <div class="read-more"> <a href="/2020/css-flexible-box-layout-module-introduction.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-14T19:02:28.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月15日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/display-module-glossary.html">Display module glossary</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #eae5de;"> <img src="/assets/images/display-module-glossary/display-module-glossary_medium.webp" srcset="/assets/images/display-module-glossary/display-module-glossary_medium.webp, /assets/images/display-module-glossary/display-module-glossary_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="1478" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">今回はDisplay ModuleのAppendix A: Glossaryのところで、今までちゃんと確認しなかったもので、気になるところを簡単に確認しようかなと思う。そのうち見直すかも。</div> <div class="read-more"> <a href="/2020/display-module-glossary.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-10T22:12:24.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/automatic-box-type-transformations.html">Automatic Box Type Transformations</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #948e88;"> <div style="background-color: #948e88"> <img src="/assets/images/jeremy-bishop-t52E8yzCURM-unsplash/jeremy-bishop-t52E8yzCURM-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="550"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jeremy Bishop</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Box Layout Modes: the display propertyの最後の節として 2.7. Automatic Box Type Transformationsについて書かれているので、簡単に確認する。何らかのレイアウト効果の影響でboxのタイプが自動的に変わる場合があるという話。</div> <div class="read-more"> <a href="/2020/automatic-box-type-transformations.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-09T18:35:47.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月10日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/display-value-property-3.html">The display value property (box / legacy)</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #648488;"> <div style="background-color: #648488"> <img src="/assets/images/whoisbenjamin-ApJp5Nk24a0-unsplash/whoisbenjamin-ApJp5Nk24a0-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@whoisbenjamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Whoisbenjamin</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">The display value property (list-item / internal)の続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて、残りのboxとlegacyについて確認していく。</div> <div class="read-more"> <a href="/2020/display-value-property-3.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-08T14:24:22.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/display-value-property-2.html">The display value property (list-item / internal)</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #40413c;"> <div style="background-color: #40413c"> <img src="/assets/images/glen-hooper-8LWtpfhGP4U-unsplash/glen-hooper-8LWtpfhGP4U-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@hoops1972?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Glen Hooper</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">The display value property (outside / inside)の続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて、list-itemとinterについて確認していく。</div> <div class="read-more"> <a href="/2020/display-value-property-2.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-07T17:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/display-value-property.html">The display value property (outside / inside)</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #eab8d6;"> <div style="background-color: #eab8d6"> <img src="/assets/images/pawel-czerwinski-31xVIgIXbws-unsplash/pawel-czerwinski-31xVIgIXbws-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Paweł Czerwiński</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Inner and outer display typesの続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて確認していく。</div> <div class="read-more"> <a href="/2020/display-value-property.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-06T23:11:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/css-flow-layout.html">CSS Flow Layout</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cdce2c;"> <div style="background-color: #cdce2c"> <img src="/assets/images/boris-smokrovic-HWwF4OnXAdM-unsplash/boris-smokrovic-HWwF4OnXAdM-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@borisworkshop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Boris Smokrovic</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今回はflow layoutについて確認しようと思う。</div> <div class="read-more"> <a href="/2020/css-flow-layout.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/3/">Prev</a> <a class="page-number" href="/">1</a> <a class="page-number " href="/page/2/"> 2 </a><a class="page-number " href="/page/3/"> 3 </a><span class="page-number current">4</span><a class="page-number " href="/page/5/"> 5 </a><a class="page-number " href="/page/6/"> 6 </a><a class="page-number " href="/page/7/"> 7 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/5/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2020/absolutely-positioned-flex-children.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2020/flex-items.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2020/flex-containers.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2020/flex-layout-box-model-and-terminology.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2020/css-flexible-box-layout-module-introduction.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2020/display-module-glossary.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2020/automatic-box-type-transformations.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2020/display-value-property-3.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2020/display-value-property-2.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2020/display-value-property.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2020-04-04T15:57:26.000Z"> <span class="calendar-icon">📅</span> <span>2020年4月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/absolutely-positioned-flex-children.html">Absolutely-Positioned Flex Children</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #627e6a;"> <div style="background-color: #627e6a"> <img src="/assets/images/patrick-schneider-8bPJ0vagphw-unsplash/patrick-schneider-8bPJ0vagphw-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@patrick_schneider?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Patrick Schneider</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">前回のFlex Itemsに引き続き、4.1. Absolutely-Positioned Flex Childrenについてを読む。</div> <div class="read-more"> <a href="/2020/absolutely-positioned-flex-children.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-21T18:17:12.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月22日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-items.html">Flex Items</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #534d2c;"> <div style="background-color: #534d2c"> <img src="/assets/images/vincent-van-zalinge-8bOwZ8ag9UY-unsplash/vincent-van-zalinge-8bOwZ8ag9UY-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@vincentvanzalinge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Vincent van Zalinge</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Flex Containersから引き続き、4. Flex Itemsについて確認していく。</div> <div class="read-more"> <a href="/2020/flex-items.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-20T17:45:51.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-containers.html">Flex Containers</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #476b71;"> <div style="background-color: #476b71"> <img src="/assets/images/wengang-zhai-rNO0c2rlVUo-unsplash/wengang-zhai-rNO0c2rlVUo-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@wgzhai?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Wengang Zhai</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Flex Layout Box Model and Terminologyから引き続き、3. Flex Containers: the flex and inline-flex display valuesについて確認していく。</div> <div class="read-more"> <a href="/2020/flex-containers.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-20T16:21:22.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-layout-box-model-and-terminology.html">Flex Layout Box Model and Terminology</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #102435;"> <div style="background-color: #102435"> <img src="/assets/images/greg-jeanneau-ZUSyn7L6o68-unsplash/greg-jeanneau-ZUSyn7L6o68-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@gregjeanneau?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Greg Jeanneau</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">CSS Flexible Box Layout Module Introductionから引き続き、2. Flex Layout Box Model and Terminologyについて確認する。</div> <div class="read-more"> <a href="/2020/flex-layout-box-model-and-terminology.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-15T21:16:28.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/css-flexible-box-layout-module-introduction.html">CSS Flexible Box Layout Module Introduction</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3b09a;"> <img src="/assets/images/mick-haupt-XMLRK8xpEIs-unsplash/mick-haupt-XMLRK8xpEIs-unsplash_medium.webp" srcset="/assets/images/mick-haupt-XMLRK8xpEIs-unsplash/mick-haupt-XMLRK8xpEIs-unsplash_medium.webp, /assets/images/mick-haupt-XMLRK8xpEIs-unsplash/mick-haupt-XMLRK8xpEIs-unsplash_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="657" alt> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@rocinante_11?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Mick Haupt</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div> </div> </header> <div class="content">前回CSS Display Moduleについて一通り確認したので、今回からはCSS Flexible Box Layout Moduleを確認しようかなと思っている。flex boxはCan I use flexboxによると、IE11以外では問題なく利用できる。IE11についてはいろいろ問題があるそうでPartial Supportという扱いになっている。Flexbugsにいろいろ問題やそれに対する回避策などが書いてある。</div> <div class="read-more"> <a href="/2020/css-flexible-box-layout-module-introduction.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-14T19:02:28.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月15日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/display-module-glossary.html">Display module glossary</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #eae5de;"> <img src="/assets/images/display-module-glossary/display-module-glossary_medium.webp" srcset="/assets/images/display-module-glossary/display-module-glossary_medium.webp, /assets/images/display-module-glossary/display-module-glossary_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="1478" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">今回はDisplay ModuleのAppendix A: Glossaryのところで、今までちゃんと確認しなかったもので、気になるところを簡単に確認しようかなと思う。そのうち見直すかも。</div> <div class="read-more"> <a href="/2020/display-module-glossary.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-10T22:12:24.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/automatic-box-type-transformations.html">Automatic Box Type Transformations</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #948e88;"> <div style="background-color: #948e88"> <img src="/assets/images/jeremy-bishop-t52E8yzCURM-unsplash/jeremy-bishop-t52E8yzCURM-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="550"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@jeremybishop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jeremy Bishop</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Box Layout Modes: the display propertyの最後の節として 2.7. Automatic Box Type Transformationsについて書かれているので、簡単に確認する。何らかのレイアウト効果の影響でboxのタイプが自動的に変わる場合があるという話。</div> <div class="read-more"> <a href="/2020/automatic-box-type-transformations.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-09T18:35:47.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月10日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/display-value-property-3.html">The display value property (box / legacy)</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #648488;"> <div style="background-color: #648488"> <img src="/assets/images/whoisbenjamin-ApJp5Nk24a0-unsplash/whoisbenjamin-ApJp5Nk24a0-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@whoisbenjamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Whoisbenjamin</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">The display value property (list-item / internal)の続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて、残りのboxとlegacyについて確認していく。</div> <div class="read-more"> <a href="/2020/display-value-property-3.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-08T14:24:22.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/display-value-property-2.html">The display value property (list-item / internal)</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #40413c;"> <div style="background-color: #40413c"> <img src="/assets/images/glen-hooper-8LWtpfhGP4U-unsplash/glen-hooper-8LWtpfhGP4U-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@hoops1972?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Glen Hooper</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">The display value property (outside / inside)の続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて、list-itemとinterについて確認していく。</div> <div class="read-more"> <a href="/2020/display-value-property-2.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-03-07T17:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年3月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/display-value-property.html">The display value property (outside / inside)</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #eab8d6;"> <div style="background-color: #eab8d6"> <img src="/assets/images/pawel-czerwinski-31xVIgIXbws-unsplash/pawel-czerwinski-31xVIgIXbws-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Paweł Czerwiński</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Inner and outer display typesの続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて確認していく。</div> <div class="read-more"> <a href="/2020/display-value-property.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/3/">Prev</a> <a class="page-number" href="/">1</a> <a class="page-number " href="/page/2/"> 2 </a><a class="page-number " href="/page/3/"> 3 </a><span class="page-number current">4</span><a class="page-number " href="/page/5/"> 5 </a><a class="page-number " href="/page/6/"> 6 </a><a class="page-number " href="/page/7/"> 7 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/5/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -632,44 +909,48 @@
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2013-01-27T22:05:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年1月28日</span> </time> </div> <h2 class="header__title"><span>style要素のscoped属性</span></h2>  </header> <div id="article-content" class="content">  <p><a href="https://hacks.mozilla.org/2013/01/firefox-development-highlights-h-264-mp3-support-on-windows-scoped-stylesheets-more/">Firefox Development Highlights - H.264 &#x26; MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog</a>（<a href="https://dev.mozilla.jp/2013/01/firefox-development-highlights-h-264-mp3-support-on-windows-scoped-stylesheets-more/">日本語</a>）にて、<a href="http://nightly.mozilla.org/">Firefox の nightly</a>で style 要素の scoped 属性に対応したという話が出ていたので、試してみました。<a href="http://codepen.io/memolog/pen/uedGg">style scoped 動作確認用の codepen</a>。</p>
 <p><a href="http://www.w3.org/TR/html5/document-metadata.html#attr-style-scoped">style scope の仕様</a>によると、sytle scoped 要素の親要素をルートとして、その範囲のみに style を適用させるみたいな感じ。親要素の最初のノードとして配置する必要がある（コメントノードなど inter-element whitespace を除く）。</p>
 <p>そして親要素の content model は<a href="http://www.w3.org/TR/html5/dom.html#transparent">transparent</a>であってはいけないらしい。代表的なのは<a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element">a 要素</a>（それ以外は ins とか map 要素が transparent らしい）で、</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a></span></span>
-<span class="line"><span>&#x3C;style scoped></span></span>
-<span class="line"><span>h1{ color:black }</span></span>
-<span class="line"><span>&#x3C;/style></span></span>
-<span class="line"><span>&#x3C;h1>foobar&#x3C;/h1></span></span>
-<span class="line"><span>&#x3C;/a></span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">&#x3C;a>
+&#x3C;style scoped>
+h1{ color:black }
+&#x3C;/style>
+&#x3C;h1>foobar&#x3C;/h1>
+&#x3C;/a>
+
+</code></pre>
 <p>ということはできないことになる。a 要素の中に div とか何か transparnet でないものを入れないといけない。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;a></span></span>
-<span class="line"><span>&#x3C;div></span></span>
-<span class="line"><span>&#x3C;style scoped></span></span>
-<span class="line"><span>h1{ color:black }</span></span>
-<span class="line"><span>&#x3C;/style></span></span>
-<span class="line"><span>&#x3C;h1>foobar&#x3C;/h1></span></span>
-<span class="line"><span>&#x3C;/div></span></span>
-<span class="line"><span>&#x3C;/a></span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">&#x3C;a>
+&#x3C;div>
+&#x3C;style scoped>
+h1{ color:black }
+&#x3C;/style>
+&#x3C;h1>foobar&#x3C;/h1>
+&#x3C;/div>
+&#x3C;/a>
+
+</code></pre>
 <p>あと、@global at-rule が定義されていて、@global で制限された CSS は通常の style 要素と同じように Document 全体に適用されるらしい（まだブラウザ上では試せない）。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div></span></span>
-<span class="line"><span>&#x3C;style scoped></span></span>
-<span class="line"><span>@global{ div{ color:blue } }</span></span>
-<span class="line"><span>h1 { width:95&#x26;#x25;; }</span></span>
-<span class="line"><span>&#x3C;/style></span></span>
-<span class="line"><span>&#x3C;h1>foobar&#x3C;/h1></span></span>
-<span class="line"><span>&#x3C;/div></span></span>
-<span class="line"><span>&#x3C;div></span></span>
-<span class="line"><span>blue</span></span>
-<span class="line"><span>&#x3C;/div></span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">&#x3C;div>
+&#x3C;style scoped>
+@global{ div{ color:blue } }
+h1 { width:95&#x26;#x25;; }
+&#x3C;/style>
+&#x3C;h1>foobar&#x3C;/h1>
+&#x3C;/div>
+&#x3C;div>
+blue
+&#x3C;/div>
+
+</code></pre>
 <p>style scoped は、たとえば、この記事の中でだけ使いたい CSS などを全体の CSS に配慮することなしに使うことができるという意味で便利。ドキュメント全体の CSS と連携するような CSS が、個別の記事あるとメンテナンス大変だと思うけど。DOM と CSS の分離という点からもそもそも style 属性は多用するものではないだろうけど、ウィジェット的な、独立分離が可能なパーツ的なものの場合には使いどころもあると思われる（iframe 使えば良いかもしれないけど）。</p>
 <p>あと、style scoped ではなくても、親要素に id 属性つけてそれを CSS で指定すれば同じようなことはできなくもない（style 要素でインラインでする必要もないけど）。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;div id="foobar"></span></span>
-<span class="line"><span>&#x3C;style></span></span>
-<span class="line"><span>#foobar h1{ color:black }</span></span>
-<span class="line"><span>&#x3C;/style></span></span>
-<span class="line"><span>&#x3C;h1>foobar&#x3C;/h1></span></span>
-<span class="line"><span>&#x3C;/div></span></span>
-<span class="line"><span></span></span></code></pre>
+<pre class="language-plaintext" data-language="plaintext"><code is:raw="" class="language-plaintext">&#x3C;div id="foobar">
+&#x3C;style>
+#foobar h1{ color:black }
+&#x3C;/style>
+&#x3C;h1>foobar&#x3C;/h1>
+&#x3C;/div>
+
+</code></pre>
 <p>CSS のパフォーマンス的なところは不明ですが、scoped 属性あるなしに関わらず、<a href="http://www.w3.org/TR/html5/document-metadata.html#styling">W3C の Style の仕様では</a>、style 要素で@import などでリソースを参照しない場合は同期実行されるので、レンダリングは一時的にブロックされる、かもしれない。</p>
 <blockquote>
 <p>When a style sheet is ready to be applied, its style sheet ready flag must be set. If the style sheet referenced no other resources (e.g. it was an internal style sheet given by a style element with no @import rules), then the style rules must be synchronously made available to script; otherwise, the style rules must only be made available to script once the event loop reaches its “update the rendering” step.</p>

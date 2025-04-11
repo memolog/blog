@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -627,7 +904,7 @@
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2018/javascript-property-access-big-o.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2018/complete-all-the-pwa-checklist.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2018/custom-domain-in-github-pages.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2018/book-mind-control.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2018/retrieve-json-from-require-method.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2018/show-vertical-writing-with-css.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2018/how-to-learn.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2018/convert-multiple-primitive-images-at-once.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2018/book-intro-blockchain.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-23T20:51:00.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月24日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/javascript-property-access-big-o.html">JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オー</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #442a4c;"> <div style="background-color: #442a4c"> <img src="/assets/images/emre-karatas-194353-unsplash/emre-karatas-194353-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/Ib2e4-Qy9mQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Emre Karataş</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">配列に格納しているオブジェクトをそのIDで検索するとしたら処理量は（線形探索だろうから）ビッグ・オー記法としては `O(n)` になるだろう。</div> <div class="read-more"> <a href="/2018/javascript-property-access-big-o.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-14T11:32:41.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/complete-all-the-pwa-checklist.html">PWAのチェックリストを満たす</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #6d6861;"> <div style="background-color: #6d6861"> <img src="/assets/images/cloudvisual-146380-unsplash/cloudvisual-146380-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="734"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/sm8OE9daK2A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">CloudVisual</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、Lighthouse の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応しました。</div> <div class="read-more"> <a href="/2018/complete-all-the-pwa-checklist.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-08T07:40:57.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html">TypeScriptとWebpackを使ってDynamic Importを行う</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #464f47;"> <div style="background-color: #464f47"> <img src="/assets/images/erwan-hesry-166245-unsplash/erwan-hesry-166245-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/Q34YB7yjAxA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Erwan Hesry</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Webpackではバンドルするファイルを3つのアプローチで分けることができる。エントリーポイントを複数設けたり、webpack.config.jsにsplitChunksの設定を入れたりなどの他に、Dyanmic importを使うことでもファイルを分けることができる。詳しくはCode Splittingを参照。</div> <div class="read-more"> <a href="/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-08T05:58:41.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/custom-domain-in-github-pages.html">カスタムドメインを設定する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7aaaac;"> <div style="background-color: #7aaaac"> <img src="/assets/images/pierre-chatel-innocenti-477580-unsplash/pierre-chatel-innocenti-477580-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/cgagYoakDS8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Pierre Châtel-Innocenti</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">このサイトはHexoを使ってGithub Pagesに公開しているのだけど、最近Github PagesカスタムドメインでもHTTPSをサポートしてくれるようになったので、適当にリダイレクトかけていた元の memolog.org のドメインを設定することにした。</div> <div class="read-more"> <a href="/2018/custom-domain-in-github-pages.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-03-08T08:09:09.000Z"> <span class="calendar-icon">📅</span> <span>2018年3月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/book-mind-control.html">「マインド・コントロール」と「影響力の正体」を読んだ</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dcdddf;"> <div style="background-color: #dcdddf"> <img src="/assets/images/federica-galli-449563-unsplash/federica-galli-449563-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="619"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/aiqKc07b5PA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Federica Galli</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">マインド・コントロールと影響力の正体という本を読んだ。マインドコントロールとは、Wikipediaには「他人の思想や情報をコントロールし、個人が意思決定する際に、特定の結論へと誘導する技術を指す概念」と書いてある。「マインド・コントロール」の方は題名そのまんまマインドコントロールに扱った本であるけど、「影響力の正体」の方も「相手をYESという結論に導く技術」という意味でマインドコントロールを扱った本と言える。どちらの本も内容も人間の根本的な性質を利用したものでかなりやっかいな技術だなと思った。</div> <div class="read-more"> <a href="/2018/book-mind-control.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-02-04T16:35:42.000Z"> <span class="calendar-icon">📅</span> <span>2018年2月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/retrieve-json-from-require-method.html">JSONデータを読み込んで差し替える</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #4795ab;"> <div style="background-color: #4795ab"> <img src="/assets/images/aaron-burden-286686/aaron-burden-286686.svg" alt role="presentation" loading="lazy" width="985" height="738"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/h7wpIMY3O3E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Aaron Burden</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Node.jsの中であれば単に`const config = require(&#39;config.json&#39;)`すれば良いのだけれど、フロントエンド側のJavaScriptではそうはいかない。XMLHttpRequestとかFetch APIを使うか、requireで書いたものをwe</div> <div class="read-more"> <a href="/2018/retrieve-json-from-require-method.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-02-03T12:05:36.000Z"> <span class="calendar-icon">📅</span> <span>2018年2月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/show-vertical-writing-with-css.html">縦書きで表示する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #959177;"> <div style="background-color: #959177"> <img src="/assets/images/dmitri-popov-441562/dmitri-popov-441562.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/IDF_awES6Zg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Dmitri Popov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">最近になってwriting-modeを使うと文章の表示を簡単に縦書きにできるということを最近知った。ので、この記事では縦書きの表示を試している。以下の文章は文章量が長くなった時にどう表示されるのかを知りたくて入れているだけなので、内容的にほぼ意味はない（ないというほどでもないけど限りなく無に近いものではある）。なおインデックスページでは横書きである。</div> <div class="read-more"> <a href="/2018/show-vertical-writing-with-css.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-02-02T05:51:02.000Z"> <span class="calendar-icon">📅</span> <span>2018年2月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/how-to-learn.html">学習について考える</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #1b81a8;"> <div style="background-color: #1b81a8"> <img src="/assets/images/paul-gilmore-145802/paul-gilmore-145802.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/mqO0Rf-PUMs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Paul Gilmore</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">最近学習系・自己啓発系の本をいくつか読んだのでそれを読んでいま思っていることをそのまま書いてみようと思う。「本に書いてあること」をまとめようとすると正確さが気になって時間もかかるし本に書いてあること以上のことは書きにくいし、本に書いてあることが適切に網羅されているかも気になってくる。だから、本に書いてあることの趣旨と変わってるかもしれないけど、そういったところを気にせず、本を読んで思ったことを記す。  最初は「ブレインプログラミングという本を読んだ。「なりたい自分」とか「やりたいこと」を具体的にイメージして「いつまでにこうなる」みたいに目標を決める。具体的な方法は「注目」していると自然と見つかるから、具体的な方法を考えて足を止めるよりも「こうなる」と決めて足を進めよう、みたいな本である。科学的なバックグラウンドとしてRASを挙げているが、ここはよくわからない。アファメーションとか自己暗示とかそういったものの力を使う。やりたいことを書き出してみて、自分がどうありたいのかを見つめ直すというのは良いなと思った。</div> <div class="read-more"> <a href="/2018/how-to-learn.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-30T22:50:15.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/convert-multiple-primitive-images-at-once.html">Primitiveの変換をまとめて行う</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3b272;"> <div style="background-color: #c3b272"> <img src="/assets/images/kazuend-25767/kazuend-25767.svg" alt role="presentation" loading="lazy" width="985" height="604"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">kazuend</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。</div> <div class="read-more"> <a href="/2018/convert-multiple-primitive-images-at-once.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-25T08:53:27.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/book-intro-blockchain.html">「ブロックチェーン技術入門」を読んだ</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c0cfda;"> <div style="background-color: #c0cfda"> <img src="/assets/images/william-bout-264826/william-bout-264826.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/RkJF2BMrLJc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">William Bout</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">ブロックチェーン技術入門という本を読んだ。ビットコイン・ブロックチェーン関連の書籍は最近多く出版されているが、ブロックチェーン技術そのものにフォーカスした本は珍しい。160ページという文量で簡潔に「ブロックチェーン技術とは何か」を知ることができる良書である。  ブロックチェーンの特徴は「データが正当なものかどうかをネットワーク参加者の誰でも検証できる」というところ。改ざんされたトランザクションが送られてきても棄却できるし、ブロックの改ざんも第三者の検証をクリアするのがとても難しく不可能。それがブロックチェーンに登録されたデータの真正性を保証している。データの真正性が保証されると、不動産の登記のような「だれが資産を所有しているか」を保証するシステムや、トレーサビリティの確保するシステムなどにも応用できる。</div> <div class="read-more"> <a href="/2018/book-intro-blockchain.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/7/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/6/"> 6 </a><a class="page-number " href="/page/7/"> 7 </a><span class="page-number current">8</span><a class="page-number " href="/page/9/"> 9 </a><a class="page-number " href="/page/10/"> 10 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/9/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2018/create-hash-table-in-javascript.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2018/javascript-property-access-big-o.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2018/complete-all-the-pwa-checklist.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2018/custom-domain-in-github-pages.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2018/book-mind-control.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2018/retrieve-json-from-require-method.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2018/show-vertical-writing-with-css.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2018/how-to-learn.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2018/convert-multiple-primitive-images-at-once.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-26T06:31:02.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月26日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/create-hash-table-in-javascript.html">JavaScriptでハッシュテーブルを作る</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #54594c;"> <div style="background-color: #54594c"> <img src="/assets/images/jan-laugesen-186574-unsplash/jan-laugesen-186574-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/4UbSaPKGRqc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jan Laugesen</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オーで書いたようにJavaScriptのオブジェクトは基本ハッシュテーブルであるし、Mapオブジェクトも中の実装はChromeではハッシュテーブルであると書かれてある(Optimizing hash tables: hiding the hash code)。だからJavaScriptで自前のハッシュテーブルを作るというのは必要のないことなのだけど試しに作ってみたかった。</div> <div class="read-more"> <a href="/2018/create-hash-table-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-23T20:51:00.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月24日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/javascript-property-access-big-o.html">JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オー</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #442a4c;"> <div style="background-color: #442a4c"> <img src="/assets/images/emre-karatas-194353-unsplash/emre-karatas-194353-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/Ib2e4-Qy9mQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Emre Karataş</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">配列に格納しているオブジェクトをそのIDで検索するとしたら処理量は（線形探索だろうから）ビッグ・オー記法としては `O(n)` になるだろう。</div> <div class="read-more"> <a href="/2018/javascript-property-access-big-o.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-14T11:32:41.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/complete-all-the-pwa-checklist.html">PWAのチェックリストを満たす</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #6d6861;"> <div style="background-color: #6d6861"> <img src="/assets/images/cloudvisual-146380-unsplash/cloudvisual-146380-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="734"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/sm8OE9daK2A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">CloudVisual</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、Lighthouse の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応しました。</div> <div class="read-more"> <a href="/2018/complete-all-the-pwa-checklist.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-08T07:40:57.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html">TypeScriptとWebpackを使ってDynamic Importを行う</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #464f47;"> <div style="background-color: #464f47"> <img src="/assets/images/erwan-hesry-166245-unsplash/erwan-hesry-166245-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/Q34YB7yjAxA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Erwan Hesry</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Webpackではバンドルするファイルを3つのアプローチで分けることができる。エントリーポイントを複数設けたり、webpack.config.jsにsplitChunksの設定を入れたりなどの他に、Dyanmic importを使うことでもファイルを分けることができる。詳しくはCode Splittingを参照。</div> <div class="read-more"> <a href="/2018/dynamic-import-and-code-splitting-with-webpack-and-typescript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-08T05:58:41.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/custom-domain-in-github-pages.html">カスタムドメインを設定する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7aaaac;"> <div style="background-color: #7aaaac"> <img src="/assets/images/pierre-chatel-innocenti-477580-unsplash/pierre-chatel-innocenti-477580-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/cgagYoakDS8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Pierre Châtel-Innocenti</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">このサイトはHexoを使ってGithub Pagesに公開しているのだけど、最近Github PagesカスタムドメインでもHTTPSをサポートしてくれるようになったので、適当にリダイレクトかけていた元の memolog.org のドメインを設定することにした。</div> <div class="read-more"> <a href="/2018/custom-domain-in-github-pages.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-03-08T08:09:09.000Z"> <span class="calendar-icon">📅</span> <span>2018年3月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/book-mind-control.html">「マインド・コントロール」と「影響力の正体」を読んだ</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dcdddf;"> <div style="background-color: #dcdddf"> <img src="/assets/images/federica-galli-449563-unsplash/federica-galli-449563-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="619"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/aiqKc07b5PA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Federica Galli</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">マインド・コントロールと影響力の正体という本を読んだ。マインドコントロールとは、Wikipediaには「他人の思想や情報をコントロールし、個人が意思決定する際に、特定の結論へと誘導する技術を指す概念」と書いてある。「マインド・コントロール」の方は題名そのまんまマインドコントロールに扱った本であるけど、「影響力の正体」の方も「相手をYESという結論に導く技術」という意味でマインドコントロールを扱った本と言える。どちらの本も内容も人間の根本的な性質を利用したものでかなりやっかいな技術だなと思った。</div> <div class="read-more"> <a href="/2018/book-mind-control.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-02-04T16:35:42.000Z"> <span class="calendar-icon">📅</span> <span>2018年2月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/retrieve-json-from-require-method.html">JSONデータを読み込んで差し替える</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #4795ab;"> <div style="background-color: #4795ab"> <img src="/assets/images/aaron-burden-286686/aaron-burden-286686.svg" alt role="presentation" loading="lazy" width="985" height="738"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/h7wpIMY3O3E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Aaron Burden</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Node.jsの中であれば単に`const config = require(&#39;config.json&#39;)`すれば良いのだけれど、フロントエンド側のJavaScriptではそうはいかない。XMLHttpRequestとかFetch APIを使うか、requireで書いたものをwe</div> <div class="read-more"> <a href="/2018/retrieve-json-from-require-method.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-02-03T12:05:36.000Z"> <span class="calendar-icon">📅</span> <span>2018年2月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/show-vertical-writing-with-css.html">縦書きで表示する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #959177;"> <div style="background-color: #959177"> <img src="/assets/images/dmitri-popov-441562/dmitri-popov-441562.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/IDF_awES6Zg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Dmitri Popov</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">最近になってwriting-modeを使うと文章の表示を簡単に縦書きにできるということを最近知った。ので、この記事では縦書きの表示を試している。以下の文章は文章量が長くなった時にどう表示されるのかを知りたくて入れているだけなので、内容的にほぼ意味はない（ないというほどでもないけど限りなく無に近いものではある）。なおインデックスページでは横書きである。</div> <div class="read-more"> <a href="/2018/show-vertical-writing-with-css.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-02-02T05:51:02.000Z"> <span class="calendar-icon">📅</span> <span>2018年2月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/how-to-learn.html">学習について考える</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #1b81a8;"> <div style="background-color: #1b81a8"> <img src="/assets/images/paul-gilmore-145802/paul-gilmore-145802.svg" alt role="presentation" loading="lazy" width="985" height="607"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/mqO0Rf-PUMs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Paul Gilmore</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">最近学習系・自己啓発系の本をいくつか読んだのでそれを読んでいま思っていることをそのまま書いてみようと思う。「本に書いてあること」をまとめようとすると正確さが気になって時間もかかるし本に書いてあること以上のことは書きにくいし、本に書いてあることが適切に網羅されているかも気になってくる。だから、本に書いてあることの趣旨と変わってるかもしれないけど、そういったところを気にせず、本を読んで思ったことを記す。  最初は「ブレインプログラミングという本を読んだ。「なりたい自分」とか「やりたいこと」を具体的にイメージして「いつまでにこうなる」みたいに目標を決める。具体的な方法は「注目」していると自然と見つかるから、具体的な方法を考えて足を止めるよりも「こうなる」と決めて足を進めよう、みたいな本である。科学的なバックグラウンドとしてRASを挙げているが、ここはよくわからない。アファメーションとか自己暗示とかそういったものの力を使う。やりたいことを書き出してみて、自分がどうありたいのかを見つめ直すというのは良いなと思った。</div> <div class="read-more"> <a href="/2018/how-to-learn.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-01-30T22:50:15.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/convert-multiple-primitive-images-at-once.html">Primitiveの変換をまとめて行う</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3b272;"> <div style="background-color: #c3b272"> <img src="/assets/images/kazuend-25767/kazuend-25767.svg" alt role="presentation" loading="lazy" width="985" height="604"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">kazuend</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。</div> <div class="read-more"> <a href="/2018/convert-multiple-primitive-images-at-once.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/7/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/6/"> 6 </a><a class="page-number " href="/page/7/"> 7 </a><span class="page-number current">8</span><a class="page-number " href="/page/9/"> 9 </a><a class="page-number " href="/page/10/"> 10 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/9/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

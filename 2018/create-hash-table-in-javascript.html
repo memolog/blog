@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -630,38 +907,39 @@
 </script><meta property="og:type" content="article"><meta property="og:title" content="JavaScriptでハッシュテーブルを作る"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オーで書いたようにJavaScriptのオブジェクトは基本ハッシュテーブルであるし、Mapオブジェクトも中の実装はChromeではハッシュテーブルであると書かれてある(Optimizing hash tables: hiding the hash code)。だからJavaScriptで自前のハッシュテーブルを作るというのは必要のないことなのだけど試しに作ってみたかった。"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="/assets/images/jan-laugesen-186574-unsplash/jan-laugesen-186574-unsplash.jpg"><meta property="article:published_time" content="2018-07-26T06:31:02.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://memolog.org/assets/images/jan-laugesen-186574-unsplash/jan-laugesen-186574-unsplash.jpg"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2018/create-hash-table-in-javascript.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2018-07-26T06:31:02.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月26日</span> </time> </div> <h2 class="header__title"><span>JavaScriptでハッシュテーブルを作る</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #54594c;"> <div style="background-color: #54594c"> <img src="/assets/images/jan-laugesen-186574-unsplash/jan-laugesen-186574-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/4UbSaPKGRqc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jan Laugesen</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div id="article-content" class="content">  <p><a href="https://memolog.org/2018/javascript-property-access-big-o.html">JavaScript オブジェクトのプロパティアクセスにおけるビッグ・オー</a>で書いたように JavaScript のオブジェクトは基本ハッシュテーブルであるし、<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Map">Map</a>オブジェクトも中の実装は Chrome ではハッシュテーブルであると書かれてある(<a href="https://v8project.blogspot.com/2018/01/hash-code.html">Optimizing hash tables: hiding the hash code</a>)。だから JavaScript で自前のハッシュテーブルを作るというのは必要のないことなのだけど試しに作ってみたかった。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> stringHash </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">string-hash</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#8BE9FD;font-style:italic">module</span><span style="color:#F8F8F2">.</span><span style="color:#8BE9FD;font-style:italic">exports</span><span style="color:#FF79C6"> =</span><span style="color:#FF79C6"> class</span><span style="color:#8BE9FD"> MyHashTable</span><span style="color:#F8F8F2"> {</span></span>
-<span class="line"><span style="color:#FF79C6">  constructor</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">numberOfBucket</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#BD93F9;font-style:italic">    this</span><span style="color:#F8F8F2">.numberOfBucket </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> parseInt</span><span style="color:#F8F8F2">(numberOfBucket, </span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#BD93F9;font-style:italic">    this</span><span style="color:#F8F8F2">.hashTable </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> Array</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9;font-style:italic">this</span><span style="color:#F8F8F2">.numberOfBucket);</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#50FA7B">  get</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">key</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#F8F8F2">    key </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> ""</span><span style="color:#FF79C6"> +</span><span style="color:#F8F8F2"> key;</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> hashTableIndex </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9;font-style:italic"> this</span><span style="color:#F8F8F2">.</span><span style="color:#50FA7B">getHashTableIndex</span><span style="color:#F8F8F2">(key);</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> bucket </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9;font-style:italic"> this</span><span style="color:#F8F8F2">.hashTable[hashTableIndex] </span><span style="color:#FF79C6">||</span><span style="color:#F8F8F2"> [];</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> bucketLength </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> bucket.length;</span></span>
-<span class="line"><span style="color:#FF79C6">    for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">; i </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2"> bucketLength; i</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">      const</span><span style="color:#F8F8F2"> data </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> bucket[i];</span></span>
-<span class="line"><span style="color:#FF79C6">      if</span><span style="color:#F8F8F2"> (data[</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">] </span><span style="color:#FF79C6">===</span><span style="color:#F8F8F2"> key) {</span></span>
-<span class="line"><span style="color:#FF79C6">        return</span><span style="color:#F8F8F2"> data[</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">];</span></span>
-<span class="line"><span style="color:#F8F8F2">      }</span></span>
-<span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#50FA7B">  set</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">key</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">value</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#F8F8F2">    key </span><span style="color:#FF79C6">=</span><span style="color:#E9F284"> ""</span><span style="color:#FF79C6"> +</span><span style="color:#F8F8F2"> key;</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> hashTableIndex </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9;font-style:italic"> this</span><span style="color:#F8F8F2">.</span><span style="color:#50FA7B">getHashTableIndex</span><span style="color:#F8F8F2">(key);</span></span>
-<span class="line"><span style="color:#FF79C6">    if</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">!</span><span style="color:#BD93F9;font-style:italic">this</span><span style="color:#F8F8F2">.hashTable[hashTableIndex]) {</span></span>
-<span class="line"><span style="color:#BD93F9;font-style:italic">      this</span><span style="color:#F8F8F2">.hashTable[hashTableIndex] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> [];</span></span>
-<span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#BD93F9;font-style:italic">    this</span><span style="color:#F8F8F2">.hashTable[hashTableIndex].</span><span style="color:#50FA7B">push</span><span style="color:#F8F8F2">([key, value]);</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#50FA7B">  getHashTableIndex</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">key</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">    const</span><span style="color:#F8F8F2"> hash </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> stringHash</span><span style="color:#F8F8F2">(key);</span></span>
-<span class="line"><span style="color:#FF79C6">    return</span><span style="color:#F8F8F2"> hash </span><span style="color:#FF79C6">%</span><span style="color:#BD93F9;font-style:italic"> this</span><span style="color:#F8F8F2">.numberOfBucket;</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">};</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> stringHash <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"string-hash"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token keyword">class</span> <span class="token class-name">MyHashTable</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">numberOfBucket</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>numberOfBucket <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>numberOfBucket<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hashTable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>numberOfBucket<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    key <span class="token operator">=</span> <span class="token string">""</span> <span class="token operator">+</span> key<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> hashTableIndex <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHashTableIndex</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> bucket <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hashTable<span class="token punctuation">[</span>hashTableIndex<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> bucketLength <span class="token operator">=</span> bucket<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> bucketLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> data <span class="token operator">=</span> bucket<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    key <span class="token operator">=</span> <span class="token string">""</span> <span class="token operator">+</span> key<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> hashTableIndex <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getHashTableIndex</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>hashTable<span class="token punctuation">[</span>hashTableIndex<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>hashTable<span class="token punctuation">[</span>hashTableIndex<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>hashTable<span class="token punctuation">[</span>hashTableIndex<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">getHashTableIndex</span><span class="token punctuation">(</span><span class="token parameter">key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> hash <span class="token operator">=</span> <span class="token function">stringHash</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> hash <span class="token operator">%</span> <span class="token keyword">this</span><span class="token punctuation">.</span>numberOfBucket<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
 <p>実装は<a href="https://medium.freecodecamp.org/how-to-implement-a-simple-hash-table-in-javascript-cb3b9c1f2997">How to implement a simple hash table in JavaScript – freeCodeCamp</a>や<a href="http://www.mattzeunert.com/2017/02/01/implementing-a-hash-table-in-javascript.html">Implementing a hash table in JavaScript</a>を参考にしている。</p>
 <p><a href="https://github.com/darkskyapp/string-hash">string-hash</a>は、与えられた文字列を 0 から 4294967295 の数値にして返してくれる。</p>
 <p>ハッシュテーブルのサイズは、ハッシュ関数の処理やコンフリクトしたときの対応方法によるらしいのだけど、とりあえずインスタンス作成時に設定するようにして、ハッシュテーブルに入れるデータ数に 1.3 をかけた値より大きな素数を使うようにした。素数については<a href="https://primes.utm.edu/nthprime/index.php#nth">The Prime Database: The Nth Prime Page</a>を使って出した。</p>
@@ -672,57 +950,61 @@ Size of hash table array should be a prime number
 <a href="http://cseweb.ucsd.edu/~kube/cls/100/Lectures/lec16/lec16-8.html#pgfId-975583">http://cseweb.ucsd.edu/~kube/cls/100/Lectures/lec16/lec16-8.html#pgfId-975583</a></p>
 </blockquote>
 <p>下記のような感じで簡単に測定してみた。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> dataLength </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 10000</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> numberOfBucket </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 13003</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> MyHashTable </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">./my-hash-table</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> myHashTable </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> MyHashTable</span><span style="color:#F8F8F2">(numberOfBucket);</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">time</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">set</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> key, value;</span></span>
-<span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">; i </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2"> dataLength; i</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#F8F8F2">  key </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Math.</span><span style="color:#50FA7B">floor</span><span style="color:#F8F8F2">(Math.</span><span style="color:#50FA7B">random</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> dataLength).</span><span style="color:#50FA7B">toString</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">16</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">  value </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Math.</span><span style="color:#50FA7B">floor</span><span style="color:#F8F8F2">(Math.</span><span style="color:#50FA7B">random</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> dataLength).</span><span style="color:#50FA7B">toString</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">16</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">  myHashTable.</span><span style="color:#50FA7B">set</span><span style="color:#F8F8F2">(key, value);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">timeEnd</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">set</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">time</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">get</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">myHashTable.</span><span style="color:#50FA7B">get</span><span style="color:#F8F8F2">(key);</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">timeEnd</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">get</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> dataLength <span class="token operator">=</span> <span class="token number">10000</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> numberOfBucket <span class="token operator">=</span> <span class="token number">13003</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> MyHashTable <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"./my-hash-table"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> myHashTable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MyHashTable</span><span class="token punctuation">(</span>numberOfBucket<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">"set"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> key<span class="token punctuation">,</span> value<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> dataLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  key <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  value <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  myHashTable<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">"set"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">"get"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myHashTable<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">"get"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>結果が 10000 件の追加に<code>19.117ms</code>で取得に<code>0.067ms</code>。</p>
 <p>データを以下のように変更して再度実行</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> dataLength </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 100000</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> numberOfBucket </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 130003</span><span style="color:#F8F8F2">;</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> dataLength <span class="token operator">=</span> <span class="token number">100000</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> numberOfBucket <span class="token operator">=</span> <span class="token number">130003</span><span class="token punctuation">;</span>
+</code></pre>
 <p>結果が 100000 件の追加に<code>112.608ms</code>で取得が<code>0.061ms</code>。</p>
 <p>データを 1000000 件にすると追加に<code>1592.088ms</code>で取得に<code>0.068ms</code>。データの件数が増えても、データの取得に時間がかかるようにはなっていない。いい感じに見える。</p>
 <p>なおデータを 1000000 件でハッシュテーブルのサイズを 1（検索に<code>O(n)</code>かかるはず）にしたら、追加には<code>870.672ms</code>となり取得には<code>12.525ms</code>かかった（繰り返し測定してみると、早い時は 2ms くらいで終わる）。</p>
 <p>上記の計測をオブジェクトに置き換えて</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> dataLength </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1000000</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> myHashTable </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> {};</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">time</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">set</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> key, value;</span></span>
-<span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">; i </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2"> dataLength; i</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#F8F8F2">  key </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Math.</span><span style="color:#50FA7B">floor</span><span style="color:#F8F8F2">(Math.</span><span style="color:#50FA7B">random</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> dataLength).</span><span style="color:#50FA7B">toString</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">16</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">  value </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Math.</span><span style="color:#50FA7B">floor</span><span style="color:#F8F8F2">(Math.</span><span style="color:#50FA7B">random</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> dataLength).</span><span style="color:#50FA7B">toString</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">16</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">  myHashTable[key] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> value;</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">timeEnd</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">set</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">time</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">get</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">myHashTable[key];</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">timeEnd</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">get</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> dataLength <span class="token operator">=</span> <span class="token number">1000000</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> myHashTable <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">"set"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> key<span class="token punctuation">,</span> value<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> dataLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  key <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  value <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  myHashTable<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">"set"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">"get"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myHashTable<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">"get"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>としてみたろころ、データの追加には<code>1632.026ms</code>で、取得には<code>0.008ms</code>になった。繰り返し計測してみないと誤差の範囲かどうかは明確には言えないけど、ほぼ同じパフォーマンスのように思う。</p>
 <p>さらに Map に置き換えてみた。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> dataLength </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 1000000</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> myHashTable </span><span style="color:#FF79C6">=</span><span style="color:#FF79C6;font-weight:bold"> new</span><span style="color:#50FA7B"> Map</span><span style="color:#F8F8F2">();</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">time</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">set</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> key, value;</span></span>
-<span class="line"><span style="color:#FF79C6">for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> i </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">; i </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2"> dataLength; i</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#F8F8F2">  key </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Math.</span><span style="color:#50FA7B">floor</span><span style="color:#F8F8F2">(Math.</span><span style="color:#50FA7B">random</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> dataLength).</span><span style="color:#50FA7B">toString</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">16</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">  value </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> Math.</span><span style="color:#50FA7B">floor</span><span style="color:#F8F8F2">(Math.</span><span style="color:#50FA7B">random</span><span style="color:#F8F8F2">() </span><span style="color:#FF79C6">*</span><span style="color:#F8F8F2"> dataLength).</span><span style="color:#50FA7B">toString</span><span style="color:#F8F8F2">(</span><span style="color:#BD93F9">16</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">  myHashTable.</span><span style="color:#50FA7B">set</span><span style="color:#F8F8F2">(key, value);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">timeEnd</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">set</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">time</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">get</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">myHashTable.</span><span style="color:#50FA7B">get</span><span style="color:#F8F8F2">(key);</span></span>
-<span class="line"><span style="color:#F8F8F2">console.</span><span style="color:#50FA7B">timeEnd</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">get</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">);</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> dataLength <span class="token operator">=</span> <span class="token number">1000000</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> myHashTable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">"set"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> key<span class="token punctuation">,</span> value<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> dataLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  key <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  value <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> dataLength<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  myHashTable<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">"set"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">"get"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myHashTable<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">"get"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>データの追加には<code>1178.558ms</code>で、取得には<code>0.006ms</code>になった。</p>
 <p>そのほか参考</p>
 <ul>

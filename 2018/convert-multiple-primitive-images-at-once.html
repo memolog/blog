@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -632,34 +909,36 @@
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2018-01-30T22:50:15.000Z"> <span class="calendar-icon">📅</span> <span>2018年1月31日</span> </time> </div> <h2 class="header__title"><span>Primitiveの変換をまとめて行う</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3b272;"> <div style="background-color: #c3b272"> <img src="/assets/images/kazuend-25767/kazuend-25767.svg" alt role="presentation" loading="lazy" width="985" height="604"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">kazuend</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div id="article-content" class="content">  <p><a href="https://github.com/fogleman/primitive">Primitive</a> を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回の Primitive の実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。<a href="https://github.com/memolog/primitive_bulk_output">primitive_bulk</a>という名前で npm に公開している。個人的にはほとんど使っていないオプションもあるけど、一応 primitive のすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。</p>
 <p>実行は<code>primitive_bulk -i photo.jpg</code>みたいにする。primitive では出力先（<code>-o</code>）を指定する必要があるが、primitive_bulk では指定がない場合は photo.jpg と同じディレクトリに出力ファイルを作成する。これが地味に便利。<code>-m</code>の指定がない場合は、mode の 0 から 8 まで全ての種類を出力する。primitive の処理そのものは 8 回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。</p>
 <p>内容的には特に言うほどのことはしていない。<a href="https://github.com/tj/commander.js/">commander.js</a>を使って引数をパースして</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#F8F8F2">program</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">version</span><span style="color:#F8F8F2">(pkg.version)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-i, --input &#x3C;file</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-o, --output &#x3C;file></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-n, --num &#x3C;string></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-m, --mode &#x3C;string></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">--rep &#x3C;number></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">--nth &#x3C;number></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-r, --resize &#x3C;number></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-s, --size &#x3C;number></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-a, --alpha &#x3C;number></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">--bg &#x3C;string></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-v, --verbose &#x3C;string></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">--vv &#x3C;string></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-f, --format &#x3C;string></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">-d, --dist &#x3C;dist></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">--fname &#x3C;string></span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">option</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">"</span><span style="color:#F1FA8C">--sync</span><span style="color:#E9F284">"</span><span style="color:#F8F8F2">)</span></span>
-<span class="line"><span style="color:#F8F8F2">  .</span><span style="color:#50FA7B">parse</span><span style="color:#F8F8F2">(args);</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript">program
+  <span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span>pkg<span class="token punctuation">.</span>version<span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-i, --input &#x3C;file"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-o, --output &#x3C;file>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-n, --num &#x3C;string>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-m, --mode &#x3C;string>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"--rep &#x3C;number>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"--nth &#x3C;number>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-r, --resize &#x3C;number>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-s, --size &#x3C;number>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-a, --alpha &#x3C;number>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"--bg &#x3C;string>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-v, --verbose &#x3C;string>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"--vv &#x3C;string>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-f, --format &#x3C;string>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"-d, --dist &#x3C;dist>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"--fname &#x3C;string>"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">option</span><span class="token punctuation">(</span><span class="token string">"--sync"</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>オプションを用途にあわせて調整した上で、<code>child_process</code>を使って primitive を実行しているだけである。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> childProcess </span><span style="color:#FF79C6">=</span><span style="color:#50FA7B"> require</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">child_process</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#FF79C6">  ...</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">  for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">const</span><span style="color:#F8F8F2"> key </span><span style="color:#FF79C6">in</span><span style="color:#F8F8F2"> options) {</span></span>
-<span class="line"><span style="color:#F8F8F2">    args.</span><span style="color:#50FA7B">push</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">-</span><span style="color:#E9F284">'</span><span style="color:#FF79C6"> +</span><span style="color:#F8F8F2"> key, options[key]);</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> cp </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> childProcess.</span><span style="color:#50FA7B">spawn</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">primitive</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">, args);</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript">  <span class="token keyword">const</span> childProcess <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'child_process'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token operator">...</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key <span class="token keyword">in</span> options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    args<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'-'</span> <span class="token operator">+</span> key<span class="token punctuation">,</span> options<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> cp <span class="token operator">=</span> childProcess<span class="token punctuation">.</span><span class="token function">spawn</span><span class="token punctuation">(</span><span class="token string">'primitive'</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
 <p>単純なんだけど、手作業の回数が減らすことができて気分はだいぶ良い。</p>
 <p>以上。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

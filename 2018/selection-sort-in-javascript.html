@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -635,108 +912,111 @@
 <p>下の動画は選択ソートを Gypsy folk dance で表現したもの。長い… 途中で倍速になるけど長い。最小値が変更されるときにそれぞれの人の場所が swap してしまってるけど、実際はそのタイミングで swap しない。</p>
 <div class="youtube-wrapper"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ns4TPTC8whw?si=99WOl3Z4_dFJGi73" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 <p>実装例は<a href="https://en.wikipedia.org/wiki/Selection_sort#Implementation">選択ソート</a>や<a href="http://blog.benoitvallon.com/sorting-algorithms-in-javascript/the-selection-sort-algorithm/">The Selection sort algorithm - Ben’s Blog</a>のと変わらないけど下記。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">method</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">arrayLength</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">showArray</span><span style="color:#F8F8F2">){</span></span>
-<span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> array </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> [];</span></span>
-<span class="line"><span style="color:#FF79C6">  for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> i</span><span style="color:#FF79C6">=</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">; i</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">arrayLength; i</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#F8F8F2">    array.</span><span style="color:#50FA7B">push</span><span style="color:#F8F8F2">(Math.</span><span style="color:#50FA7B">floor</span><span style="color:#F8F8F2">(Math.</span><span style="color:#50FA7B">random</span><span style="color:#F8F8F2">()</span><span style="color:#FF79C6">*</span><span style="color:#BD93F9">10000</span><span style="color:#F8F8F2">));</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#FF79C6">  if</span><span style="color:#F8F8F2"> (showArray) {</span></span>
-<span class="line"><span style="color:#F8F8F2">    console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(array);</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#50FA7B">time</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">sorting</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#50FA7B">  method</span><span style="color:#F8F8F2">(array, showArray);</span></span>
-<span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#50FA7B">timeEnd</span><span style="color:#F8F8F2">(</span><span style="color:#E9F284">'</span><span style="color:#F1FA8C">sorting</span><span style="color:#E9F284">'</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span>
-<span class="line"><span style="color:#FF79C6">...</span></span>
-<span class="line"><span style="color:#FF79C6">function</span><span style="color:#50FA7B"> selectionSort</span><span style="color:#F8F8F2">(</span><span style="color:#FFB86C;font-style:italic">array</span><span style="color:#F8F8F2">, </span><span style="color:#FFB86C;font-style:italic">showArray</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">  let</span><span style="color:#F8F8F2"> count </span><span style="color:#FF79C6">=</span><span style="color:#BD93F9"> 0</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#FF79C6">  const</span><span style="color:#F8F8F2"> arrayLength </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> array.length;</span></span>
-<span class="line"><span style="color:#FF79C6">  for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> j</span><span style="color:#FF79C6">=</span><span style="color:#BD93F9">0</span><span style="color:#F8F8F2">; j</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">arrayLength </span><span style="color:#FF79C6">-</span><span style="color:#BD93F9"> 1</span><span style="color:#F8F8F2">; j</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">    let</span><span style="color:#F8F8F2"> minIndex </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> j;</span></span>
-<span class="line"><span style="color:#FF79C6">    for</span><span style="color:#F8F8F2"> (</span><span style="color:#FF79C6">let</span><span style="color:#F8F8F2"> i</span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2">j</span><span style="color:#FF79C6">+</span><span style="color:#BD93F9">1</span><span style="color:#F8F8F2">; i</span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2">arrayLength; i</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">) {</span></span>
-<span class="line"><span style="color:#FF79C6">      if</span><span style="color:#F8F8F2"> (array[i] </span><span style="color:#FF79C6">&#x3C;</span><span style="color:#F8F8F2"> array[minIndex]) {</span></span>
-<span class="line"><span style="color:#F8F8F2">        minIndex </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> i;</span></span>
-<span class="line"><span style="color:#F8F8F2">      }</span></span>
-<span class="line"><span style="color:#F8F8F2">      count</span><span style="color:#FF79C6">++</span><span style="color:#F8F8F2">;</span></span>
-<span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#FF79C6">    if</span><span style="color:#F8F8F2"> (j </span><span style="color:#FF79C6">!==</span><span style="color:#F8F8F2"> minIndex) {</span></span>
-<span class="line"><span style="color:#FF79C6">      const</span><span style="color:#F8F8F2"> temp </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> array[j];</span></span>
-<span class="line"><span style="color:#F8F8F2">      array[j] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> array[minIndex];</span></span>
-<span class="line"><span style="color:#F8F8F2">      array[minIndex] </span><span style="color:#FF79C6">=</span><span style="color:#F8F8F2"> temp;</span></span>
-<span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#FF79C6">    if</span><span style="color:#F8F8F2"> (showArray) {</span></span>
-<span class="line"><span style="color:#F8F8F2">      console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(array);</span></span>
-<span class="line"><span style="color:#F8F8F2">    }</span></span>
-<span class="line"><span style="color:#F8F8F2">  }</span></span>
-<span class="line"><span style="color:#F8F8F2">  console.</span><span style="color:#50FA7B">log</span><span style="color:#F8F8F2">(</span><span style="color:#F1FA8C">`number of iterate: </span><span style="color:#FF79C6">${</span><span style="color:#F8F8F2">count</span><span style="color:#FF79C6">}</span><span style="color:#F1FA8C">`</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">}</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token parameter">method<span class="token punctuation">,</span> arrayLength<span class="token punctuation">,</span> showArray</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">const</span> array <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&#x3C;</span>arrayLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    array<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>showArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span><span class="token string">'sorting'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">method</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> showArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span><span class="token string">'sorting'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token operator">...</span>
+<span class="token keyword">function</span> <span class="token function">selectionSort</span><span class="token punctuation">(</span><span class="token parameter">array<span class="token punctuation">,</span> showArray</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> arrayLength <span class="token operator">=</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> j<span class="token operator">&#x3C;</span>arrayLength <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> minIndex <span class="token operator">=</span> j<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">&#x3C;</span>arrayLength<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&#x3C;</span> array<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        minIndex <span class="token operator">=</span> i<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      count<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">!==</span> minIndex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> temp <span class="token operator">=</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      array<span class="token punctuation">[</span>minIndex<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>showArray<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">number of iterate: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>実装の全体はバブルソートの実装と合わせて<a href="https://gist.github.com/memolog/9e9475a1b91770dd7b25d44904771fbb/21c2d999495d3a0efc17bc6e28be07ec554e8d67">Gist</a>に載せてある。</p>
 <p>実行例</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(selectionSort, </span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">true</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">482</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1409</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1745</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4114</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4479</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5188</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6257</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7428</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">8167</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">number </span><span style="color:#FF79C6">of</span><span style="color:#F8F8F2"> iterates: </span><span style="color:#BD93F9">45</span></span>
-<span class="line"><span style="color:#F8F8F2">sorting: 0.800ms</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(selectionSort, </span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">true</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">1002</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1126</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1612</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2331</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2365</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2369</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4346</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4794</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">5504</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">6236</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">number </span><span style="color:#FF79C6">of</span><span style="color:#F8F8F2"> iterates: </span><span style="color:#BD93F9">45</span></span>
-<span class="line"><span style="color:#F8F8F2">sorting: 0.505ms</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(selectionSort, </span><span style="color:#BD93F9">10</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">true</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">[ </span><span style="color:#BD93F9">133</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1134</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">1870</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2478</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2599</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">2617</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">3066</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">4363</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7507</span><span style="color:#F8F8F2">, </span><span style="color:#BD93F9">7785</span><span style="color:#F8F8F2"> ]</span></span>
-<span class="line"><span style="color:#F8F8F2">number </span><span style="color:#FF79C6">of</span><span style="color:#F8F8F2"> iterates: </span><span style="color:#BD93F9">45</span></span>
-<span class="line"><span style="color:#F8F8F2">sorting: 0.501ms</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token operator">></span> <span class="token function">test</span><span class="token punctuation">(</span>selectionSort<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">8167</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">4114</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">8167</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">4114</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">8167</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">4114</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">8167</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">4114</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">4114</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">8167</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">4114</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">8167</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">4114</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">8167</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">4114</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">8167</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">4114</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">8167</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">482</span><span class="token punctuation">,</span> <span class="token number">1409</span><span class="token punctuation">,</span> <span class="token number">1745</span><span class="token punctuation">,</span> <span class="token number">4114</span><span class="token punctuation">,</span> <span class="token number">4188</span><span class="token punctuation">,</span> <span class="token number">4479</span><span class="token punctuation">,</span> <span class="token number">5188</span><span class="token punctuation">,</span> <span class="token number">6257</span><span class="token punctuation">,</span> <span class="token number">7428</span><span class="token punctuation">,</span> <span class="token number">8167</span> <span class="token punctuation">]</span>
+number <span class="token keyword">of</span> <span class="token literal-property property">iterates</span><span class="token operator">:</span> <span class="token number">45</span>
+<span class="token literal-property property">sorting</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">.</span>800ms
+
+<span class="token operator">></span> <span class="token function">test</span><span class="token punctuation">(</span>selectionSort<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">6236</span><span class="token punctuation">,</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">5504</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">6236</span><span class="token punctuation">,</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">5504</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">6236</span><span class="token punctuation">,</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">5504</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">6236</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">5504</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">6236</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">5504</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">6236</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">5504</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">6236</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">5504</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">6236</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">5504</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">6236</span><span class="token punctuation">,</span> <span class="token number">5504</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">1002</span><span class="token punctuation">,</span> <span class="token number">1126</span><span class="token punctuation">,</span> <span class="token number">1612</span><span class="token punctuation">,</span> <span class="token number">2331</span><span class="token punctuation">,</span> <span class="token number">2365</span><span class="token punctuation">,</span> <span class="token number">2369</span><span class="token punctuation">,</span> <span class="token number">4346</span><span class="token punctuation">,</span> <span class="token number">4794</span><span class="token punctuation">,</span> <span class="token number">5504</span><span class="token punctuation">,</span> <span class="token number">6236</span> <span class="token punctuation">]</span>
+number <span class="token keyword">of</span> <span class="token literal-property property">iterates</span><span class="token operator">:</span> <span class="token number">45</span>
+<span class="token literal-property property">sorting</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">.</span>505ms
+
+<span class="token operator">></span> <span class="token function">test</span><span class="token punctuation">(</span>selectionSort<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">[</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">7507</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">7785</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">3066</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">7507</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">7785</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">3066</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">7507</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">7785</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">3066</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">7507</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">7785</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">3066</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">7507</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">7785</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">3066</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">7507</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">7785</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">3066</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">7507</span><span class="token punctuation">,</span> <span class="token number">7785</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">3066</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">3066</span><span class="token punctuation">,</span> <span class="token number">7785</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">7507</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">3066</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">7785</span><span class="token punctuation">,</span> <span class="token number">7507</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token number">133</span><span class="token punctuation">,</span> <span class="token number">1134</span><span class="token punctuation">,</span> <span class="token number">1870</span><span class="token punctuation">,</span> <span class="token number">2478</span><span class="token punctuation">,</span> <span class="token number">2599</span><span class="token punctuation">,</span> <span class="token number">2617</span><span class="token punctuation">,</span> <span class="token number">3066</span><span class="token punctuation">,</span> <span class="token number">4363</span><span class="token punctuation">,</span> <span class="token number">7507</span><span class="token punctuation">,</span> <span class="token number">7785</span> <span class="token punctuation">]</span>
+number <span class="token keyword">of</span> <span class="token literal-property property">iterates</span><span class="token operator">:</span> <span class="token number">45</span>
+<span class="token literal-property property">sorting</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">.</span>501ms
+</code></pre>
 <p>配列の数が 10 件くらいだと、バブルソートと変わらない感じはある。環境による違いかもしれない。配列の数が 10000 件になると選択ソートの方が実行時間が少なくなる。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(bubbleSort, </span><span style="color:#BD93F9">10000</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">number </span><span style="color:#FF79C6">of</span><span style="color:#F8F8F2"> iterates: </span><span style="color:#BD93F9">49988928</span></span>
-<span class="line"><span style="color:#F8F8F2">sorting: 178.587ms</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(bubbleSort, </span><span style="color:#BD93F9">10000</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">number </span><span style="color:#FF79C6">of</span><span style="color:#F8F8F2"> iterates: </span><span style="color:#BD93F9">49946367</span></span>
-<span class="line"><span style="color:#F8F8F2">sorting: 178.879ms</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(bubbleSort, </span><span style="color:#BD93F9">10000</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">number </span><span style="color:#FF79C6">of</span><span style="color:#F8F8F2"> iterates: </span><span style="color:#BD93F9">49945386</span></span>
-<span class="line"><span style="color:#F8F8F2">sorting: 178.817ms</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(selectionSort, </span><span style="color:#BD93F9">10000</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">number </span><span style="color:#FF79C6">of</span><span style="color:#F8F8F2"> iterates: </span><span style="color:#BD93F9">49995000</span></span>
-<span class="line"><span style="color:#F8F8F2">sorting: 136.341ms</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(selectionSort, </span><span style="color:#BD93F9">10000</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">number </span><span style="color:#FF79C6">of</span><span style="color:#F8F8F2"> iterates: </span><span style="color:#BD93F9">49995000</span></span>
-<span class="line"><span style="color:#F8F8F2">sorting: 134.343ms</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#FF79C6">></span><span style="color:#50FA7B"> test</span><span style="color:#F8F8F2">(selectionSort, </span><span style="color:#BD93F9">10000</span><span style="color:#F8F8F2">);</span></span>
-<span class="line"><span style="color:#F8F8F2">number </span><span style="color:#FF79C6">of</span><span style="color:#F8F8F2"> iterates: </span><span style="color:#BD93F9">49995000</span></span>
-<span class="line"><span style="color:#F8F8F2">sorting: 134.303ms</span></span></code></pre>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token operator">></span> <span class="token function">test</span><span class="token punctuation">(</span>bubbleSort<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+number <span class="token keyword">of</span> <span class="token literal-property property">iterates</span><span class="token operator">:</span> <span class="token number">49988928</span>
+<span class="token literal-property property">sorting</span><span class="token operator">:</span> <span class="token number">178</span><span class="token punctuation">.</span>587ms
+
+<span class="token operator">></span> <span class="token function">test</span><span class="token punctuation">(</span>bubbleSort<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+number <span class="token keyword">of</span> <span class="token literal-property property">iterates</span><span class="token operator">:</span> <span class="token number">49946367</span>
+<span class="token literal-property property">sorting</span><span class="token operator">:</span> <span class="token number">178</span><span class="token punctuation">.</span>879ms
+
+<span class="token operator">></span> <span class="token function">test</span><span class="token punctuation">(</span>bubbleSort<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+number <span class="token keyword">of</span> <span class="token literal-property property">iterates</span><span class="token operator">:</span> <span class="token number">49945386</span>
+<span class="token literal-property property">sorting</span><span class="token operator">:</span> <span class="token number">178</span><span class="token punctuation">.</span>817ms
+
+<span class="token operator">></span> <span class="token function">test</span><span class="token punctuation">(</span>selectionSort<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+number <span class="token keyword">of</span> <span class="token literal-property property">iterates</span><span class="token operator">:</span> <span class="token number">49995000</span>
+<span class="token literal-property property">sorting</span><span class="token operator">:</span> <span class="token number">136</span><span class="token punctuation">.</span>341ms
+
+<span class="token operator">></span> <span class="token function">test</span><span class="token punctuation">(</span>selectionSort<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+number <span class="token keyword">of</span> <span class="token literal-property property">iterates</span><span class="token operator">:</span> <span class="token number">49995000</span>
+<span class="token literal-property property">sorting</span><span class="token operator">:</span> <span class="token number">134</span><span class="token punctuation">.</span>343ms
+
+<span class="token operator">></span> <span class="token function">test</span><span class="token punctuation">(</span>selectionSort<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+number <span class="token keyword">of</span> <span class="token literal-property property">iterates</span><span class="token operator">:</span> <span class="token number">49995000</span>
+<span class="token literal-property property">sorting</span><span class="token operator">:</span> <span class="token number">134</span><span class="token punctuation">.</span>303ms
+</code></pre>
 <p>ただ配列の数が大きくなると、<a href="https://en.wikipedia.org/wiki/Merge_sort">merge sort</a>のような O(n log n)の方が性能が良くなる。</p>
 <p>double selection sort では、一回の繰り返しの中で最小値と最大値を両方探して、それぞれ swap する。最小値・最大値を探す回数は減るけど、比較や swap の処理が減るわけではない。</p>
 <p><a href="http://www.ce.sharif.edu/~ghodsi/ds-alg-dic/HTML/bingosort.html">bingo sort</a>では配列の中の一番大きい数値を探して、一番大きな数値を持つアイテムをすべて配列の最後に移動させていく。配列の中に重複している値が多くある場合は効率的となる。</p>

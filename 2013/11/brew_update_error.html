@@ -600,9 +600,286 @@
     border-color: var(--darker-color);
   }
 
-  pre {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    color: #d4d4d4;
+    font-size: 13px;
+    text-shadow: none;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+      "Courier New", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::selection,
+  code[class*="language-"]::selection,
+  pre[class*="language-"] *::selection,
+  code[class*="language-"] *::selection {
+    text-shadow: none;
+    background: #264f78;
+  }
+
+  @media print {
+    pre[class*="language-"],
+    code[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  pre[class*="language-"] {
     padding: 1em;
-    font-size: 1.2em;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: #1e1e1e;
+  }
+
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    color: #db4c69;
+    background: #1e1e1e;
+  }
+  /*********************************************************
+* Tokens
+*/
+  .namespace {
+    opacity: 0.7;
+  }
+
+  .token.doctype .token.doctype-tag {
+    color: #569cd6;
+  }
+
+  .token.doctype .token.name {
+    color: #9cdcfe;
+  }
+
+  .token.comment,
+  .token.prolog {
+    color: #6a9955;
+  }
+
+  .token.punctuation,
+  .language-html .language-css .token.punctuation,
+  .language-html .language-javascript .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.inserted,
+  .token.unit {
+    color: #b5cea8;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.deleted {
+    color: #ce9178;
+  }
+
+  .language-css .token.string.url {
+    text-decoration: underline;
+  }
+
+  .token.operator,
+  .token.entity {
+    color: #d4d4d4;
+  }
+
+  .token.operator.arrow {
+    color: #569cd6;
+  }
+
+  .token.atrule {
+    color: #ce9178;
+  }
+
+  .token.atrule .token.rule {
+    color: #c586c0;
+  }
+
+  .token.atrule .token.url {
+    color: #9cdcfe;
+  }
+
+  .token.atrule .token.url .token.function {
+    color: #dcdcaa;
+  }
+
+  .token.atrule .token.url .token.punctuation {
+    color: #d4d4d4;
+  }
+
+  .token.keyword {
+    color: #569cd6;
+  }
+
+  .token.keyword.module,
+  .token.keyword.control-flow {
+    color: #c586c0;
+  }
+
+  .token.function,
+  .token.function .token.maybe-class-name {
+    color: #dcdcaa;
+  }
+
+  .token.regex {
+    color: #d16969;
+  }
+
+  .token.important {
+    color: #569cd6;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.constant {
+    color: #9cdcfe;
+  }
+
+  .token.class-name,
+  .token.maybe-class-name {
+    color: #4ec9b0;
+  }
+
+  .token.console {
+    color: #9cdcfe;
+  }
+
+  .token.parameter {
+    color: #9cdcfe;
+  }
+
+  .token.interpolation {
+    color: #9cdcfe;
+  }
+
+  .token.punctuation.interpolation-punctuation {
+    color: #569cd6;
+  }
+
+  .token.boolean {
+    color: #569cd6;
+  }
+
+  .token.property,
+  .token.variable,
+  .token.imports .token.maybe-class-name,
+  .token.exports .token.maybe-class-name {
+    color: #9cdcfe;
+  }
+
+  .token.selector {
+    color: #d7ba7d;
+  }
+
+  .token.escape {
+    color: #d7ba7d;
+  }
+
+  .token.tag {
+    color: #569cd6;
+  }
+
+  .token.tag .token.punctuation {
+    color: #808080;
+  }
+
+  .token.cdata {
+    color: #808080;
+  }
+
+  .token.attr-name {
+    color: #9cdcfe;
+  }
+
+  .token.attr-value,
+  .token.attr-value .token.punctuation {
+    color: #ce9178;
+  }
+
+  .token.attr-value .token.punctuation.attr-equals {
+    color: #d4d4d4;
+  }
+
+  .token.entity {
+    color: #569cd6;
+  }
+
+  .token.namespace {
+    color: #4ec9b0;
+  }
+  /*********************************************************
+* Language Specific
+*/
+
+  pre[class*="language-javascript"],
+  code[class*="language-javascript"],
+  pre[class*="language-jsx"],
+  code[class*="language-jsx"],
+  pre[class*="language-typescript"],
+  code[class*="language-typescript"],
+  pre[class*="language-tsx"],
+  code[class*="language-tsx"] {
+    color: #9cdcfe;
+  }
+
+  pre[class*="language-css"],
+  code[class*="language-css"] {
+    color: #ce9178;
+  }
+
+  pre[class*="language-html"],
+  code[class*="language-html"] {
+    color: #d4d4d4;
+  }
+
+  .language-regex .token.anchor {
+    color: #dcdcaa;
+  }
+
+  .language-html .token.punctuation {
+    color: #808080;
+  }
+  /*********************************************************
+* Line highlighting
+*/
+  pre[class*="language-"] > code[class*="language-"] {
+    position: relative;
+    z-index: 1;
+  }
+
+  .line-highlight.line-highlight {
+    background: #f7ebc6;
+    box-shadow: inset 5px 0 0 #f7d87c;
+    z-index: 0;
+  }
+
+  pre[class*="language-"],
+  code[class*="language-"] {
+    font-size: 16px;
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -630,21 +907,23 @@
 </script><meta property="og:type" content="article"><meta property="og:title" content="brew update でエラー"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="brew updateしたら下記のようなエラーになった。  ```bash error: Your local changes to the following files would be overwritten by merge:"><meta property="og:locale" content="ja_JP"><meta property="article:published_time" content="2013-11-20T11:00:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2013/11/brew_update_error.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2013-11-20T11:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年11月20日</span> </time> </div> <h2 class="header__title"><span>brew update でエラー</span></h2>  </header> <div id="article-content" class="content">  <p>brew update したら下記のようなエラーになった。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#50FA7B">error:</span><span style="color:#F1FA8C"> Your</span><span style="color:#F1FA8C"> local</span><span style="color:#F1FA8C"> changes</span><span style="color:#F1FA8C"> to</span><span style="color:#F1FA8C"> the</span><span style="color:#F1FA8C"> following</span><span style="color:#F1FA8C"> files</span><span style="color:#F1FA8C"> would</span><span style="color:#F1FA8C"> be</span><span style="color:#F1FA8C"> overwritten</span><span style="color:#F1FA8C"> by</span><span style="color:#F1FA8C"> merge:</span></span>
-<span class="line"></span>
-<span class="line"></span>
-<span class="line"><span style="color:#50FA7B">  Library/Contributions/brew_bash_completion.sh</span></span>
-<span class="line"><span style="color:#50FA7B">  Library/Contributions/brew_fish_completion.fish</span></span>
-<span class="line"><span style="color:#50FA7B">  Library/Contributions/manpages/brew.1.md</span></span>
-<span class="line"><span style="color:#50FA7B">  Library/ENV/4.3/cc</span></span>
-<span class="line"><span style="color:#50FA7B">  Library/Formula/ace.rb</span></span>
-<span class="line"><span style="color:#50FA7B">  Library/Formula/afflib.rb</span></span>
-<span class="line"><span style="color:#50FA7B">  Library/Formula/android-sdk.rb</span></span></code></pre>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash">error: Your <span class="token builtin class-name">local</span> changes to the following files would be overwritten by merge:
+
+
+  Library/Contributions/brew_bash_completion.sh
+  Library/Contributions/brew_fish_completion.fish
+  Library/Contributions/manpages/brew.1.md
+  Library/ENV/4.3/cc
+  Library/Formula/ace.rb
+  Library/Formula/afflib.rb
+  Library/Formula/android-sdk.rb
+</code></pre>
 <p>調べてみたら<a href="http://spring-mt.tumblr.com/post/18484480866/homebrew-brew-update">homebrew の brew update でこけた件 - CubicLouve</a>と同じことで、homebrew で内部的に使用している git に変更がはいっていて、エラーになっている。特に変更した記憶はないけど。<a href="https://github.com/mxcl/homebrew/issues/5128#issuecomment-9020785">snez commented</a>の内容に従うのがよさそう。</p>
-<pre class="astro-code dracula" style="background-color:#282A36;color:#F8F8F2; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#8BE9FD">cd</span><span style="color:#F1FA8C"> /usr/local</span></span>
-<span class="line"><span style="color:#50FA7B">git</span><span style="color:#F1FA8C"> reset</span><span style="color:#F1FA8C"> head</span><span style="color:#BD93F9"> --hard</span></span>
-<span class="line"><span style="color:#50FA7B">git</span><span style="color:#F1FA8C"> clean</span><span style="color:#BD93F9"> -f</span></span>
-<span class="line"><span style="color:#50FA7B">brew</span><span style="color:#F1FA8C"> update</span></span></code></pre>
+<pre class="language-bash" data-language="bash"><code is:raw="" class="language-bash"><span class="token builtin class-name">cd</span> /usr/local
+<span class="token function">git</span> reset <span class="token function">head</span> <span class="token parameter variable">--hard</span>
+<span class="token function">git</span> clean <span class="token parameter variable">-f</span>
+brew update
+</code></pre>
 <p>わたしは何となく stash でしましたけど。homebrew 関連ファイルの場所は brew —prefix で分かります。</p>
 <p>cd `brew —prefix`
 sudo git stash —include-untracked

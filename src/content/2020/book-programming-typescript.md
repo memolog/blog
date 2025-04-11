@@ -1,7 +1,7 @@
 ---
 title: "Book：Programming TypeScript"
 featured:
-  image: bulkan-evcimen-LZg_PuyFPGo-unsplash
+  image: bulkan-evcimen-LZg_PuyFPGo-unsplash.webp
   author: Bulkan Evcimen
   authorLink: https://unsplash.com/@bulkan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2020-11-14 10:44:35

@@ -446,76 +446,7 @@
       "score": 0.6340042251020769
     }
   ],
-  "2022/the-two-ways-to-use-autocomplete-attribute": [
-    {
-      "id": "2011/09/add-attribute-in-element-about-watir-webdriver",
-      "title": "watir-webdriver：要素で使用できる属性を増やす",
-      "excerpt": "watir-webdriverでは、たとえば「b.link(:id,'memolog').href」みたいなかたちで要素を特定させて、特定した要素の属性を取得することができます（詳細はAPIなどを参照）。ただW3Cで規定されている属性しかメソッド化されていないので、たとえばtwitterのt.coのリンクの元URLの属性（data-expanded-url）などは通常では取得することができません。",
-      "date": "2011-09-13T15:30:00.000Z",
-      "score": 0.6556681115318471
-    },
-    {
-      "id": "2007/08/wysiwyg_iedomobjectembed",
-      "title": "WYSIWYG ：IEのDOMではobjectタグの中にあるembedタグを認識しない？",
-      "excerpt": "あいまいなタイトル。実のところ、詳しくはよくわかっていないのですが、どうもIEのDOMではobjectタグの中にあるembedタグは削ってしまうようなのである。謎なのです。  webアプリケーションでよくあるWYSIWYGエディタ（リッチテキスト）では、すごくざっくりいうと、Javascriptで入力フォームであるiframe中のHTMLをツールボタンのクリックなどのイベントにあわせて、書き換えて動かしている。言い換えると、ブラウザが持っている情報を引き出して、変更して押し込んで、というやりとりをしている。そのため、ブラウザ側で期待されるデータを出力してくれないと、エディタから情報が消えてしまったりする可能性がある。",
-      "date": "2007-08-06T14:45:00.000Z",
-      "score": 0.6553861632428665
-    },
-    {
-      "id": "2006/11/html_linthtml",
-      "title": "HTML LINTから学んだHTMLとアクセシビリティ",
-      "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
-      "date": "2006-11-28T11:37:23.000Z",
-      "score": 0.6477239026441467
-    },
-    {
-      "id": "2004/12/post_32",
-      "title": "要素と属性について",
-      "excerpt": "WEBの制作をしていると良く出てくるのが、「要素」と「属性」という言葉。専門用語ではなく単なる日本語として扱われているためか、はたまた常識として認知されているためか、その意味はWEB制作本の片隅にも載りません。でもWEB制作、特にHTML制作において「要素」と「属性」の区別がつかないと難儀します。抽象的な言葉なので分からないままにしておくと何が「要素」で何が「属性」なのか分からなくなってきます。一度その定義のようなものを理解しておくとWEBの制作はぐっと楽になります。",
-      "date": "2004-12-16T05:26:11.000Z",
-      "featured": {
-        "image": "about_element_and_attribute.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.6336748686323028
-    }
-  ],
-  "2022/npm-script-warns-permission-errors-in-the-cache-directory": [
-    {
-      "id": "2012/05/sublime_text_2_zen_coding",
-      "title": "Sublime Text 2 で Zen Coding (Emmet)",
-      "excerpt": "（追記 2013/1/30）Packageの名前がZen Codingから「Emmet」に変わっていました。ので、Packageの名前をEmmetに差し替えました。あわせて最後に書いていたスニペットの変更方法もちゃんとした（？）方法に書き換えました。",
-      "date": "2012-05-25T16:52:13.000Z",
-      "score": 0.8929370147790172
-    },
-    {
-      "id": "2020/convert-video-files-with-ffmpegjs-worker",
-      "title": "Convert video files with the ffmpeg.js worker",
-      "excerpt": "Convert screen capture to animation GIFの話でffmpegを使ってキャプチャをGIFに変えるということをした。Macだとffmpegのインストールは簡単だしその方が良いと思うけど、環境によっては難しい場合もあるだろうし、そもそもインストールしてはならない状況もあるかもしれない。そんな時にffmpeg.jsをWeb Workersで動かすのはどうだろうかと思ってやってみた。",
-      "date": "2020-02-12T05:26:00.000Z",
-      "featured": {
-        "image": "greg-rakozy-0LU4vO5iFpM-unsplash",
-        "author": "Greg Rakozy",
-        "authorLink": "https://unsplash.com/@grakozy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.8906437779447681
-    },
-    {
-      "id": "2013/07/grunt-contrib-connect_with_cors",
-      "title": "grunt-contrib-connect タスクで CORS を有効にする",
-      "excerpt": "grunt-contrib-jasmineのThird party templatesにあるCode coverage output with Istanbulを使ってjasmineテストのcoverageの計測をしようとしているのですが、XMLHttpRequestを実行するところでCross Originの制約にひっかかってエラーになってしまう。localhostで実行されるのが理由かなとは思われるのですが、普通にjasmineテストを実行した場合はひっかからない不思議...（エラーに「file://」が出ているのも不明） jasmineのcoverage用のタスクのオプションでhostをlocalhostに指定していなかったためだった。そのため、localfile system (file://) で起動していた... 設定を追加したらCORSの設定は必要なかった。",
-      "date": "2013-07-31T11:00:00.000Z",
-      "score": 0.8902625245881418
-    },
-    {
-      "id": "2013/04/sublime_text_2_jshint",
-      "title": "Sublime Text 2 で JSHint",
-      "excerpt": "Sublime Text 2 の JSLint から node がみつからない - メモログと関連して、少しの間JSLintを使用していたのですが、jQueryなどglobalに定義されている変数があるとそこで定義されていないと言われたりなどしてしまい、若干使い勝手が悪い。",
-      "date": "2013-04-13T14:50:00.000Z",
-      "score": 0.8893142930005196
-    }
-  ],
-  "2022/Unexpected-reserved-word-interface-on-jest": [
+  "2022/unexpected-reserved-word-interface-on-jest": [
     {
       "id": "2020/top-level-await-will-be-soon",
       "title": "Top-level await will be soon",
@@ -553,6 +484,88 @@
       "excerpt": "sassのsourcemapを用意すると、Chromeのdeveloper toolsを使ったときにscssファイルでスタイルのinspectができるようになるので、非常に便利。詳細はSassファイルでの記述位置を知るより美しい方法｜Blog｜Skyward Designなどを参照。",
       "date": "2013-08-21T14:00:00.000Z",
       "score": 0.7441948446356251
+    }
+  ],
+  "2022/the-two-ways-to-use-autocomplete-attribute": [
+    {
+      "id": "2006/11/html_linthtml",
+      "title": "HTML LINTから学んだHTMLとアクセシビリティ",
+      "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
+      "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.6477239026441467
+    },
+    {
+      "id": "2007/08/wysiwyg_iedomobjectembed",
+      "title": "WYSIWYG ：IEのDOMではobjectタグの中にあるembedタグを認識しない？",
+      "excerpt": "あいまいなタイトル。実のところ、詳しくはよくわかっていないのですが、どうもIEのDOMではobjectタグの中にあるembedタグは削ってしまうようなのである。謎なのです。  webアプリケーションでよくあるWYSIWYGエディタ（リッチテキスト）では、すごくざっくりいうと、Javascriptで入力フォームであるiframe中のHTMLをツールボタンのクリックなどのイベントにあわせて、書き換えて動かしている。言い換えると、ブラウザが持っている情報を引き出して、変更して押し込んで、というやりとりをしている。そのため、ブラウザ側で期待されるデータを出力してくれないと、エディタから情報が消えてしまったりする可能性がある。",
+      "date": "2007-08-06T14:45:00.000Z",
+      "featured": {
+        "image": "wysiwyg_iedomobjectembed.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.6445655996231461
+    },
+    {
+      "id": "2004/12/post_32",
+      "title": "要素と属性について",
+      "excerpt": "WEBの制作をしていると良く出てくるのが、「要素」と「属性」という言葉。専門用語ではなく単なる日本語として扱われているためか、はたまた常識として認知されているためか、その意味はWEB制作本の片隅にも載りません。でもWEB制作、特にHTML制作において「要素」と「属性」の区別がつかないと難儀します。抽象的な言葉なので分からないままにしておくと何が「要素」で何が「属性」なのか分からなくなってきます。一度その定義のようなものを理解しておくとWEBの制作はぐっと楽になります。",
+      "date": "2004-12-16T05:26:11.000Z",
+      "featured": {
+        "image": "about_element_and_attribute.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.6336748686323028
+    },
+    {
+      "id": "2013/08/ie10_input_enter_key_button_element_click",
+      "title": "IE10 で input フォームでエンターすると button要素 に click イベントが発生する",
+      "excerpt": "javascript - IE10 find first button on page and trigger click event on input submit - Stack Overflow参考。Internet Explorer 10 にて input fieldで Enter keyを押すと、<button>要素にclick eventが発生する。",
+      "date": "2013-08-09T14:55:00.000Z",
+      "featured": {
+        "image": "dave-blahlentino-149508-unsplash",
+        "author": "Dave Blahlentino",
+        "authorLink": "https://unsplash.com/photos/iRm292XKwA4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.6290605495228213
+    }
+  ],
+  "2022/npm-script-warns-permission-errors-in-the-cache-directory": [
+    {
+      "id": "2012/05/sublime_text_2_zen_coding",
+      "title": "Sublime Text 2 で Zen Coding (Emmet)",
+      "excerpt": "（追記 2013/1/30）Packageの名前がZen Codingから「Emmet」に変わっていました。ので、Packageの名前をEmmetに差し替えました。あわせて最後に書いていたスニペットの変更方法もちゃんとした（？）方法に書き換えました。",
+      "date": "2012-05-25T16:52:13.000Z",
+      "score": 0.8929370147790172
+    },
+    {
+      "id": "2020/convert-video-files-with-ffmpegjs-worker",
+      "title": "Convert video files with the ffmpeg.js worker",
+      "excerpt": "Convert screen capture to animation GIFの話でffmpegを使ってキャプチャをGIFに変えるということをした。Macだとffmpegのインストールは簡単だしその方が良いと思うけど、環境によっては難しい場合もあるだろうし、そもそもインストールしてはならない状況もあるかもしれない。そんな時にffmpeg.jsをWeb Workersで動かすのはどうだろうかと思ってやってみた。",
+      "date": "2020-02-12T05:26:00.000Z",
+      "featured": {
+        "image": "greg-rakozy-0LU4vO5iFpM-unsplash",
+        "author": "Greg Rakozy",
+        "authorLink": "https://unsplash.com/@grakozy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.8906437779447681
+    },
+    {
+      "id": "2013/07/grunt-contrib-connect_with_cors",
+      "title": "grunt-contrib-connect タスクで CORS を有効にする",
+      "excerpt": "grunt-contrib-jasmineのThird party templatesにあるCode coverage output with Istanbulを使ってjasmineテストのcoverageの計測をしようとしているのですが、XMLHttpRequestを実行するところでCross Originの制約にひっかかってエラーになってしまう。localhostで実行されるのが理由かなとは思われるのですが、普通にjasmineテストを実行した場合はひっかからない不思議...（エラーに「file://」が出ているのも不明） jasmineのcoverage用のタスクのオプションでhostをlocalhostに指定していなかったためだった。そのため、localfile system (file://) で起動していた... 設定を追加したらCORSの設定は必要なかった。",
+      "date": "2013-07-31T11:00:00.000Z",
+      "score": 0.8902625245881418
+    },
+    {
+      "id": "2013/04/sublime_text_2_jshint",
+      "title": "Sublime Text 2 で JSHint",
+      "excerpt": "Sublime Text 2 の JSLint から node がみつからない - メモログと関連して、少しの間JSLintを使用していたのですが、jQueryなどglobalに定義されている変数があるとそこで定義されていないと言われたりなどしてしまい、若干使い勝手が悪い。",
+      "date": "2013-04-13T14:50:00.000Z",
+      "score": 0.8893142930005196
     }
   ],
   "2020/web-workers-work-on-ie10": [
@@ -982,7 +995,7 @@
       "excerpt": "今回は8. Alignmentについて。長いけど一気に。",
       "date": "2020-07-18T11:52:00.000Z",
       "featured": {
-        "image": "600484slsdl",
+        "image": "600484slsdl.webp",
         "author": "William James Glackens",
         "authorLink": "https://artvee.com/dl/red-basket-of-zinnias/"
       },
@@ -994,9 +1007,9 @@
       "excerpt": "今回は7. Flexibilityについて。",
       "date": "2020-06-30T14:09:49.000Z",
       "featured": {
-        "image": "steve-douglas-80Pr_AfC71Y-unsplash",
-        "author": "Steve Douglas",
-        "authorLink": "https://unsplash.com/@sldoug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "912215ilsdl.webp",
+        "author": "Leonard Leslie Brooke",
+        "authorLink": "https://artvee.com/artist/leonard-leslie-brooke/"
       },
       "score": 0.8767207086627645
     },
@@ -1006,7 +1019,7 @@
       "excerpt": "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて",
       "date": "2020-04-04T19:27:59.000Z",
       "featured": {
-        "image": "marc-klemm-rXDoLi1nqJo-unsplash",
+        "image": "marc-klemm-nw0QE7nTqOc-unsplash.webp",
         "author": "Marc Klemm",
         "authorLink": "https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1067,7 +1080,7 @@
       "excerpt": "前回CSS Display Moduleについて一通り確認したので、今回からはCSS Flexible Box Layout Moduleを確認しようかなと思っている。flex boxはCan I use flexboxによると、IE11以外では問題なく利用できる。IE11についてはいろいろ問題があるそうでPartial Supportという扱いになっている。Flexbugsにいろいろ問題やそれに対する回避策などが書いてある。",
       "date": "2020-03-15T21:16:28.000Z",
       "featured": {
-        "image": "mick-haupt-XMLRK8xpEIs-unsplash",
+        "image": "mick-haupt-XMLRK8xpEIs-unsplash.webp",
         "author": "Mick Haupt",
         "authorLink": "https://unsplash.com/@rocinante_11?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1092,7 +1105,7 @@
       "excerpt": "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて",
       "date": "2020-04-04T19:27:59.000Z",
       "featured": {
-        "image": "marc-klemm-rXDoLi1nqJo-unsplash",
+        "image": "marc-klemm-nw0QE7nTqOc-unsplash.webp",
         "author": "Marc Klemm",
         "authorLink": "https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1116,9 +1129,9 @@
       "excerpt": "今回は7. Flexibilityについて。",
       "date": "2020-06-30T14:09:49.000Z",
       "featured": {
-        "image": "steve-douglas-80Pr_AfC71Y-unsplash",
-        "author": "Steve Douglas",
-        "authorLink": "https://unsplash.com/@sldoug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "912215ilsdl.webp",
+        "author": "Leonard Leslie Brooke",
+        "authorLink": "https://artvee.com/artist/leonard-leslie-brooke/"
       },
       "score": 0.8880068098453676
     }
@@ -1142,7 +1155,7 @@
       "excerpt": "7.2. Components of Flexibilityについて。各ロングハンドの説明はflex ショートハンドの方に書かれていて、ここには載ってない。今回は読み飛ばして良い感じの内容になってる。",
       "date": "2020-07-01T17:46:00.000Z",
       "featured": {
-        "image": "700244ansdl",
+        "image": "919732ilsdl.webp",
         "author": "Emile-Allain Séguy",
         "authorLink": "https://artvee.com/dl/papillons-pl-13/"
       },
@@ -1179,9 +1192,9 @@
       "excerpt": "今回は7. Flexibilityについて。",
       "date": "2020-06-30T14:09:49.000Z",
       "featured": {
-        "image": "steve-douglas-80Pr_AfC71Y-unsplash",
-        "author": "Steve Douglas",
-        "authorLink": "https://unsplash.com/@sldoug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "912215ilsdl.webp",
+        "author": "Leonard Leslie Brooke",
+        "authorLink": "https://artvee.com/artist/leonard-leslie-brooke/"
       },
       "score": 0.9038115006619722
     },
@@ -1228,7 +1241,7 @@
       "excerpt": "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて",
       "date": "2020-04-04T19:27:59.000Z",
       "featured": {
-        "image": "marc-klemm-rXDoLi1nqJo-unsplash",
+        "image": "marc-klemm-nw0QE7nTqOc-unsplash.webp",
         "author": "Marc Klemm",
         "authorLink": "https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1290,7 +1303,7 @@
       "excerpt": "前回CSS Display Moduleについて一通り確認したので、今回からはCSS Flexible Box Layout Moduleを確認しようかなと思っている。flex boxはCan I use flexboxによると、IE11以外では問題なく利用できる。IE11についてはいろいろ問題があるそうでPartial Supportという扱いになっている。Flexbugsにいろいろ問題やそれに対する回避策などが書いてある。",
       "date": "2020-03-15T21:16:28.000Z",
       "featured": {
-        "image": "mick-haupt-XMLRK8xpEIs-unsplash",
+        "image": "mick-haupt-XMLRK8xpEIs-unsplash.webp",
         "author": "Mick Haupt",
         "authorLink": "https://unsplash.com/@rocinante_11?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1314,9 +1327,9 @@
       "excerpt": "今回は7. Flexibilityについて。",
       "date": "2020-06-30T14:09:49.000Z",
       "featured": {
-        "image": "steve-douglas-80Pr_AfC71Y-unsplash",
-        "author": "Steve Douglas",
-        "authorLink": "https://unsplash.com/@sldoug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "912215ilsdl.webp",
+        "author": "Leonard Leslie Brooke",
+        "authorLink": "https://artvee.com/artist/leonard-leslie-brooke/"
       },
       "score": 0.8839452586429866
     }
@@ -1328,7 +1341,7 @@
       "excerpt": "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて",
       "date": "2020-04-04T19:27:59.000Z",
       "featured": {
-        "image": "marc-klemm-rXDoLi1nqJo-unsplash",
+        "image": "marc-klemm-nw0QE7nTqOc-unsplash.webp",
         "author": "Marc Klemm",
         "authorLink": "https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1352,7 +1365,7 @@
       "excerpt": "時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は4.5. Automatic Minimum Size of Flex Items、autoキーワードで自動的に決定される最小値について。",
       "date": "2020-05-18T18:49:00.000Z",
       "featured": {
-        "image": "febiyan-z85gD0sTOQ0-unsplash",
+        "image": "febiyan-z85gD0sTOQ0-unsplash.webp",
         "author": "Febiyan",
         "authorLink": "https://unsplash.com/@febiyanr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1396,7 +1409,7 @@
       "excerpt": "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて",
       "date": "2020-04-04T19:27:59.000Z",
       "featured": {
-        "image": "marc-klemm-rXDoLi1nqJo-unsplash",
+        "image": "marc-klemm-nw0QE7nTqOc-unsplash.webp",
         "author": "Marc Klemm",
         "authorLink": "https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1408,9 +1421,9 @@
       "excerpt": "今回は7. Flexibilityについて。",
       "date": "2020-06-30T14:09:49.000Z",
       "featured": {
-        "image": "steve-douglas-80Pr_AfC71Y-unsplash",
-        "author": "Steve Douglas",
-        "authorLink": "https://unsplash.com/@sldoug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "912215ilsdl.webp",
+        "author": "Leonard Leslie Brooke",
+        "authorLink": "https://artvee.com/artist/leonard-leslie-brooke/"
       },
       "score": 0.9008560943607976
     }
@@ -1457,7 +1470,7 @@
       "excerpt": "今回は8. Alignmentについて。長いけど一気に。",
       "date": "2020-07-18T11:52:00.000Z",
       "featured": {
-        "image": "600484slsdl",
+        "image": "600484slsdl.webp",
         "author": "William James Glackens",
         "authorLink": "https://artvee.com/dl/red-basket-of-zinnias/"
       },
@@ -1471,9 +1484,9 @@
       "excerpt": "今回は7. Flexibilityについて。",
       "date": "2020-06-30T14:09:49.000Z",
       "featured": {
-        "image": "steve-douglas-80Pr_AfC71Y-unsplash",
-        "author": "Steve Douglas",
-        "authorLink": "https://unsplash.com/@sldoug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "912215ilsdl.webp",
+        "author": "Leonard Leslie Brooke",
+        "authorLink": "https://artvee.com/artist/leonard-leslie-brooke/"
       },
       "score": 0.8931786995369336
     },
@@ -1521,7 +1534,7 @@
       "excerpt": "今回は8. Alignmentについて。長いけど一気に。",
       "date": "2020-07-18T11:52:00.000Z",
       "featured": {
-        "image": "600484slsdl",
+        "image": "600484slsdl.webp",
         "author": "William James Glackens",
         "authorLink": "https://artvee.com/dl/red-basket-of-zinnias/"
       },
@@ -1545,7 +1558,7 @@
       "excerpt": "時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は4.5. Automatic Minimum Size of Flex Items、autoキーワードで自動的に決定される最小値について。",
       "date": "2020-05-18T18:49:00.000Z",
       "featured": {
-        "image": "febiyan-z85gD0sTOQ0-unsplash",
+        "image": "febiyan-z85gD0sTOQ0-unsplash.webp",
         "author": "Febiyan",
         "authorLink": "https://unsplash.com/@febiyanr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1589,7 +1602,7 @@
       "excerpt": "今回は8. Alignmentについて。長いけど一気に。",
       "date": "2020-07-18T11:52:00.000Z",
       "featured": {
-        "image": "600484slsdl",
+        "image": "600484slsdl.webp",
         "author": "William James Glackens",
         "authorLink": "https://artvee.com/dl/red-basket-of-zinnias/"
       },
@@ -1601,7 +1614,7 @@
       "excerpt": "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて",
       "date": "2020-04-04T19:27:59.000Z",
       "featured": {
-        "image": "marc-klemm-rXDoLi1nqJo-unsplash",
+        "image": "marc-klemm-nw0QE7nTqOc-unsplash.webp",
         "author": "Marc Klemm",
         "authorLink": "https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1615,7 +1628,7 @@
       "excerpt": "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて",
       "date": "2020-04-04T19:27:59.000Z",
       "featured": {
-        "image": "marc-klemm-rXDoLi1nqJo-unsplash",
+        "image": "marc-klemm-nw0QE7nTqOc-unsplash.webp",
         "author": "Marc Klemm",
         "authorLink": "https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1683,7 +1696,7 @@
       "excerpt": "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて",
       "date": "2020-04-04T19:27:59.000Z",
       "featured": {
-        "image": "marc-klemm-rXDoLi1nqJo-unsplash",
+        "image": "marc-klemm-nw0QE7nTqOc-unsplash.webp",
         "author": "Marc Klemm",
         "authorLink": "https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -1733,7 +1746,11 @@
       "title": "WYSIWYG ：IEのDOMではobjectタグの中にあるembedタグを認識しない？",
       "excerpt": "あいまいなタイトル。実のところ、詳しくはよくわかっていないのですが、どうもIEのDOMではobjectタグの中にあるembedタグは削ってしまうようなのである。謎なのです。  webアプリケーションでよくあるWYSIWYGエディタ（リッチテキスト）では、すごくざっくりいうと、Javascriptで入力フォームであるiframe中のHTMLをツールボタンのクリックなどのイベントにあわせて、書き換えて動かしている。言い換えると、ブラウザが持っている情報を引き出して、変更して押し込んで、というやりとりをしている。そのため、ブラウザ側で期待されるデータを出力してくれないと、エディタから情報が消えてしまったりする可能性がある。",
       "date": "2007-08-06T14:45:00.000Z",
-      "score": 0.549721769259981
+      "featured": {
+        "image": "wysiwyg_iedomobjectembed.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.5503332348164571
     }
   ],
   "2020/display-value-property": [
@@ -2089,7 +2106,7 @@
       "excerpt": "今回は8. Alignmentについて。長いけど一気に。",
       "date": "2020-07-18T11:52:00.000Z",
       "featured": {
-        "image": "600484slsdl",
+        "image": "600484slsdl.webp",
         "author": "William James Glackens",
         "authorLink": "https://artvee.com/dl/red-basket-of-zinnias/"
       },
@@ -2232,9 +2249,9 @@
       "excerpt": "今回は7. Flexibilityについて。",
       "date": "2020-06-30T14:09:49.000Z",
       "featured": {
-        "image": "steve-douglas-80Pr_AfC71Y-unsplash",
-        "author": "Steve Douglas",
-        "authorLink": "https://unsplash.com/@sldoug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "912215ilsdl.webp",
+        "author": "Leonard Leslie Brooke",
+        "authorLink": "https://artvee.com/artist/leonard-leslie-brooke/"
       },
       "score": 0.9027602392842778
     },
@@ -2268,7 +2285,7 @@
       "excerpt": "今回は8. Alignmentについて。長いけど一気に。",
       "date": "2020-07-18T11:52:00.000Z",
       "featured": {
-        "image": "600484slsdl",
+        "image": "600484slsdl.webp",
         "author": "William James Glackens",
         "authorLink": "https://artvee.com/dl/red-basket-of-zinnias/"
       },
@@ -2303,7 +2320,7 @@
       "score": 0.6281750677814759
     },
     {
-      "id": "2022/Unexpected-reserved-word-interface-on-jest",
+      "id": "2022/unexpected-reserved-word-interface-on-jest",
       "title": "Unexpected reserved word 'interface' on jest",
       "excerpt": "jestを28以降に更新したら、jestの実行時に`Unexpected reserved word 'interface'`みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。",
       "date": "2022-09-30T06:23:42.000Z",
@@ -3657,28 +3674,28 @@
       "title": "YSLOW 勉強：7：Avoid CSS Expressions",
       "excerpt": "*   7: Avoid CSS Expressions  rules for high performance web sitesの七つ目。CSS Expressions の使用を避けよう。CSS Expressionsとは、background-color: expression( (new Date()).getHours()&#x25;2 ? \"#B8D4FF\" : \"#F08A00\" ); （2で割れたら#B8D4FF、割れなかったらF08A00）というように、CSSの指定をダイナミックに行えるIEの独自拡張のこと。 便利な機能だけど、expressionsの判定がマウスを動かしたりするだけで行われてしまうため、何千回も判定を繰り返す可能性がある（パフォーマンスにも影響がある）。",
       "date": "2007-08-09T15:58:00.000Z",
-      "score": 0.5034846436066805
-    },
-    {
-      "id": "2009/05/inherit",
-      "title": "親要素の色をリンク色に継承させる",
-      "excerpt": "リンクの色の方が優先される理由の記事で、下記のHTMLの場合はリンクの色の方が優先されるという話をした。",
-      "date": "2009-05-06T09:27:10.000Z",
-      "score": 0.5027218215174794
+      "score": 0.5172547852064907
     },
     {
       "id": "2012/09/css_transforms_backface-visibility",
       "title": "CSS Transforms：backface-visibility",
       "excerpt": "CSS Transformsにはbackface-visibilityという設定もあって、これはその名の通り、背面側を表示するかどうかの設定。",
       "date": "2012-09-23T22:00:00.000Z",
-      "score": 0.49795411996681405
+      "score": 0.5129428650228477
     },
     {
-      "id": "2007/07/css3-resize",
-      "title": "CSS3：resize プロパティ",
-      "excerpt": "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize",
-      "date": "2007-07-29T14:35:00.000Z",
-      "score": 0.4652869118518258
+      "id": "2009/05/inherit",
+      "title": "親要素の色をリンク色に継承させる",
+      "excerpt": "リンクの色の方が優先される理由の記事で、下記のHTMLの場合はリンクの色の方が優先されるという話をした。",
+      "date": "2009-05-06T09:27:10.000Z",
+      "score": 0.5123406047658172
+    },
+    {
+      "id": "2010/02/make_404_page",
+      "title": "404ページを作成する",
+      "excerpt": "今さら感はありつつも気が向くままにMTのウェブページ機能を使って404ページを作成してみました。新規ウェブページ作成画面を開いて404.phpというページを作成。.htaccessに下記のように記述。  ```",
+      "date": "2010-02-04T22:00:00.000Z",
+      "score": 0.47550279745463997
     }
   ],
   "2018/New-Year-Resolutions": [
@@ -4802,7 +4819,7 @@
       "excerpt": "前回CSS Display Moduleについて一通り確認したので、今回からはCSS Flexible Box Layout Moduleを確認しようかなと思っている。flex boxはCan I use flexboxによると、IE11以外では問題なく利用できる。IE11についてはいろいろ問題があるそうでPartial Supportという扱いになっている。Flexbugsにいろいろ問題やそれに対する回避策などが書いてある。",
       "date": "2020-03-15T21:16:28.000Z",
       "featured": {
-        "image": "mick-haupt-XMLRK8xpEIs-unsplash",
+        "image": "mick-haupt-XMLRK8xpEIs-unsplash.webp",
         "author": "Mick Haupt",
         "authorLink": "https://unsplash.com/@rocinante_11?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -5147,6 +5164,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.775644050848407
     },
     {
@@ -6570,6 +6591,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.6310709430216763
     },
     {
@@ -7074,7 +7099,7 @@
       "excerpt": "時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は4.5. Automatic Minimum Size of Flex Items、autoキーワードで自動的に決定される最小値について。",
       "date": "2020-05-18T18:49:00.000Z",
       "featured": {
-        "image": "febiyan-z85gD0sTOQ0-unsplash",
+        "image": "febiyan-z85gD0sTOQ0-unsplash.webp",
         "author": "Febiyan",
         "authorLink": "https://unsplash.com/@febiyanr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -7143,6 +7168,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.843388980132782
     }
   ],
@@ -7625,28 +7654,36 @@
       "title": "watir-webdriver：使用できる要素を追加する",
       "excerpt": "watir-webdriverでは広範囲のHTMLタグ（ほとんど全部）をサポートしているけれど、svgやcircleなど一部のタグは現在のところサポートしていません（参考：Does watir support svg - Watir General | Google グループ）。",
       "date": "2011-09-15T15:25:00.000Z",
-      "score": 0.8193240159851234
-    },
-    {
-      "id": "2006/11/html_linthtml",
-      "title": "HTML LINTから学んだHTMLとアクセシビリティ",
-      "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
-      "date": "2006-11-28T11:37:23.000Z",
-      "score": 0.7603050748311765
+      "score": 0.7874064071858093
     },
     {
       "id": "2012/05/favicons_next_to_external_link",
       "title": "リンクの隣りにfaviconを表示する",
       "excerpt": "Favicons Next To External Links | CSS-Tricksという、リンクの左側にリンク先のfaviconを表示するというテクニックが紹介されていて、試してみました。簡単にできて、見た目にも華やかになるので面白い（個人的に）。",
       "date": "2012-05-28T15:00:00.000Z",
-      "score": 0.757920961028869
+      "score": 0.696706354733626
+    },
+    {
+      "id": "2006/11/html_linthtml",
+      "title": "HTML LINTから学んだHTMLとアクセシビリティ",
+      "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
+      "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.6916320304411633
     },
     {
       "id": "2007/08/wysiwyg_iedomobjectembed",
       "title": "WYSIWYG ：IEのDOMではobjectタグの中にあるembedタグを認識しない？",
       "excerpt": "あいまいなタイトル。実のところ、詳しくはよくわかっていないのですが、どうもIEのDOMではobjectタグの中にあるembedタグは削ってしまうようなのである。謎なのです。  webアプリケーションでよくあるWYSIWYGエディタ（リッチテキスト）では、すごくざっくりいうと、Javascriptで入力フォームであるiframe中のHTMLをツールボタンのクリックなどのイベントにあわせて、書き換えて動かしている。言い換えると、ブラウザが持っている情報を引き出して、変更して押し込んで、というやりとりをしている。そのため、ブラウザ側で期待されるデータを出力してくれないと、エディタから情報が消えてしまったりする可能性がある。",
       "date": "2007-08-06T14:45:00.000Z",
-      "score": 0.7360558197747219
+      "featured": {
+        "image": "wysiwyg_iedomobjectembed.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.6818252654962614
     }
   ],
   "2011/06/books_around_me": [
@@ -8499,6 +8536,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.6815138366260179
     }
   ],
@@ -9580,6 +9621,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7968045403601843
     }
   ],
@@ -9791,6 +9836,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8677337938070252
     },
     {
@@ -10064,6 +10113,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7431173858934692
     },
     {
@@ -10914,7 +10967,7 @@
       "excerpt": "今回はプログラミングTypeScriptを一通り読んだのでざっくり紹介。TypeScriptはたぶん3年くらい使っていて、特に不自由なく使えるのだけど、けっこう知らないこともあった。",
       "date": "2020-11-14T10:44:35.000Z",
       "featured": {
-        "image": "bulkan-evcimen-LZg_PuyFPGo-unsplash",
+        "image": "bulkan-evcimen-LZg_PuyFPGo-unsplash.webp",
         "author": "Bulkan Evcimen",
         "authorLink": "https://unsplash.com/@bulkan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
@@ -12030,6 +12083,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7154728168176168
     },
     {
@@ -12037,7 +12094,11 @@
       "title": "WYSIWYG ：IEのDOMではobjectタグの中にあるembedタグを認識しない？",
       "excerpt": "あいまいなタイトル。実のところ、詳しくはよくわかっていないのですが、どうもIEのDOMではobjectタグの中にあるembedタグは削ってしまうようなのである。謎なのです。  webアプリケーションでよくあるWYSIWYGエディタ（リッチテキスト）では、すごくざっくりいうと、Javascriptで入力フォームであるiframe中のHTMLをツールボタンのクリックなどのイベントにあわせて、書き換えて動かしている。言い換えると、ブラウザが持っている情報を引き出して、変更して押し込んで、というやりとりをしている。そのため、ブラウザ側で期待されるデータを出力してくれないと、エディタから情報が消えてしまったりする可能性がある。",
       "date": "2007-08-06T14:45:00.000Z",
-      "score": 0.7030471699734526
+      "featured": {
+        "image": "wysiwyg_iedomobjectembed.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.6956077627610248
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
@@ -12178,13 +12239,6 @@
   ],
   "2007/08/wysiwyg_iedomobjectembed": [
     {
-      "id": "2006/11/html_linthtml",
-      "title": "HTML LINTから学んだHTMLとアクセシビリティ",
-      "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
-      "date": "2006-11-28T11:37:23.000Z",
-      "score": 0.7906102586940928
-    },
-    {
       "id": "2004/12/post_32",
       "title": "要素と属性について",
       "excerpt": "WEBの制作をしていると良く出てくるのが、「要素」と「属性」という言葉。専門用語ではなく単なる日本語として扱われているためか、はたまた常識として認知されているためか、その意味はWEB制作本の片隅にも載りません。でもWEB制作、特にHTML制作において「要素」と「属性」の区別がつかないと難儀します。抽象的な言葉なので分からないままにしておくと何が「要素」で何が「属性」なのか分からなくなってきます。一度その定義のようなものを理解しておくとWEBの制作はぐっと楽になります。",
@@ -12193,7 +12247,18 @@
         "image": "about_element_and_attribute.webp",
         "author": "chatGPT"
       },
-      "score": 0.7721307451412555
+      "score": 0.7602194471911942
+    },
+    {
+      "id": "2006/11/html_linthtml",
+      "title": "HTML LINTから学んだHTMLとアクセシビリティ",
+      "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
+      "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7541298442814238
     },
     {
       "id": "2013/08/ie10_input_enter_key_button_element_click",
@@ -12205,18 +12270,14 @@
         "author": "Dave Blahlentino",
         "authorLink": "https://unsplash.com/photos/iRm292XKwA4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
-      "score": 0.7584897729450046
+      "score": 0.751910113118147
     },
     {
-      "id": "2004/12/post_38",
-      "title": "ブロックとインラインについて",
-      "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
-      "date": "2004-12-22T21:15:18.000Z",
-      "featured": {
-        "image": "about_block_and_inline.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.757161642691857
+      "id": "2006/12/ie73",
+      "title": "IE7対応しているかどうかを確認するための3つのポイント",
+      "excerpt": "既存のウェブサイトのCSSについて、IE7対応しているかどうかを確認するためのポイントは大きく3つかなと思います。",
+      "date": "2006-12-29T14:02:36.000Z",
+      "score": 0.7275452295179708
     }
   ],
   "2007/08/safari_3_webkit_css_3": [
@@ -12331,6 +12392,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7349789777433681
     },
     {
@@ -12559,6 +12624,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7958009453726594
     }
   ],
@@ -12947,6 +13016,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8713555042372146
     }
   ],
@@ -13122,11 +13195,11 @@
       "score": 0.6712757360261418
     },
     {
-      "id": "2007/08/wysiwyg_iedomobjectembed",
-      "title": "WYSIWYG ：IEのDOMではobjectタグの中にあるembedタグを認識しない？",
-      "excerpt": "あいまいなタイトル。実のところ、詳しくはよくわかっていないのですが、どうもIEのDOMではobjectタグの中にあるembedタグは削ってしまうようなのである。謎なのです。  webアプリケーションでよくあるWYSIWYGエディタ（リッチテキスト）では、すごくざっくりいうと、Javascriptで入力フォームであるiframe中のHTMLをツールボタンのクリックなどのイベントにあわせて、書き換えて動かしている。言い換えると、ブラウザが持っている情報を引き出して、変更して押し込んで、というやりとりをしている。そのため、ブラウザ側で期待されるデータを出力してくれないと、エディタから情報が消えてしまったりする可能性がある。",
-      "date": "2007-08-06T14:45:00.000Z",
-      "score": 0.6493474042663645
+      "id": "2007/08/yslow_5_put_css_at_the_top",
+      "title": "YSLOW 勉強：5：Put CSS at the Top",
+      "excerpt": "*   5: Put CSS at the Top  rules for high performance web sitesの五つ目。スタイルシートはheadタグの中で指定しよう、という話。なんか普通の使い方のような気がするのですが・・話の主旨はスタイルシートが最初の方に読み込まれておけば、ページのレンダリングが暫時的にすすんでいくから、ページを早く見ることができるということ。完全に読み切るまで真っ白な画面で待たされるより、少しずつでも表示されていく方がユーザーエクスペリエンスも高くなる。",
+      "date": "2007-08-08T15:22:00.000Z",
+      "score": 0.6480041293128609
     }
   ],
   "2006/11/html_linthtml": [
@@ -14597,6 +14670,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.898100455829003
     },
     {
@@ -14625,6 +14702,10 @@
       "title": "HTML LINTから学んだHTMLとアクセシビリティ",
       "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
       "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8146194934932864
     },
     {
@@ -14643,7 +14724,11 @@
       "title": "WYSIWYG ：IEのDOMではobjectタグの中にあるembedタグを認識しない？",
       "excerpt": "あいまいなタイトル。実のところ、詳しくはよくわかっていないのですが、どうもIEのDOMではobjectタグの中にあるembedタグは削ってしまうようなのである。謎なのです。  webアプリケーションでよくあるWYSIWYGエディタ（リッチテキスト）では、すごくざっくりいうと、Javascriptで入力フォームであるiframe中のHTMLをツールボタンのクリックなどのイベントにあわせて、書き換えて動かしている。言い換えると、ブラウザが持っている情報を引き出して、変更して押し込んで、というやりとりをしている。そのため、ブラウザ側で期待されるデータを出力してくれないと、エディタから情報が消えてしまったりする可能性がある。",
       "date": "2007-08-06T14:45:00.000Z",
-      "score": 0.7721307451412555
+      "featured": {
+        "image": "wysiwyg_iedomobjectembed.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7602194471911942
     },
     {
       "id": "2009/04/post_185",

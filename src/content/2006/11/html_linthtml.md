@@ -1,6 +1,9 @@
 ---
 title: HTML LINTから学んだHTMLとアクセシビリティ
 date: 2006-11-28T11:37:23.000Z
+featured:
+  image: html_linthtml.webp
+  author: chatGPT
 categories:
   - web
 tags:

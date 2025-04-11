@@ -112,15 +112,24 @@ const webpSrcSet = `${webpSrc}, ${webpSrc.replace(/\.webp$/, "@2x.webp")} 2x`;
   {
     featured.author &&
       (featured.authorLink?.match(/unsplash/) ? (
-        // prettier-ignore
-        <div class="featured__credit">Photo by <a href={featured.authorLink} target="_blank" rel="noopener" tabindex="-1">{featured.author}</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>
-        </div>
+        ext === ".svg" ? (
+          // prettier-ignore
+          <div class="featured__credit">Original photo by <a href={featured.authorLink} target="_blank" rel="noopener" tabindex="-1">{featured.author}</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive"  target="_blank" rel="noopener">Primitive</a></div>
+        ) : (
+          // prettier-ignore
+          <div class="featured__credit">Photo by <a href={featured.authorLink} target="_blank" rel="noopener" tabindex="-1">{featured.author}</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div>
+        )
       ) : featured.author.match(/chatGPT/) ? (
-        // prettier-ignore
-        <div class="featured__credit">This image was created using <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a></div>
+        ext === ".svg" ? (
+          // prettier-ignore
+          <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div>
+        ) : (
+          // prettier-ignore
+          <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a>, edited with <a href="https://github.com/fogleman/primitive"  target="_blank" rel="noopener">Primitive</a></div>
+        )
       ) : featured.authorLink?.match(/artvee/) ? (
         // prettier-ignore
-        <div class="featured__credit">Photo from <a href={featured.authorLink} target="_blank" rel="noopener" tabindex="-1">{featured.author}</a> on <a href="https://artvee.com/" target="_blank" rel="noopener" tabindex="-1">Artvee</a></div>
+        <div class="featured__credit">Image from <a href={featured.authorLink} target="_blank" rel="noopener" tabindex="-1">{featured.author}</a> on <a href="https://artvee.com/" target="_blank" rel="noopener" tabindex="-1">Artvee</a></div>
       ) : (
         ""
       ))

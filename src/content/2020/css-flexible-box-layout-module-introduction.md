@@ -1,7 +1,7 @@
 ---
 title: CSS Flexible Box Layout Module Introduction
 featured:
-  image: mick-haupt-XMLRK8xpEIs-unsplash
+  image: mick-haupt-XMLRK8xpEIs-unsplash.webp
   author: Mick Haupt
   authorLink: https://unsplash.com/@rocinante_11?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2020-03-15 21:16:28

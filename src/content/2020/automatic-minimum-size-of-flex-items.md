@@ -1,7 +1,7 @@
 ---
 title: Automatic Minimum Size of Flex Items
 featured:
-  image: febiyan-z85gD0sTOQ0-unsplash
+  image: febiyan-z85gD0sTOQ0-unsplash.webp
   author: Febiyan
   authorLink: https://unsplash.com/@febiyanr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 date: 2020-05-18 18:49:00

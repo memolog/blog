@@ -1,7 +1,7 @@
 ---
 title: Flex Alignment
 featured:
-  image: 600484slsdl
+  image: 600484slsdl.webp
   author: William James Glackens
   authorLink: https://artvee.com/dl/red-basket-of-zinnias/
 date: 2020-07-18 11:52:00

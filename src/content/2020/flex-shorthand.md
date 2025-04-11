@@ -1,9 +1,9 @@
 ---
 title: The flex Shorthand
 featured:
-  image: steve-douglas-80Pr_AfC71Y-unsplash
-  author: Steve Douglas
-  authorLink: https://unsplash.com/@sldoug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+  image: 912215ilsdl.webp
+  author: Leonard Leslie Brooke
+  authorLink: https://artvee.com/artist/leonard-leslie-brooke/
 date: 2020-06-30 14:09:49
 excerpt: "今回は7. Flexibilityについて。"
 ---

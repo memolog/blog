@@ -12,6 +12,3 @@ excerpt: "Lighthouse reported color contrast issues in the code block colored by
 
 Fixes are the following. The full CSS is attached to the [gist](https://gist.github.com/memolog/219ce21e3d059f149d5230bb93f57a01).
 
-```diff
-
-```

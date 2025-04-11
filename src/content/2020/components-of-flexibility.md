@@ -1,7 +1,7 @@
 ---
 title: Components of Flexibility
 featured:
-  image: 700244ansdl
+  image: 919732ilsdl.webp
   author: Emile-Allain Séguy
   authorLink: https://artvee.com/dl/papillons-pl-13/
 date: 2020-07-01 17:46:00

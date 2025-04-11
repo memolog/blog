@@ -1,5 +1,5 @@
 ---
-title: "Book：Programming TypeScript"
+title: "本：プログラミング TypeScript"
 featured:
   image: bulkan-evcimen-LZg_PuyFPGo-unsplash.webp
   author: Bulkan Evcimen

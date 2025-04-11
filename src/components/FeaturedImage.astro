@@ -122,10 +122,10 @@ const webpSrcSet = `${webpSrc}, ${webpSrc.replace(/\.webp$/, "@2x.webp")} 2x`;
       ) : featured.author.match(/chatGPT/) ? (
         ext === ".svg" ? (
           // prettier-ignore
-          <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div>
+          <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a>, edited with <a href="https://github.com/fogleman/primitive"  target="_blank" rel="noopener">Primitive</a></div>
         ) : (
           // prettier-ignore
-          <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT (DALL·E 3)</a>, edited with <a href="https://github.com/fogleman/primitive"  target="_blank" rel="noopener">Primitive</a></div>
+          <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div>
         )
       ) : featured.authorLink?.match(/artvee/) ? (
         // prettier-ignore

@@ -1,6 +1,9 @@
 ---
 title: 本：水の未来
 date: 2009-05-25T14:17:15.000Z
+featured:
+  image: future_of_water.webp
+  author: chatGPT
 categories:
   - 本
 tags:

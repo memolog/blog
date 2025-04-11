@@ -1,6 +1,9 @@
 ---
 title: 本：延長された表現型
 date: 2010-02-11T22:00:00.000Z
+featured:
+  image: extended_phenotype.webp
+  author: chatGPT
 categories:
   - 本
 tags:

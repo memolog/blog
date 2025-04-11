@@ -1,6 +1,9 @@
 ---
 title: 映画：バベル
 date: 2008-01-05T15:31:00.000Z
+featured:
+  image: Babel.webp
+  author: chatGPT
 categories:
   - 雑文
 tags:

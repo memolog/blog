@@ -1,6 +1,9 @@
 ---
 title: 愛についてのキンゼイ・レポート
 date: 2005-09-19T13:41:16.000Z
+featured:
+  image: Kinsey.webp
+  author: chatGPT
 categories:
   - 雑文
 tags:

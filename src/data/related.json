@@ -1,4 +1,38 @@
 {
+  "2025/replace-picture-element-with-srcset": [
+    {
+      "id": "2007/08/yslow_1_minimize_http_requests",
+      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
+      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "date": "2007-08-04T15:46:10.000Z",
+      "score": 0.8894670549222479
+    },
+    {
+      "id": "2012/06/jquery_masonry",
+      "title": "縦方向のfloatを実現するjQuery Masonry",
+      "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
+      "date": "2012-06-18T12:36:00.000Z",
+      "score": 0.8662977492833622
+    },
+    {
+      "id": "2018/display-featured-image",
+      "title": "Featured Image を設置する",
+      "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
+      "date": "2018-01-08T11:07:38.000Z",
+      "featured": {
+        "image": "display-featured-image.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8625581516436427
+    },
+    {
+      "id": "2010/12/optimize_css_selectors",
+      "title": "CSSセレクタを効率的な記述にする",
+      "excerpt": "Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。",
+      "date": "2010-12-28T21:00:00.000Z",
+      "score": 0.8280061499120225
+    }
+  ],
   "2025/hello-astro": [
     {
       "id": "2011/12/redesign_2012",
@@ -446,46 +480,6 @@
       "score": 0.6340042251020769
     }
   ],
-  "2022/unexpected-reserved-word-interface-on-jest": [
-    {
-      "id": "2020/top-level-await-will-be-soon",
-      "title": "Top-level await will be soon",
-      "excerpt": "asyncとawaitの書き方に慣れてくると、非同期の処理を待つ時はいつでもawaitを使いたくなるのだが、使えるのはasyncのついたfunctionの中だけでトップレベルでは使えない。",
-      "date": "2020-02-08T05:55:41.000Z",
-      "featured": {
-        "image": "kai-pilger-1k3vsv7iIIc-unsplash",
-        "author": "Kai Pilger",
-        "authorLink": "https://unsplash.com/@kaip?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.7615248561868302
-    },
-    {
-      "id": "2013/12/update_xcode_deployment_info_with_node_xcode",
-      "title": "gruntからXcodeプロジェクトのDeployment infoを変更する",
-      "excerpt": "gruntからXcodeプロジェクトのDeployment infoを変更する。Xcodeから変更するのは簡単。でもそれをgruntでtaskとして実行する。こうした作業をgrunt taskで行うメリットは、繰り返し行う作業の場合は、それを自動化できるという点。",
-      "date": "2013-12-08T20:00:00.000Z",
-      "score": 0.7594346494798407
-    },
-    {
-      "id": "2020/optional-chaining-and-nullish-coalescing",
-      "title": "Optional chaining and Nullish coalescing",
-      "excerpt": "ES2020で新しく追加された機能（ECMAScript 2016+ compatibility tableの画面の下の方にある）はどれもわりと実用的で、なくても大丈夫なんだけどあると便利といったものが並んでいる。Bigintは日常的には使わないとは思うけど。  その中で、Nullish coalescingとOptional chaining はかなり便利。なくても大丈夫だし、使わなくても良いんだけど、便利だから日常的に書かれるJavaScriptの書き方を変えるものになると思う。",
-      "date": "2020-02-06T07:25:28.000Z",
-      "featured": {
-        "image": "ben-hershey-1IZBAlIs4ug-unsplash",
-        "author": "Ben Hershey",
-        "authorLink": "https://unsplash.com/@introspectivedsgn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.7518247417010692
-    },
-    {
-      "id": "2013/08/generate_sass_sourcemap_with_compass",
-      "title": "compass で sass の sourcemap を作る",
-      "excerpt": "sassのsourcemapを用意すると、Chromeのdeveloper toolsを使ったときにscssファイルでスタイルのinspectができるようになるので、非常に便利。詳細はSassファイルでの記述位置を知るより美しい方法｜Blog｜Skyward Designなどを参照。",
-      "date": "2013-08-21T14:00:00.000Z",
-      "score": 0.7441948446356251
-    }
-  ],
   "2022/the-two-ways-to-use-autocomplete-attribute": [
     {
       "id": "2006/11/html_linthtml",
@@ -566,6 +560,46 @@
       "excerpt": "Sublime Text 2 の JSLint から node がみつからない - メモログと関連して、少しの間JSLintを使用していたのですが、jQueryなどglobalに定義されている変数があるとそこで定義されていないと言われたりなどしてしまい、若干使い勝手が悪い。",
       "date": "2013-04-13T14:50:00.000Z",
       "score": 0.8893142930005196
+    }
+  ],
+  "2022/Unexpected-reserved-word-interface-on-jest": [
+    {
+      "id": "2020/top-level-await-will-be-soon",
+      "title": "Top-level await will be soon",
+      "excerpt": "asyncとawaitの書き方に慣れてくると、非同期の処理を待つ時はいつでもawaitを使いたくなるのだが、使えるのはasyncのついたfunctionの中だけでトップレベルでは使えない。",
+      "date": "2020-02-08T05:55:41.000Z",
+      "featured": {
+        "image": "kai-pilger-1k3vsv7iIIc-unsplash",
+        "author": "Kai Pilger",
+        "authorLink": "https://unsplash.com/@kaip?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.7615248561868302
+    },
+    {
+      "id": "2013/12/update_xcode_deployment_info_with_node_xcode",
+      "title": "gruntからXcodeプロジェクトのDeployment infoを変更する",
+      "excerpt": "gruntからXcodeプロジェクトのDeployment infoを変更する。Xcodeから変更するのは簡単。でもそれをgruntでtaskとして実行する。こうした作業をgrunt taskで行うメリットは、繰り返し行う作業の場合は、それを自動化できるという点。",
+      "date": "2013-12-08T20:00:00.000Z",
+      "score": 0.7594346494798407
+    },
+    {
+      "id": "2020/optional-chaining-and-nullish-coalescing",
+      "title": "Optional chaining and Nullish coalescing",
+      "excerpt": "ES2020で新しく追加された機能（ECMAScript 2016+ compatibility tableの画面の下の方にある）はどれもわりと実用的で、なくても大丈夫なんだけどあると便利といったものが並んでいる。Bigintは日常的には使わないとは思うけど。  その中で、Nullish coalescingとOptional chaining はかなり便利。なくても大丈夫だし、使わなくても良いんだけど、便利だから日常的に書かれるJavaScriptの書き方を変えるものになると思う。",
+      "date": "2020-02-06T07:25:28.000Z",
+      "featured": {
+        "image": "ben-hershey-1IZBAlIs4ug-unsplash",
+        "author": "Ben Hershey",
+        "authorLink": "https://unsplash.com/@introspectivedsgn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.7518247417010692
+    },
+    {
+      "id": "2013/08/generate_sass_sourcemap_with_compass",
+      "title": "compass で sass の sourcemap を作る",
+      "excerpt": "sassのsourcemapを用意すると、Chromeのdeveloper toolsを使ったときにscssファイルでスタイルのinspectができるようになるので、非常に便利。詳細はSassファイルでの記述位置を知るより美しい方法｜Blog｜Skyward Designなどを参照。",
+      "date": "2013-08-21T14:00:00.000Z",
+      "score": 0.7441948446356251
     }
   ],
   "2020/web-workers-work-on-ie10": [
@@ -2211,6 +2245,17 @@
   ],
   "2020/convert-screen-capture-with-ffmpeg": [
     {
+      "id": "2025/replace-picture-element-with-srcset",
+      "title": "Picture要素をやめてsrcsetを使う",
+      "excerpt": "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。",
+      "date": "2025-04-11 17:07",
+      "featured": {
+        "image": "replace-picture-element-with-srcset.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7110679663256144
+    },
+    {
       "id": "2007/08/yslow_1_minimize_http_requests",
       "title": "YSLOW 勉強：1：Minimize HTTP Requests",
       "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
@@ -2233,13 +2278,6 @@
         "image": "new-icon"
       },
       "score": 0.6821721788983215
-    },
-    {
-      "id": "2007/03/post_139",
-      "title": "フォントのサイズを段階的に変更するボタン",
-      "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
-      "date": "2007-03-04T15:21:05.000Z",
-      "score": 0.6783862215428936
     }
   ],
   "2020/components-of-flexibility": [
@@ -2320,7 +2358,7 @@
       "score": 0.6281750677814759
     },
     {
-      "id": "2022/unexpected-reserved-word-interface-on-jest",
+      "id": "2022/Unexpected-reserved-word-interface-on-jest",
       "title": "Unexpected reserved word 'interface' on jest",
       "excerpt": "jestを28以降に更新したら、jestの実行時に`Unexpected reserved word 'interface'`みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。",
       "date": "2022-09-30T06:23:42.000Z",
@@ -2968,6 +3006,17 @@
   ],
   "2018/inline-svg-as-an-image-placeholder": [
     {
+      "id": "2025/replace-picture-element-with-srcset",
+      "title": "Picture要素をやめてsrcsetを使う",
+      "excerpt": "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。",
+      "date": "2025-04-11 17:07",
+      "featured": {
+        "image": "replace-picture-element-with-srcset.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7654505225108714
+    },
+    {
       "id": "2007/08/post_141",
       "title": "実際に表示されているブロック要素のサイズを表示する",
       "excerpt": "単純にwidthを指定しているところであればブロック要素の横幅はすぐにわかるのですが、borderやpadding、marginが入るとわかりにくくなる。たとえば <div style=\"width:100px;\"><div style=\"padding:10px;\" ></div></div> のように、入れ子で指定されている横幅がいくつになるのか、いちいち計算するのはめんどうくさい（右の例のように単純なときはいいですけど）。",
@@ -2996,13 +3045,6 @@
         "authorLink": "https://unsplash.com/photos/Ib2e4-Qy9mQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.7223284251728281
-    },
-    {
-      "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
-      "date": "2007-08-04T15:46:10.000Z",
-      "score": 0.7140748906662093
     }
   ],
   "2018/import-from-old-blog": [
@@ -6007,6 +6049,17 @@
       "score": 0.7422088643036502
     },
     {
+      "id": "2025/replace-picture-element-with-srcset",
+      "title": "Picture要素をやめてsrcsetを使う",
+      "excerpt": "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。",
+      "date": "2025-04-11 17:07",
+      "featured": {
+        "image": "replace-picture-element-with-srcset.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7086463388062593
+    },
+    {
       "id": "2007/08/yslow_1_minimize_http_requests",
       "title": "YSLOW 勉強：1：Minimize HTTP Requests",
       "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
@@ -6024,13 +6077,6 @@
         "authorLink": "https://unsplash.com/photos/IeTmKYls1vM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.688608167927059
-    },
-    {
-      "id": "2013/02/inspect_android_webview_with_weinre",
-      "title": "weinreでAndroidのWebViewをInspectする",
-      "excerpt": "AndroidのWebViewをinspectするという話。調べてたら第3回　weinreを使ったiOS／Androidアプリの動作検証：もっと使おうPhoneGap／Cordova 2.0.0｜gihyo.jp ... 技術評論社にすでに詳細に書いてあったのでそちらも参考に。Remote Debugging Firefox OS with Weinre ✩Mozilla Hacks – the Web developer blogの話だと、Firefox OSでも同じようにinspectができるみたい。",
-      "date": "2013-02-02T13:52:00.000Z",
-      "score": 0.6874564823927952
     }
   ],
   "2012/12/adobe_css_filterlab": [
@@ -7363,18 +7409,22 @@
       "score": 0.707470817198123
     },
     {
+      "id": "2025/replace-picture-element-with-srcset",
+      "title": "Picture要素をやめてsrcsetを使う",
+      "excerpt": "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。",
+      "date": "2025-04-11 17:07",
+      "featured": {
+        "image": "replace-picture-element-with-srcset.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.6649447783531175
+    },
+    {
       "id": "2013/09/ios7safariremote_debugging",
       "title": "iOS7のSafariでremote debuggingできない",
       "excerpt": "iOS7のSafariでremote debuggingをしようとすると、inspect内容が途中で戻ってこなかったり、styleの情報が取得できなかったりする。  Safari on iOS 7 and HTML5: problems, changes and new APIs | Breaking the Mobile Webによると、Safariが6.1じゃないとダメらしい。でも、6.1はプレビュー版でしか使えない（現在の最新は6.0.5）。",
       "date": "2013-09-25T15:30:00.000Z",
       "score": 0.645173252890545
-    },
-    {
-      "id": "2007/08/css",
-      "title": "拡張CSSで角丸コーナーを作る",
-      "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
-      "date": "2007-08-02T16:26:00.000Z",
-      "score": 0.633603880843335
     }
   ],
   "2012/03/pseudo-classes-for-form": [
@@ -12191,11 +12241,15 @@
       "score": 0.6831305959980172
     },
     {
-      "id": "2007/08/yslow_6_move_scripts_to_the_bo",
-      "title": "YSLOW 勉強：6：Move Scripts to the Bottom",
-      "excerpt": "*   6: Move Scripts to the Bottom  rules for high performance web sitesの六つ目。スクリプトはできるだけ（HTMLの）下に移動させよう。これも5と同じくレンダリングに関わる話で、CSSは読み込みきらないとレンダリングが始まらなかったのですが、スクリプト（javascript）の場合は読み込み始めると、そこから下に記述されている内容のレンダリングがストップしてしまうので、できるだけ下に置く方がいい。",
-      "date": "2007-08-09T15:35:00.000Z",
-      "score": 0.6682704597844278
+      "id": "2025/replace-picture-element-with-srcset",
+      "title": "Picture要素をやめてsrcsetを使う",
+      "excerpt": "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。",
+      "date": "2025-04-11 17:07",
+      "featured": {
+        "image": "replace-picture-element-with-srcset.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.6698384741938578
     }
   ],
   "2007/08/yslow": [
@@ -12399,6 +12453,17 @@
       "score": 0.7349789777433681
     },
     {
+      "id": "2025/replace-picture-element-with-srcset",
+      "title": "Picture要素をやめてsrcsetを使う",
+      "excerpt": "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。",
+      "date": "2025-04-11 17:07",
+      "featured": {
+        "image": "replace-picture-element-with-srcset.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7310605453780681
+    },
+    {
       "id": "2004/12/post_38",
       "title": "ブロックとインラインについて",
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
@@ -12408,13 +12473,6 @@
         "author": "chatGPT"
       },
       "score": 0.7294576311164638
-    },
-    {
-      "id": "2007/08/blueprint_a_css_framework",
-      "title": "Blueprint ：CSSのフレームワーク",
-      "excerpt": "*   Raging Thunderbolt. Blueprint 0.4 released",
-      "date": "2007-08-19T02:49:38.000Z",
-      "score": 0.7219577134945443
     }
   ],
   "2007/08/post-2": [
@@ -12844,6 +12902,17 @@
       "score": 0.7575166070165174
     },
     {
+      "id": "2025/replace-picture-element-with-srcset",
+      "title": "Picture要素をやめてsrcsetを使う",
+      "excerpt": "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。",
+      "date": "2025-04-11 17:07",
+      "featured": {
+        "image": "replace-picture-element-with-srcset.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7437121501801695
+    },
+    {
       "id": "2007/08/css",
       "title": "拡張CSSで角丸コーナーを作る",
       "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
@@ -12856,13 +12925,6 @@
       "excerpt": "*   Raging Thunderbolt. Blueprint 0.4 released",
       "date": "2007-08-19T02:49:38.000Z",
       "score": 0.7295224034023118
-    },
-    {
-      "id": "2010/02/css3_column-count",
-      "title": "CSS：column-count で3列レイアウトを作成",
-      "excerpt": "フッター部分を 3 列にしてみようかなと唐突に思いついて、以前から興味あった column-count を使って 3 列にしてみました。Firefox と Safari でのみ対応（IE では 1 列のまま表示されます）。Pico のデザインのバランスを崩している気がしないでもないですけど、まあいいか。",
-      "date": "2010-02-03T22:00:00.000Z",
-      "score": 0.728210484731068
     }
   ],
   "2007/06/post_142": [

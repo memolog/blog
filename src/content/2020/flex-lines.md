@@ -1,7 +1,7 @@
 ---
 title: Flex Lines
 featured:
-  image: flex-lines.png
+  image: flex-lines.webp
   author: chatGPT
 date: 2020-05-30 23:45:00
 excerpt: "今回は6. Flex Linesについて。"

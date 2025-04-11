@@ -2,7 +2,7 @@
 title: 本：レイアウトの法則
 date: 2005-08-14T15:50:06.000Z
 featured:
-  image: art_and_affordance.png
+  image: art_and_affordance.webp
   author: chatGPT
 categories:
   - 本

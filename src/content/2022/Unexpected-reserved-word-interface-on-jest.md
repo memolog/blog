@@ -1,7 +1,7 @@
 ---
 title: Unexpected reserved word 'interface' on jest
 featured:
-  image: Unexpected-reserved-word-interface-on-jest.png
+  image: Unexpected-reserved-word-interface-on-jest.webp
   author: chatGPT
 date: 2022-09-30 06:23:42
 excerpt: "jestを28以降に更新したら、jestの実行時に`Unexpected reserved word 'interface'`みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。"

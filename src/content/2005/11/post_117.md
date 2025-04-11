@@ -2,7 +2,7 @@
 title: 逆説的アプローチがかっこいい
 date: 2005-11-15T17:44:28.000Z
 featured:
-  image: paradoxical_approach.png
+  image: paradoxical_approach.webp
   author: chatGPT
 categories:
   - 雑文

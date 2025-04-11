@@ -75,6 +75,9 @@ if (width > maxWidth) {
     width = Math.floor(height * hRatio);
   }
 }
+
+const webpSrc = `${dir}/${name}/${name}_medium.webp`;
+const webpSrcSet = `${webpSrc}, ${webpSrc.replace(/\.webp$/, "@2x.webp")} 2x`;
 ---
 
 <div class="header__feature" aria-hidden="true">
@@ -84,13 +87,21 @@ if (width > maxWidth) {
         <div style={`background-color: ${color}`}>
           <img
             src={`${dir}/${name}/${name}${ext}`}
-            alt={`${alt}`}
+            alt={alt}
             role="presentation"
             loading="lazy"
-            width={`${width}`}
-            height={`${height}`}
+            width={width}
+            height={height}
           />
         </div>
+      ) : ext === ".webp" ? (
+        <img
+          src={webpSrc}
+          srcset={webpSrcSet}
+          width={width}
+          height={height}
+          alt={alt}
+        />
       ) : (
         <Picture src={src} alt="" width={width} height={height} />
       )

@@ -2,7 +2,7 @@
 title: Featured Image を設置する
 date: 2018-01-08 11:07:38
 featured:
-  image: display-featured-image.png
+  image: display-featured-image.webp
   author: chatGPT
 excerpt: "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。"
 ---

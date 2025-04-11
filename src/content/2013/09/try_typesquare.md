@@ -1,6 +1,9 @@
 ---
 title: TypeSquareを試してみる
 date: 2013-09-10T22:55:00.000Z
+featured:
+  image: trying_typesquare.webp
+  author: chatGPT
 categories:
   - web
 tags:

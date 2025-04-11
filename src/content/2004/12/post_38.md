@@ -2,7 +2,7 @@
 title: ブロックとインラインについて
 date: 2004-12-22T21:15:18.000Z
 featured:
-  image: about_block_and_inline.png
+  image: about_block_and_inline.webp
   author: chatGPT
 categories:
   - web

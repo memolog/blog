@@ -2,7 +2,7 @@
 title: 本：死を生きながら
 date: 2005-07-24T15:36:48.000Z
 featured:
-  image:  death_as_a_way_of_life.png
+  image:  death_as_a_way_of_life.webp
   author: chatGPT
 categories:
   - 本

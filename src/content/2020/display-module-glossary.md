@@ -1,7 +1,7 @@
 ---
 title: Display module glossary
 featured:
-  image: display-module-glossary.png
+  image: display-module-glossary.webp
   author: chatGPT
 date: 2020-03-14 19:02:28
 excerpt: "今回はDisplay ModuleのAppendix A: Glossaryのところで、今までちゃんと確認しなかったもので、気になるところを簡単に確認しようかなと思う。そのうち見直すかも。"

@@ -2,7 +2,7 @@
 title: 要素と属性について
 date: 2004-12-16T05:26:11.000Z
 featured:
-  image: about_element_and_attribute.png
+  image: about_element_and_attribute.webp
   author: chatGPT
 categories:
   - web

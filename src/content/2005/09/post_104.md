@@ -2,7 +2,7 @@
 title: クレールの刺繍を見てきました。
 date: 2005-09-23T18:39:06.000Z
 featured:
-  image: Brodeuses.png
+  image: Brodeuses.webp
   author: chatGPT
 categories:
   - 雑文

@@ -1,12 +1,15 @@
 ---
 title: CSS Selector Performance
 date: 2012-05-27T15:00:00.000Z
+featured:
+  image: css_selector_performance.webp
+  author: chatGPT
 categories:
   - web
 tags:
   - css
   - performance
-excerpt: "Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています"
+excerpt: "Performance CalendarにWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています"
 ---
 
 [Performance Calendar » CSS Selector Performance has changed! (For the better)](http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/)に Webkit で CSS のマッチングの最適化が進んでいるという話が掲載されていて、下記の 4 つ最適化方法について紹介しています（via [\* { box-sizing: border-box } FTW « Paul Irish](http://paulirish.com/2012/box-sizing-border-box-ftw/)）。という話の紹介。

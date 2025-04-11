@@ -2,7 +2,7 @@
 title: 誕生日事典（誕生日辞典）で性格診断
 date: 2004-03-17T22:09:49.000Z
 featured:
-  image: book-of-birthday.png
+  image: book-of-birthday.webp
   author: chatGPT
 categories:
   - 本

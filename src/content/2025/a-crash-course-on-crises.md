@@ -1,7 +1,7 @@
 ---
 title: 本：マクロ金融危機入門
 featured:
-  image: a-crash-course-on-crises-2.png
+  image: a-crash-course-on-crises-2.webp
   author: chatGPT
   color: "#e3ded5"
 date: 2025-03-23 18:21:38

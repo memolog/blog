@@ -2,7 +2,7 @@
 title: ヒトラー〜最期の１２日間〜を見てきました。
 date: 2005-07-16T14:57:23.000Z
 featured:
-  image: Der_Untergang.png
+  image: Der_Untergang.webp
   author: chatGPT
 categories:
   - 雑文

@@ -1,6 +1,9 @@
 ---
-title: デザイン変更
+title: デザイン変更（2010/12）
 date: 2010-12-24T20:00:00.000Z
+featured:
+  image: redesign_2011.webp
+  author: chatGPT
 categories:
   - web
 tags:

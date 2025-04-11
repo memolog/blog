@@ -2,7 +2,7 @@
 title: Hello Astro
 date: 2025/04/09 09:00:00
 featured:
-    image: hello-astro.png
+    image: hello-astro.webp
     author: chatGPT
 excerpt: 2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。
 ---

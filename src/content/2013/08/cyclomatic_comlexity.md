@@ -1,6 +1,9 @@
 ---
 title: Cyclomatic comlexity
 date: 2013-08-03T14:55:55.000Z
+featured:
+  image: cyclomatic_comlexity.webp
+  author: chatGPT
 categories:
   - software testing
 tags:

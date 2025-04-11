@@ -1,6 +1,9 @@
 ---
-title: マージンの相殺とoverflow, clear：both
+title: マージンの相殺とoverflow, clear:both
 date: 2012-06-04T20:15:00.000Z
+featured:
+  image: margin-collapsing-overflow-clearboth.webp
+  author: chatGPT
 categories:
   - web
 tags:

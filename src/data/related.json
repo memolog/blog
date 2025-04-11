@@ -3,30 +3,93 @@
     {
       "id": "2011/12/redesign_2012",
       "title": "デザインを変更（2011/12）",
-      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name=\"viewport\" content=\"width=device-width\" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。",
+      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。",
       "date": "2011-12-24T18:04:00.000Z",
+      "featured": {
+        "image": "redesign_2012.webp",
+        "author": "chatGPT"
+      },
       "score": 0.943574080297006
     },
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9340321112486916
     },
     {
       "id": "2012/05/css_selector_performance",
       "title": "CSS Selector Performance",
-      "excerpt": "Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
+      "excerpt": "Performance CalendarにWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
       "date": "2012-05-27T15:00:00.000Z",
+      "featured": {
+        "image": "css_selector_performance.webp",
+        "author": "chatGPT"
+      },
       "score": 0.928236936098273
     },
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.924663367157843
+    }
+  ],
+  "2025/generate-related-posts": [
+    {
+      "id": "2020/logical-assignment-operators",
+      "title": "Logical AND/OR/Nullish assignment operators",
+      "excerpt": "ES.next Newsの9/1の回のメールにあったLogical assignment operators in JavaScriptについて。TypeScript 4.0 から利用可能。",
+      "date": "2020-09-09T13:03:29.000Z",
+      "featured": {
+        "image": "cath-smith-PF5_cqOQFT4-unsplash",
+        "author": "Cath Smith",
+        "authorLink": "https://unsplash.com/@cathsmithphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.8937562584420892
+    },
+    {
+      "id": "2013/09/try_typesquare",
+      "title": "TypeSquareを試してみる",
+      "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
+      "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8871946870380482
+    },
+    {
+      "id": "2012/06/collapsing_magin_with_overflow_or_clearance",
+      "title": "マージンの相殺とoverflow, clear:both",
+      "excerpt": "垂直方向に隣接するマージンはマージンの相殺（collapsing）が働くけれど、overflow:hiddenがあると相殺されない、という仕様の話。あとclearanceについて。",
+      "date": "2012-06-04T20:15:00.000Z",
+      "featured": {
+        "image": "margin-collapsing-overflow-clearboth.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8849981068820475
+    },
+    {
+      "id": "2013/08/cyclomatic_comlexity",
+      "title": "Cyclomatic comlexity",
+      "excerpt": "Cyclomatic complexity - Wikipedia, the free encyclopedia。日本語では、循環的複雑度 - Wikipediaと呼ぶみたい。",
+      "date": "2013-08-03T14:55:55.000Z",
+      "featured": {
+        "image": "cyclomatic_comlexity.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8816713369292751
     }
   ],
   "2025/a-crash-course-on-crises": [
@@ -36,7 +99,7 @@
       "excerpt": "エブリシング・バブル 終わりと始まりと「エブリシング・バブル」リスクの深層を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。",
       "date": "2024-11-06T06:33:16.000Z",
       "featured": {
-        "image": "after-everything-bubble.png",
+        "image": "after-everything-bubble.webp",
         "author": "chatGPT"
       },
       "score": 0.9378923081367786
@@ -47,7 +110,7 @@
       "excerpt": " 「危ない食卓　- スーパーマーケットはお好き？」という本を読みました。食の安全性について、食品ラベルとトレーサビリティ（追跡可能性）、配送システムと環境問題・フードマイル、低賃金労働、食の砂漠化、グローバル企業の購買力と搾取・フェアトレード、関税と保護政策など、多角的な視点で問題提議しています。本文は食品加工工場への潜入取材や現地でのインタビューが中心で臨場感がありました。その上難しい内容のわりに平易な文面でとても読みやすかったです。",
       "date": "2005-06-26T16:00:00.000Z",
       "featured": {
-        "image": "not_on_the_label.png",
+        "image": "not_on_the_label.webp",
         "author": "chatGPT"
       },
       "score": 0.9325918507592137
@@ -58,7 +121,7 @@
       "excerpt": "「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。",
       "date": "2012-03-17T05:00:00.000Z",
       "featured": {
-        "image": "the_big_short.png",
+        "image": "the_big_short.webp",
         "author": "chatGPT"
       },
       "score": 0.9200784120001195
@@ -189,7 +252,7 @@
       "excerpt": "「第四の革命」を読んだ。情報通信技術が、従来の「記録する・履歴をとる」という単純な伝達手段であったものから飛躍して、記録・履歴のデータが処理され、情報として再利用されるようになった。それが様々なテクノロジーに内包されるにつれ、情報通信技術が単なるツールという枠を越えて、情報世界（情報圏・インフォスフィア）を構成するようになっている。インフォスフィアがどのように個々人や世界に影響をもたらすのか、といった内容である。",
       "date": "2019-05-02T08:41:09.000Z",
       "featured": {
-        "image": "book-the-4th-revolution.png",
+        "image": "book-the-4th-revolution.webp",
         "author": "chatGPT"
       },
       "score": 0.9108110194230903
@@ -216,7 +279,7 @@
       "excerpt": "武家政権成立史では、12世紀に始まった気候の冷涼化が、武家政権の成立にどのような影響を与えたかを探究している。本書では、気候冷涼化による作物の不作が、飢饉を頻発、封戸収入の減少を引き起こし、収入を確保するために荘園が発展し、それにより国司による徴税と荘園権益の衝突が強まり、武力を必要とする時代を生み出していったしている。歴史とは、人間の意図・行動が歴史を作り、動かすというイメージが強いけれど、気候変動という人間には抗いがたい要因が社会的混乱を引き起こし、歴史を形作るという視点は新鮮で説得力があった。",
       "date": "2024-09-29T19:00:47.000Z",
       "featured": {
-        "image": "origin-of-samurai.png",
+        "image": "origin-of-samurai.webp",
         "author": "chatGPT"
       },
       "score": 0.5748981183612003
@@ -236,7 +299,7 @@
       "excerpt": "マクロ金融危機入門を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対処すべきかという政策の議論が展開されている。原題は「A Crash Course on Crises」で、まさに危機の入門書または短期集中講座といった内容になっている。",
       "date": "2025-03-23T18:21:38.000Z",
       "featured": {
-        "image": "a-crash-course-on-crises-2.png",
+        "image": "a-crash-course-on-crises-2.webp",
         "author": "chatGPT",
         "color": "#e3ded5"
       },
@@ -248,7 +311,7 @@
       "excerpt": " 「危ない食卓　- スーパーマーケットはお好き？」という本を読みました。食の安全性について、食品ラベルとトレーサビリティ（追跡可能性）、配送システムと環境問題・フードマイル、低賃金労働、食の砂漠化、グローバル企業の購買力と搾取・フェアトレード、関税と保護政策など、多角的な視点で問題提議しています。本文は食品加工工場への潜入取材や現地でのインタビューが中心で臨場感がありました。その上難しい内容のわりに平易な文面でとても読みやすかったです。",
       "date": "2005-06-26T16:00:00.000Z",
       "featured": {
-        "image": "not_on_the_label.png",
+        "image": "not_on_the_label.webp",
         "author": "chatGPT"
       },
       "score": 0.9375524611211545
@@ -266,7 +329,7 @@
       "excerpt": "「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。",
       "date": "2012-03-17T05:00:00.000Z",
       "featured": {
-        "image": "the_big_short.png",
+        "image": "the_big_short.webp",
         "author": "chatGPT"
       },
       "score": 0.9209797991647053
@@ -330,7 +393,7 @@
       "excerpt": "WEBの制作をしていると良く出てくるのが、「要素」と「属性」という言葉。専門用語ではなく単なる日本語として扱われているためか、はたまた常識として認知されているためか、その意味はWEB制作本の片隅にも載りません。でもWEB制作、特にHTML制作において「要素」と「属性」の区別がつかないと難儀します。抽象的な言葉なので分からないままにしておくと何が「要素」で何が「属性」なのか分からなくなってきます。一度その定義のようなものを理解しておくとWEBの制作はぐっと楽になります。",
       "date": "2004-12-16T05:26:11.000Z",
       "featured": {
-        "image": "about_element_and_attribute.png",
+        "image": "about_element_and_attribute.webp",
         "author": "chatGPT"
       },
       "score": 0.6336748686323028
@@ -475,7 +538,7 @@
       "excerpt": " 「危ない食卓　- スーパーマーケットはお好き？」という本を読みました。食の安全性について、食品ラベルとトレーサビリティ（追跡可能性）、配送システムと環境問題・フードマイル、低賃金労働、食の砂漠化、グローバル企業の購買力と搾取・フェアトレード、関税と保護政策など、多角的な視点で問題提議しています。本文は食品加工工場への潜入取材や現地でのインタビューが中心で臨場感がありました。その上難しい内容のわりに平易な文面でとても読みやすかったです。",
       "date": "2005-06-26T16:00:00.000Z",
       "featured": {
-        "image": "not_on_the_label.png",
+        "image": "not_on_the_label.webp",
         "author": "chatGPT"
       },
       "score": 0.9068868160582525
@@ -483,8 +546,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9068127267840056
     },
     {
@@ -600,6 +667,10 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.893806496476763
     },
     {
@@ -621,6 +692,10 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8037072444774213
     },
     {
@@ -669,6 +744,17 @@
       "score": 0.8961337964833567
     },
     {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8937562584420892
+    },
+    {
       "id": "2014/08/convert_indexof_result_with_bitwise_operators",
       "title": "indexOf とビット演算子",
       "excerpt": "String.prototype.indexOf() - JavaScript | MDNは、Stringの中の文字があったら、その文字の開始位置を返して、ない場合は「-1」を返します。",
@@ -681,18 +767,6 @@
       "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
       "date": "2012-05-29T15:00:00.000Z",
       "score": 0.870726892945765
-    },
-    {
-      "id": "2020/display-value-property",
-      "title": "The display value property (outside / inside)",
-      "excerpt": "Inner and outer display typesの続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて確認していく。",
-      "date": "2020-03-07T17:25:00.000Z",
-      "featured": {
-        "image": "pawel-czerwinski-31xVIgIXbws-unsplash",
-        "author": "Paweł Czerwiński",
-        "authorLink": "https://unsplash.com/@pawel_czerwinski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.8697512827099824
     }
   ],
   "2020/load-jquery-in-developer-console": [
@@ -889,7 +963,7 @@
       "excerpt": "今回はDisplay ModuleのAppendix A: Glossaryのところで、今までちゃんと確認しなかったもので、気になるところを簡単に確認しようかなと思う。そのうち見直すかも。",
       "date": "2020-03-14T19:02:28.000Z",
       "featured": {
-        "image": "display-module-glossary.png",
+        "image": "display-module-glossary.webp",
         "author": "chatGPT"
       },
       "score": 0.6069805129357057
@@ -926,7 +1000,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.9022539693751384
@@ -999,7 +1073,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.9014089308720123
@@ -1060,7 +1134,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.8671908599029566
@@ -1230,7 +1304,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.9217920945442319
@@ -1267,7 +1341,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.9261861536577106
@@ -1411,7 +1485,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.8906125774572545
@@ -1484,7 +1558,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.888531691088233
@@ -1540,7 +1614,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.8881990971990614
@@ -1620,9 +1694,13 @@
     },
     {
       "id": "2012/06/collapsing_magin_with_overflow_or_clearance",
-      "title": "マージンの相殺とoverflow, clear：both",
+      "title": "マージンの相殺とoverflow, clear:both",
       "excerpt": "垂直方向に隣接するマージンはマージンの相殺（collapsing）が働くけれど、overflow:hiddenがあると相殺されない、という仕様の話。あとclearanceについて。",
       "date": "2012-06-04T20:15:00.000Z",
+      "featured": {
+        "image": "margin-collapsing-overflow-clearboth.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9000537288544765
     }
   ],
@@ -1800,9 +1878,13 @@
     },
     {
       "id": "2012/06/collapsing_magin_with_overflow_or_clearance",
-      "title": "マージンの相殺とoverflow, clear：both",
+      "title": "マージンの相殺とoverflow, clear:both",
       "excerpt": "垂直方向に隣接するマージンはマージンの相殺（collapsing）が働くけれど、overflow:hiddenがあると相殺されない、という仕様の話。あとclearanceについて。",
       "date": "2012-06-04T20:15:00.000Z",
+      "featured": {
+        "image": "margin-collapsing-overflow-clearboth.webp",
+        "author": "chatGPT"
+      },
       "score": 0.823501434569388
     }
   ],
@@ -1877,7 +1959,7 @@
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
       "date": "2004-12-22T21:15:18.000Z",
       "featured": {
-        "image": "about_block_and_inline.png",
+        "image": "about_block_and_inline.webp",
         "author": "chatGPT"
       },
       "score": 0.8522955195275179
@@ -1938,7 +2020,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.8494848852316843
@@ -2145,7 +2227,7 @@
       "excerpt": "jestを28以降に更新したら、jestの実行時に`Unexpected reserved word 'interface'`みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。",
       "date": "2022-09-30T06:23:42.000Z",
       "featured": {
-        "image": "Unexpected-reserved-word-interface-on-jest.png",
+        "image": "Unexpected-reserved-word-interface-on-jest.webp",
         "author": "chatGPT"
       },
       "score": 0.6246197217272986
@@ -2255,7 +2337,7 @@
       "excerpt": "今回は6. Flex Linesについて。",
       "date": "2020-05-30T23:45:00.000Z",
       "featured": {
-        "image": "flex-lines.png",
+        "image": "flex-lines.webp",
         "author": "chatGPT"
       },
       "score": 0.9118888861699253
@@ -2324,8 +2406,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9003480292037134
     },
     {
@@ -2401,15 +2487,23 @@
     {
       "id": "2011/12/redesign_2012",
       "title": "デザインを変更（2011/12）",
-      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name=\"viewport\" content=\"width=device-width\" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。",
+      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。",
       "date": "2011-12-24T18:04:00.000Z",
+      "featured": {
+        "image": "redesign_2012.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9423817268383021
     },
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9356085588127517
     },
     {
@@ -2435,9 +2529,13 @@
     },
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.917166633059482
     },
     {
@@ -2458,7 +2556,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.9139189234491253
@@ -2497,16 +2595,24 @@
   "2018/redirect-to-my-old-blog": [
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9174515696091893
     },
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9100045130777655
     },
     {
@@ -2524,8 +2630,12 @@
     {
       "id": "2011/12/redesign_2012",
       "title": "デザインを変更（2011/12）",
-      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name=\"viewport\" content=\"width=device-width\" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。",
+      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。",
       "date": "2011-12-24T18:04:00.000Z",
+      "featured": {
+        "image": "redesign_2012.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9035924133678825
     }
   ],
@@ -2536,7 +2646,7 @@
       "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
       "date": "2018-01-08T11:07:38.000Z",
       "featured": {
-        "image": "display-featured-image.png",
+        "image": "display-featured-image.webp",
         "author": "chatGPT"
       },
       "score": 0.8471551978911901
@@ -2672,7 +2782,7 @@
       "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
       "date": "2018-01-08T11:07:38.000Z",
       "featured": {
-        "image": "display-featured-image.png",
+        "image": "display-featured-image.webp",
         "author": "chatGPT"
       },
       "score": 0.8688031257012502
@@ -2756,7 +2866,7 @@
       "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
       "date": "2018-01-08T11:07:38.000Z",
       "featured": {
-        "image": "display-featured-image.png",
+        "image": "display-featured-image.webp",
         "author": "chatGPT"
       },
       "score": 0.7364484292395422
@@ -2785,8 +2895,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9345418337240771
     },
     {
@@ -2798,9 +2912,13 @@
     },
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9195169120665673
     },
     {
@@ -2844,7 +2962,7 @@
       "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
       "date": "2018-01-08T11:07:38.000Z",
       "featured": {
-        "image": "display-featured-image.png",
+        "image": "display-featured-image.webp",
         "author": "chatGPT"
       },
       "score": 0.8516320502873275
@@ -3042,7 +3160,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.8373084533524282
@@ -3075,6 +3193,10 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9032999445210985
     },
     {
@@ -3090,7 +3212,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.8973714878943261
@@ -3179,16 +3301,20 @@
       "excerpt": "Bubble Sort in JavaScriptの記事から引き続き。内容はほぼ選択ソートから抜粋してるだけなので、詳しくはそちらを参照。JavaScript上で自前のソートを実装する意味はあまりないのだが、試しに選択ソートを実装してみた。",
       "date": "2018-08-05T05:57:21.000Z",
       "featured": {
-        "image": "selection-sort-in-javascript.png",
+        "image": "selection-sort-in-javascript.webp",
         "author": "chatGPT"
       },
       "score": 0.9326692275583794
     },
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9211328899282485
     }
   ],
@@ -3241,7 +3367,7 @@
       "excerpt": "Bubble Sort in JavaScriptの記事から引き続き。内容はほぼ選択ソートから抜粋してるだけなので、詳しくはそちらを参照。JavaScript上で自前のソートを実装する意味はあまりないのだが、試しに選択ソートを実装してみた。",
       "date": "2018-08-05T05:57:21.000Z",
       "featured": {
-        "image": "selection-sort-in-javascript.png",
+        "image": "selection-sort-in-javascript.webp",
         "author": "chatGPT"
       },
       "score": 0.8824188515227566
@@ -3275,6 +3401,17 @@
       "score": 0.8185653254348192
     },
     {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7846897203357515
+    },
+    {
       "id": "2020/css-property-conventions",
       "title": "CSS property conventions",
       "excerpt": "前回のThe display property definition in CSS2に引き続き。1.2. Valuesに、プロパティの仕様については1.4.2 CSS property definitionsの表記に従うと書いてあるので、そのあたりを確認していく。",
@@ -3292,18 +3429,6 @@
       "excerpt": "たとえば、画像ファイルが上書きされているかどうかを確認したい場合などで、画像のsrcなどには差分がなく画像データを比較しないとその動作の正否が分からないとか、そういうときはやはり画像データを評価して差を見るしかない。",
       "date": "2011-09-11T13:36:00.000Z",
       "score": 0.7733611428327883
-    },
-    {
-      "id": "2020/display-value-property-3",
-      "title": "The display value property (box / legacy)",
-      "excerpt": "The display value property (list-item / internal)の続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて、残りのboxとlegacyについて確認していく。",
-      "date": "2020-03-09T18:35:47.000Z",
-      "featured": {
-        "image": "whoisbenjamin-ApJp5Nk24a0-unsplash",
-        "author": "Whoisbenjamin",
-        "authorLink": "https://unsplash.com/@whoisbenjamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.7733515461074972
     }
   ],
   "2018/add-json-ld-structured-data": [
@@ -3400,7 +3525,7 @@
       "excerpt": "Bubble Sort in JavaScriptの記事から引き続き。内容はほぼ選択ソートから抜粋してるだけなので、詳しくはそちらを参照。JavaScript上で自前のソートを実装する意味はあまりないのだが、試しに選択ソートを実装してみた。",
       "date": "2018-08-05T05:57:21.000Z",
       "featured": {
-        "image": "selection-sort-in-javascript.png",
+        "image": "selection-sort-in-javascript.webp",
         "author": "chatGPT"
       },
       "score": 0.8905611430022786
@@ -3564,8 +3689,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9070045755227167
     },
     {
@@ -3606,8 +3735,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9147651154204268
     },
     {
@@ -3648,8 +3781,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8855754055494381
     },
     {
@@ -4031,18 +4168,22 @@
       "score": 0.8405197184822056
     },
     {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8397192130779336
+    },
+    {
       "id": "2013/01/jquery_peformance_about_creating_element",
       "title": "jQueryで要素を作成するときのパフォーマンス",
       "excerpt": "jQueryで要素を作成する場合、jQuery()のExampleを参考にすると、作り方としては下記の二通りの方法があります。",
       "date": "2013-01-15T16:15:00.000Z",
       "score": 0.8230153274372156
-    },
-    {
-      "id": "2016/01/angular2_with_decorators",
-      "title": "Angular2とDecorators",
-      "excerpt": "Decorators は ECMAScript で Propose となっている実装で、Angular 2 と TypeScript を使った実装ではよく出てくる。 Exploring ES2016 Decorators -- Google Developers -- Mediumを参考にすると、定義したfunction名の頭に「@」をつけて、使いたいclassやpropertyの前に記述するらしい。",
-      "date": "2016-01-13T16:15:00.000Z",
-      "score": 0.8219907435491937
     }
   ],
   "2013/12/update_xcode_deployment_info_with_node_xcode": [
@@ -4078,7 +4219,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.822304499190553
@@ -4112,7 +4253,7 @@
       "excerpt": "ほとんどの訪問者がWEBサイトに情報を求めて訪れます。訪問者にとって便利なサイトとは、求めている情報が簡単に発見でき、そしてその情報が役に立つことです。WEBサイトの価値を向上させるには、両者を向上させることが肝要です。使いやすいWEBサイトでも情報が役立たなければ意味がないですし、有益な情報が載っていても見つけられなければ使いようがありません。",
       "date": "2004-12-29T15:54:32.000Z",
       "featured": {
-        "image": "about_writing.png",
+        "image": "about_writing.webp",
         "author": "chatGPT"
       },
       "score": 0.913270760833918
@@ -4132,7 +4273,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.8708691173816718
@@ -4247,6 +4388,10 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7484363492977711
     },
     {
@@ -4316,7 +4461,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.6651607112180591
@@ -4412,9 +4557,13 @@
   "2013/09/try_typesquare": [
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9122940727769608
     },
     {
@@ -4423,7 +4572,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.9108083163127464
@@ -4679,7 +4828,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.9230772401251333
@@ -4693,6 +4842,17 @@
     }
   ],
   "2013/08/spy_on_requirejs_module": [
+    {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8039027389025868
+    },
     {
       "id": "2020/logical-assignment-operators",
       "title": "Logical AND/OR/Nullish assignment operators",
@@ -4723,18 +4883,6 @@
       "excerpt": "jQueryで要素を作成する場合、jQuery()のExampleを参考にすると、作り方としては下記の二通りの方法があります。",
       "date": "2013-01-15T16:15:00.000Z",
       "score": 0.7899673597938565
-    },
-    {
-      "id": "2018/convert-multiple-primitive-images-at-once",
-      "title": "Primitiveの変換をまとめて行う",
-      "excerpt": "Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。",
-      "date": "2018-01-30T22:50:15.000Z",
-      "featured": {
-        "image": "kazuend-25767",
-        "author": "kazuend",
-        "authorLink": "https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.7844886698422749
     }
   ],
   "2013/08/specificity_of_pseudo_class": [
@@ -4757,6 +4905,10 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8527464636226203
     },
     {
@@ -4815,6 +4967,10 @@
       "title": "Cyclomatic comlexity",
       "excerpt": "Cyclomatic complexity - Wikipedia, the free encyclopedia。日本語では、循環的複雑度 - Wikipediaと呼ぶみたい。",
       "date": "2013-08-03T14:55:55.000Z",
+      "featured": {
+        "image": "cyclomatic_comlexity.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8918685606256318
     },
     {
@@ -4904,8 +5060,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8027558416191694
     },
     {
@@ -4984,6 +5144,17 @@
       "score": 0.8918685606256318
     },
     {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8816713369292751
+    },
+    {
       "id": "2018/merge-sort-in-javascript",
       "title": "Merge Sort in JavaScript",
       "excerpt": "Insertion Sort in JavaScriptからの引き続き。内容はMerge sortからの抜粋なので、詳細はそちらを参照。",
@@ -5006,13 +5177,6 @@
         "authorLink": "https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.8586079622899981
-    },
-    {
-      "id": "2013/02/webkit-overflow-scrolling-touch",
-      "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
-      "date": "2013-02-27T15:58:00.000Z",
-      "score": 0.8573154089611228
     }
   ],
   "2013/08/chrome_workspace": [
@@ -5066,8 +5230,12 @@
     {
       "id": "2012/05/css_selector_performance",
       "title": "CSS Selector Performance",
-      "excerpt": "Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
+      "excerpt": "Performance CalendarにWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
       "date": "2012-05-27T15:00:00.000Z",
+      "featured": {
+        "image": "css_selector_performance.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9164985546331699
     },
     {
@@ -5106,7 +5274,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.8902625245881418
@@ -5138,7 +5306,7 @@
       "excerpt": "4.10.18.7.1 Autofilling form controls: the autocomplete attributeには、autocomplete属性には2つの利用方法があると書かれている。",
       "date": "2022-12-05T09:00:00.000Z",
       "featured": {
-        "image": "the-two-ways-to-use-autocomplete-attribute.png",
+        "image": "the-two-ways-to-use-autocomplete-attribute.webp",
         "author": "chatGPT"
       },
       "score": 0.5196472203234781
@@ -5177,7 +5345,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.8798555806799676
@@ -5368,7 +5536,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.8653456853560585
@@ -5655,7 +5823,7 @@
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
       "date": "2004-12-22T21:15:18.000Z",
       "featured": {
-        "image": "about_block_and_inline.png",
+        "image": "about_block_and_inline.webp",
         "author": "chatGPT"
       },
       "score": 0.8350915024913305
@@ -5792,7 +5960,7 @@
       "excerpt": "モンゴル南部に居住する遊牧民とらくだの暮らし・文化を追ったドキュメンタリーです。初産の苦しみ故か子らくだを遠ざける母らくだに対して、子らくだを受け入れ乳を与えるようにモンゴルの家族たちが手段を尽くしていくというのが話の中心。母らくだに近づけず子らくだが遠くの方で独り寂しそうな声で泣くというシーンがあるのですが、それが本当に寂しそうで泣けてきました。",
       "date": "2004-11-08T03:38:03.000Z",
       "featured": {
-        "image": "weeping_camel.png",
+        "image": "weeping_camel.webp",
         "author": "chatGPT"
       },
       "score": 0.27181180321466625
@@ -5944,7 +6112,7 @@
       "excerpt": "このブログは今はGitHub Pages上で公開しているが、AWS上でドメイン取得して公開しようかな、でもお金かかるしどうしようかなと微妙に悩んでいた。AWSにしても個人ブログのトラフィックなんて程度が知れているので、たいした金額になることはないとは思いつつも、いつ課金されるかわからないから状況をモニタリングしなければならないというのが圧倒的に面倒臭い... ただその日のメモを残したいだけだというのに。",
       "date": "2018-01-17T06:08:02.000Z",
       "featured": {
-        "image": "redirect-to-my-old-blog.png",
+        "image": "redirect-to-my-old-blog.webp",
         "author": "chatGPT"
       },
       "score": 0.8113813641816998
@@ -5952,8 +6120,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.803973611438308
     },
     {
@@ -5965,9 +6137,13 @@
     },
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7984837887516925
     }
   ],
@@ -6052,6 +6228,10 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8851973056277753
     },
     {
@@ -6072,7 +6252,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.8806184152087966
@@ -6244,7 +6424,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.8049014491453003
@@ -6303,8 +6483,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8774098226532498
     },
     {
@@ -6430,7 +6614,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.9088778496994593
@@ -6438,8 +6622,12 @@
     {
       "id": "2012/05/css_selector_performance",
       "title": "CSS Selector Performance",
-      "excerpt": "Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
+      "excerpt": "Performance CalendarにWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
       "date": "2012-05-27T15:00:00.000Z",
+      "featured": {
+        "image": "css_selector_performance.webp",
+        "author": "chatGPT"
+      },
       "score": 0.907242365765612
     }
   ],
@@ -6457,7 +6645,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.9130904710121873
@@ -6467,13 +6655,21 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9090667431566355
     },
     {
       "id": "2011/12/redesign_2012",
       "title": "デザインを変更（2011/12）",
-      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name=\"viewport\" content=\"width=device-width\" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。",
+      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。",
       "date": "2011-12-24T18:04:00.000Z",
+      "featured": {
+        "image": "redesign_2012.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9014975512081166
     }
   ],
@@ -6495,6 +6691,10 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8793057645347107
     },
     {
@@ -6547,8 +6747,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8985038627134677
     }
   ],
@@ -6573,23 +6777,22 @@
       "score": 0.8923227967401816
     },
     {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8849981068820475
+    },
+    {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
       "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
       "date": "2013-02-27T15:58:00.000Z",
       "score": 0.882099694084488
-    },
-    {
-      "id": "2020/flex-item-margin-padding-and-z-ordering",
-      "title": "Flex Item Margin, Padding and Z-Ordering",
-      "excerpt": "今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて",
-      "date": "2020-04-04T19:27:59.000Z",
-      "featured": {
-        "image": "marc-klemm-rXDoLi1nqJo-unsplash",
-        "author": "Marc Klemm",
-        "authorLink": "https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.8815324864634657
     }
   ],
   "2012/06/around_social_buttons": [
@@ -6636,7 +6839,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.8929370147790172
@@ -6667,8 +6870,12 @@
     {
       "id": "2012/05/css_selector_performance",
       "title": "CSS Selector Performance",
-      "excerpt": "Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
+      "excerpt": "Performance CalendarにWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
       "date": "2012-05-27T15:00:00.000Z",
+      "featured": {
+        "image": "css_selector_performance.webp",
+        "author": "chatGPT"
+      },
       "score": 0.918350838988746
     },
     {
@@ -6694,9 +6901,13 @@
   "2012/05/last-child-required-the-last-child-in-the-parent-element": [
     {
       "id": "2012/06/collapsing_magin_with_overflow_or_clearance",
-      "title": "マージンの相殺とoverflow, clear：both",
+      "title": "マージンの相殺とoverflow, clear:both",
       "excerpt": "垂直方向に隣接するマージンはマージンの相殺（collapsing）が働くけれど、overflow:hiddenがあると相殺されない、という仕様の話。あとclearanceについて。",
       "date": "2012-06-04T20:15:00.000Z",
+      "featured": {
+        "image": "margin-collapsing-overflow-clearboth.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8923227967401816
     },
     {
@@ -6732,8 +6943,12 @@
     {
       "id": "2012/05/css_selector_performance",
       "title": "CSS Selector Performance",
-      "excerpt": "Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
+      "excerpt": "Performance CalendarにWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
       "date": "2012-05-27T15:00:00.000Z",
+      "featured": {
+        "image": "css_selector_performance.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9259110187769898
     },
     {
@@ -6772,6 +6987,17 @@
       "score": 0.8776597119937064
     },
     {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8746614670518946
+    },
+    {
       "id": "2018/bubble-sort-in-javascript",
       "title": "Bubble Sort in JavaScript",
       "excerpt": "Array.prototype.sort についてとTypedArray.prototype.sort についてで書いたようにビルトインされているsortメソッドが効率的なソートを実行できるように実装されているので、JavaScript上で自前のソートを実装する意味はあまりないのだけど、試しにバブルソートをJavaScript上で作ってみた。",
@@ -6782,17 +7008,6 @@
         "authorLink": "https://unsplash.com/photos/79mNMAvSORg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.8680375855462136
-    },
-    {
-      "id": "2018/display-featured-image",
-      "title": "Featured Image を設置する",
-      "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
-      "date": "2018-01-08T11:07:38.000Z",
-      "featured": {
-        "image": "display-featured-image.png",
-        "author": "chatGPT"
-      },
-      "score": 0.8617811431284073
     }
   ],
   "2012/05/favicons_next_to_external_link": [
@@ -6837,7 +7052,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.928236936098273
@@ -6845,8 +7060,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9266124386083266
     },
     {
@@ -6871,7 +7090,7 @@
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
       "date": "2004-12-22T21:15:18.000Z",
       "featured": {
-        "image": "about_block_and_inline.png",
+        "image": "about_block_and_inline.webp",
         "author": "chatGPT"
       },
       "score": 0.8637417268645075
@@ -7094,7 +7313,7 @@
       "excerpt": "オスロ合意からラビン暗殺、自爆テロの始まり、第二次インティファーダ（民衆蜂起）、9.11同時多発テロ、シャロン再選など、1993年から2003年までのイスラエル・パレスチナ情勢を伝える本です。内容は現地のルポのようなもので歴史的背景の詳述などはありませんが、各章の冒頭に歴史的な説明が簡単に入っているのでここ10年の情勢の概観するには良い本かと思います。",
       "date": "2005-07-24T15:36:48.000Z",
       "featured": {
-        "image": "death_as_a_way_of_life.png",
+        "image": "death_as_a_way_of_life.webp",
         "author": "chatGPT"
       },
       "score": 0.5945747182086447
@@ -7114,7 +7333,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.943574080297006
@@ -7140,9 +7359,13 @@
     },
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9255810991858562
     }
   ],
@@ -7237,7 +7460,7 @@
       "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
       "date": "2018-01-08T11:07:38.000Z",
       "featured": {
-        "image": "display-featured-image.png",
+        "image": "display-featured-image.webp",
         "author": "chatGPT"
       },
       "score": 0.8466854574064497
@@ -7339,7 +7562,7 @@
       "excerpt": "「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。",
       "date": "2012-03-17T05:00:00.000Z",
       "featured": {
-        "image": "the_big_short.png",
+        "image": "the_big_short.webp",
         "author": "chatGPT"
       },
       "score": 0.9536211888450319
@@ -7363,8 +7586,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8515531020954595
     },
     {
@@ -7466,7 +7693,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.9369518532040126
@@ -7556,7 +7783,7 @@
       "excerpt": "本文中に何度も引用されるジェームス・ギブソンの理論は抽象的で高度な箇所もあって、理解できないところも多々ありましたが、それでもなんとなくぼやーっと概観だけはつかめたように思います。",
       "date": "2005-08-14T15:50:06.000Z",
       "featured": {
-        "image": "art_and_affordance.png",
+        "image": "art_and_affordance.webp",
         "author": "chatGPT"
       },
       "score": 0.903285749749966
@@ -7603,8 +7830,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9383195633268989
     },
     {
@@ -7636,7 +7867,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.8920653476131654
@@ -7689,7 +7920,7 @@
       "excerpt": "（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir '/root/.npm/_logs'` というエラーのWARNが発生する。",
       "date": "2022-11-07T17:30:00.000Z",
       "featured": {
-        "image": "npm-script-warns-permission-errors-in-the-cache-directory.png",
+        "image": "npm-script-warns-permission-errors-in-the-cache-directory.webp",
         "author": "chatGPT"
       },
       "score": 0.8166768434183224
@@ -7862,7 +8093,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.9340321112486916
@@ -7870,8 +8101,12 @@
     {
       "id": "2011/12/redesign_2012",
       "title": "デザインを変更（2011/12）",
-      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name=\"viewport\" content=\"width=device-width\" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。",
+      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。",
       "date": "2011-12-24T18:04:00.000Z",
+      "featured": {
+        "image": "redesign_2012.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9255810991858562
     },
     {
@@ -7920,7 +8155,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.8895208134070276
@@ -7928,8 +8163,12 @@
     {
       "id": "2011/12/redesign_2012",
       "title": "デザインを変更（2011/12）",
-      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name=\"viewport\" content=\"width=device-width\" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。",
+      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。",
       "date": "2011-12-24T18:04:00.000Z",
+      "featured": {
+        "image": "redesign_2012.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8830446152111969
     }
   ],
@@ -7954,7 +8193,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.9369962487339152
@@ -8105,7 +8344,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.8873313639337326
@@ -8248,7 +8487,7 @@
       "excerpt": "武家政権成立史では、12世紀に始まった気候の冷涼化が、武家政権の成立にどのような影響を与えたかを探究している。本書では、気候冷涼化による作物の不作が、飢饉を頻発、封戸収入の減少を引き起こし、収入を確保するために荘園が発展し、それにより国司による徴税と荘園権益の衝突が強まり、武力を必要とする時代を生み出していったしている。歴史とは、人間の意図・行動が歴史を作り、動かすというイメージが強いけれど、気候変動という人間には抗いがたい要因が社会的混乱を引き起こし、歴史を形作るという視点は新鮮で説得力があった。",
       "date": "2024-09-29T19:00:47.000Z",
       "featured": {
-        "image": "origin-of-samurai.png",
+        "image": "origin-of-samurai.webp",
         "author": "chatGPT"
       },
       "score": 0.8344460665968843
@@ -8303,7 +8542,7 @@
       "excerpt": "「第四の革命」を読んだ。情報通信技術が、従来の「記録する・履歴をとる」という単純な伝達手段であったものから飛躍して、記録・履歴のデータが処理され、情報として再利用されるようになった。それが様々なテクノロジーに内包されるにつれ、情報通信技術が単なるツールという枠を越えて、情報世界（情報圏・インフォスフィア）を構成するようになっている。インフォスフィアがどのように個々人や世界に影響をもたらすのか、といった内容である。",
       "date": "2019-05-02T08:41:09.000Z",
       "featured": {
-        "image": "book-the-4th-revolution.png",
+        "image": "book-the-4th-revolution.webp",
         "author": "chatGPT"
       },
       "score": 0.8804729471677541
@@ -8337,7 +8576,7 @@
       "excerpt": "「2046」とは主人公のチャウが映画の中で創り上げる小説のタイトルであり、小説の世界でミステリートレインが目指す先でもあります。チャウはミステリートレインが2046に向かう途中で起きる出来事として、彼の身の回りに起きた出来事を比喩的に表現していきます。小説の中の登場人物は彼の身の周りにいる人たちだけれども、小説の中の登場人物は彼というフィルターを通して描かれているから、つまるところそれは彼自身。現実世界で起きた出来事が、「2046」という小説の世界にも反映され、書き加えられていきます。そしてチャウの中に出てきた一つの結論が、小説の結末となって表現されていきます。",
       "date": "2004-11-10T00:08:33.000Z",
       "featured": {
-        "image": "2046.png",
+        "image": "2046.webp",
         "author": "chatGPT"
       },
       "score": 0.503594714849873
@@ -8494,7 +8733,7 @@
       "excerpt": "本文中に何度も引用されるジェームス・ギブソンの理論は抽象的で高度な箇所もあって、理解できないところも多々ありましたが、それでもなんとなくぼやーっと概観だけはつかめたように思います。",
       "date": "2005-08-14T15:50:06.000Z",
       "featured": {
-        "image": "art_and_affordance.png",
+        "image": "art_and_affordance.webp",
         "author": "chatGPT"
       },
       "score": 0.8570471282853883
@@ -8593,7 +8832,7 @@
       "excerpt": "因果推論の科学を読んだので簡単に紹介。因果推論とは、原因と結果の関係を理解し、それを推論するための方法論。従来の統計学では「XとYの相関関係」を説明できても、実際に知りたいのは「XがYにどう影響を与えているか？」という因果関係だったりする。因果推論は、その点で画期的なアプローチを示している。",
       "date": "2024-09-22T11:32:11.000Z",
       "featured": {
-        "image": "the-book-of-why.png",
+        "image": "the-book-of-why.webp",
         "author": "chatGPT"
       },
       "score": 0.9225239300957087
@@ -8604,7 +8843,7 @@
       "excerpt": " 「危ない食卓　- スーパーマーケットはお好き？」という本を読みました。食の安全性について、食品ラベルとトレーサビリティ（追跡可能性）、配送システムと環境問題・フードマイル、低賃金労働、食の砂漠化、グローバル企業の購買力と搾取・フェアトレード、関税と保護政策など、多角的な視点で問題提議しています。本文は食品加工工場への潜入取材や現地でのインタビューが中心で臨場感がありました。その上難しい内容のわりに平易な文面でとても読みやすかったです。",
       "date": "2005-06-26T16:00:00.000Z",
       "featured": {
-        "image": "not_on_the_label.png",
+        "image": "not_on_the_label.webp",
         "author": "chatGPT"
       },
       "score": 0.9218179197679548
@@ -8737,6 +8976,10 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8468614624457983
     }
   ],
@@ -8777,7 +9020,7 @@
       "excerpt": "このブログは今はGitHub Pages上で公開しているが、AWS上でドメイン取得して公開しようかな、でもお金かかるしどうしようかなと微妙に悩んでいた。AWSにしても個人ブログのトラフィックなんて程度が知れているので、たいした金額になることはないとは思いつつも、いつ課金されるかわからないから状況をモニタリングしなければならないというのが圧倒的に面倒臭い... ただその日のメモを残したいだけだというのに。",
       "date": "2018-01-17T06:08:02.000Z",
       "featured": {
-        "image": "redirect-to-my-old-blog.png",
+        "image": "redirect-to-my-old-blog.webp",
         "author": "chatGPT"
       },
       "score": 0.8936520082271954
@@ -8799,8 +9042,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8660868262806124
     }
   ],
@@ -8885,7 +9132,7 @@
       "excerpt": " 「危ない食卓　- スーパーマーケットはお好き？」という本を読みました。食の安全性について、食品ラベルとトレーサビリティ（追跡可能性）、配送システムと環境問題・フードマイル、低賃金労働、食の砂漠化、グローバル企業の購買力と搾取・フェアトレード、関税と保護政策など、多角的な視点で問題提議しています。本文は食品加工工場への潜入取材や現地でのインタビューが中心で臨場感がありました。その上難しい内容のわりに平易な文面でとても読みやすかったです。",
       "date": "2005-06-26T16:00:00.000Z",
       "featured": {
-        "image": "not_on_the_label.png",
+        "image": "not_on_the_label.webp",
         "author": "chatGPT"
       },
       "score": 0.9089937586409865
@@ -8972,7 +9219,7 @@
       "excerpt": "ほとんどの訪問者がWEBサイトに情報を求めて訪れます。訪問者にとって便利なサイトとは、求めている情報が簡単に発見でき、そしてその情報が役に立つことです。WEBサイトの価値を向上させるには、両者を向上させることが肝要です。使いやすいWEBサイトでも情報が役立たなければ意味がないですし、有益な情報が載っていても見つけられなければ使いようがありません。",
       "date": "2004-12-29T15:54:32.000Z",
       "featured": {
-        "image": "about_writing.png",
+        "image": "about_writing.webp",
         "author": "chatGPT"
       },
       "score": 0.8910163467198152
@@ -9018,7 +9265,7 @@
       "excerpt": " 「危ない食卓　- スーパーマーケットはお好き？」という本を読みました。食の安全性について、食品ラベルとトレーサビリティ（追跡可能性）、配送システムと環境問題・フードマイル、低賃金労働、食の砂漠化、グローバル企業の購買力と搾取・フェアトレード、関税と保護政策など、多角的な視点で問題提議しています。本文は食品加工工場への潜入取材や現地でのインタビューが中心で臨場感がありました。その上難しい内容のわりに平易な文面でとても読みやすかったです。",
       "date": "2005-06-26T16:00:00.000Z",
       "featured": {
-        "image": "not_on_the_label.png",
+        "image": "not_on_the_label.webp",
         "author": "chatGPT"
       },
       "score": 0.9227121737068229
@@ -9163,7 +9410,7 @@
       "excerpt": " 「危ない食卓　- スーパーマーケットはお好き？」という本を読みました。食の安全性について、食品ラベルとトレーサビリティ（追跡可能性）、配送システムと環境問題・フードマイル、低賃金労働、食の砂漠化、グローバル企業の購買力と搾取・フェアトレード、関税と保護政策など、多角的な視点で問題提議しています。本文は食品加工工場への潜入取材や現地でのインタビューが中心で臨場感がありました。その上難しい内容のわりに平易な文面でとても読みやすかったです。",
       "date": "2005-06-26T16:00:00.000Z",
       "featured": {
-        "image": "not_on_the_label.png",
+        "image": "not_on_the_label.webp",
         "author": "chatGPT"
       },
       "score": 0.9456911970785348
@@ -9174,7 +9421,7 @@
       "excerpt": "エブリシング・バブル 終わりと始まりと「エブリシング・バブル」リスクの深層を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。",
       "date": "2024-11-06T06:33:16.000Z",
       "featured": {
-        "image": "after-everything-bubble.png",
+        "image": "after-everything-bubble.webp",
         "author": "chatGPT"
       },
       "score": 0.928023306346532
@@ -9575,7 +9822,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.9515536727558984
@@ -9609,7 +9856,7 @@
       "excerpt": "突然ですが、逆説的なアプローチが好きです（逆説ではなくて逆説的という微妙なニュアンスがポイント）。逆説とは「真理（結論）と反対なことを言っているようで、よく考えると一種の真理（結論と同じこと）を言い表している説（負けるが勝ちなど）」という意味（岩波国語辞典）。逆説のように考えることはシンプルだけれど機知に富んでいる。逆説的に考えることは発想の転換を促す。新しい発見は逆説的アプローチから生まれるのだ。とにかく。逆説的思考はかっこいい。クールだ。",
       "date": "2005-11-15T17:44:28.000Z",
       "featured": {
-        "image": "paradoxical_approach.png",
+        "image": "paradoxical_approach.webp",
         "author": "chatGPT"
       },
       "score": 0.8907621294022959
@@ -9666,7 +9913,7 @@
       "excerpt": "動物心理学入門という本を読んだ。本書によると、「動物心理学」とは「動物を対象とした研究を通して、ヒトの『ココロ』を理解しようとする学問領域」である（p.1 はじめに）。人と動物の異なる点を比較し、共通点を類推することで、ヒトの心理をより深く理解できるのだろうと感じた。",
       "date": "2024-10-06T17:00:34.000Z",
       "featured": {
-        "image": "introduction-animal-psychology.png",
+        "image": "introduction-animal-psychology.webp",
         "author": "chatGPT"
       },
       "score": 0.7509254622188909
@@ -9878,7 +10125,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.8990693129344016
@@ -10046,7 +10293,7 @@
       "excerpt": "「サムライと英語」は、国連の要職を歴任された明石康さんの名著です。幕末から明治後半までの歴史を辿りながら、堀達之助（浦賀奉行通詩）、福沢諭吉、大久保利通、新渡戸稲造など、西洋文化と向き合うサムライの姿が描かれています。ちょうど「お〜い！竜馬」を読破して独り幕末ブームの中、非常に面白く読めました。",
       "date": "2005-02-20T16:13:01.000Z",
       "featured": {
-        "image": "samurai_english.png",
+        "image": "samurai_english.webp",
         "author": "chatGPT"
       },
       "score": 0.8808856931276511
@@ -10193,7 +10440,7 @@
       "excerpt": "「量子力学は本当は量子の話ではない」を読んだ。量子論が言う「粒子でもあり波でもある」という二重性や、「猫が死んでいるとも生きているとも言える（測定した瞬間に決定する）」といった重ね合わせ、量子がもつれた物体同士が瞬時に影響を与え合うといった奇妙な現象は、量子世界をイメージするための物語がもたらしたもので、量子力学の理論そのものが持つ本質ではないらしい。微粒子の性質・状態としてイメージしようとするから奇妙に見えるだけで、量子論は「情報の取得方法とその因果的影響」を扱う理論と捉えたほうが、筋が通る、というのが本書の内容。それが量子論の見方として正しいのかどうか、そもそも本書の内容をきちんと理解できてるかどうかわからないけど、そんな気がするかもしれないししないかもしれない（二重性）といった感想を持った。",
       "date": "2024-11-03T09:00:00.000Z",
       "featured": {
-        "image": "beyond-weird.png",
+        "image": "beyond-weird.webp",
         "author": "chatGPT"
       },
       "score": 0.9007158447707062
@@ -10271,7 +10518,7 @@
       "excerpt": "ほとんどの訪問者がWEBサイトに情報を求めて訪れます。訪問者にとって便利なサイトとは、求めている情報が簡単に発見でき、そしてその情報が役に立つことです。WEBサイトの価値を向上させるには、両者を向上させることが肝要です。使いやすいWEBサイトでも情報が役立たなければ意味がないですし、有益な情報が載っていても見つけられなければ使いようがありません。",
       "date": "2004-12-29T15:54:32.000Z",
       "featured": {
-        "image": "about_writing.png",
+        "image": "about_writing.webp",
         "author": "chatGPT"
       },
       "score": 0.8855894750875798
@@ -10356,7 +10603,7 @@
       "excerpt": "ここ３〜４ヶ月の間にアフィリエイトの取り上げられ方が非常に大きくなったと思います。アフィリエイトと名のつく関連本も数多く出版されるようになりました。私がアフィリエイトについて思うことは、アフィリエイトというのがギャンブル的要素が強いということ。",
       "date": "2004-11-21T20:19:20.000Z",
       "featured": {
-        "image": "about_affiliate.png",
+        "image": "about_affiliate.webp",
         "author": "chatGPT"
       },
       "score": 0.8978212464430888
@@ -10472,7 +10719,7 @@
       "excerpt": "「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。",
       "date": "2012-03-17T05:00:00.000Z",
       "featured": {
-        "image": "the_big_short.png",
+        "image": "the_big_short.webp",
         "author": "chatGPT"
       },
       "score": 0.9413967821292987
@@ -10708,7 +10955,7 @@
       "excerpt": "ほとんどの訪問者がWEBサイトに情報を求めて訪れます。訪問者にとって便利なサイトとは、求めている情報が簡単に発見でき、そしてその情報が役に立つことです。WEBサイトの価値を向上させるには、両者を向上させることが肝要です。使いやすいWEBサイトでも情報が役立たなければ意味がないですし、有益な情報が載っていても見つけられなければ使いようがありません。",
       "date": "2004-12-29T15:54:32.000Z",
       "featured": {
-        "image": "about_writing.png",
+        "image": "about_writing.webp",
         "author": "chatGPT"
       },
       "score": 0.7934008188853298
@@ -10755,8 +11002,12 @@
     {
       "id": "2012/05/css_selector_performance",
       "title": "CSS Selector Performance",
-      "excerpt": "Performance Calendar » CSS Selector Performance has changed! (For the better)にWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
+      "excerpt": "Performance CalendarにWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
       "date": "2012-05-27T15:00:00.000Z",
+      "featured": {
+        "image": "css_selector_performance.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9228140628929121
     },
     {
@@ -10769,8 +11020,12 @@
     {
       "id": "2017/hello-hexo",
       "title": "Hello Hexo",
-      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。",
+      "excerpt": "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。",
       "date": "2017-12-30T00:00:00.000Z",
+      "featured": {
+        "image": "hello-hexo.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9192325863139564
     }
   ],
@@ -10938,7 +11193,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.9321748690378509
@@ -10956,7 +11211,7 @@
       "excerpt": "「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。",
       "date": "2012-03-17T05:00:00.000Z",
       "featured": {
-        "image": "the_big_short.png",
+        "image": "the_big_short.webp",
         "author": "chatGPT"
       },
       "score": 0.9186725612213783
@@ -10969,7 +11224,7 @@
       "excerpt": "「サムライと英語」は、国連の要職を歴任された明石康さんの名著です。幕末から明治後半までの歴史を辿りながら、堀達之助（浦賀奉行通詩）、福沢諭吉、大久保利通、新渡戸稲造など、西洋文化と向き合うサムライの姿が描かれています。ちょうど「お〜い！竜馬」を読破して独り幕末ブームの中、非常に面白く読めました。",
       "date": "2005-02-20T16:13:01.000Z",
       "featured": {
-        "image": "samurai_english.png",
+        "image": "samurai_english.webp",
         "author": "chatGPT"
       },
       "score": 0.919744396765782
@@ -11040,7 +11295,7 @@
       "excerpt": "このブログは今はGitHub Pages上で公開しているが、AWS上でドメイン取得して公開しようかな、でもお金かかるしどうしようかなと微妙に悩んでいた。AWSにしても個人ブログのトラフィックなんて程度が知れているので、たいした金額になることはないとは思いつつも、いつ課金されるかわからないから状況をモニタリングしなければならないというのが圧倒的に面倒臭い... ただその日のメモを残したいだけだというのに。",
       "date": "2018-01-17T06:08:02.000Z",
       "featured": {
-        "image": "redirect-to-my-old-blog.png",
+        "image": "redirect-to-my-old-blog.webp",
         "author": "chatGPT"
       },
       "score": 0.8145123919799935
@@ -11167,7 +11422,7 @@
       "excerpt": "武家政権成立史では、12世紀に始まった気候の冷涼化が、武家政権の成立にどのような影響を与えたかを探究している。本書では、気候冷涼化による作物の不作が、飢饉を頻発、封戸収入の減少を引き起こし、収入を確保するために荘園が発展し、それにより国司による徴税と荘園権益の衝突が強まり、武力を必要とする時代を生み出していったしている。歴史とは、人間の意図・行動が歴史を作り、動かすというイメージが強いけれど、気候変動という人間には抗いがたい要因が社会的混乱を引き起こし、歴史を形作るという視点は新鮮で説得力があった。",
       "date": "2024-09-29T19:00:47.000Z",
       "featured": {
-        "image": "origin-of-samurai.png",
+        "image": "origin-of-samurai.webp",
         "author": "chatGPT"
       },
       "score": 0.6746092055566789
@@ -11441,7 +11696,7 @@
       "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
       "date": "2018-01-08T11:07:38.000Z",
       "featured": {
-        "image": "display-featured-image.png",
+        "image": "display-featured-image.webp",
         "author": "chatGPT"
       },
       "score": 0.8961942249865805
@@ -11610,9 +11865,13 @@
     },
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8908591548465383
     }
   ],
@@ -11630,7 +11889,7 @@
       "excerpt": "WEBの制作をしていると良く出てくるのが、「要素」と「属性」という言葉。専門用語ではなく単なる日本語として扱われているためか、はたまた常識として認知されているためか、その意味はWEB制作本の片隅にも載りません。でもWEB制作、特にHTML制作において「要素」と「属性」の区別がつかないと難儀します。抽象的な言葉なので分からないままにしておくと何が「要素」で何が「属性」なのか分からなくなってきます。一度その定義のようなものを理解しておくとWEBの制作はぐっと楽になります。",
       "date": "2004-12-16T05:26:11.000Z",
       "featured": {
-        "image": "about_element_and_attribute.png",
+        "image": "about_element_and_attribute.webp",
         "author": "chatGPT"
       },
       "score": 0.7721307451412555
@@ -11653,7 +11912,7 @@
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
       "date": "2004-12-22T21:15:18.000Z",
       "featured": {
-        "image": "about_block_and_inline.png",
+        "image": "about_block_and_inline.webp",
         "author": "chatGPT"
       },
       "score": 0.757161642691857
@@ -11733,7 +11992,7 @@
       "excerpt": "突然ですが、逆説的なアプローチが好きです（逆説ではなくて逆説的という微妙なニュアンスがポイント）。逆説とは「真理（結論）と反対なことを言っているようで、よく考えると一種の真理（結論と同じこと）を言い表している説（負けるが勝ちなど）」という意味（岩波国語辞典）。逆説のように考えることはシンプルだけれど機知に富んでいる。逆説的に考えることは発想の転換を促す。新しい発見は逆説的アプローチから生まれるのだ。とにかく。逆説的思考はかっこいい。クールだ。",
       "date": "2005-11-15T17:44:28.000Z",
       "featured": {
-        "image": "paradoxical_approach.png",
+        "image": "paradoxical_approach.webp",
         "author": "chatGPT"
       },
       "score": 0.9068924146165657
@@ -11779,7 +12038,7 @@
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
       "date": "2004-12-22T21:15:18.000Z",
       "featured": {
-        "image": "about_block_and_inline.png",
+        "image": "about_block_and_inline.webp",
         "author": "chatGPT"
       },
       "score": 0.7294576311164638
@@ -11820,7 +12079,7 @@
       "excerpt": "長篠合戦を読んだ。長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や、各勢力が自らを美化するための「化粧」が多分に含まれているようだ。",
       "date": "2024-10-28T08:20:00.000Z",
       "featured": {
-        "image": "battle-of-nagashino.png",
+        "image": "battle-of-nagashino.webp",
         "author": "chatGPT"
       },
       "score": 0.44705068484732835
@@ -11889,7 +12148,7 @@
       "excerpt": "O(n^2)の計算量で実行するソートアルゴリズムについては、Bubble Sort in JavaScript（バブルソート）、Insertion Sort in JavaScript（挿入ソート）、Selection Sort in JavaScript（選択ソート）にて扱ったのだけど、完全に忘れてしまったので、もう一度確認する。",
       "date": "2020-02-11T13:54:52.000Z",
       "featured": {
-        "image": "n2-sort-algorithms-again.png",
+        "image": "n2-sort-algorithms-again.webp",
         "author": "chatGPT"
       },
       "score": 0.7226077695368959
@@ -11946,7 +12205,7 @@
       "excerpt": "このブログは今はGitHub Pages上で公開しているが、AWS上でドメイン取得して公開しようかな、でもお金かかるしどうしようかなと微妙に悩んでいた。AWSにしても個人ブログのトラフィックなんて程度が知れているので、たいした金額になることはないとは思いつつも、いつ課金されるかわからないから状況をモニタリングしなければならないというのが圧倒的に面倒臭い... ただその日のメモを残したいだけだというのに。",
       "date": "2018-01-17T06:08:02.000Z",
       "featured": {
-        "image": "redirect-to-my-old-blog.png",
+        "image": "redirect-to-my-old-blog.webp",
         "author": "chatGPT"
       },
       "score": 0.8243489084043658
@@ -11978,7 +12237,7 @@
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
       "date": "2004-12-22T21:15:18.000Z",
       "featured": {
-        "image": "about_block_and_inline.png",
+        "image": "about_block_and_inline.webp",
         "author": "chatGPT"
       },
       "score": 0.7982154719116551
@@ -12142,7 +12401,7 @@
       "excerpt": "Web Acrossのサイトでは渋谷・原宿・渋谷を歩く人のファッション動向を「今月の定点観測」として情報発信しています。毎月見ているわけではありませんが、たまに見ると新しい発見があって面白い。",
       "date": "2005-11-13T16:21:45.000Z",
       "featured": {
-        "image": "gray_jacket.png",
+        "image": "gray_jacket.webp",
         "author": "chatGPT"
       },
       "score": 0.8299958577542449
@@ -12246,7 +12505,7 @@
       "excerpt": "「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。",
       "date": "2012-03-17T05:00:00.000Z",
       "featured": {
-        "image": "the_big_short.png",
+        "image": "the_big_short.webp",
         "author": "chatGPT"
       },
       "score": 0.925891690922596
@@ -12284,6 +12543,10 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8938973840685239
     },
     {
@@ -12299,7 +12562,7 @@
       "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
       "date": "2018-01-08T11:07:38.000Z",
       "featured": {
-        "image": "display-featured-image.png",
+        "image": "display-featured-image.webp",
         "author": "chatGPT"
       },
       "score": 0.8901858653671495
@@ -12326,7 +12589,7 @@
       "excerpt": "本文中に何度も引用されるジェームス・ギブソンの理論は抽象的で高度な箇所もあって、理解できないところも多々ありましたが、それでもなんとなくぼやーっと概観だけはつかめたように思います。",
       "date": "2005-08-14T15:50:06.000Z",
       "featured": {
-        "image": "art_and_affordance.png",
+        "image": "art_and_affordance.webp",
         "author": "chatGPT"
       },
       "score": 0.9166562798416098
@@ -12353,7 +12616,7 @@
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
       "date": "2004-12-22T21:15:18.000Z",
       "featured": {
-        "image": "about_block_and_inline.png",
+        "image": "about_block_and_inline.webp",
         "author": "chatGPT"
       },
       "score": 0.8797772065598785
@@ -12415,7 +12678,7 @@
       "excerpt": "本文中に何度も引用されるジェームス・ギブソンの理論は抽象的で高度な箇所もあって、理解できないところも多々ありましたが、それでもなんとなくぼやーっと概観だけはつかめたように思います。",
       "date": "2005-08-14T15:50:06.000Z",
       "featured": {
-        "image": "art_and_affordance.png",
+        "image": "art_and_affordance.webp",
         "author": "chatGPT"
       },
       "score": 0.8106673887307005
@@ -12463,7 +12726,7 @@
       "excerpt": "突然ですが、逆説的なアプローチが好きです（逆説ではなくて逆説的という微妙なニュアンスがポイント）。逆説とは「真理（結論）と反対なことを言っているようで、よく考えると一種の真理（結論と同じこと）を言い表している説（負けるが勝ちなど）」という意味（岩波国語辞典）。逆説のように考えることはシンプルだけれど機知に富んでいる。逆説的に考えることは発想の転換を促す。新しい発見は逆説的アプローチから生まれるのだ。とにかく。逆説的思考はかっこいい。クールだ。",
       "date": "2005-11-15T17:44:28.000Z",
       "featured": {
-        "image": "paradoxical_approach.png",
+        "image": "paradoxical_approach.webp",
         "author": "chatGPT"
       },
       "score": 0.7799591169431132
@@ -12548,7 +12811,7 @@
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
       "date": "2004-12-22T21:15:18.000Z",
       "featured": {
-        "image": "about_block_and_inline.png",
+        "image": "about_block_and_inline.webp",
         "author": "chatGPT"
       },
       "score": 0.898100455829003
@@ -12603,7 +12866,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.9384260016194337
@@ -12683,7 +12946,7 @@
       "excerpt": "「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。",
       "date": "2012-03-17T05:00:00.000Z",
       "featured": {
-        "image": "the_big_short.png",
+        "image": "the_big_short.webp",
         "author": "chatGPT"
       },
       "score": 0.9490513441669243
@@ -12701,7 +12964,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.9470292860608489
@@ -12735,7 +12998,7 @@
       "excerpt": "ほとんどの訪問者がWEBサイトに情報を求めて訪れます。訪問者にとって便利なサイトとは、求めている情報が簡単に発見でき、そしてその情報が役に立つことです。WEBサイトの価値を向上させるには、両者を向上させることが肝要です。使いやすいWEBサイトでも情報が役立たなければ意味がないですし、有益な情報が載っていても見つけられなければ使いようがありません。",
       "date": "2004-12-29T15:54:32.000Z",
       "featured": {
-        "image": "about_writing.png",
+        "image": "about_writing.webp",
         "author": "chatGPT"
       },
       "score": 0.8959074103744666
@@ -12804,7 +13067,7 @@
       "excerpt": "「サムライと英語」は、国連の要職を歴任された明石康さんの名著です。幕末から明治後半までの歴史を辿りながら、堀達之助（浦賀奉行通詩）、福沢諭吉、大久保利通、新渡戸稲造など、西洋文化と向き合うサムライの姿が描かれています。ちょうど「お〜い！竜馬」を読破して独り幕末ブームの中、非常に面白く読めました。",
       "date": "2005-02-20T16:13:01.000Z",
       "featured": {
-        "image": "samurai_english.png",
+        "image": "samurai_english.webp",
         "author": "chatGPT"
       },
       "score": 0.8870120741774412
@@ -12847,7 +13110,7 @@
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
       "date": "2025/04/09 09:00:00",
       "featured": {
-        "image": "hello-astro.png",
+        "image": "hello-astro.webp",
         "author": "chatGPT"
       },
       "score": 0.8919167387083194
@@ -12855,8 +13118,12 @@
     {
       "id": "2011/12/redesign_2012",
       "title": "デザインを変更（2011/12）",
-      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name=\"viewport\" content=\"width=device-width\" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。",
+      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。",
       "date": "2011-12-24T18:04:00.000Z",
+      "featured": {
+        "image": "redesign_2012.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8858293883675185
     },
     {
@@ -12864,13 +13131,21 @@
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
       "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8706650501561876
     },
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8704744634578062
     }
   ],
@@ -12914,9 +13189,13 @@
     },
     {
       "id": "2010/12/redesign_2011",
-      "title": "デザイン変更",
+      "title": "デザイン変更（2010/12）",
       "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
       "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8150993212629368
     },
     {
@@ -12925,7 +13204,7 @@
       "excerpt": "このブログは今はGitHub Pages上で公開しているが、AWS上でドメイン取得して公開しようかな、でもお金かかるしどうしようかなと微妙に悩んでいた。AWSにしても個人ブログのトラフィックなんて程度が知れているので、たいした金額になることはないとは思いつつも、いつ課金されるかわからないから状況をモニタリングしなければならないというのが圧倒的に面倒臭い... ただその日のメモを残したいだけだというのに。",
       "date": "2018-01-17T06:08:02.000Z",
       "featured": {
-        "image": "redirect-to-my-old-blog.png",
+        "image": "redirect-to-my-old-blog.webp",
         "author": "chatGPT"
       },
       "score": 0.8135190554328869
@@ -12933,8 +13212,12 @@
     {
       "id": "2011/12/redesign_2012",
       "title": "デザインを変更（2011/12）",
-      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name=\"viewport\" content=\"width=device-width\" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。",
+      "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。",
       "date": "2011-12-24T18:04:00.000Z",
+      "featured": {
+        "image": "redesign_2012.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8054485741226407
     }
   ],
@@ -12945,7 +13228,7 @@
       "excerpt": " 「危ない食卓　- スーパーマーケットはお好き？」という本を読みました。食の安全性について、食品ラベルとトレーサビリティ（追跡可能性）、配送システムと環境問題・フードマイル、低賃金労働、食の砂漠化、グローバル企業の購買力と搾取・フェアトレード、関税と保護政策など、多角的な視点で問題提議しています。本文は食品加工工場への潜入取材や現地でのインタビューが中心で臨場感がありました。その上難しい内容のわりに平易な文面でとても読みやすかったです。",
       "date": "2005-06-26T16:00:00.000Z",
       "featured": {
-        "image": "not_on_the_label.png",
+        "image": "not_on_the_label.webp",
         "author": "chatGPT"
       },
       "score": 0.9293670426557262
@@ -13023,7 +13306,7 @@
       "excerpt": "本文中に何度も引用されるジェームス・ギブソンの理論は抽象的で高度な箇所もあって、理解できないところも多々ありましたが、それでもなんとなくぼやーっと概観だけはつかめたように思います。",
       "date": "2005-08-14T15:50:06.000Z",
       "featured": {
-        "image": "art_and_affordance.png",
+        "image": "art_and_affordance.webp",
         "author": "chatGPT"
       },
       "score": 0.9303699907719695
@@ -13034,7 +13317,7 @@
       "excerpt": "「第四の革命」を読んだ。情報通信技術が、従来の「記録する・履歴をとる」という単純な伝達手段であったものから飛躍して、記録・履歴のデータが処理され、情報として再利用されるようになった。それが様々なテクノロジーに内包されるにつれ、情報通信技術が単なるツールという枠を越えて、情報世界（情報圏・インフォスフィア）を構成するようになっている。インフォスフィアがどのように個々人や世界に影響をもたらすのか、といった内容である。",
       "date": "2019-05-02T08:41:09.000Z",
       "featured": {
-        "image": "book-the-4th-revolution.png",
+        "image": "book-the-4th-revolution.webp",
         "author": "chatGPT"
       },
       "score": 0.9251744607455855
@@ -13054,7 +13337,7 @@
       "excerpt": "「サムライと英語」は、国連の要職を歴任された明石康さんの名著です。幕末から明治後半までの歴史を辿りながら、堀達之助（浦賀奉行通詩）、福沢諭吉、大久保利通、新渡戸稲造など、西洋文化と向き合うサムライの姿が描かれています。ちょうど「お〜い！竜馬」を読破して独り幕末ブームの中、非常に面白く読めました。",
       "date": "2005-02-20T16:13:01.000Z",
       "featured": {
-        "image": "samurai_english.png",
+        "image": "samurai_english.webp",
         "author": "chatGPT"
       },
       "score": 0.8407800519273197
@@ -13088,7 +13371,7 @@
       "excerpt": "突然ですが、逆説的なアプローチが好きです（逆説ではなくて逆説的という微妙なニュアンスがポイント）。逆説とは「真理（結論）と反対なことを言っているようで、よく考えると一種の真理（結論と同じこと）を言い表している説（負けるが勝ちなど）」という意味（岩波国語辞典）。逆説のように考えることはシンプルだけれど機知に富んでいる。逆説的に考えることは発想の転換を促す。新しい発見は逆説的アプローチから生まれるのだ。とにかく。逆説的思考はかっこいい。クールだ。",
       "date": "2005-11-15T17:44:28.000Z",
       "featured": {
-        "image": "paradoxical_approach.png",
+        "image": "paradoxical_approach.webp",
         "author": "chatGPT"
       },
       "score": 0.916492319619144
@@ -13210,7 +13493,7 @@
       "excerpt": "星になった少年を見てきました。日本初のゾウ使いの少年・哲夢と子象ランディ、そして家族の物語。",
       "date": "2005-09-19T12:24:12.000Z",
       "featured": {
-        "image": "shining_boy.png",
+        "image": "shining_boy.webp",
         "author": "chatGPT"
       },
       "score": 0.674374145254491
@@ -13221,7 +13504,7 @@
       "excerpt": "全体的に会話が少なく、暗いイメージの映画でしたが、主演のローラ・ネマルク（クレール）の演技がとても繊細で個人的にとても心うたれました。仕草や目線で実に多くの状況描写がされていて、言葉にならない感情の起伏を感じ取ることができました。",
       "date": "2005-09-23T18:39:06.000Z",
       "featured": {
-        "image": "Brodeuses.png",
+        "image": "Brodeuses.webp",
         "author": "chatGPT"
       },
       "score": 0.5971469465085458
@@ -13239,7 +13522,7 @@
       "excerpt": "「2046」とは主人公のチャウが映画の中で創り上げる小説のタイトルであり、小説の世界でミステリートレインが目指す先でもあります。チャウはミステリートレインが2046に向かう途中で起きる出来事として、彼の身の回りに起きた出来事を比喩的に表現していきます。小説の中の登場人物は彼の身の周りにいる人たちだけれども、小説の中の登場人物は彼というフィルターを通して描かれているから、つまるところそれは彼自身。現実世界で起きた出来事が、「2046」という小説の世界にも反映され、書き加えられていきます。そしてチャウの中に出てきた一つの結論が、小説の結末となって表現されていきます。",
       "date": "2004-11-10T00:08:33.000Z",
       "featured": {
-        "image": "2046.png",
+        "image": "2046.webp",
         "author": "chatGPT"
       },
       "score": 0.5725086298059826
@@ -13259,7 +13542,7 @@
       "excerpt": "星になった少年を見てきました。日本初のゾウ使いの少年・哲夢と子象ランディ、そして家族の物語。",
       "date": "2005-09-19T12:24:12.000Z",
       "featured": {
-        "image": "shining_boy.png",
+        "image": "shining_boy.webp",
         "author": "chatGPT"
       },
       "score": 0.6286321191148992
@@ -13270,7 +13553,7 @@
       "excerpt": "イラク戦争を目前にした2003年春、イラク北部クルディスタン地方の小さな村を舞台にした映画",
       "date": "2005-09-24T18:02:28.000Z",
       "featured": {
-        "image": "Turtles_Can_Fly.png",
+        "image": "Turtles_Can_Fly.webp",
         "author": "chatGPT"
       },
       "score": 0.5971469465085458
@@ -13281,7 +13564,7 @@
       "excerpt": "殺人を依頼された殺し屋ヴィンセント（トム・クルーズ）が、拾ったタクシーの運転手マックス（ジェイミー・フォックス）を巻き添えにして次々と「仕事」をこなしていくというストーリー。特に前提知識のようなものも必要なく、素直に映画を楽しめます。胸に2発、頭に1発、正確に撃ち込むところがプロの殺し屋の手際の良さ、キレのようなものを感じさせます。トム・クルーズは役作りにあたって、元SAS隊員に指導を受けたのだそうです。",
       "date": "2004-11-14T19:54:39.000Z",
       "featured": {
-        "image": "collateral.png",
+        "image": "collateral.webp",
         "author": "chatGPT"
       },
       "score": 0.5820911400837552
@@ -13294,7 +13577,7 @@
       "excerpt": "星になった少年を見てきました。日本初のゾウ使いの少年・哲夢と子象ランディ、そして家族の物語。",
       "date": "2005-09-19T12:24:12.000Z",
       "featured": {
-        "image": "shining_boy.png",
+        "image": "shining_boy.webp",
         "author": "chatGPT"
       },
       "score": 0.7180775368467119
@@ -13305,7 +13588,7 @@
       "excerpt": "全体的に会話が少なく、暗いイメージの映画でしたが、主演のローラ・ネマルク（クレール）の演技がとても繊細で個人的にとても心うたれました。仕草や目線で実に多くの状況描写がされていて、言葉にならない感情の起伏を感じ取ることができました。",
       "date": "2005-09-23T18:39:06.000Z",
       "featured": {
-        "image": "Brodeuses.png",
+        "image": "Brodeuses.webp",
         "author": "chatGPT"
       },
       "score": 0.7013282566877023
@@ -13316,7 +13599,7 @@
       "excerpt": "殺人を依頼された殺し屋ヴィンセント（トム・クルーズ）が、拾ったタクシーの運転手マックス（ジェイミー・フォックス）を巻き添えにして次々と「仕事」をこなしていくというストーリー。特に前提知識のようなものも必要なく、素直に映画を楽しめます。胸に2発、頭に1発、正確に撃ち込むところがプロの殺し屋の手際の良さ、キレのようなものを感じさせます。トム・クルーズは役作りにあたって、元SAS隊員に指導を受けたのだそうです。",
       "date": "2004-11-14T19:54:39.000Z",
       "featured": {
-        "image": "collateral.png",
+        "image": "collateral.webp",
         "author": "chatGPT"
       },
       "score": 0.6475566151743495
@@ -13327,7 +13610,7 @@
       "excerpt": "結局のところ映画の批評・感想というのは、見た人がその映画にどれだけ共感できるかに大きく異存すると思います。そういう意味で僕の中でこの映画の評価はかなり高いです。私自身、できるかぎり正直でありたいと思っています。私事であれ、仕事であれ。でもそうもいかない場合も多々あります。「本当にこれ良いのか？」と思うシーンはたくさんあります。",
       "date": "2005-06-26T06:53:00.000Z",
       "featured": {
-        "image": "assassination_of_Richard_Nixon.png",
+        "image": "assassination_of_Richard_Nixon.webp",
         "author": "chatGPT"
       },
       "score": 0.614824163271183
@@ -13340,7 +13623,7 @@
       "excerpt": "「2046」とは主人公のチャウが映画の中で創り上げる小説のタイトルであり、小説の世界でミステリートレインが目指す先でもあります。チャウはミステリートレインが2046に向かう途中で起きる出来事として、彼の身の回りに起きた出来事を比喩的に表現していきます。小説の中の登場人物は彼の身の周りにいる人たちだけれども、小説の中の登場人物は彼というフィルターを通して描かれているから、つまるところそれは彼自身。現実世界で起きた出来事が、「2046」という小説の世界にも反映され、書き加えられていきます。そしてチャウの中に出てきた一つの結論が、小説の結末となって表現されていきます。",
       "date": "2004-11-10T00:08:33.000Z",
       "featured": {
-        "image": "2046.png",
+        "image": "2046.webp",
         "author": "chatGPT"
       },
       "score": 0.7695412366116304
@@ -13358,7 +13641,7 @@
       "excerpt": "結局のところ映画の批評・感想というのは、見た人がその映画にどれだけ共感できるかに大きく異存すると思います。そういう意味で僕の中でこの映画の評価はかなり高いです。私自身、できるかぎり正直でありたいと思っています。私事であれ、仕事であれ。でもそうもいかない場合も多々あります。「本当にこれ良いのか？」と思うシーンはたくさんあります。",
       "date": "2005-06-26T06:53:00.000Z",
       "featured": {
-        "image": "assassination_of_Richard_Nixon.png",
+        "image": "assassination_of_Richard_Nixon.webp",
         "author": "chatGPT"
       },
       "score": 0.7325900065213754
@@ -13369,7 +13652,7 @@
       "excerpt": "主人公のロリータはぽっちゃりした体型がコンプレックスの大作家を父親（エチエンヌ）を持つ女の子。淡い期待が裏切られるたび「必要なのは自分じゃなくて父親とのコネクション」という孤独感が募る。",
       "date": "2004-11-11T19:52:44.000Z",
       "featured": {
-        "image": "comme_une_image.png",
+        "image": "comme_une_image.webp",
         "author": "chatGPT"
       },
       "score": 0.7294385430434189
@@ -13396,7 +13679,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.912521726191682
@@ -13416,7 +13699,7 @@
       "excerpt": " 「危ない食卓　- スーパーマーケットはお好き？」という本を読みました。食の安全性について、食品ラベルとトレーサビリティ（追跡可能性）、配送システムと環境問題・フードマイル、低賃金労働、食の砂漠化、グローバル企業の購買力と搾取・フェアトレード、関税と保護政策など、多角的な視点で問題提議しています。本文は食品加工工場への潜入取材や現地でのインタビューが中心で臨場感がありました。その上難しい内容のわりに平易な文面でとても読みやすかったです。",
       "date": "2005-06-26T16:00:00.000Z",
       "featured": {
-        "image": "not_on_the_label.png",
+        "image": "not_on_the_label.webp",
         "author": "chatGPT"
       },
       "score": 0.9287757550674465
@@ -13434,7 +13717,7 @@
       "excerpt": "エブリシング・バブル 終わりと始まりと「エブリシング・バブル」リスクの深層を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。",
       "date": "2024-11-06T06:33:16.000Z",
       "featured": {
-        "image": "after-everything-bubble.png",
+        "image": "after-everything-bubble.webp",
         "author": "chatGPT"
       },
       "score": 0.9190952119956853
@@ -13535,7 +13818,7 @@
       "excerpt": "現在のエネルギー事情について多角的な視点で考察しており、いろんな人に読んでもらいたい本です。500ページ超の分量なので読むの大変かと思いますが、読み応えはあります。",
       "date": "2005-08-14T17:18:05.000Z",
       "featured": {
-        "image": "the_end_of_oil.png",
+        "image": "the_end_of_oil.webp",
         "author": "chatGPT"
       },
       "score": 0.779786559978374
@@ -13548,7 +13831,7 @@
       "excerpt": "エブリシング・バブル 終わりと始まりと「エブリシング・バブル」リスクの深層を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。",
       "date": "2024-11-06T06:33:16.000Z",
       "featured": {
-        "image": "after-everything-bubble.png",
+        "image": "after-everything-bubble.webp",
         "author": "chatGPT"
       },
       "score": 0.9141528038817937
@@ -13559,7 +13842,7 @@
       "excerpt": "マクロ金融危機入門を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対処すべきかという政策の議論が展開されている。原題は「A Crash Course on Crises」で、まさに危機の入門書または短期集中講座といった内容になっている。",
       "date": "2025-03-23T18:21:38.000Z",
       "featured": {
-        "image": "a-crash-course-on-crises-2.png",
+        "image": "a-crash-course-on-crises-2.webp",
         "author": "chatGPT",
         "color": "#e3ded5"
       },
@@ -13587,7 +13870,7 @@
       "excerpt": "結局のところ映画の批評・感想というのは、見た人がその映画にどれだけ共感できるかに大きく異存すると思います。そういう意味で僕の中でこの映画の評価はかなり高いです。私自身、できるかぎり正直でありたいと思っています。私事であれ、仕事であれ。でもそうもいかない場合も多々あります。「本当にこれ良いのか？」と思うシーンはたくさんあります。",
       "date": "2005-06-26T06:53:00.000Z",
       "featured": {
-        "image": "assassination_of_Richard_Nixon.png",
+        "image": "assassination_of_Richard_Nixon.webp",
         "author": "chatGPT"
       },
       "score": 0.9176570931192214
@@ -13693,7 +13976,7 @@
       "excerpt": "エブリシング・バブル 終わりと始まりと「エブリシング・バブル」リスクの深層を読んだ。「エブリシング・バブル 終わりと始まり」の方は、エブリシング・バブルはほぼ崩壊していて、現状で残った大きなバブルはAIバブルで、それが弾けた後は「地政学」が経済に大きな影響を及ぼす、という主旨。今後、地政学が経済にどのような影響を与えるかが中心テーマとなっている。",
       "date": "2024-11-06T06:33:16.000Z",
       "featured": {
-        "image": "after-everything-bubble.png",
+        "image": "after-everything-bubble.webp",
         "author": "chatGPT"
       },
       "score": 0.9375524611211545
@@ -13711,7 +13994,7 @@
       "excerpt": "マクロ金融危機入門を読んだ。「マクロ金融危機」とは、危機の発生源や主な増幅要因が金融市場にありながら、それが単なる資産価格の暴落にとどまらず、生産や雇用の縮小といったマクロ経済全体に深刻な影響を与えるような危機のことを指す。本書は3部構成で1部に3章ずつある。第1部では危機がどのように醸成されるかを扱い、第2部では実際に危機が発生し、どのように広がっていくかを描く。第3部では、そうした危機にどう対処すべきかという政策の議論が展開されている。原題は「A Crash Course on Crises」で、まさに危機の入門書または短期集中講座といった内容になっている。",
       "date": "2025-03-23T18:21:38.000Z",
       "featured": {
-        "image": "a-crash-course-on-crises-2.png",
+        "image": "a-crash-course-on-crises-2.webp",
         "author": "chatGPT",
         "color": "#e3ded5"
       },
@@ -13725,7 +14008,7 @@
       "excerpt": "とても写実的な映画でした。映画というよりドキュメンタリーに近いかもしれない。もちろん本人が出演しているのではなく配役が演じているし、物語の緩急をつけるためのフィクションもあるとは思いますけど。でもヒトラー役のブルーノ・ガンツは本当にヒトラーのようでした。実際のヒトラーと映画の中のヒトラーはまったくの同一ではないと思いますが、ヒトラーの矛盾した人間性に少し触れることができたような気がします。「人」としてのヒトラーと、「総帥」としてのヒトラーの二面性と言いますか。",
       "date": "2005-07-16T14:57:23.000Z",
       "featured": {
-        "image": "Der_Untergang.png",
+        "image": "Der_Untergang.webp",
         "author": "chatGPT"
       },
       "score": 0.9176570931192214
@@ -13743,7 +14026,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.8660214751915375
@@ -13784,7 +14067,7 @@
       "excerpt": "「サムライと英語」は、国連の要職を歴任された明石康さんの名著です。幕末から明治後半までの歴史を辿りながら、堀達之助（浦賀奉行通詩）、福沢諭吉、大久保利通、新渡戸稲造など、西洋文化と向き合うサムライの姿が描かれています。ちょうど「お〜い！竜馬」を読破して独り幕末ブームの中、非常に面白く読めました。",
       "date": "2005-02-20T16:13:01.000Z",
       "featured": {
-        "image": "samurai_english.png",
+        "image": "samurai_english.webp",
         "author": "chatGPT"
       },
       "score": 0.8653472670744736
@@ -13811,7 +14094,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.9399707894435894
@@ -13933,7 +14216,7 @@
       "excerpt": "今までのHTML制作では、ブロックとインラインについてはあまり意識されてきませんでした。デザインありきの作り方で、デザインを表現する上で適切なタグが選択されてきました。しかし、最近になってSEOやアクセシビリティの重要性が強調され、「検索サイトが見て理解できる文書構造が明確なページ」が重要視されるようになりました。HTMLの制作は、文書構造として適切なタグを使い、CSSで見た目をコントロールするというやり方に変わってきています。そうした中、ブロックとインラインの表示の切り替えは、デザインをCSSでコントロールする上で便利な手法として広く使われるようになっています。",
       "date": "2004-12-22T21:15:18.000Z",
       "featured": {
-        "image": "about_block_and_inline.png",
+        "image": "about_block_and_inline.webp",
         "author": "chatGPT"
       },
       "score": 0.785433743889266
@@ -13967,7 +14250,7 @@
       "excerpt": "ここ３〜４ヶ月の間にアフィリエイトの取り上げられ方が非常に大きくなったと思います。アフィリエイトと名のつく関連本も数多く出版されるようになりました。私がアフィリエイトについて思うことは、アフィリエイトというのがギャンブル的要素が強いということ。",
       "date": "2004-11-21T20:19:20.000Z",
       "featured": {
-        "image": "about_affiliate.png",
+        "image": "about_affiliate.webp",
         "author": "chatGPT"
       },
       "score": 0.9324401747902327
@@ -14024,7 +14307,7 @@
       "excerpt": "星になった少年を見てきました。日本初のゾウ使いの少年・哲夢と子象ランディ、そして家族の物語。",
       "date": "2005-09-19T12:24:12.000Z",
       "featured": {
-        "image": "shining_boy.png",
+        "image": "shining_boy.webp",
         "author": "chatGPT"
       },
       "score": 0.7174197022106964
@@ -14049,7 +14332,7 @@
       "excerpt": "「2046」とは主人公のチャウが映画の中で創り上げる小説のタイトルであり、小説の世界でミステリートレインが目指す先でもあります。チャウはミステリートレインが2046に向かう途中で起きる出来事として、彼の身の回りに起きた出来事を比喩的に表現していきます。小説の中の登場人物は彼の身の周りにいる人たちだけれども、小説の中の登場人物は彼というフィルターを通して描かれているから、つまるところそれは彼自身。現実世界で起きた出来事が、「2046」という小説の世界にも反映され、書き加えられていきます。そしてチャウの中に出てきた一つの結論が、小説の結末となって表現されていきます。",
       "date": "2004-11-10T00:08:33.000Z",
       "featured": {
-        "image": "2046.png",
+        "image": "2046.webp",
         "author": "chatGPT"
       },
       "score": 0.6378845819536908
@@ -14069,7 +14352,7 @@
       "excerpt": "星になった少年を見てきました。日本初のゾウ使いの少年・哲夢と子象ランディ、そして家族の物語。",
       "date": "2005-09-19T12:24:12.000Z",
       "featured": {
-        "image": "shining_boy.png",
+        "image": "shining_boy.webp",
         "author": "chatGPT"
       },
       "score": 0.7294385430434189
@@ -14087,7 +14370,7 @@
       "excerpt": "「2046」とは主人公のチャウが映画の中で創り上げる小説のタイトルであり、小説の世界でミステリートレインが目指す先でもあります。チャウはミステリートレインが2046に向かう途中で起きる出来事として、彼の身の回りに起きた出来事を比喩的に表現していきます。小説の中の登場人物は彼の身の周りにいる人たちだけれども、小説の中の登場人物は彼というフィルターを通して描かれているから、つまるところそれは彼自身。現実世界で起きた出来事が、「2046」という小説の世界にも反映され、書き加えられていきます。そしてチャウの中に出てきた一つの結論が、小説の結末となって表現されていきます。",
       "date": "2004-11-10T00:08:33.000Z",
       "featured": {
-        "image": "2046.png",
+        "image": "2046.webp",
         "author": "chatGPT"
       },
       "score": 0.7026791551190079
@@ -14100,7 +14383,7 @@
       "excerpt": "イラク戦争を目前にした2003年春、イラク北部クルディスタン地方の小さな村を舞台にした映画",
       "date": "2005-09-24T18:02:28.000Z",
       "featured": {
-        "image": "Turtles_Can_Fly.png",
+        "image": "Turtles_Can_Fly.webp",
         "author": "chatGPT"
       },
       "score": 0.5277320561521394
@@ -14111,7 +14394,7 @@
       "excerpt": "主人公のロリータはぽっちゃりした体型がコンプレックスの大作家を父親（エチエンヌ）を持つ女の子。淡い期待が裏切られるたび「必要なのは自分じゃなくて父親とのコネクション」という孤独感が募る。",
       "date": "2004-11-11T19:52:44.000Z",
       "featured": {
-        "image": "comme_une_image.png",
+        "image": "comme_une_image.webp",
         "author": "chatGPT"
       },
       "score": 0.5177191969841811
@@ -14122,7 +14405,7 @@
       "excerpt": "長篠合戦を読んだ。長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や、各勢力が自らを美化するための「化粧」が多分に含まれているようだ。",
       "date": "2024-10-28T08:20:00.000Z",
       "featured": {
-        "image": "battle-of-nagashino.png",
+        "image": "battle-of-nagashino.webp",
         "author": "chatGPT"
       },
       "score": 0.40122809909455465
@@ -14133,7 +14416,7 @@
       "excerpt": "星になった少年を見てきました。日本初のゾウ使いの少年・哲夢と子象ランディ、そして家族の物語。",
       "date": "2005-09-19T12:24:12.000Z",
       "featured": {
-        "image": "shining_boy.png",
+        "image": "shining_boy.webp",
         "author": "chatGPT"
       },
       "score": 0.39723895317158253
@@ -14153,7 +14436,7 @@
       "excerpt": "ほとんどの訪問者がWEBサイトに情報を求めて訪れます。訪問者にとって便利なサイトとは、求めている情報が簡単に発見でき、そしてその情報が役に立つことです。WEBサイトの価値を向上させるには、両者を向上させることが肝要です。使いやすいWEBサイトでも情報が役立たなければ意味がないですし、有益な情報が載っていても見つけられなければ使いようがありません。",
       "date": "2004-12-29T15:54:32.000Z",
       "featured": {
-        "image": "about_writing.png",
+        "image": "about_writing.webp",
         "author": "chatGPT"
       },
       "score": 0.9324401747902327
@@ -14180,7 +14463,7 @@
       "excerpt": "星になった少年を見てきました。日本初のゾウ使いの少年・哲夢と子象ランディ、そして家族の物語。",
       "date": "2005-09-19T12:24:12.000Z",
       "featured": {
-        "image": "shining_boy.png",
+        "image": "shining_boy.webp",
         "author": "chatGPT"
       },
       "score": 0.7695412366116304
@@ -14191,7 +14474,7 @@
       "excerpt": "主人公のロリータはぽっちゃりした体型がコンプレックスの大作家を父親（エチエンヌ）を持つ女の子。淡い期待が裏切られるたび「必要なのは自分じゃなくて父親とのコネクション」という孤独感が募る。",
       "date": "2004-11-11T19:52:44.000Z",
       "featured": {
-        "image": "comme_une_image.png",
+        "image": "comme_une_image.webp",
         "author": "chatGPT"
       },
       "score": 0.7026791551190079
@@ -14232,7 +14515,7 @@
       "excerpt": "DV（家庭内暴力）によって難聴になった息子のフランキーと一緒に父親から逃げ続ける母親のリジーは、何度も引っ越しを繰り返した末に、スコットランドの小さな町に引っ越してきます。リジーはまだ小さくて記憶のない息子には父親は船で航海をしていると説明していました。ある日、架空の父親が乗っている船がスコットランドに帰航することになり、母親は息子のために「１日だけの父親」を探す必要に迫られ、見知らぬ男（ストレンジャー）を雇うことになる。",
       "date": "2005-08-13T16:45:28.000Z",
       "featured": {
-        "image": "Dear_Frankie.png",
+        "image": "Dear_Frankie.webp",
         "author": "chatGPT"
       },
       "score": 0.893054376607733

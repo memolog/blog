@@ -7,7 +7,7 @@ tags:
   - book
   - thought
 featured:
-  image: intrinsic_value_of_blog.png
+  image: intrinsic_value_of_blog.webp
   author: chatGPT
 excerpt: "マーク・ローランズの「哲学者が走る」という本では、走ることで得られる道具的価値と内在的価値について語られています。"
 ---

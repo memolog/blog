@@ -2,7 +2,7 @@
 title: らくだの涙を見てきました
 date: 2004-11-08T03:38:03.000Z
 featured:
-  image: weeping_camel.png
+  image: weeping_camel.webp
   author: chatGPT
 categories:
   - 雑文

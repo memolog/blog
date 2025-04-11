@@ -2,7 +2,7 @@
 title: Dear フランキーを見てきました
 date: 2005-08-13T16:45:28.000Z
 featured:
-  image: Dear_Frankie.png
+  image: Dear_Frankie.webp
   author: chatGPT
 categories:
   - 雑文

@@ -2,7 +2,7 @@
 title: 本：石油の終焉
 date: 2005-08-14T17:18:05.000Z
 featured:
-  image: the_end_of_oil.png
+  image: the_end_of_oil.webp
   author: chatGPT
 categories:
   - 本

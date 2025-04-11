@@ -2,7 +2,7 @@
 title: 時代は黒ジャケットからグレージャケットへ
 date: 2005-11-13T16:21:45.000Z
 featured:
-  image: gray_jacket.png
+  image: gray_jacket.webp
   author: chatGPT
 categories:
   - 雑文

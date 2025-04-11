@@ -1,12 +1,15 @@
 ---
 title: デザインを変更（2011/12）
 date: 2011-12-24T18:04:00.000Z
+featured:
+  image: redesign_2012.webp
+  author: chatGPT
 categories:
   - web
 tags:
   - design
   - jquery
-excerpt: 'デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。  メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。Breakpoints.jsというjqueryのpluginを使用すると、bodyに「breakpoint-1024」みたいなclassを表示サイズにあわせて追加してくれるので、そこでCSSを追加しただけというシンプルな方法で。あとviewpointの設定を<meta name="viewport" content="width=device-width" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。'
+excerpt: 'デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。'
 ---
 
 デザインを変更してみました。前回の変更は[こちら](/blog//2010/12/redesign_2011/)。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。

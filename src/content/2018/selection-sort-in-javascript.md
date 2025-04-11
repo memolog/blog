@@ -1,7 +1,7 @@
 ---
 title: Selection Sort in JavaScript
 featured:
-  image: selection-sort-in-javascript.png
+  image: selection-sort-in-javascript.webp
   author: chatGPT
 date: 2018-08-05 05:57:21
 excerpt: "Bubble Sort in JavaScriptの記事から引き続き。内容はほぼ選択ソートから抜粋してるだけなので、詳しくはそちらを参照。JavaScript上で自前のソートを実装する意味はあまりないのだが、試しに選択ソートを実装してみた。"

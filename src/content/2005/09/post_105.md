@@ -2,7 +2,7 @@
 title: 亀も空を飛ぶをみてきました。
 date: 2005-09-24T18:02:28.000Z
 featured:
-  image: Turtles_Can_Fly.png
+  image: Turtles_Can_Fly.webp
   author: chatGPT
 categories:
   - 雑文

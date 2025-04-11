@@ -2,7 +2,7 @@
 title: アフィリエイト所感
 date: 2004-11-21T20:19:20.000Z
 featured:
-    image: about_affiliate.png
+    image: about_affiliate.webp
     author: chatGPT
 categories:
   - 雑文

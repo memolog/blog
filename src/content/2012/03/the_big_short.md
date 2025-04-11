@@ -2,7 +2,7 @@
 title: 本：世紀の空売り
 date: 2012-03-17T05:00:00.000Z
 featured:
-  image: the_big_short.png
+  image: the_big_short.webp
   author: chatGPT
 categories:
   - 本

@@ -2,7 +2,7 @@
 title: みんな誰かの愛しい人を見ました。
 date: 2004-11-11T19:52:44.000Z
 featured:
-  image: comme_une_image.png
+  image: comme_une_image.webp
   author: chatGPT
 categories:
   - 雑文

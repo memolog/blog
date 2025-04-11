@@ -2,7 +2,7 @@
 title: コラテラルをみました
 date: 2004-11-14T19:54:39.000Z
 featured:
-  image: collateral.png
+  image: collateral.webp
   author: chatGPT
 categories:
   - 雑文

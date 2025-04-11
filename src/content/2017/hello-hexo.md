@@ -1,7 +1,10 @@
 ---
 title: Hello Hexo
 date: 2017-12-30
-excerpt: "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。  Gatsby は高機能ゆえにたとえばデザインを少し変えたいというときに、Typography の実装上でどう変更するかを調べる必要があったり、react-responsive-grid とかバンドルされてるReact Componentがどんな実装になっているかを確認したりとか、とにかく面倒くさい。この最初のラーニングカーブを乗り切ってしまえば便利なのかもしれないけど、メモ書きサイトを作るのにあまり時間をかけたくない（でもデザインは調整したい）という目的には、どうもオーバースペック感があった。あとpublicに生成されるファイルが変に多くて把握しにくいし、LightHouseのPerformanceのスコアも70前後（十分だけど）なのが少し気になった。"
+featured:
+    image: hello-hexo.webp
+    author: chatGPT
+excerpt: "Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。"
 ---
 
 [Gatsby](https://www.gatsbyjs.org/) はなかなかに高機能で素晴らしく、React、GraphQL、PWA など技術的なプレイグラウンドとしても魅力的だったのだけど、結局[Hexo](https://hexo.io/)にすることにした。

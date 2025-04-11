@@ -1,7 +1,7 @@
 ---
 title: n^2 sort algorithms again
 featured:
-  image: n2-sort-algorithms-again.png
+  image: n2-sort-algorithms-again.webp
   author: chatGPT
 date: 2020-02-11 13:54:52
 excerpt: "O(n^2)の計算量で実行するソートアルゴリズムについては、Bubble Sort in JavaScript（バブルソート）、Insertion Sort in JavaScript（挿入ソート）、Selection Sort in JavaScript（選択ソート）にて扱ったのだけど、完全に忘れてしまったので、もう一度確認する。"

@@ -2,7 +2,7 @@
 title: 星になった少年をみました。
 date: 2005-09-19T12:24:12.000Z
 featured:
-  image: shining_boy.png
+  image: shining_boy.webp
   author: chatGPT
 categories:
   - 雑文

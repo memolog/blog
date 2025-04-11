@@ -1,6 +1,9 @@
 ---
 title: 縦方向のfloatを実現するjQuery Masonry
 date: 2012-06-18T12:36:00.000Z
+featured:
+  image: jquery_masonry.webp
+  author: chagGPT
 categories:
   - web
 tags:

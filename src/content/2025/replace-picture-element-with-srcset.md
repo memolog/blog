@@ -1,9 +1,10 @@
 ---
 title: Picture要素をやめてsrcsetを使う
-date: 2025-04-11 17:07
+date: 2025-04-11 18:30
 featured:
-    image: replace-picture-element-with-srcset.webp
-    author: chatGPT
+    image: 66962plsdl.webp
+    author: Magdelena Rosina Funck
+    authorLink: https://artvee.com/artist/magdelena-rosina-funck/
 excerpt: "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。"
 ---
 [Featured Image を設置する](/2018/display-featured-image)で[Picture要素](https://developer.mozilla.org/ja/docs/Web/HTML/Reference/Elements/picture)を使って以来、SVGでないFeatured ImageにはPicture要素を使い続けていたのですけど、気がついたらもう[WebP](https://caniuse.com/webp)が安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。

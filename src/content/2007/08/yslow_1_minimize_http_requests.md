@@ -1,11 +1,14 @@
 ---
-title: YSLOW 勉強：1：Minimize HTTP Requests
+title: "YSLOW 勉強: 1: Minimize HTTP Requests"
 date: 2007-08-04T15:46:10.000Z
+featured:
+  image: yslow_1_minimize_http_requests.webp
+  author: chatGPT
 categories:
   - web
 tags:
   - yslow
-excerpt: "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。"
+excerpt: "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。"
 ---
 
 - [YSlow for Firebug](http://developer.yahoo.com/yslow/)
@@ -21,4 +24,6 @@ rules for high performance web sites のルールは全部で 13 個。その一
 3.  インライン（img タグ）で挿入している画像を CSS で表示するようにする：インライン上の画像は実際のページに組み込まれるため、HTML ドキュメントのサイズを増やしてしまう。だから（キャッシュされる）CSS 上で呼び出す方が良い。
 4.  ファイルを統合する：Javascript や CSS などのファイルをひとつにまとめて HTTP request の数を少なくする。
 
-ちなみに、memolog.org のトップページの判定は D 判定・・、Feed Flare の外部 Javascript がエントリーごとに入っているために、評価が下がっているようです。スタッツ用に埋め込んでいるけど（たぶん）トップページには必要なさそうなので、外してみよう。 ![cap080501.gif](/assets/i/2007/08/cap080501.gif)
+ちなみに、memolog.org のトップページの判定は D 判定・・、Feed Flare の外部 Javascript がエントリーごとに入っているために、評価が下がっているようです。スタッツ用に埋め込んでいるけど（たぶん）トップページには必要なさそうなので、外してみよう。
+
+![cap080501.gif](/assets/i/2007/08/cap080501.gif)

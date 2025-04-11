@@ -1,6 +1,10 @@
 ---
 title: 最近購入したCD
 date: 2005-07-10T14:24:12.000Z
+featured:
+  image: 212067fgsdl.webp
+  author: Erik Henningsen
+  authorLink: https://artvee.com/artist/erik-henningsen/
 categories:
   - 雑文
 tags:

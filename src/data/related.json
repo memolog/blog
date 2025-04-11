@@ -2,17 +2,25 @@
   "2025/replace-picture-element-with-srcset": [
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
-      "score": 0.8894670549222479
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.883866782532433
     },
     {
       "id": "2012/06/jquery_masonry",
       "title": "縦方向のfloatを実現するjQuery Masonry",
       "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
       "date": "2012-06-18T12:36:00.000Z",
-      "score": 0.8662977492833622
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
+      "score": 0.8592817286676717
     },
     {
       "id": "2018/display-featured-image",
@@ -23,14 +31,18 @@
         "image": "display-featured-image.webp",
         "author": "chatGPT"
       },
-      "score": 0.8625581516436427
+      "score": 0.8536846430018286
     },
     {
       "id": "2010/12/optimize_css_selectors",
       "title": "CSSセレクタを効率的な記述にする",
       "excerpt": "Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。",
       "date": "2010-12-28T21:00:00.000Z",
-      "score": 0.8280061499120225
+      "featured": {
+        "image": "optimize_css_selectors.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8277780467177771
     }
   ],
   "2025/hello-astro": [
@@ -2253,13 +2265,17 @@
         "image": "replace-picture-element-with-srcset.webp",
         "author": "chatGPT"
       },
-      "score": 0.7110679663256144
+      "score": 0.7075869057740504
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.6979466654134653
     },
     {
@@ -3014,7 +3030,7 @@
         "image": "replace-picture-element-with-srcset.webp",
         "author": "chatGPT"
       },
-      "score": 0.7654505225108714
+      "score": 0.7622891703728317
     },
     {
       "id": "2007/08/post_141",
@@ -3214,9 +3230,13 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8961942249865805
     },
     {
@@ -3236,6 +3256,10 @@
       "title": "縦方向のfloatを実現するjQuery Masonry",
       "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
       "date": "2012-06-18T12:36:00.000Z",
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
       "score": 0.894240238929844
     }
   ],
@@ -4754,6 +4778,10 @@
       "title": "縦方向のfloatを実現するjQuery Masonry",
       "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
       "date": "2012-06-18T12:36:00.000Z",
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
       "score": 0.9090667431566355
     }
   ],
@@ -5346,9 +5374,13 @@
   "2013/08/chrome_workspace": [
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7691614886051014
     },
     {
@@ -6057,13 +6089,17 @@
         "image": "replace-picture-element-with-srcset.webp",
         "author": "chatGPT"
       },
-      "score": 0.7086463388062593
+      "score": 0.7022046381295758
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.6937440670848523
     },
     {
@@ -6759,9 +6795,13 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7350620768713243
     }
   ],
@@ -6806,9 +6846,13 @@
   "2012/06/jquery_masonry": [
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9325719660634382
     },
     {
@@ -7417,7 +7461,7 @@
         "image": "replace-picture-element-with-srcset.webp",
         "author": "chatGPT"
       },
-      "score": 0.6649447783531175
+      "score": 0.6575066508953455
     },
     {
       "id": "2013/09/ios7safariremote_debugging",
@@ -7787,6 +7831,10 @@
       "title": "縦方向のfloatを実現するjQuery Masonry",
       "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
       "date": "2012-06-18T12:36:00.000Z",
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
       "score": 0.846612579294932
     },
     {
@@ -7794,7 +7842,11 @@
       "title": "CSSセレクタを効率的な記述にする",
       "excerpt": "Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。",
       "date": "2010-12-28T21:00:00.000Z",
-      "score": 0.8394339206427485
+      "featured": {
+        "image": "optimize_css_selectors.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8395046376290831
     },
     {
       "id": "2018/import-from-old-blog",
@@ -8340,20 +8392,6 @@
   ],
   "2010/12/optimize_css_selectors": [
     {
-      "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
-      "date": "2007-08-04T15:46:10.000Z",
-      "score": 0.894493592085786
-    },
-    {
-      "id": "2012/06/jquery_masonry",
-      "title": "縦方向のfloatを実現するjQuery Masonry",
-      "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
-      "date": "2012-06-18T12:36:00.000Z",
-      "score": 0.8922909383122123
-    },
-    {
       "id": "2025/hello-astro",
       "title": "Hello Astro",
       "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
@@ -8362,7 +8400,7 @@
         "image": "hello-astro.webp",
         "author": "chatGPT"
       },
-      "score": 0.8895208134070276
+      "score": 0.9023200013111444
     },
     {
       "id": "2011/12/redesign_2012",
@@ -8373,7 +8411,29 @@
         "image": "redesign_2012.webp",
         "author": "chatGPT"
       },
-      "score": 0.8830446152111969
+      "score": 0.9000647960320733
+    },
+    {
+      "id": "2012/06/jquery_masonry",
+      "title": "縦方向のfloatを実現するjQuery Masonry",
+      "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
+      "date": "2012-06-18T12:36:00.000Z",
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
+      "score": 0.895325473866581
+    },
+    {
+      "id": "2007/08/yslow_1_minimize_http_requests",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8913934094201207
     }
   ],
   "2010/12/my_lifestyle_2010": [
@@ -9216,6 +9276,10 @@
       "title": "縦方向のfloatを実現するjQuery Masonry",
       "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
       "date": "2012-06-18T12:36:00.000Z",
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
       "score": 0.8486934500432533
     },
     {
@@ -9900,18 +9964,22 @@
       "score": 0.8454256616855429
     },
     {
+      "id": "2010/12/optimize_css_selectors",
+      "title": "CSSセレクタを効率的な記述にする",
+      "excerpt": "Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。",
+      "date": "2010-12-28T21:00:00.000Z",
+      "featured": {
+        "image": "optimize_css_selectors.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8369396523567455
+    },
+    {
       "id": "2009/05/inherit",
       "title": "親要素の色をリンク色に継承させる",
       "excerpt": "リンクの色の方が優先される理由の記事で、下記のHTMLの場合はリンクの色の方が優先されるという話をした。",
       "date": "2009-05-06T09:27:10.000Z",
       "score": 0.8356267026413319
-    },
-    {
-      "id": "2010/12/optimize_css_selectors",
-      "title": "CSSセレクタを効率的な記述にする",
-      "excerpt": "Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。",
-      "date": "2010-12-28T21:00:00.000Z",
-      "score": 0.8333634877932877
     }
   ],
   "2009/04/post_184": [
@@ -11930,9 +11998,13 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7218278171259573
     }
   ],
@@ -12092,6 +12164,10 @@
       "title": "縦方向のfloatを実現するjQuery Masonry",
       "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
       "date": "2012-06-18T12:36:00.000Z",
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
       "score": 0.9325719660634382
     },
     {
@@ -12110,7 +12186,11 @@
       "title": "CSSセレクタを効率的な記述にする",
       "excerpt": "Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。",
       "date": "2010-12-28T21:00:00.000Z",
-      "score": 0.894493592085786
+      "featured": {
+        "image": "optimize_css_selectors.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8913934094201207
     },
     {
       "id": "2007/03/post_139",
@@ -12152,9 +12232,13 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.6736926825763597
     }
   ],
@@ -12198,9 +12282,13 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7759857752093893
     },
     {
@@ -12228,9 +12316,13 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7076741414546285
     },
     {
@@ -12249,7 +12341,7 @@
         "image": "replace-picture-element-with-srcset.webp",
         "author": "chatGPT"
       },
-      "score": 0.6698384741938578
+      "score": 0.6737730069533604
     }
   ],
   "2007/08/yslow": [
@@ -12461,7 +12553,7 @@
         "image": "replace-picture-element-with-srcset.webp",
         "author": "chatGPT"
       },
-      "score": 0.7310605453780681
+      "score": 0.7321297904872515
     },
     {
       "id": "2004/12/post_38",
@@ -12625,6 +12717,10 @@
       "title": "縦方向のfloatを実現するjQuery Masonry",
       "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
       "date": "2012-06-18T12:36:00.000Z",
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
       "score": 0.8352356207675582
     },
     {
@@ -12771,9 +12867,13 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8044863655600203
     },
     {
@@ -12816,6 +12916,10 @@
       "title": "縦方向のfloatを実現するjQuery Masonry",
       "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
       "date": "2012-06-18T12:36:00.000Z",
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
       "score": 0.8075427977884582
     }
   ],
@@ -12825,7 +12929,11 @@
       "title": "CSSセレクタを効率的な記述にする",
       "excerpt": "Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。",
       "date": "2010-12-28T21:00:00.000Z",
-      "score": 0.8318435078326456
+      "featured": {
+        "image": "optimize_css_selectors.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8362067625401056
     },
     {
       "id": "2005/11/post_116",
@@ -12902,6 +13010,13 @@
       "score": 0.7575166070165174
     },
     {
+      "id": "2007/08/css",
+      "title": "拡張CSSで角丸コーナーを作る",
+      "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
+      "date": "2007-08-02T16:26:00.000Z",
+      "score": 0.7360270815939746
+    },
+    {
       "id": "2025/replace-picture-element-with-srcset",
       "title": "Picture要素をやめてsrcsetを使う",
       "excerpt": "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。",
@@ -12910,14 +13025,7 @@
         "image": "replace-picture-element-with-srcset.webp",
         "author": "chatGPT"
       },
-      "score": 0.7437121501801695
-    },
-    {
-      "id": "2007/08/css",
-      "title": "拡張CSSで角丸コーナーを作る",
-      "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
-      "date": "2007-08-02T16:26:00.000Z",
-      "score": 0.7360270815939746
+      "score": 0.7354831393832294
     },
     {
       "id": "2007/08/blueprint_a_css_framework",
@@ -12987,9 +13095,13 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強：1：Minimize HTTP Requests",
-      "excerpt": "*   YSlow for Firebug  内向きに話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
+      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8904089488356992
     },
     {

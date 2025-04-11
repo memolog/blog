@@ -98,6 +98,8 @@ const webpSrcSet = `${webpSrc}, ${webpSrc.replace(/\.webp$/, "@2x.webp")} 2x`;
         <img
           src={webpSrc}
           srcset={webpSrcSet}
+          role="presentation"
+          loading="lazy"
           width={width}
           height={height}
           alt={alt}

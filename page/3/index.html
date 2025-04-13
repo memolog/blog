@@ -11,6 +11,7 @@
     --article-background-color: white;
     --profile-background-color: var(--border-color);
     --border-radius: 10px;
+    --pagination-item-width: 61px;
   }
   body {
     background-color: var(--background-color);
@@ -189,10 +190,6 @@
     text-align: center;
   }
 
-  .content code[class*="language-"] {
-    color: #444;
-  }
-
   .header__feature {
     margin: 0.5em 0 -0.5em;
     position: relative;
@@ -205,10 +202,7 @@
   .featured__image {
     background: #f5f2f0;
     line-height: 0;
-    max-height: 335px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
     margin: 0 -32px;
   }
 
@@ -218,9 +212,11 @@
     width: 100%;
   }
 
-  .featured__image picture img {
+  .featured__image img {
     width: 100%;
     object-fit: cover;
+    height: auto;
+    aspect-ratio: 3 / 1;
   }
 
   .featured__credit {
@@ -312,166 +308,12 @@
   }
 
   .related-posts .featured__image {
-    max-height: 150px;
     margin-left: -15px;
     margin-right: -15px;
   }
 
-  .related-posts .featured__image img {
-    object-fit: contain;
-    width: 100%;
-  }
-
   .related-posts .featured__credit {
     display: none;
-  }
-
-  .related-posts .featured__image:empty {
-    height: 150px;
-  }
-
-  @media screen and (max-width: 500px) {
-    .header__epigraph {
-      display: none;
-    }
-
-    .header__title {
-      font-size: 1.2em;
-    }
-
-    .content h2 {
-      font-size: 1.2em;
-    }
-
-    .main .header .header__title {
-      margin-bottom: 30px;
-    }
-
-    .header__feature {
-      margin-top: -23px;
-    }
-
-    .featured__credit {
-      margin-left: -15px;
-      margin-right: -15px;
-      position: relative;
-    }
-
-    .related-posts .header__feature {
-      margin-top: 0.5em;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    .featured__image,
-    .content__image,
-    .content pre[class*="language-"],
-    .youtube-wrapper {
-      margin: 0 -15px;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    .featured__image,
-    .content__image,
-    .content pre[class*="language-"] {
-      margin: 0 -2em;
-    }
-  }
-
-  /*
-  .content p a[href]::before {
-    content: '🌐';
-    width: 24px;
-    display: inline-block;
-  }
-
-  .content p a[href].link-icon::before {
-    content: '';
-  }
-
-  .content p a[href].no-link-icon::before {
-    content: '';
-    width: 0;
-  }
-
-  .content p a.link-icon {
-    background-position-x: 4px;
-    background-position-y: center;
-    background-repeat: no-repeat;
-  }
-  */
-
-  .post .writing-vertical {
-    writing-mode: vertical-rl;
-    font-family: serif;
-    font-size: 1em;
-    margin: 1.5em 0;
-    column-count: 2;
-    max-width: var(--container-width);
-    width: 102%;
-    overflow: auto;
-    height: 800px;
-  }
-
-  .post .writing-vertical p {
-    margin: 0;
-  }
-
-  /*
-  .post .writing-vertical p a {
-    padding-left: 0px;
-    padding-top: 24px;
-  }
-  */
-
-  .post .writing-vertical p:first-letter {
-    margin-top: 1em;
-  }
-
-  .post .writing-vertical .link-icon {
-    background-position-x: center;
-    background-position-y: 5px;
-  }
-
-  .post .writing-vertical blockquote {
-    border: none;
-    margin: 0 0.5em;
-    padding: 1em 0.5em;
-    background: #f0f0f0;
-  }
-
-  @media screen and (max-width: 730px) {
-    .container {
-      padding: 0;
-      border-radius: 0;
-    }
-
-    article {
-      border-radius: 0;
-    }
-
-    .post .writing-vertical {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-    }
-
-    .header__feature img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .related-posts .content {
-      -webkit-line-clamp: 3;
-    }
-  }
-
-  @media screen and (max-width: 985px) {
-    .container {
-      width: 100%;
-      box-sizing: border-box;
-    }
   }
 
   .profile {
@@ -520,45 +362,6 @@
     margin-right: 0.5em;
   }
 
-  .amazon-book-list {
-    margin-top: 2em;
-  }
-
-  .amazon-book-list ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: table;
-    width: 100%;
-  }
-
-  .amazon-book-list li {
-    display: table-cell;
-    padding: 10px;
-    font-size: 0.875em;
-    line-height: 1.5;
-  }
-
-  .amazon-book-list li a {
-    color: #666;
-  }
-
-  .amazon-book-list li img {
-    display: block;
-  }
-
-  .amazon-book-list-3 li {
-    width: 33%;
-  }
-
-  .amazon-book-list-4 li {
-    width: 25%;
-  }
-
-  .amazon-book-list-5 li {
-    width: 20%;
-  }
-
   .content hr {
     border-top-width: 0;
     border-bottom-width: 1;
@@ -568,22 +371,21 @@
   }
 
   .pagination {
-    display: flex;
-    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--pagination-item-width));
+    gap: 10px;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 0 -5px;
+    justify-items: center;
+    margin: 0;
   }
 
   .page-number,
   .extend.next,
   .extend.prev,
   .pagination .space {
-    min-width: 59px;
-    min-height: 59px;
+    width: 100%;
     text-align: center;
-    line-height: 59px;
-    margin: 5px;
+    line-height: var(--pagination-item-width);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     background: var(--background-color);
@@ -600,286 +402,336 @@
     border-color: var(--darker-color);
   }
 
-  pre[class*="language-"],
-  code[class*="language-"] {
-    color: #d4d4d4;
-    font-size: 13px;
-    text-shadow: none;
-    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
-      "Courier New", monospace;
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
+    }
+
+    .profile-inner {
+      display: grid;
+      grid-template-areas:
+        "icon heading"
+        "content content";
+      grid-template-columns: 40px auto;
+      align-items: center;
+    }
+
+    .profile__image {
+      grid-area: icon;
+      justify-self: center;
+    }
+
+    .profile__heading {
+      grid-area: heading;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    .profile__content {
+      grid-area: content;
+      border-top: 1px dashed var(--profile-text-color);
+      margin-top: 0.5em;
+      padding-top: 0.5em;
+    }
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      padding: 0;
+      border-radius: 0;
+    }
+
+    article {
+      border-radius: 0;
+      padding: 1em;
+    }
+
+    .article-summary {
+      padding: 1em;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
+    }
+
+    .pagination {
+      margin: 0 10px;
+    }
+
+    .profile {
+      border-radius: 0;
+      margin-top: 3em;
+    }
+
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -1em;
+    }
+  }
+
+  @media screen and (max-width: 985px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  /*
+Name:   Duotone Light
+Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
+
+Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
+Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
+*/
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
+      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+      "Courier New", Courier, monospace;
+    font-size: 14px;
+    line-height: 1.375;
     direction: ltr;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
-    line-height: 1.5;
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+    background: #faf8f5;
+    color: #728fcb;
+  }
+
+  pre > code[class*="language-"] {
+    font-size: 1em;
+  }
+
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #faf8f5;
   }
 
   pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
   code[class*="language-"]::selection,
-  pre[class*="language-"] *::selection,
-  code[class*="language-"] *::selection {
+  code[class*="language-"] ::selection {
     text-shadow: none;
-    background: #264f78;
+    background: #faf8f5;
   }
 
-  @media print {
-    pre[class*="language-"],
-    code[class*="language-"] {
-      text-shadow: none;
-    }
-  }
-
+  /* Code blocks */
   pre[class*="language-"] {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
-    background: #1e1e1e;
   }
 
+  /* Inline code */
   :not(pre) > code[class*="language-"] {
-    padding: 0.1em 0.3em;
+    padding: 0.1em;
     border-radius: 0.3em;
-    color: #db4c69;
-    background: #1e1e1e;
-  }
-  /*********************************************************
-* Tokens
-*/
-  .namespace {
-    opacity: 0.7;
-  }
-
-  .token.doctype .token.doctype-tag {
-    color: #569cd6;
-  }
-
-  .token.doctype .token.name {
-    color: #9cdcfe;
   }
 
   .token.comment,
-  .token.prolog {
-    color: #6a9955;
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #b6ad9a;
   }
 
-  .token.punctuation,
-  .language-html .language-css .token.punctuation,
-  .language-html .language-javascript .token.punctuation {
-    color: #d4d4d4;
+  .token.punctuation {
+    color: #b6ad9a;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.tag,
+  .token.operator,
+  .token.number {
+    color: #063289;
   }
 
   .token.property,
-  .token.tag,
-  .token.boolean,
-  .token.number,
-  .token.constant,
-  .token.symbol,
-  .token.inserted,
-  .token.unit {
-    color: #b5cea8;
+  .token.function {
+    color: #b29762;
   }
 
+  .token.tag-id,
   .token.selector,
-  .token.attr-name,
+  .token.atrule-id {
+    color: #2d2006;
+  }
+
+  code.language-javascript,
+  .token.attr-name {
+    color: #896724;
+  }
+
+  code.language-css,
+  code.language-scss,
+  .token.boolean,
   .token.string,
-  .token.char,
-  .token.builtin,
-  .token.deleted {
-    color: #ce9178;
-  }
-
-  .language-css .token.string.url {
-    text-decoration: underline;
-  }
-
-  .token.operator,
-  .token.entity {
-    color: #d4d4d4;
-  }
-
-  .token.operator.arrow {
-    color: #569cd6;
-  }
-
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .language-scss .token.string,
+  .style .token.string,
+  .token.attr-value,
+  .token.keyword,
+  .token.control,
+  .token.directive,
+  .token.unit,
+  .token.statement,
+  .token.regex,
   .token.atrule {
-    color: #ce9178;
+    color: #728fcb;
   }
 
-  .token.atrule .token.rule {
-    color: #c586c0;
+  .token.placeholder,
+  .token.variable {
+    color: #93abdc;
   }
 
-  .token.atrule .token.url {
-    color: #9cdcfe;
+  .token.deleted {
+    text-decoration: line-through;
   }
 
-  .token.atrule .token.url .token.function {
-    color: #dcdcaa;
-  }
-
-  .token.atrule .token.url .token.punctuation {
-    color: #d4d4d4;
-  }
-
-  .token.keyword {
-    color: #569cd6;
-  }
-
-  .token.keyword.module,
-  .token.keyword.control-flow {
-    color: #c586c0;
-  }
-
-  .token.function,
-  .token.function .token.maybe-class-name {
-    color: #dcdcaa;
-  }
-
-  .token.regex {
-    color: #d16969;
-  }
-
-  .token.important {
-    color: #569cd6;
+  .token.inserted {
+    border-bottom: 1px dotted #2d2006;
+    text-decoration: none;
   }
 
   .token.italic {
     font-style: italic;
   }
 
-  .token.constant {
-    color: #9cdcfe;
+  .token.important,
+  .token.bold {
+    font-weight: bold;
   }
 
-  .token.class-name,
-  .token.maybe-class-name {
-    color: #4ec9b0;
-  }
-
-  .token.console {
-    color: #9cdcfe;
-  }
-
-  .token.parameter {
-    color: #9cdcfe;
-  }
-
-  .token.interpolation {
-    color: #9cdcfe;
-  }
-
-  .token.punctuation.interpolation-punctuation {
-    color: #569cd6;
-  }
-
-  .token.boolean {
-    color: #569cd6;
-  }
-
-  .token.property,
-  .token.variable,
-  .token.imports .token.maybe-class-name,
-  .token.exports .token.maybe-class-name {
-    color: #9cdcfe;
-  }
-
-  .token.selector {
-    color: #d7ba7d;
-  }
-
-  .token.escape {
-    color: #d7ba7d;
-  }
-
-  .token.tag {
-    color: #569cd6;
-  }
-
-  .token.tag .token.punctuation {
-    color: #808080;
-  }
-
-  .token.cdata {
-    color: #808080;
-  }
-
-  .token.attr-name {
-    color: #9cdcfe;
-  }
-
-  .token.attr-value,
-  .token.attr-value .token.punctuation {
-    color: #ce9178;
-  }
-
-  .token.attr-value .token.punctuation.attr-equals {
-    color: #d4d4d4;
+  .token.important {
+    color: #896724;
   }
 
   .token.entity {
-    color: #569cd6;
+    cursor: help;
   }
 
-  .token.namespace {
-    color: #4ec9b0;
-  }
-  /*********************************************************
-* Language Specific
-*/
-
-  pre[class*="language-javascript"],
-  code[class*="language-javascript"],
-  pre[class*="language-jsx"],
-  code[class*="language-jsx"],
-  pre[class*="language-typescript"],
-  code[class*="language-typescript"],
-  pre[class*="language-tsx"],
-  code[class*="language-tsx"] {
-    color: #9cdcfe;
+  pre > code.highlight {
+    outline: 0.4em solid #896724;
+    outline-offset: 0.4em;
   }
 
-  pre[class*="language-css"],
-  code[class*="language-css"] {
-    color: #ce9178;
+  /* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+  .line-numbers.line-numbers .line-numbers-rows {
+    border-right-color: #ece8de;
   }
 
-  pre[class*="language-html"],
-  code[class*="language-html"] {
-    color: #d4d4d4;
+  .line-numbers .line-numbers-rows > span:before {
+    color: #cdc4b1;
   }
 
-  .language-regex .token.anchor {
-    color: #dcdcaa;
-  }
-
-  .language-html .token.punctuation {
-    color: #808080;
-  }
-  /*********************************************************
-* Line highlighting
-*/
-  pre[class*="language-"] > code[class*="language-"] {
-    position: relative;
-    z-index: 1;
-  }
-
+  /* overrides color-values for the Line Highlight plugin
+ * http://prismjs.com/plugins/line-highlight/
+ */
   .line-highlight.line-highlight {
-    background: #f7ebc6;
-    box-shadow: inset 5px 0 0 #f7d87c;
-    z-index: 0;
-  }
-
-  pre[class*="language-"],
-  code[class*="language-"] {
-    font-size: 16px;
+    background: rgba(45, 32, 6, 0.2);
+    background: -webkit-linear-gradient(
+      left,
+      rgba(45, 32, 6, 0.2) 70%,
+      rgba(45, 32, 6, 0)
+    );
+    background: linear-gradient(
+      to right,
+      rgba(45, 32, 6, 0.2) 70%,
+      rgba(45, 32, 6, 0)
+    );
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -904,7 +756,7 @@
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2020/components-of-flexibility.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2020/flex-shorthand.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2020/flex-lines.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2020/flex-order-property.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2020/flex-flow-shorthand.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2020/flex-wrap-property.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2020/flex-flow-direction.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2020/automatic-minimum-size-of-flex-items.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2020/flex-collpased-items.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2020/flex-item-margin-padding-and-z-ordering.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2020-07-01T17:46:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年7月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/components-of-flexibility.html">Components of Flexibility</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #334744;"> <img src="/assets/images/919732ilsdl/919732ilsdl_medium.webp" srcset="/assets/images/919732ilsdl/919732ilsdl_medium.webp, /assets/images/919732ilsdl/919732ilsdl_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="1386" alt> </div> <div class="featured__credit">Image from <a href="https://artvee.com/dl/papillons-pl-13/" target="_blank" rel="noopener" tabindex="-1">Emile-Allain Séguy</a> on <a href="https://artvee.com/" target="_blank" rel="noopener" tabindex="-1">Artvee</a></div> </div> </header> <div class="content">7.2. Components of Flexibilityについて。各ロングハンドの説明はflex ショートハンドの方に書かれていて、ここには載ってない。今回は読み飛ばして良い感じの内容になってる。</div> <div class="read-more"> <a href="/2020/components-of-flexibility.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-06-30T14:09:49.000Z"> <span class="calendar-icon">📅</span> <span>2020年6月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-shorthand.html">The flex Shorthand</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cebf95;"> <img src="/assets/images/912215ilsdl/912215ilsdl_medium.webp" srcset="/assets/images/912215ilsdl/912215ilsdl_medium.webp, /assets/images/912215ilsdl/912215ilsdl_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="1252" alt> </div> <div class="featured__credit">Image from <a href="https://artvee.com/artist/leonard-leslie-brooke/" target="_blank" rel="noopener" tabindex="-1">Leonard Leslie Brooke</a> on <a href="https://artvee.com/" target="_blank" rel="noopener" tabindex="-1">Artvee</a></div> </div> </header> <div class="content">今回は7. Flexibilityについて。</div> <div class="read-more"> <a href="/2020/flex-shorthand.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-30T23:45:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-lines.html">Flex Lines</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e1dfd6;"> <img src="/assets/images/flex-lines/flex-lines_medium.webp" srcset="/assets/images/flex-lines/flex-lines_medium.webp, /assets/images/flex-lines/flex-lines_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">今回は6. Flex Linesについて。</div> <div class="read-more"> <a href="/2020/flex-lines.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-25T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-order-property.html">Display Order：the order property</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dda1ae;"> <div style="background-color: #dda1ae"> <img src="/assets/images/estudio-bloom-ezqnxsqUZ80-unsplash/estudio-bloom-ezqnxsqUZ80-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@estudiobloom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Estúdio Bloom</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今回は5.4. Display Order: the order propertyについて。</div> <div class="read-more"> <a href="/2020/flex-order-property.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-24T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月24日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-flow-shorthand.html">Flex Direction and Wrap：the flex-flow shorthand</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #949593;"> <div style="background-color: #949593"> <img src="/assets/images/ben-mcleod-2UfVYE2S7B4-unsplash/ben-mcleod-2UfVYE2S7B4-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@ben_mcleod?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Ben McLeod</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今回は5.3. Flex Direction and Wrap: the flex-flow shorthandについて。flex-flowは`flex-direction`と`flex-wrap`をまとめて設定できる。</div> <div class="read-more"> <a href="/2020/flex-flow-shorthand.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-23T09:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月23日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-wrap-property.html">Flex Line Wrapping：the flex-wrap property</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #0c3a42;"> <div style="background-color: #0c3a42"> <img src="/assets/images/jerry-wang-xiie4XeSzTU-unsplash/jerry-wang-xiie4XeSzTU-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="673"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@jerry_318?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jerry Wang</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">前回のFlex Flow Direction: the flex-direction propertyから引き続き。5.2. Flex Line Wrapping: the flex-wrap propertyについて</div> <div class="read-more"> <a href="/2020/flex-wrap-property.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-21T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-flow-direction.html">Flex Flow Direction：the flex-direction property</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #553d17;"> <div style="background-color: #553d17"> <img src="/assets/images/juliana-arruda-iVPWGCbFwd8-unsplash/juliana-arruda-iVPWGCbFwd8-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@julianaaphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Juliana Arruda</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今回は5. Ordering and Orientationの冒頭部分と、5.1. Flex Flow Direction: the flex-direction propertyについて。</div> <div class="read-more"> <a href="/2020/flex-flow-direction.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-18T18:49:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月19日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/automatic-minimum-size-of-flex-items.html">Automatic Minimum Size of Flex Items</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c4c6c4;"> <img src="/assets/images/febiyan-z85gD0sTOQ0-unsplash/febiyan-z85gD0sTOQ0-unsplash_medium.webp" srcset="/assets/images/febiyan-z85gD0sTOQ0-unsplash/febiyan-z85gD0sTOQ0-unsplash_medium.webp, /assets/images/febiyan-z85gD0sTOQ0-unsplash/febiyan-z85gD0sTOQ0-unsplash_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="656" alt> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@febiyanr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Febiyan</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div> </div> </header> <div class="content">時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は4.5. Automatic Minimum Size of Flex Items、autoキーワードで自動的に決定される最小値について。</div> <div class="read-more"> <a href="/2020/automatic-minimum-size-of-flex-items.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-04-12T19:41:53.000Z"> <span class="calendar-icon">📅</span> <span>2020年4月13日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-collpased-items.html">Collapsed Items</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #968e7b;"> <div style="background-color: #968e7b"> <img src="/assets/images/nong-vang-w5tI4WACAKo-unsplash/nong-vang-w5tI4WACAKo-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@californong?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Nong Vang</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今回は4.4. Collapsed Itemsについて&lt;!-- more  --&gt;  &gt; Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, produ</div> <div class="read-more"> <a href="/2020/flex-collpased-items.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-04-04T19:27:59.000Z"> <span class="calendar-icon">📅</span> <span>2020年4月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-item-margin-padding-and-z-ordering.html">Flex Item Margin, Padding and Z-Ordering</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #242c30;"> <img src="/assets/images/marc-klemm-nw0QE7nTqOc-unsplash/marc-klemm-nw0QE7nTqOc-unsplash_medium.webp" srcset="/assets/images/marc-klemm-nw0QE7nTqOc-unsplash/marc-klemm-nw0QE7nTqOc-unsplash_medium.webp, /assets/images/marc-klemm-nw0QE7nTqOc-unsplash/marc-klemm-nw0QE7nTqOc-unsplash_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="656" alt> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Marc Klemm</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div> </div> </header> <div class="content">今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて</div> <div class="read-more"> <a href="/2020/flex-item-margin-padding-and-z-ordering.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/2/">Prev</a> <a class="page-number" href="/">1</a> <a class="page-number " href="/page/2/"> 2 </a><span class="page-number current">3</span><a class="page-number " href="/page/4/"> 4 </a><a class="page-number " href="/page/5/"> 5 </a><a class="page-number " href="/page/6/"> 6 </a><a class="page-number " href="/page/7/"> 7 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/4/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2020/components-of-flexibility.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2020/flex-shorthand.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2020/flex-lines.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2020/flex-order-property.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2020/flex-flow-shorthand.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2020/flex-wrap-property.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2020/flex-flow-direction.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2020/automatic-minimum-size-of-flex-items.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2020/flex-collpased-items.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2020/flex-item-margin-padding-and-z-ordering.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2020-07-01T17:46:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年7月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/components-of-flexibility.html">Components of Flexibility</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #2d4d4c;"> <img src="/assets/images/919732ilsdl/919732ilsdl_medium.webp" srcset="/assets/images/919732ilsdl/919732ilsdl_medium.webp, /assets/images/919732ilsdl/919732ilsdl_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image from <a href="https://artvee.com/dl/papillons-pl-13/" target="_blank" rel="noopener" tabindex="-1">Emile-Allain Séguy</a> on <a href="https://artvee.com/" target="_blank" rel="noopener" tabindex="-1">Artvee</a></div> </div> </header> <div class="content">7.2. Components of Flexibilityについて。各ロングハンドの説明はflex ショートハンドの方に書かれていて、ここには載ってない。今回は読み飛ばして良い感じの内容になってる。</div> <div class="read-more"> <a href="/2020/components-of-flexibility.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-06-30T14:09:49.000Z"> <span class="calendar-icon">📅</span> <span>2020年6月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-shorthand.html">The flex Shorthand</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #cabf99;"> <img src="/assets/images/912215ilsdl/912215ilsdl_medium.webp" srcset="/assets/images/912215ilsdl/912215ilsdl_medium.webp, /assets/images/912215ilsdl/912215ilsdl_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image from <a href="https://artvee.com/artist/leonard-leslie-brooke/" target="_blank" rel="noopener" tabindex="-1">Leonard Leslie Brooke</a> on <a href="https://artvee.com/" target="_blank" rel="noopener" tabindex="-1">Artvee</a></div> </div> </header> <div class="content">今回は7. Flexibilityについて。</div> <div class="read-more"> <a href="/2020/flex-shorthand.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-30T23:45:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-lines.html">Flex Lines</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #e2dfd7;"> <img src="/assets/images/flex-lines/flex-lines_medium.webp" srcset="/assets/images/flex-lines/flex-lines_medium.webp, /assets/images/flex-lines/flex-lines_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">今回は6. Flex Linesについて。</div> <div class="read-more"> <a href="/2020/flex-lines.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-25T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-order-property.html">Display Order：the order property</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dda1ae;"> <div style="background-color: #dda1ae"> <img src="/assets/images/estudio-bloom-ezqnxsqUZ80-unsplash/estudio-bloom-ezqnxsqUZ80-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@estudiobloom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Estúdio Bloom</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今回は5.4. Display Order: the order propertyについて。</div> <div class="read-more"> <a href="/2020/flex-order-property.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-24T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月24日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-flow-shorthand.html">Flex Direction and Wrap：the flex-flow shorthand</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #949593;"> <div style="background-color: #949593"> <img src="/assets/images/ben-mcleod-2UfVYE2S7B4-unsplash/ben-mcleod-2UfVYE2S7B4-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@ben_mcleod?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Ben McLeod</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今回は5.3. Flex Direction and Wrap: the flex-flow shorthandについて。flex-flowは`flex-direction`と`flex-wrap`をまとめて設定できる。</div> <div class="read-more"> <a href="/2020/flex-flow-shorthand.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-23T09:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月23日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-wrap-property.html">Flex Line Wrapping：the flex-wrap property</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #0c3a42;"> <div style="background-color: #0c3a42"> <img src="/assets/images/jerry-wang-xiie4XeSzTU-unsplash/jerry-wang-xiie4XeSzTU-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="673"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@jerry_318?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jerry Wang</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">前回のFlex Flow Direction: the flex-direction propertyから引き続き。5.2. Flex Line Wrapping: the flex-wrap propertyについて</div> <div class="read-more"> <a href="/2020/flex-wrap-property.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-21T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-flow-direction.html">Flex Flow Direction：the flex-direction property</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #553d17;"> <div style="background-color: #553d17"> <img src="/assets/images/juliana-arruda-iVPWGCbFwd8-unsplash/juliana-arruda-iVPWGCbFwd8-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@julianaaphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Juliana Arruda</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今回は5. Ordering and Orientationの冒頭部分と、5.1. Flex Flow Direction: the flex-direction propertyについて。</div> <div class="read-more"> <a href="/2020/flex-flow-direction.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-05-18T18:49:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年5月19日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/automatic-minimum-size-of-flex-items.html">Automatic Minimum Size of Flex Items</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dbd8d4;"> <img src="/assets/images/febiyan-z85gD0sTOQ0-unsplash/febiyan-z85gD0sTOQ0-unsplash_medium.webp" srcset="/assets/images/febiyan-z85gD0sTOQ0-unsplash/febiyan-z85gD0sTOQ0-unsplash_medium.webp, /assets/images/febiyan-z85gD0sTOQ0-unsplash/febiyan-z85gD0sTOQ0-unsplash_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@febiyanr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Febiyan</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div> </div> </header> <div class="content">時間が開いてしまった。開きすぎてもはや自分でもよく覚えてないけど今回は4.5. Automatic Minimum Size of Flex Items、autoキーワードで自動的に決定される最小値について。</div> <div class="read-more"> <a href="/2020/automatic-minimum-size-of-flex-items.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-04-12T19:41:53.000Z"> <span class="calendar-icon">📅</span> <span>2020年4月13日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-collpased-items.html">Collapsed Items</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #968e7b;"> <div style="background-color: #968e7b"> <img src="/assets/images/nong-vang-w5tI4WACAKo-unsplash/nong-vang-w5tI4WACAKo-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@californong?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Nong Vang</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener">Primitive</a></div> </div> </header> <div class="content">今回は4.4. Collapsed Itemsについて&lt;!-- more  --&gt;  &gt; Specifying visibility:collapse on a flex item causes it to become a collapsed flex item, produ</div> <div class="read-more"> <a href="/2020/flex-collpased-items.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-04-04T19:27:59.000Z"> <span class="calendar-icon">📅</span> <span>2020年4月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2020/flex-item-margin-padding-and-z-ordering.html">Flex Item Margin, Padding and Z-Ordering</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #b9c5d1;"> <img src="/assets/images/marc-klemm-nw0QE7nTqOc-unsplash/marc-klemm-nw0QE7nTqOc-unsplash_medium.webp" srcset="/assets/images/marc-klemm-nw0QE7nTqOc-unsplash/marc-klemm-nw0QE7nTqOc-unsplash_medium.webp, /assets/images/marc-klemm-nw0QE7nTqOc-unsplash/marc-klemm-nw0QE7nTqOc-unsplash_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Photo by <a href="https://unsplash.com/@marcklemm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Marc Klemm</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a></div> </div> </header> <div class="content">今回は4.2. Flex Item Margins and Paddingsと4.3. Flex Item Z-Orderingについて</div> <div class="read-more"> <a href="/2020/flex-item-margin-padding-and-z-ordering.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/2/">Prev</a> <a class="page-number" href="/">1</a> <a class="page-number " href="/page/2/"> 2 </a><span class="page-number current">3</span><a class="page-number " href="/page/4/"> 4 </a><a class="page-number " href="/page/5/"> 5 </a><a class="page-number " href="/page/6/"> 6 </a><a class="page-number " href="/page/7/"> 7 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/4/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

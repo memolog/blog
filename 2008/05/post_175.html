@@ -11,6 +11,7 @@
     --article-background-color: white;
     --profile-background-color: var(--border-color);
     --border-radius: 10px;
+    --pagination-item-width: 61px;
   }
   body {
     background-color: var(--background-color);
@@ -189,10 +190,6 @@
     text-align: center;
   }
 
-  .content code[class*="language-"] {
-    color: #444;
-  }
-
   .header__feature {
     margin: 0.5em 0 -0.5em;
     position: relative;
@@ -205,10 +202,7 @@
   .featured__image {
     background: #f5f2f0;
     line-height: 0;
-    max-height: 335px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
     margin: 0 -32px;
   }
 
@@ -218,9 +212,11 @@
     width: 100%;
   }
 
-  .featured__image picture img {
+  .featured__image img {
     width: 100%;
     object-fit: cover;
+    height: auto;
+    aspect-ratio: 3 / 1;
   }
 
   .featured__credit {
@@ -312,166 +308,12 @@
   }
 
   .related-posts .featured__image {
-    max-height: 150px;
     margin-left: -15px;
     margin-right: -15px;
   }
 
-  .related-posts .featured__image img {
-    object-fit: contain;
-    width: 100%;
-  }
-
   .related-posts .featured__credit {
     display: none;
-  }
-
-  .related-posts .featured__image:empty {
-    height: 150px;
-  }
-
-  @media screen and (max-width: 500px) {
-    .header__epigraph {
-      display: none;
-    }
-
-    .header__title {
-      font-size: 1.2em;
-    }
-
-    .content h2 {
-      font-size: 1.2em;
-    }
-
-    .main .header .header__title {
-      margin-bottom: 30px;
-    }
-
-    .header__feature {
-      margin-top: -23px;
-    }
-
-    .featured__credit {
-      margin-left: -15px;
-      margin-right: -15px;
-      position: relative;
-    }
-
-    .related-posts .header__feature {
-      margin-top: 0.5em;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    .featured__image,
-    .content__image,
-    .content pre[class*="language-"],
-    .youtube-wrapper {
-      margin: 0 -15px;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    .featured__image,
-    .content__image,
-    .content pre[class*="language-"] {
-      margin: 0 -2em;
-    }
-  }
-
-  /*
-  .content p a[href]::before {
-    content: '🌐';
-    width: 24px;
-    display: inline-block;
-  }
-
-  .content p a[href].link-icon::before {
-    content: '';
-  }
-
-  .content p a[href].no-link-icon::before {
-    content: '';
-    width: 0;
-  }
-
-  .content p a.link-icon {
-    background-position-x: 4px;
-    background-position-y: center;
-    background-repeat: no-repeat;
-  }
-  */
-
-  .post .writing-vertical {
-    writing-mode: vertical-rl;
-    font-family: serif;
-    font-size: 1em;
-    margin: 1.5em 0;
-    column-count: 2;
-    max-width: var(--container-width);
-    width: 102%;
-    overflow: auto;
-    height: 800px;
-  }
-
-  .post .writing-vertical p {
-    margin: 0;
-  }
-
-  /*
-  .post .writing-vertical p a {
-    padding-left: 0px;
-    padding-top: 24px;
-  }
-  */
-
-  .post .writing-vertical p:first-letter {
-    margin-top: 1em;
-  }
-
-  .post .writing-vertical .link-icon {
-    background-position-x: center;
-    background-position-y: 5px;
-  }
-
-  .post .writing-vertical blockquote {
-    border: none;
-    margin: 0 0.5em;
-    padding: 1em 0.5em;
-    background: #f0f0f0;
-  }
-
-  @media screen and (max-width: 730px) {
-    .container {
-      padding: 0;
-      border-radius: 0;
-    }
-
-    article {
-      border-radius: 0;
-    }
-
-    .post .writing-vertical {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-    }
-
-    .header__feature img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .related-posts .content {
-      -webkit-line-clamp: 3;
-    }
-  }
-
-  @media screen and (max-width: 985px) {
-    .container {
-      width: 100%;
-      box-sizing: border-box;
-    }
   }
 
   .profile {
@@ -520,45 +362,6 @@
     margin-right: 0.5em;
   }
 
-  .amazon-book-list {
-    margin-top: 2em;
-  }
-
-  .amazon-book-list ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: table;
-    width: 100%;
-  }
-
-  .amazon-book-list li {
-    display: table-cell;
-    padding: 10px;
-    font-size: 0.875em;
-    line-height: 1.5;
-  }
-
-  .amazon-book-list li a {
-    color: #666;
-  }
-
-  .amazon-book-list li img {
-    display: block;
-  }
-
-  .amazon-book-list-3 li {
-    width: 33%;
-  }
-
-  .amazon-book-list-4 li {
-    width: 25%;
-  }
-
-  .amazon-book-list-5 li {
-    width: 20%;
-  }
-
   .content hr {
     border-top-width: 0;
     border-bottom-width: 1;
@@ -568,22 +371,21 @@
   }
 
   .pagination {
-    display: flex;
-    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--pagination-item-width));
+    gap: 10px;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 0 -5px;
+    justify-items: center;
+    margin: 0;
   }
 
   .page-number,
   .extend.next,
   .extend.prev,
   .pagination .space {
-    min-width: 59px;
-    min-height: 59px;
+    width: 100%;
     text-align: center;
-    line-height: 59px;
-    margin: 5px;
+    line-height: var(--pagination-item-width);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     background: var(--background-color);
@@ -600,286 +402,336 @@
     border-color: var(--darker-color);
   }
 
-  pre[class*="language-"],
-  code[class*="language-"] {
-    color: #d4d4d4;
-    font-size: 13px;
-    text-shadow: none;
-    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
-      "Courier New", monospace;
+  .post .writing-vertical {
+    writing-mode: vertical-rl;
+    font-family: serif;
+    font-size: 1em;
+    margin: 1.5em 0;
+    column-count: 2;
+    max-width: var(--container-width);
+    width: 102%;
+    overflow: auto;
+    height: 800px;
+  }
+
+  .post .writing-vertical p {
+    margin: 0;
+  }
+
+  .post .writing-vertical p:first-letter {
+    margin-top: 1em;
+  }
+
+  .post .writing-vertical .link-icon {
+    background-position-x: center;
+    background-position-y: 5px;
+  }
+
+  .post .writing-vertical blockquote {
+    border: none;
+    margin: 0 0.5em;
+    padding: 1em 0.5em;
+    background: #f0f0f0;
+  }
+
+  @media screen and (max-width: 500px) {
+    .header__epigraph {
+      display: none;
+    }
+
+    .header__title {
+      font-size: 1.2em;
+    }
+
+    .content h2 {
+      font-size: 1.2em;
+    }
+
+    .main .header .header__title {
+      margin-bottom: 30px;
+    }
+
+    .header__feature {
+      margin-top: -23px;
+    }
+
+    .featured__credit {
+      margin-left: -15px;
+      margin-right: -15px;
+      position: relative;
+    }
+
+    .related-posts .header__feature {
+      margin-top: 0.5em;
+    }
+
+    .profile-inner {
+      display: grid;
+      grid-template-areas:
+        "icon heading"
+        "content content";
+      grid-template-columns: 40px auto;
+      align-items: center;
+    }
+
+    .profile__image {
+      grid-area: icon;
+      justify-self: center;
+    }
+
+    .profile__heading {
+      grid-area: heading;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    .profile__content {
+      grid-area: content;
+      border-top: 1px dashed var(--profile-text-color);
+      margin-top: 0.5em;
+      padding-top: 0.5em;
+    }
+  }
+
+  @media screen and (max-width: 730px) {
+    .container {
+      padding: 0;
+      border-radius: 0;
+    }
+
+    article {
+      border-radius: 0;
+      padding: 1em;
+    }
+
+    .article-summary {
+      padding: 1em;
+    }
+
+    .post .writing-vertical {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .header__feature img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .related-posts .content {
+      -webkit-line-clamp: 3;
+    }
+
+    .pagination {
+      margin: 0 10px;
+    }
+
+    .profile {
+      border-radius: 0;
+      margin-top: 3em;
+    }
+
+    .featured__image,
+    .content__image,
+    .content pre[class*="language-"] {
+      margin: 0 -1em;
+    }
+  }
+
+  @media screen and (max-width: 985px) {
+    .container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  /*
+Name:   Duotone Light
+Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
+
+Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
+Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
+*/
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
+      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
+      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
+      "Courier New", Courier, monospace;
+    font-size: 14px;
+    line-height: 1.375;
     direction: ltr;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
-    line-height: 1.5;
+
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
+
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
+    background: #faf8f5;
+    color: #728fcb;
+  }
+
+  pre > code[class*="language-"] {
+    font-size: 1em;
+  }
+
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #faf8f5;
   }
 
   pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
   code[class*="language-"]::selection,
-  pre[class*="language-"] *::selection,
-  code[class*="language-"] *::selection {
+  code[class*="language-"] ::selection {
     text-shadow: none;
-    background: #264f78;
+    background: #faf8f5;
   }
 
-  @media print {
-    pre[class*="language-"],
-    code[class*="language-"] {
-      text-shadow: none;
-    }
-  }
-
+  /* Code blocks */
   pre[class*="language-"] {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
-    background: #1e1e1e;
   }
 
+  /* Inline code */
   :not(pre) > code[class*="language-"] {
-    padding: 0.1em 0.3em;
+    padding: 0.1em;
     border-radius: 0.3em;
-    color: #db4c69;
-    background: #1e1e1e;
-  }
-  /*********************************************************
-* Tokens
-*/
-  .namespace {
-    opacity: 0.7;
-  }
-
-  .token.doctype .token.doctype-tag {
-    color: #569cd6;
-  }
-
-  .token.doctype .token.name {
-    color: #9cdcfe;
   }
 
   .token.comment,
-  .token.prolog {
-    color: #6a9955;
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #b6ad9a;
   }
 
-  .token.punctuation,
-  .language-html .language-css .token.punctuation,
-  .language-html .language-javascript .token.punctuation {
-    color: #d4d4d4;
+  .token.punctuation {
+    color: #b6ad9a;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.tag,
+  .token.operator,
+  .token.number {
+    color: #063289;
   }
 
   .token.property,
-  .token.tag,
-  .token.boolean,
-  .token.number,
-  .token.constant,
-  .token.symbol,
-  .token.inserted,
-  .token.unit {
-    color: #b5cea8;
+  .token.function {
+    color: #b29762;
   }
 
+  .token.tag-id,
   .token.selector,
-  .token.attr-name,
+  .token.atrule-id {
+    color: #2d2006;
+  }
+
+  code.language-javascript,
+  .token.attr-name {
+    color: #896724;
+  }
+
+  code.language-css,
+  code.language-scss,
+  .token.boolean,
   .token.string,
-  .token.char,
-  .token.builtin,
-  .token.deleted {
-    color: #ce9178;
-  }
-
-  .language-css .token.string.url {
-    text-decoration: underline;
-  }
-
-  .token.operator,
-  .token.entity {
-    color: #d4d4d4;
-  }
-
-  .token.operator.arrow {
-    color: #569cd6;
-  }
-
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .language-scss .token.string,
+  .style .token.string,
+  .token.attr-value,
+  .token.keyword,
+  .token.control,
+  .token.directive,
+  .token.unit,
+  .token.statement,
+  .token.regex,
   .token.atrule {
-    color: #ce9178;
+    color: #728fcb;
   }
 
-  .token.atrule .token.rule {
-    color: #c586c0;
+  .token.placeholder,
+  .token.variable {
+    color: #93abdc;
   }
 
-  .token.atrule .token.url {
-    color: #9cdcfe;
+  .token.deleted {
+    text-decoration: line-through;
   }
 
-  .token.atrule .token.url .token.function {
-    color: #dcdcaa;
-  }
-
-  .token.atrule .token.url .token.punctuation {
-    color: #d4d4d4;
-  }
-
-  .token.keyword {
-    color: #569cd6;
-  }
-
-  .token.keyword.module,
-  .token.keyword.control-flow {
-    color: #c586c0;
-  }
-
-  .token.function,
-  .token.function .token.maybe-class-name {
-    color: #dcdcaa;
-  }
-
-  .token.regex {
-    color: #d16969;
-  }
-
-  .token.important {
-    color: #569cd6;
+  .token.inserted {
+    border-bottom: 1px dotted #2d2006;
+    text-decoration: none;
   }
 
   .token.italic {
     font-style: italic;
   }
 
-  .token.constant {
-    color: #9cdcfe;
+  .token.important,
+  .token.bold {
+    font-weight: bold;
   }
 
-  .token.class-name,
-  .token.maybe-class-name {
-    color: #4ec9b0;
-  }
-
-  .token.console {
-    color: #9cdcfe;
-  }
-
-  .token.parameter {
-    color: #9cdcfe;
-  }
-
-  .token.interpolation {
-    color: #9cdcfe;
-  }
-
-  .token.punctuation.interpolation-punctuation {
-    color: #569cd6;
-  }
-
-  .token.boolean {
-    color: #569cd6;
-  }
-
-  .token.property,
-  .token.variable,
-  .token.imports .token.maybe-class-name,
-  .token.exports .token.maybe-class-name {
-    color: #9cdcfe;
-  }
-
-  .token.selector {
-    color: #d7ba7d;
-  }
-
-  .token.escape {
-    color: #d7ba7d;
-  }
-
-  .token.tag {
-    color: #569cd6;
-  }
-
-  .token.tag .token.punctuation {
-    color: #808080;
-  }
-
-  .token.cdata {
-    color: #808080;
-  }
-
-  .token.attr-name {
-    color: #9cdcfe;
-  }
-
-  .token.attr-value,
-  .token.attr-value .token.punctuation {
-    color: #ce9178;
-  }
-
-  .token.attr-value .token.punctuation.attr-equals {
-    color: #d4d4d4;
+  .token.important {
+    color: #896724;
   }
 
   .token.entity {
-    color: #569cd6;
+    cursor: help;
   }
 
-  .token.namespace {
-    color: #4ec9b0;
-  }
-  /*********************************************************
-* Language Specific
-*/
-
-  pre[class*="language-javascript"],
-  code[class*="language-javascript"],
-  pre[class*="language-jsx"],
-  code[class*="language-jsx"],
-  pre[class*="language-typescript"],
-  code[class*="language-typescript"],
-  pre[class*="language-tsx"],
-  code[class*="language-tsx"] {
-    color: #9cdcfe;
+  pre > code.highlight {
+    outline: 0.4em solid #896724;
+    outline-offset: 0.4em;
   }
 
-  pre[class*="language-css"],
-  code[class*="language-css"] {
-    color: #ce9178;
+  /* overrides color-values for the Line Numbers plugin
+ * http://prismjs.com/plugins/line-numbers/
+ */
+  .line-numbers.line-numbers .line-numbers-rows {
+    border-right-color: #ece8de;
   }
 
-  pre[class*="language-html"],
-  code[class*="language-html"] {
-    color: #d4d4d4;
+  .line-numbers .line-numbers-rows > span:before {
+    color: #cdc4b1;
   }
 
-  .language-regex .token.anchor {
-    color: #dcdcaa;
-  }
-
-  .language-html .token.punctuation {
-    color: #808080;
-  }
-  /*********************************************************
-* Line highlighting
-*/
-  pre[class*="language-"] > code[class*="language-"] {
-    position: relative;
-    z-index: 1;
-  }
-
+  /* overrides color-values for the Line Highlight plugin
+ * http://prismjs.com/plugins/line-highlight/
+ */
   .line-highlight.line-highlight {
-    background: #f7ebc6;
-    box-shadow: inset 5px 0 0 #f7d87c;
-    z-index: 0;
-  }
-
-  pre[class*="language-"],
-  code[class*="language-"] {
-    font-size: 16px;
+    background: rgba(45, 32, 6, 0.2);
+    background: -webkit-linear-gradient(
+      left,
+      rgba(45, 32, 6, 0.2) 70%,
+      rgba(45, 32, 6, 0)
+    );
+    background: linear-gradient(
+      to right,
+      rgba(45, 32, 6, 0.2) 70%,
+      rgba(45, 32, 6, 0)
+    );
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-955153-2"></script><script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","UA-955153-2");</script><script type="application/ld+json">
   {
@@ -906,11 +758,11 @@
   }
 </script><meta property="og:type" content="article"><meta property="og:title" content="本：赤を見る"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content=" 2004年春にハーバード大学で行われた著者の講演内容をまとめた本。「赤を見る」という行為を因数分解して、「感覚」とは何か、「知覚」とは何か、そして「意識」とは何かにまで踏み込みこんでいきます。150ページくらいの分量なのですが、内容が難解で・・ページを行ったり来たり、途中で挫折しつつ読み進めたので、読了するのに時間がかかりました。"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="/assets/images/seeing_red/seeing_red_medium.webp"><meta property="article:published_time" content="2008-05-27T22:11:46.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://memolog.org/assets/images/seeing_red/seeing_red_medium.webp"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2008/05/post_175.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
-</a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2008-05-27T22:11:46.000Z"> <span class="calendar-icon">📅</span> <span>2008年5月28日</span> </time> </div> <h2 class="header__title"><span>本：赤を見る</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #9e978c;"> <img src="/assets/images/seeing_red/seeing_red_medium.webp" srcset="/assets/images/seeing_red/seeing_red_medium.webp, /assets/images/seeing_red/seeing_red_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div id="article-content" class="content">  <p>「<a href="https://www.kinokuniya.co.jp/f/dsg-01-9784314010177">赤を見る</a>」は2004 年春にハーバード大学で行われた著者の講演内容をまとめた本。「赤を見る」という行為を因数分解して、「感覚」とは何か、「知覚」とは何か、そして「意識」とは何かにまで踏み込みこんでいきます。150 ページくらいの分量なのですが、内容が難解で・・ページを行ったり来たり、途中で挫折しつつ読み進めたので、読了するのに時間がかかりました。</p>
+</a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2008-05-27T22:11:46.000Z"> <span class="calendar-icon">📅</span> <span>2008年5月28日</span> </time> </div> <h2 class="header__title"><span>本：赤を見る</span></h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #979085;"> <img src="/assets/images/seeing_red/seeing_red_medium.webp" srcset="/assets/images/seeing_red/seeing_red_medium.webp, /assets/images/seeing_red/seeing_red_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div id="article-content" class="content">  <p>「<a href="https://www.kinokuniya.co.jp/f/dsg-01-9784314010177">赤を見る</a>」は2004 年春にハーバード大学で行われた著者の講演内容をまとめた本。「赤を見る」という行為を因数分解して、「感覚」とは何か、「知覚」とは何か、そして「意識」とは何かにまで踏み込みこんでいきます。150 ページくらいの分量なのですが、内容が難解で・・ページを行ったり来たり、途中で挫折しつつ読み進めたので、読了するのに時間がかかりました。</p>
 <p>前半の話は「赤い感覚を経験している」という行為（レッディング）を中心に進みます。赤いスクリーンは物理的には存在していて、その特徴も伝えることはできるのですが、人が赤を見たときに意識に上ってくる、赤いという感覚は物理的には存在しない。この感覚が何であるかを、説明することは非常に難しい。本書の中では、「何でも見える盲目の猿（感覚はあるが、知覚できない）」の実験を通して、感覚と知覚が別々に機能していることを説明し、進化論的なアプローチで、感覚とは外部への反応が埋没し、脳内の内部ループとなった「行為」であると論じています。</p>
 <p>後半は、ファクター X（通常の感覚経験を現象的に豊かな意識ある感覚経験の領域まで高める付加的な特性（p47））について、意識的な「瞬間（一瞬の時間の幅）」と、その間に起る感覚の内部ループを手がかりに話を進めていきます。</p>
 <p>前半を辛抱強く理解していければ、後半の話は感銘を覚えると思います。おすすめの良書です。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-17T07:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月17日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/11/post_163.html">本：幽霊を捕まえようとした科学者たち</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #877f6e;"> <img src="/assets/images/ghost_hunters/ghost_hunters_medium.webp" srcset="/assets/images/ghost_hunters/ghost_hunters_medium.webp, /assets/images/ghost_hunters/ghost_hunters_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="985" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">幽霊の存在を科学的アプローチで立証しようと試みた科学者たちの物語です。科学系のノンフィクションは好きです。</div> <div class="read-more"> <a href="/2007/11/post_163.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-18T22:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月19日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2011/04/essays_kahneman.html">本：ダニエル・カーネマン心理と経済を語る</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #bab4ab;"> <img src="/assets/images/essays_kahneman/essays_kahneman_medium.webp" srcset="/assets/images/essays_kahneman/essays_kahneman_medium.webp, /assets/images/essays_kahneman/essays_kahneman_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="657" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">行動経済学の創始者の一人と言われるダニエル・カーネマン、彼のノーベル賞受賞記念講演と、その時の発表された自伝、そして彼の論文の2本（一般読者にも分かりやすいものらしい）をまとめたのが本書。ヒューリスティックとバイアスの話などは例えが秀逸で面白かったです。</div> <div class="read-more"> <a href="/2011/04/essays_kahneman.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-20T16:49:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月21日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/post_143.html">アンビエント・ファインダビリティ</a> </h3>  </header> <div class="content"> ambient（周囲を取り巻く・完全に包囲している）とfindability（位置特定可能な・特定の対象物の発見のしやすさ）を二つあわせて、アンビエント・ファインダビリティ。直訳すると「周囲を取り巻く特定の対象物の発見のしやすさ」というような感じですが、私なりに解釈するとしたら「自分の取り囲む広大な情報の波から特定の情報を発見する」ようなことを表しているのかと思います。アンビエント・ファインダビリティの世界では、個人は「広大な情報から適切な素早く情報を入手する」ことが肝要で、本書では情報とは何か、情報の見つけやすさとは何かを伝え、最後に台頭しつつある情報を選りすぐる社会的な仕組み（タクソノミーとかフォークソノミーとか）などを次々と紹介しています。</div> <div class="read-more"> <a href="/2007/08/post_143.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-08-12T14:09:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年8月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/08/post_178.html">セレンディピティと仮説立案</a> </h3>  </header> <div class="content">今現在「セレンディピティの探求」という本を読んでいます。最初の方はセレンディピティの意味論的なところをあつかっていて、個人的にはあまり関心がそそらなかったのですが、今読んでいる「仮説立案」という章はなかなか面白いです。</div> <div class="read-more"> <a href="/2008/08/post_178.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-17T07:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月17日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/11/post_163.html">本：幽霊を捕まえようとした科学者たち</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #847c6b;"> <img src="/assets/images/ghost_hunters/ghost_hunters_medium.webp" srcset="/assets/images/ghost_hunters/ghost_hunters_medium.webp, /assets/images/ghost_hunters/ghost_hunters_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">幽霊の存在を科学的アプローチで立証しようと試みた科学者たちの物語です。科学系のノンフィクションは好きです。</div> <div class="read-more"> <a href="/2007/11/post_163.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-18T22:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月19日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2011/04/essays_kahneman.html">本：ダニエル・カーネマン心理と経済を語る</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #68635c;"> <img src="/assets/images/essays_kahneman/essays_kahneman_medium.webp" srcset="/assets/images/essays_kahneman/essays_kahneman_medium.webp, /assets/images/essays_kahneman/essays_kahneman_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank">ChatGPT</a></div> </div> </header> <div class="content">行動経済学の創始者の一人と言われるダニエル・カーネマン、彼のノーベル賞受賞記念講演と、その時の発表された自伝、そして彼の論文の2本（一般読者にも分かりやすいものらしい）をまとめたのが本書。ヒューリスティックとバイアスの話などは例えが秀逸で面白かったです。</div> <div class="read-more"> <a href="/2011/04/essays_kahneman.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-20T16:49:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月21日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/post_143.html">アンビエント・ファインダビリティ</a> </h3>  </header> <div class="content"> ambient（周囲を取り巻く・完全に包囲している）とfindability（位置特定可能な・特定の対象物の発見のしやすさ）を二つあわせて、アンビエント・ファインダビリティ。直訳すると「周囲を取り巻く特定の対象物の発見のしやすさ」というような感じですが、私なりに解釈するとしたら「自分の取り囲む広大な情報の波から特定の情報を発見する」ようなことを表しているのかと思います。アンビエント・ファインダビリティの世界では、個人は「広大な情報から適切な素早く情報を入手する」ことが肝要で、本書では情報とは何か、情報の見つけやすさとは何かを伝え、最後に台頭しつつある情報を選りすぐる社会的な仕組み（タクソノミーとかフォークソノミーとか）などを次々と紹介しています。</div> <div class="read-more"> <a href="/2007/08/post_143.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-08-12T14:09:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年8月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/08/post_178.html">セレンディピティと仮説立案</a> </h3>  </header> <div class="content">今現在「セレンディピティの探求」という本を読んでいます。最初の方はセレンディピティの意味論的なところをあつかっていて、個人的にはあまり関心がそそらなかったのですが、今読んでいる「仮説立案」という章はなかなか面白いです。</div> <div class="read-more"> <a href="/2008/08/post_178.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

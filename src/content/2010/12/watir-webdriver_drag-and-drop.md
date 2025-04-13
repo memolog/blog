@@ -10,7 +10,7 @@ tags:
 excerpt: "一つ前の記事でwatirはselenium-webdriverのラッパー的な感じであると申しました。なので、watir-webdriverでもselenium-webdriverで実装されているメソッドを直接使用することも可能です。"
 ---
 
-一つ前の記事で[watir は selenium-webdriver のラッパー的な感じ](/blog//2010/12/watir-webdriver-alternative-attach-method/)であると申しました。なので、watir-webdriver でも selenium-webdriver で実装されているメソッドを直接使用することも可能です。
+一つ前の記事で[watir は selenium-webdriver のラッパー的な感じ](/2010/12/watir-webdriver-alternative-attach-method/)であると申しました。なので、watir-webdriver でも selenium-webdriver で実装されているメソッドを直接使用することも可能です。
 
 ドラッグアンドドロップの UI はわりと watir で自動化する場合の泣き所だったのですが（watir でもできなくないはずですが）、selenium-webdriver では Drag and Drop をするためのメソッドが用意されていて、それを利用すると watir-webdriver でも簡単に Drag and drop をすることができます。詳しくは[TipsAndTricks - selenium](http://code.google.com/p/selenium/wiki/TipsAndTricks)や[Class: Selenium::WebDriver::Element](http://selenium.googlecode.com/svn-history/r9054/trunk/docs/api/rb/Selenium/WebDriver/Element.html#drag_and_drop_by-instance_method)などをご参照。
 

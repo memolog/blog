@@ -12,7 +12,7 @@ excerpt: "AndroidのWebViewをinspectするという話。調べてたら第3回
 
 Android の WebView を inspect するという話。調べてたら[第 3 回　 weinre を使った iOS／Android アプリの動作検証：もっと使おう PhoneGap／Cordova 2.0.0 ｜ gihyo.jp ... 技術評論社](http://gihyo.jp/dev/serial/01/phonegap2/0003)にすでに詳細に書いてあったのでそちらも参考に。[Remote Debugging Firefox OS with Weinre ✩Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2013/01/remote-debugging-firefox-os-with-weinre/)の話だと、Firefox OS でも同じように inspect ができるみたい。
 
-なお、iOS の場合は、[Safari から UIWebView の HTML を inspect する](/blog//2012/11/inspect_uiwebview_with_safari/)で紹介した方法で簡単に inspect をすることができます（アプリ内の UIWebView を inspect する場合は、Xcode でアプリをビルドしないとできません）。
+なお、iOS の場合は、[Safari から UIWebView の HTML を inspect する](/2012/11/inspect_uiwebview_with_safari/)で紹介した方法で簡単に inspect をすることができます（アプリ内の UIWebView を inspect する場合は、Xcode でアプリをビルドしないとできません）。
 
 Android の場合、標準的な方法としては、[Remote Debugging](https://developers.google.com/chrome-developer-tools/docs/remote-debugging)があるのですが、これは携帯端末側のブラウザで開いているページを共有するような感じなので、アプリ内のページを inspect することができない。あと USB での接続が必要。（ちなみに Andorid の 4.2 では開発者用のオプションは設定の About Phone の Build number を 7 回タップしないと表示されないらしい。）
 
@@ -20,7 +20,7 @@ Android の場合、標準的な方法としては、[Remote Debugging](https://
 
 それで最初の[第 3 回　 weinre を使った iOS／Android アプリの動作検証：もっと使おう PhoneGap／Cordova 2.0.0 ｜ gihyo.jp ... 技術評論社](http://gihyo.jp/dev/serial/01/phonegap2/0003)に戻るのですが、Android アプリ内の WebView を inspect するには自分で weinre を起動して inspect するしかなさそう。
 
-weinre のインストール方法は下記のような感じ。Node が必要なので Homebrew を使って一緒にインストール。Homebrew のインストールは[RVM / JewelryBox / Homebrew をインストール](/blog//2012/09/rvm_jewelrybox_homebrew/)を参考。
+weinre のインストール方法は下記のような感じ。Node が必要なので Homebrew を使って一緒にインストール。Homebrew のインストールは[RVM / JewelryBox / Homebrew をインストール](/2012/09/rvm_jewelrybox_homebrew/)を参考。
 
 ```
 brew install node

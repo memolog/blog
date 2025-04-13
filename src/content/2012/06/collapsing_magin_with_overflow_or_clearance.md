@@ -65,7 +65,7 @@ p{ margin:10px; }
 
 と書いてあり、「same block formatting」の中にある要素でないと、マージンの相殺は発生しない。
 
-overflow は[float と width:auto - メモログ](/blog//2012/05/float_and_width_auto/)でも触れましたけれど、visible 以外の値が設定されている場合は、new block formatting contexts を構築するので、マージンの相殺が発生しなくなる。
+overflow は[float と width:auto - メモログ](/2012/05/float_and_width_auto/)でも触れましたけれど、visible 以外の値が設定されている場合は、new block formatting contexts を構築するので、マージンの相殺が発生しなくなる。
 
 上の例の場合だと
 

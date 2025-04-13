@@ -8,7 +8,7 @@ tags:
 excerpt: "Sublime Text 2 の JSLint から node がみつからない - メモログと関連して、少しの間JSLintを使用していたのですが、jQueryなどglobalに定義されている変数があるとそこで定義されていないと言われたりなどしてしまい、若干使い勝手が悪い。"
 ---
 
-[Sublime Text 2 の JSLint から node がみつからない - メモログ](/blog//2013/02/node_not_found_with_jsLint/)と関連して、少しの間 JSLint を使用していたのですが、jQuery など global に定義されている変数があるとそこで定義されていないと言われたりなどしてしまい、若干使い勝手が悪い。
+[Sublime Text 2 の JSLint から node がみつからない - メモログ](/2013/02/node_not_found_with_jsLint/)と関連して、少しの間 JSLint を使用していたのですが、jQuery など global に定義されている変数があるとそこで定義されていないと言われたりなどしてしまい、若干使い勝手が悪い。
 
 それで JSHint を使い始めてみている。JSHint については[About -- JSHint](http://www.jshint.com/about/)を参照。
 
@@ -18,7 +18,7 @@ JSLint のチェックをいろいろ設定可能な状態にするところか�
 
 Sublime Text 2 への JSHint のインストールは下記のような感じ。
 
-1.  node が入っていなかったら node をインストール（homebrew が入っていたら brew install node でインストールできる。[RVM / JewelryBox / Homebrew をインストール - メモログ](/blog//2012/09/rvm_jewelrybox_homebrew/)）
+1.  node が入っていなかったら node をインストール（homebrew が入っていたら brew install node でインストールできる。[RVM / JewelryBox / Homebrew をインストール - メモログ](/2012/09/rvm_jewelrybox_homebrew/)）
 2.  \[sudo\] npm install -g jshint で、node から JSHint をインストール
 3.  メニューの Tools - Command Palette を開いて、「Package Controll: Install Package」を選択して、JSHint を選択
 

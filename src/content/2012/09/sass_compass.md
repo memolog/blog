@@ -9,7 +9,7 @@ tags:
 excerpt: "前回（RVM / JewelryBox / Homebrew をインストール - メモログ）でインストールした1.9.3に、SassとCompassをインストールするの巻。SassはCSSの記述をサポートしてくれるプリプロセッサー。CompassはSassのお役立ちMixinをたくさん用意しているCSS authoring framework。"
 ---
 
-前回（[RVM / JewelryBox / Homebrew をインストール - メモログ](/blog//2012/09/rvm_jewelrybox_homebrew/)）でインストールした 1.9.3 に、Sass と Compass をインストールするの巻。[Sass](http://sass-lang.com/)は CSS の記述をサポートしてくれるプリプロセッサー。[Compass](http://compass-style.org/)は Sass のお役立ち Mixin をたくさん用意している CSS authoring framework。
+前回（[RVM / JewelryBox / Homebrew をインストール - メモログ](/2012/09/rvm_jewelrybox_homebrew/)）でインストールした 1.9.3 に、Sass と Compass をインストールするの巻。[Sass](http://sass-lang.com/)は CSS の記述をサポートしてくれるプリプロセッサー。[Compass](http://compass-style.org/)は Sass のお役立ち Mixin をたくさん用意している CSS authoring framework。
 
 ### Sass / Compass のインストール
 

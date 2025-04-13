@@ -55,7 +55,7 @@ end
 
 ```
 
-さらに応用編としては、[watir-webdriver で FireMobileSimulator を使用する](/blog//2010/12/watir-webdriver_with_firemobilesimulator/)で紹介した FireMobileSimulator を使用して、携帯用の画面（エミューレートですけど）の画面キャプチャを撮ることもできます。画面の横幅は b.execute_script "window.resizeTo(340,800)"として、resize する Javascript を実行することで変更可能です。
+さらに応用編としては、[watir-webdriver で FireMobileSimulator を使用する](/2010/12/watir-webdriver_with_firemobilesimulator/)で紹介した FireMobileSimulator を使用して、携帯用の画面（エミューレートですけど）の画面キャプチャを撮ることもできます。画面の横幅は b.execute_script "window.resizeTo(340,800)"として、resize する Javascript を実行することで変更可能です。
 
 ```
 require 'watir-webdriver'

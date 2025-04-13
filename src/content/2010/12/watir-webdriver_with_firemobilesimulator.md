@@ -10,7 +10,7 @@ tags:
 excerpt: "watir-webdriver で開いたFirefoxのFirebugを起動状態にすると同じ要領で、FireMobileSimulatorを起動した状態でwatir-webdriverを実行することができます。ただFirebugに比べると若干設定の追加が必要です。具体的には下記のような感じ。"
 ---
 
-[watir-webdriver で開いた Firefox の Firebug を起動状態にする](/blog//2010/12/watir-webdriver_with_firebug/)と同じ要領で、FireMobileSimulator を起動した状態で watir-webdriver を実行することができます。ただ Firebug に比べると若干設定の追加が必要です。具体的には下記のような感じ。
+[watir-webdriver で開いた Firefox の Firebug を起動状態にする](/2010/12/watir-webdriver_with_firebug/)と同じ要領で、FireMobileSimulator を起動した状態で watir-webdriver を実行することができます。ただ Firebug に比べると若干設定の追加が必要です。具体的には下記のような感じ。
 
 ```
 require 'rubygems'

@@ -8,7 +8,7 @@ tags:
 excerpt: "watir 1.6.5ではclick\_no\_waitが動作しないという話をして、その後watir 1.6.6では修正されているという話をしました。1.6.6では性能も改善されていて、click\_no\_waitのメソッドを実行すると、10〜20秒くらい止まってしまうということもなくなりました。"
 ---
 
-[watir 1.6.5 では click_no_wait が動作しない](/blog//2010/07/watir_click_no_wait_doesnt_work/)という話をして、その後[watir 1.6.6](/blog//2010/10/watir_166/)では修正されているという話をしました。[1.6.6 では性能も改善されていて](http://jira.openqa.org/browse/WTR-449)、click_no_wait のメソッドを実行すると、10〜20 秒くらい止まってしまうということもなくなりました。
+[watir 1.6.5 では click_no_wait が動作しない](/2010/07/watir_click_no_wait_doesnt_work/)という話をして、その後[watir 1.6.6](/2010/10/watir_166/)では修正されているという話をしました。[1.6.6 では性能も改善されていて](http://jira.openqa.org/browse/WTR-449)、click_no_wait のメソッドを実行すると、10〜20 秒くらい止まってしまうということもなくなりました。
 
 それで基本的に動作に問題はなくなったのですが、自分の環境で動作させたときに click_no_wait が動作しない場合がありました。それのメモ。
 

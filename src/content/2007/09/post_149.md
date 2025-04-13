@@ -12,7 +12,7 @@ excerpt: "*   Cross Browser Transparency | Design Shack"
 
 - [Opacity - CSS3 . Info](http://www.css3.info/preview/opacity/)
 
-小ネタ。[メモログ：MTIf タグを利用したタブ型ナビゲーション](/blog//2007/09/mtif/)のエントリーで作成した、アクティブ以外のタブには透明度をつけて濃淡の差を出しています（別に透明度で濃淡の差を出す必然性はないのですが使ってみたかった）。指定の仕方は下記のような感じ
+小ネタ。[メモログ：MTIf タグを利用したタブ型ナビゲーション](/2007/09/mtif/)のエントリーで作成した、アクティブ以外のタブには透明度をつけて濃淡の差を出しています（別に透明度で濃淡の差を出す必然性はないのですが使ってみたかった）。指定の仕方は下記のような感じ
 
 ```
 opacity: 0.8;-moz-opacity: 0.8;filter: alpha(opacity=80);

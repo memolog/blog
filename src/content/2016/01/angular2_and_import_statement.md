@@ -9,7 +9,7 @@ tags:
 excerpt: "Angular2とDecorators - メモログに出した5 Min Quickstartのサンプルを再掲すると、冒頭にimportのstatementがあります。"
 ---
 
-[Angular2 と Decorators - メモログ](/blog//2016/01/angular2_with_decorators/)に出した[5 Min Quickstart](https://angular.io/docs/ts/latest/quickstart.html)のサンプルを再掲すると、冒頭に import の statement があります。
+[Angular2 と Decorators - メモログ](/2016/01/angular2_with_decorators/)に出した[5 Min Quickstart](https://angular.io/docs/ts/latest/quickstart.html)のサンプルを再掲すると、冒頭に import の statement があります。
 
 ```javascript
 import { Component } from "angular2/core";

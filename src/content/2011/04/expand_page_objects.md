@@ -8,7 +8,7 @@ tags:
 excerpt: "以前にPage Objects : テストスイート構築のためのデザインパターン - メモログというのを紹介しました。今回はそのパターンをちょっと拡張してみようという話。なお、特に参考にした訳ではないのですが、Selenium Page Objects + Site Objects, Data Objects & High Level Navigation « Fiji Ecuador Seattle Greece Montanaに同じような話を提示している人はいます（2年前に）。"
 ---
 
-以前に[Page Objects : テストスイート構築のためのデザインパターン - メモログ](/blog//2010/11/page_objects/)というのを紹介しました。今回はそのパターンをちょっと拡張してみようという話。なお、特に参考にした訳ではないのですが、[Selenium Page Objects + Site Objects, Data Objects & High Level Navigation « Fiji Ecuador Seattle Greece Montana](http://fijiaaron.wordpress.com/2009/09/02/selenium-page-objects-site-objects-data-objects-high-level-navigation/)に同じような話を提示している人はいます（2 年前に）。
+以前に[Page Objects : テストスイート構築のためのデザインパターン - メモログ](/2010/11/page_objects/)というのを紹介しました。今回はそのパターンをちょっと拡張してみようという話。なお、特に参考にした訳ではないのですが、[Selenium Page Objects + Site Objects, Data Objects & High Level Navigation « Fiji Ecuador Seattle Greece Montana](http://fijiaaron.wordpress.com/2009/09/02/selenium-page-objects-site-objects-data-objects-high-level-navigation/)に同じような話を提示している人はいます（2 年前に）。
 
 Page Objects は、自動化テストのスクリプトをまとめるための一つのパターン。ページを一つのオブジェクトとして捉えて、そのページのアクション（サービス）を一つの「区切り」にしてスクリプトをまとめます。他のページに移動する場合は、移動するページのオブジェクトを返り値として渡す（そうすることで複数ページのアクションを続けていくことができる）。
 

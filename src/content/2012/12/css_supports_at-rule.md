@@ -18,7 +18,7 @@ excerpt: "Native CSS feature detection via the @supports rule - Dev.OperaとOper
 
 ```
 
-@supports は、上記のような感じで「(property:value)」と指定して、そのプロパティと値をブラウザがサポートしている場合のみ、{}内の CSS が適用されるというもの。at-rule なので、@supports を使用できないブラウザでは、{}内は無視される（このへんの詳細は[CSS のエラーの扱い方 - メモログ](/blog//2012/06/how_css_handles_errors/)を参照）。サポート状況は[Can I use CSS Feature Queries](http://caniuse.com/css-featurequeries)によると、現時点では Opera（と[Firefox Aurora](http://www.mozilla.jp/firefox/preview/)）のみなので、実用にはまだ時間がかかりそう。
+@supports は、上記のような感じで「(property:value)」と指定して、そのプロパティと値をブラウザがサポートしている場合のみ、{}内の CSS が適用されるというもの。at-rule なので、@supports を使用できないブラウザでは、{}内は無視される（このへんの詳細は[CSS のエラーの扱い方 - メモログ](/2012/06/how_css_handles_errors/)を参照）。サポート状況は[Can I use CSS Feature Queries](http://caniuse.com/css-featurequeries)によると、現時点では Opera（と[Firefox Aurora](http://www.mozilla.jp/firefox/preview/)）のみなので、実用にはまだ時間がかかりそう。
 
 @supports の指定では「and」と「or」を使って条件を複数指定することと、「not」を指定して否定の条件を指定することもできます。「else」のようなものはないので、特定の機能をサポートしている場合としていない場合で CSS を宣言したい場合は、@supports のルールを二つ用意する必要がある。
 

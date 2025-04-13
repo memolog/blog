@@ -9,7 +9,7 @@ excerpt: "*   Why I don't use CSS Frameworks - Warpspire *   メモログ：Blue
 ---
 
 - [Why I don't use CSS Frameworks - Warpspire](http://warpspire.com/features/css-frameworks/)
-- [メモログ：Blueprint : CSS のフレームワーク](/blog//2007/08/blueprint_a_css_framework/)
+- [メモログ：Blueprint : CSS のフレームワーク](/2007/08/blueprint_a_css_framework/)
 
 [Why I don't use CSS Frameworks - Warpspire](http://warpspire.com/features/css-frameworks/)の記事について。CSS フレームワークを利用してもそんなに開発効率は良くならないし、避けがたいブラウザのバグはフレームワークを使っても避けられない。その上、自分のコードと書き方になれてしまっているし、CSS フレームワーク由来のバグを抱えるかもしれないし、コーディングの勉強にならない。だから CSS フレームを利用していない。乱暴に要約するとそんな内容。
 

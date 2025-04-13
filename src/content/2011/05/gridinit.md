@@ -9,7 +9,7 @@ tags:
 excerpt: "Gridinitという新サービスをざっくり紹介。SeleniumやWatirなどの自動化スクリプトをクラウド上にある複数のブラウザに配布してくれるそうです。作成したテストスクリプトを複数ブラウザで実行することによって、負荷検証を行うことができる、みたいな。「watir-webdriver-performance: PerformanceTimingの集計 - メモログ」で紹介したwatir-webdriver-peformanceのモジュールを組み合わせてブラウザのPerformanceTimingの情報を取得することもできるみたい。"
 ---
 
-[Gridinit](http://gridinit.com/)という新サービスをざっくり紹介。Selenium や Watir などの自動化スクリプトをクラウド上にある複数のブラウザに配布してくれるそうです。作成したテストスクリプトを複数ブラウザで実行することによって、負荷検証を行うことができる、みたいな。「[watir-webdriver-performance: PerformanceTiming の集計 - メモログ](/blog//2011/04/watir-webdriver-performance/)」で紹介した watir-webdriver-peformance のモジュールを組み合わせてブラウザの PerformanceTiming の情報を取得することもできるみたい。
+[Gridinit](http://gridinit.com/)という新サービスをざっくり紹介。Selenium や Watir などの自動化スクリプトをクラウド上にある複数のブラウザに配布してくれるそうです。作成したテストスクリプトを複数ブラウザで実行することによって、負荷検証を行うことができる、みたいな。「[watir-webdriver-performance: PerformanceTiming の集計 - メモログ](/2011/04/watir-webdriver-performance/)」で紹介した watir-webdriver-peformance のモジュールを組み合わせてブラウザの PerformanceTiming の情報を取得することもできるみたい。
 
 価格（[Pricing](http://gridinit.com/public/pricing)）は「credit」という単位で使った分だけ支払うみたいな感じになっています（登録時に 20 credit がついてくる）。1 credit で 1 リソースを 1 時間使用することができるそうです。つまり 500 ブラウザを同時実行したい場合は 500 credit 必要ということになります。500 credit は 50$（1$80 円で 4000 円）なので、商用のパフォーマンステストツールと比較すると相当に安いと思います。
 

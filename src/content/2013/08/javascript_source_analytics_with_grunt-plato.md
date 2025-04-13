@@ -39,7 +39,7 @@ Math.max(0,(171 - 5.2 * ln(Halstead Volume) - 0.23 * (Cyclomatic Complexity) - 1
 
 Lines of Code は[LOC - Wikipedia](http://ja.wikipedia.org/wiki/LOC)を参照。physical か logical かについての明記は見つかりませんでしたけど、logical だと思います。とりあえず complexityReport.js では logical を使っている様子。ソースの（論理）行数が増えれば増えるほど、Maintainability は下がると。自然対数で処理されるので、10 行から 100 行に変わるのと、1000 行から 1100 行に変わるのでは、Maintainability への影響は前者の方が圧倒的に大きい。
 
-Cyclomatic Complexity は[Cyclomatic comlexity - メモログ](/blog//2013/08/cyclomatic_comlexity/)にメモしました。処理経路の数が多ければ多いほど、Maintainability は下がると。
+Cyclomatic Complexity は[Cyclomatic comlexity - メモログ](/2013/08/cyclomatic_comlexity/)にメモしました。処理経路の数が多ければ多いほど、Maintainability は下がると。
 
 Cyclomatic comlexity は自然対数で処理しないので、増えれば増えるほどリニアに Maintainability は下がっていく。けれども係数が小さいので、モジュール単位とかで Maintainability を計測すると大勢に影響しないほど小さい感がある。モジュール単位での計測だと、コードの行数が係数が大きくて、行数も 100 から 1000 くらいだろうから、増えた時の影響力も大きい感があります。Halstead Volume も比較的影響力大きいかな。
 

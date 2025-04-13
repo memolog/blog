@@ -8,7 +8,7 @@ tags:
 excerpt: "Github の Content Security Policy - メモログの続きのような感じで。  basket.js - a simple script loader that caches scripts with localStoragというライブラリでは、requireで指定したURLのライブラリをlocalStorageに保存して再利用することができます。対象はスクリプトファイルだけですが、AppCacheと比べて1ファイル単位でキャッシュのexpireを設定できるので柔軟に扱える。"
 ---
 
-[Github の Content Security Policy - メモログ](/blog//2013/09/github_content_security_policy/)の続きのような感じで。
+[Github の Content Security Policy - メモログ](/2013/09/github_content_security_policy/)の続きのような感じで。
 
 [basket.js - a simple script loader that caches scripts with localStorag](http://addyosmani.github.io/basket.js/)というライブラリでは、require で指定した URL のライブラリを localStorage に保存して再利用することができます。対象はスクリプトファイルだけですが、AppCache と比べて 1 ファイル単位でキャッシュの expire を設定できるので柔軟に扱える。
 

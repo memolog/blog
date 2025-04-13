@@ -11,7 +11,7 @@ excerpt: "Content Security Policy (CSP)をgrunt-contrib-connectで設定する�
 
 Content Security Policy (CSP)を grunt-contrib-connect で設定するのにはどうしたら良いかという話。
 
-やり方としては、[grunt-contrib-connect タスクで CORS を有効にする - メモログ](/blog//2013/07/grunt-contrib-connect_with_cors/)と同様、middleware のオプションに追加する。
+やり方としては、[grunt-contrib-connect タスクで CORS を有効にする - メモログ](/2013/07/grunt-contrib-connect_with_cors/)と同様、middleware のオプションに追加する。
 
 ```javascript
 middleware: function (connect, options) {

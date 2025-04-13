@@ -9,7 +9,7 @@ tags:
 excerpt: "CSS Transforms (2D) - メモログの続きで、transform-originについて。回転などtransformの変換はデフォルトでは要素の中心（50&#x25; 50&#x25;）を軸に行われる。たとえば、rotate(45deg)の場合は以下のような感じ"
 ---
 
-[CSS Transforms (2D) - メモログ](/blog//2012/09/css_transforms_2d/)の続きで、transform-origin について。回転など transform の変換はデフォルトでは要素の中心（50&#x25; 50&#x25;）を軸に行われる。たとえば、rotate(45deg)の場合は以下のような感じ
+[CSS Transforms (2D) - メモログ](/2012/09/css_transforms_2d/)の続きで、transform-origin について。回転など transform の変換はデフォルトでは要素の中心（50&#x25; 50&#x25;）を軸に行われる。たとえば、rotate(45deg)の場合は以下のような感じ
 
 サンプル
 

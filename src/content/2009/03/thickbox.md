@@ -8,7 +8,7 @@ tags:
 excerpt: "前回使ってみたFlickr to HTMLではlightboxのためのrel属性がデフォルトで付いているので、jqueryで使えるlightboxを使ってみようかなと思ったのですが、モーションテンプレートではThickboxをもともと使えるようになっているのでFlickr to HTML のHTMLを少しだけ変えて、Thickboxを有効にしてみる。"
 ---
 
-前回使ってみた[Flickr to HTML](/blog//2009/03/flickr-to-html/)では lightbox のための rel 属性がデフォルトで付いているので、[jquery で使える lightbox](http://leandrovieira.com/projects/jquery/lightbox/)を使ってみようかなと思ったのですが、モーションテンプレートでは[Thickbox](http://jquery.com/demo/thickbox/)をもともと使えるようになっているので Flickr to HTML の HTML を少しだけ変えて、Thickbox を有効にしてみる。
+前回使ってみた[Flickr to HTML](/2009/03/flickr-to-html/)では lightbox のための rel 属性がデフォルトで付いているので、[jquery で使える lightbox](http://leandrovieira.com/projects/jquery/lightbox/)を使ってみようかなと思ったのですが、モーションテンプレートでは[Thickbox](http://jquery.com/demo/thickbox/)をもともと使えるようになっているので Flickr to HTML の HTML を少しだけ変えて、Thickbox を有効にしてみる。
 
 写真は[神代植物公園](http://www.kensetsu.metro.tokyo.jp/seibuk/jindai/index.html)の温室。神代植物公園は三鷹か吉祥寺からバスで 15 分くらい（たぶん）。温室は 1 年中花が楽しめる。周辺の深大寺もなかなかいい感じの写真スポットなのである。
 

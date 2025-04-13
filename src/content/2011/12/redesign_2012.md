@@ -12,7 +12,7 @@ tags:
 excerpt: 'デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。'
 ---
 
-デザインを変更してみました。前回の変更は[こちら](/blog//2010/12/redesign_2011/)。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。
+デザインを変更してみました。前回の変更は[こちら](/2010/12/redesign_2011/)。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。
 
 メインの変更としましては、今年流行の[responsive web design](http://www.alistapart.com/articles/responsive-web-design/)的な対応をしてみました。[Breakpoints.js](http://coliss.com/articles/build-websites/operation/javascript/jquery-plugin-breakpoints.html)という jquery の plugin を使用すると、body に「breakpoint-1024」みたいな class を表示サイズにあわせて追加してくれるので、そこで CSS を追加しただけというシンプルな方法で。あと viewpoint の設定を<meta name="viewport" content="width=device-width" />に変更しました。まあとりあえず動作するところまで作りたかったので、もろもろ随時改善はしていきたいなあと思っています（思っているだけ）。
 
@@ -56,4 +56,4 @@ Breakpoint.js をやめて、普通に media queries で処理するように変
 
 #### 追記（2012/6/18）
 
-JQuery Masonry を使用して pinterest 風にしてみました。[縦方向の float を実現する jQuery Masonry - メモログ](/blog//2012/06/jquery_masonry/)
+JQuery Masonry を使用して pinterest 風にしてみました。[縦方向の float を実現する jQuery Masonry - メモログ](/2012/06/jquery_masonry/)

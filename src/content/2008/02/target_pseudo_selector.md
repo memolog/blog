@@ -11,9 +11,9 @@ excerpt: "*   Vitamin Features » Stay on :target *   :target pseudo selector tu
 - [Vitamin Features » Stay on :target](http://www.thinkvitamin.com/features/css/stay-on-target)
 - [:target pseudo selector tutorial - CSS3 . Info](http://www.css3.info/target-pseudo-selector-tutorial/)
 
-- [疑似クラス、疑似要素とは何か \- メモログ](/blog//2007/07/pseudo-classes-pseudo-elements/)
+- [疑似クラス、疑似要素とは何か \- メモログ](/2007/07/pseudo-classes-pseudo-elements/)
 
-CSS3 にある target 疑似クラスをつかって表示をオン・オフすることができるんだよ。それはすごい！というような内容の話。target 疑似クラスとはアンカーのあるリンクを特定する方法で、たとえば「#test:target」という CSS は、URL が「/blog//index/#test」の場合にのみ作用します。言い換えると、「<a href="index.html#test">test</a>」というリンクをクリックしたあとのページで作用するような CSS になります。
+CSS3 にある target 疑似クラスをつかって表示をオン・オフすることができるんだよ。それはすごい！というような内容の話。target 疑似クラスとはアンカーのあるリンクを特定する方法で、たとえば「#test:target」という CSS は、URL が「/index/#test」の場合にのみ作用します。言い換えると、「<a href="index.html#test">test</a>」というリンクをクリックしたあとのページで作用するような CSS になります。
 
 実際にトラックバック欄で試してみました。下記の CSS を追加しました。
 
@@ -22,7 +22,7 @@ CSS3 にある target 疑似クラスをつかって表示をオン・オフす�
 
 ```
 
-このサイト（メモログ）では、トラックバック入力欄は通常非表示の状態になっていますが、記事タイトル下側にある「[トラックバック(0)](/blog//2008/02/target_pseudo_selector/#trackbacks)」というリンクをクリックした場合は、トラックバック入力欄が表示されます。!important がついているのは、[prototype.js を利用した項目の開閉](/blog//2007/10/prototypejs/)をするのにインラインに display:none;が入っているため。display:none をスタイルシート上で指定していれば、!imortant は必要ありません。
+このサイト（メモログ）では、トラックバック入力欄は通常非表示の状態になっていますが、記事タイトル下側にある「[トラックバック(0)](/2008/02/target_pseudo_selector/#trackbacks)」というリンクをクリックした場合は、トラックバック入力欄が表示されます。!important がついているのは、[prototype.js を利用した項目の開閉](/2007/10/prototypejs/)をするのにインラインに display:none;が入っているため。display:none をスタイルシート上で指定していれば、!imortant は必要ありません。
 
 [CSS3 . Info](http://www.css3.info/target-pseudo-selector-tutorial/)によると、target 疑似クラスはすべての「current browser」でサポートしているとのこと。実際に Firefox 2.0 と safari 3（mac）で試してみましたが、きちんと動作していました。
 

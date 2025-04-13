@@ -9,7 +9,7 @@ tags:
 excerpt: "CSS Transforms: (3D/perspective) - メモログの続きで3d rendering contextについて。CSS TransformsのExample7から9を紹介するだけという内容。"
 ---
 
-[CSS Transforms: (3D/perspective) - メモログ](/blog//2012/09/css_transforms_3d_and_perspective/)の続きで 3d rendering context について。[CSS Transforms](http://www.w3.org/TR/css3-transforms/#perspective-matrix-computation)の Example7 から 9 を紹介するだけという内容。
+[CSS Transforms: (3D/perspective) - メモログ](/2012/09/css_transforms_3d_and_perspective/)の続きで 3d rendering context について。[CSS Transforms](http://www.w3.org/TR/css3-transforms/#perspective-matrix-computation)の Example7 から 9 を紹介するだけという内容。
 
 Example7 のサンプルと、Example8 のサンプル。 ![](http://www.w3.org/TR/css3-transforms/examples/3d-rendering-context-flat.png) ![](http://www.w3.org/TR/css3-transforms/examples/3d-rendering-context-3d.png) 両者の違いは、後者は transform-style:preserve-3d が指定されていて、青とライムの要素が 3D rendering context の中にいるということ。2D の場合でも、perspective の効果で長方形が台形状に描かれるけど、3D でのレンダリングのような奥行きの空間は存在しない。台形状に描かれているだけ。
 

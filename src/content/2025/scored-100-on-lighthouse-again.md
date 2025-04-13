@@ -40,4 +40,4 @@ excerpt: 特に意味はないんだけど、LighthouseのScoreが微妙に100�
 
 まあとにかく、100点いったので記念のスクリーンショット。以前に取得したときは背景が黒色になっていたけど、今は普通の雰囲気。以前と同じく花火っぽいのは出てくる。
 
-<img src="/assets/images/lighthouse_100_again.png" class="screenshot" width="923" height="604" loading="lazy" alc="Lighthouseが100点満点のスクリーンショット">
+<img src="/assets/images/lighthouse_100_again.png" class="screenshot" width="923" height="604" loading="lazy" alt="Lighthouseが100点満点のスクリーンショット">

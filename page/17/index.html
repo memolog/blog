@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -760,7 +777,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2012/09/css_transforms_2d.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2012/09/sass_compass.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2012/09/rvm_jewelrybox_homebrew.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2012/07/phonegap_and_xcode_version.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2012/07/dropped_pubdate_in_time_element.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2012/07/rich_snippets_testing_tool.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2012/07/around_dnt.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2012/06/around_social_buttons.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2012/06/viewport_declaration_in_css.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2012/06/stream_webcam_with_javascript.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-10T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月10日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/css_transforms_2d.html">CSS Transforms：transform</a> </h2>  </header> <div class="content">CSS Transformは要素の座標変換を行うもので、transformにtransform functionsを指定することで移動/拡大/縮小/回転などを簡単に行うことができる。2Dと3Dの変換に対応していて、transform-styleが設定されていない場合は2D（flat）となる。</div> <div class="read-more"> <a href="/2012/09/css_transforms_2d.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-09T13:17:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/sass_compass.html">Sass / Compass をインストール</a> </h2>  </header> <div class="content">前回（RVM / JewelryBox / Homebrew をインストール - メモログ）でインストールした1.9.3に、SassとCompassをインストールするの巻。SassはCSSの記述をサポートしてくれるプリプロセッサー。CompassはSassのお役立ちMixinをたくさん用意しているCSS authoring framework。</div> <div class="read-more"> <a href="/2012/09/sass_compass.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-08T12:39:03.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/rvm_jewelrybox_homebrew.html">RVM / JewelryBox / Homebrew をインストール</a> </h2>  </header> <div class="content">RVM（Ruby version manager）はMacでデフォルトのバージョン以外のRubyをインストールするときに便利。JewelryBoxはRVMのGUIツールでインストールしたRubyを可視化してくれる。Homebrewはパッケージマネージャーで面倒なインストールを楽にしてくれる。これらをインストールしたので、そのメモ。</div> <div class="read-more"> <a href="/2012/09/rvm_jewelrybox_homebrew.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-16T13:45:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/phonegap_and_xcode_version.html">PhoneGapとXcode</a> </h2>  </header> <div class="content">機会があってXcodeのバージョンとインストールできるPhoneGapの現在の組み合わせを調べてみました（2012/7/16現在）。4.2については現状ではissueがあって1.9.0をインストールしてもビルドでエラーになる。</div> <div class="read-more"> <a href="/2012/07/phonegap_and_xcode_version.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-02T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/dropped_pubdate_in_time_element.html">time要素からpubdate属性が抜けていた</a> </h2>  </header> <div class="content">何の気なしにValidator.nu (X)HTML5 Validatorでサイトの検証をしてみたら、time要素のpubdateがnot allowedだと言われて、気がついたらW3Cの仕様のContent Attributesからも抹消されているので、なんでだろうなあと調べていたら20120329の更新で、pubdateが削除されていた（The time element was redesigned to make it match how people wanted to use it. Its pubdate attribute was dropped. ）。参考HTML5 (と関連WD) 更新 - fragmentary。</div> <div class="read-more"> <a href="/2012/07/dropped_pubdate_in_time_element.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-01T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/rich_snippets_testing_tool.html">Microdata/Microformatsの検証ができるRich Snippets Testing Tool</a> </h2>  </header> <div class="content">GoogleのWebmaster toolsのひとつにRich Snippets Testing Toolというのがあって、このツールではサイトに記述したMicrodataやMicroformatsなどの構造化データマークアップ(structured data markup)をGoogleがきちんとパースしてくれるかどうかをチェックすることができます。</div> <div class="read-more"> <a href="/2012/07/rich_snippets_testing_tool.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-01T05:20:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月1日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/around_dnt.html">DNTについて</a> </h2>  </header> <div class="content">少し前にあった、IE10 で DNT の設定を初期設定でオンの状態にするという話。</div> <div class="read-more"> <a href="/2012/07/around_dnt.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-27T20:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月28日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/around_social_buttons.html">ソーシャルボタンはあるべきかないべきか</a> </h2>  </header> <div class="content">Sweep the Sleaze | Information Architectsや、&#39;Drop social media buttons&#39; callとかでソーシャルボタンの有効性について話されている。詳しくは上記のリンクを参照という感じですが、おおまかに言うと、ソーシャルネットワーク経由で来ている人にはソーシャルネットワークについて伝える必要はないし、ソーシャルネット使わない人には不要だよねとか、優れたコンテンツならボタンがなくても参照されるし読まれるとか、そういう感じ。</div> <div class="read-more"> <a href="/2012/06/around_social_buttons.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-24T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/viewport_declaration_in_css.html">viewportをCSSで指定する</a> </h2>  </header> <div class="content">Internet Explorer 10 Guide for DevelopersのDevice adaptationにて、@viewportについての説明がされています。現時点ではmsのprefixが必要なので、実際に使用する場合は @-ms-viewportということになる（そして@-o-viewportの形でOperaでも対応しているとBruce Lawsonからコメントがついている）。</div> <div class="read-more"> <a href="/2012/06/viewport_declaration_in_css.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-24T12:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月24日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/stream_webcam_with_javascript.html">JavascriptでWebカメラを動かす</a> </h2>  </header> <div class="content">Stream Your Webcam to a Browser in JavaScriptというSitepointの記事で、Operaがバージョン12でgetUserMediaに対応したという話が掲載されていて、サンプルのJavascriptが載っていたので試してみました。シンプルなJavascriptでWebカメラが動くというところが面白い。</div> <div class="read-more"> <a href="/2012/06/stream_webcam_with_javascript.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/16/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/15/"> 15 </a><a class="page-number " href="/page/16/"> 16 </a><span class="page-number current">17</span><a class="page-number " href="/page/18/"> 18 </a><a class="page-number " href="/page/19/"> 19 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/18/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2012/09/css_transforms_2d_2.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2012/09/css_transforms_2d.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2012/09/sass_compass.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2012/09/rvm_jewelrybox_homebrew.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2012/07/phonegap_and_xcode_version.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2012/07/dropped_pubdate_in_time_element.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2012/07/rich_snippets_testing_tool.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2012/07/around_dnt.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2012/06/around_social_buttons.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2012/06/viewport_declaration_in_css.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-15T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月15日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/css_transforms_2d_2.html">CSS Transforms：transform-origin</a> </h2>  </header> <div class="content">CSS Transforms (2D) - メモログの続きで、transform-originについて。回転などtransformの変換はデフォルトでは要素の中心（50&amp;#x25; 50&amp;#x25;）を軸に行われる。たとえば、rotate(45deg)の場合は以下のような感じ</div> <div class="read-more"> <a href="/2012/09/css_transforms_2d_2.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-10T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月10日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/css_transforms_2d.html">CSS Transforms：transform</a> </h2>  </header> <div class="content">CSS Transformは要素の座標変換を行うもので、transformにtransform functionsを指定することで移動/拡大/縮小/回転などを簡単に行うことができる。2Dと3Dの変換に対応していて、transform-styleが設定されていない場合は2D（flat）となる。</div> <div class="read-more"> <a href="/2012/09/css_transforms_2d.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-09T13:17:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/sass_compass.html">Sass / Compass をインストール</a> </h2>  </header> <div class="content">前回（RVM / JewelryBox / Homebrew をインストール - メモログ）でインストールした1.9.3に、SassとCompassをインストールするの巻。SassはCSSの記述をサポートしてくれるプリプロセッサー。CompassはSassのお役立ちMixinをたくさん用意しているCSS authoring framework。</div> <div class="read-more"> <a href="/2012/09/sass_compass.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-09-08T12:39:03.000Z"> <span class="calendar-icon">📅</span> <span>2012年9月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/09/rvm_jewelrybox_homebrew.html">RVM / JewelryBox / Homebrew をインストール</a> </h2>  </header> <div class="content">RVM（Ruby version manager）はMacでデフォルトのバージョン以外のRubyをインストールするときに便利。JewelryBoxはRVMのGUIツールでインストールしたRubyを可視化してくれる。Homebrewはパッケージマネージャーで面倒なインストールを楽にしてくれる。これらをインストールしたので、そのメモ。</div> <div class="read-more"> <a href="/2012/09/rvm_jewelrybox_homebrew.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-16T13:45:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/phonegap_and_xcode_version.html">PhoneGapとXcode</a> </h2>  </header> <div class="content">機会があってXcodeのバージョンとインストールできるPhoneGapの現在の組み合わせを調べてみました（2012/7/16現在）。4.2については現状ではissueがあって1.9.0をインストールしてもビルドでエラーになる。</div> <div class="read-more"> <a href="/2012/07/phonegap_and_xcode_version.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-02T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/dropped_pubdate_in_time_element.html">time要素からpubdate属性が抜けていた</a> </h2>  </header> <div class="content">何の気なしにValidator.nu (X)HTML5 Validatorでサイトの検証をしてみたら、time要素のpubdateがnot allowedだと言われて、気がついたらW3Cの仕様のContent Attributesからも抹消されているので、なんでだろうなあと調べていたら20120329の更新で、pubdateが削除されていた（The time element was redesigned to make it match how people wanted to use it. Its pubdate attribute was dropped. ）。参考HTML5 (と関連WD) 更新 - fragmentary。</div> <div class="read-more"> <a href="/2012/07/dropped_pubdate_in_time_element.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-01T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/rich_snippets_testing_tool.html">Microdata/Microformatsの検証ができるRich Snippets Testing Tool</a> </h2>  </header> <div class="content">GoogleのWebmaster toolsのひとつにRich Snippets Testing Toolというのがあって、このツールではサイトに記述したMicrodataやMicroformatsなどの構造化データマークアップ(structured data markup)をGoogleがきちんとパースしてくれるかどうかをチェックすることができます。</div> <div class="read-more"> <a href="/2012/07/rich_snippets_testing_tool.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-07-01T05:20:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年7月1日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/07/around_dnt.html">DNTについて</a> </h2>  </header> <div class="content">少し前にあった、IE10 で DNT の設定を初期設定でオンの状態にするという話。</div> <div class="read-more"> <a href="/2012/07/around_dnt.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-27T20:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月28日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/around_social_buttons.html">ソーシャルボタンはあるべきかないべきか</a> </h2>  </header> <div class="content">Sweep the Sleaze | Information Architectsや、&#39;Drop social media buttons&#39; callとかでソーシャルボタンの有効性について話されている。詳しくは上記のリンクを参照という感じですが、おおまかに言うと、ソーシャルネットワーク経由で来ている人にはソーシャルネットワークについて伝える必要はないし、ソーシャルネット使わない人には不要だよねとか、優れたコンテンツならボタンがなくても参照されるし読まれるとか、そういう感じ。</div> <div class="read-more"> <a href="/2012/06/around_social_buttons.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-24T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2012/06/viewport_declaration_in_css.html">viewportをCSSで指定する</a> </h2>  </header> <div class="content">Internet Explorer 10 Guide for DevelopersのDevice adaptationにて、@viewportについての説明がされています。現時点ではmsのprefixが必要なので、実際に使用する場合は @-ms-viewportということになる（そして@-o-viewportの形でOperaでも対応しているとBruce Lawsonからコメントがついている）。</div> <div class="read-more"> <a href="/2012/06/viewport_declaration_in_css.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/16/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/15/"> 15 </a><a class="page-number " href="/page/16/"> 16 </a><span class="page-number current">17</span><a class="page-number " href="/page/18/"> 18 </a><a class="page-number " href="/page/19/"> 19 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/18/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

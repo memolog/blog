@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -764,8 +781,8 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2008-01-27T16:05:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月28日</span> </time> </div> <h2 class="header__title"><span>本：もっとわがままになれ!</span></h2>  </header> <div id="article-content" class="content">  <p>「わがまま」とは、<a href="http://dic.yahoo.co.jp/dsearch?enc=UTF-8&#x26;p=%E3%82%8F%E3%81%8C%E3%81%BE%E3%81%BE%25=0%25=0na%25=0%25=1%25=20722519771600">yahoo 辞書</a>で調べると、「自分の思いどおりに振る舞うこと。また、そのさま。気まま。ほしいまま。自分勝手。「―を通す」「―な人」」という意味ですが、本書における「わがまま」とは、どちらかというと「日和見主義にならずに、自分が正しいと思うことや、やりたいと思うこと実践するために、アクションを起こすこと」という感じの意味。おかしな常識を疑うことや、創意工夫を奨励するための言葉としても、本書では「わがまま」という言葉を使って表現しています。</p>
 <p>本書は 6 章構成。第一章が「わがまま」とは何か、という感じの話。第二章は「わがまま」の意味をはき違えないように、という感じの話。第三章は個人のキャリア・プランと「わがまま」について。第四章は会社経営と「わがまま」について。第五章は一般社会と「わがまま」について。第六章は、その他の「わがまま」に関するエピソードと言った感じ。150 ページほどで 1 ページあたりの文字数が少ないので、1 時間程度で読めます。</p>
-<p>個人的に関心がそそられたのは p19 の「わがままの裏には、やはりわがままの「正当な理由」があるべきだ」という格言。その背景のエピソードは、大蔵省の道理のあわない非効率的な慣例に疑問をもって、わがままをもって、道理に沿った前例のないことをやってのけるというような話。「<a href="http://www.amazon.co.jp/gp/product/412101927X?ie=UTF8&#x26;tag=yutakayamaguc-22&#x26;linkCode=xm2&#x26;camp=247&#x26;creativeASIN=412101927X">西南戦争</a>」の中で、福沢諭吉が西郷隆盛の「抵抗する精神」を讃えたという話（p201）が紹介されていますが、その話に通じるものを感じました。国家の行いであろうと、疑問のあるなら、臆さずに抵抗する（わがままをいう）。それが社会を変えていく源になっていく。これは「<a href="/blog//2007/10/post_157/">胆力</a>」にも通じるところがあるように思います。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+<p>個人的に関心がそそられたのは p19 の「わがままの裏には、やはりわがままの「正当な理由」があるべきだ」という格言。その背景のエピソードは、大蔵省の道理のあわない非効率的な慣例に疑問をもって、わがままをもって、道理に沿った前例のないことをやってのけるというような話。「<a href="http://www.amazon.co.jp/gp/product/412101927X?ie=UTF8&#x26;tag=yutakayamaguc-22&#x26;linkCode=xm2&#x26;camp=247&#x26;creativeASIN=412101927X">西南戦争</a>」の中で、福沢諭吉が西郷隆盛の「抵抗する精神」を讃えたという話（p201）が紹介されていますが、その話に通じるものを感じました。国家の行いであろうと、疑問のあるなら、臆さずに抵抗する（わがままをいう）。それが社会を変えていく源になっていく。これは「<a href="/2007/10/post_157/">胆力</a>」にも通じるところがあるように思います。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-08T14:28:19.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_129.html">最近読んだ本（２）</a> </h3>  </header> <div class="content">「最近読んだ本（１）」の続き。本を読んだときにする行動の一つが「文中に気になった箇所があったらページの端を折る」ことです。同じ本を繰り返し読むのは飽きるので、再読するときはその折り目を中心にその部分だけ読んだりします。ページに折り目がつく本ほど私にとって有益な本になります。</div> <div class="read-more"> <a href="/2006/04/post_129.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-07T13:27:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_148.html">ハーバードでは教えない実践経営学</a> </h3>  </header> <div class="content"> 1985年に「マコーマックのマンビジネス」というタイトルで出版された本の新訳版です。いわゆるビジネスに必要な「処世術」、パートナーシップの構築など、筆者曰く「ハーバード・ビジネススクールでは教えたくても教えられない（p8）」内容を扱っています。「人間」「営業と交渉」「企業経営」の３部構成。</div> <div class="read-more"> <a href="/2007/09/post_148.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-01-03T03:45:53.000Z"> <span class="calendar-icon">📅</span> <span>2009年1月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/01/post_180.html">今年の抱負（とデザイン変更）</a> </h3>  </header> <div class="content">ブログの見た目を少し変えてみたのです。シンプルに。jqueryを試してみたのだが、TypePad Connectで利用しているYUIと相性がよろしくないよう。回避方法が皆目見当がつかなかったので、TypePad Connect はとりあえずクローズした。とりあえず。暇なときにちょこちょこ変えていこうと思う。</div> <div class="read-more"> <a href="/2009/01/post_180.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-12T15:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月13日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/11/post_161.html">本：ザ・ニューリッチ</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7c7058;"> <img src="/assets/images/richistan/richistan_medium.webp" srcset="/assets/images/richistan/richistan_medium.webp, /assets/images/richistan/richistan_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">アメリカで急増している新富裕層についての調査をまとめた本です。新富裕層は「コンシェルジュ医師」のように自分たち向けの究極のサービスを消費し、自分と同じくらい資金力を持つ人間とクラブを形成して、富裕層ゆえの不安や悩みを相談しあっている。リッチスタンはおそらく「rich（富）」と「stan（国）」をあわせた造語で、「富裕層が形成する独立国家」「富裕層は、数に任せて自己完結した内輪の世界を築いている（「はじめに」の4ページ）」という本書の骨子となる概念をうまく言い表しています。</div> <div class="read-more"> <a href="/2007/11/post_161.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2006-04-08T14:28:19.000Z"> <span class="calendar-icon">📅</span> <span>2006年4月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/04/post_129.html">最近読んだ本（２）</a> </h3>  </header> <div class="content">「最近読んだ本（１）」の続き。本を読んだときにする行動の一つが「文中に気になった箇所があったらページの端を折る」ことです。同じ本を繰り返し読むのは飽きるので、再読するときはその折り目を中心にその部分だけ読んだりします。ページに折り目がつく本ほど私にとって有益な本になります。</div> <div class="read-more"> <a href="/2006/04/post_129.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-07T13:27:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_148.html">ハーバードでは教えない実践経営学</a> </h3>  </header> <div class="content"> 1985年に「マコーマックのマンビジネス」というタイトルで出版された本の新訳版です。いわゆるビジネスに必要な「処世術」、パートナーシップの構築など、筆者曰く「ハーバード・ビジネススクールでは教えたくても教えられない（p8）」内容を扱っています。「人間」「営業と交渉」「企業経営」の３部構成。</div> <div class="read-more"> <a href="/2007/09/post_148.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-12T15:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月13日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/11/post_161.html">本：ザ・ニューリッチ</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7c7058;"> <img src="/assets/images/richistan/richistan_medium.webp" srcset="/assets/images/richistan/richistan_medium.webp, /assets/images/richistan/richistan_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">アメリカで急増している新富裕層についての調査をまとめた本です。新富裕層は「コンシェルジュ医師」のように自分たち向けの究極のサービスを消費し、自分と同じくらい資金力を持つ人間とクラブを形成して、富裕層ゆえの不安や悩みを相談しあっている。リッチスタンはおそらく「rich（富）」と「stan（国）」をあわせた造語で、「富裕層が形成する独立国家」「富裕層は、数に任せて自己完結した内輪の世界を築いている（「はじめに」の4ページ）」という本書の骨子となる概念をうまく言い表しています。</div> <div class="read-more"> <a href="/2007/11/post_161.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-01-03T03:45:53.000Z"> <span class="calendar-icon">📅</span> <span>2009年1月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/01/post_180.html">今年の抱負（とデザイン変更）</a> </h3>  </header> <div class="content">ブログの見た目を少し変えてみたのです。シンプルに。jqueryを試してみたのだが、TypePad Connectで利用しているYUIと相性がよろしくないよう。回避方法が皆目見当がつかなかったので、TypePad Connect はとりあえずクローズした。とりあえず。暇なときにちょこちょこ変えていこうと思う。</div> <div class="read-more"> <a href="/2009/01/post_180.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

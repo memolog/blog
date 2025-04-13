@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -760,7 +777,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2013/08/specificity_of_pseudo_class.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2013/08/generate_sass_sourcemap_with_compass.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2013/08/javascript_source_analytics_with_grunt-plato.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2013/08/json_parse_null_without_type_converting.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2013/08/ie10_input_enter_key_button_element_click.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2013/08/supported_in_ie8.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2013/08/-webkit-font-smoothing_and_usability.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2013/08/chrome_workspace.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2013/08/git_stash_options.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2013/08/cyclomatic_comlexity.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-30T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/specificity_of_pseudo_class.html">a:link, a：visitedの詳細度はclass selectorのみより大きい</a> </h2>  </header> <div class="content">a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector&#39;s specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。</div> <div class="read-more"> <a href="/2013/08/specificity_of_pseudo_class.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-21T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/generate_sass_sourcemap_with_compass.html">compass で sass の sourcemap を作る</a> </h2>  </header> <div class="content">sassのsourcemapを用意すると、Chromeのdeveloper toolsを使ったときにscssファイルでスタイルのinspectができるようになるので、非常に便利。詳細はSassファイルでの記述位置を知るより美しい方法｜Blog｜Skyward Designなどを参照。</div> <div class="read-more"> <a href="/2013/08/generate_sass_sourcemap_with_compass.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-18T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月19日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/javascript_source_analytics_with_grunt-plato.html">Javascript source analytics with grunt-plato</a> </h2>  </header> <div class="content">Gruntのpluginでgrunt-platoというのがあって、Platoを使ってJavascriptの静的解析結果をvisualizeしてレポートしてくれます。</div> <div class="read-more"> <a href="/2013/08/javascript_source_analytics_with_grunt-plato.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-16T12:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/json_parse_null_without_type_converting.html">HTC EVO (Android 2.3) と JSON.parse(null)</a> </h2>  </header> <div class="content">HTC EVO(2.3.4)のAndroid端末で、localStorageに入れた値をJSON.parseした場合に、localStorageからnullが渡るとillegal accessのエラーになる。エラーを出力しないようだけど。。。weinreのコンソールでJSON.parse(null)と打つとそのようなエラーが確認できる。</div> <div class="read-more"> <a href="/2013/08/json_parse_null_without_type_converting.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-09T14:55:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/ie10_input_enter_key_button_element_click.html">IE10 で input フォームでエンターすると button要素 に click イベントが発生する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #3c515f;"> <div style="background-color: #3c515f"> <img src="/assets/images/dave-blahlentino-149508-unsplash/dave-blahlentino-149508-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/iRm292XKwA4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Dave Blahlentino</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">javascript - IE10 find first button on page and trigger click event on input submit - Stack Overflow参考。Internet Explorer 10 にて input fieldで Enter keyを押すと、&lt;button&gt;要素にclick eventが発生する。</div> <div class="read-more"> <a href="/2013/08/ie10_input_enter_key_button_element_click.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-08T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/supported_in_ie8.html">あらためて IE8 について</a> </h2>  </header> <div class="content">少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。</div> <div class="read-more"> <a href="/2013/08/supported_in_ie8.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-07T13:51:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/-webkit-font-smoothing_and_usability.html">-webkit-font-smoothing と Usability</a> </h2>  </header> <div class="content">最近になって-webkit-font-smoothingというプロパティの存在を知りました。maxvoltar - -webkit-font-smoothingによると2010年には存在していたようですけど。</div> <div class="read-more"> <a href="/2013/08/-webkit-font-smoothing_and_usability.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-06T14:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月6日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/chrome_workspace.html">Chrome の workspace を使う</a> </h2>  </header> <div class="content">Chrome DevTools Revolutions 2013 - HTML5 Rocksで紹介されていた話で、最近になってChromeにも追加されました。Workspaceを追加して、変更するファイルにマップを設定すると、ChromeのDeveloper tool上で行った変更がマップしたファイルにも反映されるようになります。</div> <div class="read-more"> <a href="/2013/08/chrome_workspace.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-05T13:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/git_stash_options.html">git stash の便利なオプション</a> </h2>  </header> <div class="content">git stash は、コミットしていない変更されたファイルを一時的にstashとして保存して、変更がない状態に戻すことができます。仕掛かり中の作業の間に別の緊急の作業が入ってしまったりとか、変更前の状態から違う方法で修正をやり直してみたい場合とか、とりあえず現状を保存しておいて戻すことができるので、大変便利。</div> <div class="read-more"> <a href="/2013/08/git_stash_options.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-03T14:55:55.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/cyclomatic_comlexity.html">Cyclomatic comlexity</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #d8d2c8;"> <img src="/assets/images/cyclomatic_comlexity/cyclomatic_comlexity_medium.webp" srcset="/assets/images/cyclomatic_comlexity/cyclomatic_comlexity_medium.webp, /assets/images/cyclomatic_comlexity/cyclomatic_comlexity_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">Cyclomatic complexity - Wikipedia, the free encyclopedia。日本語では、循環的複雑度 - Wikipediaと呼ぶみたい。</div> <div class="read-more"> <a href="/2013/08/cyclomatic_comlexity.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/12/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/11/"> 11 </a><a class="page-number " href="/page/12/"> 12 </a><span class="page-number current">13</span><a class="page-number " href="/page/14/"> 14 </a><a class="page-number " href="/page/15/"> 15 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/14/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2013/09/background_shorthand.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2013/08/specificity_of_pseudo_class.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2013/08/generate_sass_sourcemap_with_compass.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2013/08/javascript_source_analytics_with_grunt-plato.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2013/08/json_parse_null_without_type_converting.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2013/08/ie10_input_enter_key_button_element_click.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2013/08/supported_in_ie8.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2013/08/-webkit-font-smoothing_and_usability.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2013/08/chrome_workspace.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2013/08/git_stash_options.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-31T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年9月1日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/09/background_shorthand.html">background ショートハンドで省略したプロパティ</a> </h2>  </header> <div class="content">backgroundのスタイルをショートハンドで指定した場合、指定していないプロパティはinitialと同じ値が指定される。CSS Backgrounds and Borders Module Level 3を参照。</div> <div class="read-more"> <a href="/2013/09/background_shorthand.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-30T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/specificity_of_pseudo_class.html">a:link, a：visitedの詳細度はclass selectorのみより大きい</a> </h2>  </header> <div class="content">a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector&#39;s specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。</div> <div class="read-more"> <a href="/2013/08/specificity_of_pseudo_class.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-21T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/generate_sass_sourcemap_with_compass.html">compass で sass の sourcemap を作る</a> </h2>  </header> <div class="content">sassのsourcemapを用意すると、Chromeのdeveloper toolsを使ったときにscssファイルでスタイルのinspectができるようになるので、非常に便利。詳細はSassファイルでの記述位置を知るより美しい方法｜Blog｜Skyward Designなどを参照。</div> <div class="read-more"> <a href="/2013/08/generate_sass_sourcemap_with_compass.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-18T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月19日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/javascript_source_analytics_with_grunt-plato.html">Javascript source analytics with grunt-plato</a> </h2>  </header> <div class="content">Gruntのpluginでgrunt-platoというのがあって、Platoを使ってJavascriptの静的解析結果をvisualizeしてレポートしてくれます。</div> <div class="read-more"> <a href="/2013/08/javascript_source_analytics_with_grunt-plato.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-16T12:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/json_parse_null_without_type_converting.html">HTC EVO (Android 2.3) と JSON.parse(null)</a> </h2>  </header> <div class="content">HTC EVO(2.3.4)のAndroid端末で、localStorageに入れた値をJSON.parseした場合に、localStorageからnullが渡るとillegal accessのエラーになる。エラーを出力しないようだけど。。。weinreのコンソールでJSON.parse(null)と打つとそのようなエラーが確認できる。</div> <div class="read-more"> <a href="/2013/08/json_parse_null_without_type_converting.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-09T14:55:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月9日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/ie10_input_enter_key_button_element_click.html">IE10 で input フォームでエンターすると button要素 に click イベントが発生する</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #3c515f;"> <div style="background-color: #3c515f"> <img src="/assets/images/dave-blahlentino-149508-unsplash/dave-blahlentino-149508-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/iRm292XKwA4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Dave Blahlentino</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">javascript - IE10 find first button on page and trigger click event on input submit - Stack Overflow参考。Internet Explorer 10 にて input fieldで Enter keyを押すと、&lt;button&gt;要素にclick eventが発生する。</div> <div class="read-more"> <a href="/2013/08/ie10_input_enter_key_button_element_click.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-08T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月8日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/supported_in_ie8.html">あらためて IE8 について</a> </h2>  </header> <div class="content">少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。</div> <div class="read-more"> <a href="/2013/08/supported_in_ie8.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-07T13:51:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/-webkit-font-smoothing_and_usability.html">-webkit-font-smoothing と Usability</a> </h2>  </header> <div class="content">最近になって-webkit-font-smoothingというプロパティの存在を知りました。maxvoltar - -webkit-font-smoothingによると2010年には存在していたようですけど。</div> <div class="read-more"> <a href="/2013/08/-webkit-font-smoothing_and_usability.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-06T14:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月6日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/chrome_workspace.html">Chrome の workspace を使う</a> </h2>  </header> <div class="content">Chrome DevTools Revolutions 2013 - HTML5 Rocksで紹介されていた話で、最近になってChromeにも追加されました。Workspaceを追加して、変更するファイルにマップを設定すると、ChromeのDeveloper tool上で行った変更がマップしたファイルにも反映されるようになります。</div> <div class="read-more"> <a href="/2013/08/chrome_workspace.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-08-05T13:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年8月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2013/08/git_stash_options.html">git stash の便利なオプション</a> </h2>  </header> <div class="content">git stash は、コミットしていない変更されたファイルを一時的にstashとして保存して、変更がない状態に戻すことができます。仕掛かり中の作業の間に別の緊急の作業が入ってしまったりとか、変更前の状態から違う方法で修正をやり直してみたい場合とか、とりあえず現状を保存しておいて戻すことができるので、大変便利。</div> <div class="read-more"> <a href="/2013/08/git_stash_options.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/12/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/11/"> 11 </a><a class="page-number " href="/page/12/"> 12 </a><span class="page-number current">13</span><a class="page-number " href="/page/14/"> 14 </a><a class="page-number " href="/page/15/"> 15 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/14/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

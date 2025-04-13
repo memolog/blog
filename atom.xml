@@ -4,10 +4,18 @@
   <subtitle>塵が積もって山とならないメモのログ</subtitle>
   <link href="https://memolog.org/atom.xml" rel="self"/>
   <link href="https://memolog.org/"/>
-  <updated>2025-04-11T09:30:00.000Z</updated>
+  <updated>2025-04-13T09:40:00.000Z</updated>
   <id>https://memolog.org/</id>
   <author><name>Yutaka Yamaguchi</name></author>
   
+  <entry>
+    <title>Lighthouseで再び100点をとる</title>
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2025-04-13T09:40:00.000Z</published>
+    <summary type="html">特に意味はないんだけど、LighthouseのScoreが微妙に100点になっていなかったので、ふたたび100点を目指して修正してみました。</summary>
+  </entry>
+    
   <entry>
     <title>Picture要素をやめてsrcsetを使う</title>
     <link href="https://memolog.org/undefined.html"/>
@@ -158,14 +166,6 @@
     <id>https://memolog.org/undefined.html</id>
     <published>2020-07-26T11:56:00.000Z</published>
     <summary type="html">今回は9. Flex Layout Algorithmについて。この章は見なくて良いんじゃないかと思いつつ、写経のような感じでやっていこうと思う。</summary>
-  </entry>
-    
-  <entry>
-    <title>Flex Alignment</title>
-    <link href="https://memolog.org/undefined.html"/>
-    <id>https://memolog.org/undefined.html</id>
-    <published>2020-07-18T11:52:00.000Z</published>
-    <summary type="html">今回は8. Alignmentについて。長いけど一気に。</summary>
   </entry>
     
 </feed>

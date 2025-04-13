@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -762,7 +779,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
   }
 </script><meta property="og:type" content="article"><meta property="og:title" content="Sublime Text 2 で JSHint"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="Sublime Text 2 の JSLint から node がみつからない - メモログと関連して、少しの間JSLintを使用していたのですが、jQueryなどglobalに定義されている変数があるとそこで定義されていないと言われたりなどしてしまい、若干使い勝手が悪い。"><meta property="og:locale" content="ja_JP"><meta property="article:published_time" content="2013-04-13T14:50:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2013/04/sublime_text_2_jshint.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
-</a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2013-04-13T14:50:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年4月13日</span> </time> </div> <h2 class="header__title"><span>Sublime Text 2 で JSHint</span></h2>  </header> <div id="article-content" class="content">  <p><a href="/blog//2013/02/node_not_found_with_jsLint/">Sublime Text 2 の JSLint から node がみつからない - メモログ</a>と関連して、少しの間 JSLint を使用していたのですが、jQuery など global に定義されている変数があるとそこで定義されていないと言われたりなどしてしまい、若干使い勝手が悪い。</p>
+</a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2013-04-13T14:50:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年4月13日</span> </time> </div> <h2 class="header__title"><span>Sublime Text 2 で JSHint</span></h2>  </header> <div id="article-content" class="content">  <p><a href="/2013/02/node_not_found_with_jsLint/">Sublime Text 2 の JSLint から node がみつからない - メモログ</a>と関連して、少しの間 JSLint を使用していたのですが、jQuery など global に定義されている変数があるとそこで定義されていないと言われたりなどしてしまい、若干使い勝手が悪い。</p>
 <p>それで JSHint を使い始めてみている。JSHint については<a href="http://www.jshint.com/about/">About — JSHint</a>を参照。</p>
 <blockquote>
 <p>JSHint is a fork of <a href="http://jslint.com/">JSLint</a>, the tool written and maintained by Douglas Crockford. The project originally <a href="http://anton.kovalyov.net/2011/02/20/why-i-forked-jslint-to-jshint/">started</a> as an effort to make a more configurable version of JSLint-the one that doesn’t enforce one particular coding style on its users-but then transformed into a separate static analysis tool with its own goals and ideals.</p>
@@ -770,7 +787,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 <p>JSLint のチェックをいろいろ設定可能な状態にするところからスタートして、いまは静的コード解析までしてくれるらしい。</p>
 <p>Sublime Text 2 への JSHint のインストールは下記のような感じ。</p>
 <ol>
-<li>node が入っていなかったら node をインストール（homebrew が入っていたら brew install node でインストールできる。<a href="/blog//2012/09/rvm_jewelrybox_homebrew/">RVM / JewelryBox / Homebrew をインストール - メモログ</a>）</li>
+<li>node が入っていなかったら node をインストール（homebrew が入っていたら brew install node でインストールできる。<a href="/2012/09/rvm_jewelrybox_homebrew/">RVM / JewelryBox / Homebrew をインストール - メモログ</a>）</li>
 <li>[sudo] npm install -g jshint で、node から JSHint をインストール</li>
 <li>メニューの Tools - Command Palette を開いて、「Package Controll: Install Package」を選択して、JSHint を選択</li>
 </ol>
@@ -786,4 +803,4 @@ cp JSHint/.jshintrc User/JSHint.jshintrc
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-25T16:52:13.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月26日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/05/sublime_text_2_zen_coding.html">Sublime Text 2 で Zen Coding (Emmet)</a> </h3>  </header> <div class="content">（追記 2013/1/30）Packageの名前がZen Codingから「Emmet」に変わっていました。ので、Packageの名前をEmmetに差し替えました。あわせて最後に書いていたスニペットの変更方法もちゃんとした（？）方法に書き換えました。</div> <div class="read-more"> <a href="/2012/05/sublime_text_2_zen_coding.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-12T05:26:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/convert-video-files-with-ffmpegjs-worker.html">Convert video files with the ffmpeg.js worker</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #353330;"> <div style="background-color: #353330"> <img src="/assets/images/greg-rakozy-0LU4vO5iFpM-unsplash/greg-rakozy-0LU4vO5iFpM-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="507"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@grakozy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Greg Rakozy</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">Convert screen capture to animation GIFの話でffmpegを使ってキャプチャをGIFに変えるということをした。Macだとffmpegのインストールは簡単だしその方が良いと思うけど、環境によっては難しい場合もあるだろうし、そもそもインストールしてはならない状況もあるかもしれない。そんな時にffmpeg.jsをWeb Workersで動かすのはどうだろうかと思ってやってみた。</div> <div class="read-more"> <a href="/2020/convert-video-files-with-ffmpegjs-worker.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-06-24T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年6月25日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/06/viewport_declaration_in_css.html">viewportをCSSで指定する</a> </h3>  </header> <div class="content">Internet Explorer 10 Guide for DevelopersのDevice adaptationにて、@viewportについての説明がされています。現時点ではmsのprefixが必要なので、実際に使用する場合は @-ms-viewportということになる（そして@-o-viewportの形でOperaでも対応しているとBruce Lawsonからコメントがついている）。</div> <div class="read-more"> <a href="/2012/06/viewport_declaration_in_css.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-29T15:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/05/invited_elements.html">独自要素を作成する</a> </h3>  </header> <div class="content">少し前にEric&#39;s Archived Thoughts:Invented Elements、Eric&#39;s Archived Thoughts:Customizing Your Markup、Eric&#39;s Archived Thoughts:Element Customizationで解説されていた話。</div> <div class="read-more"> <a href="/2012/05/invited_elements.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2012-05-25T16:52:13.000Z"> <span class="calendar-icon">📅</span> <span>2012年5月26日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2012/05/sublime_text_2_zen_coding.html">Sublime Text 2 で Zen Coding (Emmet)</a> </h3>  </header> <div class="content">（追記 2013/1/30）Packageの名前がZen Codingから「Emmet」に変わっていました。ので、Packageの名前をEmmetに差し替えました。あわせて最後に書いていたスニペットの変更方法もちゃんとした（？）方法に書き換えました。</div> <div class="read-more"> <a href="/2012/05/sublime_text_2_zen_coding.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2020-02-12T05:26:00.000Z"> <span class="calendar-icon">📅</span> <span>2020年2月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2020/convert-video-files-with-ffmpegjs-worker.html">Convert video files with the ffmpeg.js worker</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #353330;"> <div style="background-color: #353330"> <img src="/assets/images/greg-rakozy-0LU4vO5iFpM-unsplash/greg-rakozy-0LU4vO5iFpM-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="507"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/@grakozy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Greg Rakozy</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">Convert screen capture to animation GIFの話でffmpegを使ってキャプチャをGIFに変えるということをした。Macだとffmpegのインストールは簡単だしその方が良いと思うけど、環境によっては難しい場合もあるだろうし、そもそもインストールしてはならない状況もあるかもしれない。そんな時にffmpeg.jsをWeb Workersで動かすのはどうだろうかと思ってやってみた。</div> <div class="read-more"> <a href="/2020/convert-video-files-with-ffmpegjs-worker.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2022-11-07T17:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2022年11月8日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2022/npm-script-warns-permission-errors-in-the-cache-directory.html">npm script warns permission errors in the cache directory</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dcd5c8;"> <img src="/assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_medium.webp" srcset="/assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_medium.webp, /assets/images/npm-script-warns-permission-errors-in-the-cache-directory/npm-script-warns-permission-errors-in-the-cache-directory_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">（そんなことするかどうかは置いておいて）たとえばdocker-node-npm-scripti-permission-issue-demoをGithub codespaces上で起動して、`npm ci`して、`npm run build`を実行すると、`permission denied, scandir &#39;/root/.npm/_logs&#39;` というエラーのWARNが発生する。</div> <div class="read-more"> <a href="/2022/npm-script-warns-permission-errors-in-the-cache-directory.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2013-07-31T11:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2013年7月31日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2013/07/grunt-contrib-connect_with_cors.html">grunt-contrib-connect タスクで CORS を有効にする</a> </h3>  </header> <div class="content">grunt-contrib-jasmineのThird party templatesにあるCode coverage output with Istanbulを使ってjasmineテストのcoverageの計測をしようとしているのですが、XMLHttpRequestを実行するところでCross Originの制約にひっかかってエラーになってしまう。localhostで実行されるのが理由かなとは思われるのですが、普通にjasmineテストを実行した場合はひっかからない不思議...（エラーに「file://」が出ているのも不明） jasmineのcoverage用のタスクのオプションでhostをlocalhostに指定していなかったためだった。そのため、localfile system (file://) で起動していた... 設定を追加したらCORSの設定は必要なかった。</div> <div class="read-more"> <a href="/2013/07/grunt-contrib-connect_with_cors.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

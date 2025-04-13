@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -763,7 +780,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 </script><meta property="og:type" content="article"><meta property="og:title" content="Facebookの開発体制：developer driven culture"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="「InfoQ: How Facebook Ships Code（日本語版記事が出た）」にて、Facebookではどのように開発し、サービスを公開しているかについて紹介していて、その開発の仕方を developer driven culture と呼んでいます。日本語にすると、開発者駆動文化でしょうか（開発者中心主義の方が近い気が）。記事によると、Facebookでは開発者が自分で実装を考え、フロントエンドからバックエンドまで開発して、バグの発見/修正までするみたい。必要な場合はデザイナーにも助けを借りることができるけど、基本的には自分で全部開発する、らしい。プロダクトマネージャーもいるみたいですけど、エンジニアマネージャーとかと話し合って、実装に対する合意を得ないといけない。興味のそそらない実装は認可されないという意味で、開発者は常に自分の好きなことに集中できるようになっているみたい。"><meta property="og:locale" content="ja_JP"><meta property="article:published_time" content="2011-01-29T02:22:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2011/01/facebook_developer_driven_culture.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2011-01-29T02:22:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年1月29日</span> </time> </div> <h2 class="header__title"><span>Facebookの開発体制：developer driven culture</span></h2>  </header> <div id="article-content" class="content">  <p>「<a href="http://www.infoq.com/news/2011/01/facebook-coding-practices">InfoQ: How Facebook Ships Code</a>（<a href="http://www.infoq.com/jp/news/2011/01/facebook-coding-practices">日本語版記事</a>が出た）」にて、Facebook ではどのように開発し、サービスを公開しているかについて紹介していて、その開発の仕方を developer driven culture と呼んでいます。日本語にすると、開発者駆動文化でしょうか（開発者中心主義の方が近い気が）。記事によると、Facebook では開発者が自分で実装を考え、フロントエンドからバックエンドまで開発して、バグの発見/修正までするみたい。必要な場合はデザイナーにも助けを借りることができるけど、基本的には自分で全部開発する、らしい。プロダクトマネージャーもいるみたいですけど、エンジニアマネージャーとかと話し合って、実装に対する合意を得ないといけない。興味のそそらない実装は認可されないという意味で、開発者は常に自分の好きなことに集中できるようになっているみたい。</p>
-<p>QA については、公式な QA チームは存在しないと言及しています（「<a href="/blog//2010/07/facebook_has_no_dedicated_qa/">Facebook には専任の QA チームがいない - メモログ</a>」でも以前に紹介しました）。開発者同士でコードレビューしたり、ステージング的な環境に問題があった場合はみんなで報告し合う。</p>
+<p>QA については、公式な QA チームは存在しないと言及しています（「<a href="/2010/07/facebook_has_no_dedicated_qa/">Facebook には専任の QA チームがいない - メモログ</a>」でも以前に紹介しました）。開発者同士でコードレビューしたり、ステージング的な環境に問題があった場合はみんなで報告し合う。</p>
 <p>そのへん「<a href="http://framethink.wordpress.com/2011/01/17/how-facebook-ships-code/">How Facebook Ships Code « FrameThink</a>」の記事の長いリストの中で少し詳しく触れられています。前に紹介していた unit test とか integration test とかは散発的に(sporadically)使用しているみたいで、日常的にはあまり使用していない雰囲気。あと QA チームがあるとバグは QA で発見するからと自分のコードを精査しないで投げちゃうインセンティブになる的なことが書かれています（主観的な意見だけど、通常の開発体制との引き合いで記載しているとの但し書き付き。私の知っているエンジニアの人にはそんな人いません）。あと、push-blocking のテストはリリース前に必ずやるみたい。</p>
 <blockquote>
 <p>“most engineers are capable of writing bug-free code. it’s just that they don’t have an incentive to do so at most companies. when there’s a QA department, it’s easy to just throw it over to them to find the errors.” [EDIT: please note that this was subjective opinion, I chose to include it in this post because of the stark contrast that this draws with standard development practice at other companies]</p>
@@ -774,4 +791,4 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2009-01-03T03:45:53.000Z"> <span class="calendar-icon">📅</span> <span>2009年1月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/01/post_180.html">今年の抱負（とデザイン変更）</a> </h3>  </header> <div class="content">ブログの見た目を少し変えてみたのです。シンプルに。jqueryを試してみたのだが、TypePad Connectで利用しているYUIと相性がよろしくないよう。回避方法が皆目見当がつかなかったので、TypePad Connect はとりあえずクローズした。とりあえず。暇なときにちょこちょこ変えていこうと思う。</div> <div class="read-more"> <a href="/2009/01/post_180.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-30T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2017/hello-hexo.html">Hello Hexo</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a6a39b;"> <img src="/assets/images/hello-hexo/hello-hexo_medium.webp" srcset="/assets/images/hello-hexo/hello-hexo_medium.webp, /assets/images/hello-hexo/hello-hexo_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。</div> <div class="read-more"> <a href="/2017/hello-hexo.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-03-06T03:36:24.000Z"> <span class="calendar-icon">📅</span> <span>2005年3月6日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/03/post_67.html">ブログと情報発信</a> </h3>  </header> <div class="content">突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。</div> <div class="read-more"> <a href="/2005/03/post_67.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2016-02-03T21:37:00.000Z"> <span class="calendar-icon">📅</span> <span>2016年2月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">Bitcodeを使ったアプリがCrashlyticsでmissing dSYMsになる</a> </h3>  </header> <div class="content">Xcodeでpublishした内部テスター向けのビルドで、Crashlyticsへクラッシュレポートが届かない。「missing dSYM」というエラーが出てるので、dSYMの問題だろうというところまでわかるけど、CrashlyticsのDocumentなどを読んでもわからない。Crashlyticsのmissing dSYMの画面に出てるUUIDを検索しても見つからない...</div> <div class="read-more"> <a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2017-12-30T00:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2017年12月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2017/hello-hexo.html">Hello Hexo</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a6a39b;"> <img src="/assets/images/hello-hexo/hello-hexo_medium.webp" srcset="/assets/images/hello-hexo/hello-hexo_medium.webp, /assets/images/hello-hexo/hello-hexo_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">Gatsby はなかなかに高機能で素晴らしく、React、GraphQL、PWAなど技術的なプレイグラウンドとしても魅力的だったのだけど、結局Hexoにすることにした。</div> <div class="read-more"> <a href="/2017/hello-hexo.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-01-03T03:45:53.000Z"> <span class="calendar-icon">📅</span> <span>2009年1月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/01/post_180.html">今年の抱負（とデザイン変更）</a> </h3>  </header> <div class="content">ブログの見た目を少し変えてみたのです。シンプルに。jqueryを試してみたのだが、TypePad Connectで利用しているYUIと相性がよろしくないよう。回避方法が皆目見当がつかなかったので、TypePad Connect はとりあえずクローズした。とりあえず。暇なときにちょこちょこ変えていこうと思う。</div> <div class="read-more"> <a href="/2009/01/post_180.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2016-02-03T21:37:00.000Z"> <span class="calendar-icon">📅</span> <span>2016年2月4日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">Bitcodeを使ったアプリがCrashlyticsでmissing dSYMsになる</a> </h3>  </header> <div class="content">Xcodeでpublishした内部テスター向けのビルドで、Crashlyticsへクラッシュレポートが届かない。「missing dSYM」というエラーが出てるので、dSYMの問題だろうというところまでわかるけど、CrashlyticsのDocumentなどを読んでもわからない。Crashlyticsのmissing dSYMの画面に出てるUUIDを検索しても見つからない...</div> <div class="read-more"> <a href="/2016/02/crashlytics_missing_dsyms_issue_around_bitcode.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2005-03-06T03:36:24.000Z"> <span class="calendar-icon">📅</span> <span>2005年3月6日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2005/03/post_67.html">ブログと情報発信</a> </h3>  </header> <div class="content">突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。</div> <div class="read-more"> <a href="/2005/03/post_67.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

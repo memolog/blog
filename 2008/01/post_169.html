@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -763,8 +780,8 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 </script><meta property="og:type" content="article"><meta property="og:title" content="本：「達人」の英語学習法"><meta property="og:url" content="https://memolog.org/2025/a-crash-course-on-crises.html"><meta property="og:site_name" content="メモログ"><meta property="og:description" content="内容はそのまんま、英語の学習法についての話です。第一章と第二章は「英語は子供のうちにやらないとうまくならない」とか、特異な学習法など、よくある誤解について解説しています。第三章から第五章までが、英語の達人（英語圏でなく、12歳ごろ以降に英語学習を始め、主として日本で学習し、留学していても短期。(p59-60)）の学習計画、学習法を紹介しています。英語教育の研究者の方が書いている本だけあって、論文やインタビューなどをもとに確度の高い情報を提供してくれています。個人的に第一章と第二章は関心がなかったので、かるく読み飛ばして、第三章から第五章を中心に、1時間くらいでさらりと読みました。文の構成がわかりやすく、文体も平易な感じなので読みやすいです。"><meta property="og:locale" content="ja_JP"><meta property="article:published_time" content="2008-01-12T11:00:00.000Z"><meta property="article:author" content="Yutaka Yamaguchi"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@memolog"><meta name="twitter:site" content="https://twitter.com/memolog"><meta property="fb:app_id" content="168245123786587"><link rel="canonical" href="https://memolog.org/2008/01/post_169.html"></head> <body class="post"> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1> <nav class="navigation navigation-global"> <a href="/" class="navigation__link">
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2008-01-12T11:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月12日</span> </time> </div> <h2 class="header__title"><span>本：「達人」の英語学習法</span></h2>  </header> <div id="article-content" class="content">  <p>内容はそのまんま、英語の学習法についての話です。第一章と第二章は「英語は子供のうちにやらないとうまくならない」とか、特異な学習法など、よくある誤解について解説しています。第三章から第五章までが、英語の達人（英語圏でなく、12 歳ごろ以降に英語学習を始め、主として日本で学習し、留学していても短期。(p59-60)）の学習計画、学習法を紹介しています。英語教育の研究者の方が書いている本だけあって、論文やインタビューなどをもとに確度の高い情報を提供してくれています。個人的に第一章と第二章は関心がなかったので、かるく読み飛ばして、第三章から第五章を中心に、1 時間くらいでさらりと読みました。文の構成がわかりやすく、文体も平易な感じなので読みやすいです。</p>
-<p>個人的に共感を覚えたのが、「学習の成果は直線的に現れない（p73） 」というところと、第五章「社会のなかでの学習法」の最初の下り。前者は、日々少しずつ上達するのではなく、毎日続けていると、あるときグンッと上達するのを実感するという話。後者は、学習者のおかれている社会的・文化的環境が異なること、学習方法の汎用化の限界についてです。個人的に思ったのは、学習というのは、自分の環境をうまく利用したり、楽しさも含ませながら、とにかく継続させるのが肝要なのかなということ。そして、すぐに成果が現れなくてもあきらめないでそれでも継続する、ということなのかなと思いました。その一方で、「<a href="/blog//2007/10/post_155/">ダメなら、さっさとやめなさい！</a>」みたいな考え方も重要なのでしょう。はい。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+<p>個人的に共感を覚えたのが、「学習の成果は直線的に現れない（p73） 」というところと、第五章「社会のなかでの学習法」の最初の下り。前者は、日々少しずつ上達するのではなく、毎日続けていると、あるときグンッと上達するのを実感するという話。後者は、学習者のおかれている社会的・文化的環境が異なること、学習方法の汎用化の限界についてです。個人的に思ったのは、学習というのは、自分の環境をうまく利用したり、楽しさも含ませながら、とにかく継続させるのが肝要なのかなということ。そして、すぐに成果が現れなくてもあきらめないでそれでも継続する、ということなのかなと思いました。その一方で、「<a href="/2007/10/post_155/">ダメなら、さっさとやめなさい！</a>」みたいな考え方も重要なのでしょう。はい。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-03T14:20:26.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_147.html">頭のいい人の時間攻略法</a> </h3>  </header> <div class="content"> 最近、勉強本がブームなのかよくわかりませんが、この手の本が書店にたくさん並んでいます。ついついなんとなく買ってしまいました。</div> <div class="read-more"> <a href="/2007/09/post_147.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-12-25T16:08:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年12月26日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/12/post_164.html">本：進化するネットワーキング</a> </h3>  </header> <div class="content"> 半年くらい前に読んだ本。読み返しながらまとめています。「ネットワーク」について、経済学的な見地を中心に解説しています。第一章から第四章が第一部で「ネットワークの外部性」について。第一章は、クリティカル・マス、ティッピング・ポイント、QWERYの経済学など、他人が利用することによる利便性が他人を引きつけて集団を形成するという、ネットワークの特性を経済学でいう「外部性」とからめて話を展開しています。第二章は、ネットワークの外部性による「ひとり勝ち」の状況と、経済学でいう「市場の独占」とからめた内容。第三章は電話回線などの物理的なネットワークについて、他社・他国のネットワークを相互接続するときのネットワークの外部性による恩恵・コストをどのように他社間・多国間でバランスさせるかとかいう話。第四章は政策論的な性格が強く、ユニバーサル・サービス（全国どこに住んでいても、利用しやすい料金で利用できるサービス（p152））という視点から、ネットワーク産業について論じています。</div> <div class="read-more"> <a href="/2007/12/post_164.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-22T22:57:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月23日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/01/10_1.html">本：効率が10倍アップする新・知的生産術--自分をグーグル化する方法</a> </h3>  </header> <div class="content"> 生産性を上げるための方法を著者の経験をもとにまとめた本。「自分をグーグル化する」という意味は、情報を武器に生産性を上げるといった感じです。全体が280ページほどですが、ざっと3時間ほどで読みました。要点箇所は太字になっているので、流し読みはしやすいです。どうも売れに売れているようで、わたしの持っている本は第七刷でした。発売一ヶ月で七刷まで出てるのはけっこうすごいと思います、たぶん。</div> <div class="read-more"> <a href="/2008/01/10_1.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-08-12T14:09:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年8月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/08/post_178.html">セレンディピティと仮説立案</a> </h3>  </header> <div class="content">今現在「セレンディピティの探求」という本を読んでいます。最初の方はセレンディピティの意味論的なところをあつかっていて、個人的にはあまり関心がそそらなかったのですが、今読んでいる「仮説立案」という章はなかなか面白いです。</div> <div class="read-more"> <a href="/2008/08/post_178.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-12-25T16:08:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年12月26日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/12/post_164.html">本：進化するネットワーキング</a> </h3>  </header> <div class="content"> 半年くらい前に読んだ本。読み返しながらまとめています。「ネットワーク」について、経済学的な見地を中心に解説しています。第一章から第四章が第一部で「ネットワークの外部性」について。第一章は、クリティカル・マス、ティッピング・ポイント、QWERYの経済学など、他人が利用することによる利便性が他人を引きつけて集団を形成するという、ネットワークの特性を経済学でいう「外部性」とからめて話を展開しています。第二章は、ネットワークの外部性による「ひとり勝ち」の状況と、経済学でいう「市場の独占」とからめた内容。第三章は電話回線などの物理的なネットワークについて、他社・他国のネットワークを相互接続するときのネットワークの外部性による恩恵・コストをどのように他社間・多国間でバランスさせるかとかいう話。第四章は政策論的な性格が強く、ユニバーサル・サービス（全国どこに住んでいても、利用しやすい料金で利用できるサービス（p152））という視点から、ネットワーク産業について論じています。</div> <div class="read-more"> <a href="/2007/12/post_164.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-08-12T14:09:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年8月12日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/08/post_178.html">セレンディピティと仮説立案</a> </h3>  </header> <div class="content">今現在「セレンディピティの探求」という本を読んでいます。最初の方はセレンディピティの意味論的なところをあつかっていて、個人的にはあまり関心がそそらなかったのですが、今読んでいる「仮説立案」という章はなかなか面白いです。</div> <div class="read-more"> <a href="/2008/08/post_178.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-22T22:57:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月23日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/01/10_1.html">本：効率が10倍アップする新・知的生産術--自分をグーグル化する方法</a> </h3>  </header> <div class="content"> 生産性を上げるための方法を著者の経験をもとにまとめた本。「自分をグーグル化する」という意味は、情報を武器に生産性を上げるといった感じです。全体が280ページほどですが、ざっと3時間ほどで読みました。要点箇所は太字になっているので、流し読みはしやすいです。どうも売れに売れているようで、わたしの持っている本は第七刷でした。発売一ヶ月で七刷まで出てるのはけっこうすごいと思います、たぶん。</div> <div class="read-more"> <a href="/2008/01/10_1.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-03T14:20:26.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月3日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/09/post_147.html">頭のいい人の時間攻略法</a> </h3>  </header> <div class="content"> 最近、勉強本がブームなのかよくわかりませんが、この手の本が書店にたくさん並んでいます。ついついなんとなく買ってしまいました。</div> <div class="read-more"> <a href="/2007/09/post_147.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

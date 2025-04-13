@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -760,7 +777,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2008/01/boundary.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2007/12/post_164.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2007/11/post_163.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2007/11/post_162.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2007/11/post_161.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2007/11/post_160.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2007/11/post_159.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2007/11/bayesian-network.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2007/10/mac-htaccess.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2007/10/mtpaginate_movable_type.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-04T09:53:48.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2008/01/boundary.html">本：知らなかった! 驚いた! 日本全国「県境」の謎</a> </h2>  </header> <div class="content"> いまの県境（けんざかい）がどのような形でできあがったのか、という話をまとまた本。5部構成で、1部が現在の47都道県に落ち着くまでの成り立ち。2部は県境にまつわる逸話など、3部は「飛び地」や「越県合併」などを中心にした話、4部は県境をめぐる争い、5部は「県境未定地」と呼ばれる、県境があやふやなところについての話。最後のほうはかるく読み流しています。県境の多くは、明治よりも前に定められた国の形を踏襲しているようで、話の中心は県境そのものというよりは、県の成り立ちと言った感じです。県境についての小話を交えながら、いまの県のかたちとなった経緯を知ることができます。</div> <div class="read-more"> <a href="/2008/01/boundary.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-12-25T16:08:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年12月26日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/12/post_164.html">本：進化するネットワーキング</a> </h2>  </header> <div class="content"> 半年くらい前に読んだ本。読み返しながらまとめています。「ネットワーク」について、経済学的な見地を中心に解説しています。第一章から第四章が第一部で「ネットワークの外部性」について。第一章は、クリティカル・マス、ティッピング・ポイント、QWERYの経済学など、他人が利用することによる利便性が他人を引きつけて集団を形成するという、ネットワークの特性を経済学でいう「外部性」とからめて話を展開しています。第二章は、ネットワークの外部性による「ひとり勝ち」の状況と、経済学でいう「市場の独占」とからめた内容。第三章は電話回線などの物理的なネットワークについて、他社・他国のネットワークを相互接続するときのネットワークの外部性による恩恵・コストをどのように他社間・多国間でバランスさせるかとかいう話。第四章は政策論的な性格が強く、ユニバーサル・サービス（全国どこに住んでいても、利用しやすい料金で利用できるサービス（p152））という視点から、ネットワーク産業について論じています。</div> <div class="read-more"> <a href="/2007/12/post_164.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-17T07:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_163.html">本：幽霊を捕まえようとした科学者たち</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #847c6b;"> <img src="/assets/images/ghost_hunters/ghost_hunters_medium.webp" srcset="/assets/images/ghost_hunters/ghost_hunters_medium.webp, /assets/images/ghost_hunters/ghost_hunters_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">幽霊の存在を科学的アプローチで立証しようと試みた科学者たちの物語です。科学系のノンフィクションは好きです。</div> <div class="read-more"> <a href="/2007/11/post_163.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-15T17:32:04.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_162.html">本：黒リッチってなんですか?</a> </h2>  </header> <div class="content"> 富裕層がどんな生活・消費をしているか、といったような内容の本。黒リッチという呼び名は、消費の究極系みたいな分類をうまくとらえているとも思いますが、それよりも言葉の響きが面白くて興をそそりました。</div> <div class="read-more"> <a href="/2007/11/post_162.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-12T15:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月13日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_161.html">本：ザ・ニューリッチ</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7c7058;"> <img src="/assets/images/richistan/richistan_medium.webp" srcset="/assets/images/richistan/richistan_medium.webp, /assets/images/richistan/richistan_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">アメリカで急増している新富裕層についての調査をまとめた本です。新富裕層は「コンシェルジュ医師」のように自分たち向けの究極のサービスを消費し、自分と同じくらい資金力を持つ人間とクラブを形成して、富裕層ゆえの不安や悩みを相談しあっている。リッチスタンはおそらく「rich（富）」と「stan（国）」をあわせた造語で、「富裕層が形成する独立国家」「富裕層は、数に任せて自己完結した内輪の世界を築いている（「はじめに」の4ページ）」という本書の骨子となる概念をうまく言い表しています。</div> <div class="read-more"> <a href="/2007/11/post_161.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-11T16:04:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月12日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_160.html">本：地図で読む世界情勢</a> </h2>  </header> <div class="content">この本は第一部と第二部とに分かれていて、今回読んだのは第一部のほうです。150ページほどで地図がカラーでふんだんに使われていて、ぱらぱらと地図をながめつつ関心があるところを読んでみるという読み方もできます。</div> <div class="read-more"> <a href="/2007/11/post_160.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-11T13:40:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_159.html">続・ブログとは何か</a> </h2>  </header> <div class="content">*   ブログとは何か - メモログ  1年半くらい前に書いた記事をきゅうに思い出して、その続きを書いてみようと思い立ちました。いい加減な私。以前に記した「自分をまとめるためのツール」という考え方は、まだ変わっていません。ただ、今はアウトプットするよりもインプットする方に関心が向いています。</div> <div class="read-more"> <a href="/2007/11/post_159.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-04T17:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/bayesian-network.html">本：ベイジアンネットワーク技術</a> </h2>  </header> <div class="content"> 副題は「ユーザ・顧客のモデル化と不確実性推論」。「ベイジアンネットワーク」とは何かを解説した本で、初めにベイジアンネットワークの理論的な基礎を解説した後に、ユーザーモデル、関連ソフトウェアの紹介、人間のモデル化から「ユーザー適応システム」への取り組みの紹介など、基礎から応用まで幅広くあつかっています。分量的には160ページ程度ですが、理解するのに時間がかかりました。わたしは最初の基礎部分をじっくり読んで、最後の応用事例は軽く読み流す感じで読みました。</div> <div class="read-more"> <a href="/2007/11/bayesian-network.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-10-31T12:22:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年10月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/10/mac-htaccess.html">Macで.htaccessを利用する</a> </h2>  </header> <div class="content">メモ。MacのSitesフォルダの中で.htaccessを利用するには、/private/etc/httpd/users の中にある、username.confの中に記述されている、AllowOverrideを「All」に変更する。</div> <div class="read-more"> <a href="/2007/10/mac-htaccess.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-10-27T14:46:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年10月27日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/10/mtpaginate_movable_type.html">MTPaginate：Movable Typeでページネーションをする</a> </h2>  </header> <div class="content">*   Six Apart - Movable Type プラグインディレクトリ: MTPaginate</div> <div class="read-more"> <a href="/2007/10/mtpaginate_movable_type.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/28/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/27/"> 27 </a><a class="page-number " href="/page/28/"> 28 </a><span class="page-number current">29</span><a class="page-number " href="/page/30/"> 30 </a><a class="page-number " href="/page/31/"> 31 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/30/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2008/01/post_165.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2008/01/boundary.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2007/12/post_164.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2007/11/post_163.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2007/11/post_162.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2007/11/post_161.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2007/11/post_160.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2007/11/post_159.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2007/11/bayesian-network.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2007/10/mac-htaccess.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-05T15:31:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月6日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2008/01/post_165.html">映画：バベル</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #69614f;"> <img src="/assets/images/Babel/Babel_medium.webp" srcset="/assets/images/Babel/Babel_medium.webp, /assets/images/Babel/Babel_medium@2x.webp 2x" role="presentation" loading="eager" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content"> バベル（BABEL）をDVDで見ました。周囲の人の前評判はかなり悪かったのですが、個人的にはそんなに悪くなかったです。時間軸が並行して話が展開する映画が、個人的な趣向に合っているためかもしれません。同じ理由でペイチェックやハリー・ポッターとアズカバンの囚人とかもわりと好み。</div> <div class="read-more"> <a href="/2008/01/post_165.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-04T09:53:48.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2008/01/boundary.html">本：知らなかった! 驚いた! 日本全国「県境」の謎</a> </h2>  </header> <div class="content"> いまの県境（けんざかい）がどのような形でできあがったのか、という話をまとまた本。5部構成で、1部が現在の47都道県に落ち着くまでの成り立ち。2部は県境にまつわる逸話など、3部は「飛び地」や「越県合併」などを中心にした話、4部は県境をめぐる争い、5部は「県境未定地」と呼ばれる、県境があやふやなところについての話。最後のほうはかるく読み流しています。県境の多くは、明治よりも前に定められた国の形を踏襲しているようで、話の中心は県境そのものというよりは、県の成り立ちと言った感じです。県境についての小話を交えながら、いまの県のかたちとなった経緯を知ることができます。</div> <div class="read-more"> <a href="/2008/01/boundary.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-12-25T16:08:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年12月26日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/12/post_164.html">本：進化するネットワーキング</a> </h2>  </header> <div class="content"> 半年くらい前に読んだ本。読み返しながらまとめています。「ネットワーク」について、経済学的な見地を中心に解説しています。第一章から第四章が第一部で「ネットワークの外部性」について。第一章は、クリティカル・マス、ティッピング・ポイント、QWERYの経済学など、他人が利用することによる利便性が他人を引きつけて集団を形成するという、ネットワークの特性を経済学でいう「外部性」とからめて話を展開しています。第二章は、ネットワークの外部性による「ひとり勝ち」の状況と、経済学でいう「市場の独占」とからめた内容。第三章は電話回線などの物理的なネットワークについて、他社・他国のネットワークを相互接続するときのネットワークの外部性による恩恵・コストをどのように他社間・多国間でバランスさせるかとかいう話。第四章は政策論的な性格が強く、ユニバーサル・サービス（全国どこに住んでいても、利用しやすい料金で利用できるサービス（p152））という視点から、ネットワーク産業について論じています。</div> <div class="read-more"> <a href="/2007/12/post_164.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-17T07:35:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_163.html">本：幽霊を捕まえようとした科学者たち</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #847c6b;"> <img src="/assets/images/ghost_hunters/ghost_hunters_medium.webp" srcset="/assets/images/ghost_hunters/ghost_hunters_medium.webp, /assets/images/ghost_hunters/ghost_hunters_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">幽霊の存在を科学的アプローチで立証しようと試みた科学者たちの物語です。科学系のノンフィクションは好きです。</div> <div class="read-more"> <a href="/2007/11/post_163.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-15T17:32:04.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_162.html">本：黒リッチってなんですか?</a> </h2>  </header> <div class="content"> 富裕層がどんな生活・消費をしているか、といったような内容の本。黒リッチという呼び名は、消費の究極系みたいな分類をうまくとらえているとも思いますが、それよりも言葉の響きが面白くて興をそそりました。</div> <div class="read-more"> <a href="/2007/11/post_162.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-12T15:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月13日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_161.html">本：ザ・ニューリッチ</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7c7058;"> <img src="/assets/images/richistan/richistan_medium.webp" srcset="/assets/images/richistan/richistan_medium.webp, /assets/images/richistan/richistan_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">アメリカで急増している新富裕層についての調査をまとめた本です。新富裕層は「コンシェルジュ医師」のように自分たち向けの究極のサービスを消費し、自分と同じくらい資金力を持つ人間とクラブを形成して、富裕層ゆえの不安や悩みを相談しあっている。リッチスタンはおそらく「rich（富）」と「stan（国）」をあわせた造語で、「富裕層が形成する独立国家」「富裕層は、数に任せて自己完結した内輪の世界を築いている（「はじめに」の4ページ）」という本書の骨子となる概念をうまく言い表しています。</div> <div class="read-more"> <a href="/2007/11/post_161.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-11T16:04:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月12日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_160.html">本：地図で読む世界情勢</a> </h2>  </header> <div class="content">この本は第一部と第二部とに分かれていて、今回読んだのは第一部のほうです。150ページほどで地図がカラーでふんだんに使われていて、ぱらぱらと地図をながめつつ関心があるところを読んでみるという読み方もできます。</div> <div class="read-more"> <a href="/2007/11/post_160.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-11T13:40:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/post_159.html">続・ブログとは何か</a> </h2>  </header> <div class="content">*   ブログとは何か - メモログ  1年半くらい前に書いた記事をきゅうに思い出して、その続きを書いてみようと思い立ちました。いい加減な私。以前に記した「自分をまとめるためのツール」という考え方は、まだ変わっていません。ただ、今はアウトプットするよりもインプットする方に関心が向いています。</div> <div class="read-more"> <a href="/2007/11/post_159.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-11-04T17:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年11月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/11/bayesian-network.html">本：ベイジアンネットワーク技術</a> </h2>  </header> <div class="content"> 副題は「ユーザ・顧客のモデル化と不確実性推論」。「ベイジアンネットワーク」とは何かを解説した本で、初めにベイジアンネットワークの理論的な基礎を解説した後に、ユーザーモデル、関連ソフトウェアの紹介、人間のモデル化から「ユーザー適応システム」への取り組みの紹介など、基礎から応用まで幅広くあつかっています。分量的には160ページ程度ですが、理解するのに時間がかかりました。わたしは最初の基礎部分をじっくり読んで、最後の応用事例は軽く読み流す感じで読みました。</div> <div class="read-more"> <a href="/2007/11/bayesian-network.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-10-31T12:22:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年10月31日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/10/mac-htaccess.html">Macで.htaccessを利用する</a> </h2>  </header> <div class="content">メモ。MacのSitesフォルダの中で.htaccessを利用するには、/private/etc/httpd/users の中にある、username.confの中に記述されている、AllowOverrideを「All」に変更する。</div> <div class="read-more"> <a href="/2007/10/mac-htaccess.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/28/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/27/"> 27 </a><a class="page-number " href="/page/28/"> 28 </a><span class="page-number current">29</span><a class="page-number " href="/page/30/"> 30 </a><a class="page-number " href="/page/31/"> 31 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/30/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

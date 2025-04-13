@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -760,7 +777,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2007/09/post_150.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2007/09/offside-girls.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2007/09/mt4mt3.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2007/09/post_149.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2007/09/mtif.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2007/09/jr.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2007/09/post_148.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2007/09/post_147.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2007/09/nunchaku.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2007/09/post_146.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-21T09:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/post_150.html">デジカメを購入</a> </h2>  </header> <div class="content">!L1000012.jpg   久しぶりにデジカメを買っちゃいました。一眼レフは実力的にも重量的も荷が重いので、スリムなコンパクトカメラ。スペック的にもよくわからないので、見た目でLEICAのC-Lux 2のブラックを選択してみました。サイトに載っているサンプルのように奇麗に撮れるようにがんばっていきたいなと思ったり思わなかったり。すぐに自分の中の写真ブームが去る気がしないでもないですが。</div> <div class="read-more"> <a href="/2007/09/post_150.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-18T16:07:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月19日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/offside-girls.html">オフサイド・ガールズを見てきました</a> </h2>  </header> <div class="content">*   オフサイド・ガールズ（公式サイト） *   goo 映画（あらすじ）オフサイド・ガールズ</div> <div class="read-more"> <a href="/2007/09/offside-girls.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-18T05:22:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/mt4mt3.html">MT4のダッシュボードにMT3ライクなブログ一覧を表示</a> </h2>  </header> <div class="content">*   My Blogs | Movalog Plugins: Movable Type plugins by Arvind Satyanarayan</div> <div class="read-more"> <a href="/2007/09/mt4mt3.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-13T16:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/post_149.html">透明度のクロスブラウザ対応</a> </h2>  </header> <div class="content">*   Cross Browser Transparency | Design Shack</div> <div class="read-more"> <a href="/2007/09/post_149.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-12T17:14:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月13日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/mtif.html">MTIfタグを利用したタブ型ナビゲーション</a> </h2>  </header> <div class="content">*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム</div> <div class="read-more"> <a href="/2007/09/mtif.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-11T17:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月12日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/jr.html">本：JR福知山線事故の本質</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #8a8477;"> <img src="/assets/images/jr/jr_medium.webp" srcset="/assets/images/jr/jr_medium.webp, /assets/images/jr/jr_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">3章構成で1章が被害者の宮崎千通子さんの手記、2章は事故の科学的な見知による分析、3章は社会への提言といったかたち。1章の手記は事故から手術、リハビリまでの1年間について詳しく触れられています。実体験を通しているがゆえに、その場にいるかのようなリアルな描写となっています。</div> <div class="read-more"> <a href="/2007/09/jr.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-07T13:27:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/post_148.html">ハーバードでは教えない実践経営学</a> </h2>  </header> <div class="content"> 1985年に「マコーマックのマンビジネス」というタイトルで出版された本の新訳版です。いわゆるビジネスに必要な「処世術」、パートナーシップの構築など、筆者曰く「ハーバード・ビジネススクールでは教えたくても教えられない（p8）」内容を扱っています。「人間」「営業と交渉」「企業経営」の３部構成。</div> <div class="read-more"> <a href="/2007/09/post_148.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-03T14:20:26.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/post_147.html">頭のいい人の時間攻略法</a> </h2>  </header> <div class="content"> 最近、勉強本がブームなのかよくわかりませんが、この手の本が書店にたくさん並んでいます。ついついなんとなく買ってしまいました。</div> <div class="read-more"> <a href="/2007/09/post_147.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-02T15:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/nunchaku.html">ヌンチャク再結成・コンプリートBOX発売</a> </h2>  </header> <div class="content">*   ヌンチャク オフィシャル ウェブサイト *   ヌンチャクの期間限定 もうふぶかないブログ</div> <div class="read-more"> <a href="/2007/09/nunchaku.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-02T03:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月2日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/post_146.html">本：メディア・バイアス</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #8d8c87;"> <img src="/assets/images/post_146/post_146_medium.webp" srcset="/assets/images/post_146/post_146_medium.webp, /assets/images/post_146/post_146_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">副題は「あやしい健康情報とニセ科学」。メディア・バイアスとは「メディアによる情報の取捨選択のゆがみ（p6）」のことを指します。本書では食に関する話題を中心に「情報のゆがみ」について11章構成で各論的に書かれています。</div> <div class="read-more"> <a href="/2007/09/post_146.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/30/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/29/"> 29 </a><a class="page-number " href="/page/30/"> 30 </a><span class="page-number current">31</span><a class="page-number " href="/page/32/"> 32 </a><a class="page-number " href="/page/33/"> 33 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/32/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2007/09/pmbok.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2007/09/post_150.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2007/09/offside-girls.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2007/09/mt4mt3.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2007/09/post_149.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2007/09/mtif.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2007/09/jr.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2007/09/post_148.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2007/09/post_147.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2007/09/nunchaku.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-25T16:42:19.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月26日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/pmbok.html">PMBOK入門</a> </h2>  </header> <div class="content"> プロジェクトマネジメント体系の標準であるPMBOK（Project Management Body of Knowledge）を解説した本です。本書は1〜2章がプロジェクトマネジメントとPMBOKについての基本説明、3〜7章がPMBOKを利用したケーススタディという二構成になっています。本の分量的には150ページ弱と比較的少なめな感じですが、ケーススタディではPMBOKに記述できないようなプロジェクトマネジメントの勘所についても幅広く扱っています。</div> <div class="read-more"> <a href="/2007/09/pmbok.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-21T09:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月21日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/post_150.html">デジカメを購入</a> </h2>  </header> <div class="content">!L1000012.jpg   久しぶりにデジカメを買っちゃいました。一眼レフは実力的にも重量的も荷が重いので、スリムなコンパクトカメラ。スペック的にもよくわからないので、見た目でLEICAのC-Lux 2のブラックを選択してみました。サイトに載っているサンプルのように奇麗に撮れるようにがんばっていきたいなと思ったり思わなかったり。すぐに自分の中の写真ブームが去る気がしないでもないですが。</div> <div class="read-more"> <a href="/2007/09/post_150.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-18T16:07:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月19日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/offside-girls.html">オフサイド・ガールズを見てきました</a> </h2>  </header> <div class="content">*   オフサイド・ガールズ（公式サイト） *   goo 映画（あらすじ）オフサイド・ガールズ</div> <div class="read-more"> <a href="/2007/09/offside-girls.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-18T05:22:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/mt4mt3.html">MT4のダッシュボードにMT3ライクなブログ一覧を表示</a> </h2>  </header> <div class="content">*   My Blogs | Movalog Plugins: Movable Type plugins by Arvind Satyanarayan</div> <div class="read-more"> <a href="/2007/09/mt4mt3.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-13T16:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/post_149.html">透明度のクロスブラウザ対応</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dad4c6;"> <img src="/assets/images/post_149/post_149_medium.webp" srcset="/assets/images/post_149/post_149_medium.webp, /assets/images/post_149/post_149_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">「MTIf タグを利用したタブ型ナビゲーション」の記事で作成した、アクティブ以外のタブには透明度をつけて濃淡の差を出しています（別に透明度で濃淡の差を出す必然性はないのですが使ってみたかった）。指定の仕方は下記のような感じ</div> <div class="read-more"> <a href="/2007/09/post_149.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-12T17:14:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月13日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/mtif.html">MTIfタグを利用したタブ型ナビゲーション</a> </h2>  </header> <div class="content">*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム</div> <div class="read-more"> <a href="/2007/09/mtif.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-11T17:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月12日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/jr.html">本：JR福知山線事故の本質</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #8a8477;"> <img src="/assets/images/jr/jr_medium.webp" srcset="/assets/images/jr/jr_medium.webp, /assets/images/jr/jr_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">3章構成で1章が被害者の宮崎千通子さんの手記、2章は事故の科学的な見知による分析、3章は社会への提言といったかたち。1章の手記は事故から手術、リハビリまでの1年間について詳しく触れられています。実体験を通しているがゆえに、その場にいるかのようなリアルな描写となっています。</div> <div class="read-more"> <a href="/2007/09/jr.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-07T13:27:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/post_148.html">ハーバードでは教えない実践経営学</a> </h2>  </header> <div class="content"> 1985年に「マコーマックのマンビジネス」というタイトルで出版された本の新訳版です。いわゆるビジネスに必要な「処世術」、パートナーシップの構築など、筆者曰く「ハーバード・ビジネススクールでは教えたくても教えられない（p8）」内容を扱っています。「人間」「営業と交渉」「企業経営」の３部構成。</div> <div class="read-more"> <a href="/2007/09/post_148.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-03T14:20:26.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/post_147.html">頭のいい人の時間攻略法</a> </h2>  </header> <div class="content"> 最近、勉強本がブームなのかよくわかりませんが、この手の本が書店にたくさん並んでいます。ついついなんとなく買ってしまいました。</div> <div class="read-more"> <a href="/2007/09/post_147.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-09-02T15:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年9月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2007/09/nunchaku.html">ヌンチャク再結成・コンプリートBOX発売</a> </h2>  </header> <div class="content">*   ヌンチャク オフィシャル ウェブサイト *   ヌンチャクの期間限定 もうふぶかないブログ</div> <div class="read-more"> <a href="/2007/09/nunchaku.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/30/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/29/"> 29 </a><a class="page-number " href="/page/30/"> 30 </a><span class="page-number current">31</span><a class="page-number " href="/page/32/"> 32 </a><a class="page-number " href="/page/33/"> 33 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/32/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

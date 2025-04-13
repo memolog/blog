@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -764,7 +781,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 📘 最新のメモ
 </a> </nav> </div> </header> <div class="container"> <main class="main"> <article> <header class="header"> <div> <time datetime="2006-12-12T08:24:21.000Z"> <span class="calendar-icon">📅</span> <span>2006年12月12日</span> </time> </div> <h2 class="header__title"><span>情報の行間を読む（1/4）</span></h2>  </header> <div id="article-content" class="content">  <h4 id="情報の行間を読む">情報の行間を読む</h4>
 <p>「行間を読む」とは「文章には直接表現されていない筆者の真意をくみとる」という意味です。情報も元をたどれば人によって作られています。情報にも文章と同じように「行間」が存在しているのではないかと思います。</p>
-<p>情報の行間とは「情報主体が持つ意図」と言い換えても良いのかもしれません。情報は人によって作られているため、発信者の意図によって削られ、言い換えられ、加筆されます。受信者もまた、自分の意図や期待しているものに関心をよせ、信頼する傾向があります（参考：<a href="/blog//2005/11/post_118/">人は肯定的な情報を信じやすい〜バーナム効果</a>）。情報の行間を読むとは、情報主体の意図を知ることで、情報をただ読むだけでは理解できない情報の本質を汲み取る作業に他なりません。</p>
+<p>情報の行間とは「情報主体が持つ意図」と言い換えても良いのかもしれません。情報は人によって作られているため、発信者の意図によって削られ、言い換えられ、加筆されます。受信者もまた、自分の意図や期待しているものに関心をよせ、信頼する傾向があります（参考：<a href="/2005/11/post_118/">人は肯定的な情報を信じやすい〜バーナム効果</a>）。情報の行間を読むとは、情報主体の意図を知ることで、情報をただ読むだけでは理解できない情報の本質を汲み取る作業に他なりません。</p>
 <p>情報には大きく 3 つの主体があります。ひとつは自分（受信者）、ひとつは発信者、そしてもうひとつは情報源（調査対象者）です。それぞれの主体は別々の意図を持ち、行動しています。情報の行間を読むためにはそれぞれの主体が持つ意識的、無意識的な意図を読み取る必要があります。</p>
 <p>そこでそれぞれの主体へのアプローチを具体化して考えてみたいと思います。</p>
 <ol>
@@ -776,4 +793,4 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。
-</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-20T16:49:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月21日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/post_143.html">アンビエント・ファインダビリティ</a> </h3>  </header> <div class="content"> ambient（周囲を取り巻く・完全に包囲している）とfindability（位置特定可能な・特定の対象物の発見のしやすさ）を二つあわせて、アンビエント・ファインダビリティ。直訳すると「周囲を取り巻く特定の対象物の発見のしやすさ」というような感じですが、私なりに解釈するとしたら「自分の取り囲む広大な情報の波から特定の情報を発見する」ようなことを表しているのかと思います。アンビエント・ファインダビリティの世界では、個人は「広大な情報から適切な素早く情報を入手する」ことが肝要で、本書では情報とは何か、情報の見つけやすさとは何かを伝え、最後に台頭しつつある情報を選りすぐる社会的な仕組み（タクソノミーとかフォークソノミーとか）などを次々と紹介しています。</div> <div class="read-more"> <a href="/2007/08/post_143.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2009-12-30T01:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年12月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/12/learning-as-a-job.html">本：職業としての学問</a> </h3>  </header> <div class="content"> マックス・ウェーバーの「職業としての学問」を「下流社会」の三浦展さんが現代訳として意訳しています。内容としては、学問することを職業としようと考えている学生に対して、努力をしても職が得られるとは限らないし、才能の多寡によって出世が決まるとも限らない、という職業としての現実を諭していくといったもの。とにかく「安心で確実な未来などなく、答えなどない」という現実感をひたすらつきつけていきます。学問を志すにあたってどのような心構えであるべきかと言えば、ひたむきに取り組んでいくことだろうと述べている。そこから得られる「ひらめき」によって、後世に残るような業績を成し遂げることができると。しかし、だからといってひたむきな人が必ずひらめきを得られるわけではない、努力を重ねてもまったくひらめかない人もいるし、やはり運も必要であると言ってしまう。</div> <div class="read-more"> <a href="/2009/12/learning-as-a-job.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-10-06T16:05:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年10月7日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/10/post_155.html">ダメなら、さっさとやめなさい！</a> </h3>  </header> <div class="content">原題は「THE DIP」。dipは「くぼみ」とかそういう意味で、本書では「大勢の足をすくう落とし穴（この本では「運命の谷」と呼ぶ）（p9）」という意味。本書では、人生の壁（運命の谷）にぶつかったときに、闇雲に進むのではなく、打ち込む価値がなければ退く（やめる）ことも視野に入れることを喚起しています。分量的には100ページ前後で、1時間〜2時間くらいでさっと読むことができます。</div> <div class="read-more"> <a href="/2007/10/post_155.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-05-27T22:11:46.000Z"> <span class="calendar-icon">📅</span> <span>2008年5月28日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/05/post_175.html">本：赤を見る</a> </h3> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #979085;"> <img src="/assets/images/seeing_red/seeing_red_medium.webp" srcset="/assets/images/seeing_red/seeing_red_medium.webp, /assets/images/seeing_red/seeing_red_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content"> 2004年春にハーバード大学で行われた著者の講演内容をまとめた本。「赤を見る」という行為を因数分解して、「感覚」とは何か、「知覚」とは何か、そして「意識」とは何かにまで踏み込みこんでいきます。150ページくらいの分量なのですが、内容が難解で・・ページを行ったり来たり、途中で挫折しつつ読み進めたので、読了するのに時間がかかりました。</div> <div class="read-more"> <a href="/2008/05/post_175.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>
+</div> <ul class="profile__social-list"> <li class="profile__social-list-item"> <a href="https://twitter.com/memolog">X</a> </li> <li class="profile__social-list-item"> <a href="https://www.linkedin.com/in/yutakayamaguchi/">LinkedIn</a> </li> </ul> </div> </div> </footer> </article> </main> <aside class="related-posts"> <h2 class="header__title">📖 関連メモ</h2> <div> <article class="article-summary"> <header class="header"> <div> <time datetime="2009-12-30T01:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2009年12月30日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2009/12/learning-as-a-job.html">本：職業としての学問</a> </h3>  </header> <div class="content"> マックス・ウェーバーの「職業としての学問」を「下流社会」の三浦展さんが現代訳として意訳しています。内容としては、学問することを職業としようと考えている学生に対して、努力をしても職が得られるとは限らないし、才能の多寡によって出世が決まるとも限らない、という職業としての現実を諭していくといったもの。とにかく「安心で確実な未来などなく、答えなどない」という現実感をひたすらつきつけていきます。学問を志すにあたってどのような心構えであるべきかと言えば、ひたむきに取り組んでいくことだろうと述べている。そこから得られる「ひらめき」によって、後世に残るような業績を成し遂げることができると。しかし、だからといってひたむきな人が必ずひらめきを得られるわけではない、努力を重ねてもまったくひらめかない人もいるし、やはり運も必要であると言ってしまう。</div> <div class="read-more"> <a href="/2009/12/learning-as-a-job.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2007-08-20T16:49:00.000Z"> <span class="calendar-icon">📅</span> <span>2007年8月21日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2007/08/post_143.html">アンビエント・ファインダビリティ</a> </h3>  </header> <div class="content"> ambient（周囲を取り巻く・完全に包囲している）とfindability（位置特定可能な・特定の対象物の発見のしやすさ）を二つあわせて、アンビエント・ファインダビリティ。直訳すると「周囲を取り巻く特定の対象物の発見のしやすさ」というような感じですが、私なりに解釈するとしたら「自分の取り囲む広大な情報の波から特定の情報を発見する」ようなことを表しているのかと思います。アンビエント・ファインダビリティの世界では、個人は「広大な情報から適切な素早く情報を入手する」ことが肝要で、本書では情報とは何か、情報の見つけやすさとは何かを伝え、最後に台頭しつつある情報を選りすぐる社会的な仕組み（タクソノミーとかフォークソノミーとか）などを次々と紹介しています。</div> <div class="read-more"> <a href="/2007/08/post_143.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2008-01-22T22:57:00.000Z"> <span class="calendar-icon">📅</span> <span>2008年1月23日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2008/01/10_1.html">本：効率が10倍アップする新・知的生産術--自分をグーグル化する方法</a> </h3>  </header> <div class="content"> 生産性を上げるための方法を著者の経験をもとにまとめた本。「自分をグーグル化する」という意味は、情報を武器に生産性を上げるといった感じです。全体が280ページほどですが、ざっと3時間ほどで読みました。要点箇所は太字になっているので、流し読みはしやすいです。どうも売れに売れているようで、わたしの持っている本は第七刷でした。発売一ヶ月で七刷まで出てるのはけっこうすごいと思います、たぶん。</div> <div class="read-more"> <a href="/2008/01/10_1.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2006-12-20T05:02:56.000Z"> <span class="calendar-icon">📅</span> <span>2006年12月20日</span> </time> </div> <h3 class="header__title article__title"> <a href="/2006/12/44.html">情報の行間を読む（4/4）調査対象を知る</a> </h3>  </header> <div class="content">#### 調査対象の意図を知る  マーケティングリサーチや、社会学の研究結果、新聞の取材など、情報の多くには情報源となる人が存在します。発信者とは別に情報源にも意思があり、意図を持っています。統計データなどでは、たとえば調査対象がどんな方法で調査を受けたのか（アンケート用紙を郵送する形か、面談方式か、インターネットでの調査か）、どんな心理状況で調査を受けたのか（見栄や欲がはいっていないか）、質問に調査対象を特定の回答に誘導させるようなないか、など調査に係るさまざまなバイアスを考慮する必要があります。</div> <div class="read-more"> <a href="/2006/12/44.html">📖 続きを読む</a> </div> </article> </div> </aside> </div> </body></html>

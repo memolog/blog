@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -760,7 +777,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2018/a11y-fixes-for-prism-default-theme.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2018/add-json-ld-structured-data.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2018/create-a-new-icon.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2018/insertion-sort-in-javascript.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2018/selection-sort-in-javascript.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2018/bubble-sort-in-javascript.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2018/about-typedarray-prototype-sort.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2018/about-array-prototype-sort.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2018/bit-vector-in-javascript.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2018/pass-arguments-to-npm-run-script.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-18T00:18:27.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/a11y-fixes-for-prism-default-theme.html">A11y fixes for prism default theme</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7b8389;"> <div style="background-color: #7b8389"> <img src="/assets/images/stas-ovsky-781959-unsplash/stas-ovsky-781959-unsplash.svg" alt role="presentation" loading="eager" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/JlBYy9eaOxg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Stas Ovsky</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">Lighthouse reported color contrast issues in the code block colored by prism.js. Actually I don&#39;t care about these issues because people doesn&#39;t read code blocks carefully. However, I just did the quick fixes for them by changing the color to see the contrast ratio in Chrome developer console.</div> <div class="read-more"> <a href="/2018/a11y-fixes-for-prism-default-theme.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-14T18:04:54.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月15日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/add-json-ld-structured-data.html">Add JSON-LD structured data</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a6aba4;"> <div style="background-color: #a6aba4"> <img src="/assets/images/thomas-kelley-75110-unsplash/thomas-kelley-75110-unsplash.svg" alt role="presentation" loading="eager" width="985" height="657"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/HBANPxXi3aQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Thomas Kelley</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">構造化データ（structured data）の部分をmicrodataからJSON-LDに置き換えてみた。</div> <div class="read-more"> <a href="/2018/add-json-ld-structured-data.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-12T07:28:32.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月12日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/create-a-new-icon.html">Create a new icon</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #fff;"> <div style="background-color: #fff"> <img src="/assets/images/new-icon/new-icon.svg" alt role="presentation" loading="lazy" width="987" height="482"> </div> </div>  </div> </header> <div class="content">アイコンをsvgで作り直してページの一番上につけた。</div> <div class="read-more"> <a href="/2018/create-a-new-icon.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-07T05:47:14.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/insertion-sort-in-javascript.html">Insertion Sort in JavaScript</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #095367;"> <div style="background-color: #095367"> <img src="/assets/images/mingwei-dong-651103-unsplash/mingwei-dong-651103-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="550"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">mingwei dong</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">Selection Sort in JavaScriptの記事から引き続き。内容は挿入ソートからの抜粋なので詳細はそちらを参照。</div> <div class="read-more"> <a href="/2018/insertion-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-05T05:57:21.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/selection-sort-in-javascript.html">Selection Sort in JavaScript</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dedad2;"> <img src="/assets/images/selection-sort-in-javascript/selection-sort-in-javascript_medium.webp" srcset="/assets/images/selection-sort-in-javascript/selection-sort-in-javascript_medium.webp, /assets/images/selection-sort-in-javascript/selection-sort-in-javascript_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">Bubble Sort in JavaScriptの記事から引き続き。内容はほぼ選択ソートから抜粋してるだけなので、詳しくはそちらを参照。JavaScript上で自前のソートを実装する意味はあまりないのだが、試しに選択ソートを実装してみた。</div> <div class="read-more"> <a href="/2018/selection-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-04T07:00:11.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/bubble-sort-in-javascript.html">Bubble Sort in JavaScript</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #26657a;"> <div style="background-color: #26657a"> <img src="/assets/images/jong-marshes-458354-unsplash/jong-marshes-458354-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="738"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/79mNMAvSORg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jong Marshes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">Array.prototype.sort についてとTypedArray.prototype.sort についてで書いたようにビルトインされているsortメソッドが効率的なソートを実行できるように実装されているので、JavaScript上で自前のソートを実装する意味はあまりないのだけど、試しにバブルソートをJavaScript上で作ってみた。</div> <div class="read-more"> <a href="/2018/bubble-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-01T05:23:27.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月1日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/about-typedarray-prototype-sort.html">TypedArray.prototype.sort について</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #826c4e;"> <div style="background-color: #826c4e"> <img src="/assets/images/marcus-depaula-43304-unsplash/marcus-depaula-43304-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/tk7OAxsXNL0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Marcus dePaula</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">前回の「Array.prototype.sort について」に引き続き、今度はTypedArrayのsortについて。実装は別だけど対応は基本的に同じなので簡単に。</div> <div class="read-more"> <a href="/2018/about-typedarray-prototype-sort.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-30T05:49:48.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/about-array-prototype-sort.html">Array.prototype.sort について</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dfdbcf;"> <img src="/assets/images/about-array-prototype-sort/about-array-prototype-sort_medium.webp" srcset="/assets/images/about-array-prototype-sort/about-array-prototype-sort_medium.webp, /assets/images/about-array-prototype-sort/about-array-prototype-sort_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">JavaScriptの配列にはsortメソッドがあり配列のソートを実行することができるけど、この配列のソートの中の実装はどうなっているのかという話。v8における配列ソートについての記事が大変参考になりました。</div> <div class="read-more"> <a href="/2018/about-array-prototype-sort.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-28T10:49:22.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月28日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/bit-vector-in-javascript.html">JavaScriptでビットベクタルを使う</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #5e4431;"> <div style="background-color: #5e4431"> <img src="/assets/images/miles-storey-142842-unsplash/miles-storey-142842-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/X45VKpWV7hw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Miles Storey</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">ビットベクトルは2進数の値（ビット）の配列を使って状態を保持する。ビット配列（bit array）とかbit set, bit stringとも言うらしい。詳しくはBit arrayを参照。</div> <div class="read-more"> <a href="/2018/bit-vector-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-27T05:31:39.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月27日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/pass-arguments-to-npm-run-script.html">npm run script に引数を渡す</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #bec0c1;"> <div style="background-color: #bec0c1"> <img src="/assets/images/chelsea-aaron-312666-unsplash/chelsea-aaron-312666-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/IeTmKYls1vM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Chelsea Aaron</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">この記事の上にあるFeatured Imageを生成するときに毎回`primitive_bulk`のコマンドを入力していたのだけど、 しかしさすがに面倒になってきたので、`npm run script` にショートカットを用意してショートカットに引数を渡すようにしてみた。</div> <div class="read-more"> <a href="/2018/pass-arguments-to-npm-run-script.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/6/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/5/"> 5 </a><a class="page-number " href="/page/6/"> 6 </a><span class="page-number current">7</span><a class="page-number " href="/page/8/"> 8 </a><a class="page-number " href="/page/9/"> 9 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/8/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2018/merge-sort-in-javascript.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2018/a11y-fixes-for-prism-default-theme.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2018/add-json-ld-structured-data.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2018/create-a-new-icon.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2018/insertion-sort-in-javascript.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2018/selection-sort-in-javascript.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2018/bubble-sort-in-javascript.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2018/about-typedarray-prototype-sort.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2018/about-array-prototype-sort.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2018/bit-vector-in-javascript.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-19T17:43:28.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/merge-sort-in-javascript.html">Merge Sort in JavaScript</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #4d7773;"> <div style="background-color: #4d7773"> <img src="/assets/images/tj-holowaychuk-62184-unsplash/tj-holowaychuk-62184-unsplash.svg" alt role="presentation" loading="eager" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/lssS7acGDls?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Tj Holowaychu</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">Insertion Sort in JavaScriptからの引き続き。内容はMerge sortからの抜粋なので、詳細はそちらを参照。</div> <div class="read-more"> <a href="/2018/merge-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-18T00:18:27.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月18日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/a11y-fixes-for-prism-default-theme.html">A11y fixes for prism default theme</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #7b8389;"> <div style="background-color: #7b8389"> <img src="/assets/images/stas-ovsky-781959-unsplash/stas-ovsky-781959-unsplash.svg" alt role="presentation" loading="eager" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/JlBYy9eaOxg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Stas Ovsky</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">Lighthouse reported color contrast issues in the code block colored by prism.js. Actually I don&#39;t care about these issues because people doesn&#39;t read code blocks carefully. However, I just did the quick fixes for them by changing the color to see the contrast ratio in Chrome developer console.</div> <div class="read-more"> <a href="/2018/a11y-fixes-for-prism-default-theme.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-14T18:04:54.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月15日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/add-json-ld-structured-data.html">Add JSON-LD structured data</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #a6aba4;"> <div style="background-color: #a6aba4"> <img src="/assets/images/thomas-kelley-75110-unsplash/thomas-kelley-75110-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="657"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/HBANPxXi3aQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Thomas Kelley</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">構造化データ（structured data）の部分をmicrodataからJSON-LDに置き換えてみた。</div> <div class="read-more"> <a href="/2018/add-json-ld-structured-data.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-12T07:28:32.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月12日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/create-a-new-icon.html">Create a new icon</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #fff;"> <div style="background-color: #fff"> <img src="/assets/images/new-icon/new-icon.svg" alt role="presentation" loading="lazy" width="987" height="482"> </div> </div>  </div> </header> <div class="content">アイコンをsvgで作り直してページの一番上につけた。</div> <div class="read-more"> <a href="/2018/create-a-new-icon.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-07T05:47:14.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月7日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/insertion-sort-in-javascript.html">Insertion Sort in JavaScript</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #095367;"> <div style="background-color: #095367"> <img src="/assets/images/mingwei-dong-651103-unsplash/mingwei-dong-651103-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="550"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">mingwei dong</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">Selection Sort in JavaScriptの記事から引き続き。内容は挿入ソートからの抜粋なので詳細はそちらを参照。</div> <div class="read-more"> <a href="/2018/insertion-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-05T05:57:21.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月5日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/selection-sort-in-javascript.html">Selection Sort in JavaScript</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dedad2;"> <img src="/assets/images/selection-sort-in-javascript/selection-sort-in-javascript_medium.webp" srcset="/assets/images/selection-sort-in-javascript/selection-sort-in-javascript_medium.webp, /assets/images/selection-sort-in-javascript/selection-sort-in-javascript_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">Bubble Sort in JavaScriptの記事から引き続き。内容はほぼ選択ソートから抜粋してるだけなので、詳しくはそちらを参照。JavaScript上で自前のソートを実装する意味はあまりないのだが、試しに選択ソートを実装してみた。</div> <div class="read-more"> <a href="/2018/selection-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-04T07:00:11.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/bubble-sort-in-javascript.html">Bubble Sort in JavaScript</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #26657a;"> <div style="background-color: #26657a"> <img src="/assets/images/jong-marshes-458354-unsplash/jong-marshes-458354-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="738"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/79mNMAvSORg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Jong Marshes</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">Array.prototype.sort についてとTypedArray.prototype.sort についてで書いたようにビルトインされているsortメソッドが効率的なソートを実行できるように実装されているので、JavaScript上で自前のソートを実装する意味はあまりないのだけど、試しにバブルソートをJavaScript上で作ってみた。</div> <div class="read-more"> <a href="/2018/bubble-sort-in-javascript.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-08-01T05:23:27.000Z"> <span class="calendar-icon">📅</span> <span>2018年8月1日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/about-typedarray-prototype-sort.html">TypedArray.prototype.sort について</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #826c4e;"> <div style="background-color: #826c4e"> <img src="/assets/images/marcus-depaula-43304-unsplash/marcus-depaula-43304-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/tk7OAxsXNL0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Marcus dePaula</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">前回の「Array.prototype.sort について」に引き続き、今度はTypedArrayのsortについて。実装は別だけど対応は基本的に同じなので簡単に。</div> <div class="read-more"> <a href="/2018/about-typedarray-prototype-sort.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-30T05:49:48.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/about-array-prototype-sort.html">Array.prototype.sort について</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #dfdbcf;"> <img src="/assets/images/about-array-prototype-sort/about-array-prototype-sort_medium.webp" srcset="/assets/images/about-array-prototype-sort/about-array-prototype-sort_medium.webp, /assets/images/about-array-prototype-sort/about-array-prototype-sort_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">JavaScriptの配列にはsortメソッドがあり配列のソートを実行することができるけど、この配列のソートの中の実装はどうなっているのかという話。v8における配列ソートについての記事が大変参考になりました。</div> <div class="read-more"> <a href="/2018/about-array-prototype-sort.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2018-07-28T10:49:22.000Z"> <span class="calendar-icon">📅</span> <span>2018年7月28日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2018/bit-vector-in-javascript.html">JavaScriptでビットベクタルを使う</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #5e4431;"> <div style="background-color: #5e4431"> <img src="/assets/images/miles-storey-142842-unsplash/miles-storey-142842-unsplash.svg" alt role="presentation" loading="lazy" width="985" height="654"> </div> </div> <div class="featured__credit">Original photo by <a href="https://unsplash.com/photos/X45VKpWV7hw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Miles Storey</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank" rel="noopener" tabindex="-1">Unsplash</a>, edited with <a href="https://github.com/fogleman/primitive" target="_blank" rel="noopener" tabindex="-1">Primitive</a></div> </div> </header> <div class="content">ビットベクトルは2進数の値（ビット）の配列を使って状態を保持する。ビット配列（bit array）とかbit set, bit stringとも言うらしい。詳しくはBit arrayを参照。</div> <div class="read-more"> <a href="/2018/bit-vector-in-javascript.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/6/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/5/"> 5 </a><a class="page-number " href="/page/6/"> 6 </a><span class="page-number current">7</span><a class="page-number " href="/page/8/"> 8 </a><a class="page-number " href="/page/9/"> 9 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/8/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

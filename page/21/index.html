@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -760,7 +777,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2011/04/essays_kahneman.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2011/04/staatfeind_wikileaks.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2011/01/facebook_developer_driven_culture.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2011/01/watir-webdriver-in-headless.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2011/01/a_man_in_a_box.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2010/12/my_lifestyle_2010.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2010/12/optimize_css_selectors.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2010/12/watir-webdriver-avoid-ssl-error.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2010/12/redesign_2011.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2010/12/watir-webdriver_with_firemobilesimulator.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-18T22:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月19日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/essays_kahneman.html">本：ダニエル・カーネマン心理と経済を語る</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #68635c;"> <img src="/assets/images/essays_kahneman/essays_kahneman_medium.webp" srcset="/assets/images/essays_kahneman/essays_kahneman_medium.webp, /assets/images/essays_kahneman/essays_kahneman_medium@2x.webp 2x" role="presentation" loading="eager" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">行動経済学の創始者の一人と言われるダニエル・カーネマン、彼のノーベル賞受賞記念講演と、その時の発表された自伝、そして彼の論文の2本（一般読者にも分かりやすいものらしい）をまとめたのが本書。ヒューリスティックとバイアスの話などは例えが秀逸で面白かったです。</div> <div class="read-more"> <a href="/2011/04/essays_kahneman.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-16T15:12:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/staatfeind_wikileaks.html">本：全貌ウィキリークス</a> </h2>  </header> <div class="content">! ウィキリークスと協力関係にあるシュピーゲル誌（ドイツのニュース週刊誌）の記者/編集部によって書かれたウィキリークスについての本です（同じくウィキリークスと協力関係にあるガーディアン編集部で書かれた「ウィキリークス アサンジの戦争!」という本も出版されています）。ウィキリークスと協力的な関係にある点から、ウィキリークスに対して肯定的な立場をとっていると見て読むのが良いとは思いますが、個人的には十分に客観的で批判的な視点でウィキリークスが描かれているかなと思いました。</div> <div class="read-more"> <a href="/2011/04/staatfeind_wikileaks.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-01-29T02:22:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年1月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/01/facebook_developer_driven_culture.html">Facebookの開発体制：developer driven culture</a> </h2>  </header> <div class="content">「InfoQ: How Facebook Ships Code（日本語版記事が出た）」にて、Facebookではどのように開発し、サービスを公開しているかについて紹介していて、その開発の仕方を developer driven culture と呼んでいます。日本語にすると、開発者駆動文化でしょうか（開発者中心主義の方が近い気が）。記事によると、Facebookでは開発者が自分で実装を考え、フロントエンドからバックエンドまで開発して、バグの発見/修正までするみたい。必要な場合はデザイナーにも助けを借りることができるけど、基本的には自分で全部開発する、らしい。プロダクトマネージャーもいるみたいですけど、エンジニアマネージャーとかと話し合って、実装に対する合意を得ないといけない。興味のそそらない実装は認可されないという意味で、開発者は常に自分の好きなことに集中できるようになっているみたい。</div> <div class="read-more"> <a href="/2011/01/facebook_developer_driven_culture.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-01-17T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年1月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/01/watir-webdriver-in-headless.html">watir-webdriver：バックグラウンドで実行する</a> </h2>  </header> <div class="content">「Watir-WebDriver: A detailed introduction | WatirMelon」の「The remote WebDriver Server」と「Hello Watir-WebDriver in Headless (HTML Unit)」あたりの話。Seleniumのサーバーを使うことで、ブラウザを立ち上げずにバックグラウンドでwebdriverを実行することができます。</div> <div class="read-more"> <a href="/2011/01/watir-webdriver-in-headless.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-01-11T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年1月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/01/a_man_in_a_box.html">本：箱男</a> </h2>  </header> <div class="content"> 腰まである段ボール箱を頭からかぶっているという男、箱男の話です。読んでみて最初わけがわからず、「結局どういうことになったんだ?」という感じでしたが、巻末の平岡篤頼さんの解説を読みつつ、二度読みしてみて、何となく自分なりの解釈ができたような気がします。でも、やっぱりわけわからないのは、わけわからないのですが。</div> <div class="read-more"> <a href="/2011/01/a_man_in_a_box.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-29T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2010/12/my_lifestyle_2010.html">続・最近の自分のライフスタイル</a> </h2>  </header> <div class="content">3年近く前に「最近の自分のライフスタイルの変化」という記事を書いていたのを思い出し、唐突に続編を書いてみる次第。3年前の記事では下記のようなことを書き残していました。</div> <div class="read-more"> <a href="/2010/12/my_lifestyle_2010.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-28T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2010/12/optimize_css_selectors.html">CSSセレクタを効率的な記述にする</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c5bfb1;"> <img src="/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp" srcset="/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp, /assets/images/optimize_css_selectors/optimize_css_selectors_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。</div> <div class="read-more"> <a href="/2010/12/optimize_css_selectors.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-27T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月27日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2010/12/watir-webdriver-avoid-ssl-error.html">watir-webdriver：証明書エラーを回避する</a> </h2>  </header> <div class="content">SSL証明書が（本番の環境の証明書を流用していてドメインが合わないとか有効期限切れとかで）エラーとなるような環境でテストする場合、watir-webdriverをそのまま実行しようとしても証明書エラーとなりその先に進むことができません。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver-avoid-ssl-error.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-24T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2010/12/redesign_2011.html">デザイン変更（2010/12）</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3c2bd;"> <img src="/assets/images/redesign_2011/redesign_2011_medium.webp" srcset="/assets/images/redesign_2011/redesign_2011_medium.webp, /assets/images/redesign_2011/redesign_2011_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&amp;API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。</div> <div class="read-more"> <a href="/2010/12/redesign_2011.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-14T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2010/12/watir-webdriver_with_firemobilesimulator.html">watir-webdriver でFireMobileSimulatorを使用する</a> </h2>  </header> <div class="content">watir-webdriver で開いたFirefoxのFirebugを起動状態にすると同じ要領で、FireMobileSimulatorを起動した状態でwatir-webdriverを実行することができます。ただFirebugに比べると若干設定の追加が必要です。具体的には下記のような感じ。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver_with_firemobilesimulator.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/20/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/19/"> 19 </a><a class="page-number " href="/page/20/"> 20 </a><span class="page-number current">21</span><a class="page-number " href="/page/22/"> 22 </a><a class="page-number " href="/page/23/"> 23 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/22/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2011/04/watir-webdriver-performance.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2011/04/essays_kahneman.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2011/04/staatfeind_wikileaks.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2011/01/facebook_developer_driven_culture.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2011/01/watir-webdriver-in-headless.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2011/01/a_man_in_a_box.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2010/12/my_lifestyle_2010.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2010/12/optimize_css_selectors.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2010/12/watir-webdriver-avoid-ssl-error.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2010/12/redesign_2011.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-19T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/watir-webdriver-performance.html">watir-webdriver-performance：PerformanceTimingの集計</a> </h2>  </header> <div class="content">「Watir-Webdriver-Performance gem released」にて紹介されているものを紹介。watir-webdriver上でPerformanceTimingに関する情報を収集できるようになります。PeformanceTimingとはJavascriptについてweb application内でクライアントサイドの待ち時間の測定を行えるようにするためのインターフェイスだそう（To address the need for complete information on user experience, this document introduces the PerformanceTiming interfaces. This interface allows JavaScript mechanisms to provide complete client-side latency measurements within applications. ）。Javascriptの処理毎の細かな待ち時間情報を得ることができるらしい。詳細はNavigation Timingを参照。</div> <div class="read-more"> <a href="/2011/04/watir-webdriver-performance.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-18T22:56:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月19日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/essays_kahneman.html">本：ダニエル・カーネマン心理と経済を語る</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #68635c;"> <img src="/assets/images/essays_kahneman/essays_kahneman_medium.webp" srcset="/assets/images/essays_kahneman/essays_kahneman_medium.webp, /assets/images/essays_kahneman/essays_kahneman_medium@2x.webp 2x" role="presentation" loading="eager" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">行動経済学の創始者の一人と言われるダニエル・カーネマン、彼のノーベル賞受賞記念講演と、その時の発表された自伝、そして彼の論文の2本（一般読者にも分かりやすいものらしい）をまとめたのが本書。ヒューリスティックとバイアスの話などは例えが秀逸で面白かったです。</div> <div class="read-more"> <a href="/2011/04/essays_kahneman.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-16T15:12:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/staatfeind_wikileaks.html">本：全貌ウィキリークス</a> </h2>  </header> <div class="content">! ウィキリークスと協力関係にあるシュピーゲル誌（ドイツのニュース週刊誌）の記者/編集部によって書かれたウィキリークスについての本です（同じくウィキリークスと協力関係にあるガーディアン編集部で書かれた「ウィキリークス アサンジの戦争!」という本も出版されています）。ウィキリークスと協力的な関係にある点から、ウィキリークスに対して肯定的な立場をとっていると見て読むのが良いとは思いますが、個人的には十分に客観的で批判的な視点でウィキリークスが描かれているかなと思いました。</div> <div class="read-more"> <a href="/2011/04/staatfeind_wikileaks.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-01-29T02:22:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年1月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/01/facebook_developer_driven_culture.html">Facebookの開発体制：developer driven culture</a> </h2>  </header> <div class="content">「InfoQ: How Facebook Ships Code（日本語版記事が出た）」にて、Facebookではどのように開発し、サービスを公開しているかについて紹介していて、その開発の仕方を developer driven culture と呼んでいます。日本語にすると、開発者駆動文化でしょうか（開発者中心主義の方が近い気が）。記事によると、Facebookでは開発者が自分で実装を考え、フロントエンドからバックエンドまで開発して、バグの発見/修正までするみたい。必要な場合はデザイナーにも助けを借りることができるけど、基本的には自分で全部開発する、らしい。プロダクトマネージャーもいるみたいですけど、エンジニアマネージャーとかと話し合って、実装に対する合意を得ないといけない。興味のそそらない実装は認可されないという意味で、開発者は常に自分の好きなことに集中できるようになっているみたい。</div> <div class="read-more"> <a href="/2011/01/facebook_developer_driven_culture.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-01-17T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年1月17日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/01/watir-webdriver-in-headless.html">watir-webdriver：バックグラウンドで実行する</a> </h2>  </header> <div class="content">「Watir-WebDriver: A detailed introduction | WatirMelon」の「The remote WebDriver Server」と「Hello Watir-WebDriver in Headless (HTML Unit)」あたりの話。Seleniumのサーバーを使うことで、ブラウザを立ち上げずにバックグラウンドでwebdriverを実行することができます。</div> <div class="read-more"> <a href="/2011/01/watir-webdriver-in-headless.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-01-11T03:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年1月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/01/a_man_in_a_box.html">本：箱男</a> </h2>  </header> <div class="content"> 腰まである段ボール箱を頭からかぶっているという男、箱男の話です。読んでみて最初わけがわからず、「結局どういうことになったんだ?」という感じでしたが、巻末の平岡篤頼さんの解説を読みつつ、二度読みしてみて、何となく自分なりの解釈ができたような気がします。でも、やっぱりわけわからないのは、わけわからないのですが。</div> <div class="read-more"> <a href="/2011/01/a_man_in_a_box.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-29T22:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2010/12/my_lifestyle_2010.html">続・最近の自分のライフスタイル</a> </h2>  </header> <div class="content">3年近く前に「最近の自分のライフスタイルの変化」という記事を書いていたのを思い出し、唐突に続編を書いてみる次第。3年前の記事では下記のようなことを書き残していました。</div> <div class="read-more"> <a href="/2010/12/my_lifestyle_2010.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-28T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月29日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2010/12/optimize_css_selectors.html">CSSセレクタを効率的な記述にする</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c5bfb1;"> <img src="/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp" srcset="/assets/images/optimize_css_selectors/optimize_css_selectors_medium.webp, /assets/images/optimize_css_selectors/optimize_css_selectors_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。</div> <div class="read-more"> <a href="/2010/12/optimize_css_selectors.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-27T14:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月27日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2010/12/watir-webdriver-avoid-ssl-error.html">watir-webdriver：証明書エラーを回避する</a> </h2>  </header> <div class="content">SSL証明書が（本番の環境の証明書を流用していてドメインが合わないとか有効期限切れとかで）エラーとなるような環境でテストする場合、watir-webdriverをそのまま実行しようとしても証明書エラーとなりその先に進むことができません。</div> <div class="read-more"> <a href="/2010/12/watir-webdriver-avoid-ssl-error.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2010-12-24T20:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2010年12月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2010/12/redesign_2011.html">デザイン変更（2010/12）</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3c2bd;"> <img src="/assets/images/redesign_2011/redesign_2011_medium.webp" srcset="/assets/images/redesign_2011/redesign_2011_medium.webp, /assets/images/redesign_2011/redesign_2011_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&amp;API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。</div> <div class="read-more"> <a href="/2010/12/redesign_2011.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/20/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/19/"> 19 </a><a class="page-number " href="/page/20/"> 20 </a><span class="page-number current">21</span><a class="page-number " href="/page/22/"> 22 </a><a class="page-number " href="/page/23/"> 23 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/22/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

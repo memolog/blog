@@ -550,192 +550,209 @@
     }
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   /*
-Name:   Duotone Light
-Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
-
-Conversion: Bram de Haan (http://atelierbram.github.io/Base2Tone-prism/output/prism/prism-base2tone-morning-light.css)
-Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
-*/
-
-  code[class*="language-"],
-  pre[class*="language-"] {
-    font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-      "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-      "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-      "Courier New", Courier, monospace;
-    font-size: 14px;
-    line-height: 1.375;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    background: #faf8f5;
-    color: #728fcb;
-  }
-
-  pre > code[class*="language-"] {
-    font-size: 1em;
-  }
-
-  pre[class*="language-"]::-moz-selection,
-  pre[class*="language-"] ::-moz-selection,
-  code[class*="language-"]::-moz-selection,
-  code[class*="language-"] ::-moz-selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  pre[class*="language-"]::selection,
-  pre[class*="language-"] ::selection,
-  code[class*="language-"]::selection,
-  code[class*="language-"] ::selection {
-    text-shadow: none;
-    background: #faf8f5;
-  }
-
-  /* Code blocks */
-  pre[class*="language-"] {
-    padding: 1em;
-    margin: 0.5em 0;
-    overflow: auto;
-  }
-
-  /* Inline code */
-  :not(pre) > code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-  }
-
-  .token.comment,
-  .token.prolog,
-  .token.doctype,
-  .token.cdata {
-    color: #b6ad9a;
-  }
-
-  .token.punctuation {
-    color: #b6ad9a;
-  }
-
-  .token.namespace {
-    opacity: 0.7;
-  }
-
-  .token.tag,
-  .token.operator,
-  .token.number {
-    color: #063289;
-  }
-
-  .token.property,
-  .token.function {
-    color: #b29762;
-  }
-
-  .token.tag-id,
-  .token.selector,
-  .token.atrule-id {
-    color: #2d2006;
-  }
-
-  code.language-javascript,
-  .token.attr-name {
-    color: #896724;
-  }
-
-  code.language-css,
-  code.language-scss,
-  .token.boolean,
-  .token.string,
-  .token.entity,
-  .token.url,
-  .language-css .token.string,
-  .language-scss .token.string,
-  .style .token.string,
-  .token.attr-value,
-  .token.keyword,
-  .token.control,
-  .token.directive,
-  .token.unit,
-  .token.statement,
-  .token.regex,
-  .token.atrule {
-    color: #728fcb;
-  }
-
-  .token.placeholder,
-  .token.variable {
-    color: #93abdc;
-  }
-
-  .token.deleted {
-    text-decoration: line-through;
-  }
-
-  .token.inserted {
-    border-bottom: 1px dotted #2d2006;
-    text-decoration: none;
-  }
-
-  .token.italic {
-    font-style: italic;
-  }
-
-  .token.important,
-  .token.bold {
-    font-weight: bold;
-  }
-
-  .token.important {
-    color: #896724;
-  }
-
-  .token.entity {
-    cursor: help;
-  }
-
-  pre > code.highlight {
-    outline: 0.4em solid #896724;
-    outline-offset: 0.4em;
-  }
-
-  /* overrides color-values for the Line Numbers plugin
- * http://prismjs.com/plugins/line-numbers/
+ * a11y theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
  */
-  .line-numbers.line-numbers .line-numbers-rows {
-    border-right-color: #ece8de;
-  }
 
-  .line-numbers .line-numbers-rows > span:before {
-    color: #cdc4b1;
-  }
-
-  /* overrides color-values for the Line Highlight plugin
- * http://prismjs.com/plugins/line-highlight/
+  /*
+ * MARK: Setup
  */
-  .line-highlight.line-highlight {
-    background: rgba(45, 32, 6, 0.2);
-    background: -webkit-linear-gradient(
-      left,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
-    background: linear-gradient(
-      to right,
-      rgba(45, 32, 6, 0.2) 70%,
-      rgba(45, 32, 6, 0)
-    );
+  @layer vendor-prism {
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-border-radius: 0.3em;
+        --prism-a11y-font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+          monospace;
+        --prism-a11y-line-height: 1.5;
+        --prism-a11y-code-block-margin: 0.5em 0;
+        --prism-a11y-code-block-padding: 1em;
+        --prism-a11y-code-inline-padding: 0.1em;
+        --prism-a11y-width-border: 1px;
+        --prism-a11y-width-tab: 2;
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: hsla(0, 0%, 100%, 1);
+        --prism-a11y-color-text-no-token: hsla(0, 0%, 33%, 1);
+        --prism-a11y-color-text-comment: hsla(16, 100%, 25%, 1);
+        --prism-a11y-color-text-blue: hsla(212, 55.2%, 43.7%, 1);
+        --prism-a11y-color-text-cyan: hsla(192, 65.2%, 34.9%, 1);
+        --prism-a11y-color-text-green: hsla(120, 100%, 25%, 1);
+        --prism-a11y-color-text-gray: hsla(0, 0%, 41%, 1);
+        --prism-a11y-color-text-purple: hsla(282, 100%, 41%, 1);
+        --prism-a11y-color-text-red: hsla(2, 80%, 47%, 1);
+        --prism-a11y-color-text-yellow: hsla(43, 74%, 30%, 1);
+        --prism-a11y-plugin-color-border: hsla(43, 74%, 30%, 0.55);
+        --prism-a11y-plugin-color-background: hsla(43, 74%, 30%, 0.1);
+      }
+    }
+
+    @media (forced-colors: none), (forced-colors: active) {
+      /*
+     * MARK: Theme
+     */
+      :where(code[class*="language-"], pre[class*="language-"]) {
+        color: var(--prism-a11y-color-text-no-token);
+        background: var(--prism-a11y-color-background);
+        font-family: var(--prism-a11y-font-family);
+        text-align: start;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: var(--prism-a11y-line-height);
+
+        -moz-tab-size: var(--prism-a11y-width-tab);
+        -o-tab-size: var(--prism-a11y-width-tab);
+        tab-size: var(--prism-a11y-width-tab);
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+      }
+
+      /* Code blocks */
+      pre[class*="language-"] {
+        padding: var(--prism-a11y-code-block-padding);
+        margin: var(--prism-a11y-code-block-margin);
+        overflow: auto;
+        border-radius: var(--prism-a11y-border-radius);
+      }
+
+      :where(:not(pre) > code[class*="language-"], pre[class*="language-"]) {
+        background: var(--prism-a11y-color-background);
+      }
+
+      /* Inline code */
+      :not(pre) > code[class*="language-"] {
+        padding: var(--prism-a11y-code-inline-padding);
+        border-radius: var(--prism-a11y-border-radius);
+        white-space: normal;
+      }
+
+      :where(.token.comment, .token.prolog, .token.doctype, .token.cdata) {
+        color: var(--prism-a11y-color-text-comment);
+      }
+
+      .token.punctuation {
+        color: var(--prism-a11y-color-text-gray);
+      }
+
+      :where(
+          .token.property,
+          .token.tag,
+          .token.constant,
+          .token.symbol,
+          .token.deleted
+        ) {
+        color: var(--prism-a11y-color-text-red);
+      }
+
+      :where(
+          .token.operator,
+          .token.entity,
+          .token.url,
+          .language-css .token.string,
+          .style .token.string,
+          .token.variable,
+          .token.keyword
+        ) {
+        color: var(--prism-a11y-color-text-cyan);
+      }
+
+      :where(
+          .token.selector,
+          .token.attr-name,
+          .token.string,
+          .token.char,
+          .token.builtin,
+          .token.inserted
+        ) {
+        color: var(--prism-a11y-color-text-green);
+      }
+
+      :where(
+          .token.atrule,
+          .token.attr-value,
+          .token.function,
+          .token.regex,
+          .token.important
+        ) {
+        color: var(--prism-a11y-color-text-yellow);
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        color: var(--prism-a11y-color-text-purple);
+      }
+
+      :where(.token.important, .token.bold) {
+        font-weight: bold;
+      }
+
+      .token.italic {
+        font-style: italic;
+      }
+
+      .token.entity {
+        cursor: help;
+      }
+
+      /*
+     * MARK: Plugin support
+     */
+      /* Line highlight */
+      .line-highlight {
+        background: var(--prism-a11y-plugin-color-background);
+        border-top: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+        border-bottom: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-plugin-color-border);
+      }
+
+      /* Line numbers */
+      .line-numbers .line-numbers-rows {
+        border-right: var(--prism-a11y-width-border) solid
+          var(--prism-a11y-color-text-no-token);
+      }
+
+      .line-numbers-rows > span:before {
+        color: var(--prism-a11y-color-text-comment);
+      }
+    }
+
+    /*
+   * MARK: Forced color mode support
+   */
+    @media (forced-colors: active) {
+      :root {
+        --prism-a11y-color-background: Canvas;
+        --prism-a11y-color-text-no-token: CanvasText;
+        --prism-a11y-color-text-comment: GrayText;
+        --prism-a11y-color-text-cyan: LinkText;
+        --prism-a11y-color-text-gray: LinkText;
+        --prism-a11y-color-text-green: CanvasText;
+        --prism-a11y-color-text-purple: CanvasText;
+        --prism-a11y-color-text-red: CanvasText;
+        --prism-a11y-color-text-yellow: GrayText;
+        --prism-a11y-plugin-color-border: LinkText;
+        --prism-a11y-plugin-color-background: Canvas;
+      }
+
+      :where(.token.boolean, .token.number, .token.keyword) {
+        font-weight: bold;
+      }
+    }
   }
 </style><link rel="alternate" href="/atom.xml" title="メモログ" type="application/atom+xml"><link rel="alternate" href="https://memolog.org/atom.xml" title="Latest Articles"><link rel="apple-touch-icon" href="/assets/icons/icon-192.png"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="white"><script type="application/ld+json">
   {
@@ -760,7 +777,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
       }
     ]
   }
-</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2011/09/add-unsupported-tag-in-watir-webdriver.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2011/09/add-attribute-in-element-about-watir-webdriver.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2011/09/diff-image-with-watir-webdriver.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2011/09/watir-webdriver-csv-download.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2011/09/save-screenshot-with-watir-webdriver.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2011/06/books_around_me.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2011/05/gridinit.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2011/04/what_testers_find.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2011/04/expand_page_objects.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2011/04/watir-webdriver-performance.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-15T15:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/add-unsupported-tag-in-watir-webdriver.html">watir-webdriver：使用できる要素を追加する</a> </h2>  </header> <div class="content">watir-webdriverでは広範囲のHTMLタグ（ほとんど全部）をサポートしているけれど、svgやcircleなど一部のタグは現在のところサポートしていません（参考：Does watir support svg - Watir General | Google グループ）。</div> <div class="read-more"> <a href="/2011/09/add-unsupported-tag-in-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-13T15:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/add-attribute-in-element-about-watir-webdriver.html">watir-webdriver：要素で使用できる属性を増やす</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3beb5;"> <img src="/assets/images/add-attribute-in-element-about-watir-webdriver/add-attribute-in-element-about-watir-webdriver_medium.webp" srcset="/assets/images/add-attribute-in-element-about-watir-webdriver/add-attribute-in-element-about-watir-webdriver_medium.webp, /assets/images/add-attribute-in-element-about-watir-webdriver/add-attribute-in-element-about-watir-webdriver_medium@2x.webp 2x" role="presentation" loading="eager" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">watir-webdriverでは、たとえば「b.link(:id,&#39;memolog&#39;).href」みたいなかたちで要素を特定させて、特定した要素の属性を取得することができます（詳細はAPIなどを参照）。ただW3Cで規定されている属性しかメソッド化されていないので、たとえばtwitterのt.coのリンクの元URLの属性（data-expanded-url）などは通常では取得することができません。</div> <div class="read-more"> <a href="/2011/09/add-attribute-in-element-about-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-11T13:36:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/diff-image-with-watir-webdriver.html">watir-webdriver で画像データを評価する</a> </h2>  </header> <div class="content">たとえば、画像ファイルが上書きされているかどうかを確認したい場合などで、画像のsrcなどには差分がなく画像データを比較しないとその動作の正否が分からないとか、そういうときはやはり画像データを評価して差を見るしかない。</div> <div class="read-more"> <a href="/2011/09/diff-image-with-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-04T13:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/watir-webdriver-csv-download.html">watir-webdriver でCSVファイルをダウンロードする</a> </h2>  </header> <div class="content">FirefoxでCSVファイルにアクセスすると、ダウンロードのダイアログが表示されるのですが、webdriver上でダイアログが出てくるとハンドリングできない（たぶん）ので困る。ので、profileを設定してダイアログを表示しないようにする。そしてダウンロードするフォルダも一緒に設定する、という話。詳しくはFirefox 4 with watir webdriver: Need help using helperApps.neverAsk to save CSV without prompting - Stack OverflowとBrowser Downloads | Watir WebDriverなどを参照</div> <div class="read-more"> <a href="/2011/09/watir-webdriver-csv-download.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-03T12:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/save-screenshot-with-watir-webdriver.html">watir-webdriver でスクリーンショットを撮る</a> </h2>  </header> <div class="content">小ネタでも挟もうではありませんか。watir-webdriverを使って簡単にスクリーンショット撮ることができます。Macにはrubyがもともと入っているので、事前準備はwatir-webdriverをインストールするだけです。インストールは、ターミナルを開いて下記のコマンドを実行する。</div> <div class="read-more"> <a href="/2011/09/save-screenshot-with-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-06-19T22:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年6月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/06/books_around_me.html">本とわたし</a> </h2>  </header> <div class="content">2008年の9月ごろからgoodreadsというサービスで読んだ本の履歴をつけていたのですが、履歴にたまった本が200冊くらいになりました。1年平均70冊くらい読んでいるみたいですね。（内容的/量的に）薄い本とかも含まれるので、読んだぞと実感を込めて言えるのは40〜50冊といったところかなあという感じですけど。とはいえ、ほとんどすべての本について詳細は覚えてないですけど。</div> <div class="read-more"> <a href="/2011/06/books_around_me.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-05-15T14:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年5月15日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/05/gridinit.html">Gridinit：クラウドベースで複数ブラウザにテスト配布</a> </h2>  </header> <div class="content">Gridinitという新サービスをざっくり紹介。SeleniumやWatirなどの自動化スクリプトをクラウド上にある複数のブラウザに配布してくれるそうです。作成したテストスクリプトを複数ブラウザで実行することによって、負荷検証を行うことができる、みたいな。「watir-webdriver-performance: PerformanceTimingの集計 - メモログ」で紹介したwatir-webdriver-peformanceのモジュールを組み合わせてブラウザのPerformanceTimingの情報を取得することもできるみたい。</div> <div class="read-more"> <a href="/2011/05/gridinit.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-29T15:40:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/what_testers_find.html">テスターの仕事とは何か</a> </h2>  </header> <div class="content">James Bach&#39;s Blog » Blog Archive » What Testers Findの記事の紹介。James Bachはソフトウェアテスト293の鉄則!の著者でもある。</div> <div class="read-more"> <a href="/2011/04/what_testers_find.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-20T14:43:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/expand_page_objects.html">Site-Page-Data Object Pattern (Page Objects 拡張)</a> </h2>  </header> <div class="content">以前にPage Objects : テストスイート構築のためのデザインパターン - メモログというのを紹介しました。今回はそのパターンをちょっと拡張してみようという話。なお、特に参考にした訳ではないのですが、Selenium Page Objects + Site Objects, Data Objects &amp; High Level Navigation « Fiji Ecuador Seattle Greece Montanaに同じような話を提示している人はいます（2年前に）。</div> <div class="read-more"> <a href="/2011/04/expand_page_objects.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-19T21:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/watir-webdriver-performance.html">watir-webdriver-performance：PerformanceTimingの集計</a> </h2>  </header> <div class="content">「Watir-Webdriver-Performance gem released」にて紹介されているものを紹介。watir-webdriver上でPerformanceTimingに関する情報を収集できるようになります。PeformanceTimingとはJavascriptについてweb application内でクライアントサイドの待ち時間の測定を行えるようにするためのインターフェイスだそう（To address the need for complete information on user experience, this document introduces the PerformanceTiming interfaces. This interface allows JavaScript mechanisms to provide complete client-side latency measurements within applications. ）。Javascriptの処理毎の細かな待ち時間情報を得ることができるらしい。詳細はNavigation Timingを参照。</div> <div class="read-more"> <a href="/2011/04/watir-webdriver-performance.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/19/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/18/"> 18 </a><a class="page-number " href="/page/19/"> 19 </a><span class="page-number current">20</span><a class="page-number " href="/page/21/"> 21 </a><a class="page-number " href="/page/22/"> 22 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/21/">
+</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://memolog.org/2011/12/redesign_2012.html"},{"@type":"ListItem","position":2,"url":"https://memolog.org/2011/09/add-unsupported-tag-in-watir-webdriver.html"},{"@type":"ListItem","position":3,"url":"https://memolog.org/2011/09/add-attribute-in-element-about-watir-webdriver.html"},{"@type":"ListItem","position":4,"url":"https://memolog.org/2011/09/diff-image-with-watir-webdriver.html"},{"@type":"ListItem","position":5,"url":"https://memolog.org/2011/09/watir-webdriver-csv-download.html"},{"@type":"ListItem","position":6,"url":"https://memolog.org/2011/09/save-screenshot-with-watir-webdriver.html"},{"@type":"ListItem","position":7,"url":"https://memolog.org/2011/06/books_around_me.html"},{"@type":"ListItem","position":8,"url":"https://memolog.org/2011/05/gridinit.html"},{"@type":"ListItem","position":9,"url":"https://memolog.org/2011/04/what_testers_find.html"},{"@type":"ListItem","position":10,"url":"https://memolog.org/2011/04/expand_page_objects.html"}]}</script></head> <body> <header class="header header_component_global"> <div class="header-inner"> <div class="header__icon" aria-hidden="true"> <img src="/assets/icons/icon.svg" role="presentation" width="32" height="32" alt="icon" loading="lazy"> </div> <h1 class="header__title"> <a href="/">メモログ</a> </h1>  </div> </header> <div class="container"> <main class="main"> <article class="article-summary"> <header class="header"> <div> <time datetime="2011-12-24T18:04:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年12月25日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/12/redesign_2012.html">デザインを変更（2011/12）</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #938f87;"> <img src="/assets/images/redesign_2012/redesign_2012_medium.webp" srcset="/assets/images/redesign_2012/redesign_2012_medium.webp, /assets/images/redesign_2012/redesign_2012_medium@2x.webp 2x" role="presentation" loading="eager" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。</div> <div class="read-more"> <a href="/2011/12/redesign_2012.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-15T15:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月16日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/add-unsupported-tag-in-watir-webdriver.html">watir-webdriver：使用できる要素を追加する</a> </h2>  </header> <div class="content">watir-webdriverでは広範囲のHTMLタグ（ほとんど全部）をサポートしているけれど、svgやcircleなど一部のタグは現在のところサポートしていません（参考：Does watir support svg - Watir General | Google グループ）。</div> <div class="read-more"> <a href="/2011/09/add-unsupported-tag-in-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-13T15:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月14日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/add-attribute-in-element-about-watir-webdriver.html">watir-webdriver：要素で使用できる属性を増やす</a> </h2> <div class="header__feature" aria-hidden="true"> <div class="featured__image" style="background-color: #c3beb5;"> <img src="/assets/images/add-attribute-in-element-about-watir-webdriver/add-attribute-in-element-about-watir-webdriver_medium.webp" srcset="/assets/images/add-attribute-in-element-about-watir-webdriver/add-attribute-in-element-about-watir-webdriver_medium.webp, /assets/images/add-attribute-in-element-about-watir-webdriver/add-attribute-in-element-about-watir-webdriver_medium@2x.webp 2x" role="presentation" loading="lazy" width="985" height="328" alt> </div> <div class="featured__credit">Image by <a href="https://chatgpt.com/" target="_blank" rel="noopener" tabindex="-1">ChatGPT</a></div> </div> </header> <div class="content">watir-webdriverでは、たとえば「b.link(:id,&#39;memolog&#39;).href」みたいなかたちで要素を特定させて、特定した要素の属性を取得することができます（詳細はAPIなどを参照）。ただW3Cで規定されている属性しかメソッド化されていないので、たとえばtwitterのt.coのリンクの元URLの属性（data-expanded-url）などは通常では取得することができません。</div> <div class="read-more"> <a href="/2011/09/add-attribute-in-element-about-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-11T13:36:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月11日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/diff-image-with-watir-webdriver.html">watir-webdriver で画像データを評価する</a> </h2>  </header> <div class="content">たとえば、画像ファイルが上書きされているかどうかを確認したい場合などで、画像のsrcなどには差分がなく画像データを比較しないとその動作の正否が分からないとか、そういうときはやはり画像データを評価して差を見るしかない。</div> <div class="read-more"> <a href="/2011/09/diff-image-with-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-04T13:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月4日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/watir-webdriver-csv-download.html">watir-webdriver でCSVファイルをダウンロードする</a> </h2>  </header> <div class="content">FirefoxでCSVファイルにアクセスすると、ダウンロードのダイアログが表示されるのですが、webdriver上でダイアログが出てくるとハンドリングできない（たぶん）ので困る。ので、profileを設定してダイアログを表示しないようにする。そしてダウンロードするフォルダも一緒に設定する、という話。詳しくはFirefox 4 with watir webdriver: Need help using helperApps.neverAsk to save CSV without prompting - Stack OverflowとBrowser Downloads | Watir WebDriverなどを参照</div> <div class="read-more"> <a href="/2011/09/watir-webdriver-csv-download.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-09-03T12:00:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年9月3日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/09/save-screenshot-with-watir-webdriver.html">watir-webdriver でスクリーンショットを撮る</a> </h2>  </header> <div class="content">小ネタでも挟もうではありませんか。watir-webdriverを使って簡単にスクリーンショット撮ることができます。Macにはrubyがもともと入っているので、事前準備はwatir-webdriverをインストールするだけです。インストールは、ターミナルを開いて下記のコマンドを実行する。</div> <div class="read-more"> <a href="/2011/09/save-screenshot-with-watir-webdriver.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-06-19T22:25:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年6月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/06/books_around_me.html">本とわたし</a> </h2>  </header> <div class="content">2008年の9月ごろからgoodreadsというサービスで読んだ本の履歴をつけていたのですが、履歴にたまった本が200冊くらいになりました。1年平均70冊くらい読んでいるみたいですね。（内容的/量的に）薄い本とかも含まれるので、読んだぞと実感を込めて言えるのは40〜50冊といったところかなあという感じですけど。とはいえ、ほとんどすべての本について詳細は覚えてないですけど。</div> <div class="read-more"> <a href="/2011/06/books_around_me.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-05-15T14:30:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年5月15日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/05/gridinit.html">Gridinit：クラウドベースで複数ブラウザにテスト配布</a> </h2>  </header> <div class="content">Gridinitという新サービスをざっくり紹介。SeleniumやWatirなどの自動化スクリプトをクラウド上にある複数のブラウザに配布してくれるそうです。作成したテストスクリプトを複数ブラウザで実行することによって、負荷検証を行うことができる、みたいな。「watir-webdriver-performance: PerformanceTimingの集計 - メモログ」で紹介したwatir-webdriver-peformanceのモジュールを組み合わせてブラウザのPerformanceTimingの情報を取得することもできるみたい。</div> <div class="read-more"> <a href="/2011/05/gridinit.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-29T15:40:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月30日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/what_testers_find.html">テスターの仕事とは何か</a> </h2>  </header> <div class="content">James Bach&#39;s Blog » Blog Archive » What Testers Findの記事の紹介。James Bachはソフトウェアテスト293の鉄則!の著者でもある。</div> <div class="read-more"> <a href="/2011/04/what_testers_find.html">📖 続きを読む</a> </div> </article><article class="article-summary"> <header class="header"> <div> <time datetime="2011-04-20T14:43:00.000Z"> <span class="calendar-icon">📅</span> <span>2011年4月20日</span> </time> </div> <h2 class="header__title article__title"> <a href="/2011/04/expand_page_objects.html">Site-Page-Data Object Pattern (Page Objects 拡張)</a> </h2>  </header> <div class="content">以前にPage Objects : テストスイート構築のためのデザインパターン - メモログというのを紹介しました。今回はそのパターンをちょっと拡張してみようという話。なお、特に参考にした訳ではないのですが、Selenium Page Objects + Site Objects, Data Objects &amp; High Level Navigation « Fiji Ecuador Seattle Greece Montanaに同じような話を提示している人はいます（2年前に）。</div> <div class="read-more"> <a href="/2011/04/expand_page_objects.html">📖 続きを読む</a> </div> </article> <footer class="pagination"> <a class="extend prev" rel="prev" href="/page/19/">Prev</a> <a class="page-number" href="/">1</a> <span class="space">…</span><a class="page-number " href="/page/18/"> 18 </a><a class="page-number " href="/page/19/"> 19 </a><span class="page-number current">20</span><a class="page-number " href="/page/21/"> 21 </a><a class="page-number " href="/page/22/"> 22 </a><span class="space">…</span><a class="page-number " href="/page/38/"> 38 </a><a class="page-number " href="/page/39/"> 39 </a><a class="page-number " href="/page/40/"> 40 </a><a class="page-number " href="/page/41/"> 41 </a> <a class="extend next" rel="next" href="/page/21/">
 Next
 </a> </footer> </main> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,

@@ -449,6 +449,12 @@
     background: #f0f0f0;
   }
 
+  pre[class*="language-"] {
+    border: 4px solid var(--border-color);
+    font-size: 16px;
+    border-radius: var(--border-radius);
+  }
+
   @media screen and (max-width: 500px) {
     .header__epigraph {
       display: none;
@@ -543,9 +549,12 @@
       margin-top: 3em;
     }
 
+    .main .profile {
+      border-radius: var(--border-radius);
+    }
+
     .featured__image,
-    .content__image,
-    .content pre[class*="language-"] {
+    .content__image {
       margin: 0 -1em;
     }
   }
@@ -558,12 +567,6 @@
     .pagination {
       margin: 0 10px;
     }
-  }
-
-  pre[class*="language-"] {
-    border: 4px solid var(--border-color);
-    font-size: 16px;
-    border-radius: var(--border-radius);
   }
 
   /*

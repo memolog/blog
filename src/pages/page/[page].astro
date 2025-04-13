@@ -97,7 +97,7 @@ if (pageNumbersArray[0] !== 2) {
     <div class="container">
       <main class="main">
         {
-          posts.map((post) => (
+          posts.map((post, index) => (
             <article class="article-summary">
               <header class="header">
                 <div>
@@ -107,7 +107,10 @@ if (pageNumbersArray[0] !== 2) {
                   <a href={`/${post.id}.html`}>{post.data.title}</a>
                 </h2>
                 {post.data.featured && (
-                  <FeaturedImage featured={post.data.featured} />
+                  <FeaturedImage
+                    featured={post.data.featured}
+                    lazyLoad={index > 1}
+                  />
                 )}
               </header>
               <div class="content">{post.data.excerpt}</div>

@@ -39,7 +39,7 @@ const posts = allPosts.slice(0, 10);
     <div class="container">
       <main class="main">
         {
-          posts.map((post) => (
+          posts.map((post, index) => (
             <article class="article-summary">
               <header class="header">
                 <div>
@@ -49,7 +49,10 @@ const posts = allPosts.slice(0, 10);
                   <a href={`/${post.id}.html`}>{post.data.title}</a>
                 </h2>
                 {post.data.featured && (
-                  <FeaturedImage featured={post.data.featured} />
+                  <FeaturedImage
+                    featured={post.data.featured}
+                    lazyLoad={index > 1}
+                  />
                 )}
               </header>
               <div class="content">{post.data.excerpt}</div>

@@ -6,9 +6,10 @@ type Props = {
   alt?: string;
   width?: number;
   height?: number;
+  lazyLoad?: boolean;
 };
 
-const { src, alt, width, height } = Astro.props;
+const { src, alt, width, height, lazyLoad } = Astro.props;
 const { dir, name, ext } = path.parse(src);
 ---
 
@@ -32,6 +33,6 @@ const { dir, name, ext } = path.parse(src);
     width={width}
     height={height}
     role="presentation"
-    loading="lazy"
+    loading={lazyLoad ? "lazy" : "eager"}
   />
 </picture>

@@ -100,7 +100,9 @@ const relatedPosts = (slug && related[slug]) || [];
                   <h3 class="header__title article__title">
                     <a href={`/${item.id}.html`}>{item.title}</a>
                   </h3>
-                  {item.featured && <FeaturedImage featured={item.featured} />}
+                  {item.featured && (
+                    <FeaturedImage featured={item.featured} lazyLoad={true} />
+                  )}
                 </header>
                 <div class="content">{item.excerpt}</div>
                 <div class="read-more">

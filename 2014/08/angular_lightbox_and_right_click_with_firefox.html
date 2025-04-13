@@ -763,7 +763,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 <p>AngularJS では、ngRoute（routeProvider）の中で、<a href="https://docs.angularjs.org/api/ng/service/$rootElement">$routeElement</a>の click イベントを listen していて、event.target から parent に向かって a タグを探して、href の情報をもとに画面遷移を実行する。$routeElementは「The root element of Angular application. This is either the element where ngApp was declared or the element passed into angular.bootstrap. 」なので、ngAppが宣言されているか、angular.bootstrapで渡したelementになる。つまり、angular.bootstrapにdocumentを渡すと、$routeElement は「document」になる。document で click イベントを listen するようになる。</p>
 <p>つまり、Firefox で、lightbox を使った（a href で wrap されている）画像を右クリックすると、意図せぬ画面遷移が発生してしまう。Angular の routeProvider で設定されていないパスなら何もおこらないかも。でも otherwise が設定されていたら、otherwise の画面に遷移してしまう。</p>
 <p>回避方法としては、a タグに target=“_blank”（target 属性に値が入ってれば何でもいい）を設定しておけばいい。Angluar が画面遷移処理しなくなります。target 属性入れられない場合は、、まあまあ困るかも。</p>
-<p>というメモ</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+<p>というメモ</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。

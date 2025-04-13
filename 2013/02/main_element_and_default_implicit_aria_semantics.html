@@ -775,7 +775,7 @@ Generated with Base16 Builder (https://github.com/base16-builder/base16-builder)
 </blockquote>
 <p>native semantics（とそれに付帯する implicit ARIA semantics）は、意味的な情報を変更したければ変更することが許容される。たとえば、a 要素のリンクを「link」という意味ではなく、「tab」型のナビゲーションのタブとしても使うこともできる。</p>
 <p>strong native semantics の場合は、本来的な意味以外での使用を想定しなくて良いみたいな含意がある（と思う）。たとえば、nav 要素は navigation role が strong native semantics な implicit ARIA semantics として付与されている。nav 要素はナビゲーション用途以外の使い方なんてないんだから、別途 role 属性がついていても、それを無視しても良いと（HTML など host language が）定義するかもしれないと（一方で accessibility APIs を通して要素の情報を得る場合は role 属性の意味を使わないといけないとしている）。</p>
-<p>つまり、main 要素は、HTML の定義からも、WAI-ARIA semantics な面からも「メインコンテンツを囲う」という、それだけの用途を持った要素と言えます。他の用途で使う余地がないという意味で、わかりやすいといえば分かりやすい。あえて新しい要素を定義しなくても良いような気もしますけど（div role=‘main’でも十分な感はある）、HTML タグを適切に使用するだけで適切な WAI-ARIA semantics も持たせることができるというのは意味のあることかなと思います。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+<p>つまり、main 要素は、HTML の定義からも、WAI-ARIA semantics な面からも「メインコンテンツを囲う」という、それだけの用途を持った要素と言えます。他の用途で使う余地がないという意味で、わかりやすいといえば分かりやすい。あえて新しい要素を定義しなくても良いような気もしますけど（div role=‘main’でも十分な感はある）、HTML タグを適切に使用するだけで適切な WAI-ARIA semantics も持たせることができるというのは意味のあることかなと思います。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。

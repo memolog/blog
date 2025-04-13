@@ -765,7 +765,7 @@ profile<span class="token punctuation">.</span>assume_untrusted_certificate_issu
 browser <span class="token operator">=</span> Watir<span class="token double-colon punctuation">::</span><span class="token class-name">Browser</span><span class="token punctuation">.</span><span class="token keyword">new</span> <span class="token symbol">:firefox</span><span class="token punctuation">,</span>profile
 </code></pre>
 <p>assume_untrusted_certificate_issuer のメソッドに false を渡すことで、selenium が生成する「webdriver_assume_untrusted_issuer」という webdriver 用の profile の設定を false に変更することができます（デフォルトは true に設定されている）。「webdriver_assume_untrusted_issuer」の profile は証明書の処理をする際に、エラーの判定を行わずに進めることができます。詳しくは<a href="http://code.google.com/p/selenium/source/browse/trunk/firefox/src/extension/components/badCertListener.js">badCertListener.js - selenium - Project Hosting on Google Code</a>の 55 行目あたりからが該当箇所になります。</p>
-<p>追記（2011/1/24）自己証明書（self-signed SSL certificate)を使用しているような場合は、この設定を入れると逆に先に進めなくなる場合があるみたい。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+<p>追記（2011/1/24）自己証明書（self-signed SSL certificate)を使用しているような場合は、この設定を入れると逆に先に進めなくなる場合があるみたい。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。

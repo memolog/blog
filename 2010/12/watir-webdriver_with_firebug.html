@@ -770,7 +770,7 @@ watir = Watir::Browser.new selenium
 </code></pre>
 <p>単純に Watir::Browser.new とすると、Selenium::Webdriver で用意したデフォルトの設定しか利用できないため、Selenium::Webdriver 用の独自のプロフィールファイルを作成して、それを読み込ませた Selenium::Webdriver を Watir で操作するオブジェクトとします。</p>
 <p>add_extension で追加するアドオンのファイルは xpi か zip 形式である必要があります。Firebug の xpi ファイルは<a href="http://getfirebug.com/releases/firebug/">Firebug のリリースの一覧</a>から適切なバージョンをダウンロードします。add_extension の詳細については<a href="http://code.google.com/p/selenium/source/browse/trunk/rb/lib/selenium/webdriver/firefox/profile.rb#131">profile.rb - selenium - Project Hosting on Google Code</a>を参考に。</p>
-<p>これで webdriver で起動した Firefox に Firebug のアドオンが追加されるようになります。通常のテストでは Firebug を起動状態にする必要はありませんが、テストスクリプトを作成する場合には便利。Firebug で HTML 構造をみつつ、Waitr で実際に操作しながら作成することができます。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt="icon"> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
+<p>これで webdriver で起動した Firefox に Firebug のアドオンが追加されるようになります。通常のテストでは Firebug を起動状態にする必要はありませんが、テストスクリプトを作成する場合には便利。Firebug で HTML 構造をみつつ、Waitr で実際に操作しながら作成することができます。</p>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC
         860くらい。

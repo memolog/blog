@@ -13,10 +13,11 @@ excerpt: 2017年以来スタティックサイトジェネレータとしてHexo
 なぜ Astro にしたのかというと、これも特に深い理由はなくて、ChatGPT に「Node.js で動く static site generator を使うなら何がいい？」と聞いたところ、最初に出てきたのが Astro だったから。そういう意味では、AI に覚えが良いサービスは選ばれやすいのかもしれない。
 
 これが以前（2025年4月前）のデザイン。
-<img src="/assets/images/design-before-202504.png" class="screenshot" loading="lazy" width="923" height="944" alt="2025年4月前のデザインのスクリーンショット">
+<img src="/assets/images/design-before-202504/design-before-202504.webp" srcset="/assets/images/design-before-202504/design-before-202504.webp, /assets/images/design-before-202504/design-before-202504@2x.webp" class="screenshot" loading="lazy" width="923" height="944" alt="2025年4月前のデザインのスクリーンショット">
+
 
 これが今（2025年4月後）のデザイン。
-<img src="/assets/images/design-after-202504.png" class="screenshot" loading="lazy" width="923" height="747" alt="2025年4月後のデザインのスクリーンショット">
+<img src="/assets/images/design-after-202504/design-after-202504.webp" srcset="/assets/images/design-after-202504/design-after-202504.webp, /assets/images/design-after-202504/design-after-202504@2x.webp" class="screenshot" loading="lazy" width="923" height="747" alt="2025年4月後のデザインのスクリーンショット">
 
 横幅も少し広くしました。
 いまは [Dell 27 4K UHD USB-C モニター - S2722QC](https://www.dell.com/ja-jp/shop/dell-27-4k-uhd-usb-c-%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-s2722qc/apd/210-bcdd) をメインで使っていて、そのモニターで見たときに「もう少し広く表示したいな」と思ったからです。

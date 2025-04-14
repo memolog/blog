@@ -11,7 +11,7 @@ excerpt: "記事データをベクトル化して、関連記事（メモ）を�
 
 できあがった関連メモは以下のキャプチャのような感じ。これは[本：マクロ金融危機入門](/2025/a-crash-course-on-crises.html)の記事の関連メモ。「本」というカテゴリでは揃っているものの、関連性があるようなないような微妙なライン。データがもっと増えれば、それっぽい結果になってくるのかなあ。
 
-<img src="/assets/images/related-entries.png" class="screenshot" loading="lazy" width="923" height="566">
+<img src="/assets/images/related-entries/related-entries.webp" srcset="/assets/images/related-entries/related-entries.webp, /assets/images/related-entries/related-entries@2x.webp" class="screenshot" loading="lazy" width="923" height="566">
 
 実際にやったことは、Markdownファイルから取得した記事の本文にベクトル化処理をかけて、
 ```typescript

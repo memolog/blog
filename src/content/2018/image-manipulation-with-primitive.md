@@ -14,57 +14,57 @@ Featured Image とか言いながら、ただ写真を置くだけなのも何�
 
 オリジナル画像はこちら
 
-![](/assets/images/rommanas-kongmeng-422586/rommanas-kongmeng-422586_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586/rommanas-kongmeng-422586.webp" srcset="/assets/images/rommanas-kongmeng-422586/rommanas-kongmeng-422586.webp, /assets/images/rommanas-kongmeng-422586/rommanas-kongmeng-422586@2x.webp" class="screenshot" width="900" height="600" loading="lazy" alt="">
 
 ## 変換例
 
-![](/assets/images/rommanas-kongmeng-422586_m6_n2000/rommanas-kongmeng-422586_m6_n2000_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m6_n2000/rommanas-kongmeng-422586_m6_n2000.webp" srcset="/assets/images/rommanas-kongmeng-422586_m6_n2000/rommanas-kongmeng-422586_m6_n2000.webp, /assets/images/rommanas-kongmeng-422586_m6_n2000/rommanas-kongmeng-422586_m6_n2000@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 `-n 2000 -m 6` -n は`number of shapes`で、使用する Primitive の数を設定できる。ベジェ(mode=6)の場合、-n
 が 2000 だとラフスケッチ的というかまあまあ原形がわかる雰囲気になる。処理は結構時間かかる。
 
-![](/assets/images/rommanas-kongmeng-422586_m6_n1000/rommanas-kongmeng-422586_m6_n1000_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m6_n1000/rommanas-kongmeng-422586_m6_n1000.webp" srcset="/assets/images/rommanas-kongmeng-422586_m6_n1000/rommanas-kongmeng-422586_m6_n1000.webp, /assets/images/rommanas-kongmeng-422586_m6_n1000/rommanas-kongmeng-422586_m6_n1000@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 
 `-n 1000 -m 6` -n が 1000 だとだいぶ抽象化が上がる感じ。個人的には好きなバランスで収まっている。
 
-![](/assets/images/rommanas-kongmeng-422586_m6_n300/rommanas-kongmeng-422586_m6_n300_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m6_n300/rommanas-kongmeng-422586_m6_n300.webp" srcset="/assets/images/rommanas-kongmeng-422586_m6_n300/rommanas-kongmeng-422586_m6_n300.webp, /assets/images/rommanas-kongmeng-422586_m6_n300/rommanas-kongmeng-422586_m6_n300@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 `-n 300 -m 6` -n が 300 になるとだとだいぶ謎な感じになる。嫌いではない。Featured
 Image ならこのくらい謎でも良いような気がしている。
 
-![](/assets/images/rommanas-kongmeng-422586_m6_n2000_bgffffff/rommanas-kongmeng-422586_m6_n2000_bgffffff_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m6_n2000_bgffffff/rommanas-kongmeng-422586_m6_n2000_bgffffff.webp" srcset="/assets/images/rommanas-kongmeng-422586_m6_n2000_bgffffff/rommanas-kongmeng-422586_m6_n2000_bgffffff.webp, /assets/images/rommanas-kongmeng-422586_m6_n2000_bgffffff/rommanas-kongmeng-422586_m6_n2000_bgffffff@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 `-n 2000 -m 6 -bg ffffff`
 
 -bg は`starting background color (hex)`で背景色になる。背景を指定していない場合と比べ、背景全体的に線が描かれてだいぶごちゃっとした感じになる。
 
-![](/assets/images/rommanas-kongmeng-422586_m6_n1000_bgffffff/rommanas-kongmeng-422586_m6_n1000_bgffffff_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m6_n1000_bgffffff/rommanas-kongmeng-422586_m6_n1000_bgffffff.webp" srcset="/assets/images/rommanas-kongmeng-422586_m6_n1000_bgffffff/rommanas-kongmeng-422586_m6_n1000_bgffffff.webp, /assets/images/rommanas-kongmeng-422586_m6_n1000_bgffffff/rommanas-kongmeng-422586_m6_n1000_bgffffff@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 `-n 1000 -m 6 -bg ffffff`
 
 線の数が少ない状態で背景色を選ぶと、背景の描画に表現力がなくなり、もはや何だかわからない感じになる。
 
-![](/assets/images/rommanas-kongmeng-422586_m6_n300_rep50/rommanas-kongmeng-422586_m6_n300_rep50_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m6_n300_rep50/rommanas-kongmeng-422586_m6_n300_rep50.webp" srcset="/assets/images/rommanas-kongmeng-422586_m6_n300_rep50/rommanas-kongmeng-422586_m6_n300_rep50.webp, /assets/images/rommanas-kongmeng-422586_m6_n300_rep50/rommanas-kongmeng-422586_m6_n300_rep50@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 ` -n 300 -m 6 -rep 50` rep のオプションは`add N extra shapes each iteration with
 reduced search (mostly good for beziers)`とあり、-n で設定した shape それぞれで追加の
 shape を入れてくれる。ので、処理量を減らしつつ書き込みを増やすことができる。
 
-![](/assets/images/rommanas-kongmeng-422586_m6_n300_rep50_bgffffff/rommanas-kongmeng-422586_m6_n300_rep50_bgffffff_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m6_n300_rep50_bgffffff/rommanas-kongmeng-422586_m6_n300_rep50_bgffffff.webp" srcset="/assets/images/rommanas-kongmeng-422586_m6_n300_rep50_bgffffff/rommanas-kongmeng-422586_m6_n300_rep50_bgffffff.webp, /assets/images/rommanas-kongmeng-422586_m6_n300_rep50_bgffffff/rommanas-kongmeng-422586_m6_n300_rep50_bgffffff@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 `-n 300 -m 6 rep 50 -bg ffffff` 背景の白が混じるので、少しデコボコっとした印象になる。
 
-![](/assets/images/rommanas-kongmeng-422586_m6_n400_rep5/rommanas-kongmeng-422586_m6_n400_rep5_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m6_n400_rep5/rommanas-kongmeng-422586_m6_n400_rep5.webp" srcset="/assets/images/rommanas-kongmeng-422586_m6_n400_rep5/rommanas-kongmeng-422586_m6_n400_rep5.webp, /assets/images/rommanas-kongmeng-422586_m6_n400_rep5/rommanas-kongmeng-422586_m6_n400_rep5@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 `-n 400 -m 6 -rep 5`
 
 -n 2000 の画像
 
-![](/assets/images/rommanas-kongmeng-422586_m6_n2000/rommanas-kongmeng-422586_m6_n2000_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m6_n2000/rommanas-kongmeng-422586_m6_n2000.webp" srcset="/assets/images/rommanas-kongmeng-422586_m6_n2000/rommanas-kongmeng-422586_m6_n2000.webp, /assets/images/rommanas-kongmeng-422586_m6_n2000/rommanas-kongmeng-422586_m6_n2000@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 と比較すると、だいぶ似ているけどけど細部の表現力は劣る感じはある。400 の場合が 65
 秒で、2000 の場合が 257 秒なので、処理はまあまあ早くなる（`-n 50 -rep 40`だと 18
 秒だけど表現色は多少落ちる）。
 
-![](/assets/images/rommanas-kongmeng-422586_m0_n400/rommanas-kongmeng-422586_m0_n400_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m0_n400/rommanas-kongmeng-422586_m0_n400.webp" srcset="/assets/images/rommanas-kongmeng-422586_m0_n400/rommanas-kongmeng-422586_m0_n400.webp, /assets/images/rommanas-kongmeng-422586_m0_n400/rommanas-kongmeng-422586_m0_n400@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 `-n 400 -m 0` combo（丸三角四角のミックス）を使った例。
 
-![](/assets/images/rommanas-kongmeng-422586_m3_n400/rommanas-kongmeng-422586_m3_n400_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m3_n400/rommanas-kongmeng-422586_m3_n400.webp" srcset="/assets/images/rommanas-kongmeng-422586_m3_n400/rommanas-kongmeng-422586_m3_n400.webp, /assets/images/rommanas-kongmeng-422586_m3_n400/rommanas-kongmeng-422586_m3_n400@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 `-n 400 -m 3` ellipse（長円）を使った例。ちょっと合わないかなあという感じはある。見慣れてくると逆にありかもと思うときもあるので、何とも言えないけど。
 
-![](/assets/images/rommanas-kongmeng-422586_m1_n400/rommanas-kongmeng-422586_m1_n400_medium.jpg)
+<img src="/assets/images/rommanas-kongmeng-422586_m1_n400/rommanas-kongmeng-422586_m1_n400.webp" srcset="/assets/images/rommanas-kongmeng-422586_m1_n400/rommanas-kongmeng-422586_m1_n400.webp, /assets/images/rommanas-kongmeng-422586_m1_n400/rommanas-kongmeng-422586_m1_n400@2x.webp" class="screenshot" width="900" height="598" loading="lazy" alt="">
 `-n 400 -m 1` triangle を使った例。
 
 ## Primitive 所感

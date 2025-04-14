@@ -4,10 +4,12 @@
   "version": "2.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "node ./scripts/generateRelated.ts && astro build && node ./scripts/postbuild.ts",
+    "build": "npm run build:related && npm run build:posts",
+    "build:posts": "astro build && node ./scripts/postbuild.ts",
+    "build:related": "node ./scripts/generateRelated.ts",
     "preview": "astro preview",
     "astro": "astro",
-    "gi": "generate-responsive-images -s ~/Downloads/images -d ./public/assets/images --webp-only --medium 985 --clean --crop-width 985 --crop-height 328",
+    "gi": "generate-responsive-images -s ~/Downloads/images -d ./public/assets/images --webp-only --medium 985 --clean --crop-width 985 --crop-height 328 --no-size-string",
     "pb": "primitive_bulk -i ~/Downloads/$D.jpg -d ./source/assets/images/$D --output $D --format jpg,svg -m $M -n $N && find ./source/assets/images/$D -name '*.svg' -o -name '*.jpg' | xargs open -a 'ImageOptim'",
     "pre-pb": "primitive_bulk -i ~/Downloads/$D.png -n $N",
     "publish": "gh-pages -d dist"
@@ -24,7 +26,7 @@
     "@xenova/transformers": "^2.17.2",
     "chroma-js": "^3.1.2",
     "colorthief": "^2.6.0",
-    "generate-responsive-images": "^2.3.0",
+    "generate-responsive-images": "^2.4.0",
     "gh-pages": "^6.3.0",
     "glob": "^11.0.1",
     "gray-matter": "^4.0.3",

@@ -38,12 +38,11 @@ MTIf name="entry_template"> here</MTIf><MTIf name="datebased_archive"> here</MTI
 
 </div>
 </div>
-
 ```
 
 CSS はこんな感じ。背景画像の上にタブを載せているので、表示がずれないようにピクセル単位でガチガチに指定しています（ul のマージンが入ることに気づかずに、しばらく悩んだ）。
 
-```
+```css
 /* top navigation */
 #banner-image {height:160px; background:#fff url(/assets/site-design/0701/050101.gif) no-repeat; width:940px; margin:0 auto;}
 #banner-image-inner {padding-top:125px;}

@@ -1,14 +1,16 @@
 ---
 title: MacBook proでmakeがうまくいかない問題
 date: 2006-04-11T14:30:13.000Z
+featured:
+  image: tc-photography-LyFpyS_aMlw-unsplash.webp
+  author: TC Photography
+  authorLink: https://unsplash.com/ja/@tcphoto24?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 categories:
   - web
 tags:
   - mac
-excerpt: "*   JayAllen.org：Mac OS X is make-ing me angry"
+excerpt: "MacBook pro にて make しようとしたときに下記のようなエラーが返り、make が失敗する問題。"
 ---
-
-- [JayAllen.org：Mac OS X is make-ing me angry](http://jayallen.org/journey/2006/03/mac_os_x_is_make-ing_me_angry)
 
 MacBook pro にて make しようとしたときに下記のようなエラーが返り、make が失敗する問題。
 

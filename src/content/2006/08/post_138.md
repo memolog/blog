@@ -2,8 +2,9 @@
 title: 最近読んだ本ダイジェスト
 date: 2006-08-13T14:07:29.000Z
 featured:
-  image: post_138.webp
-  author: chatGPT
+  image: 48929drsdl.webp
+  author: Hamlet Winstanley
+  authorLink: https://artvee.com/artist/hamlet-winstanley/
 categories:
   - 本
 tags:

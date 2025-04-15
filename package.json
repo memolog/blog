@@ -12,7 +12,7 @@
     "gi": "generate-responsive-images -s ~/Downloads/images -d ./public/assets/images --webp-only --medium 985 --clean --crop-width 985 --crop-height 328 --no-size-string",
     "gi:screenshot": "generate-responsive-images -s ~/Downloads/screenshots -d ./public/assets/images --webp-only --medium 921 --clean --no-size-string",
     "pb": "primitive_bulk -i ~/Downloads/$D.jpg -d ./source/assets/images/$D --output $D --format jpg,svg -m $M -n $N && find ./source/assets/images/$D -name '*.svg' -o -name '*.jpg' | xargs open -a 'ImageOptim'",
-    "pre-pb": "primitive_bulk -i ~/Downloads/$D.png -n $N",
+    "pre-pb": "primitive_bulk -i ~/Downloads/$D.jpg -n $N",
     "publish": "gh-pages -d dist"
   },
   "dependencies": {

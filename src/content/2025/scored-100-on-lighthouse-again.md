@@ -16,20 +16,20 @@ excerpt: 特に意味はないんだけど、LighthouseのScoreが微妙に100�
 そこで、[generate-responsive-images-service](https://github.com/memolog/generate-responsive-images-service)の中で[sharp](https://github.com/lovell/sharp)を使って画像リサイズする処理に、表示サイズに合わせて中央を切り取る処理を追加し、画像を再生成しました。コードはChatGPTが出してくれたものをほぼそのまま使ってる。
 
 ```javascript
-    if (cropWidth || cropHeight) {
-      cropWidth = cropWidth || width;
-      cropHeight = cropHeight || height;
+if (cropWidth || cropHeight) {
+  cropWidth = cropWidth || width;
+  cropHeight = cropHeight || height;
 
-      const left = Math.floor((width - cropWidth) / 2);
-      const top = Math.floor((height - cropHeight) / 2);
+  const left = Math.floor((width - cropWidth) / 2);
+  const top = Math.floor((height - cropHeight) / 2);
 
-      sharpObject = sharpObject.extract({
-        left,
-        top,
-        width: cropWidth,
-        height: cropHeight
-      });
-    }
+  sharpObject = sharpObject.extract({
+    left,
+    top,
+    width: cropWidth,
+    height: cropHeight
+  });
+}
 ```
 
 また、Best Practice の「Avoids third-party cookies」で Google Analytics が引っかかっていたので、今回は単純にスクリプトごと削除しました（そもそも特に見ていなかったし）。真面目に対応しようとすると結構面倒くさそう。
@@ -45,18 +45,18 @@ excerpt: 特に意味はないんだけど、LighthouseのScoreが微妙に100�
 ----
 追記（2025/4/15)
 
-上の `extract` だと、たとえば画像の横幅が3000pxあったりすると、画像の真ん中を小さなエリア切り取る感じになってしまうので、[sharp.resize](https://sharp.pixelplumbing.com/api-resize/)でリサイズしつつ切り取る方が自分のやりたいケースとしては適切だった。
+上の `extract` だと、たとえば画像の横幅が3000pxあったりすると、画像の真ん中を小さなエリアを切り取る感じになってしまうので、[sharp.resize](https://sharp.pixelplumbing.com/api-resize/)でリサイズしつつ切り取る方が自分のやりたいケースとしては適切だった。
 
 ```javascript
-    const sharpObject = sharp(buffer);
-    const { width, height } = await sharpObject.metadata();
+const sharpObject = sharp(buffer);
+const { width, height } = await sharpObject.metadata();
 
-    if (cropWidth || cropHeight) {
-      cropWidth = (cropWidth || width) * scale;
-      cropHeight = (cropHeight || height) * scale;
-      sharpObject.resize(cropWidth, cropHeight, {
-        fit: "cover",
-        position: "centre"
-      });
-    }
+if (cropWidth || cropHeight) {
+  cropWidth = (cropWidth || width) * scale;
+  cropHeight = (cropHeight || height) * scale;
+  sharpObject.resize(cropWidth, cropHeight, {
+    fit: "cover",
+    position: "centre"
+  });
+}
 ```

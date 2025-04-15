@@ -1,6 +1,9 @@
 ---
 title: advantage Lucy 「Hello again e.p.」
 date: 2005-07-12T15:29:52.000Z
+featured:
+  image: advantage_lucy_hellow_again_ep.webp
+  author: chatGPT
 categories:
   - 雑文
 tags:

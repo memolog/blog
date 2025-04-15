@@ -1,6 +1,9 @@
 ---
 title: 本：トム・ピーターズのデザイン魂
 date: 2005-11-05T17:03:04.000Z
+featured:
+  image: post_113.webp
+  author: chatGPT
 categories:
   - 本
 tags:

@@ -1,6 +1,10 @@
 ---
 title: ブログの先行者利得
 date: 2005-07-18T07:28:58.000Z
+featured:
+  image: 958409ilsdl.webp
+  author: Carey Cartoon Service
+  authorLink: https://artvee.com/artist/carey-cartoon-service/
 categories:
   - 雑文
 excerpt: "今月のHarvard Business Review（2005年8月号）に「先行者利得の真実」という記事があったので、それを基にブログについて個人的な考えを出してみようと思います。"

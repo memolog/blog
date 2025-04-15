@@ -792,20 +792,20 @@
 <p>今回は「<a href="https://web.dev/articles/lcp-lazy-loading">遅延読み込みが多すぎるとパフォーマンスに影響する</a>」という項目にひっかかっていました。とりあえずなんでも<code>loading="lazy"</code> を付けておけばいいと思っていたんですが、初期ビューポート内の画像まで lazy にしてしまうと、LCP（Largest Contentful Paint）の指標がむしろ悪化することがあるらしい。</p>
 <p>あと「<a href="https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images">適切なサイズの画像</a>」という項目にもひっかかっていた。ChatGPTで生成した1024×1024の正方形画像をFeatured Imageに使っていたのですが、横長で表示する場合には表示されない部分のピクセルが無駄になってるという、なんかそういうことらしい。</p>
 <p>そこで、<a href="https://github.com/memolog/generate-responsive-images-service">generate-responsive-images-service</a>の中で<a href="https://github.com/lovell/sharp">sharp</a>を使って画像リサイズする処理に、表示サイズに合わせて中央を切り取る処理を追加し、画像を再生成しました。コードはChatGPTが出してくれたものをほぼそのまま使ってる。</p>
-<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript">    <span class="token keyword">if</span> <span class="token punctuation">(</span>cropWidth <span class="token operator">||</span> cropHeight<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      cropWidth <span class="token operator">=</span> cropWidth <span class="token operator">||</span> width<span class="token punctuation">;</span>
-      cropHeight <span class="token operator">=</span> cropHeight <span class="token operator">||</span> height<span class="token punctuation">;</span>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span>cropWidth <span class="token operator">||</span> cropHeight<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  cropWidth <span class="token operator">=</span> cropWidth <span class="token operator">||</span> width<span class="token punctuation">;</span>
+  cropHeight <span class="token operator">=</span> cropHeight <span class="token operator">||</span> height<span class="token punctuation">;</span>
 
-      <span class="token keyword">const</span> left <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>width <span class="token operator">-</span> cropWidth<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">const</span> top <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>height <span class="token operator">-</span> cropHeight<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> left <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>width <span class="token operator">-</span> cropWidth<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> top <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>height <span class="token operator">-</span> cropHeight<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-      sharpObject <span class="token operator">=</span> sharpObject<span class="token punctuation">.</span><span class="token function">extract</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        left<span class="token punctuation">,</span>
-        top<span class="token punctuation">,</span>
-        <span class="token literal-property property">width</span><span class="token operator">:</span> cropWidth<span class="token punctuation">,</span>
-        <span class="token literal-property property">height</span><span class="token operator">:</span> cropHeight
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+  sharpObject <span class="token operator">=</span> sharpObject<span class="token punctuation">.</span><span class="token function">extract</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    left<span class="token punctuation">,</span>
+    top<span class="token punctuation">,</span>
+    <span class="token literal-property property">width</span><span class="token operator">:</span> cropWidth<span class="token punctuation">,</span>
+    <span class="token literal-property property">height</span><span class="token operator">:</span> cropHeight
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>また、Best Practice の「Avoids third-party cookies」で Google Analytics が引っかかっていたので、今回は単純にスクリプトごと削除しました（そもそも特に見ていなかったし）。真面目に対応しようとすると結構面倒くさそう。</p>
 <blockquote>
@@ -816,18 +816,18 @@
 <img src="/assets/images/lighthouse_100_again/lighthouse_100_again.webp" srcset="/assets/images/lighthouse_100_again/lighthouse_100_again.webp, /assets/images/lighthouse_100_again/lighthouse_100_again@2x.webp" class="screenshot" width="921" height="612" loading="lazy" alt="Lighthouseが100点満点のスクリーンショット">
 <hr>
 <p>追記（2025/4/15)</p>
-<p>上の <code>extract</code> だと、たとえば画像の横幅が3000pxあったりすると、画像の真ん中を小さなエリア切り取る感じになってしまうので、<a href="https://sharp.pixelplumbing.com/api-resize/">sharp.resize</a>でリサイズしつつ切り取る方が自分のやりたいケースとしては適切だった。</p>
-<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript">    <span class="token keyword">const</span> sharpObject <span class="token operator">=</span> <span class="token function">sharp</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> <span class="token punctuation">{</span> width<span class="token punctuation">,</span> height <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> sharpObject<span class="token punctuation">.</span><span class="token function">metadata</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>上の <code>extract</code> だと、たとえば画像の横幅が3000pxあったりすると、画像の真ん中を小さなエリアを切り取る感じになってしまうので、<a href="https://sharp.pixelplumbing.com/api-resize/">sharp.resize</a>でリサイズしつつ切り取る方が自分のやりたいケースとしては適切だった。</p>
+<pre class="language-javascript" data-language="javascript"><code is:raw="" class="language-javascript"><span class="token keyword">const</span> sharpObject <span class="token operator">=</span> <span class="token function">sharp</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> width<span class="token punctuation">,</span> height <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> sharpObject<span class="token punctuation">.</span><span class="token function">metadata</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>cropWidth <span class="token operator">||</span> cropHeight<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      cropWidth <span class="token operator">=</span> <span class="token punctuation">(</span>cropWidth <span class="token operator">||</span> width<span class="token punctuation">)</span> <span class="token operator">*</span> scale<span class="token punctuation">;</span>
-      cropHeight <span class="token operator">=</span> <span class="token punctuation">(</span>cropHeight <span class="token operator">||</span> height<span class="token punctuation">)</span> <span class="token operator">*</span> scale<span class="token punctuation">;</span>
-      sharpObject<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>cropWidth<span class="token punctuation">,</span> cropHeight<span class="token punctuation">,</span> <span class="token punctuation">{</span>
-        <span class="token literal-property property">fit</span><span class="token operator">:</span> <span class="token string">"cover"</span><span class="token punctuation">,</span>
-        <span class="token literal-property property">position</span><span class="token operator">:</span> <span class="token string">"centre"</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>cropWidth <span class="token operator">||</span> cropHeight<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  cropWidth <span class="token operator">=</span> <span class="token punctuation">(</span>cropWidth <span class="token operator">||</span> width<span class="token punctuation">)</span> <span class="token operator">*</span> scale<span class="token punctuation">;</span>
+  cropHeight <span class="token operator">=</span> <span class="token punctuation">(</span>cropHeight <span class="token operator">||</span> height<span class="token punctuation">)</span> <span class="token operator">*</span> scale<span class="token punctuation">;</span>
+  sharpObject<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>cropWidth<span class="token punctuation">,</span> cropHeight<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">fit</span><span class="token operator">:</span> <span class="token string">"cover"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">position</span><span class="token operator">:</span> <span class="token string">"centre"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>  </div> <footer class="profile"> <div class="profile-inner"> <div class="profile__image"> <img src="/assets/icons/icon.svg" role="presentation" width="48" height="48" alt=""> </div> <h2 class="profile__heading">私について</h2> <div class="profile__content"> <div>Yutaka Yamaguchi</div> <div>
 東京在住。TypeScript, Node.js,
         Reactなどフロンエンドが主力。Perlも書く。SwiftやRubyも過去には使ってた。過去のTOEIC

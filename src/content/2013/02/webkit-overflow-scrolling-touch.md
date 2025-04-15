@@ -1,11 +1,15 @@
 ---
 title: -webkit-overflow-scrollingと慣性スクロール
 date: 2013-02-27T15:58:00.000Z
+featured:
+  image: colin-watts-EpzoqfX57PQ-unsplash.webp
+  author: Colin Watts
+  authorLink: https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 categories:
   - web
 tags:
   - css
-excerpt: "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。"
+excerpt: "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。"
 ---
 
 コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrolling というのがある。 詳細は[Safari CSS Reference](http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safaricssref/articles/standardcssproperties.html)の「-webkit-overflow-scrolling」を参照。値を「touch」にすると native アプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。

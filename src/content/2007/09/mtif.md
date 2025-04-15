@@ -1,22 +1,23 @@
 ---
 title: MTIfタグを利用したタブ型ナビゲーション
 date: 2007-09-12T17:14:00.000Z
+featured:
+  image: kevin-charit-KU9D4Sz6IDY-unsplash.webp
+  author: Kevin Charit
+  authorLink: https://unsplash.com/ja/@kevin_charit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 categories:
   - web
 tags:
   - css
   - mt
-excerpt: "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム"
+excerpt: "Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。"
 ---
-
-- [タグリファレンス：MTif](http://movabletype.jp/documentation/appendices/tags/if.html)
-- [ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム](http://www.skyarc.co.jp/engineerblog/entry/3312.html)
 
 Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。作業内容的には[MT で奇数行、偶数行ごとに背景色をつける方法](/2007/08/mt/)と変わりません。今回は分岐の条件をテンプレートの種類（名前）にしています。
 
 まずナビゲーションの HTML がこちら。アクティブにしたいタブに「here」という class を指定しています。MTUnless を併用するともう少しかしこい HTML にできるかもしれません。
 
-```
+```html
 <div id="banner-image">
 <div id="banner-image-inner">
 
@@ -59,3 +60,5 @@ font-size:11px; font-familiy:Verdana,sans-serif; opacity: 0.8;-moz-opacity: 0.8;
 #topnavi li.rss img {margin-right:4px;}
 
 ```
+
+- [タグリファレンス：MTif](http://movabletype.jp/documentation/appendices/tags/if.html)

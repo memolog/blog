@@ -1,6 +1,10 @@
 ---
 title: 黄金比によるWebレイアウト
 date: 2006-03-19T16:28:01.000Z
+featured:
+  image: 922875ilsdl.webp
+  author: Rudolf Wilke
+  authorLink: https://artvee.com/artist/rudolf-wilke/
 categories:
   - web
 tags:

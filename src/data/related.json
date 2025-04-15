@@ -12,17 +12,6 @@
       "score": 0.9410057797238571
     },
     {
-      "id": "2025/hello-astro",
-      "title": "Hello Astro",
-      "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
-      "date": "2025/04/09 09:00:00",
-      "featured": {
-        "image": "hello-astro.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.9386681062401752
-    },
-    {
       "id": "2020/got-100-lighthouse-score-in-all-categories-on-mobile",
       "title": "Got 100 lighthouse score in all categories on mobile",
       "excerpt": "ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。",
@@ -44,6 +33,18 @@
         "author": "chatGPT"
       },
       "score": 0.9295677147948075
+    },
+    {
+      "id": "2012/05/invited_elements",
+      "title": "独自要素を作成する",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
+      "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
+      "score": 0.9294274384218723
     }
   ],
   "2025/replace-picture-element-with-srcset": [
@@ -94,6 +95,30 @@
   ],
   "2025/hello-astro": [
     {
+      "id": "2025/scored-100-on-lighthouse-again",
+      "title": "Lighthouseで再び100点をとる",
+      "excerpt": "特に意味はないんだけど、LighthouseのScoreが微妙に100点になっていなかったので、ふたたび100点を目指して修正してみました。",
+      "date": "2025-04-13 18:40",
+      "featured": {
+        "image": "106498absdl.webp",
+        "author": "John Marin",
+        "authorLink": "https://artvee.com/artist/john-marin/"
+      },
+      "score": 0.9100103459140991
+    },
+    {
+      "id": "2012/05/invited_elements",
+      "title": "独自要素を作成する",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
+      "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
+      "score": 0.909572782524938
+    },
+    {
       "id": "2011/12/redesign_2012",
       "title": "デザインを変更（2011/12）",
       "excerpt": "デザインを変更してみました。前回の変更はこちら。今回はコンテンツ部分はほとんど変えずに、ヘッダー/フッター周りとかを中心に。メインの変更としましては、今年流行のresponsive web design的な対応をしてみました。",
@@ -102,7 +127,33 @@
         "image": "redesign_2012.webp",
         "author": "chatGPT"
       },
-      "score": 0.9450814093760291
+      "score": 0.903651060347024
+    },
+    {
+      "id": "2013/08/supported_in_ie8",
+      "title": "あらためて IE8 について",
+      "excerpt": "少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。",
+      "date": "2013-08-08T14:00:00.000Z",
+      "featured": {
+        "image": "frode-myklebust-rHs9qFMrcDk-unsplash.webp",
+        "author": "Frode Myklebust",
+        "authorLink": "https://unsplash.com/ja/@famyklebust?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.9034134472686414
+    }
+  ],
+  "2025/generate-related-posts": [
+    {
+      "id": "2012/05/invited_elements",
+      "title": "独自要素を作成する",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
+      "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
+      "score": 0.9103998082288709
     },
     {
       "id": "2025/scored-100-on-lighthouse-again",
@@ -114,28 +165,8 @@
         "author": "John Marin",
         "authorLink": "https://artvee.com/artist/john-marin/"
       },
-      "score": 0.9386681062401752
+      "score": 0.9032392509392971
     },
-    {
-      "id": "2013/08/supported_in_ie8",
-      "title": "あらためて IE8 について",
-      "excerpt": "少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。",
-      "date": "2013-08-08T14:00:00.000Z",
-      "score": 0.9241979947065603
-    },
-    {
-      "id": "2010/12/redesign_2011",
-      "title": "デザイン変更（2010/12）",
-      "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
-      "date": "2010-12-24T20:00:00.000Z",
-      "featured": {
-        "image": "redesign_2011.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.9233019664686649
-    }
-  ],
-  "2025/generate-related-posts": [
     {
       "id": "2020/logical-assignment-operators",
       "title": "Logical AND/OR/Nullish assignment operators",
@@ -146,40 +177,19 @@
         "author": "Cath Smith",
         "authorLink": "https://unsplash.com/@cathsmithphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
-      "score": 0.8937562584420892
+      "score": 0.8982089341283057
     },
     {
-      "id": "2013/08/cyclomatic_comlexity",
-      "title": "Cyclomatic comlexity",
-      "excerpt": "Cyclomatic complexity - Wikipedia, the free encyclopedia。日本語では、循環的複雑度 - Wikipediaと呼ぶみたい。",
-      "date": "2013-08-03T14:55:55.000Z",
+      "id": "2013/02/webkit-overflow-scrolling-touch",
+      "title": "-webkit-overflow-scrollingと慣性スクロール",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
+      "date": "2013-02-27T15:58:00.000Z",
       "featured": {
-        "image": "cyclomatic_comlexity.webp",
-        "author": "chatGPT"
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
       },
-      "score": 0.8891344337515824
-    },
-    {
-      "id": "2013/09/try_typesquare",
-      "title": "TypeSquareを試してみる",
-      "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
-      "date": "2013-09-10T22:55:00.000Z",
-      "featured": {
-        "image": "trying_typesquare.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.8871946870380482
-    },
-    {
-      "id": "2012/06/collapsing_magin_with_overflow_or_clearance",
-      "title": "マージンの相殺とoverflow, clear:both",
-      "excerpt": "垂直方向に隣接するマージンはマージンの相殺（collapsing）が働くけれど、overflow:hiddenがあると相殺されない、という仕様の話。あとclearanceについて。",
-      "date": "2012-06-04T20:15:00.000Z",
-      "featured": {
-        "image": "margin-collapsing-overflow-clearboth.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.8849981068820475
+      "score": 0.8974945154280589
     }
   ],
   "2025/a-crash-course-on-crises": [
@@ -536,6 +546,46 @@
       "score": 0.6340042251020769
     }
   ],
+  "2022/unexpected-reserved-word-interface-on-jest": [
+    {
+      "id": "2020/top-level-await-will-be-soon",
+      "title": "Top-level await will be soon",
+      "excerpt": "asyncとawaitの書き方に慣れてくると、非同期の処理を待つ時はいつでもawaitを使いたくなるのだが、使えるのはasyncのついたfunctionの中だけでトップレベルでは使えない。",
+      "date": "2020-02-08T05:55:41.000Z",
+      "featured": {
+        "image": "kai-pilger-1k3vsv7iIIc-unsplash",
+        "author": "Kai Pilger",
+        "authorLink": "https://unsplash.com/@kaip?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.7615248561868302
+    },
+    {
+      "id": "2013/12/update_xcode_deployment_info_with_node_xcode",
+      "title": "gruntからXcodeプロジェクトのDeployment infoを変更する",
+      "excerpt": "gruntからXcodeプロジェクトのDeployment infoを変更する。Xcodeから変更するのは簡単。でもそれをgruntでtaskとして実行する。こうした作業をgrunt taskで行うメリットは、繰り返し行う作業の場合は、それを自動化できるという点。",
+      "date": "2013-12-08T20:00:00.000Z",
+      "score": 0.7594346494798407
+    },
+    {
+      "id": "2020/optional-chaining-and-nullish-coalescing",
+      "title": "Optional chaining and Nullish coalescing",
+      "excerpt": "ES2020で新しく追加された機能（ECMAScript 2016+ compatibility tableの画面の下の方にある）はどれもわりと実用的で、なくても大丈夫なんだけどあると便利といったものが並んでいる。Bigintは日常的には使わないとは思うけど。  その中で、Nullish coalescingとOptional chaining はかなり便利。なくても大丈夫だし、使わなくても良いんだけど、便利だから日常的に書かれるJavaScriptの書き方を変えるものになると思う。",
+      "date": "2020-02-06T07:25:28.000Z",
+      "featured": {
+        "image": "ben-hershey-1IZBAlIs4ug-unsplash",
+        "author": "Ben Hershey",
+        "authorLink": "https://unsplash.com/@introspectivedsgn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.7518247417010692
+    },
+    {
+      "id": "2013/08/generate_sass_sourcemap_with_compass",
+      "title": "compass で sass の sourcemap を作る",
+      "excerpt": "sassのsourcemapを用意すると、Chromeのdeveloper toolsを使ったときにscssファイルでスタイルのinspectができるようになるので、非常に便利。詳細はSassファイルでの記述位置を知るより美しい方法｜Blog｜Skyward Designなどを参照。",
+      "date": "2013-08-21T14:00:00.000Z",
+      "score": 0.7441948446356251
+    }
+  ],
   "2022/the-two-ways-to-use-autocomplete-attribute": [
     {
       "id": "2006/11/html_linthtml",
@@ -616,46 +666,6 @@
       "excerpt": "grunt-contrib-jasmineのThird party templatesにあるCode coverage output with Istanbulを使ってjasmineテストのcoverageの計測をしようとしているのですが、XMLHttpRequestを実行するところでCross Originの制約にひっかかってエラーになってしまう。localhostで実行されるのが理由かなとは思われるのですが、普通にjasmineテストを実行した場合はひっかからない不思議...（エラーに「file://」が出ているのも不明） jasmineのcoverage用のタスクのオプションでhostをlocalhostに指定していなかったためだった。そのため、localfile system (file://) で起動していた... 設定を追加したらCORSの設定は必要なかった。",
       "date": "2013-07-31T11:00:00.000Z",
       "score": 0.8902625245881418
-    }
-  ],
-  "2022/Unexpected-reserved-word-interface-on-jest": [
-    {
-      "id": "2020/top-level-await-will-be-soon",
-      "title": "Top-level await will be soon",
-      "excerpt": "asyncとawaitの書き方に慣れてくると、非同期の処理を待つ時はいつでもawaitを使いたくなるのだが、使えるのはasyncのついたfunctionの中だけでトップレベルでは使えない。",
-      "date": "2020-02-08T05:55:41.000Z",
-      "featured": {
-        "image": "kai-pilger-1k3vsv7iIIc-unsplash",
-        "author": "Kai Pilger",
-        "authorLink": "https://unsplash.com/@kaip?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.7615248561868302
-    },
-    {
-      "id": "2013/12/update_xcode_deployment_info_with_node_xcode",
-      "title": "gruntからXcodeプロジェクトのDeployment infoを変更する",
-      "excerpt": "gruntからXcodeプロジェクトのDeployment infoを変更する。Xcodeから変更するのは簡単。でもそれをgruntでtaskとして実行する。こうした作業をgrunt taskで行うメリットは、繰り返し行う作業の場合は、それを自動化できるという点。",
-      "date": "2013-12-08T20:00:00.000Z",
-      "score": 0.7594346494798407
-    },
-    {
-      "id": "2020/optional-chaining-and-nullish-coalescing",
-      "title": "Optional chaining and Nullish coalescing",
-      "excerpt": "ES2020で新しく追加された機能（ECMAScript 2016+ compatibility tableの画面の下の方にある）はどれもわりと実用的で、なくても大丈夫なんだけどあると便利といったものが並んでいる。Bigintは日常的には使わないとは思うけど。  その中で、Nullish coalescingとOptional chaining はかなり便利。なくても大丈夫だし、使わなくても良いんだけど、便利だから日常的に書かれるJavaScriptの書き方を変えるものになると思う。",
-      "date": "2020-02-06T07:25:28.000Z",
-      "featured": {
-        "image": "ben-hershey-1IZBAlIs4ug-unsplash",
-        "author": "Ben Hershey",
-        "authorLink": "https://unsplash.com/@introspectivedsgn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.7518247417010692
-    },
-    {
-      "id": "2013/08/generate_sass_sourcemap_with_compass",
-      "title": "compass で sass の sourcemap を作る",
-      "excerpt": "sassのsourcemapを用意すると、Chromeのdeveloper toolsを使ったときにscssファイルでスタイルのinspectができるようになるので、非常に便利。詳細はSassファイルでの記述位置を知るより美しい方法｜Blog｜Skyward Designなどを参照。",
-      "date": "2013-08-21T14:00:00.000Z",
-      "score": 0.7441948446356251
     }
   ],
   "2020/web-workers-work-on-ie10": [
@@ -743,6 +753,10 @@
       "title": "ブログと情報発信",
       "excerpt": "突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。",
       "date": "2005-03-06T03:36:24.000Z",
+      "featured": {
+        "image": "post_67.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9042292829841931
     }
   ],
@@ -916,6 +930,17 @@
   ],
   "2020/logical-assignment-operators": [
     {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8982089341283057
+    },
+    {
       "id": "2020/optional-chaining-and-nullish-coalescing",
       "title": "Optional chaining and Nullish coalescing",
       "excerpt": "ES2020で新しく追加された機能（ECMAScript 2016+ compatibility tableの画面の下の方にある）はどれもわりと実用的で、なくても大丈夫なんだけどあると便利といったものが並んでいる。Bigintは日常的には使わないとは思うけど。  その中で、Nullish coalescingとOptional chaining はかなり便利。なくても大丈夫だし、使わなくても良いんだけど、便利だから日常的に書かれるJavaScriptの書き方を変えるものになると思う。",
@@ -928,17 +953,6 @@
       "score": 0.8961337964833567
     },
     {
-      "id": "2025/generate-related-posts",
-      "title": "記事に関連メモを出してみる",
-      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
-      "date": "2025-04-10T23:15:00.000Z",
-      "featured": {
-        "image": "generate-related-posts.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.8937562584420892
-    },
-    {
       "id": "2014/08/convert_indexof_result_with_bitwise_operators",
       "title": "indexOf とビット演算子",
       "excerpt": "String.prototype.indexOf() - JavaScript | MDNは、Stringの中の文字があったら、その文字の開始位置を返して、ない場合は「-1」を返します。",
@@ -948,8 +962,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.870726892945765
     }
   ],
@@ -981,8 +1000,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8818413512776933
     },
     {
@@ -1078,8 +1102,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.9122484060007663
     }
   ],
@@ -1469,8 +1498,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8576641803237847
     }
   ],
@@ -2085,8 +2119,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8716686877147192
     },
     {
@@ -2247,8 +2286,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8751020850268352
     },
     {
@@ -2299,8 +2343,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8906649305030013
     }
   ],
@@ -2424,7 +2473,7 @@
       "score": 0.6281750677814759
     },
     {
-      "id": "2022/Unexpected-reserved-word-interface-on-jest",
+      "id": "2022/unexpected-reserved-word-interface-on-jest",
       "title": "Unexpected reserved word 'interface' on jest",
       "excerpt": "jestを28以降に更新したら、jestの実行時に`Unexpected reserved word 'interface'`みたいなエラーが返ってくるようになった。エラーの発生源はbabel-parserでinterfaceは予約語に含まれているため。typescriptで利用しているinterfaceがここでエラーになる。",
       "date": "2022-09-30T06:23:42.000Z",
@@ -2460,13 +2509,23 @@
       "title": "あらためて IE8 について",
       "excerpt": "少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。",
       "date": "2013-08-08T14:00:00.000Z",
+      "featured": {
+        "image": "frode-myklebust-rHs9qFMrcDk-unsplash.webp",
+        "author": "Frode Myklebust",
+        "authorLink": "https://unsplash.com/ja/@famyklebust?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8873269074242476
     },
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8741821700829591
     }
   ],
@@ -2855,18 +2914,6 @@
       "score": 0.8471551978911901
     },
     {
-      "id": "2018/image-manipulation-with-primitive",
-      "title": "Primitiveを使って画像を変換する",
-      "excerpt": "Featured Image とか言いながら、ただ写真を置くだけなのも何だなあとか思い、Primitiveを使用して、上に表示されている画像を変換してみた。Primitive は画像を幾何学的な Primitive（線とか丸、三角、四角）の集まりに変換してくれる。試行錯誤した結果を貼り付けていく。画像の下に変換するときに使用したオプションを添付してある。",
-      "date": "2018-01-14T06:44:06.000Z",
-      "featured": {
-        "author": "Rommanas Kongmeng",
-        "image": "rommanas-kongmeng-422586",
-        "authorLink": "https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.8436133584624825
-    },
-    {
       "id": "2018/convert-multiple-primitive-images-at-once",
       "title": "Primitiveの変換をまとめて行う",
       "excerpt": "Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。",
@@ -2884,6 +2931,18 @@
       "excerpt": "小ネタでも挟もうではありませんか。watir-webdriverを使って簡単にスクリーンショット撮ることができます。Macにはrubyがもともと入っているので、事前準備はwatir-webdriverをインストールするだけです。インストールは、ターミナルを開いて下記のコマンドを実行する。",
       "date": "2011-09-03T12:00:00.000Z",
       "score": 0.8378260126480132
+    },
+    {
+      "id": "2020/load-jquery-in-developer-console",
+      "title": "Load jQuery library in the Chrome developer console",
+      "excerpt": "スクリプト内のDOM操作でjQueryを使っているけれど、処理がスクリプト内で完結していて、GlobalにはjQueryをロードさせていないという場合がある。あると思う。  そういった場合、例えばそのスクリプトに新しい実装を入れたいけどjQueryでのDOM操作が自分の期待通りに行えるかをChromeのデベロッパーツールでちょっと確認したいみたいな時に少し困る。大して困らない気もするけど、少し手間ではある。",
+      "date": "2020-02-04T07:19:43.000Z",
+      "featured": {
+        "image": "harsh-jain-xoMeq3-GwTY-unsplash",
+        "author": "Harsh Jain",
+        "authorLink": "https://unsplash.com/@harshjain1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.8214763853717929
     }
   ],
   "2018/merge-sort-in-javascript": [
@@ -2902,8 +2961,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.9228205163974593
     },
     {
@@ -3058,8 +3122,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.9212843029039693
     }
   ],
@@ -3135,6 +3204,11 @@
       "title": "あらためて IE8 について",
       "excerpt": "少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。",
       "date": "2013-08-08T14:00:00.000Z",
+      "featured": {
+        "image": "frode-myklebust-rHs9qFMrcDk-unsplash.webp",
+        "author": "Frode Myklebust",
+        "authorLink": "https://unsplash.com/ja/@famyklebust?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.9262713673907756
     },
     {
@@ -3152,36 +3226,47 @@
   ],
   "2018/image-manipulation-with-primitive": [
     {
+      "id": "2020/got-100-lighthouse-score-in-all-categories-on-mobile",
+      "title": "Got 100 lighthouse score in all categories on mobile",
+      "excerpt": "ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。",
+      "date": "2020-09-16T12:45:52.000Z",
+      "featured": {
+        "image": "ben-koorengevel-tpIWpoW3_Wc-unsplash",
+        "author": "Ben Koorengevel",
+        "authorLink": "https://unsplash.com/@benkoorengevel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.8964260829733914
+    },
+    {
       "id": "2009/05/dp1",
       "title": "明治神宮と原宿と雨上がりとdp1",
       "excerpt": "4月の中頃に明治神宮に行ってきました。初めて行く場所ではマイ最強装備であるEOS 5D mark IIを持って行くのですが、明治神宮には何回か訪れているので今回は手軽なDP1を持参。この日は雨上がりだったので、ひさびさにサーキュラーをつけてみました。DP1でサーキュレータを利用すると、昼間でも光量が足りずにシャッタースピードが遅くなりがちですが、そこは絞り開放で撮るとか、日陰では撮らないとか、ISO感度を200にするとかして光量を工面（あと、頑張って固定する）。この光量を工面しつつ、カメラをぶらさないようになんとかかんとか工夫して撮るのが個人的にDP1の楽しいところ。",
       "date": "2009-05-06T08:38:49.000Z",
-      "score": 0.8695604178517308
+      "score": 0.8922764936763041
     },
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
-      "score": 0.8550585348558862
-    },
-    {
-      "id": "2012/09/css_transforms_sample",
-      "title": "CSS Transforms：くるくる回るサイコロのサンプル",
-      "excerpt": "CSS Transforms関連記事のまとめ的意味を込めて、くるくる回るサイコロを作成してみました。下のサイコロ（の開き）をクリック（またはhover）すると、クリックした間だけアニメーションします。CSSのみ（と思ったらiPhoneだと期待したようにactive状態にならないので、touchstartしたときにdice-actionというclassを追加するようにJavascriptを入れた）。",
-      "date": "2012-09-26T22:00:00.000Z",
-      "score": 0.8547805789333572
-    },
-    {
-      "id": "2018/display-featured-image",
-      "title": "Featured Image を設置する",
-      "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
-      "date": "2018-01-08T11:07:38.000Z",
       "featured": {
-        "image": "display-featured-image.webp",
-        "author": "chatGPT"
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
       },
-      "score": 0.8516320502873275
+      "score": 0.8896692611450873
+    },
+    {
+      "id": "2018/add-json-ld-structured-data",
+      "title": "Add JSON-LD structured data",
+      "excerpt": "構造化データ（structured data）の部分をmicrodataからJSON-LDに置き換えてみた。",
+      "date": "2018-08-14T18:04:54.000Z",
+      "featured": {
+        "image": "thomas-kelley-75110-unsplash",
+        "author": "Thomas Kelley",
+        "authorLink": "https://unsplash.com/photos/HBANPxXi3aQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.8870833031219626
     }
   ],
   "2018/how-to-learn": [
@@ -3349,13 +3434,6 @@
       "score": 0.8967483122887805
     },
     {
-      "id": "2007/09/mtif",
-      "title": "MTIfタグを利用したタブ型ナビゲーション",
-      "excerpt": "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム",
-      "date": "2007-09-12T17:14:00.000Z",
-      "score": 0.8775194589691611
-    },
-    {
       "id": "2018/about-typedarray-prototype-sort",
       "title": "TypedArray.prototype.sort について",
       "excerpt": "前回の「Array.prototype.sort について」に引き続き、今度はTypedArrayのsortについて。実装は別だけど対応は基本的に同じなので簡単に。",
@@ -3368,16 +3446,27 @@
       "score": 0.8758434788648584
     },
     {
-      "id": "2018/complete-all-the-pwa-checklist",
-      "title": "PWAのチェックリストを満たす",
-      "excerpt": "たいして更新もしない個人のブログで Service Worker とか入れる必要まったくないと思いながらも、Lighthouse の結果を見るたびに「PWAのチェックリストだけ100点に至らない」というなんとも言えないモヤモヤ感があった。別にそんなに大変でもないんだから入れてしまえ、ということでPWAのチェックリストを満たすべく、Service Worker と App manifest に対応しました。",
-      "date": "2018-07-14T11:32:41.000Z",
+      "id": "2007/09/mtif",
+      "title": "MTIfタグを利用したタブ型ナビゲーション",
+      "excerpt": "Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。",
+      "date": "2007-09-12T17:14:00.000Z",
       "featured": {
-        "image": "cloudvisual-146380-unsplash",
-        "author": "CloudVisual",
-        "authorLink": "https://unsplash.com/photos/sm8OE9daK2A?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "kevin-charit-KU9D4Sz6IDY-unsplash.webp",
+        "author": "Kevin Charit",
+        "authorLink": "https://unsplash.com/ja/@kevin_charit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
       },
-      "score": 0.8725134795505622
+      "score": 0.8735488431421213
+    },
+    {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8735078749008651
     }
   ],
   "2018/create-a-new-icon": [
@@ -3633,17 +3722,6 @@
       "score": 0.8185653254348192
     },
     {
-      "id": "2025/generate-related-posts",
-      "title": "記事に関連メモを出してみる",
-      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
-      "date": "2025-04-10T23:15:00.000Z",
-      "featured": {
-        "image": "generate-related-posts.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.7846897203357515
-    },
-    {
       "id": "2020/css-property-conventions",
       "title": "CSS property conventions",
       "excerpt": "前回のThe display property definition in CSS2に引き続き。1.2. Valuesに、プロパティの仕様については1.4.2 CSS property definitionsの表記に従うと書いてあるので、そのあたりを確認していく。",
@@ -3661,21 +3739,43 @@
       "excerpt": "たとえば、画像ファイルが上書きされているかどうかを確認したい場合などで、画像のsrcなどには差分がなく画像データを比較しないとその動作の正否が分からないとか、そういうときはやはり画像データを評価して差を見るしかない。",
       "date": "2011-09-11T13:36:00.000Z",
       "score": 0.7733611428327883
+    },
+    {
+      "id": "2020/display-value-property-3",
+      "title": "The display value property (box / legacy)",
+      "excerpt": "The display value property (list-item / internal)の続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて、残りのboxとlegacyについて確認していく。",
+      "date": "2020-03-09T18:35:47.000Z",
+      "featured": {
+        "image": "whoisbenjamin-ApJp5Nk24a0-unsplash",
+        "author": "Whoisbenjamin",
+        "authorLink": "https://unsplash.com/@whoisbenjamin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.7733515461074972
     }
   ],
   "2018/add-json-ld-structured-data": [
     {
       "id": "2007/09/mtif",
       "title": "MTIfタグを利用したタブ型ナビゲーション",
-      "excerpt": "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム",
+      "excerpt": "Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。",
       "date": "2007-09-12T17:14:00.000Z",
-      "score": 0.9092348365426663
+      "featured": {
+        "image": "kevin-charit-KU9D4Sz6IDY-unsplash.webp",
+        "author": "Kevin Charit",
+        "authorLink": "https://unsplash.com/ja/@kevin_charit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.9050820928425244
     },
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.8900703741519381
     },
     {
@@ -3686,16 +3786,16 @@
       "score": 0.889998173855762
     },
     {
-      "id": "2018/insertion-sort-in-javascript",
-      "title": "Insertion Sort in JavaScript",
-      "excerpt": "Selection Sort in JavaScriptの記事から引き続き。内容は挿入ソートからの抜粋なので詳細はそちらを参照。",
-      "date": "2018-08-07T05:47:14.000Z",
+      "id": "2018/image-manipulation-with-primitive",
+      "title": "Primitiveを使って画像を変換する",
+      "excerpt": "Featured Image とか言いながら、ただ写真を置くだけなのも何だなあとか思い、Primitiveを使用して、上に表示されている画像を変換してみた。Primitive は画像を幾何学的な Primitive（線とか丸、三角、四角）の集まりに変換してくれる。試行錯誤した結果を貼り付けていく。画像の下に変換するときに使用したオプションを添付してある。",
+      "date": "2018-01-14T06:44:06.000Z",
       "featured": {
-        "image": "mingwei-dong-651103-unsplash",
-        "author": "mingwei dong",
-        "authorLink": "https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "author": "Rommanas Kongmeng",
+        "image": "rommanas-kongmeng-422586",
+        "authorLink": "https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
-      "score": 0.8846851822441343
+      "score": 0.8870833031219626
     }
   ],
   "2018/about-typedarray-prototype-sort": [
@@ -3733,8 +3833,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8981320682697936
     }
   ],
@@ -3865,15 +3970,25 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8751598175585911
     },
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.8747826224275762
     }
   ],
@@ -3932,8 +4047,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.8971857879262405
     },
     {
@@ -4400,22 +4520,18 @@
       "score": 0.8405197184822056
     },
     {
-      "id": "2025/generate-related-posts",
-      "title": "記事に関連メモを出してみる",
-      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
-      "date": "2025-04-10T23:15:00.000Z",
-      "featured": {
-        "image": "generate-related-posts.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.8397192130779336
-    },
-    {
       "id": "2013/01/jquery_peformance_about_creating_element",
       "title": "jQueryで要素を作成するときのパフォーマンス",
       "excerpt": "jQueryで要素を作成する場合、jQuery()のExampleを参考にすると、作り方としては下記の二通りの方法があります。",
       "date": "2013-01-15T16:15:00.000Z",
       "score": 0.8230153274372156
+    },
+    {
+      "id": "2016/01/angular2_with_decorators",
+      "title": "Angular2とDecorators",
+      "excerpt": "Decorators は ECMAScript で Propose となっている実装で、Angular 2 と TypeScript を使った実装ではよく出てくる。 Exploring ES2016 Decorators -- Google Developers -- Mediumを参考にすると、定義したfunction名の頭に「@」をつけて、使いたいclassやpropertyの前に記述するらしい。",
+      "date": "2016-01-13T16:15:00.000Z",
+      "score": 0.8219907435491937
     }
   ],
   "2013/12/update_xcode_deployment_info_with_node_xcode": [
@@ -4534,8 +4650,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8546025164878024
     },
     {
@@ -4919,8 +5040,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.9034691615207339
     }
   ],
@@ -5055,17 +5181,6 @@
       "score": 0.9262713673907756
     },
     {
-      "id": "2025/hello-astro",
-      "title": "Hello Astro",
-      "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
-      "date": "2025/04/09 09:00:00",
-      "featured": {
-        "image": "hello-astro.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.9241979947065603
-    },
-    {
       "id": "2025/scored-100-on-lighthouse-again",
       "title": "Lighthouseで再び100点をとる",
       "excerpt": "特に意味はないんだけど、LighthouseのScoreが微妙に100点になっていなかったので、ふたたび100点を目指して修正してみました。",
@@ -5076,20 +5191,20 @@
         "authorLink": "https://artvee.com/artist/john-marin/"
       },
       "score": 0.9214568394098318
+    },
+    {
+      "id": "2012/05/css_selector_performance",
+      "title": "CSS Selector Performance",
+      "excerpt": "Performance CalendarにWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
+      "date": "2012-05-27T15:00:00.000Z",
+      "featured": {
+        "image": "css_selector_performance.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.9200008479924662
     }
   ],
   "2013/08/spy_on_requirejs_module": [
-    {
-      "id": "2025/generate-related-posts",
-      "title": "記事に関連メモを出してみる",
-      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
-      "date": "2025-04-10T23:15:00.000Z",
-      "featured": {
-        "image": "generate-related-posts.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.8039027389025868
-    },
     {
       "id": "2020/logical-assignment-operators",
       "title": "Logical AND/OR/Nullish assignment operators",
@@ -5120,6 +5235,18 @@
       "excerpt": "jQueryで要素を作成する場合、jQuery()のExampleを参考にすると、作り方としては下記の二通りの方法があります。",
       "date": "2013-01-15T16:15:00.000Z",
       "score": 0.7899673597938565
+    },
+    {
+      "id": "2018/convert-multiple-primitive-images-at-once",
+      "title": "Primitiveの変換をまとめて行う",
+      "excerpt": "Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。",
+      "date": "2018-01-30T22:50:15.000Z",
+      "featured": {
+        "image": "kazuend-25767",
+        "author": "kazuend",
+        "authorLink": "https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.7844886698422749
     }
   ],
   "2013/08/specificity_of_pseudo_class": [
@@ -5213,8 +5340,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8806863356212087
     },
     {
@@ -5393,7 +5525,7 @@
         "image": "generate-related-posts.webp",
         "author": "chatGPT"
       },
-      "score": 0.8891344337515824
+      "score": 0.8907055420872075
     },
     {
       "id": "2018/insertion-sort-in-javascript",
@@ -5410,8 +5542,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8728958425044249
     }
   ],
@@ -5479,8 +5616,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.921626802770015
     },
     {
@@ -5729,8 +5871,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.9234426238241428
     },
     {
@@ -5820,8 +5967,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8935446519861161
     }
   ],
@@ -5864,15 +6016,25 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.9080674110420897
     },
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.904181669397817
     },
     {
@@ -5991,8 +6153,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.8939500467717277
     },
     {
@@ -6506,18 +6673,22 @@
       "score": 0.8735023321947234
     },
     {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.87227384077446
+    },
+    {
       "id": "2008/02/target_pseudo_selector",
       "title": "target疑似クラスを使って、表示をオン・オフする",
       "excerpt": "*   Vitamin Features » Stay on :target *   :target pseudo selector tutorial - CSS3 . Info",
       "date": "2008-02-03T04:40:00.000Z",
       "score": 0.8720735697205867
-    },
-    {
-      "id": "2012/06/viewport_declaration_in_css",
-      "title": "viewportをCSSで指定する",
-      "excerpt": "Internet Explorer 10 Guide for DevelopersのDevice adaptationにて、@viewportについての説明がされています。現時点ではmsのprefixが必要なので、実際に使用する場合は @-ms-viewportということになる（そして@-o-viewportの形でOperaでも対応しているとBruce Lawsonからコメントがついている）。",
-      "date": "2012-06-24T22:00:00.000Z",
-      "score": 0.8679338115234839
     }
   ],
   "2012/09/css_transforms_3d_and_perspective": [
@@ -6597,7 +6768,7 @@
         "image": "rommanas-kongmeng-422586",
         "authorLink": "https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
-      "score": 0.8178317763851521
+      "score": 0.8225743247491685
     }
   ],
   "2012/09/css_transforms_2d": [
@@ -6634,9 +6805,14 @@
     {
       "id": "2007/09/mtif",
       "title": "MTIfタグを利用したタブ型ナビゲーション",
-      "excerpt": "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム",
+      "excerpt": "Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。",
       "date": "2007-09-12T17:14:00.000Z",
-      "score": 0.9196381979872581
+      "featured": {
+        "image": "kevin-charit-KU9D4Sz6IDY-unsplash.webp",
+        "author": "Kevin Charit",
+        "authorLink": "https://unsplash.com/ja/@kevin_charit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.9118460066005029
     },
     {
       "id": "2008/02/target_pseudo_selector",
@@ -6791,8 +6967,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.9156610186132795
     },
     {
@@ -6812,8 +6993,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.9128926171010172
     }
   ],
@@ -6869,6 +7055,11 @@
       "title": "あらためて IE8 について",
       "excerpt": "少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。",
       "date": "2013-08-08T14:00:00.000Z",
+      "featured": {
+        "image": "frode-myklebust-rHs9qFMrcDk-unsplash.webp",
+        "author": "Frode Myklebust",
+        "authorLink": "https://unsplash.com/ja/@famyklebust?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.9143287598531552
     },
     {
@@ -7037,13 +7228,6 @@
       "score": 0.9000537288544765
     },
     {
-      "id": "2012/05/last-child-required-the-last-child-in-the-parent-element",
-      "title": "last-child は親要素からみて最後の子要素",
-      "excerpt": "（そのままではないか）  たとえば以下のようなHTMLがあるとして、",
-      "date": "2012-05-24T15:00:00.000Z",
-      "score": 0.8923227967401816
-    },
-    {
       "id": "2025/generate-related-posts",
       "title": "記事に関連メモを出してみる",
       "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
@@ -7052,13 +7236,25 @@
         "image": "generate-related-posts.webp",
         "author": "chatGPT"
       },
-      "score": 0.8849981068820475
+      "score": 0.8925053100538748
+    },
+    {
+      "id": "2012/05/last-child-required-the-last-child-in-the-parent-element",
+      "title": "last-child は親要素からみて最後の子要素",
+      "excerpt": "（そのままではないか）  たとえば以下のようなHTMLがあるとして、",
+      "date": "2012-05-24T15:00:00.000Z",
+      "score": 0.8923227967401816
     },
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.882099694084488
     }
   ],
@@ -7132,6 +7328,11 @@
       "title": "あらためて IE8 について",
       "excerpt": "少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。",
       "date": "2013-08-08T14:00:00.000Z",
+      "featured": {
+        "image": "frode-myklebust-rHs9qFMrcDk-unsplash.webp",
+        "author": "Frode Myklebust",
+        "authorLink": "https://unsplash.com/ja/@famyklebust?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.9359291653814574
     },
     {
@@ -7182,34 +7383,53 @@
       "score": 0.8923227967401816
     },
     {
+      "id": "2025/generate-related-posts",
+      "title": "記事に関連メモを出してみる",
+      "excerpt": "記事データをベクトル化して、関連記事（メモ）を表示できるか試してみた、というメモ。",
+      "date": "2025-04-10T23:15:00.000Z",
+      "featured": {
+        "image": "generate-related-posts.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.883592350355416
+    },
+    {
       "id": "2007/09/mtif",
       "title": "MTIfタグを利用したタブ型ナビゲーション",
-      "excerpt": "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム",
+      "excerpt": "Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。",
       "date": "2007-09-12T17:14:00.000Z",
-      "score": 0.8871352427137628
+      "featured": {
+        "image": "kevin-charit-KU9D4Sz6IDY-unsplash.webp",
+        "author": "Kevin Charit",
+        "authorLink": "https://unsplash.com/ja/@kevin_charit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.8800269786335376
     },
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.8780816744634938
-    },
-    {
-      "id": "2009/03/flickr_thickbox",
-      "title": "ThickBox対応したFlickrのAction Streamを作成する",
-      "excerpt": "Action Streamで得たFlickrのActivityをThickBoxを利用して表示したいなと思いたち、そこで独自のAction Streamsプラグインを作成するのページと、既存のAction Stream pluginとGoogle検索などを見ながら、自分用のFlickr for thickbox pluginを作成してみました。",
-      "date": "2009-03-29T07:26:10.000Z",
-      "score": 0.8737408790180987
     }
   ],
   "2012/05/invited_elements": [
     {
       "id": "2007/09/mtif",
       "title": "MTIfタグを利用したタブ型ナビゲーション",
-      "excerpt": "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム",
+      "excerpt": "Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。",
       "date": "2007-09-12T17:14:00.000Z",
-      "score": 0.9418941853891767
+      "featured": {
+        "image": "kevin-charit-KU9D4Sz6IDY-unsplash.webp",
+        "author": "Kevin Charit",
+        "authorLink": "https://unsplash.com/ja/@kevin_charit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.9367661253198943
     },
     {
       "id": "2025/scored-100-on-lighthouse-again",
@@ -7237,8 +7457,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.9234426238241428
     }
   ],
@@ -7258,8 +7483,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8776597119937064
     },
     {
@@ -7271,7 +7501,7 @@
         "image": "generate-related-posts.webp",
         "author": "chatGPT"
       },
-      "score": 0.8746614670518946
+      "score": 0.8733319716036706
     },
     {
       "id": "2018/bubble-sort-in-javascript",
@@ -7352,8 +7582,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.9259110187769898
     },
     {
@@ -7398,8 +7633,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.8444098825397415
     }
   ],
@@ -7609,17 +7849,6 @@
   ],
   "2011/12/redesign_2012": [
     {
-      "id": "2025/hello-astro",
-      "title": "Hello Astro",
-      "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
-      "date": "2025/04/09 09:00:00",
-      "featured": {
-        "image": "hello-astro.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.9450814093760291
-    },
-    {
       "id": "2018/show-vertical-writing-with-css",
       "title": "縦書きで表示する",
       "excerpt": "最近になってwriting-modeを使うと文章の表示を簡単に縦書きにできるということを最近知った。ので、この記事では縦書きの表示を試している。以下の文章は文章量が長くなった時にどう表示されるのかを知りたくて入れているだけなので、内容的にほぼ意味はない（ないというほどでもないけど限りなく無に近いものではある）。なおインデックスページでは横書きである。",
@@ -7653,6 +7882,13 @@
         "authorLink": "https://unsplash.com/photos/71hQxE-Sfvg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.9300454066605759
+    },
+    {
+      "id": "2009/01/post_180",
+      "title": "今年の抱負（とデザイン変更）",
+      "excerpt": "ブログの見た目を少し変えてみたのです。シンプルに。jqueryを試してみたのだが、TypePad Connectで利用しているYUIと相性がよろしくないよう。回避方法が皆目見当がつかなかったので、TypePad Connect はとりあえずクローズした。とりあえず。暇なときにちょこちょこ変えていこうと思う。",
+      "date": "2009-01-03T03:45:53.000Z",
+      "score": 0.925839281745457
     }
   ],
   "2011/09/watir-webdriver-csv-download": [
@@ -7780,8 +8016,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8418629395159073
     },
     {
@@ -8167,6 +8408,10 @@
       "title": "ブログと情報発信",
       "excerpt": "突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。",
       "date": "2005-03-06T03:36:24.000Z",
+      "featured": {
+        "image": "post_67.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9352924262952206
     }
   ],
@@ -8407,17 +8652,6 @@
       "score": 0.9250227468770154
     },
     {
-      "id": "2025/hello-astro",
-      "title": "Hello Astro",
-      "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
-      "date": "2025/04/09 09:00:00",
-      "featured": {
-        "image": "hello-astro.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.9233019664686649
-    },
-    {
       "id": "2018/bubble-sort-in-javascript",
       "title": "Bubble Sort in JavaScript",
       "excerpt": "Array.prototype.sort についてとTypedArray.prototype.sort についてで書いたようにビルトインされているsortメソッドが効率的なソートを実行できるように実装されているので、JavaScript上で自前のソートを実装する意味はあまりないのだけど、試しにバブルソートをJavaScript上で作ってみた。",
@@ -8439,6 +8673,18 @@
         "author": "chatGPT"
       },
       "score": 0.9196397871931574
+    },
+    {
+      "id": "2018/import-from-old-blog",
+      "title": "古い記事をインポートする",
+      "excerpt": "ブログの古い記事なんてほとんど顧みることはない。ほとんどの記事が「以前は役に立ったかもしれないけど、すでに役には立たない」コードの端切れのようなもので古い記事なんてそのまま放置していつの日かインターネットから姿を消すくらいでもいいかなあとか思っていた。  のだが、数は少ないけどまだ誰かの役に立つかもしれないものもたぶんあるだろうし、過去の時点で自分が何を書いていたのか振り返ることもあるかもしれない（今まで一度もなかったけど）と思い直し、頑張ってインポートをしてみることにした。",
+      "date": "2018-01-04T03:36:06.000Z",
+      "featured": {
+        "author": "Jordan Sanchez",
+        "image": "jordan-sanchez-111052",
+        "authorLink": "https://unsplash.com/photos/71hQxE-Sfvg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.9147577308169308
     }
   ],
   "2010/12/optimize_css_selectors": [
@@ -8532,8 +8778,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8588153575124882
     },
     {
@@ -8646,6 +8897,11 @@
       "title": "あらためて IE8 について",
       "excerpt": "少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。",
       "date": "2013-08-08T14:00:00.000Z",
+      "featured": {
+        "image": "frode-myklebust-rHs9qFMrcDk-unsplash.webp",
+        "author": "Frode Myklebust",
+        "authorLink": "https://unsplash.com/ja/@famyklebust?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8819401541584373
     },
     {
@@ -9500,6 +9756,10 @@
       "title": "本：トム・ピーターズのデザイン魂",
       "excerpt": "前回のエントリーで「手持ちの良書を復読する」と言いながら、以前から気になっていたこの本を新しく買って読んでしまいました。しかし熟読したわけではなく、2時間半くらいでざっくりと読んでいます。",
       "date": "2005-11-05T17:03:04.000Z",
+      "featured": {
+        "image": "post_113.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9132313079787473
     },
     {
@@ -9638,6 +9898,10 @@
       "title": "ブログと情報発信",
       "excerpt": "突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。",
       "date": "2005-03-06T03:36:24.000Z",
+      "featured": {
+        "image": "post_67.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9301498326967397
     },
     {
@@ -10158,15 +10422,25 @@
     {
       "id": "2007/09/mtif",
       "title": "MTIfタグを利用したタブ型ナビゲーション",
-      "excerpt": "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム",
+      "excerpt": "Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。",
       "date": "2007-09-12T17:14:00.000Z",
-      "score": 0.9178490715374955
+      "featured": {
+        "image": "kevin-charit-KU9D4Sz6IDY-unsplash.webp",
+        "author": "Kevin Charit",
+        "authorLink": "https://unsplash.com/ja/@kevin_charit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.9160247840911988
     },
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.9104066487022885
     },
     {
@@ -10422,8 +10696,13 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.9198345104410722
     },
     {
@@ -10459,6 +10738,10 @@
       "title": "ブログと情報発信",
       "excerpt": "突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。",
       "date": "2005-03-06T03:36:24.000Z",
+      "featured": {
+        "image": "post_67.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9332815153994115
     },
     {
@@ -10988,6 +11271,10 @@
       "title": "本：トム・ピーターズのデザイン魂",
       "excerpt": "前回のエントリーで「手持ちの良書を復読する」と言いながら、以前から気になっていたこの本を新しく買って読んでしまいました。しかし熟読したわけではなく、2時間半くらいでざっくりと読んでいます。",
       "date": "2005-11-05T17:03:04.000Z",
+      "featured": {
+        "image": "post_113.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9273030450654293
     }
   ],
@@ -11253,6 +11540,11 @@
       "title": "近年のWEBとこれからのWEB",
       "excerpt": "新年ということで、近年のWEBとこれからのWEBについてマインドマップを広げてみました（マインドマップはエントリーの下の方に掲載）。そして、ざっくりと所感をまとめてみました。",
       "date": "2006-01-02T08:17:00.000Z",
+      "featured": {
+        "image": "916804ilsdl.webp",
+        "author": "Randolph Caldecott",
+        "authorLink": "https://artvee.com/artist/randolph-caldecott/"
+      },
       "score": 0.7578848709652006
     },
     {
@@ -11310,13 +11602,6 @@
       "score": 0.90962283715009
     },
     {
-      "id": "2007/09/mtif",
-      "title": "MTIfタグを利用したタブ型ナビゲーション",
-      "excerpt": "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム",
-      "date": "2007-09-12T17:14:00.000Z",
-      "score": 0.9071920076972363
-    },
-    {
       "id": "2018/import-from-old-blog",
       "title": "古い記事をインポートする",
       "excerpt": "ブログの古い記事なんてほとんど顧みることはない。ほとんどの記事が「以前は役に立ったかもしれないけど、すでに役には立たない」コードの端切れのようなもので古い記事なんてそのまま放置していつの日かインターネットから姿を消すくらいでもいいかなあとか思っていた。  のだが、数は少ないけどまだ誰かの役に立つかもしれないものもたぶんあるだろうし、過去の時点で自分が何を書いていたのか振り返ることもあるかもしれない（今まで一度もなかったけど）と思い直し、頑張ってインポートをしてみることにした。",
@@ -11339,6 +11624,17 @@
         "authorLink": "https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.9023846561676605
+    },
+    {
+      "id": "2013/09/try_typesquare",
+      "title": "TypeSquareを試してみる",
+      "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
+      "date": "2013-09-10T22:55:00.000Z",
+      "featured": {
+        "image": "trying_typesquare.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8994341958401745
     }
   ],
   "2007/10/mac-htaccess": [
@@ -11495,6 +11791,11 @@
       "title": "あらためて IE8 について",
       "excerpt": "少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。",
       "date": "2013-08-08T14:00:00.000Z",
+      "featured": {
+        "image": "frode-myklebust-rHs9qFMrcDk-unsplash.webp",
+        "author": "Frode Myklebust",
+        "authorLink": "https://unsplash.com/ja/@famyklebust?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.907244052908809
     },
     {
@@ -11548,6 +11849,10 @@
       "title": "本：トム・ピーターズのデザイン魂",
       "excerpt": "前回のエントリーで「手持ちの良書を復読する」と言いながら、以前から気になっていたこの本を新しく買って読んでしまいました。しかし熟読したわけではなく、2時間半くらいでざっくりと読んでいます。",
       "date": "2005-11-05T17:03:04.000Z",
+      "featured": {
+        "image": "post_113.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9410250440745123
     }
   ],
@@ -11760,30 +12065,35 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
-      "score": 0.9418941853891767
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
+      "score": 0.9367661253198943
     },
     {
       "id": "2007/08/mt",
       "title": "MTで奇数行、偶数行ごとに背景色をつける方法",
       "excerpt": "*   The blog of H.Fujimoto：Movable Type 4のブロックタグ内で使える変数",
       "date": "2007-07-31T16:41:00.000Z",
-      "score": 0.935438948834737
-    },
-    {
-      "id": "2012/07/rich_snippets_testing_tool",
-      "title": "Microdata/Microformatsの検証ができるRich Snippets Testing Tool",
-      "excerpt": "GoogleのWebmaster toolsのひとつにRich Snippets Testing Toolというのがあって、このツールではサイトに記述したMicrodataやMicroformatsなどの構造化データマークアップ(structured data markup)をGoogleがきちんとパースしてくれるかどうかをチェックすることができます。",
-      "date": "2012-07-01T22:00:00.000Z",
-      "score": 0.9196381979872581
+      "score": 0.9299911798009253
     },
     {
       "id": "2009/03/flickr_thickbox",
       "title": "ThickBox対応したFlickrのAction Streamを作成する",
       "excerpt": "Action Streamで得たFlickrのActivityをThickBoxを利用して表示したいなと思いたち、そこで独自のAction Streamsプラグインを作成するのページと、既存のAction Stream pluginとGoogle検索などを見ながら、自分用のFlickr for thickbox pluginを作成してみました。",
       "date": "2009-03-29T07:26:10.000Z",
-      "score": 0.9178490715374955
+      "score": 0.9160247840911988
+    },
+    {
+      "id": "2008/02/target_pseudo_selector",
+      "title": "target疑似クラスを使って、表示をオン・オフする",
+      "excerpt": "*   Vitamin Features » Stay on :target *   :target pseudo selector tutorial - CSS3 . Info",
+      "date": "2008-02-03T04:40:00.000Z",
+      "score": 0.9130056904626929
     }
   ],
   "2007/09/mt4mt3": [
@@ -12412,13 +12722,6 @@
       "score": 0.903156621538762
     },
     {
-      "id": "2007/09/mtif",
-      "title": "MTIfタグを利用したタブ型ナビゲーション",
-      "excerpt": "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム",
-      "date": "2007-09-12T17:14:00.000Z",
-      "score": 0.8918744117616347
-    },
-    {
       "id": "2013/09/try_typesquare",
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
@@ -12432,9 +12735,26 @@
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.8873304830394959
+    },
+    {
+      "id": "2018/convert-multiple-primitive-images-at-once",
+      "title": "Primitiveの変換をまとめて行う",
+      "excerpt": "Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。",
+      "date": "2018-01-30T22:50:15.000Z",
+      "featured": {
+        "image": "kazuend-25767",
+        "author": "kazuend",
+        "authorLink": "https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.8854807789921967
     }
   ],
   "2007/08/wysiwyg_iedomobjectembed": [
@@ -12664,15 +12984,25 @@
     {
       "id": "2007/09/mtif",
       "title": "MTIfタグを利用したタブ型ナビゲーション",
-      "excerpt": "*   タグリファレンス：MTif *   ＭＴ４から追加されたＭＴＩｆタグ | MT エンジニアブログ | スカイアークシステム",
+      "excerpt": "Movable Type 4 から追加された MTIf タグを利用して、現在いるページがアクティブな状態になるタブ型ナビゲーションを設置してみました。",
       "date": "2007-09-12T17:14:00.000Z",
-      "score": 0.935438948834737
+      "featured": {
+        "image": "kevin-charit-KU9D4Sz6IDY-unsplash.webp",
+        "author": "Kevin Charit",
+        "authorLink": "https://unsplash.com/ja/@kevin_charit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.9299911798009253
     },
     {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
-      "excerpt": "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
       "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
       "score": 0.9104841157254666
     },
     {
@@ -12690,8 +13020,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8980162018937607
     }
   ],
@@ -13059,8 +13394,13 @@
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
-      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。 詳細はSafari CSS Referenceの「-webkit-overflow-scrolling」を参照。値を「touch」にするとnativeアプリでスクロールしたときのような、いわゆる慣性スクロールの状態になる。",
+      "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
       "date": "2013-02-27T15:58:00.000Z",
+      "featured": {
+        "image": "colin-watts-EpzoqfX57PQ-unsplash.webp",
+        "author": "Colin Watts",
+        "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.8845783878059988
     }
   ],
@@ -13623,6 +13963,10 @@
       "title": "ブログと情報発信",
       "excerpt": "突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。",
       "date": "2005-03-06T03:36:24.000Z",
+      "featured": {
+        "image": "post_67.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8975926461472419
     },
     {
@@ -13767,17 +14111,6 @@
       "score": 0.874219809380342
     },
     {
-      "id": "2025/hello-astro",
-      "title": "Hello Astro",
-      "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
-      "date": "2025/04/09 09:00:00",
-      "featured": {
-        "image": "hello-astro.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.8725166472430845
-    },
-    {
       "id": "2013/09/try_typesquare",
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
@@ -13787,6 +14120,17 @@
         "author": "chatGPT"
       },
       "score": 0.8706650501561876
+    },
+    {
+      "id": "2012/06/jquery_masonry",
+      "title": "縦方向のfloatを実現するjQuery Masonry",
+      "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
+      "date": "2012-06-18T12:36:00.000Z",
+      "featured": {
+        "image": "jquery_masonry.webp",
+        "author": "chagGPT"
+      },
+      "score": 0.8557071764610064
     }
   ],
   "2006/03/cd320": [
@@ -13825,6 +14169,10 @@
       "title": "本：トム・ピーターズのデザイン魂",
       "excerpt": "前回のエントリーで「手持ちの良書を復読する」と言いながら、以前から気になっていたこの本を新しく買って読んでしまいました。しかし熟読したわけではなく、2時間半くらいでざっくりと読んでいます。",
       "date": "2005-11-05T17:03:04.000Z",
+      "featured": {
+        "image": "post_113.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8951946018521719
     }
   ],
@@ -14080,6 +14428,11 @@
       "title": "人は肯定的な情報を信じやすい〜バーナム効果",
       "excerpt": "> あなたには使われていない潜在能力がたくさんあります。外面的には、規律を守り、自制することができますが、内面的には性格に弱いところがあります。時には、決断は正しかったか、正しいことをしたのかと悩むこともあります。しかし、一般的に弱点を克服する能力があります。",
       "date": "2005-11-17T15:55:46.000Z",
+      "featured": {
+        "image": "915380ilsdl.webp",
+        "author": "Marion T. Ross",
+        "authorLink": "https://artvee.com/artist/marion-t-ross/"
+      },
       "score": 0.916492319619144
     },
     {
@@ -14108,8 +14461,13 @@
     {
       "id": "2006/03/cd320",
       "title": "最近買ったCD（3/20）",
-      "excerpt": "いろいろと書きたいことはたまりつつも、なかなかまとまりきれずにいます。とりあえず最近買ったCDについてでも・・  #### Arctic Monkeys - Whatever People Say I Am, That's What I'm Not",
+      "excerpt": "いろいろと書きたいことはたまりつつも、なかなかまとまりきれずにいます。とりあえず最近買ったCDについてでも・・",
       "date": "2006-03-19T15:16:06.000Z",
+      "featured": {
+        "image": "201191fgsdl.webp",
+        "author": "Gösta Von Hennigs",
+        "authorLink": "https://artvee.com/artist/gosta-von-hennigs/"
+      },
       "score": 0.8752392437123253
     },
     {
@@ -14161,6 +14519,10 @@
       "title": "ブログと情報発信",
       "excerpt": "突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。",
       "date": "2005-03-06T03:36:24.000Z",
+      "featured": {
+        "image": "post_67.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9357411696753055
     }
   ],
@@ -14640,8 +15002,13 @@
     {
       "id": "2006/03/cd320",
       "title": "最近買ったCD（3/20）",
-      "excerpt": "いろいろと書きたいことはたまりつつも、なかなかまとまりきれずにいます。とりあえず最近買ったCDについてでも・・  #### Arctic Monkeys - Whatever People Say I Am, That's What I'm Not",
+      "excerpt": "いろいろと書きたいことはたまりつつも、なかなかまとまりきれずにいます。とりあえず最近買ったCDについてでも・・",
       "date": "2006-03-19T15:16:06.000Z",
+      "featured": {
+        "image": "201191fgsdl.webp",
+        "author": "Gösta Von Hennigs",
+        "authorLink": "https://artvee.com/artist/gosta-von-hennigs/"
+      },
       "score": 0.9359350440854859
     },
     {
@@ -14665,6 +15032,10 @@
       "title": "SINGER SONGER 「初花凛々」",
       "excerpt": "SINGER SONGER の「初花凛々（しょかりんりん）」がついに家に届きました。",
       "date": "2005-05-28T14:25:04.000Z",
+      "featured": {
+        "image": "singer_songer.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7692969528104129
     },
     {
@@ -14689,8 +15060,13 @@
     {
       "id": "2006/03/cd320",
       "title": "最近買ったCD（3/20）",
-      "excerpt": "いろいろと書きたいことはたまりつつも、なかなかまとまりきれずにいます。とりあえず最近買ったCDについてでも・・  #### Arctic Monkeys - Whatever People Say I Am, That's What I'm Not",
+      "excerpt": "いろいろと書きたいことはたまりつつも、なかなかまとまりきれずにいます。とりあえず最近買ったCDについてでも・・",
       "date": "2006-03-19T15:16:06.000Z",
+      "featured": {
+        "image": "201191fgsdl.webp",
+        "author": "Gösta Von Hennigs",
+        "authorLink": "https://artvee.com/artist/gosta-von-hennigs/"
+      },
       "score": 0.7163456551889219
     }
   ],
@@ -14722,6 +15098,10 @@
       "title": "ブログと情報発信",
       "excerpt": "突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。",
       "date": "2005-03-06T03:36:24.000Z",
+      "featured": {
+        "image": "post_67.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9373764489448416
     },
     {
@@ -14935,6 +15315,11 @@
       "title": "あらためて IE8 について",
       "excerpt": "少し前までIE6で動かないから... というような気がするのですが、気がついたら過去のブラウザになっていて、サポート対象でもIE8が最低限のバージョンという感じになってきました。いつのまにか。  しかしながらIE6の時代が長かったのもあり、IE6でもできることをベースに作成するクセがついている。個人的に。",
       "date": "2013-08-08T14:00:00.000Z",
+      "featured": {
+        "image": "frode-myklebust-rHs9qFMrcDk-unsplash.webp",
+        "author": "Frode Myklebust",
+        "authorLink": "https://unsplash.com/ja/@famyklebust?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
       "score": 0.9018204466802792
     },
     {
@@ -15021,6 +15406,10 @@
       "title": "ブログと情報発信",
       "excerpt": "突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。",
       "date": "2005-03-06T03:36:24.000Z",
+      "featured": {
+        "image": "post_67.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9335529857063496
     },
     {
@@ -15039,6 +15428,10 @@
       "title": "本：トム・ピーターズのデザイン魂",
       "excerpt": "前回のエントリーで「手持ちの良書を復読する」と言いながら、以前から気になっていたこの本を新しく買って読んでしまいました。しかし熟読したわけではなく、2時間半くらいでざっくりと読んでいます。",
       "date": "2005-11-05T17:03:04.000Z",
+      "featured": {
+        "image": "post_113.webp",
+        "author": "chatGPT"
+      },
       "score": 0.9290699179814673
     },
     {
@@ -15231,6 +15624,10 @@
       "title": "ブログと情報発信",
       "excerpt": "突き詰めていけば、信頼できる情報というのは自分の足で調べていった情報・・と、刑事ドラマのような台詞に至るわけですが、全ての情報を一から自分で調べていけば途方もない時間がかかる。それを専門にしているなら別だけれど、専門的でない情報を短い時間で調べないといけない場合の方が多い。そうなればインターネットを頼らざるを得ない。情報収集と信頼性の見極めというのは、頭の痛い問題です。  翻ってブログ運営者としての視点で考えると、自分が発信する情報を、どうやって信頼させるかという課題に至ります。私自身は、リソースを明示することや、論理的に記述することを心がけています。「正しくはないかもしれないけど、何を言いたいのかが分かる文章」を書いていくことが、目下の目標です。",
       "date": "2005-03-06T03:36:24.000Z",
+      "featured": {
+        "image": "post_67.webp",
+        "author": "chatGPT"
+      },
       "score": 0.938306155598494
     },
     {

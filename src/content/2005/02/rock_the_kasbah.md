@@ -1,6 +1,9 @@
 ---
 title: Rock The Kasbah 〜自由の歌〜
 date: 2005-02-09T12:00:12.000Z
+featured:
+  image: rock_the_kasbah.webp
+  author: chatGPT
 categories:
   - 雑文
 tags:

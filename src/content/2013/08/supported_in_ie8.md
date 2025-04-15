@@ -1,6 +1,10 @@
 ---
 title: あらためて IE8 について
 date: 2013-08-08T14:00:00.000Z
+featured:
+  image: frode-myklebust-rHs9qFMrcDk-unsplash.webp
+  author: Frode Myklebust
+  authorLink: https://unsplash.com/ja/@famyklebust?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 categories:
   - web
 tags:

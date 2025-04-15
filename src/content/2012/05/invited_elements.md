@@ -1,11 +1,15 @@
 ---
 title: 独自要素を作成する
 date: 2012-05-29T15:00:00.000Z
+featured:
+  image: 954789ilsdl.webp
+  author: William Henry Walker
+  authorLink: https://artvee.com/artist/william-henry-walker/
 categories:
   - web
 tags:
   - html
-excerpt: "少し前にEric's Archived Thoughts:Invented Elements、Eric's Archived Thoughts:Customizing Your Markup、Eric's Archived Thoughts:Element Customizationで解説されていた話。"
+excerpt: "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。"
 ---
 
 少し前に[Eric's Archived Thoughts:Invented Elements](http://meyerweb.com/eric/thoughts/2012/03/23/invented-elements/)、[Eric's Archived Thoughts:Customizing Your Markup](http://meyerweb.com/eric/thoughts/2012/03/28/customizing-your-markup/)、[Eric's Archived Thoughts:Element Customization](http://meyerweb.com/eric/thoughts/2012/04/10/element-customization/)で解説されていた話。

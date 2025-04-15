@@ -1,6 +1,9 @@
 ---
 title: SINGER SONGER 「初花凛々」
 date: 2005-05-28T14:25:04.000Z
+featured:
+  image: singer_songer.webp
+  author: chatGPT
 categories:
   - 雑文
 tags:

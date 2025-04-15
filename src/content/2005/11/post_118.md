@@ -1,6 +1,10 @@
 ---
 title: 人は肯定的な情報を信じやすい〜バーナム効果
 date: 2005-11-17T15:55:46.000Z
+featured:
+  image: 915380ilsdl.webp
+  author: Marion T. Ross
+  authorLink: https://artvee.com/artist/marion-t-ross/
 categories:
   - 雑文
 tags:

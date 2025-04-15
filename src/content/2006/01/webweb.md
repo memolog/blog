@@ -1,6 +1,10 @@
 ---
 title: 近年のWEBとこれからのWEB
 date: 2006-01-02T08:17:00.000Z
+featured:
+  image: 916804ilsdl.webp
+  author: Randolph Caldecott
+  authorLink: https://artvee.com/artist/randolph-caldecott/
 categories:
   - 雑文
 tags:

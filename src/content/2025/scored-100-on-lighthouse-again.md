@@ -41,3 +41,22 @@ excerpt: 特に意味はないんだけど、LighthouseのScoreが微妙に100�
 まあとにかく、100点いったので記念のスクリーンショット。以前と同じく花火っぽいのが出てくる。
 
 <img src="/assets/images/lighthouse_100_again/lighthouse_100_again.webp" srcset="/assets/images/lighthouse_100_again/lighthouse_100_again.webp, /assets/images/lighthouse_100_again/lighthouse_100_again@2x.webp" class="screenshot" width="921" height="612" loading="lazy" alt="Lighthouseが100点満点のスクリーンショット">
+
+----
+追記（2025/4/15)
+
+上の `extract` だと、たとえば画像の横幅が3000pxあったりすると、画像の真ん中を小さなエリア切り取る感じになってしまうので、[sharp.resize](https://sharp.pixelplumbing.com/api-resize/)でリサイズしつつ切り取る方が自分のやりたいケースとしては適切だった。
+
+```javascript
+    const sharpObject = sharp(buffer);
+    const { width, height } = await sharpObject.metadata();
+
+    if (cropWidth || cropHeight) {
+      cropWidth = (cropWidth || width) * scale;
+      cropHeight = (cropHeight || height) * scale;
+      sharpObject.resize(cropWidth, cropHeight, {
+        fit: "cover",
+        position: "centre"
+      });
+    }
+```

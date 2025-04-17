@@ -789,8 +789,12 @@
     {
       "id": "2007/07/pseudo-classes-pseudo-elements",
       "title": "疑似クラス、疑似要素とは何か",
-      "excerpt": "*   http://www.w3.org/TR/2005/WD-css3-selectors-20051215/#pseudo-classes",
+      "excerpt": "疑似クラスとは「ドキュメントツリーの範囲外の情報、もしくはその他のシンプルなセレクタでは表現できない情報に選択可能にする」というもの。一方、疑似要素とは「ドキュメントツリーについて、抽象的な概念を作り出す」というもの。",
       "date": "2007-07-24T17:50:55.000Z",
+      "featured": {
+        "image": "pseudo-classes-pseudo-elements",
+        "author": "chatGPT"
+      },
       "score": 0.8076433864044961
     },
     {
@@ -819,7 +823,11 @@
       "title": "フォントのサイズを段階的に変更するボタン",
       "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
       "date": "2007-03-04T15:21:05.000Z",
-      "score": 0.8394130405603883
+      "featured": {
+        "image": "post_139.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8409428869821851
     },
     {
       "id": "2018/about-typedarray-prototype-sort",
@@ -902,7 +910,11 @@
       "title": "フォントのサイズを段階的に変更するボタン",
       "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
       "date": "2007-03-04T15:21:05.000Z",
-      "score": 0.789823179095566
+      "featured": {
+        "image": "post_139.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7841390364693421
     },
     {
       "id": "2018/convert-multiple-primitive-images-at-once",
@@ -1960,8 +1972,12 @@
     {
       "id": "2007/07/pseudo-classes-pseudo-elements",
       "title": "疑似クラス、疑似要素とは何か",
-      "excerpt": "*   http://www.w3.org/TR/2005/WD-css3-selectors-20051215/#pseudo-classes",
+      "excerpt": "疑似クラスとは「ドキュメントツリーの範囲外の情報、もしくはその他のシンプルなセレクタでは表現できない情報に選択可能にする」というもの。一方、疑似要素とは「ドキュメントツリーについて、抽象的な概念を作り出す」というもの。",
       "date": "2007-07-24T17:50:55.000Z",
+      "featured": {
+        "image": "pseudo-classes-pseudo-elements",
+        "author": "chatGPT"
+      },
       "score": 0.8919872068136995
     },
     {
@@ -2381,8 +2397,12 @@
     {
       "id": "2007/07/css3-resize",
       "title": "CSS3：resize プロパティ",
-      "excerpt": "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize",
+      "excerpt": "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。",
       "date": "2007-07-29T14:35:00.000Z",
+      "featured": {
+        "image": "css3-resize",
+        "author": "chatGPT"
+      },
       "score": 0.6909608365282693
     },
     {
@@ -3516,6 +3536,17 @@
   ],
   "2018/convert-multiple-primitive-images-at-once": [
     {
+      "id": "2007/03/post_139",
+      "title": "フォントのサイズを段階的に変更するボタン",
+      "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
+      "date": "2007-03-04T15:21:05.000Z",
+      "featured": {
+        "image": "post_139.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.9091507184816845
+    },
+    {
       "id": "2013/09/try_typesquare",
       "title": "TypeSquareを試してみる",
       "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
@@ -3532,13 +3563,6 @@
       "excerpt": "*   Six Apart - Movable Type プラグインディレクトリ: MTPaginate",
       "date": "2007-10-27T14:46:00.000Z",
       "score": 0.9023846561676605
-    },
-    {
-      "id": "2007/03/post_139",
-      "title": "フォントのサイズを段階的に変更するボタン",
-      "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
-      "date": "2007-03-04T15:21:05.000Z",
-      "score": 0.8963245122093791
     },
     {
       "id": "2008/02/target_pseudo_selector",
@@ -4954,16 +4978,15 @@
       "score": 0.9090667431566355
     },
     {
-      "id": "2018/convert-multiple-primitive-images-at-once",
-      "title": "Primitiveの変換をまとめて行う",
-      "excerpt": "Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。",
-      "date": "2018-01-30T22:50:15.000Z",
+      "id": "2007/03/post_139",
+      "title": "フォントのサイズを段階的に変更するボタン",
+      "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
+      "date": "2007-03-04T15:21:05.000Z",
       "featured": {
-        "image": "kazuend-25767",
-        "author": "kazuend",
-        "authorLink": "https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "post_139.webp",
+        "author": "chatGPT"
       },
-      "score": 0.9032999445210985
+      "score": 0.9050550027125468
     }
   ],
   "2013/09/test_content_security_policy_with_grunt-contrib-connect": [
@@ -6120,16 +6143,15 @@
       "score": 0.8686056884629605
     },
     {
-      "id": "2018/javascript-property-access-big-o",
-      "title": "JavaScriptオブジェクトのプロパティアクセスにおけるビッグ・オー",
-      "excerpt": "配列に格納しているオブジェクトをそのIDで検索するとしたら処理量は（線形探索だろうから）ビッグ・オー記法としては `O(n)` になるだろう。",
-      "date": "2018-07-23T20:51:00.000Z",
+      "id": "2007/03/post_139",
+      "title": "フォントのサイズを段階的に変更するボタン",
+      "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
+      "date": "2007-03-04T15:21:05.000Z",
       "featured": {
-        "image": "emre-karatas-194353-unsplash",
-        "author": "Emre Karataş",
-        "authorLink": "https://unsplash.com/photos/Ib2e4-Qy9mQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "post_139.webp",
+        "author": "chatGPT"
       },
-      "score": 0.864082605972626
+      "score": 0.8667580199823504
     }
   ],
   "2013/01/dom_processing_phase": [
@@ -8216,16 +8238,15 @@
       "score": 0.9068315487396609
     },
     {
-      "id": "2006/04/post_133",
-      "title": "最近読んだ本（３）",
-      "excerpt": "「最近読んだ本（１）」「最近読んだ本（２）」の続き。読書が趣味ですと自信を持って言うにはどのくらい読めば良いのでしょう。",
-      "date": "2006-04-16T05:29:40.000Z",
+      "id": "2007/06/post_142",
+      "title": "問題解決について考える",
+      "excerpt": "思いついたことをそのままメモ。  つかみ所がない問題を解決するのは、難しいです。問題点がはっきりしていればそれを改善するのにはどうしたら良いのかを考えれば良いのですが、問題点がはっきりしていないのに、うまくいかない問題は何を改善すれば良くなるのかがわからない。",
+      "date": "2007-06-10T12:38:12.000Z",
       "featured": {
-        "image": "903821ilsdl.webp",
-        "author": "Will Houghton",
-        "authorLink": "https://artvee.com/artist/will-houghton/"
+        "image": "post_142.webp",
+        "author": "chatGPT"
       },
-      "score": 0.9032396195594417
+      "score": 0.9051925298177753
     }
   ],
   "2011/04/watir-webdriver-performance": [
@@ -8961,13 +8982,6 @@
       "score": 0.7128192882019808
     },
     {
-      "id": "2007/03/post_139",
-      "title": "フォントのサイズを段階的に変更するボタン",
-      "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
-      "date": "2007-03-04T15:21:05.000Z",
-      "score": 0.6859888747626512
-    },
-    {
       "id": "2020/load-jquery-in-developer-console",
       "title": "Load jQuery library in the Chrome developer console",
       "excerpt": "スクリプト内のDOM操作でjQueryを使っているけれど、処理がスクリプト内で完結していて、GlobalにはjQueryをロードさせていないという場合がある。あると思う。  そういった場合、例えばそのスクリプトに新しい実装を入れたいけどjQueryでのDOM操作が自分の期待通りに行えるかをChromeのデベロッパーツールでちょっと確認したいみたいな時に少し困る。大して困らない気もするけど、少し手間ではある。",
@@ -8989,6 +9003,18 @@
         "author": "chatGPT"
       },
       "score": 0.6815138366260179
+    },
+    {
+      "id": "2018/retrieve-json-from-require-method",
+      "title": "JSONデータを読み込んで差し替える",
+      "excerpt": "Node.jsの中であれば単に`const config = require('config.json')`すれば良いのだけれど、フロントエンド側のJavaScriptではそうはいかない。XMLHttpRequestとかFetch APIを使うか、requireで書いたものをwe",
+      "date": "2018-02-04T16:35:42.000Z",
+      "featured": {
+        "image": "aaron-burden-286686",
+        "author": "Aaron Burden",
+        "authorLink": "https://unsplash.com/photos/h7wpIMY3O3E?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.6789117754126207
     }
   ],
   "2010/09/normal-specialty": [
@@ -9226,6 +9252,11 @@
       "title": "情報の行間を読む（1/4）",
       "excerpt": "「行間を読む」とは「文章には直接表現されていない筆者の真意をくみとる」という意味です。情報も元をたどれば人によって作られています。情報にも文章と同じように「行間」が存在しているのではないかと思います。",
       "date": "2006-12-12T08:24:21.000Z",
+      "featured": {
+        "image": "953352ilsdl.webp",
+        "author": "Elena Pavlovna Gertik",
+        "authorLink": "https://artvee.com/artist/elena-pavlovna-gertik/"
+      },
       "score": 0.6970830101508079
     },
     {
@@ -9233,6 +9264,10 @@
       "title": "情報の行間を読む（3/4）発信者を知る",
       "excerpt": "「情報のさばき方（外岡秀俊著 朝日新書）」では、情報をさばくための技術として、下記の5つの基本原則のひとつとして「情報発信者の意図やメディアのからくりを知り、偏り（バイアス）を取り除く」をあげています。簡単にいえば「相手の立場になって考えてみる」ということになるかと思いますが、このアプローチは非常に重要です。",
       "date": "2006-12-18T11:07:05.000Z",
+      "featured": {
+        "image": "post_34.webp",
+        "author": "chatGPT"
+      },
       "score": 0.6719638902895438
     },
     {
@@ -9404,8 +9439,12 @@
     {
       "id": "2007/07/css3-resize",
       "title": "CSS3：resize プロパティ",
-      "excerpt": "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize",
+      "excerpt": "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。",
       "date": "2007-07-29T14:35:00.000Z",
+      "featured": {
+        "image": "css3-resize",
+        "author": "chatGPT"
+      },
       "score": 0.599105385845309
     },
     {
@@ -9721,6 +9760,10 @@
       "title": "情報の行間を読む（4/4）調査対象を知る",
       "excerpt": "マーケティングリサーチや、社会学の研究結果、新聞の取材など、情報の多くには情報源となる人が存在します。発信者とは別に情報源にも意思があり、意図を持っています。",
       "date": "2006-12-20T05:02:56.000Z",
+      "featured": {
+        "image": "post_44.webp",
+        "author": "chatGPT"
+      },
       "score": 0.6824321885727017
     },
     {
@@ -9742,6 +9785,10 @@
       "title": "情報の行間を読む（3/4）発信者を知る",
       "excerpt": "「情報のさばき方（外岡秀俊著 朝日新書）」では、情報をさばくための技術として、下記の5つの基本原則のひとつとして「情報発信者の意図やメディアのからくりを知り、偏り（バイアス）を取り除く」をあげています。簡単にいえば「相手の立場になって考えてみる」ということになるかと思いますが、このアプローチは非常に重要です。",
       "date": "2006-12-18T11:07:05.000Z",
+      "featured": {
+        "image": "post_34.webp",
+        "author": "chatGPT"
+      },
       "score": 0.6508073746114299
     }
   ],
@@ -10085,9 +10132,14 @@
     {
       "id": "2007/07/web-site-for-color-condinate",
       "title": "配色を考えるときに役立つの WEB サイト 3つ",
-      "excerpt": "*   Color Scheme Designer 3 *   4096 Wheel Version 2.1",
+      "excerpt": "画像処理ツールがペイントしかない環境下で、16進数の色コードを作成したい。と、いったケースに対応すべく、自分のブックマークを探して見つけてきたのが上の 3つのリンク。",
       "date": "2007-07-25T15:33:00.000Z",
-      "score": 0.8252454360771897
+      "featured": {
+        "image": "jason-leung-MN251xZ9mBk-unsplash.webp",
+        "author": "Jason Leung",
+        "authorLink": "https://unsplash.com/ja/@ninjason?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.818733818345179
     },
     {
       "id": "2007/08/ie6",
@@ -10598,11 +10650,15 @@
       "score": 0.8901851309741421
     },
     {
-      "id": "2008/01/post_172",
-      "title": "本：もっとわがままになれ!",
-      "excerpt": "「わがまま」とは、yahoo辞書で調べると、「自分の思いどおりに振る舞うこと。また、そのさま。気まま。ほしいまま。自分勝手。「―を通す」「―な人」」という意味ですが、本書における「わがまま」とは、どちらかというと「日和見主義にならずに、自分が正しいと思うことや、やりたいと思うこと実践するために、アクションを起こすこと」という感じの意味。おかしな常識を疑うことや、創意工夫を奨励するための言葉としても、本書では「わがまま」という言葉を使って表現しています。",
-      "date": "2008-01-27T16:05:00.000Z",
-      "score": 0.8831797319407461
+      "id": "2007/06/post_142",
+      "title": "問題解決について考える",
+      "excerpt": "思いついたことをそのままメモ。  つかみ所がない問題を解決するのは、難しいです。問題点がはっきりしていればそれを改善するのにはどうしたら良いのかを考えれば良いのですが、問題点がはっきりしていないのに、うまくいかない問題は何を改善すれば良くなるのかがわからない。",
+      "date": "2007-06-10T12:38:12.000Z",
+      "featured": {
+        "image": "post_142.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8849502133772028
     }
   ],
   "2008/06/text-align_justify": [
@@ -11026,6 +11082,17 @@
       "score": 0.9123847363821118
     },
     {
+      "id": "2007/06/post_142",
+      "title": "問題解決について考える",
+      "excerpt": "思いついたことをそのままメモ。  つかみ所がない問題を解決するのは、難しいです。問題点がはっきりしていればそれを改善するのにはどうしたら良いのかを考えれば良いのですが、問題点がはっきりしていないのに、うまくいかない問題は何を改善すれば良くなるのかがわからない。",
+      "date": "2007-06-10T12:38:12.000Z",
+      "featured": {
+        "image": "post_142.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.9048413421558194
+    },
+    {
       "id": "2012/05/css_selector_performance",
       "title": "CSS Selector Performance",
       "excerpt": "Performance CalendarにWebkitでCSSのマッチングの最適化が進んでいるという話が掲載されていて、下記の4つ最適化方法について紹介しています",
@@ -11035,18 +11102,6 @@
         "author": "chatGPT"
       },
       "score": 0.9026325419421083
-    },
-    {
-      "id": "2006/05/post_135",
-      "title": "最近読んだ本（５）",
-      "excerpt": "「最近読んだ本（１）」「最近読んだ本（２）」「最近読んだ本（３）」「最近読んだ本（４）」の続き。たぶん今まで紹介していない本。百聞は一見に如かずと言われると確かにその通りかもしれませんが、容易に経験できないからこそ本があるのではないかと思ったりします。",
-      "date": "2006-05-06T15:58:24.000Z",
-      "featured": {
-        "image": "14359posdl.webp",
-        "author": "W. H. Fry",
-        "authorLink": "https://artvee.com/artist/w-h-fry/"
-      },
-      "score": 0.9020171530246699
     }
   ],
   "2008/01/post_167": [
@@ -11657,6 +11712,10 @@
       "title": "情報の行間を読む（3/4）発信者を知る",
       "excerpt": "「情報のさばき方（外岡秀俊著 朝日新書）」では、情報をさばくための技術として、下記の5つの基本原則のひとつとして「情報発信者の意図やメディアのからくりを知り、偏り（バイアス）を取り除く」をあげています。簡単にいえば「相手の立場になって考えてみる」ということになるかと思いますが、このアプローチは非常に重要です。",
       "date": "2006-12-18T11:07:05.000Z",
+      "featured": {
+        "image": "post_34.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7635982230557133
     },
     {
@@ -11689,6 +11748,11 @@
       "title": "情報の行間を読む（1/4）",
       "excerpt": "「行間を読む」とは「文章には直接表現されていない筆者の真意をくみとる」という意味です。情報も元をたどれば人によって作られています。情報にも文章と同じように「行間」が存在しているのではないかと思います。",
       "date": "2006-12-12T08:24:21.000Z",
+      "featured": {
+        "image": "953352ilsdl.webp",
+        "author": "Elena Pavlovna Gertik",
+        "authorLink": "https://artvee.com/artist/elena-pavlovna-gertik/"
+      },
       "score": 0.7384553625538819
     },
     {
@@ -11703,6 +11767,10 @@
       "title": "情報の行間を読む（4/4）調査対象を知る",
       "excerpt": "マーケティングリサーチや、社会学の研究結果、新聞の取材など、情報の多くには情報源となる人が存在します。発信者とは別に情報源にも意思があり、意図を持っています。",
       "date": "2006-12-20T05:02:56.000Z",
+      "featured": {
+        "image": "post_44.webp",
+        "author": "chatGPT"
+      },
       "score": 0.6631498908158836
     },
     {
@@ -12354,8 +12422,12 @@
     {
       "id": "2007/07/css3-resize",
       "title": "CSS3：resize プロパティ",
-      "excerpt": "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize",
+      "excerpt": "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。",
       "date": "2007-07-29T14:35:00.000Z",
+      "featured": {
+        "image": "css3-resize",
+        "author": "chatGPT"
+      },
       "score": 0.7067173577176501
     },
     {
@@ -12493,8 +12565,12 @@
     {
       "id": "2007/07/css3-resize",
       "title": "CSS3：resize プロパティ",
-      "excerpt": "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize",
+      "excerpt": "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。",
       "date": "2007-07-29T14:35:00.000Z",
+      "featured": {
+        "image": "css3-resize",
+        "author": "chatGPT"
+      },
       "score": 0.7575166070165174
     },
     {
@@ -12594,8 +12670,12 @@
     {
       "id": "2007/07/css3-resize",
       "title": "CSS3：resize プロパティ",
-      "excerpt": "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize",
+      "excerpt": "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。",
       "date": "2007-07-29T14:35:00.000Z",
+      "featured": {
+        "image": "css3-resize",
+        "author": "chatGPT"
+      },
       "score": 0.6815132447359397
     }
   ],
@@ -12647,8 +12727,12 @@
     {
       "id": "2007/07/css3-resize",
       "title": "CSS3：resize プロパティ",
-      "excerpt": "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize",
+      "excerpt": "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。",
       "date": "2007-07-29T14:35:00.000Z",
+      "featured": {
+        "image": "css3-resize",
+        "author": "chatGPT"
+      },
       "score": 0.6553308052460697
     },
     {
@@ -12724,11 +12808,15 @@
       "score": 0.8913934094201207
     },
     {
-      "id": "2007/03/post_139",
-      "title": "フォントのサイズを段階的に変更するボタン",
-      "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
-      "date": "2007-03-04T15:21:05.000Z",
-      "score": 0.8904089488356992
+      "id": "2010/12/redesign_2011",
+      "title": "デザイン変更（2010/12）",
+      "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
+      "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8850009580271617
     }
   ],
   "2007/08/yslow_13_configure_etags": [
@@ -12794,8 +12882,12 @@
     {
       "id": "2007/07/css3-resize",
       "title": "CSS3：resize プロパティ",
-      "excerpt": "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize",
+      "excerpt": "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。",
       "date": "2007-07-29T14:35:00.000Z",
+      "featured": {
+        "image": "css3-resize",
+        "author": "chatGPT"
+      },
       "score": 0.64062777374624
     }
   ],
@@ -12961,6 +13053,10 @@
       "title": "IE7対応しているかどうかを確認するための3つのポイント",
       "excerpt": "既存のウェブサイトのCSSについて、IE7対応しているかどうかを確認するためのポイントは大きく3つかなと思います。",
       "date": "2006-12-29T14:02:36.000Z",
+      "featured": {
+        "image": "ie73.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7275452295179708
     }
   ],
@@ -13255,8 +13351,12 @@
     {
       "id": "2007/07/css3-resize",
       "title": "CSS3：resize プロパティ",
-      "excerpt": "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize",
+      "excerpt": "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。",
       "date": "2007-07-29T14:35:00.000Z",
+      "featured": {
+        "image": "css3-resize",
+        "author": "chatGPT"
+      },
       "score": 0.6079105762882391
     },
     {
@@ -13473,21 +13573,21 @@
       "title": "CSS：column-count で3列レイアウトを作成",
       "excerpt": "フッター部分を 3 列にしてみようかなと唐突に思いついて、以前から興味あった column-count を使って 3 列にしてみました。Firefox と Safari でのみ対応（IE では 1 列のまま表示されます）。Pico のデザインのバランスを崩している気がしないでもないですけど、まあいいか。",
       "date": "2010-02-03T22:00:00.000Z",
-      "score": 0.8278838807778205
-    },
-    {
-      "id": "2013/08/specificity_of_pseudo_class",
-      "title": "a:link, a：visitedの詳細度はclass selectorのみより大きい",
-      "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
-      "date": "2013-08-30T21:00:00.000Z",
-      "score": 0.8272998218882572
+      "score": 0.8400186921814955
     },
     {
       "id": "2009/05/inherit",
       "title": "親要素の色をリンク色に継承させる",
       "excerpt": "リンクの色の方が優先される理由の記事で、下記のHTMLの場合はリンクの色の方が優先されるという話をした。",
       "date": "2009-05-06T09:27:10.000Z",
-      "score": 0.8252454360771897
+      "score": 0.818733818345179
+    },
+    {
+      "id": "2013/08/specificity_of_pseudo_class",
+      "title": "a:link, a：visitedの詳細度はclass selectorのみより大きい",
+      "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
+      "date": "2013-08-30T21:00:00.000Z",
+      "score": 0.8186900330385055
     },
     {
       "id": "2012/06/jquery_masonry",
@@ -13498,7 +13598,7 @@
         "image": "jquery_masonry.webp",
         "author": "chagGPT"
       },
-      "score": 0.8075427977884582
+      "score": 0.8142397275600134
     }
   ],
   "2007/07/single-line-css": [
@@ -13630,14 +13730,14 @@
       "title": "今年の抱負（とデザイン変更）",
       "excerpt": "ブログの見た目を少し変えてみたのです。シンプルに。jqueryを試してみたのだが、TypePad Connectで利用しているYUIと相性がよろしくないよう。回避方法が皆目見当がつかなかったので、TypePad Connect はとりあえずクローズした。とりあえず。暇なときにちょこちょこ変えていこうと思う。",
       "date": "2009-01-03T03:45:53.000Z",
-      "score": 0.9351415927717579
+      "score": 0.9351439727819234
     },
     {
       "id": "2007/09/post_148",
       "title": "ハーバードでは教えない実践経営学",
       "excerpt": " 1985年に「マコーマックのマンビジネス」というタイトルで出版された本の新訳版です。いわゆるビジネスに必要な「処世術」、パートナーシップの構築など、筆者曰く「ハーバード・ビジネススクールでは教えたくても教えられない（p8）」内容を扱っています。「人間」「営業と交渉」「企業経営」の３部構成。",
       "date": "2007-09-07T13:27:00.000Z",
-      "score": 0.9301417830137654
+      "score": 0.9318811416568228
     },
     {
       "id": "2006/04/post_133",
@@ -13649,18 +13749,14 @@
         "author": "Will Houghton",
         "authorLink": "https://artvee.com/artist/will-houghton/"
       },
-      "score": 0.9270850793110336
+      "score": 0.9294972301667368
     },
     {
-      "id": "2012/03/the_big_short",
-      "title": "本：世紀の空売り",
-      "excerpt": "「マネー・ボール」の原作者であるマイケル・ルイスの著作。サブプライム・モーゲージ債で熱狂していて、誰もが価値が上がる（ロング）と予想していた 2005 年頃の金融市場で、価値が下がる（ショートする）と確信していた何人かの投資家たちがいた...という話。ノンフィクション。",
-      "date": "2012-03-17T05:00:00.000Z",
-      "featured": {
-        "image": "the_big_short.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.925891690922596
+      "id": "2011/06/books_around_me",
+      "title": "本とわたし",
+      "excerpt": "2008年の9月ごろからgoodreadsというサービスで読んだ本の履歴をつけていたのですが、履歴にたまった本が200冊くらいになりました。1年平均70冊くらい読んでいるみたいですね。（内容的/量的に）薄い本とかも含まれるので、読んだぞと実感を込めて言えるのは40〜50冊といったところかなあという感じですけど。とはいえ、ほとんどすべての本について詳細は覚えてないですけど。",
+      "date": "2011-06-19T22:25:00.000Z",
+      "score": 0.9252927966066402
     }
   ],
   "2007/03/post_139": [
@@ -13674,7 +13770,7 @@
         "author": "kazuend",
         "authorLink": "https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
-      "score": 0.8963245122093791
+      "score": 0.9091507184816845
     },
     {
       "id": "2013/09/try_typesquare",
@@ -13685,18 +13781,14 @@
         "image": "trying_typesquare.webp",
         "author": "chatGPT"
       },
-      "score": 0.8938973840685239
+      "score": 0.9050550027125468
     },
     {
-      "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
-      "date": "2007-08-04T15:46:10.000Z",
-      "featured": {
-        "image": "yslow_1_minimize_http_requests.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.8904089488356992
+      "id": "2007/10/mtpaginate_movable_type",
+      "title": "MTPaginate：Movable Typeでページネーションをする",
+      "excerpt": "*   Six Apart - Movable Type プラグインディレクトリ: MTPaginate",
+      "date": "2007-10-27T14:46:00.000Z",
+      "score": 0.8968551360730636
     },
     {
       "id": "2018/display-featured-image",
@@ -13707,7 +13799,7 @@
         "image": "display-featured-image.webp",
         "author": "chatGPT"
       },
-      "score": 0.8901858653671495
+      "score": 0.8919240088741911
     }
   ],
   "2007/02/book_review": [
@@ -13797,6 +13889,11 @@
       "title": "情報の行間を読む（1/4）",
       "excerpt": "「行間を読む」とは「文章には直接表現されていない筆者の真意をくみとる」という意味です。情報も元をたどれば人によって作られています。情報にも文章と同じように「行間」が存在しているのではないかと思います。",
       "date": "2006-12-12T08:24:21.000Z",
+      "featured": {
+        "image": "953352ilsdl.webp",
+        "author": "Elena Pavlovna Gertik",
+        "authorLink": "https://artvee.com/artist/elena-pavlovna-gertik/"
+      },
       "score": 0.7484485242983556
     },
     {
@@ -13811,6 +13908,10 @@
       "title": "情報の行間を読む（3/4）発信者を知る",
       "excerpt": "「情報のさばき方（外岡秀俊著 朝日新書）」では、情報をさばくための技術として、下記の5つの基本原則のひとつとして「情報発信者の意図やメディアのからくりを知り、偏り（バイアス）を取り除く」をあげています。簡単にいえば「相手の立場になって考えてみる」ということになるかと思いますが、このアプローチは非常に重要です。",
       "date": "2006-12-18T11:07:05.000Z",
+      "featured": {
+        "image": "post_34.webp",
+        "author": "chatGPT"
+      },
       "score": 0.742712411187759
     },
     {
@@ -13928,6 +14029,10 @@
       "title": "情報の行間を読む（4/4）調査対象を知る",
       "excerpt": "マーケティングリサーチや、社会学の研究結果、新聞の取材など、情報の多くには情報源となる人が存在します。発信者とは別に情報源にも意思があり、意図を持っています。",
       "date": "2006-12-20T05:02:56.000Z",
+      "featured": {
+        "image": "post_44.webp",
+        "author": "chatGPT"
+      },
       "score": 0.7484485242983556
     }
   ],
@@ -13989,6 +14094,10 @@
       "title": "IE7対応しているかどうかを確認するための3つのポイント",
       "excerpt": "既存のウェブサイトのCSSについて、IE7対応しているかどうかを確認するためのポイントは大きく3つかなと思います。",
       "date": "2006-12-29T14:02:36.000Z",
+      "featured": {
+        "image": "ie73.webp",
+        "author": "chatGPT"
+      },
       "score": 0.8713555042372146
     },
     {
@@ -15150,6 +15259,17 @@
       "score": 0.7862265777748295
     },
     {
+      "id": "2007/06/post_142",
+      "title": "問題解決について考える",
+      "excerpt": "思いついたことをそのままメモ。  つかみ所がない問題を解決するのは、難しいです。問題点がはっきりしていればそれを改善するのにはどうしたら良いのかを考えれば良いのですが、問題点がはっきりしていないのに、うまくいかない問題は何を改善すれば良くなるのかがわからない。",
+      "date": "2007-06-10T12:38:12.000Z",
+      "featured": {
+        "image": "post_142.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7811321016652131
+    },
+    {
       "id": "2005/08/post_98",
       "title": "本：石油の終焉",
       "excerpt": "現在のエネルギー事情について多角的な視点で考察しており、いろんな人に読んでもらいたい本です。500ページ超の分量なので読むの大変かと思いますが、読み応えはあります。",
@@ -15159,17 +15279,6 @@
         "author": "chatGPT"
       },
       "score": 0.779786559978374
-    },
-    {
-      "id": "2024/origin-of-samurai-goverment",
-      "title": "本：武家政権成立史 - 気候変動と歴史学",
-      "excerpt": "武家政権成立史では、12世紀に始まった気候の冷涼化が、武家政権の成立にどのような影響を与えたかを探究している。本書では、気候冷涼化による作物の不作が、飢饉を頻発、封戸収入の減少を引き起こし、収入を確保するために荘園が発展し、それにより国司による徴税と荘園権益の衝突が強まり、武力を必要とする時代を生み出していったしている。歴史とは、人間の意図・行動が歴史を作り、動かすというイメージが強いけれど、気候変動という人間には抗いがたい要因が社会的混乱を引き起こし、歴史を形作るという視点は新鮮で説得力があった。",
-      "date": "2024-09-29T19:00:47.000Z",
-      "featured": {
-        "image": "origin-of-samurai.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.7694081491433029
     }
   ],
   "2005/07/post_93": [

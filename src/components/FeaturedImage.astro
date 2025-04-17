@@ -1,13 +1,15 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import fs from "fs";
-import path from "path";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
 import { imageSizeFromFile } from "image-size/fromFile";
 import { JSDOM } from "jsdom";
-
 // @ts-ignore
 import ColorThief from "colorthief";
 import chroma from "chroma-js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 type Props = {
   featured: NonNullable<CollectionEntry<"blog">["data"]["featured"]>;
@@ -16,22 +18,48 @@ type Props = {
 
 const { featured, lazyLoad } = Astro.props;
 let { name, ext } = path.parse(featured.image || "");
-ext ||= ".svg";
-const dir = "/assets/images";
-const src = `${dir}/${name}/${name}${ext}`;
+const dir = `/assets/images/${name}`;
+
+// Find the image file from the directory
+const files = fs.readdirSync(path.resolve(__dirname, `../../public/${dir}`));
+let imageFile: string | undefined;
+if (ext) {
+  imageFile = files.find((file) => {
+    return file === `${name}${ext}`;
+  });
+} else {
+  const expectedExts = [".webp", ".svg"];
+  for (const ext of expectedExts) {
+    imageFile = files.find((file) => {
+      return file === `${name}${ext}`;
+    });
+    if (imageFile) {
+      break;
+    }
+  }
+}
+
+if (!imageFile) {
+  throw new Error(
+    `Image file not found for ${featured.image}. Please check the file name and extension.`
+  );
+}
+
+ext = path.extname(imageFile);
+name = path.basename(imageFile, ext);
+
+const src = `${dir}/${name}${ext}`;
+
 let width,
   height,
   color = featured.color || "",
   alt;
 
 // Calculate the width and height if not provided
+const source = path.resolve(__dirname, `../../public/${src}`);
 if (!width || !height) {
-  const source = dir.replace(/^\//, "./public/");
   if (ext === ".svg") {
-    const file = fs.readFileSync(
-      path.resolve(source, `${name}/${name}${ext}`),
-      "utf8"
-    );
+    const file = fs.readFileSync(source, "utf8");
     const svgDom = new JSDOM(file).window.document.getElementsByTagName(
       "svg"
     )[0];
@@ -49,13 +77,9 @@ if (!width || !height) {
       svgDom.children[0].getAttribute("fill") ||
       "";
   } else {
-    const src =
-      ext === ".webp"
-        ? path.resolve(source, `${name}/${name}${ext}`)
-        : path.resolve(source, `${name}/${name}_medium${ext}`);
-    color ||= chroma(await ColorThief.getColor(src)).hex();
+    color ||= chroma(await ColorThief.getColor(source)).hex();
 
-    const dimension = await imageSizeFromFile(src);
+    const dimension = await imageSizeFromFile(source);
     width = Math.min(dimension.width, 985);
     height = dimension.height * (width / dimension.width);
   }
@@ -80,8 +104,7 @@ if (width > maxWidth) {
   }
 }
 
-const webpSrc = `${dir}/${name}/${name}.webp`;
-const webpSrcSet = `${webpSrc}, ${webpSrc.replace(/\.webp$/, "@2x.webp")} 2x`;
+const webpSrcSet = `${src}, ${src.replace(/\.webp$/, "@2x.webp")} 2x`;
 ---
 
 <div class="header__feature" aria-hidden="true">
@@ -90,7 +113,7 @@ const webpSrcSet = `${webpSrc}, ${webpSrc.replace(/\.webp$/, "@2x.webp")} 2x`;
       ext === ".svg" ? (
         <div style={`background-color: ${color}`}>
           <img
-            src={`${dir}/${name}/${name}${ext}`}
+            src={src}
             alt={alt}
             role="presentation"
             loading={lazyLoad ? "lazy" : "eager"}
@@ -100,7 +123,7 @@ const webpSrcSet = `${webpSrc}, ${webpSrc.replace(/\.webp$/, "@2x.webp")} 2x`;
         </div>
       ) : ext === ".webp" ? (
         <img
-          src={webpSrc}
+          src={src}
           srcset={webpSrcSet}
           role="presentation"
           loading={lazyLoad ? "lazy" : "eager"}

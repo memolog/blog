@@ -1,11 +1,14 @@
 ---
 title: CSS3：resize プロパティ
 date: 2007-07-29T14:35:00.000Z
+featured:
+  image: css3-resize
+  author: chatGPT
 categories:
   - web
 tags:
   - css
-excerpt: "*   http://www.css3.info/preview/resize.html *   http://www.w3.org/TR/css3-ui/#resize"
+excerpt: "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。"
 ---
 
 - [http://www.css3.info/preview/resize.html](http://www.css3.info/preview/resize.html)

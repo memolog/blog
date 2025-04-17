@@ -1,21 +1,24 @@
 ---
 title: 配色を考えるときに役立つの WEB サイト 3つ
 date: 2007-07-25T15:33:00.000Z
+featured:
+  image: jason-leung-MN251xZ9mBk-unsplash.webp
+  author: Jason Leung
+  authorLink: https://unsplash.com/ja/@ninjason?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 categories:
   - web
 tags:
   - css
   - design
   - tool
-excerpt: "*   Color Scheme Designer 3 *   4096 Wheel Version 2.1"
+excerpt: "画像処理ツールがペイントしかない環境下で、16進数の色コードを作成したい。と、いったケースに対応すべく、自分のブックマークを探して見つけてきたのが上の 3つのリンク。"
 ---
 
 - [Color Scheme Designer 3](http://colorschemedesigner.com/)
 - [4096 Wheel Version 2.1](http://www.ficml.org/jemimap/style/color/wheel.html)
-
 - [CSS Tools](http://www.soxiam.com/Notes/CSSTools)
 
-画像処理ツールがペイントしかない環境下で、16 進数の色コードを作成したい。と、いったケースに対応すべく、自分のブックマークを探して見つけてきたのが上の 3 つのリンク。
+画像処理ツールがペイントしかない環境下で、16進数の色コードを作成したい。と、いったケースに対応すべく、自分のブックマークを探して見つけてきたのが上の 3つのリンク。
 
 １つ目の [Color Scheme Generator](http://wellstyled.com/tools/colorscheme2/index-en.html) は、指定した色と適したカラーの組み合わせを出力してくれます。即興でウェブサイトの見本を作成しなければいけない、、そんなときに素早く、バランスのとれた配色を決めることができる。
 

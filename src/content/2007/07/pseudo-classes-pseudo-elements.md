@@ -1,11 +1,14 @@
 ---
 title: 疑似クラス、疑似要素とは何か
 date: 2007-07-24T17:50:55.000Z
+featured:
+  image: pseudo-classes-pseudo-elements
+  author: chatGPT
 categories:
   - web
 tags:
   - css
-excerpt: "*   http://www.w3.org/TR/2005/WD-css3-selectors-20051215/#pseudo-classes"
+excerpt: "疑似クラスとは「ドキュメントツリーの範囲外の情報、もしくはその他のシンプルなセレクタでは表現できない情報に選択可能にする」というもの。一方、疑似要素とは「ドキュメントツリーについて、抽象的な概念を作り出す」というもの。"
 ---
 
 - [http://www.w3.org/TR/2005/WD-css3-selectors-20051215/#pseudo-classes](http://www.w3.org/TR/2005/WD-css3-selectors-20051215/#pseudo-classes)

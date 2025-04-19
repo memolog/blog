@@ -4,10 +4,18 @@
   <subtitle>塵が積もって山とならないメモのログ</subtitle>
   <link href="https://memolog.org/atom.xml" rel="self"/>
   <link href="https://memolog.org/"/>
-  <updated>2025-04-13T09:40:00.000Z</updated>
+  <updated>2025-04-19T04:00:00.000Z</updated>
   <id>https://memolog.org/</id>
   <author><name>Yutaka Yamaguchi</name></author>
   
+  <entry>
+    <title>Primitive Image についてもう一度</title>
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2025-04-19T04:00:00.000Z</published>
+    <summary type="html">最近まで使っていたPrimitiveを使ったSVGの実装を見直して、WebP画像とどちらが良いかなと比較。</summary>
+  </entry>
+    
   <entry>
     <title>Lighthouseで再び100点をとる</title>
     <link href="https://memolog.org/undefined.html"/>
@@ -158,14 +166,6 @@
     <id>https://memolog.org/undefined.html</id>
     <published>2020-09-09T10:06:00.000Z</published>
     <summary type="html">今回は10. Fragmenting Flex Layout について。</summary>
-  </entry>
-    
-  <entry>
-    <title>Flex Layout Algorithm</title>
-    <link href="https://memolog.org/undefined.html"/>
-    <id>https://memolog.org/undefined.html</id>
-    <published>2020-07-26T11:56:00.000Z</published>
-    <summary type="html">今回は9. Flex Layout Algorithmについて。この章は見なくて良いんじゃないかと思いつつ、写経のような感じでやっていこうと思う。</summary>
   </entry>
     
 </feed>

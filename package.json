@@ -11,8 +11,8 @@
     "astro": "astro",
     "gi": "generate-responsive-images -s ~/Downloads/images -d ./public/assets/images --webp-only --medium 985 --clean --crop-width 985 --crop-height 328 --no-size-string",
     "gi:screenshot": "generate-responsive-images -s ~/Downloads/screenshots -d ./public/assets/images --webp-only --medium 921 --clean --no-size-string",
-    "pb": "primitive_bulk -i ~/Downloads/$D.jpg -d ./source/assets/images/$D --output $D --format jpg,svg -m $M -n $N && find ./source/assets/images/$D -name '*.svg' -o -name '*.jpg' | xargs open -a 'ImageOptim'",
-    "pre-pb": "primitive_bulk -i ~/Downloads/$D.jpg -n $N",
+    "pb": "primitive_bulk -i ~/Downloads/pb -d ./public/assets/images --no-suffix-name --format svg -s 985 --resize-width 985 --resize-height 328",
+    "pre-pb": "primitive_bulk -i ~/Downloads/pb -d ~/Downloads/pb_images/ --no-optimize -s 985 --resize-width 985 --resize-height 328",
     "publish": "gh-pages -d dist"
   },
   "dependencies": {
@@ -33,6 +33,6 @@
     "gray-matter": "^4.0.3",
     "image-size": "^2.0.2",
     "jsdom": "^26.0.0",
-    "primitive_bulk": "^1.2.1"
+    "primitive_bulk": "^2.3.0"
   }
 }

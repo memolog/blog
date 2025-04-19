@@ -47,6 +47,53 @@
       "score": 0.9235559213981717
     }
   ],
+  "2025/rethink-primitive-image": [
+    {
+      "id": "2018/display-featured-image",
+      "title": "Featured Image を設置する",
+      "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
+      "date": "2018-01-08T11:07:38.000Z",
+      "featured": {
+        "image": "display-featured-image.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.9122488006488146
+    },
+    {
+      "id": "2007/03/post_139",
+      "title": "フォントのサイズを段階的に変更するボタン",
+      "excerpt": " Ajaxライブラリリファレンスを参考に「フォントのサイズを段階的に変更する」というJavascriptを実験してみました。右のサイドバー（トップページのみ）の右上にひっそりとある「+ | - | reset」というリンクをクリックすると、記事のフォントサイズが大きくなったり小さくなったりします。「reset」をクリックすると、元のサイズ（12px）に戻ります。機能的にはあまり役に立ちませんが、課題演習だと思っていただければ。。",
+      "date": "2007-03-04T15:21:05.000Z",
+      "featured": {
+        "image": "post_139.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.9001667117183433
+    },
+    {
+      "id": "2018/image-manipulation-with-primitive",
+      "title": "Primitiveを使って画像を変換する",
+      "excerpt": "Featured Image とか言いながら、ただ写真を置くだけなのも何だなあとか思い、Primitiveを使用して、上に表示されている画像を変換してみた。Primitive は画像を幾何学的な Primitive（線とか丸、三角、四角）の集まりに変換してくれる。試行錯誤した結果を貼り付けていく。画像の下に変換するときに使用したオプションを添付してある。",
+      "date": "2018-01-14T06:44:06.000Z",
+      "featured": {
+        "author": "Rommanas Kongmeng",
+        "image": "rommanas-kongmeng-422586.svg",
+        "authorLink": "https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.8959682186691149
+    },
+    {
+      "id": "2025/hello-astro",
+      "title": "Hello Astro",
+      "excerpt": "2017年以来スタティックサイトジェネレータとしてHexoを利用していたのですが、急に思い立ってAstroに移行してみました。このシンプルなブログを扱うのに Hexo に不満があったわけでもなく、「そろそろデザイン変えようかなあ」と思い立ったのがきっかけで、「じゃあジェネレータも今どきのにしようかな」という感じで変えました。",
+      "date": "2025/04/09 09:00:00",
+      "featured": {
+        "image": "hello-astro.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8949188500156212
+    }
+  ],
   "2025/replace-picture-element-with-srcset": [
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
@@ -71,6 +118,18 @@
       "score": 0.8592817286676717
     },
     {
+      "id": "2025/rethink-primitive-image",
+      "title": "Primitive Image についてもう一度",
+      "excerpt": "最近まで使っていたPrimitiveを使ったSVGの実装を見直して、WebP画像とどちらが良いかなと比較。",
+      "date": "2025-04-19 13:00",
+      "featured": {
+        "image": "tomoko-uji-gJQoYqpqkhY-unsplash-svg",
+        "author": "TOMOKO UJI",
+        "authorLink": "https://unsplash.com/ja/@ujitomo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.8577185652754993
+    },
+    {
       "id": "2018/display-featured-image",
       "title": "Featured Image を設置する",
       "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
@@ -80,17 +139,6 @@
         "author": "chatGPT"
       },
       "score": 0.8536846430018286
-    },
-    {
-      "id": "2010/12/optimize_css_selectors",
-      "title": "CSSセレクタを効率的な記述にする",
-      "excerpt": "Page Speedの評価の一つにUse efficient CSS selectorsという項目があり、そこで効率的なCSSセレクタを使用するという話が挙げられています。",
-      "date": "2010-12-28T21:00:00.000Z",
-      "featured": {
-        "image": "optimize_css_selectors.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.8277780467177771
     }
   ],
   "2025/hello-astro": [
@@ -2940,6 +2988,18 @@
       "score": 0.8471551978911901
     },
     {
+      "id": "2025/rethink-primitive-image",
+      "title": "Primitive Image についてもう一度",
+      "excerpt": "最近まで使っていたPrimitiveを使ったSVGの実装を見直して、WebP画像とどちらが良いかなと比較。",
+      "date": "2025-04-19 13:00",
+      "featured": {
+        "image": "tomoko-uji-gJQoYqpqkhY-unsplash-svg",
+        "author": "TOMOKO UJI",
+        "authorLink": "https://unsplash.com/ja/@ujitomo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.8389266272589252
+    },
+    {
       "id": "2018/convert-multiple-primitive-images-at-once",
       "title": "Primitiveの変換をまとめて行う",
       "excerpt": "Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。",
@@ -2957,18 +3017,6 @@
       "excerpt": "小ネタでも挟もうではありませんか。watir-webdriverを使って簡単にスクリーンショット撮ることができます。Macにはrubyがもともと入っているので、事前準備はwatir-webdriverをインストールするだけです。インストールは、ターミナルを開いて下記のコマンドを実行する。",
       "date": "2011-09-03T12:00:00.000Z",
       "score": 0.8378260126480132
-    },
-    {
-      "id": "2020/load-jquery-in-developer-console",
-      "title": "Load jQuery library in the Chrome developer console",
-      "excerpt": "スクリプト内のDOM操作でjQueryを使っているけれど、処理がスクリプト内で完結していて、GlobalにはjQueryをロードさせていないという場合がある。あると思う。  そういった場合、例えばそのスクリプトに新しい実装を入れたいけどjQueryでのDOM操作が自分の期待通りに行えるかをChromeのデベロッパーツールでちょっと確認したいみたいな時に少し困る。大して困らない気もするけど、少し手間ではある。",
-      "date": "2020-02-04T07:19:43.000Z",
-      "featured": {
-        "image": "harsh-jain-xoMeq3-GwTY-unsplash",
-        "author": "Harsh Jain",
-        "authorLink": "https://unsplash.com/@harshjain1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.8214763853717929
     }
   ],
   "2018/merge-sort-in-javascript": [
@@ -3269,6 +3317,18 @@
       "score": 0.8964260829733914
     },
     {
+      "id": "2025/rethink-primitive-image",
+      "title": "Primitive Image についてもう一度",
+      "excerpt": "最近まで使っていたPrimitiveを使ったSVGの実装を見直して、WebP画像とどちらが良いかなと比較。",
+      "date": "2025-04-19 13:00",
+      "featured": {
+        "image": "tomoko-uji-gJQoYqpqkhY-unsplash-svg",
+        "author": "TOMOKO UJI",
+        "authorLink": "https://unsplash.com/ja/@ujitomo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.8959682186691149
+    },
+    {
       "id": "2009/05/dp1",
       "title": "明治神宮と原宿と雨上がりとdp1",
       "excerpt": "4月の中頃に明治神宮に行ってきました。初めて行く場所ではマイ最強装備であるEOS 5D mark IIを持って行くのですが、明治神宮には何回か訪れているので今回は手軽なDP1を持参。この日は雨上がりだったので、ひさびさにサーキュラーをつけてみました。DP1でサーキュレータを利用すると、昼間でも光量が足りずにシャッタースピードが遅くなりがちですが、そこは絞り開放で撮るとか、日陰では撮らないとか、ISO感度を200にするとかして光量を工面（あと、頑張って固定する）。この光量を工面しつつ、カメラをぶらさないようになんとかかんとか工夫して撮るのが個人的にDP1の楽しいところ。",
@@ -3286,18 +3346,6 @@
         "authorLink": "https://unsplash.com/photos/HBANPxXi3aQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.8870833031219626
-    },
-    {
-      "id": "2012/05/invited_elements",
-      "title": "独自要素を作成する",
-      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
-      "date": "2012-05-29T15:00:00.000Z",
-      "featured": {
-        "image": "954789ilsdl.webp",
-        "author": "William Henry Walker",
-        "authorLink": "https://artvee.com/artist/william-henry-walker/"
-      },
-      "score": 0.8860044328750594
     }
   ],
   "2018/how-to-learn": [
@@ -3377,6 +3425,18 @@
   ],
   "2018/display-featured-image": [
     {
+      "id": "2025/rethink-primitive-image",
+      "title": "Primitive Image についてもう一度",
+      "excerpt": "最近まで使っていたPrimitiveを使ったSVGの実装を見直して、WebP画像とどちらが良いかなと比較。",
+      "date": "2025-04-19 13:00",
+      "featured": {
+        "image": "tomoko-uji-gJQoYqpqkhY-unsplash-svg",
+        "author": "TOMOKO UJI",
+        "authorLink": "https://unsplash.com/ja/@ujitomo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.9122488006488146
+    },
+    {
       "id": "2018/bubble-sort-in-javascript",
       "title": "Bubble Sort in JavaScript",
       "excerpt": "Array.prototype.sort についてとTypedArray.prototype.sort についてで書いたようにビルトインされているsortメソッドが効率的なソートを実行できるように実装されているので、JavaScript上で自前のソートを実装する意味はあまりないのだけど、試しにバブルソートをJavaScript上で作ってみた。",
@@ -3410,17 +3470,6 @@
         "authorLink": "https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.8949179809708926
-    },
-    {
-      "id": "2012/06/jquery_masonry",
-      "title": "縦方向のfloatを実現するjQuery Masonry",
-      "excerpt": "いわゆるPinterest風な縦方向にfloatさせるjQueryのpluginが.net Magazineで紹介されていたので、試してみました。floatさせたいコンテンツのclass（と全体を囲っているコンテナのclass）と、1カラムあたりの幅を指定するだけで、縦方向にfloatさせることができます。便利。写真の記事一覧画面とか、写真があるとやはり映えますなあとか、悦に入っています（写真最近撮ってないな）。",
-      "date": "2012-06-18T12:36:00.000Z",
-      "featured": {
-        "image": "jquery_masonry.webp",
-        "author": "chagGPT"
-      },
-      "score": 0.894240238929844
     }
   ],
   "2018/custom-domain-in-github-pages": [
@@ -3815,7 +3864,7 @@
       "date": "2018-01-14T06:44:06.000Z",
       "featured": {
         "author": "Rommanas Kongmeng",
-        "image": "rommanas-kongmeng-422586",
+        "image": "rommanas-kongmeng-422586.svg",
         "authorLink": "https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.8870833031219626
@@ -6806,16 +6855,16 @@
       "score": 0.8386830868802033
     },
     {
-      "id": "2018/image-manipulation-with-primitive",
-      "title": "Primitiveを使って画像を変換する",
-      "excerpt": "Featured Image とか言いながら、ただ写真を置くだけなのも何だなあとか思い、Primitiveを使用して、上に表示されている画像を変換してみた。Primitive は画像を幾何学的な Primitive（線とか丸、三角、四角）の集まりに変換してくれる。試行錯誤した結果を貼り付けていく。画像の下に変換するときに使用したオプションを添付してある。",
-      "date": "2018-01-14T06:44:06.000Z",
+      "id": "2025/rethink-primitive-image",
+      "title": "Primitive Image についてもう一度",
+      "excerpt": "最近まで使っていたPrimitiveを使ったSVGの実装を見直して、WebP画像とどちらが良いかなと比較。",
+      "date": "2025-04-19 13:00",
       "featured": {
-        "author": "Rommanas Kongmeng",
-        "image": "rommanas-kongmeng-422586",
-        "authorLink": "https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "tomoko-uji-gJQoYqpqkhY-unsplash-svg",
+        "author": "TOMOKO UJI",
+        "authorLink": "https://unsplash.com/ja/@ujitomo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
       },
-      "score": 0.8225743247491685
+      "score": 0.8314914561944117
     }
   ],
   "2012/09/css_transforms_2d": [
@@ -13784,22 +13833,23 @@
       "score": 0.9050550027125468
     },
     {
+      "id": "2025/rethink-primitive-image",
+      "title": "Primitive Image についてもう一度",
+      "excerpt": "最近まで使っていたPrimitiveを使ったSVGの実装を見直して、WebP画像とどちらが良いかなと比較。",
+      "date": "2025-04-19 13:00",
+      "featured": {
+        "image": "tomoko-uji-gJQoYqpqkhY-unsplash-svg",
+        "author": "TOMOKO UJI",
+        "authorLink": "https://unsplash.com/ja/@ujitomo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.9001667117183433
+    },
+    {
       "id": "2007/10/mtpaginate_movable_type",
       "title": "MTPaginate：Movable Typeでページネーションをする",
       "excerpt": "*   Six Apart - Movable Type プラグインディレクトリ: MTPaginate",
       "date": "2007-10-27T14:46:00.000Z",
       "score": 0.8968551360730636
-    },
-    {
-      "id": "2018/display-featured-image",
-      "title": "Featured Image を設置する",
-      "excerpt": "記事のタイトル下によくあるFeatured Imageを設置してみようと思い立って、Unsplashから良い感じの画像をダウンロードして入れてみた。ちょっと大きい気もするけどまあ良いか。ページサイズ的には特に内容と関係ない画像を入れることのメリットはないけど、、しばらくはそのまま使ってみようと思う。",
-      "date": "2018-01-08T11:07:38.000Z",
-      "featured": {
-        "image": "display-featured-image.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.8919240088741911
     }
   ],
   "2007/02/book_review": [

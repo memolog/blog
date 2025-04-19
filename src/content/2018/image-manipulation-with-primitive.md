@@ -3,7 +3,7 @@ title: Primitiveを使って画像を変換する
 date: 2018-01-14 06:44:06
 featured:
   author: Rommanas Kongmeng
-  image: rommanas-kongmeng-422586
+  image: rommanas-kongmeng-422586.svg
   authorLink: https://unsplash.com/photos/yGIuVb3Pr_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 excerpt: Featured Image とか言いながら、ただ写真を置くだけなのも何だなあとか思い、Primitiveを使用して、上に表示されている画像を変換してみた。Primitive は画像を幾何学的な Primitive（線とか丸、三角、四角）の集まりに変換してくれる。試行錯誤した結果を貼り付けていく。画像の下に変換するときに使用したオプションを添付してある。
 ---

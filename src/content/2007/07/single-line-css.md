@@ -1,11 +1,14 @@
 ---
 title: Single Line CSS
 date: 2007-07-30T16:20:00.000Z
+featured:
+  image: single-line-css
+  author: chatGPT
 categories:
   - web
 tags:
   - css
-excerpt: "*   http://orderedlist.com/articles/single-line-css"
+excerpt: "プロパティごとに改行いれないでさ、1 行でまとめて書いたほうが見やすいと思うんだよ！という話。"
 ---
 
 - [http://orderedlist.com/articles/single-line-css](http://orderedlist.com/articles/single-line-css)

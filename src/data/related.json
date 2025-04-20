@@ -97,8 +97,8 @@
   "2025/replace-picture-element-with-srcset": [
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -581,18 +581,22 @@
       "score": 0.6823727738600761
     },
     {
+      "id": "2007/08/css",
+      "title": "拡張CSSで角丸コーナーを作る",
+      "excerpt": "各ブラウザが独自で用意している拡張 CSS（CSS extensions）を利用して、角丸コーナーを作ろうという話。",
+      "date": "2007-08-02T16:26:00.000Z",
+      "featured": {
+        "image": "border-radius",
+        "author": "chatGPT"
+      },
+      "score": 0.6712203479160617
+    },
+    {
       "id": "2010/07/watir_click_no_wait_doesnt_work",
       "title": "watir：click_no_wait が動作しない",
       "excerpt": "普段watirで使用していないPCにwatir (version 1.6.5) をインストールして使用したところ、click no waitのメソッドがなぜか動作しない。clickとclick!のメソッドは問題なく動作しました。",
       "date": "2010-07-13T12:45:00.000Z",
       "score": 0.6517531398383712
-    },
-    {
-      "id": "2010/12/watir-webdriver-avoid-ssl-error",
-      "title": "watir-webdriver：証明書エラーを回避する",
-      "excerpt": "SSL証明書が（本番の環境の証明書を流用していてドメインが合わないとか有効期限切れとかで）エラーとなるような環境でテストする場合、watir-webdriverをそのまま実行しようとしても証明書エラーとなりその先に進むことができません。",
-      "date": "2010-12-27T14:00:00.000Z",
-      "score": 0.6340042251020769
     }
   ],
   "2022/the-two-ways-to-use-autocomplete-attribute": [
@@ -2433,8 +2437,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -3450,8 +3454,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -4004,8 +4008,8 @@
   "2018/New-Year-Resolutions": [
     {
       "id": "2007/08/yslow_2_use_a_content_delivery",
-      "title": "YSLOW 勉強：2：Use a Content Delivery Network",
-      "excerpt": "*   2: Use a Content Delivery Network  rules for high performance web sitesの二つ目。 ユーザーの待ち時間の大半は画像やCSSなどの構成要素をダウンロードするのに費やされているという視点から、待ち時間を減らす為にCDN（Content Delivery Network ）を利用しようという話。Content Delivery Network (CDN) とは、ユーザーに効率的にコンテンツを配信するために分散化させたネットワークのことをさします（e-wordもあわせてごらんください）。",
+      "title": "YSLOW (2): Use a Content Delivery Network",
+      "excerpt": "ユーザーの待ち時間の大半は画像や CSS などの構成要素をダウンロードするのに費やされているという視点から、待ち時間を減らす為に CDNを利用しようという話。",
       "date": "2007-08-05T06:20:05.000Z",
       "score": 0.45219917746152943
     },
@@ -4024,16 +4028,15 @@
       "score": 0.38548744041120525
     },
     {
-      "id": "2020/flex-layout-box-model-and-terminology",
-      "title": "Flex Layout Box Model and Terminology",
-      "excerpt": "CSS Flexible Box Layout Module Introductionから引き続き、2. Flex Layout Box Model and Terminologyについて確認する。",
-      "date": "2020-03-20T16:21:22.000Z",
+      "id": "2007/08/css",
+      "title": "拡張CSSで角丸コーナーを作る",
+      "excerpt": "各ブラウザが独自で用意している拡張 CSS（CSS extensions）を利用して、角丸コーナーを作ろうという話。",
+      "date": "2007-08-02T16:26:00.000Z",
       "featured": {
-        "image": "greg-jeanneau-ZUSyn7L6o68-unsplash",
-        "author": "Greg Jeanneau",
-        "authorLink": "https://unsplash.com/@gregjeanneau?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "border-radius",
+        "author": "chatGPT"
       },
-      "score": 0.38175396298746705
+      "score": 0.3844598187489927
     }
   ],
   "2017/html-elements": [
@@ -4449,18 +4452,23 @@
       "score": 0.49278829847375677
     },
     {
-      "id": "2007/08/safari_3_webkit_css_3",
-      "title": "Safari 3 (webkit) がサポートしている CSS 3 プロパティ",
-      "excerpt": "*   CSS3 properties tests for webkit based browsers, including the iPhone",
-      "date": "2007-08-04T04:36:20.000Z",
-      "score": 0.4044066165036134
-    },
-    {
       "id": "2012/03/responsive-is",
       "title": "Responsive.is：レスポンシブデザイン対応を確認できるサイト",
       "excerpt": "Responsive.isというサイトで 自分のサイトがiPhoneやiPadなどでどのように表示されるかを疑似体験することができます（via Responsive.is: Display and present responsive web designs | Konigi）。実際には解像度の違いがあるのでiPhone4以降や最新のiPadでは画像の解像感に違いはありますけど、手元にiPhoneやiPadがない場合に、レスポンシブデザインに対応した自分のサイトがどのように見えるかを確認するには十分かなと思います。",
       "date": "2012-03-18T05:32:00.000Z",
       "score": 0.3996046341289311
+    },
+    {
+      "id": "2007/08/safari_3_webkit_css_3",
+      "title": "Safari 3 (webkit) がサポートしている CSS 3 プロパティ",
+      "excerpt": "webkit の拡張タグ上で、すでにいくつかの CSS 3 プロパティが safari 3 上で利用することができます。",
+      "date": "2007-08-04T04:36:20.000Z",
+      "featured": {
+        "image": "amar-yashlaha-sAGXVK6bNFc-unsplash",
+        "author": "Amar Yashlaha",
+        "authorLink": "https://unsplash.com/ja/@pictagramar?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      },
+      "score": 0.39220480459180845
     }
   ],
   "2014/08/convert_indexof_result_with_bitwise_operators": [
@@ -4746,9 +4754,13 @@
     {
       "id": "2007/08/mt",
       "title": "MTで奇数行、偶数行ごとに背景色をつける方法",
-      "excerpt": "*   The blog of H.Fujimoto：Movable Type 4のブロックタグ内で使える変数",
+      "excerpt": "ブロックタグ内で使える変数を利用して、奇数行（odd）と偶数行（even）にわけて class を指定することができます。",
       "date": "2007-07-31T16:41:00.000Z",
-      "score": 0.8465582759561904
+      "featured": {
+        "image": "mt_odd_even",
+        "author": "chatGPT"
+      },
+      "score": 0.8501083112050338
     },
     {
       "id": "2012/07/rich_snippets_testing_tool",
@@ -5152,6 +5164,17 @@
       "score": 0.5189926772449551
     },
     {
+      "id": "2007/08/post-2",
+      "title": "似顔絵",
+      "excerpt": "今日は以前に無駄に描いて結局お蔵入りしていた似顔絵を、場つなぎ的に出してみようと思います。描き方は簡単で、写真をタブレット使ってトレースしただけ。似顔絵の方が「歯抜け」感があって似ているような気がします。",
+      "date": "2007-08-01T14:31:58.000Z",
+      "featured": {
+        "image": "post-2",
+        "author": "chatGPT"
+      },
+      "score": 0.4837424531350711
+    },
+    {
       "id": "2020/css-flexible-box-layout-module-introduction",
       "title": "CSS Flexible Box Layout Module Introduction",
       "excerpt": "前回CSS Display Moduleについて一通り確認したので、今回からはCSS Flexible Box Layout Moduleを確認しようかなと思っている。flex boxはCan I use flexboxによると、IE11以外では問題なく利用できる。IE11についてはいろいろ問題があるそうでPartial Supportという扱いになっている。Flexbugsにいろいろ問題やそれに対する回避策などが書いてある。",
@@ -5174,13 +5197,6 @@
         "authorLink": "https://unsplash.com/@gregjeanneau?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.42196094755406005
-    },
-    {
-      "id": "2007/08/blueprint_a_css_framework",
-      "title": "Blueprint ：CSSのフレームワーク",
-      "excerpt": "*   Raging Thunderbolt. Blueprint 0.4 released",
-      "date": "2007-08-19T02:49:38.000Z",
-      "score": 0.4096228293534633
     }
   ],
   "2013/09/basketjs_with_content_security_policy": [
@@ -5431,6 +5447,17 @@
       "score": 0.8946570242602305
     },
     {
+      "id": "2007/08/mt",
+      "title": "MTで奇数行、偶数行ごとに背景色をつける方法",
+      "excerpt": "ブロックタグ内で使える変数を利用して、奇数行（odd）と偶数行（even）にわけて class を指定することができます。",
+      "date": "2007-07-31T16:41:00.000Z",
+      "featured": {
+        "image": "mt_odd_even",
+        "author": "chatGPT"
+      },
+      "score": 0.8830241332879318
+    },
+    {
       "id": "2013/02/webkit-overflow-scrolling-touch",
       "title": "-webkit-overflow-scrollingと慣性スクロール",
       "excerpt": "コンテンツがオーバーフローしたときにスクロールバーを表示させる場合に、そのコンテンツのスクロールの仕方を設定する値として-webkit-overflow-scrollingというのがある。",
@@ -5441,18 +5468,6 @@
         "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
       },
       "score": 0.8806863356212087
-    },
-    {
-      "id": "2020/got-100-lighthouse-score-in-all-categories-on-mobile",
-      "title": "Got 100 lighthouse score in all categories on mobile",
-      "excerpt": "ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。",
-      "date": "2020-09-16T12:45:52.000Z",
-      "featured": {
-        "image": "ben-koorengevel-tpIWpoW3_Wc-unsplash",
-        "author": "Ben Koorengevel",
-        "authorLink": "https://unsplash.com/@benkoorengevel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.8794404926431092
     }
   ],
   "2013/08/internet_explorer_useragent": [
@@ -5648,8 +5663,8 @@
   "2013/08/chrome_workspace": [
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -6424,8 +6439,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -6547,13 +6562,6 @@
   ],
   "2012/09/sass_compass": [
     {
-      "id": "2007/08/css",
-      "title": "拡張CSSで角丸コーナーを作る",
-      "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
-      "date": "2007-08-02T16:26:00.000Z",
-      "score": 0.834045826246248
-    },
-    {
       "id": "2011/09/save-screenshot-with-watir-webdriver",
       "title": "watir-webdriver でスクリーンショットを撮る",
       "excerpt": "小ネタでも挟もうではありませんか。watir-webdriverを使って簡単にスクリーンショット撮ることができます。Macにはrubyがもともと入っているので、事前準備はwatir-webdriverをインストールするだけです。インストールは、ターミナルを開いて下記のコマンドを実行する。",
@@ -6573,6 +6581,13 @@
       "excerpt": "Firefox Development Highlights - H.264 & MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。",
       "date": "2013-01-27T22:05:00.000Z",
       "score": 0.8161294520772311
+    },
+    {
+      "id": "2007/10/mtpaginate_movable_type",
+      "title": "MTPaginate：Movable Typeでページネーションをする",
+      "excerpt": "*   Six Apart - Movable Type プラグインディレクトリ: MTPaginate",
+      "date": "2007-10-27T14:46:00.000Z",
+      "score": 0.8108810487968533
     }
   ],
   "2012/09/rvm_jewelrybox_homebrew": [
@@ -7128,8 +7143,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -7184,8 +7199,8 @@
   "2012/06/jquery_masonry": [
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -8243,8 +8258,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -8818,8 +8833,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -9694,13 +9709,6 @@
   ],
   "2010/02/css3_column-count": [
     {
-      "id": "2007/08/css",
-      "title": "拡張CSSで角丸コーナーを作る",
-      "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
-      "date": "2007-08-02T16:26:00.000Z",
-      "score": 0.9151825631497467
-    },
-    {
       "id": "2012/06/set_input_width_to_100_percent",
       "title": "inputでwidthを100%で使うと若干はみ出る",
       "excerpt": "input要素にwidth:100%;を指定すると、微妙に包含ブロックからはみ出す。  なんでだろうなあと思っていたんですけど、input要素にはブラウザのデフォルトでpaddingやborderが入っているので、width:100%;とするとpaddingやborderのサイズ分はみ出してしまうということでした。",
@@ -9733,6 +9741,17 @@
         "author": "chatGPT"
       },
       "score": 0.8468614624457983
+    },
+    {
+      "id": "2007/08/yslow_1_minimize_http_requests",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "date": "2007-08-04T15:46:10.000Z",
+      "featured": {
+        "image": "yslow_1_minimize_http_requests.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.846561965473205
     }
   ],
   "2010/02/alcedo_atthis": [
@@ -10191,11 +10210,15 @@
       "score": 0.818733818345179
     },
     {
-      "id": "2007/08/ie6",
-      "title": "複数のセレクタを指定したときにIE6バグ",
-      "excerpt": "*   Multiple Classes in IE | Ryan Brill *   付録：セレクタ関連の対応状況 - CSS2リファレンス",
-      "date": "2007-08-03T15:33:00.000Z",
-      "score": 0.8007323914587504
+      "id": "2006/11/html_linthtml",
+      "title": "HTML LINTから学んだHTMLとアクセシビリティ",
+      "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
+      "date": "2006-11-28T11:37:23.000Z",
+      "featured": {
+        "image": "html_linthtml.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.7959528711921433
     }
   ],
   "2009/05/future_of_water": [
@@ -12005,9 +12028,13 @@
     {
       "id": "2007/08/post-2",
       "title": "似顔絵",
-      "excerpt": "!me.gif 今日は以前に無駄に描いて結局お蔵入りしていた似顔絵を、場つなぎ的に出してみようと思います。描き方は簡単で、写真をタブレット使ってトレースしただけ。似顔絵の方が「歯抜け」感があって似ているような気がします。",
+      "excerpt": "今日は以前に無駄に描いて結局お蔵入りしていた似顔絵を、場つなぎ的に出してみようと思います。描き方は簡単で、写真をタブレット使ってトレースしただけ。似顔絵の方が「歯抜け」感があって似ているような気がします。",
       "date": "2007-08-01T14:31:58.000Z",
-      "score": 0.5271532138141228
+      "featured": {
+        "image": "post-2",
+        "author": "chatGPT"
+      },
+      "score": 0.546624204658304
     },
     {
       "id": "2009/03/flickr_to_html",
@@ -12343,6 +12370,17 @@
   ],
   "2007/09/mtif": [
     {
+      "id": "2007/08/mt",
+      "title": "MTで奇数行、偶数行ごとに背景色をつける方法",
+      "excerpt": "ブロックタグ内で使える変数を利用して、奇数行（odd）と偶数行（even）にわけて class を指定することができます。",
+      "date": "2007-07-31T16:41:00.000Z",
+      "featured": {
+        "image": "mt_odd_even",
+        "author": "chatGPT"
+      },
+      "score": 0.9314233380054251
+    },
+    {
       "id": "2012/05/invited_elements",
       "title": "独自要素を作成する",
       "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
@@ -12353,13 +12391,6 @@
         "authorLink": "https://artvee.com/artist/william-henry-walker/"
       },
       "score": 0.9291909243248198
-    },
-    {
-      "id": "2007/08/mt",
-      "title": "MTで奇数行、偶数行ごとに背景色をつける方法",
-      "excerpt": "*   The blog of H.Fujimoto：Movable Type 4のブロックタグ内で使える変数",
-      "date": "2007-07-31T16:41:00.000Z",
-      "score": 0.927995325691215
     },
     {
       "id": "2009/03/flickr_thickbox",
@@ -12377,13 +12408,6 @@
     }
   ],
   "2007/09/mt4mt3": [
-    {
-      "id": "2007/08/css",
-      "title": "拡張CSSで角丸コーナーを作る",
-      "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
-      "date": "2007-08-02T16:26:00.000Z",
-      "score": 0.8457909496544804
-    },
     {
       "id": "2018/redirect-to-my-old-blog",
       "title": "元のブログからリダイレクトをかける",
@@ -12411,6 +12435,17 @@
         "image": "new-icon"
       },
       "score": 0.8117285312037857
+    },
+    {
+      "id": "2010/12/redesign_2011",
+      "title": "デザイン変更（2010/12）",
+      "excerpt": "ひさしぶりにブログのデザインを変更してみました。今回はHTML5をベースに。IE8以下だとHTML5の新しい要素を認識しないとかいう話なので、html5shivというのを追加しています（Windowsが手元にないので実際の表示は確認していませんが）。HTML5の作成には「HTML5&API入門」を参考にしました。しかし、これで正しいのかいまいち自信なし。h1とか、こんなに入れていいんですかねえ（validatorでは大丈夫そうですけど）。",
+      "date": "2010-12-24T20:00:00.000Z",
+      "featured": {
+        "image": "redesign_2011.webp",
+        "author": "chatGPT"
+      },
+      "score": 0.8034146450919354
     }
   ],
   "2007/09/jr": [
@@ -12653,15 +12688,16 @@
       "score": 0.7314415601495241
     },
     {
-      "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
-      "date": "2007-08-04T15:46:10.000Z",
+      "id": "2007/08/ie6",
+      "title": "複合セレクタを指定したときにIE6バグ",
+      "excerpt": "p.foo.barのような複合セレクタを指定したときに、IE5と6 では、p.barと単純セレクタで指定しているのと同じ状態になってしまうという話",
+      "date": "2007-08-03T15:33:00.000Z",
       "featured": {
-        "image": "yslow_1_minimize_http_requests.webp",
-        "author": "chatGPT"
+        "image": "elias-maurer-uaJfantgQNE-unsplash",
+        "author": "Elias Maurer",
+        "authorLink": "https://unsplash.com/ja/@elmaurer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
       },
-      "score": 0.7218278171259573
+      "score": 0.7313003947682766
     }
   ],
   "2007/08/yslow_6_move_scripts_to_the_bo": [
@@ -12950,8 +12986,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -12984,8 +13020,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -13111,6 +13147,17 @@
   ],
   "2007/08/safari_3_webkit_css_3": [
     {
+      "id": "2007/08/css",
+      "title": "拡張CSSで角丸コーナーを作る",
+      "excerpt": "各ブラウザが独自で用意している拡張 CSS（CSS extensions）を利用して、角丸コーナーを作ろうという話。",
+      "date": "2007-08-02T16:26:00.000Z",
+      "featured": {
+        "image": "border-radius",
+        "author": "chatGPT"
+      },
+      "score": 0.5972146600202883
+    },
+    {
       "id": "2006/11/ie_float_bug",
       "title": "IE float bug",
       "excerpt": "IE にはいろいろなバグが存在するのは周知の事実ですが、その一つに float された要素の margin（または padding）を二重に計算してしまうというものがあるそうです。",
@@ -13120,28 +13167,21 @@
         "author": "Sebastian Pena Lambarri",
         "authorLink": "https://unsplash.com/ja/@sebaspenalambarri?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
       },
-      "score": 0.5680935682550768
+      "score": 0.561712152636424
     },
     {
       "id": "2007/08/yslow_5_put_css_at_the_top",
       "title": "YSLOW 勉強：5：Put CSS at the Top",
       "excerpt": "*   5: Put CSS at the Top  rules for high performance web sitesの五つ目。スタイルシートはheadタグの中で指定しよう、という話。なんか普通の使い方のような気がするのですが・・話の主旨はスタイルシートが最初の方に読み込まれておけば、ページのレンダリングが暫時的にすすんでいくから、ページを早く見ることができるということ。完全に読み切るまで真っ白な画面で待たされるより、少しずつでも表示されていく方がユーザーエクスペリエンスも高くなる。",
       "date": "2007-08-08T15:22:00.000Z",
-      "score": 0.5358540663677055
-    },
-    {
-      "id": "2012/09/css_transforms_backface-visibility",
-      "title": "CSS Transforms：backface-visibility",
-      "excerpt": "CSS Transformsにはbackface-visibilityという設定もあって、これはその名の通り、背面側を表示するかどうかの設定。",
-      "date": "2012-09-23T22:00:00.000Z",
-      "score": 0.5180310005918854
+      "score": 0.5378245472434191
     },
     {
       "id": "2007/09/css_sprite_generator_http_requ",
       "title": "CSS Sprite Generator ：画像を統合してHTTP requestを減らす",
       "excerpt": "*   CSS Sprite Generator | Design Shack *   Website Performance | CSS Sprite Generator",
       "date": "2007-09-29T14:24:00.000Z",
-      "score": 0.5130691335633207
+      "score": 0.5162086576951498
     }
   ],
   "2007/08/post_144": [
@@ -13272,37 +13312,28 @@
       "title": "デジカメを購入",
       "excerpt": "!L1000012.jpg   久しぶりにデジカメを買っちゃいました。一眼レフは実力的にも重量的も荷が重いので、スリムなコンパクトカメラ。スペック的にもよくわからないので、見た目でLEICAのC-Lux 2のブラックを選択してみました。サイトに載っているサンプルのように奇麗に撮れるようにがんばっていきたいなと思ったり思わなかったり。すぐに自分の中の写真ブームが去る気がしないでもないですが。",
       "date": "2007-09-21T09:30:00.000Z",
-      "score": 0.5271532138141228
-    },
-    {
-      "id": "2009/12/camera-lucida",
-      "title": "本：明るい部屋",
-      "excerpt": "写真が本質的に有する被写体という対象から離して、「写真」という事象そのものをどのように語ることができるかを出発点に、写真とは何かを考察した本。",
-      "date": "2009-12-31T01:00:00.000Z",
-      "featured": {
-        "image": "camera-lucida.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.5175516052889616
+      "score": 0.546624204658304
     },
     {
       "id": "2009/03/flickr_to_html",
       "title": "Flickr to HTML",
       "excerpt": "最近dp1とEOS 5D mark IIを手に入れてしまい、ちょっとしたカメラバブル中。もっとも活発な部位はFlickr脳です。",
       "date": "2009-03-01T12:10:02.000Z",
-      "score": 0.5089451207387974
+      "score": 0.5301055370164584
     },
     {
-      "id": "2024/battle-of-nagashino",
-      "title": "本：長篠合戦",
-      "excerpt": "長篠合戦を読んだ。長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や長篠の戦いといえば、織田信長が鉄砲を用いた三段撃ちで武田の騎馬隊を打ち破った、という鮮烈なイメージがあるが、実際には後年の脚色や、各勢力が自らを美化するための「化粧」が多分に含まれているようだ。",
-      "date": "2024-10-28T08:20:00.000Z",
-      "featured": {
-        "image": "51522jpsdl.webp",
-        "author": "Tsukioka Yoshitoshi",
-        "authorLink": "https://artvee.com/artist/tsukioka-yoshitoshi/"
-      },
-      "score": 0.44705068484732835
+      "id": "2012/03/responsive-is",
+      "title": "Responsive.is：レスポンシブデザイン対応を確認できるサイト",
+      "excerpt": "Responsive.isというサイトで 自分のサイトがiPhoneやiPadなどでどのように表示されるかを疑似体験することができます（via Responsive.is: Display and present responsive web designs | Konigi）。実際には解像度の違いがあるのでiPhone4以降や最新のiPadでは画像の解像感に違いはありますけど、手元にiPhoneやiPadがない場合に、レスポンシブデザインに対応した自分のサイトがどのように見えるかを確認するには十分かなと思います。",
+      "date": "2012-03-18T05:32:00.000Z",
+      "score": 0.49765144043624554
+    },
+    {
+      "id": "2013/09/css_vertical_alignment",
+      "title": "CSSで横並びで真ん中にそろえたい",
+      "excerpt": "横並びにした要素を真ん中揃えにしたいという話。アプローチはいろいろあります。floatは真ん中揃えはむずかしそうなので、除外...（できるのかな）  *   line-heightでそろえる *   display:inline-boxでそろえる",
+      "date": "2013-09-15T02:55:00.000Z",
+      "score": 0.4837424531350711
     }
   ],
   "2007/08/mt": [
@@ -13316,19 +13347,7 @@
         "author": "Kevin Charit",
         "authorLink": "https://unsplash.com/ja/@kevin_charit?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
       },
-      "score": 0.927995325691215
-    },
-    {
-      "id": "2020/got-100-lighthouse-score-in-all-categories-on-mobile",
-      "title": "Got 100 lighthouse score in all categories on mobile",
-      "excerpt": "ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。",
-      "date": "2020-09-16T12:45:52.000Z",
-      "featured": {
-        "image": "ben-koorengevel-tpIWpoW3_Wc-unsplash",
-        "author": "Ben Koorengevel",
-        "authorLink": "https://unsplash.com/@benkoorengevel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.9028881135768437
+      "score": 0.9314233380054251
     },
     {
       "id": "2012/05/invited_elements",
@@ -13340,7 +13359,19 @@
         "author": "William Henry Walker",
         "authorLink": "https://artvee.com/artist/william-henry-walker/"
       },
-      "score": 0.9028745946802447
+      "score": 0.9090572697098781
+    },
+    {
+      "id": "2020/got-100-lighthouse-score-in-all-categories-on-mobile",
+      "title": "Got 100 lighthouse score in all categories on mobile",
+      "excerpt": "ふとLighthouseを走らせみたら、微妙に100点行ってなかったので、調整して100点を目指してみた。",
+      "date": "2020-09-16T12:45:52.000Z",
+      "featured": {
+        "image": "ben-koorengevel-tpIWpoW3_Wc-unsplash",
+        "author": "Ben Koorengevel",
+        "authorLink": "https://unsplash.com/@benkoorengevel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.9082072508980545
     },
     {
       "id": "2013/02/webkit-overflow-scrolling-touch",
@@ -13352,41 +13383,37 @@
         "author": "Colin Watts",
         "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
       },
-      "score": 0.8980162018937607
+      "score": 0.904108499377212
     }
   ],
   "2007/08/ie6": [
-    {
-      "id": "2013/08/specificity_of_pseudo_class",
-      "title": "a:link, a：visitedの詳細度はclass selectorのみより大きい",
-      "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
-      "date": "2013-08-30T21:00:00.000Z",
-      "score": 0.804696041587514
-    },
     {
       "id": "2009/05/inherit",
       "title": "親要素の色をリンク色に継承させる",
       "excerpt": "リンクの色の方が優先される理由の記事で、下記のHTMLの場合はリンクの色の方が優先されるという話をした。",
       "date": "2009-05-06T09:27:10.000Z",
-      "score": 0.8007323914587504
+      "score": 0.7916413390806943
+    },
+    {
+      "id": "2013/08/specificity_of_pseudo_class",
+      "title": "a:link, a：visitedの詳細度はclass selectorのみより大きい",
+      "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
+      "date": "2013-08-30T21:00:00.000Z",
+      "score": 0.7699744858417454
     },
     {
       "id": "2009/04/post_185",
       "title": "リンクの色の方が優先される理由",
       "excerpt": "たとえば下記のようなHTMLに、下記のようなCSSを指定した場合、aタグに指定したCSSの方が有効に作用する。  ```html <h3 class=\"entry-header\"><a href=\"/post.html\">記事のタイトル</a></h3>",
       "date": "2009-04-26T15:40:56.000Z",
-      "score": 0.7737904092490706
+      "score": 0.7540034652664139
     },
     {
-      "id": "2020/n2-sort-algorithms-again",
-      "title": "n^2 sort algorithms again",
-      "excerpt": "O(n^2)の計算量で実行するソートアルゴリズムについては、Bubble Sort in JavaScript（バブルソート）、Insertion Sort in JavaScript（挿入ソート）、Selection Sort in JavaScript（選択ソート）にて扱ったのだけど、完全に忘れてしまったので、もう一度確認する。",
-      "date": "2020-02-11T13:54:52.000Z",
-      "featured": {
-        "image": "n2-sort-algorithms-again.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.7226077695368959
+      "id": "2007/08/yslow_7_avoid_css_expressions",
+      "title": "YSLOW 勉強：7：Avoid CSS Expressions",
+      "excerpt": "*   7: Avoid CSS Expressions  rules for high performance web sitesの七つ目。CSS Expressions の使用を避けよう。CSS Expressionsとは、background-color: expression( (new Date()).getHours()&#x25;2 ? \"#B8D4FF\" : \"#F08A00\" ); （2で割れたら#B8D4FF、割れなかったらF08A00）というように、CSSの指定をダイナミックに行えるIEの独自拡張のこと。 便利な機能だけど、expressionsの判定がマウスを動かしたりするだけで行われてしまうため、何千回も判定を繰り返す可能性がある（パフォーマンスにも影響がある）。",
+      "date": "2007-08-09T15:58:00.000Z",
+      "score": 0.7313003947682766
     }
   ],
   "2007/08/font_tester": [
@@ -13448,8 +13475,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -13491,8 +13518,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -13514,37 +13541,36 @@
   ],
   "2007/08/css": [
     {
+      "id": "2007/08/blueprint_a_css_framework",
+      "title": "Blueprint ：CSSのフレームワーク",
+      "excerpt": "*   Raging Thunderbolt. Blueprint 0.4 released",
+      "date": "2007-08-19T02:49:38.000Z",
+      "score": 0.765409560316791
+    },
+    {
+      "id": "2007/07/css3-resize",
+      "title": "CSS3：resize プロパティ",
+      "excerpt": "CSS3 のプロパティの一つに「resize」というプロパティがあり、それが Safari 3 では利用可能であるという話。",
+      "date": "2007-07-29T14:35:00.000Z",
+      "featured": {
+        "image": "css3-resize",
+        "author": "chatGPT"
+      },
+      "score": 0.7457826220661904
+    },
+    {
       "id": "2010/02/css3_column-count",
       "title": "CSS：column-count で3列レイアウトを作成",
       "excerpt": "フッター部分を 3 列にしてみようかなと唐突に思いついて、以前から興味あった column-count を使って 3 列にしてみました。Firefox と Safari でのみ対応（IE では 1 列のまま表示されます）。Pico のデザインのバランスを崩している気がしないでもないですけど、まあいいか。",
       "date": "2010-02-03T22:00:00.000Z",
-      "score": 0.9151825631497467
+      "score": 0.7441252510040578
     },
     {
-      "id": "2013/01/style_scoped",
-      "title": "style要素のscoped属性",
-      "excerpt": "Firefox Development Highlights - H.264 & MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。",
-      "date": "2013-01-27T22:05:00.000Z",
-      "score": 0.8677300251511367
-    },
-    {
-      "id": "2008/02/target_pseudo_selector",
-      "title": "target疑似クラスを使って、表示をオン・オフする",
-      "excerpt": "*   Vitamin Features » Stay on :target *   :target pseudo selector tutorial - CSS3 . Info",
-      "date": "2008-02-03T04:40:00.000Z",
-      "score": 0.8619395192717183
-    },
-    {
-      "id": "2012/06/set_input_width_to_100_percent",
-      "title": "inputでwidthを100%で使うと若干はみ出る",
-      "excerpt": "input要素にwidth:100%;を指定すると、微妙に包含ブロックからはみ出す。  なんでだろうなあと思っていたんですけど、input要素にはブラウザのデフォルトでpaddingやborderが入っているので、width:100%;とするとpaddingやborderのサイズ分はみ出してしまうということでした。",
-      "date": "2012-06-08T14:21:00.000Z",
-      "featured": {
-        "image": "henrique-ferreira-306706-unsplash",
-        "author": "Henrique Ferreira",
-        "authorLink": "https://unsplash.com/photos/ySgSnJdPhZg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-      },
-      "score": 0.8601048975602591
+      "id": "2010/02/watir-webdriver",
+      "title": "Watir 2.0 / Webdriverベースのwatir",
+      "excerpt": "次世代の Watir、Watir 2.0 を Webdriver ベースに実装しようという話",
+      "date": "2010-02-14T22:00:00.000Z",
+      "score": 0.7222295431241933
     }
   ],
   "2007/08/checkbot": [
@@ -13579,13 +13605,6 @@
   ],
   "2007/08/blueprint_a_css_framework": [
     {
-      "id": "2007/08/css",
-      "title": "拡張CSSで角丸コーナーを作る",
-      "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
-      "date": "2007-08-02T16:26:00.000Z",
-      "score": 0.8477312777248948
-    },
-    {
       "id": "2010/02/css3_column-count",
       "title": "CSS：column-count で3列レイアウトを作成",
       "excerpt": "フッター部分を 3 列にしてみようかなと唐突に思いついて、以前から興味あった column-count を使って 3 列にしてみました。Firefox と Safari でのみ対応（IE では 1 列のまま表示されます）。Pico のデザインのバランスを崩している気がしないでもないですけど、まあいいか。",
@@ -13594,8 +13613,8 @@
     },
     {
       "id": "2007/08/yslow_1_minimize_http_requests",
-      "title": "YSLOW 勉強: 1: Minimize HTTP Requests",
-      "excerpt": "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
+      "title": "YSLOW (1): Minimize HTTP Requests",
+      "excerpt": "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。",
       "date": "2007-08-04T15:46:10.000Z",
       "featured": {
         "image": "yslow_1_minimize_http_requests.webp",
@@ -13614,6 +13633,18 @@
         "authorLink": "https://unsplash.com/@harshjain1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
       "score": 0.8031324318845368
+    },
+    {
+      "id": "2025/replace-picture-element-with-srcset",
+      "title": "Picture要素をやめてsrcsetを使う",
+      "excerpt": "SVGでないFeatured ImageにはPicture要素を使ってWebPとjpg, pngを出し分けていたのですけど、気がついたらもうWebPが安全に利用できるようになっており、もう全部webpで良いじゃないかということになっていた。",
+      "date": "2025-04-11 18:30",
+      "featured": {
+        "image": "66962plsdl.webp",
+        "author": "Magdelena Rosina Funck",
+        "authorLink": "https://artvee.com/artist/magdelena-rosina-funck/"
+      },
+      "score": 0.7883386311408493
     }
   ],
   "2007/07/web-site-for-color-condinate": [
@@ -13686,11 +13717,11 @@
       "score": 0.8069603590931368
     },
     {
-      "id": "2007/08/css",
-      "title": "拡張CSSで角丸コーナーを作る",
-      "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
-      "date": "2007-08-02T16:26:00.000Z",
-      "score": 0.8038720113235486
+      "id": "2010/02/css3_column-count",
+      "title": "CSS：column-count で3列レイアウトを作成",
+      "excerpt": "フッター部分を 3 列にしてみようかなと唐突に思いついて、以前から興味あった column-count を使って 3 列にしてみました。Firefox と Safari でのみ対応（IE では 1 列のまま表示されます）。Pico のデザインのバランスを崩している気がしないでもないですけど、まあいいか。",
+      "date": "2010-02-03T22:00:00.000Z",
+      "score": 0.802508713742293
     }
   ],
   "2007/07/pseudo-classes-pseudo-elements": [
@@ -13749,9 +13780,13 @@
     {
       "id": "2007/08/css",
       "title": "拡張CSSで角丸コーナーを作る",
-      "excerpt": "*   Safari 3 CSS Support » CSS, JavaScript and XHTML Explained",
+      "excerpt": "各ブラウザが独自で用意している拡張 CSS（CSS extensions）を利用して、角丸コーナーを作ろうという話。",
       "date": "2007-08-02T16:26:00.000Z",
-      "score": 0.7360270815939746
+      "featured": {
+        "image": "border-radius",
+        "author": "chatGPT"
+      },
+      "score": 0.7457826220661904
     },
     {
       "id": "2025/replace-picture-element-with-srcset",

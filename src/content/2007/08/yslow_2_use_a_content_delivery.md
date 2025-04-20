@@ -1,11 +1,11 @@
 ---
-title: YSLOW 勉強：2：Use a Content Delivery Network
+title: "YSLOW (2): Use a Content Delivery Network"
 date: 2007-08-05T06:20:05.000Z
 categories:
   - web
 tags:
   - yslow
-excerpt: "*   2: Use a Content Delivery Network  rules for high performance web sitesの二つ目。 ユーザーの待ち時間の大半は画像やCSSなどの構成要素をダウンロードするのに費やされているという視点から、待ち時間を減らす為にCDN（Content Delivery Network ）を利用しようという話。Content Delivery Network (CDN) とは、ユーザーに効率的にコンテンツを配信するために分散化させたネットワークのことをさします（e-wordもあわせてごらんください）。"
+excerpt: "ユーザーの待ち時間の大半は画像や CSS などの構成要素をダウンロードするのに費やされているという視点から、待ち時間を減らす為に CDNを利用しようという話。"
 ---
 
 - [2: Use a Content Delivery Network](http://developer.yahoo.com/performance/rules.html#cdn)

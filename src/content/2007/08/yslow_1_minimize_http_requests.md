@@ -1,5 +1,5 @@
 ---
-title: "YSLOW 勉強: 1: Minimize HTTP Requests"
+title: "YSLOW (1): Minimize HTTP Requests"
 date: 2007-08-04T15:46:10.000Z
 featured:
   image: yslow_1_minimize_http_requests.webp
@@ -8,7 +8,7 @@ categories:
   - web
 tags:
   - yslow
-excerpt: "話題になっていたYSLOWをインストールして試してみるという話。YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。"
+excerpt: "YSLOWはrules for high performance web sites（ウェブサイトを高速にするルール）に記載されている法則に則って、ウェブページの表示を遅くしている原因が何かを教えてくれるFirebugzの拡張プラグインです。"
 ---
 
 - [YSlow for Firebug](http://developer.yahoo.com/yslow/)

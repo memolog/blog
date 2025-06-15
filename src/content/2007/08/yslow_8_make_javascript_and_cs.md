@@ -1,11 +1,14 @@
 ---
-title: YSLOW 勉強：8：Make JavaScript and CSS External
+title: "YSLOW (8): Make JavaScript and CSS External"
 date: 2007-08-11T16:08:00.000Z
+featured:
+  image: yslow_8_make_javascript_and_cs
+  author: chatGPT
 categories:
   - web
 tags:
   - yslow
-excerpt: "*   8: Make JavaScript and CSS External"
+excerpt: "Javascript と CSS を外部ファイルにしよう。"
 ---
 
 - [8: Make JavaScript and CSS External](http://developer.yahoo.com/performance/rules.html#external)

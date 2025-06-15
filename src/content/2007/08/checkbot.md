@@ -1,11 +1,15 @@
 ---
-title: Checkbot ：ウェブページのリンクを自動チェックしてくれるツール
+title: "Checkbot：ウェブページのリンクを自動チェックしてくれるツール"
 date: 2007-08-18T10:07:29.000Z
+featured:
+  image: buddy-photo-MYXu9Zj1FXc-unsplash
+  author: Buddy Photo
+  authorLink: https://unsplash.com/ja/@stbuddyp?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 categories:
   - web
 tags:
   - tool
-excerpt: "*   Checkbot  Checkbot はウェブページのリンクを自動でチェックしてくれるツールです。ウェブページ上のリンク切れとかを探すのときに役立ちます。"
+excerpt: "Checkbot はウェブページのリンクを自動でチェックしてくれるツールです。ウェブページ上のリンク切れとかを探すのときに役立ちます。"
 ---
 
 - [Checkbot](http://degraaff.org/checkbot/)

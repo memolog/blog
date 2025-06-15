@@ -1,11 +1,14 @@
 ---
 title: YSLOW 勉強 ：まとめ
 date: 2007-08-18T16:29:00.000Z
+featured:
+  image: yslow
+  author: chatGPT
 categories:
   - web
 tags:
   - yslow
-excerpt: "*   1 : HTTPのリクエストを最小限にしよう *   2 : CDNを利用しよう"
+excerpt: "YSLOW における 13 の評価基準を一つずつ見てきてわかったことは、YSLOW とは、HTTP の応答を減らせる余地があるかないかを評価するためのツールだということ。"
 ---
 
 - [1 : HTTP のリクエストを最小限にしよう](/2007/08/yslow_1_minimize_http_requests/)

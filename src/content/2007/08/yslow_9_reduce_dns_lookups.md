@@ -1,11 +1,14 @@
 ---
-title: YSLOW 勉強：9：Reduce DNS Lookups
+title: "YSLOW (9): Reduce DNS Lookups"
 date: 2007-08-12T15:24:00.000Z
+featured:
+  image: yslow_9_reduce_dns_lookups
+  author: chatGPT
 categories:
   - web
 tags:
   - yslow
-excerpt: "*   9: Reduce DNS Lookups  rules for high performance web sitesの九つ目。DNS lookups を減らそう。あるhost名とIPアドレスを関連づけるためにDNS（Domain Name System）lookupを行うけれど、これには20〜120ミリ秒の時間がかかる。lookupが完了するまではそのhostからダウンロードすることはできない。"
+excerpt: "DNS lookups を減らそう。"
 ---
 
 - [9: Reduce DNS Lookups](http://developer.yahoo.com/performance/rules.html#dns_lookups)

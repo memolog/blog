@@ -1,6 +1,9 @@
 ---
 title: "YSLOW (2): Use a Content Delivery Network"
 date: 2007-08-05T06:20:05.000Z
+featured:
+  image: yslow_2_use_a_content_delivery
+  author: chatGPT
 categories:
   - web
 tags:

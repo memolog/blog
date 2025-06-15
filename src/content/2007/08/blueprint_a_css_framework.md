@@ -1,14 +1,16 @@
 ---
-title: Blueprint ：CSSのフレームワーク
+title: "Blueprint：CSSのフレームワーク"
 date: 2007-08-19T02:49:38.000Z
+featured:
+  image: art-institute-of-chicago-sAlWjm2huck-unsplash
+  author: Art Institute of Chicago
+  authorLink: https://unsplash.com/ja/@artchicago?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 categories:
   - web
 tags:
   - css
-excerpt: "*   Raging Thunderbolt. Blueprint 0.4 released"
+excerpt: "Blueprint とは、いわゆるひとつの CSS のフレームワークです"
 ---
-
-- [Raging Thunderbolt. Blueprint 0.4 released](http://bjorkoy.com/past/2007/8/11/release_blueprint_04/)
 
 - [blueprintcss - Google Code](http://code.google.com/p/blueprintcss/)
 

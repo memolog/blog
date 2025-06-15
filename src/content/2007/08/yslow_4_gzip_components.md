@@ -1,11 +1,14 @@
 ---
-title: YSLOW 勉強：4：Gzip Components
+title: "YSLOW (4): Gzip Components"
 date: 2007-08-07T16:30:00.000Z
+featured:
+  image: yslow_4_gzip_components
+  author: chatGPT
 categories:
   - web
 tags:
   - yslow
-excerpt: "*   4: Gzip Components  rules for high performance web sitesの四つ目。gzipで構成要素を圧縮して、HTTPのresponseサイズを減少させようという話。gzipについては、Wikipediaのgzipのページを参照。"
+excerpt: "gzip で構成要素を圧縮して、HTTP の response サイズを減少させようという話"
 ---
 
 - [4: Gzip Components](http://developer.yahoo.com/performance/rules.html#gzip)

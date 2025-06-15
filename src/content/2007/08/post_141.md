@@ -1,6 +1,10 @@
 ---
 title: 実際に表示されているブロック要素のサイズを表示する
 date: 2007-08-07T16:47:00.000Z
+featured:
+  image: 931036ilsdl
+  author: Hans Schroedter
+  authorLink: https://artvee.com/artist/hans-schroedter/
 categories:
   - web
 tags:

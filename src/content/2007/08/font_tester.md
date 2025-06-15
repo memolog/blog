@@ -1,15 +1,19 @@
 ---
-title: Font Tester ：使いたいフォントをウェブ上で比較検討
+title: "Font Tester：使いたいフォントをウェブ上で比較検討"
 date: 2007-08-13T15:07:33.000Z
+featured:
+  image: elijah-pilchard-5QHUhsXPNeM-unsplash
+  author: Elijah Pilchard
+  authorLink: https://unsplash.com/ja/@elijahp?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 categories:
   - web
 tags:
   - css
   - tool
-excerpt: "*   Font Tester  Windows IE でmemolog.orgを閲覧したときに、font-size:12pxに指定している箇所よりfont-size:11pxに指定している箇所の方が大きく表示されていたので、不思議に思っていろいろテストしてたときに思い出したページ。"
+excerpt: "Font Tester は選択したフォントが、ブラウザ上でどんな感じで表示されるのかをプレビューしてくれるウェブサービス"
 ---
 
-- [Font Tester](http://www.fonttester.com/)
+- Font Tester（でもすでに閉鎖）
 
 Windows IE で memolog.org を閲覧したときに、font-size:12px に指定している箇所より font-size:11px に指定している箇所の方が大きく表示されていたので、不思議に思っていろいろテストしてたときに思い出したページ。
 

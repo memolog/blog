@@ -1,11 +1,14 @@
 ---
-title: YSLOW 勉強：10：Minify JavaScript
+title: "YSLOW (10): Minify JavaScript"
 date: 2007-08-13T14:52:01.000Z
+featured:
+  image: yslow_10_minify_javascript
+  author: chatGPT
 categories:
   - web
 tags:
   - yslow
-excerpt: "*   10: Minify JavaScript  rules for high performance web sitesの十個目。Javascriptを最小化しよう。スクリプト内の不要なスペースとか改行やタブとかを削除することで、ダウンロードするファイルのサイズが減るのでレスポンスタイムを短くすることができる。代表的なツールにはJSMINがある。"
+excerpt: "Javascript を最小化しよう。"
 ---
 
 - [10: Minify JavaScript](http://developer.yahoo.com/performance/rules.html#minify)

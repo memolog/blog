@@ -1,6 +1,9 @@
 ---
-title: YSLOW 勉強：13：Configure ETags
+title: "YSLOW (13): Configure ETags"
 date: 2007-08-16T16:29:00.000Z
+featured:
+  image: yslow_13_configure_etags
+  author: chatGPT
 categories:
   - web
 tags:

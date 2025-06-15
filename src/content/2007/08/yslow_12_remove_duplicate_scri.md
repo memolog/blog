@@ -1,6 +1,9 @@
 ---
-title: YSLOW 勉強：12：Remove Duplicate Scripts
+title: "YSLOW (12): Remove Duplicate Scripts"
 date: 2007-08-15T15:11:00.000Z
+featured:
+  image: yslow_12_remove_duplicate_scri
+  author: chatGPT
 categories:
   - web
 tags:

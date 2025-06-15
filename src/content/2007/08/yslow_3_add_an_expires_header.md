@@ -1,11 +1,14 @@
 ---
-title: YSLOW 勉強：3：Add an Expires Header
+title: "YSLOW (3): Add an Expires Header"
 date: 2007-08-06T15:52:00.000Z
+featured:
+  image: yslow_3_add_an_expires_header
+  author: chatGPT
 categories:
   - web
 tags:
   - yslow
-excerpt: "*   3: Add an Expires Header  rules for high performance web sitesの三つ目。Expires headerを使って構成要素をキャッシュ可能な状態にしよう、という話。キャッシュを持つことによって、キャッシュを読み込んだあとの不必要なHTTP requestを減らすことができる。WebサーバーがApacheであるなら、ExpiresDefaultの設定を使ってキャッシュする時間を設定することができる。"
+excerpt: "Expires header を使って構成要素をキャッシュ可能な状態にしよう、という話。"
 ---
 
 - [3: Add an Expires Header](http://developer.yahoo.com/performance/rules.html#expires)

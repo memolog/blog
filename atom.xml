@@ -4,10 +4,18 @@
   <subtitle>塵が積もって山とならないメモのログ</subtitle>
   <link href="https://memolog.org/atom.xml" rel="self"/>
   <link href="https://memolog.org/"/>
-  <updated>2025-04-19T04:00:00.000Z</updated>
+  <updated>2025-06-18T21:00:00.000Z</updated>
   <id>https://memolog.org/</id>
   <author><name>Yutaka Yamaguchi</name></author>
   
+  <entry>
+    <title>contrast-color() が Safari (Beta) で利用可能になる</title>
+    <link href="https://memolog.org/undefined.html"/>
+    <id>https://memolog.org/undefined.html</id>
+    <published>2025-06-18T21:00:00.000Z</published>
+    <summary type="html">contrast-color()は CSS Color Module Level 5 で定義されている新しい関数の一つで、白か黒のどちらかの色を、背景色に対してコントラストの高い方を自動的に選ぶというもの。アクセシビリティの基準を達成する上で、文字色と背景色のコントラスト比は基本的な項目なので、それがCSSで解決できるようになるのは嬉しい。</summary>
+  </entry>
+    
   <entry>
     <title>Primitive Image についてもう一度</title>
     <link href="https://memolog.org/undefined.html"/>
@@ -158,14 +166,6 @@
     <id>https://memolog.org/undefined.html</id>
     <published>2020-09-09T13:03:29.000Z</published>
     <summary type="html">ES.next Newsの9/1の回のメールにあったLogical assignment operators in JavaScriptについて。TypeScript 4.0 から利用可能。</summary>
-  </entry>
-    
-  <entry>
-    <title>Fragmenting Flex Layout</title>
-    <link href="https://memolog.org/undefined.html"/>
-    <id>https://memolog.org/undefined.html</id>
-    <published>2020-09-09T10:06:00.000Z</published>
-    <summary type="html">今回は10. Fragmenting Flex Layout について。</summary>
   </entry>
     
 </feed>

@@ -29,7 +29,7 @@
     "colorthief": "^2.6.0",
     "generate-responsive-images": "^2.4.1",
     "gh-pages": "^6.3.0",
-    "glob": "^11.0.3",
+    "glob": "^11.1.0",
     "gray-matter": "^4.0.3",
     "image-size": "^2.0.2",
     "jsdom": "^26.1.0",

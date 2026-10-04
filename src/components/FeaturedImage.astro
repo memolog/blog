@@ -108,7 +108,9 @@ if (width > maxWidth) {
   }
 }
 
-const webpSrcSet = `${src}, ${src.replace(/\.webp$/, "@2x.webp")} 2x`;
+const imageSrc = `/${src}`;
+const webpSrcSet = `${imageSrc}, ${imageSrc.replace(/\.webp$/, "@2x.webp")} 2x`;
+console.log({ src, webpSrcSet });
 ---
 
 <div class="header__feature" aria-hidden="true">
@@ -117,7 +119,7 @@ const webpSrcSet = `${src}, ${src.replace(/\.webp$/, "@2x.webp")} 2x`;
       ext === ".svg" ? (
         <div style={`background-color: ${color}`}>
           <img
-            src={src}
+            src={imageSrc}
             alt={alt}
             role="presentation"
             loading={lazyLoad ? "lazy" : "eager"}
@@ -127,7 +129,7 @@ const webpSrcSet = `${src}, ${src.replace(/\.webp$/, "@2x.webp")} 2x`;
         </div>
       ) : ext === ".webp" ? (
         <img
-          src={src}
+          src={imageSrc}
           srcset={webpSrcSet}
           role="presentation"
           loading={lazyLoad ? "lazy" : "eager"}

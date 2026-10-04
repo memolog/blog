@@ -240,6 +240,58 @@
       "score": 0.8974945154280589
     }
   ],
+  "2025/css-contrast-color-function-in-safari": [
+    {
+      "id": "2013/08/specificity_of_pseudo_class",
+      "title": "a:link, a:visitedの詳細度はclass selectorのみより大きい",
+      "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
+      "date": "2013-08-30T21:00:00.000Z",
+      "featured": {
+        "image": "danielle-suijkerbuijk-4tl-lotlvEg-unsplash.webp",
+        "author": "Danielle Suijkerbuijk",
+        "authorLink": "https://unsplash.com/ja/@vandaantje?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#ddb4bb"
+      },
+      "score": 0.8537396414724225
+    },
+    {
+      "id": "2012/03/pseudo-classes-for-form",
+      "title": "Form関連の疑似クラス",
+      "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
+      "date": "2012-03-04T13:31:00.000Z",
+      "featured": {
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
+      },
+      "score": 0.8363183695319029
+    },
+    {
+      "id": "2012/06/set_input_width_to_100_percent",
+      "title": "inputでwidthを100%で使うと若干はみ出る",
+      "excerpt": "input要素にwidth:100%;を指定すると、微妙に包含ブロックからはみ出す。  なんでだろうなあと思っていたんですけど、input要素にはブラウザのデフォルトでpaddingやborderが入っているので、width:100%;とするとpaddingやborderのサイズ分はみ出してしまうということでした。",
+      "date": "2012-06-08T14:21:00.000Z",
+      "featured": {
+        "image": "henrique-ferreira-306706-unsplash",
+        "author": "Henrique Ferreira",
+        "authorLink": "https://unsplash.com/photos/ySgSnJdPhZg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.8343011774678445
+    },
+    {
+      "id": "2018/insertion-sort-in-javascript",
+      "title": "Insertion Sort in JavaScript",
+      "excerpt": "Selection Sort in JavaScriptの記事から引き続き。内容は挿入ソートからの抜粋なので詳細はそちらを参照。",
+      "date": "2018-08-07T05:47:14.000Z",
+      "featured": {
+        "image": "mingwei-dong-651103-unsplash",
+        "author": "mingwei dong",
+        "authorLink": "https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+      },
+      "score": 0.8282035563689724
+    }
+  ],
   "2025/a-crash-course-on-crises": [
     {
       "id": "2024/after-everything-bubble",
@@ -2063,18 +2115,29 @@
       "score": 0.9348663745125991
     },
     {
-      "id": "2013/01/style_scoped",
-      "title": "style要素のscoped属性",
-      "excerpt": "Firefox Development Highlights - H.264 & MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。",
-      "date": "2013-01-27T22:05:00.000Z",
-      "score": 0.8752738769085564
-    },
-    {
       "id": "2012/03/pseudo-classes-for-form",
       "title": "Form関連の疑似クラス",
       "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
       "date": "2012-03-04T13:31:00.000Z",
-      "score": 0.8730788305303991
+      "featured": {
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
+      },
+      "score": 0.8798823804496471
+    },
+    {
+      "id": "2013/01/style_scoped",
+      "title": "style要素のscoped属性",
+      "excerpt": "Firefox Development Highlights - H.264 & MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。",
+      "date": "2013-01-27T22:05:00.000Z",
+      "featured": {
+        "image": "style_scoped",
+        "author": "chatGPT",
+        "color": "#e7e3da"
+      },
+      "score": 0.8749114610672016
     },
     {
       "id": "2020/css-display-module-introduction",
@@ -2218,7 +2281,13 @@
       "title": "Form関連の疑似クラス",
       "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
       "date": "2012-03-04T13:31:00.000Z",
-      "score": 0.8613938013476868
+      "featured": {
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
+      },
+      "score": 0.8654678682768121
     },
     {
       "id": "2020/css-display-module-introduction",
@@ -4022,15 +4091,16 @@
       "score": 0.5023730772352011
     },
     {
-      "id": "2007/08/yslow_7_avoid_css_expressions",
-      "title": "YSLOW (7): Avoid CSS Expressions",
-      "excerpt": "CSS Expressions の使用を避けよう。",
-      "date": "2007-08-09T15:58:00.000Z",
+      "id": "2025/css-contrast-color-function-in-safari",
+      "title": "contrast-color() が Safari (Beta) で利用可能になる",
+      "excerpt": "contrast-color()は CSS Color Module Level 5 で定義されている新しい関数の一つで、白か黒のどちらかの色を、背景色に対してコントラストの高い方を自動的に選ぶというもの。アクセシビリティの基準を達成する上で、文字色と背景色のコントラスト比は基本的な項目なので、それがCSSで解決できるようになるのは嬉しい。",
+      "date": "2025-06-19 06:00",
       "featured": {
-        "image": "yslow_7_avoid_css_expressions",
-        "author": "chatGPT"
+        "image": "css-contrast-color-function-in-safari.webp",
+        "author": "chatGPT",
+        "color": "#f1e6c3"
       },
-      "score": 0.4807861821606045
+      "score": 0.4847281173728741
     }
   ],
   "2018/New-Year-Resolutions": [
@@ -4103,7 +4173,12 @@
       "title": "style要素のscoped属性",
       "excerpt": "Firefox Development Highlights - H.264 & MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。",
       "date": "2013-01-27T22:05:00.000Z",
-      "score": 0.869138705960769
+      "featured": {
+        "image": "style_scoped",
+        "author": "chatGPT",
+        "color": "#e7e3da"
+      },
+      "score": 0.8687896273338798
     }
   ],
   "2017/hello-hexo": [
@@ -5273,10 +5348,29 @@
   ],
   "2013/09/background_shorthand": [
     {
+      "id": "2012/03/pseudo-classes-for-form",
+      "title": "Form関連の疑似クラス",
+      "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
+      "date": "2012-03-04T13:31:00.000Z",
+      "featured": {
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
+      },
+      "score": 0.8324935697451609
+    },
+    {
       "id": "2013/08/specificity_of_pseudo_class",
-      "title": "a:link, a：visitedの詳細度はclass selectorのみより大きい",
+      "title": "a:link, a:visitedの詳細度はclass selectorのみより大きい",
       "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
       "date": "2013-08-30T21:00:00.000Z",
+      "featured": {
+        "image": "danielle-suijkerbuijk-4tl-lotlvEg-unsplash.webp",
+        "author": "Danielle Suijkerbuijk",
+        "authorLink": "https://unsplash.com/ja/@vandaantje?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#ddb4bb"
+      },
       "score": 0.8249310612934806
     },
     {
@@ -5285,13 +5379,6 @@
       "excerpt": "Favicons Next To External Links | CSS-Tricksという、リンクの左側にリンク先のfaviconを表示するというテクニックが紹介されていて、試してみました。簡単にできて、見た目にも華やかになるので面白い（個人的に）。",
       "date": "2012-05-28T15:00:00.000Z",
       "score": 0.8210356254782083
-    },
-    {
-      "id": "2012/03/pseudo-classes-for-form",
-      "title": "Form関連の疑似クラス",
-      "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
-      "date": "2012-03-04T13:31:00.000Z",
-      "score": 0.8200790835956194
     },
     {
       "id": "2020/display-value-property",
@@ -5411,22 +5498,29 @@
       "score": 0.8631480884576636
     },
     {
-      "id": "2013/09/try_typesquare",
-      "title": "TypeSquareを試してみる",
-      "excerpt": "TypeSquareで0円キャンペーンをやっていて、登録だけでフォントを試すことができるので、試してみています。現在、本文には「UD新ゴ」があたっています（すぐ変えるかもしれませんけど）。なかなかいい感じ。他にも良い感じのフォントがたくさんあって悩みます。",
-      "date": "2013-09-10T22:55:00.000Z",
+      "id": "2012/03/pseudo-classes-for-form",
+      "title": "Form関連の疑似クラス",
+      "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
+      "date": "2012-03-04T13:31:00.000Z",
       "featured": {
-        "image": "trying_typesquare.webp",
-        "author": "chatGPT"
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
       },
-      "score": 0.8527464636226203
+      "score": 0.8623002392173454
     },
     {
-      "id": "2009/04/post_185",
-      "title": "リンクの色の方が優先される理由",
-      "excerpt": "たとえば下記のようなHTMLに、下記のようなCSSを指定した場合、aタグに指定したCSSの方が有効に作用する。  ```html <h3 class=\"entry-header\"><a href=\"/post.html\">記事のタイトル</a></h3>",
-      "date": "2009-04-26T15:40:56.000Z",
-      "score": 0.8454256616855429
+      "id": "2025/css-contrast-color-function-in-safari",
+      "title": "contrast-color() が Safari (Beta) で利用可能になる",
+      "excerpt": "contrast-color()は CSS Color Module Level 5 で定義されている新しい関数の一つで、白か黒のどちらかの色を、背景色に対してコントラストの高い方を自動的に選ぶというもの。アクセシビリティの基準を達成する上で、文字色と背景色のコントラスト比は基本的な項目なので、それがCSSで解決できるようになるのは嬉しい。",
+      "date": "2025-06-19 06:00",
+      "featured": {
+        "image": "css-contrast-color-function-in-safari.webp",
+        "author": "chatGPT",
+        "color": "#f1e6c3"
+      },
+      "score": 0.8537396414724225
     }
   ],
   "2013/08/json_parse_null_without_type_converting": [
@@ -5481,7 +5575,12 @@
       "title": "style要素のscoped属性",
       "excerpt": "Firefox Development Highlights - H.264 & MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。",
       "date": "2013-01-27T22:05:00.000Z",
-      "score": 0.8946570242602305
+      "featured": {
+        "image": "style_scoped",
+        "author": "chatGPT",
+        "color": "#e7e3da"
+      },
+      "score": 0.894786684971836
     },
     {
       "id": "2007/08/mt",
@@ -6172,7 +6271,7 @@
         "author": "Colin Watts",
         "authorLink": "https://unsplash.com/ja/@colinwatts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
       },
-      "score": 0.9080674110420897
+      "score": 0.9083221166982877
     },
     {
       "id": "2012/05/invited_elements",
@@ -6184,14 +6283,7 @@
         "author": "William Henry Walker",
         "authorLink": "https://artvee.com/artist/william-henry-walker/"
       },
-      "score": 0.8977856577163543
-    },
-    {
-      "id": "2013/08/javascript_source_analytics_with_grunt-plato",
-      "title": "Javascript source analytics with grunt-plato",
-      "excerpt": "Gruntのpluginでgrunt-platoというのがあって、Platoを使ってJavascriptの静的解析結果をvisualizeしてレポートしてくれます。",
-      "date": "2013-08-18T20:00:00.000Z",
-      "score": 0.8946570242602305
+      "score": 0.9017712615834758
     },
     {
       "id": "2018/about-typedarray-prototype-sort",
@@ -6203,7 +6295,14 @@
         "author": "Marcus dePaula",
         "authorLink": "https://unsplash.com/photos/tk7OAxsXNL0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
-      "score": 0.8944713265247328
+      "score": 0.8949334413386494
+    },
+    {
+      "id": "2013/08/javascript_source_analytics_with_grunt-plato",
+      "title": "Javascript source analytics with grunt-plato",
+      "excerpt": "Gruntのpluginでgrunt-platoというのがあって、Platoを使ってJavascriptの静的解析結果をvisualizeしてレポートしてくれます。",
+      "date": "2013-08-18T20:00:00.000Z",
+      "score": 0.894786684971836
     }
   ],
   "2013/01/jquery_peformance_about_creating_element": [
@@ -6506,7 +6605,12 @@
       "title": "style要素のscoped属性",
       "excerpt": "Firefox Development Highlights - H.264 & MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。",
       "date": "2013-01-27T22:05:00.000Z",
-      "score": 0.8745812067476529
+      "featured": {
+        "image": "style_scoped",
+        "author": "chatGPT",
+        "color": "#e7e3da"
+      },
+      "score": 0.8750042914102828
     },
     {
       "id": "2010/10/watir_166",
@@ -6617,7 +6721,12 @@
       "title": "style要素のscoped属性",
       "excerpt": "Firefox Development Highlights - H.264 & MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。",
       "date": "2013-01-27T22:05:00.000Z",
-      "score": 0.8161294520772311
+      "featured": {
+        "image": "style_scoped",
+        "author": "chatGPT",
+        "color": "#e7e3da"
+      },
+      "score": 0.8205381332151559
     },
     {
       "id": "2007/10/mtpaginate_movable_type",
@@ -6738,7 +6847,13 @@
       "title": "Form関連の疑似クラス",
       "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
       "date": "2012-03-04T13:31:00.000Z",
-      "score": 0.864252404956693
+      "featured": {
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
+      },
+      "score": 0.8659385688287314
     },
     {
       "id": "2012/09/css_transforms_3d_and_transform-style",
@@ -7559,11 +7674,17 @@
       "score": 0.8785012478054128
     },
     {
-      "id": "2009/03/flickr_thickbox",
-      "title": "ThickBox対応したFlickrのAction Streamを作成する",
-      "excerpt": "Action Streamで得たFlickrのActivityをThickBoxを利用して表示したいなと思いたち、そこで独自のAction Streamsプラグインを作成するのページと、既存のAction Stream pluginとGoogle検索などを見ながら、自分用のFlickr for thickbox pluginを作成してみました。",
-      "date": "2009-03-29T07:26:10.000Z",
-      "score": 0.8737408790180987
+      "id": "2012/03/pseudo-classes-for-form",
+      "title": "Form関連の疑似クラス",
+      "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
+      "date": "2012-03-04T13:31:00.000Z",
+      "featured": {
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
+      },
+      "score": 0.8761460357937273
     }
   ],
   "2012/05/invited_elements": [
@@ -7666,6 +7787,19 @@
   ],
   "2012/05/favicons_next_to_external_link": [
     {
+      "id": "2012/03/pseudo-classes-for-form",
+      "title": "Form関連の疑似クラス",
+      "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
+      "date": "2012-03-04T13:31:00.000Z",
+      "featured": {
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
+      },
+      "score": 0.850343446120904
+    },
+    {
       "id": "2020/css-property-conventions",
       "title": "CSS property conventions",
       "excerpt": "前回のThe display property definition in CSS2に引き続き。1.2. Valuesに、プロパティの仕様については1.4.2 CSS property definitionsの表記に従うと書いてあるので、そのあたりを確認していく。",
@@ -7690,17 +7824,6 @@
       "excerpt": "jQueryで要素を作成する場合、jQuery()のExampleを参考にすると、作り方としては下記の二通りの方法があります。",
       "date": "2013-01-15T16:15:00.000Z",
       "score": 0.845653350799054
-    },
-    {
-      "id": "2006/11/html_linthtml",
-      "title": "HTML LINTから学んだHTMLとアクセシビリティ",
-      "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
-      "date": "2006-11-28T11:37:23.000Z",
-      "featured": {
-        "image": "html_linthtml.webp",
-        "author": "chatGPT"
-      },
-      "score": 0.843388980132782
     }
   ],
   "2012/05/css_selector_performance": [
@@ -7928,22 +8051,28 @@
   ],
   "2012/03/pseudo-classes-for-form": [
     {
+      "id": "2012/05/invited_elements",
+      "title": "独自要素を作成する",
+      "excerpt": "存在しない要素がブラウザ上で正常に処理するかというと、問題なく処理される。では、特定の用途のために独自の要素を用意していいかというと、HTML5 の仕様上は許されない。",
+      "date": "2012-05-29T15:00:00.000Z",
+      "featured": {
+        "image": "954789ilsdl.webp",
+        "author": "William Henry Walker",
+        "authorLink": "https://artvee.com/artist/william-henry-walker/"
+      },
+      "score": 0.8927674943679639
+    },
+    {
       "id": "2013/01/style_scoped",
       "title": "style要素のscoped属性",
       "excerpt": "Firefox Development Highlights - H.264 & MP3 support on Windows, scoped stylesheets + more ✩Mozilla Hacks – the Web developer blog（日本語）にて、Firefoxのnightlyでstyle要素のscoped属性に対応したという話が出ていたので、試してみました。style scoped動作確認用のcodepen。",
       "date": "2013-01-27T22:05:00.000Z",
-      "score": 0.8758260500953351
-    },
-    {
-      "id": "2007/08/yslow",
-      "title": "YSLOW 勉強 ：まとめ",
-      "excerpt": "YSLOW における 13 の評価基準を一つずつ見てきてわかったことは、YSLOW とは、HTTP の応答を減らせる余地があるかないかを評価するためのツールだということ。",
-      "date": "2007-08-18T16:29:00.000Z",
       "featured": {
-        "image": "yslow",
-        "author": "chatGPT"
+        "image": "style_scoped",
+        "author": "chatGPT",
+        "color": "#e7e3da"
       },
-      "score": 0.8756599492974598
+      "score": 0.8924461754528951
     },
     {
       "id": "2018/insertion-sort-in-javascript",
@@ -7955,19 +8084,18 @@
         "author": "mingwei dong",
         "authorLink": "https://unsplash.com/photos/irA2xa68xNA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
       },
-      "score": 0.8731842654894034
+      "score": 0.8889435211585798
     },
     {
-      "id": "2020/display-value-property-2",
-      "title": "The display value property (list-item / internal)",
-      "excerpt": "The display value property (outside / inside)の続き。2. Box Layout Modes: the display propertyからdisplayプロパティのvalueについて、list-itemとinterについて確認していく。",
-      "date": "2020-03-08T14:24:22.000Z",
+      "id": "2007/08/yslow",
+      "title": "YSLOW 勉強 ：まとめ",
+      "excerpt": "YSLOW における 13 の評価基準を一つずつ見てきてわかったことは、YSLOW とは、HTTP の応答を減らせる余地があるかないかを評価するためのツールだということ。",
+      "date": "2007-08-18T16:29:00.000Z",
       "featured": {
-        "image": "glen-hooper-8LWtpfhGP4U-unsplash",
-        "author": "Glen Hooper",
-        "authorLink": "https://unsplash.com/@hoops1972?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "yslow",
+        "author": "chatGPT"
       },
-      "score": 0.8730788305303991
+      "score": 0.8876249849355222
     }
   ],
   "2012/01/book_of_george_w_bush": [
@@ -10262,9 +10390,15 @@
   "2009/05/inherit": [
     {
       "id": "2013/08/specificity_of_pseudo_class",
-      "title": "a:link, a：visitedの詳細度はclass selectorのみより大きい",
+      "title": "a:link, a:visitedの詳細度はclass selectorのみより大きい",
       "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
       "date": "2013-08-30T21:00:00.000Z",
+      "featured": {
+        "image": "danielle-suijkerbuijk-4tl-lotlvEg-unsplash.webp",
+        "author": "Danielle Suijkerbuijk",
+        "authorLink": "https://unsplash.com/ja/@vandaantje?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#ddb4bb"
+      },
       "score": 0.8819589660506731
     },
     {
@@ -10287,15 +10421,17 @@
       "score": 0.818733818345179
     },
     {
-      "id": "2006/11/html_linthtml",
-      "title": "HTML LINTから学んだHTMLとアクセシビリティ",
-      "excerpt": "CSSとHTMLを変更したついでに、WEB Developer（FireFoxの拡張機能）のToolsからHTML LINTを実行してみました。結果はみごとにマイナス点。減点の嵐。なかなか手厳しいです。",
-      "date": "2006-11-28T11:37:23.000Z",
+      "id": "2012/03/pseudo-classes-for-form",
+      "title": "Form関連の疑似クラス",
+      "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
+      "date": "2012-03-04T13:31:00.000Z",
       "featured": {
-        "image": "html_linthtml.webp",
-        "author": "chatGPT"
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
       },
-      "score": 0.7959528711921433
+      "score": 0.799499953862888
     }
   ],
   "2009/05/future_of_water": [
@@ -10519,9 +10655,15 @@
     },
     {
       "id": "2013/08/specificity_of_pseudo_class",
-      "title": "a:link, a：visitedの詳細度はclass selectorのみより大きい",
+      "title": "a:link, a:visitedの詳細度はclass selectorのみより大きい",
       "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
       "date": "2013-08-30T21:00:00.000Z",
+      "featured": {
+        "image": "danielle-suijkerbuijk-4tl-lotlvEg-unsplash.webp",
+        "author": "Danielle Suijkerbuijk",
+        "authorLink": "https://unsplash.com/ja/@vandaantje?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#ddb4bb"
+      },
       "score": 0.8454256616855429
     },
     {
@@ -13325,16 +13467,17 @@
       "score": 0.888795517976217
     },
     {
-      "id": "2018/convert-multiple-primitive-images-at-once",
-      "title": "Primitiveの変換をまとめて行う",
-      "excerpt": "Primitive を使って画像を変換すると、だいたい一回目ではしっくりこない。だから何回か画像を変えたりモードを変えてみたりとか色々試すのだけど、これがなかなか面倒くさい。一回の実行にも時間がかかるから待っている間に実行していたことを忘れてしまったりする。だから一回のPrimitiveの実行で全てのモードのパターンを出力するためのスクリプトを用意してみた。primitive_bulkという名前でnpmに公開している。個人的にはほとんど使っていないオプションもあるけど、一応primitiveのすべてのオプションを渡せるようにしている。名前はそのうち変えるかもしれない。  実行は`primitive_bulk -i photo.jpg`みたいにする。primitiveでは出力先（`-o`）を指定する必要があるが、primitive_bulkでは指定がない場合はphoto.jpgと同じディレクトリに出力ファイルを作成する。これが地味に便利。`-m`の指定がない場合は、modeの0から8まで全ての種類を出力する。primitiveの処理そのものは8回繰り返すのと同じだから、だいぶ重いし時間もそれなりにかかる。でも実行して時が経つのを待つだけなので、だいぶ気は楽になった。",
-      "date": "2018-01-30T22:50:15.000Z",
+      "id": "2012/03/pseudo-classes-for-form",
+      "title": "Form関連の疑似クラス",
+      "excerpt": "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されているForm関連の疑似クラスを試してみるというだけの内容。W3Cの定義はこのあたり。required/optionalの疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。",
+      "date": "2012-03-04T13:31:00.000Z",
       "featured": {
-        "image": "kazuend-25767",
-        "author": "kazuend",
-        "authorLink": "https://unsplash.com/photos/JHMDtWaNZaA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+        "image": "david-clode-zOBl2GTdMmc-unsplash",
+        "author": "David Clode",
+        "authorLink": "https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#b48dad"
       },
-      "score": 0.8854807789921967
+      "score": 0.8876249849355222
     }
   ],
   "2007/08/wysiwyg_iedomobjectembed": [
@@ -13646,9 +13789,15 @@
     },
     {
       "id": "2013/08/specificity_of_pseudo_class",
-      "title": "a:link, a：visitedの詳細度はclass selectorのみより大きい",
+      "title": "a:link, a:visitedの詳細度はclass selectorのみより大きい",
       "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
       "date": "2013-08-30T21:00:00.000Z",
+      "featured": {
+        "image": "danielle-suijkerbuijk-4tl-lotlvEg-unsplash.webp",
+        "author": "Danielle Suijkerbuijk",
+        "authorLink": "https://unsplash.com/ja/@vandaantje?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#ddb4bb"
+      },
       "score": 0.7699744858417454
     },
     {
@@ -13923,9 +14072,15 @@
     },
     {
       "id": "2013/08/specificity_of_pseudo_class",
-      "title": "a:link, a：visitedの詳細度はclass selectorのみより大きい",
+      "title": "a:link, a:visitedの詳細度はclass selectorのみより大きい",
       "excerpt": "a:link、a:visitedで宣言されたスタイルは、type selector（aタグ）とpseudo-classes（:visited）を組み合わせた詳細度になる。Calculating a selector's specificityを参照すると、詳細度は(0,1,1)となる（CSS2.1ではstyle属性も含めて(0,0,1,1)と表現されるけど内容は同じ）。",
       "date": "2013-08-30T21:00:00.000Z",
+      "featured": {
+        "image": "danielle-suijkerbuijk-4tl-lotlvEg-unsplash.webp",
+        "author": "Danielle Suijkerbuijk",
+        "authorLink": "https://unsplash.com/ja/@vandaantje?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
+        "color": "#ddb4bb"
+      },
       "score": 0.8186900330385055
     },
     {

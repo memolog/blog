@@ -1,6 +1,10 @@
 ---
 title: style要素のscoped属性
 date: 2013-01-27T22:05:00.000Z
+featured:
+  image: style_scoped
+  author: chatGPT
+  color: "#e7e3da"
 categories:
   - web
 tags:
@@ -15,19 +19,18 @@ excerpt: "Firefox Development Highlights - H.264 & MP3 support on Windows, scope
 
 そして親要素の content model は[transparent](http://www.w3.org/TR/html5/dom.html#transparent)であってはいけないらしい。代表的なのは[a 要素](http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element)（それ以外は ins とか map 要素が transparent らしい）で、
 
-```
+```html
 <a>
 <style scoped>
 h1{ color:black }
 </style>
 <h1>foobar</h1>
 </a>
-
 ```
 
 ということはできないことになる。a 要素の中に div とか何か transparnet でないものを入れないといけない。
 
-```
+```html
 <a>
 <div>
 <style scoped>
@@ -36,12 +39,11 @@ h1{ color:black }
 <h1>foobar</h1>
 </div>
 </a>
-
 ```
 
 あと、@global at-rule が定義されていて、@global で制限された CSS は通常の style 要素と同じように Document 全体に適用されるらしい（まだブラウザ上では試せない）。
 
-```
+```html
 <div>
 <style scoped>
 @global{ div{ color:blue } }
@@ -52,21 +54,19 @@ h1 { width:95&#x25;; }
 <div>
 blue
 </div>
-
 ```
 
 style scoped は、たとえば、この記事の中でだけ使いたい CSS などを全体の CSS に配慮することなしに使うことができるという意味で便利。ドキュメント全体の CSS と連携するような CSS が、個別の記事あるとメンテナンス大変だと思うけど。DOM と CSS の分離という点からもそもそも style 属性は多用するものではないだろうけど、ウィジェット的な、独立分離が可能なパーツ的なものの場合には使いどころもあると思われる（iframe 使えば良いかもしれないけど）。
 
 あと、style scoped ではなくても、親要素に id 属性つけてそれを CSS で指定すれば同じようなことはできなくもない（style 要素でインラインでする必要もないけど）。
 
-```
+```html
 <div id="foobar">
 <style>
 #foobar h1{ color:black }
 </style>
 <h1>foobar</h1>
 </div>
-
 ```
 
 CSS のパフォーマンス的なところは不明ですが、scoped 属性あるなしに関わらず、[W3C の Style の仕様では](http://www.w3.org/TR/html5/document-metadata.html#styling)、style 要素で@import などでリソースを参照しない場合は同期実行されるので、レンダリングは一時的にブロックされる、かもしれない。

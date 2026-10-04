@@ -1,6 +1,11 @@
 ---
-title: a:link, a：visitedの詳細度はclass selectorのみより大きい
+title: "a:link, a:visitedの詳細度はclass selectorのみより大きい"
 date: 2013-08-30T21:00:00.000Z
+featured:
+  image: danielle-suijkerbuijk-4tl-lotlvEg-unsplash.webp
+  author: Danielle Suijkerbuijk
+  authorLink: https://unsplash.com/ja/@vandaantje?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
+  color: "#ddb4bb"
 categories:
   - web
 tags:

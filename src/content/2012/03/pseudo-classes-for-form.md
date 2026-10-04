@@ -1,6 +1,11 @@
 ---
 title: Form関連の疑似クラス
 date: 2012-03-04T13:31:00.000Z
+featured:
+  image: david-clode-zOBl2GTdMmc-unsplash
+  author: David Clode
+  authorLink: https://unsplash.com/ja/@davidclode?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
+  color: "#b48dad"
 categories:
   - web
 tags:
@@ -11,16 +16,9 @@ excerpt: "CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctorで紹介されて�
 
 [CSS3 Pseudo-Classes and HTML5 Forms | HTML5 Doctor](http://html5doctor.com/css3-pseudo-classes-and-html5-forms/)で紹介されている Form 関連の疑似クラスを試してみるというだけの内容。[W3C の定義はこのあたり](http://www.w3.org/TR/css3-ui/#pseudo-validity)。required/optional の疑似クラスは最新のブラウザでは対応しているみたい（上のリンクの記事によると）ですけど、それ以外はぼちぼち。現状では視覚的な補助という域を脱しない感はあります。
 
-<!\-\- #form input {margin-right: 4px;} #form input:required + label{color:#c90000; } #form input:required + label::after { content: " \*"; } #form input:required { border: 1px solid #666; } #form input:optional { border: 1px solid #ccc; } #form #email:invalid + label{ color:#c90000; } #form #email:invalid + label::after { content: ' NG'; } #form #email:valid + label::after { content: ' OK'; } #form #email:valid + label{ color:green; } #form input\[type='number'\]:out-of-range { border-color: #c90000; } #form input\[type='number'\]:in-range { border-color: green; } #form textarea:read-only { user-select: none; -moz-user-select: none;-webkit-user-select: none; border:2px dashed #ccc;} #form textarea:read-write { user-select: text; } --> Required
-Not Required
-Email
-Number
-Read only
-Read and Write
+HTMLソース例はこんな感じ（あまり良い例ではない）。
 
-上記の HTML ソースはこんな感じ（あまり良い例ではない）。
-
-```
+```html
 <form id="form">
 <style>
 <!--

@@ -3,7 +3,7 @@ import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 import { glob } from "glob";
 import matter from "gray-matter";
-import { pipeline } from "@xenova/transformers";
+import { pipeline } from "@huggingface/transformers";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,7 +15,7 @@ const outputPath = path.join(__dirname, "../src/data/related.json");
 // モデル読み込み（日本語対応）
 const embedder = await pipeline(
   "feature-extraction",
-  "Xenova/paraphrase-multilingual-MiniLM-L12-v2"
+  "Xenova/multilingual-e5-small",
 );
 
 // Markdownファイルを全部読み込み
@@ -42,7 +42,7 @@ files.forEach((file) => {
 const embeddings = await Promise.all(
   contents.map(async (content) => {
     return await embedder(content, { pooling: "mean", normalize: true });
-  })
+  }),
 );
 
 // 類似度関数

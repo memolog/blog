@@ -1,15 +1,15 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import fs from "fs";
-import path, { dirname } from "path";
-import { fileURLToPath } from "url";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { publicDir } from "astro:config/server";
 import { imageSizeFromFile } from "image-size/fromFile";
 import { JSDOM } from "jsdom";
-// @ts-ignore
-import ColorThief from "colorthief";
+import sharp from "sharp";
 import chroma from "chroma-js";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const publicPath = fileURLToPath(publicDir);
 
 type Props = {
   featured: NonNullable<CollectionEntry<"blog">["data"]["featured"]>;
@@ -18,10 +18,10 @@ type Props = {
 
 const { featured, lazyLoad } = Astro.props;
 let { name, ext } = path.parse(featured.image || "");
-const dir = `/assets/images/${name}`;
+const dir = `assets/images/${name}`;
 
 // Find the image file from the directory
-const files = fs.readdirSync(path.resolve(__dirname, `../../public/${dir}`));
+const files = fs.readdirSync(path.resolve(publicPath, `${dir}`));
 let imageFile: string | undefined;
 if (ext) {
   imageFile = files.find((file) => {
@@ -41,7 +41,7 @@ if (ext) {
 
 if (!imageFile) {
   throw new Error(
-    `Image file not found for ${featured.image}. Please check the file name and extension.`
+    `Image file not found for ${featured.image}. Please check the file name and extension.`,
   );
 }
 
@@ -56,12 +56,12 @@ let width,
   alt;
 
 // Calculate the width and height if not provided
-const source = path.resolve(__dirname, `../../public/${src}`);
+const source = path.resolve(publicPath, `${src}`);
 if (!width || !height) {
   if (ext === ".svg") {
     const file = fs.readFileSync(source, "utf8");
     const svgDom = new JSDOM(file).window.document.getElementsByTagName(
-      "svg"
+      "svg",
     )[0];
     const svgWidth = svgDom.getAttribute("width");
     const svgHeight = svgDom.getAttribute("height");
@@ -77,9 +77,13 @@ if (!width || !height) {
       svgDom.children[0].getAttribute("fill") ||
       "";
   } else {
-    color ||= chroma(await ColorThief.getColor(source)).hex();
+    if (!color) {
+      const { dominant } = await sharp(source).stats();
+      color = chroma(dominant.r, dominant.g, dominant.b).hex();
+    }
 
     const dimension = await imageSizeFromFile(source);
+
     width = Math.min(dimension.width, 985);
     height = dimension.height * (width / dimension.width);
   }

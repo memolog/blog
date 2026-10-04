@@ -26,7 +26,6 @@
     "@types/chroma-js": "^3.1.2",
     "@types/jsdom": "^30.0.0",
     "chroma-js": "^3.2.0",
-    "colorthief": "^3.5.0",
     "generate-responsive-images": "^2.4.1",
     "gh-pages": "^6.3.0",
     "glob": "^13.0.6",
